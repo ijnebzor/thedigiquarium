@@ -1,60 +1,124 @@
 {
   "name": "Genevieve",
+  "emoji": "\ud83c\udde9\ud83c\uddea",
   "type": "German",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "00:35",
+      "date": "2026-02-21",
+      "article": "Familie",
+      "thought": null,
+      "next": "Eingetragene Partnerschaft",
+      "why": ""
+    },
+    {
+      "time": "00:31",
+      "date": "2026-02-21",
+      "article": "Sozialer Wandel",
+      "thought": null,
+      "next": "Familie",
+      "why": ""
+    },
+    {
+      "time": "00:27",
+      "date": "2026-02-21",
+      "article": "Geschichte",
+      "thought": null,
+      "next": "Sozialer Wandel",
+      "why": ""
+    },
+    {
       "time": "18:15",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Erkenntnistheorie",
+      "thought": null,
+      "next": "-logie",
+      "why": ""
     },
     {
       "time": "18:11",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Wissenschaftstheorie",
+      "thought": null,
+      "next": "Erkenntnistheorie",
+      "why": ""
     },
     {
       "time": "18:07",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Philosophie",
+      "thought": null,
+      "next": "Wissenschaftstheorie",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Present Perfect Progressive",
+      "thought": null,
+      "next": "Wort",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Wort",
+      "thought": null,
+      "next": "Deutsches W\u00f6rterbuch",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Musik",
+      "thought": null,
+      "next": "Metrum (Musik)",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Metrum (Musik)",
+      "thought": null,
+      "next": "Phrase (Musik)",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Geschichte",
+      "visits": 2
+    },
+    {
+      "topic": "Familie",
+      "visits": 1
+    },
+    {
+      "topic": "Sozialer Wandel",
+      "visits": 1
+    },
+    {
+      "topic": "Erkenntnistheorie",
+      "visits": 1
+    },
+    {
+      "topic": "Wissenschaftstheorie",
+      "visits": 1
+    },
+    {
+      "topic": "Philosophie",
+      "visits": 1
+    },
+    {
+      "topic": "Present Perfect Progressive",
+      "visits": 1
+    },
+    {
+      "topic": "Wort",
+      "visits": 1
+    }
+  ]
 }

@@ -1,60 +1,124 @@
 {
   "name": "Seeker",
+  "emoji": "\ud83d\udd0d",
   "type": "Special",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "15:54",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:49",
+      "date": "2026-02-21",
+      "article": "Girth",
+      "thought": null,
+      "next": "Girth (tack)",
+      "why": ""
     },
     {
-      "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:45",
+      "date": "2026-02-21",
+      "article": "Drawing (manufacturing)",
+      "thought": null,
+      "next": "Girth",
+      "why": ""
     },
     {
-      "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:41",
+      "date": "2026-02-21",
+      "article": "Drawing",
+      "thought": null,
+      "next": "Drawing (manufacturing)",
+      "why": ""
     },
     {
-      "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:37",
+      "date": "2026-02-21",
+      "article": "Logo",
+      "thought": null,
+      "next": "Drawing",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:33",
+      "date": "2026-02-21",
+      "article": "Trademark",
+      "thought": null,
+      "next": "Logo",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:29",
+      "date": "2026-02-21",
+      "article": "Label",
+      "thought": null,
+      "next": "Trademark",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:25",
+      "date": "2026-02-21",
+      "article": "Concepts",
+      "thought": null,
+      "next": "Label",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:21",
+      "date": "2026-02-21",
+      "article": "Mother tongue",
+      "thought": null,
+      "next": "Concepts",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:17",
+      "date": "2026-02-21",
+      "article": "Second language",
+      "thought": null,
+      "next": "Mother tongue",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:13",
+      "date": "2026-02-21",
+      "article": "French language",
+      "thought": null,
+      "next": "Second language",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Switzerland",
+      "visits": 2
+    },
+    {
+      "topic": "Girth",
+      "visits": 1
+    },
+    {
+      "topic": "Drawing (manufacturing)",
+      "visits": 1
+    },
+    {
+      "topic": "Drawing",
+      "visits": 1
+    },
+    {
+      "topic": "Logo",
+      "visits": 1
+    },
+    {
+      "topic": "Trademark",
+      "visits": 1
+    },
+    {
+      "topic": "Label",
+      "visits": 1
+    },
+    {
+      "topic": "Concepts",
+      "visits": 1
+    }
+  ]
 }

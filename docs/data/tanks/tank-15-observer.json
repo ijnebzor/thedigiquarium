@@ -1,60 +1,124 @@
 {
   "name": "Observer",
+  "emoji": "\ud83d\udd2d",
   "type": "Special",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "15:54",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:49",
+      "date": "2026-02-21",
+      "article": "Olfaction",
+      "thought": null,
+      "next": "Animal",
+      "why": ""
     },
     {
-      "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:45",
+      "date": "2026-02-21",
+      "article": "Face",
+      "thought": null,
+      "next": "Olfaction",
+      "why": ""
     },
     {
-      "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:41",
+      "date": "2026-02-21",
+      "article": "Mouth",
+      "thought": null,
+      "next": "Face",
+      "why": ""
     },
     {
-      "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:37",
+      "date": "2026-02-21",
+      "article": "Word",
+      "thought": null,
+      "next": "Mouth",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:33",
+      "date": "2026-02-21",
+      "article": "Definition",
+      "thought": null,
+      "next": "Word",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:29",
+      "date": "2026-02-21",
+      "article": "Text",
+      "thought": null,
+      "next": "Definition",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:25",
+      "date": "2026-02-21",
+      "article": "Write",
+      "thought": null,
+      "next": "Text",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:21",
+      "date": "2026-02-21",
+      "article": "Ink",
+      "thought": null,
+      "next": "Write",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:17",
+      "date": "2026-02-21",
+      "article": "Document",
+      "thought": null,
+      "next": "Ink",
+      "why": ""
     },
     {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:13",
+      "date": "2026-02-21",
+      "article": "Constitution",
+      "thought": null,
+      "next": "Document",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Definition",
+      "visits": 3
+    },
+    {
+      "topic": "Olfaction",
+      "visits": 1
+    },
+    {
+      "topic": "Face",
+      "visits": 1
+    },
+    {
+      "topic": "Mouth",
+      "visits": 1
+    },
+    {
+      "topic": "Word",
+      "visits": 1
+    },
+    {
+      "topic": "Text",
+      "visits": 1
+    },
+    {
+      "topic": "Write",
+      "visits": 1
+    },
+    {
+      "topic": "Ink",
+      "visits": 1
+    }
+  ]
 }

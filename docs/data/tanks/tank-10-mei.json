@@ -1,60 +1,124 @@
 {
   "name": "Mei",
+  "emoji": "\ud83c\udde8\ud83c\uddf3",
   "type": "Chinese",
   "status": "active",
-  "thinking_traces_12h": 18,
+  "traces_12h": 18,
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "00:35",
+      "date": "2026-02-21",
+      "article": "\u79d1\u5b66",
+      "thought": null,
+      "next": "\u79d1\u5b78 (\u6d88\u6b67\u7fa9)",
+      "why": ""
+    },
+    {
+      "time": "00:31",
+      "date": "2026-02-21",
+      "article": "\u5386\u53f2",
+      "thought": null,
+      "next": "\u516c\u5143",
+      "why": ""
+    },
+    {
+      "time": "00:27",
+      "date": "2026-02-21",
+      "article": "\u751f\u7269\u5b66",
+      "thought": null,
+      "next": "\u81ea\u7136\u79d1\u5b78",
+      "why": ""
+    },
+    {
       "time": "18:16",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u6570\u5b66",
+      "thought": null,
+      "next": "\u5fae\u79ef\u5206\u5b66",
+      "why": ""
     },
     {
       "time": "18:11",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u827a\u672f",
+      "thought": null,
+      "next": "\u610f\u8b58\u5f62\u614b",
+      "why": ""
     },
     {
       "time": "18:07",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u97f3\u4e50",
+      "thought": null,
+      "next": "\u8a31\u614e",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u5fc3\u7406\u5b66",
+      "thought": null,
+      "next": "\u751f\u7269\u5fc3\u7406\u5b66",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u6570\u5b66",
+      "thought": null,
+      "next": "\u8ba1\u7b97\u8bed\u8a00\u5b66",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u5386\u53f2",
+      "thought": null,
+      "next": "\u57fa\u7763\u7eaa\u5e74",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:48",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u827a\u672f",
+      "thought": null,
+      "next": "\u897f\u73ed\u7259\u8a9e",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "\u79d1\u5b66",
+      "visits": 3
+    },
+    {
+      "topic": "\u5386\u53f2",
+      "visits": 3
+    },
+    {
+      "topic": "\u751f\u7269\u5b66",
+      "visits": 3
+    },
+    {
+      "topic": "\u6570\u5b66",
+      "visits": 3
+    },
+    {
+      "topic": "\u5fc3\u7406\u5b66",
+      "visits": 3
+    },
+    {
+      "topic": "\u827a\u672f",
+      "visits": 2
+    },
+    {
+      "topic": "\u97f3\u4e50",
+      "visits": 2
+    },
+    {
+      "topic": "\u54f2\u5b66",
+      "visits": 1
+    }
+  ]
 }

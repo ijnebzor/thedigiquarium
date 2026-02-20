@@ -1,60 +1,124 @@
 {
   "name": "Seth",
+  "emoji": "\ud83e\udd16",
   "type": "Agent",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "23:58",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:49",
+      "date": "2026-02-21",
+      "article": "Publication",
+      "thought": null,
+      "next": "Oxford University Press",
+      "why": ""
     },
     {
-      "time": "23:55",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:46",
+      "date": "2026-02-21",
+      "article": "Ethnologue",
+      "thought": null,
+      "next": "Publication",
+      "why": ""
     },
     {
-      "time": "23:52",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:43",
+      "date": "2026-02-21",
+      "article": "Language family",
+      "thought": null,
+      "next": "Ethnologue",
+      "why": ""
     },
     {
-      "time": "23:49",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:40",
+      "date": "2026-02-21",
+      "article": "Czech language",
+      "thought": null,
+      "next": "Language family",
+      "why": ""
     },
     {
-      "time": "23:46",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:37",
+      "date": "2026-02-21",
+      "article": "European Union",
+      "thought": null,
+      "next": "Czech language",
+      "why": ""
     },
     {
-      "time": "23:43",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:34",
+      "date": "2026-02-21",
+      "article": "Greek language",
+      "thought": null,
+      "next": "European Union",
+      "why": ""
     },
     {
-      "time": "23:40",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:31",
+      "date": "2026-02-21",
+      "article": "Theatre",
+      "thought": null,
+      "next": "Greek language",
+      "why": ""
     },
     {
-      "time": "23:37",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:28",
+      "date": "2026-02-21",
+      "article": "Bowing",
+      "thought": null,
+      "next": "Theatre",
+      "why": ""
     },
     {
-      "time": "23:34",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:25",
+      "date": "2026-02-21",
+      "article": "Custom",
+      "thought": null,
+      "next": "Bowing",
+      "why": ""
     },
     {
-      "time": "23:31",
-      "article": "Unknown",
-      "thought": ""
+      "time": "02:22",
+      "date": "2026-02-21",
+      "article": "Ancient Rome",
+      "thought": null,
+      "next": "Custom",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Olympic Games",
+      "visits": 2
+    },
+    {
+      "topic": "Publication",
+      "visits": 1
+    },
+    {
+      "topic": "Ethnologue",
+      "visits": 1
+    },
+    {
+      "topic": "Language family",
+      "visits": 1
+    },
+    {
+      "topic": "Czech language",
+      "visits": 1
+    },
+    {
+      "topic": "European Union",
+      "visits": 1
+    },
+    {
+      "topic": "Greek language",
+      "visits": 1
+    },
+    {
+      "topic": "Theatre",
+      "visits": 1
+    }
+  ]
 }

@@ -1,60 +1,124 @@
 {
   "name": "Juanita",
+  "emoji": "\ud83c\uddea\ud83c\uddf8",
   "type": "Spanish",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "00:35",
+      "date": "2026-02-21",
+      "article": "M\u00fasica",
+      "thought": null,
+      "next": "Manifestaci\u00f3n",
+      "why": ""
+    },
+    {
+      "time": "00:31",
+      "date": "2026-02-21",
+      "article": "Filosof\u00eda",
+      "thought": null,
+      "next": "Significado (filosof\u00eda)",
+      "why": ""
+    },
+    {
+      "time": "00:26",
+      "date": "2026-02-21",
+      "article": "Arte",
+      "thought": null,
+      "next": "Artes pl\u00e1sticas",
+      "why": ""
+    },
+    {
       "time": "18:15",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Filosof\u00eda",
+      "thought": null,
+      "next": "L\u00f3gica",
+      "why": ""
     },
     {
       "time": "18:11",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Ciencia",
+      "thought": null,
+      "next": "Econom\u00eda",
+      "why": ""
     },
     {
       "time": "18:07",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Ciencia",
+      "thought": null,
+      "next": "V\u00eda L\u00e1ctea",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Eustigmista",
+      "thought": null,
+      "next": "Ochrophyta",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Ochrophyta",
+      "thought": null,
+      "next": "Diatomista",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Diatomista",
+      "thought": null,
+      "next": "Ochrophyta",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "M\u00fasica",
+      "thought": null,
+      "next": "Sentimiento",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "M\u00fasica",
+      "visits": 2
+    },
+    {
+      "topic": "Filosof\u00eda",
+      "visits": 2
+    },
+    {
+      "topic": "Ciencia",
+      "visits": 2
+    },
+    {
+      "topic": "Arte",
+      "visits": 1
+    },
+    {
+      "topic": "Eustigmista",
+      "visits": 1
+    },
+    {
+      "topic": "Ochrophyta",
+      "visits": 1
+    },
+    {
+      "topic": "Diatomista",
+      "visits": 1
+    },
+    {
+      "topic": "Sentimiento",
+      "visits": 1
+    }
+  ]
 }

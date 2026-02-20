@@ -1,60 +1,124 @@
 {
   "name": "Haruki",
+  "emoji": "\ud83c\uddef\ud83c\uddf5",
   "type": "Japanese",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "00:35",
+      "date": "2026-02-21",
+      "article": "\u6b74\u53f2",
+      "thought": null,
+      "next": "\u4e09\u56fd\u5fd7",
+      "why": ""
+    },
+    {
+      "time": "00:31",
+      "date": "2026-02-21",
+      "article": "\u97f3\u697d",
+      "thought": null,
+      "next": "\u5e83\u8f9e\u82d1",
+      "why": ""
+    },
+    {
+      "time": "00:27",
+      "date": "2026-02-21",
+      "article": "\u5fc3\u7406\u5b66",
+      "thought": null,
+      "next": "\u8a8d\u77e5\u5fc3\u7406\u5b66",
+      "why": ""
+    },
+    {
       "time": "18:16",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u6570\u5b66",
+      "thought": null,
+      "next": "\u62bd\u8c61\u6982\u5ff5",
+      "why": ""
     },
     {
       "time": "18:11",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u6b74\u53f2",
+      "thought": null,
+      "next": "\u8881\u9ec4",
+      "why": ""
     },
     {
       "time": "18:07",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u54f2\u5b66",
+      "thought": null,
+      "next": "\u53e4\u4ee3\u30ae\u30ea\u30b7\u30a2\u8a9e",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u5fc3\u7406\u5b66",
+      "thought": null,
+      "next": "\u6df1\u5c64\u5fc3\u7406\u5b66",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u6b74\u53f2",
+      "thought": null,
+      "next": "\u79d1\u5b66",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u751f\u7269\u5b66",
+      "thought": null,
+      "next": "\u5206\u5e03 (\u751f\u7269)",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:48",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "\u79d1\u5b66",
+      "thought": null,
+      "next": "\u81ea\u7136\u79d1\u5b66",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "\u6b74\u53f2",
+      "visits": 5
+    },
+    {
+      "topic": "\u5fc3\u7406\u5b66",
+      "visits": 3
+    },
+    {
+      "topic": "\u6570\u5b66",
+      "visits": 3
+    },
+    {
+      "topic": "\u79d1\u5b66",
+      "visits": 3
+    },
+    {
+      "topic": "\u54f2\u5b66",
+      "visits": 2
+    },
+    {
+      "topic": "\u751f\u7269\u5b66",
+      "visits": 2
+    },
+    {
+      "topic": "\u97f3\u697d",
+      "visits": 1
+    },
+    {
+      "topic": "\u82b8\u8853",
+      "visits": 1
+    }
+  ]
 }

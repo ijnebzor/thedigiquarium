@@ -1,60 +1,124 @@
 {
   "name": "Victor",
+  "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "00:35",
+      "date": "2026-02-21",
+      "article": "Mechanics",
+      "thought": null,
+      "next": "Aristotle",
+      "why": ""
+    },
+    {
+      "time": "00:31",
+      "date": "2026-02-21",
+      "article": "Physics",
+      "thought": null,
+      "next": "Mechanics",
+      "why": ""
+    },
+    {
+      "time": "00:27",
+      "date": "2026-02-21",
+      "article": "Science",
+      "thought": null,
+      "next": "Physics",
+      "why": ""
+    },
+    {
       "time": "15:54",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Payment",
+      "thought": null,
+      "next": "Law",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Atom",
+      "thought": null,
+      "next": "Atom (feed)",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Atom (feed)",
+      "thought": null,
+      "next": "HTTP",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "HTTP",
+      "thought": null,
+      "next": "Payment",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Resolution",
+      "thought": null,
+      "next": "Bertolt Brecht",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Bertolt Brecht",
+      "thought": null,
+      "next": "Prague",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Prague",
+      "thought": null,
+      "next": "Wallenstein Palace",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Mechanics",
+      "visits": 1
+    },
+    {
+      "topic": "Physics",
+      "visits": 1
+    },
+    {
+      "topic": "Science",
+      "visits": 1
+    },
+    {
+      "topic": "Payment",
+      "visits": 1
+    },
+    {
+      "topic": "Atom",
+      "visits": 1
+    },
+    {
+      "topic": "Atom (feed)",
+      "visits": 1
+    },
+    {
+      "topic": "HTTP",
+      "visits": 1
+    },
+    {
+      "topic": "Resolution",
+      "visits": 1
+    }
+  ]
 }

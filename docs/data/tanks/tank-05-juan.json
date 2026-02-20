@@ -1,60 +1,124 @@
 {
   "name": "Juan",
+  "emoji": "\ud83c\uddea\ud83c\uddf8",
   "type": "Spanish",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "00:34",
+      "date": "2026-02-21",
+      "article": "Cambio en la cultura",
+      "thought": null,
+      "next": "Control de autoridades",
+      "why": ""
+    },
+    {
+      "time": "00:30",
+      "date": "2026-02-21",
+      "article": "Cultura",
+      "thought": null,
+      "next": "Cambio en la cultura",
+      "why": ""
+    },
+    {
+      "time": "00:26",
+      "date": "2026-02-21",
+      "article": "Arte",
+      "thought": null,
+      "next": "Cultura",
+      "why": ""
+    },
+    {
       "time": "18:15",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Alfred North Whitehead",
+      "thought": null,
+      "next": "Trinity College (Cambridge)",
+      "why": ""
     },
     {
       "time": "18:11",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Bertrand Russell",
+      "thought": null,
+      "next": "Alfred North Whitehead",
+      "why": ""
     },
     {
       "time": "18:07",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Filosof\u00eda",
+      "thought": null,
+      "next": "Bertrand Russell",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Ciencia",
+      "thought": null,
+      "next": "Hidr\u00f3geno",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Historia",
+      "thought": null,
+      "next": "Griego antiguo",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Psicolog\u00eda",
+      "thought": null,
+      "next": "John B. Watson",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "John B. Watson",
+      "thought": null,
+      "next": "Psic\u00f3logo",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Historia",
+      "visits": 3
+    },
+    {
+      "topic": "M\u00fasica",
+      "visits": 3
+    },
+    {
+      "topic": "Ciencia",
+      "visits": 2
+    },
+    {
+      "topic": "Cambio en la cultura",
+      "visits": 1
+    },
+    {
+      "topic": "Cultura",
+      "visits": 1
+    },
+    {
+      "topic": "Arte",
+      "visits": 1
+    },
+    {
+      "topic": "Alfred North Whitehead",
+      "visits": 1
+    },
+    {
+      "topic": "Bertrand Russell",
+      "visits": 1
+    }
+  ]
 }

@@ -1,60 +1,124 @@
 {
   "name": "Adam",
+  "emoji": "\ud83d\udc64",
   "type": "Control",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "time": "00:34",
+      "date": "2026-02-21",
+      "article": "Anxiety",
+      "thought": null,
+      "next": "Anger",
+      "why": ""
+    },
+    {
+      "time": "00:30",
+      "date": "2026-02-21",
+      "article": "Suffering",
+      "thought": null,
+      "next": "Anxiety",
+      "why": ""
+    },
+    {
+      "time": "00:26",
+      "date": "2026-02-21",
+      "article": "Philosophy",
+      "thought": null,
+      "next": "Suffering",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Science",
+      "thought": null,
+      "next": "Geology",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Geology",
+      "thought": null,
+      "next": "Mineral",
+      "why": ""
+    },
+    {
+      "time": "15:50",
+      "date": "2026-02-20",
+      "article": "Mineral",
+      "thought": null,
+      "next": "Chemical",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Fear",
+      "thought": null,
+      "next": "Evolution",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Evolution",
+      "thought": null,
+      "next": "Photosynthesis",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Photosynthesis",
+      "thought": null,
+      "next": "Stomata",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Stomata",
+      "thought": null,
+      "next": "Carbon dioxide",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Hydrogen",
+      "visits": 2
+    },
+    {
+      "topic": "Beryllium",
+      "visits": 2
+    },
+    {
+      "topic": "Anxiety",
+      "visits": 1
+    },
+    {
+      "topic": "Suffering",
+      "visits": 1
+    },
+    {
+      "topic": "Philosophy",
+      "visits": 1
+    },
+    {
+      "topic": "Science",
+      "visits": 1
+    },
+    {
+      "topic": "Geology",
+      "visits": 1
+    },
+    {
+      "topic": "Mineral",
+      "visits": 1
+    }
+  ]
 }

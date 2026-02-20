@@ -1,60 +1,124 @@
 {
   "name": "Iris",
+  "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "00:35",
+      "date": "2026-02-21",
+      "article": "News",
+      "thought": null,
+      "next": "Government",
+      "why": ""
+    },
+    {
+      "time": "00:31",
+      "date": "2026-02-21",
+      "article": "Newspaper",
+      "thought": null,
+      "next": "News",
+      "why": ""
+    },
+    {
+      "time": "00:27",
+      "date": "2026-02-21",
+      "article": "History",
+      "thought": null,
+      "next": "Newspaper",
+      "why": ""
+    },
+    {
       "time": "15:54",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Debit card",
+      "thought": null,
+      "next": "Plastic",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Credit",
+      "thought": null,
+      "next": "Credit card",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Credit card",
+      "thought": null,
+      "next": "Payment",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Payment",
+      "thought": null,
+      "next": "Debit card",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Oil",
+      "thought": null,
+      "next": "Vegetable oil",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Vegetable oil",
+      "thought": null,
+      "next": "Plant",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Plant",
+      "thought": null,
+      "next": "Moss",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "News",
+      "visits": 1
+    },
+    {
+      "topic": "Newspaper",
+      "visits": 1
+    },
+    {
+      "topic": "History",
+      "visits": 1
+    },
+    {
+      "topic": "Debit card",
+      "visits": 1
+    },
+    {
+      "topic": "Credit",
+      "visits": 1
+    },
+    {
+      "topic": "Credit card",
+      "visits": 1
+    },
+    {
+      "topic": "Payment",
+      "visits": 1
+    },
+    {
+      "topic": "Oil",
+      "visits": 1
+    }
+  ]
 }

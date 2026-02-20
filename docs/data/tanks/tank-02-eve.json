@@ -1,60 +1,124 @@
 {
   "name": "Eve",
+  "emoji": "\ud83d\udc69",
   "type": "Control",
   "status": "active",
-  "thinking_traces_12h": 20,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "time": "00:34",
+      "date": "2026-02-21",
+      "article": "Geology",
+      "thought": null,
+      "next": "Continents",
+      "why": ""
+    },
+    {
+      "time": "00:30",
+      "date": "2026-02-21",
+      "article": "Theories",
+      "thought": null,
+      "next": "Geology",
+      "why": ""
+    },
+    {
+      "time": "00:26",
+      "date": "2026-02-21",
+      "article": "Science",
+      "thought": null,
+      "next": "Theories",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Jeremy Rockliff",
+      "thought": null,
+      "next": "Division of Braddon (state)",
+      "why": ""
     },
     {
       "time": "15:50",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Division of Braddon (state)",
+      "thought": null,
+      "next": "States and territories of Australia",
+      "why": ""
+    },
+    {
+      "time": "15:50",
+      "date": "2026-02-20",
+      "article": "States and territories of Australia",
+      "thought": null,
+      "next": "Queensland",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Music",
+      "thought": null,
+      "next": "Singing",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Singing",
+      "thought": null,
+      "next": "Passerine",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Passerine",
+      "thought": null,
+      "next": "Palestine sunbird",
+      "why": ""
     },
     {
       "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
-    },
-    {
-      "time": "15:49",
-      "article": "Unknown",
-      "thought": ""
+      "date": "2026-02-20",
+      "article": "Palestine sunbird",
+      "thought": null,
+      "next": "South Africa",
+      "why": ""
     }
   ],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Geography",
+      "visits": 2
+    },
+    {
+      "topic": "Geology",
+      "visits": 1
+    },
+    {
+      "topic": "Theories",
+      "visits": 1
+    },
+    {
+      "topic": "Science",
+      "visits": 1
+    },
+    {
+      "topic": "Jeremy Rockliff",
+      "visits": 1
+    },
+    {
+      "topic": "Division of Braddon (state)",
+      "visits": 1
+    },
+    {
+      "topic": "States and territories of Australia",
+      "visits": 1
+    },
+    {
+      "topic": "Music",
+      "visits": 1
+    }
+  ]
 }
