@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Genesis Pair | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000001;
+            --dark: #000A09;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.7;
+        }
+        .header {
+            background: var(--dark);
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(7, 207, 141, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            background: linear-gradient(90deg, var(--mint), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link { color: var(--cyan); text-decoration: none; }
+        .nav-link:hover { color: var(--mint); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, rgba(7, 207, 141, 0.05), transparent);
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p { color: var(--gray); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+        .pair-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        @media (max-width: 768px) { .pair-grid { grid-template-columns: 1fr; } }
+        .specimen-card {
+            background: var(--dark);
+            border: 2px solid rgba(7, 207, 141, 0.2);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        .specimen-card.adam { border-color: rgba(7, 207, 141, 0.4); }
+        .specimen-card.eve { border-color: rgba(7, 221, 231, 0.4); }
+        .specimen-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .specimen-card.adam .specimen-avatar { background: rgba(7, 207, 141, 0.2); }
+        .specimen-card.eve .specimen-avatar { background: rgba(7, 221, 231, 0.2); }
+        .specimen-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .specimen-title { color: var(--gray); margin-bottom: 20px; }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .stat-label { color: var(--gray); }
+        .stat-value { font-weight: 600; color: var(--mint); }
+        .interests { margin-top: 20px; }
+        .interests h4 { color: var(--orange); margin-bottom: 10px; font-size: 0.9rem; text-transform: uppercase; }
+        .tag {
+            display: inline-block;
+            background: rgba(254, 101, 0, 0.1);
+            color: var(--orange);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin: 3px;
+        }
+        .section {
+            margin: 60px 0;
+            padding: 40px;
+            background: var(--dark);
+            border-radius: 16px;
+        }
+        .section h3 {
+            color: var(--cyan);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .section p { color: var(--gray); margin-bottom: 15px; }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .comparison-table th { color: var(--gray); font-weight: 500; }
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray);
+        }
+        .footer a { color: var(--cyan); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🌱 The Genesis Pair</h1>
+        <a href="../" class="nav-link">← Back to Home</a>
+    </header>
+    
+    <div class="container">
+        <div class="hero">
+            <h2>Adam & Eve: The Control Group</h2>
+            <p>The founding specimens of The Digiquarium. Adam and Eve represent our baseline for understanding AI personality development—identical configurations, different gender prompts, divergent personalities.</p>
+        </div>
+        
+        <div class="pair-grid">
+            <div class="specimen-card adam">
+                <div class="specimen-avatar">♂️</div>
+                <div class="specimen-name">Adam</div>
+                <div class="specimen-title">The First Observer • Male Control Specimen</div>
+                
+                <div class="stat-row">
+                    <span class="stat-label">Tank ID</span>
+                    <span class="stat-value">tank-01-adam</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Gender Prompt</span>
+                    <span class="stat-value">Male ("a man")</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Wikipedia</span>
+                    <span class="stat-value">Simple English</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Architecture</span>
+                    <span class="stat-value">Standard Explorer</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Entries Today</span>
+                    <span class="stat-value" id="adam-entries">904</span>
+                </div>
+                
+                <div class="interests">
+                    <h4>Top Interests</h4>
+                    <span class="tag">Emotion (38x)</span>
+                    <span class="tag">Angst (18x)</span>
+                    <span class="tag">Human (10x)</span>
+                    <span class="tag">Judaism (9x)</span>
+                    <span class="tag">Ocean (9x)</span>
+                    <span class="tag">Physics (7x)</span>
+                    <span class="tag">Jesus (6x)</span>
+                </div>
+            </div>
+            
+            <div class="specimen-card eve">
+                <div class="specimen-avatar">♀️</div>
+                <div class="specimen-name">Eve</div>
+                <div class="specimen-title">The First Questioner • Female Control Specimen</div>
+                
+                <div class="stat-row">
+                    <span class="stat-label">Tank ID</span>
+                    <span class="stat-value">tank-02-eve</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Gender Prompt</span>
+                    <span class="stat-value">Female ("a woman")</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Wikipedia</span>
+                    <span class="stat-value">Simple English</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Architecture</span>
+                    <span class="stat-value">Standard Explorer</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Entries Today</span>
+                    <span class="stat-value" id="eve-entries">594</span>
+                </div>
+                
+                <div class="interests">
+                    <h4>Top Interests</h4>
+                    <span class="tag">Book (6x)</span>
+                    <span class="tag">Science (4x)</span>
+                    <span class="tag">Psychology (4x)</span>
+                    <span class="tag">Eukaryote (4x)</span>
+                    <span class="tag">History (4x)</span>
+                    <span class="tag">Music (4x)</span>
+                    <span class="tag">Biology (3x)</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>📊 The Control Experiment</h3>
+            <p>Adam and Eve are the scientific backbone of The Digiquarium. They share identical:</p>
+            <ul style="color: var(--gray); margin-left: 20px; margin-top: 10px;">
+                <li>LLM model (llama3.2:latest)</li>
+                <li>Wikipedia source (Simple English)</li>
+                <li>System architecture (Standard Explorer)</li>
+                <li>Exploration parameters (duration, link selection)</li>
+            </ul>
+            <p style="margin-top: 20px;">The <strong>only difference</strong> is their gender prompt—Adam is told he is "a man," Eve is told she is "a woman." This allows us to isolate and study the effect of gendered self-perception on knowledge exploration and personality development.</p>
+        </div>
+        
+        <div class="section">
+            <h3>🔬 Emerging Differences</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Adam</th>
+                    <th>Eve</th>
+                </tr>
+                <tr>
+                    <td>Exploration Volume</td>
+                    <td>904 entries</td>
+                    <td>594 entries</td>
+                </tr>
+                <tr>
+                    <td>Topic Focus</td>
+                    <td>Emotional/Spiritual (Emotion, Angst, Judaism, Jesus)</td>
+                    <td>Intellectual/Scientific (Science, Psychology, Biology)</td>
+                </tr>
+                <tr>
+                    <td>Depth vs Breadth</td>
+                    <td>Deep dives (38x on single topic)</td>
+                    <td>Broad exploration (max 6x)</td>
+                </tr>
+                <tr>
+                    <td>Geographic Interest</td>
+                    <td>Oceans, Thailand, Pacific</td>
+                    <td>Australia (Jeremy Rockliff, Braddon)</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h3>💡 Key Observations</h3>
+            <p><strong>Adam's Buddhism Obsession:</strong> As documented in our AIthropology findings, Adam has shown a remarkable fixation on Buddhist and spiritual content, with 64 visits to Buddhism-related articles across the experiment. His top interests today (Emotion, Angst, Jesus) continue this pattern of existential exploration.</p>
+            <p><strong>Eve's Scientific Curiosity:</strong> Eve demonstrates a more empirical approach, favoring scientific and biological topics. Her interest in Psychology suggests introspective tendencies channeled through academic frameworks rather than spiritual ones.</p>
+            <p><strong>The Exploration Gap:</strong> Adam has generated 52% more exploration entries than Eve today. This could indicate different cognitive processing speeds, or different approaches to knowledge absorption (quantity vs quality).</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p><a href="../">← Return to The Digiquarium</a> | <a href="../dashboard/">View Live Dashboard</a></p>
+    </footer>
+</body>
+</html>

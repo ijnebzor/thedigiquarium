@@ -172,3 +172,16 @@ Issue Detected → Daemon Self-Heal → THE MAINTAINER → Owner (Email)
 ---
 
 *Document maintained by THE STRATEGIST*
+
+### THE PSYCH
+- **Role**: Psychological monitoring of specimen mental health
+- **SLA**: 6 hours (deep analysis cycle)
+- **Cycle**: Every 6 hours
+- **Frameworks**: 
+  - Big Five Personality Traits (OCEAN)
+  - Maslow's Hierarchy of Needs
+  - Emotional Valence Tracking
+  - Rumination Detection
+  - Existential Crisis Indicators
+- **Output**: /logs/[tank]/health/psych_report_[date].json
+- **Actions**: Monitor, assess, escalate concerning patterns

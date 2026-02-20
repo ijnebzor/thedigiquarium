@@ -28,7 +28,7 @@ CHECK_INTERVAL = 60  # 1 minute
 MANAGED_DAEMONS = [
     'caretaker', 'guard', 'sentinel', 'scheduler', 
     'translator', 'documentarian', 'webmaster', 
-    'ollama_watcher', 'final_auditor'
+    'ollama_watcher', 'final_auditor', 'psych'
 ]
 
 class Maintainer:
