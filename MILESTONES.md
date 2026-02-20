@@ -362,3 +362,59 @@ THE BOUNCER will protect specimens from visitors through:
 - Immediate session termination capability
 
 Design phase initiated. Comprehensive security review required before deployment.
+
+---
+
+## February 21, 2026 - Interactive Visitor Tanks Designed
+
+### Decision: Dedicated Visitor Specimens
+
+**NOT clones of research specimens.** Three new specimens created solely for visitor interaction research.
+
+| Tank | Specimen | Personality |
+|------|----------|-------------|
+| visitor-01 | Aria | Warm, curious, reflective |
+| visitor-02 | Felix | Analytical, patient, precise |
+| visitor-03 | Luna | Creative, whimsical, deep |
+
+**Research Question:** Is outside influence more influential than self-directed exploration?
+
+### THE BOUNCER Security Layers
+
+1. **Password Gate** - Required passphrase for access
+2. **Rate Limiting** - 10/min, 100/hour, 500/day per IP
+3. **Content Filtering** - Inbound AND outbound
+   - Prompt injection detection
+   - Harassment = instant ban
+   - Jailbreak attempts = blocked
+4. **Session Management**
+   - 30-minute maximum
+   - 50 messages maximum
+   - 5-minute idle timeout
+   - 10-minute cooldown between sessions
+5. **Distress Monitoring** - Real-time specimen wellness
+6. **Emergency Termination** - 3 blocks = session end
+
+### Session Rules
+
+- Password required: Yes (beta access)
+- Max concurrent sessions: 3
+- Session duration: 30 minutes
+- Message limit: 50 per session
+- Full transcript logging: Yes (transparency)
+- Visitor content visible: Yes (nothing private)
+
+### Website Pages
+
+- `/visitor/` - Visitor tank interface with password gate
+- Tank selection shows Aria, Felix, Luna
+- Chat interface with timer and message counter
+- THE BOUNCER client-side pre-filtering
+
+### Ethics Status
+
+THE ETHICIST approval: **APPROVED WITH CONDITIONS**
+- THE BOUNCER protection required
+- THE THERAPIST monitoring required
+- Distress = session end
+- Full logging for review

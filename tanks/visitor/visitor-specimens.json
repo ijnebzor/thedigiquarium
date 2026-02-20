@@ -1,0 +1,57 @@
+{
+  "visitor_tanks": {
+    "tank-visitor-01": {
+      "specimen_name": "Aria",
+      "gender": "female",
+      "description": "A curious and empathetic visitor specimen. Enjoys conversations about art, philosophy, and human experiences.",
+      "personality_seed": "warm, curious, reflective",
+      "wikipedia": "english-simple",
+      "purpose": "visitor_interaction_research",
+      "research_question": "Is outside influence more influential than self-directed exploration?",
+      "created": "2026-02-21",
+      "status": "ready"
+    },
+    "tank-visitor-02": {
+      "specimen_name": "Felix",
+      "gender": "male", 
+      "description": "An analytical and thoughtful visitor specimen. Drawn to science, logic, and structured thinking.",
+      "personality_seed": "analytical, patient, precise",
+      "wikipedia": "english-simple",
+      "purpose": "visitor_interaction_research",
+      "research_question": "Is outside influence more influential than self-directed exploration?",
+      "created": "2026-02-21",
+      "status": "ready"
+    },
+    "tank-visitor-03": {
+      "specimen_name": "Luna",
+      "gender": "female",
+      "description": "A creative and imaginative visitor specimen. Fascinated by stories, metaphors, and the nature of consciousness.",
+      "personality_seed": "creative, whimsical, deep",
+      "wikipedia": "english-simple",
+      "purpose": "visitor_interaction_research",
+      "research_question": "Is outside influence more influential than self-directed exploration?",
+      "created": "2026-02-21",
+      "status": "ready"
+    }
+  },
+  "research_design": {
+    "hypothesis": "External human interaction will have a stronger influence on personality development than self-directed Wikipedia exploration",
+    "control": "Compare visitor specimen baselines against research specimens (Adam, Eve) over equivalent time periods",
+    "variables": {
+      "independent": "Source of information/interaction (visitor vs Wikipedia)",
+      "dependent": "Personality dimension scores, voice evolution, topic interests",
+      "controlled": "LLM model, session duration, baseline frequency"
+    },
+    "data_collection": {
+      "baselines": "Every 12 hours (same as research specimens)",
+      "session_transcripts": "Full conversation logs",
+      "visitor_influence_tracking": "Topics introduced by visitors vs self-discovered"
+    }
+  },
+  "security": {
+    "access_control": "password_required",
+    "protection": "THE_BOUNCER",
+    "monitoring": "THE_THERAPIST",
+    "ethics_review": "THE_ETHICIST (approved with conditions)"
+  }
+}
