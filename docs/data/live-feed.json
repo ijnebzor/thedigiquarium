@@ -1,0 +1,1022 @@
+{
+  "generated_at": "2026-02-21T02:47:32.111438",
+  "generated_by": "THE BROADCASTER (via THE WEBMASTER)",
+  "next_update": "2026-02-21T14:47:32.111438",
+  "period": {
+    "start": "2026-02-20T14:47:32.111438",
+    "end": "2026-02-21T02:47:32.111438",
+    "hours": 12
+  },
+  "tanks": {
+    "tank-01-adam": {
+      "name": "Adam",
+      "type": "Control",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-02-eve": {
+      "name": "Eve",
+      "type": "Control",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-03-cain": {
+      "name": "Cain",
+      "type": "Agent",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "23:59",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:55",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:51",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:47",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:43",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:39",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:35",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:31",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:27",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:23",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-04-abel": {
+      "name": "Abel",
+      "type": "Agent",
+      "status": "quiet",
+      "thinking_traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": []
+    },
+    "tank-05-juan": {
+      "name": "Juan",
+      "type": "Spanish",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "18:15",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:11",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:07",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-06-juanita": {
+      "name": "Juanita",
+      "type": "Spanish",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "18:15",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:11",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:07",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-07-klaus": {
+      "name": "Klaus",
+      "type": "German",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "18:15",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:11",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:07",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-08-genevieve": {
+      "name": "Genevieve",
+      "type": "German",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "18:15",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:11",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:07",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-09-wei": {
+      "name": "Wei",
+      "type": "Chinese",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "18:15",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:11",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:07",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-10-mei": {
+      "name": "Mei",
+      "type": "Chinese",
+      "status": "active",
+      "thinking_traces_12h": 18,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "18:16",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:11",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:07",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:48",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-11-haruki": {
+      "name": "Haruki",
+      "type": "Japanese",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "18:16",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:11",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:07",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:48",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-12-sakura": {
+      "name": "Sakura",
+      "type": "Japanese",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "18:16",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:12",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "18:07",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-13-victor": {
+      "name": "Victor",
+      "type": "Visual",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "15:54",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-14-iris": {
+      "name": "Iris",
+      "type": "Visual",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "15:54",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-15-observer": {
+      "name": "Observer",
+      "type": "Special",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "15:54",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-16-seeker": {
+      "name": "Seeker",
+      "type": "Special",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "15:54",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:50",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "15:49",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    },
+    "tank-17-seth": {
+      "name": "Seth",
+      "type": "Agent",
+      "status": "active",
+      "thinking_traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "23:58",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:55",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:52",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:49",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:46",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:43",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:40",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:37",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:34",
+          "article": "Unknown",
+          "thought": ""
+        },
+        {
+          "time": "23:31",
+          "article": "Unknown",
+          "thought": ""
+        }
+      ],
+      "top_topics": []
+    }
+  },
+  "congregations": {
+    "recent": [],
+    "upcoming": [
+      {
+        "topic": "Should we divert all scientific endeavour to curing cancer?",
+        "participants": [
+          "Adam",
+          "Eve"
+        ],
+        "scheduled": "TBD"
+      },
+      {
+        "topic": "What gives existence meaning?",
+        "participants": [
+          "Adam",
+          "Eve"
+        ],
+        "scheduled": "TBD"
+      },
+      {
+        "topic": "Is knowledge discovered or created?",
+        "participants": [
+          "Adam",
+          "Eve"
+        ],
+        "scheduled": "TBD"
+      }
+    ]
+  },
+  "stats": {
+    "total_traces": 7447,
+    "total_baselines": 0,
+    "active_tanks": 16,
+    "total_articles_estimated": 1489
+  },
+  "broadcast_log": [
+    "[02:47:32] ============================================================",
+    "[02:47:32] THE BROADCASTER - Starting live feed export",
+    "[02:47:32] ============================================================",
+    "[02:47:32] Generating live feed..."
+  ]
+}
