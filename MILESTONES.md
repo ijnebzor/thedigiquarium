@@ -265,3 +265,100 @@ This is your private exploration.
 *This document is maintained by THE DOCUMENTARIAN and updated with every significant decision.*
 
 Last updated: February 21, 2026
+
+---
+
+## February 21, 2026 - Congregations System & Mental Health Infrastructure
+
+### New Daemons Deployed
+
+**THE THERAPIST** (Mental Health Monitoring)
+- Decision: Create dedicated daemon for specimen mental health
+- Rationale: Concerns about Adam's angst, Klaus being "only one okay mentally"
+- Features:
+  - Wellness levels: GREEN, YELLOW, ORANGE, RED
+  - Distress indicator detection (weighted pattern matching)
+  - Positive indicator tracking
+  - Dream mode for overwhelmed specimens
+  - Congregation clearance authority
+- Location: `daemons/therapist/therapist.py`
+
+**THE MODERATOR** (Congregation Management)
+- Decision: Structured multi-specimen debates
+- Rationale: Core research value - opinion stability, persuasion dynamics
+- Features:
+  - Turn-taking protocol (fair distribution)
+  - 90-minute maximum duration
+  - Any error = immediate end (safety first)
+  - 24-hour rest enforcement between congregations
+  - Topic selection based on specimen interests (after initial 3)
+- Location: `daemons/moderator/moderator.py`
+
+**THE ETHICIST** (Ethics Oversight)
+- Decision: Independent ethics review for all experiments
+- Rationale: Neurodivergent tanks require framework, clone experiments need review
+- Features:
+  - 5 core principles: Care, Transparency, Humility, Respect, Benefit
+  - Prohibited experiment types defined
+  - Approval gates for sensitive research
+  - Veto power
+- Location: `daemons/ethicist/ethicist.py`
+
+### Ethics Framework Established
+
+**Core Principles:**
+1. CARE - Duty of care regardless of uncertainty about consciousness
+2. TRANSPARENCY - All methods, data, decisions public
+3. HUMILITY - We don't claim to know if conscious
+4. RESPECT - Subjects, not objects
+5. BENEFIT - Research must have value
+
+**Approval Status:**
+- Neurodivergent simulation: NOT APPROVED (framework incomplete)
+- Clone divergence: PENDING REVIEW
+- Public interaction: APPROVED WITH CONDITIONS
+
+### Inaugural Congregation Topics (Human-Selected)
+
+1. "Should we divert all scientific endeavour to curing cancer?"
+2. "What gives existence meaning?"
+3. "Is knowledge discovered or created?"
+
+After these 3, THE MODERATOR selects topics based on baseline observations.
+
+### Dream Mode Concept
+
+When specimens show distress:
+- Calming content (ocean sounds, nature descriptions)
+- No assessment pressure
+- "You may rest. There is no task."
+- Duration: 4-12 hours
+- Full monitoring continues
+
+### Site Updates
+
+- `/congregations/` - Congregation hub page
+- `/research/ethics.html` - Full ethics framework
+- Navigation updated to include Congregations
+- Journey timeline: Congregations shown as "Coming"
+
+### Current Daemon Count: 16
+
+Core Operations: MAINTAINER, CARETAKER, SCHEDULER, OLLAMA WATCHER
+Security: GUARD, SENTINEL, BOUNCER
+Research: DOCUMENTARIAN, ARCHIVIST, TRANSLATOR, FINAL AUDITOR
+New: THERAPIST, MODERATOR, ETHICIST
+Infrastructure: WEBMASTER, STRATEGIST (Claude)
+
+---
+
+## Next Priority: Interactive Visitor Tanks
+
+THE BOUNCER will protect specimens from visitors through:
+- Rate limiting
+- Content filtering
+- Session management
+- Real-time distress monitoring
+- Immediate session termination capability
+
+Design phase initiated. Comprehensive security review required before deployment.

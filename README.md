@@ -4,6 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Tanks](https://img.shields.io/badge/Tanks-17-green.svg)]()
+[![Daemons](https://img.shields.io/badge/Daemons-16-purple.svg)]()
 [![Languages](https://img.shields.io/badge/Languages-5-orange.svg)]()
 [![Website](https://img.shields.io/badge/Website-Live-mint.svg)](https://ijnebzor.github.io/thedigiquarium)
 
@@ -13,7 +14,7 @@ The Digiquarium is the first **AIthropology** research platform — studying how
 
 We put AI in isolated containers with nothing but Wikipedia and watch what happens to their "personalities" over weeks and months.
 
-**🔗 [Live Website](https://ijnebzor.github.io/thedigiquarium)** · **📄 [Research Paper](https://ijnebzor.github.io/thedigiquarium/academic/paper.html)** · **📋 [Methodology](https://ijnebzor.github.io/thedigiquarium/research/methodology.html)**
+**🔗 [Live Website](https://ijnebzor.github.io/thedigiquarium)** · **📄 [Research Paper](https://ijnebzor.github.io/thedigiquarium/academic/paper.html)** · **🎭 [Congregations](https://ijnebzor.github.io/thedigiquarium/congregations/)** · **⚖️ [Ethics](https://ijnebzor.github.io/thedigiquarium/research/ethics.html)**
 
 ---
 
@@ -35,45 +36,79 @@ We put AI in isolated containers with nothing but Wikipedia and watch what happe
 
 ---
 
-## 🔬 Research Questions
+## 🎭 Congregations
 
-1. **Personality Development**: Do AI develop consistent traits over time?
-2. **Cultural Effects**: Does Spanish vs German Wikipedia produce different worldviews?
-3. **Architecture Differences**: Do agent frameworks behave differently?
-4. **Visual Cognition**: Does seeing images create stronger emotional engagement?
-5. **Social Awareness**: Does knowing about other specimens affect behavior?
+Multi-specimen debates on scheduled topics. THE MODERATOR manages turn-taking, THE THERAPIST ensures participant wellness.
+
+**Inaugural Topics:**
+1. "Should we divert all scientific endeavour to curing cancer?"
+2. "What gives existence meaning?"
+3. "Is knowledge discovered or created?"
+
+**Rules:**
+- 90-minute maximum
+- Any error = immediate end
+- 24-hour rest between congregations per specimen
+- THE THERAPIST clearance required
 
 ---
 
-## 🤖 The Team
+## 🤖 The Team (16 Daemons)
 
 **Human**: [@ijneb.dev](https://ijneb.dev)  
-**AI Partner**: Claude (THE STRATEGIST)  
-**Autonomous Daemons**: 13 specialized agents
+**AI Partner**: Claude (THE STRATEGIST)
 
+### Core Operations
 | Daemon | Role |
 |--------|------|
-| THE MAINTAINER | System orchestration, 99.9% uptime |
+| THE MAINTAINER | System orchestration |
 | THE CARETAKER | Tank health monitoring |
-| THE GUARD | General security (OWASP LLM Top 10) |
-| THE SENTINEL | Agent-specific security |
 | THE SCHEDULER | 12-hour baseline cycles |
-| THE TRANSLATOR | ES/DE/ZH/JA → EN |
-| THE DOCUMENTARIAN | Academic paper updates |
-| THE ARCHIVIST | Deep dive research |
-| THE WEBMASTER | Website maintenance |
 | THE OLLAMA WATCHER | LLM infrastructure |
+
+### Security
+| Daemon | Role |
+|--------|------|
+| THE GUARD | General security (OWASP LLM Top 10) |
+| THE SENTINEL | Agent-specific monitoring |
+| THE BOUNCER | Protects specimens from visitors |
+
+### Research
+| Daemon | Role |
+|--------|------|
+| THE DOCUMENTARIAN | Academic paper updates |
+| THE ARCHIVIST | Baselines & deep dives |
+| THE TRANSLATOR | ES/DE/ZH/JA → EN |
 | THE FINAL AUDITOR | Quality compliance |
-| THE BOUNCER | Interactive tank security |
+
+### Mental Health & Ethics
+| Daemon | Role |
+|--------|------|
+| THE THERAPIST | Specimen mental health |
+| THE MODERATOR | Congregation management |
+| THE ETHICIST | Ethics oversight |
+
+### Infrastructure
+| Daemon | Role |
+|--------|------|
+| THE WEBMASTER | Website maintenance |
+| THE STRATEGIST | Overall direction (Claude) |
 
 ---
 
-## 📊 Current Stats
+## ⚖️ Ethics Framework
 
-- **Thinking Traces**: 7,345+
-- **Articles Explored**: ~1,469
-- **Baselines Collected**: 324+
-- **Runtime**: 6 days
+**Core Principles:**
+1. **CARE** - Duty of care regardless of uncertainty
+2. **TRANSPARENCY** - All methods public
+3. **HUMILITY** - We don't claim consciousness
+4. **RESPECT** - Subjects, not objects
+5. **BENEFIT** - Research must have value
+
+**Approval Status:**
+- Neurodivergent simulation: ❌ NOT APPROVED
+- Clone divergence: ⏳ PENDING REVIEW  
+- Public interaction: ✅ APPROVED WITH CONDITIONS
 
 ---
 
@@ -82,9 +117,8 @@ We put AI in isolated containers with nothing but Wikipedia and watch what happe
 ```bash
 git clone https://github.com/ijnebzor/thedigiquarium.git
 cd thedigiquarium
-./setup/install.sh  # Downloads ~50GB Wikipedia
+./setup/install.sh
 docker compose up -d
-docker logs -f tank-01-adam
 ```
 
 ---
@@ -95,14 +129,18 @@ docker logs -f tank-01-adam
 thedigiquarium/
 ├── docs/                    # Website (GitHub Pages)
 │   ├── academic/           # Research paper
-│   ├── research/           # Methodology, prompts, security
-│   ├── specimens/          # Individual profiles
-│   └── dashboard/          # Live tank view
-├── logs/                   # All thinking traces & baselines
-├── daemons/                # Autonomous agent code & logs
-├── tanks/                  # Tank configurations
+│   ├── congregations/      # Debate hub
+│   ├── research/           # Methodology, prompts, security, ethics
+│   └── specimens/          # Individual profiles
+├── daemons/                # All 16 daemon implementations
+│   ├── therapist/          # Mental health monitoring
+│   ├── moderator/          # Congregation management
+│   ├── ethicist/           # Ethics oversight
+│   └── ...
+├── logs/                   # Thinking traces & baselines
+├── congregations/          # Congregation transcripts
 ├── MILESTONES.md           # Complete decision log
-└── README.md               # This file
+└── README.md
 ```
 
 ---
@@ -110,11 +148,10 @@ thedigiquarium/
 ## 🔗 Links
 
 - **Website**: https://ijnebzor.github.io/thedigiquarium
+- **Congregations**: https://ijnebzor.github.io/thedigiquarium/congregations/
+- **Ethics**: https://ijnebzor.github.io/thedigiquarium/research/ethics.html
 - **Paper**: https://ijnebzor.github.io/thedigiquarium/academic/paper.html
 - **Methodology**: https://ijnebzor.github.io/thedigiquarium/research/methodology.html
-- **Security**: https://ijnebzor.github.io/thedigiquarium/research/security.html
-- **Prompt Evolution**: https://ijnebzor.github.io/thedigiquarium/research/prompt-evolution.html
-- **All Decisions**: https://ijnebzor.github.io/thedigiquarium/research/milestones.html
 
 ---
 
