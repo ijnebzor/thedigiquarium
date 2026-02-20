@@ -3,344 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Digiquarium - Live Dashboard</title>
+    <title>Live Dashboard | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #1a5f7a;
+            --primary-light: #2d8fb3;
+            --accent: #c9a227;
+            --bg: #0f1419;
+            --bg-card: #1a2332;
+            --text: #e8edf2;
+            --text-dim: #8899a6;
+            --border: #2f3d4d;
+            --active: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            background: #0a0a0a;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
-            overflow: hidden;
-            height: 100vh;
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
         }
         
         .header {
-            text-align: center;
-            padding: 8px;
-            background: linear-gradient(180deg, #001a00 0%, #0a0a0a 100%);
-            border-bottom: 1px solid #003300;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 20px;
         }
         
-        .header h1 {
-            font-size: 20px;
-            text-shadow: 0 0 10px #00ff00;
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 600;
         }
+        
+        .logo span { color: var(--primary-light); }
         
         .header-stats {
-            font-size: 11px;
-            color: #006600;
-        }
-        
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 8px;
-            padding: 8px;
-            height: calc(100vh - 70px);
-            overflow-y: auto;
-        }
-        
-        .tank-panel {
-            background: #0d1f0d;
-            border: 1px solid #1a3a1a;
-            border-radius: 4px;
-            padding: 8px;
-            min-height: 180px;
-            position: relative;
             display: flex;
-            flex-direction: column;
+            gap: 30px;
+            font-size: 0.9rem;
         }
         
-        .tank-panel:hover {
-            border-color: #00ff00;
-            box-shadow: 0 0 15px rgba(0,255,0,0.2);
+        .header-stat {
+            text-align: center;
         }
         
-        .tank-panel.needs-translation {
-            border-left: 3px solid #ff9900;
+        .header-stat-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-light);
+        }
+        
+        .header-stat-label {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .nav-links a:hover { color: var(--text); }
+        
+        .main {
+            padding: 20px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 15px;
+        }
+        
+        .tank-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+        
+        .tank-card:hover {
+            border-color: var(--primary-light);
+        }
+        
+        .tank-card.translated {
+            border-left: 3px solid var(--accent);
         }
         
         .tank-header {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 6px;
-            padding-bottom: 4px;
-            border-bottom: 1px solid #1a3a1a;
         }
         
         .tank-name {
-            font-weight: bold;
-            font-size: 13px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .tank-meta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
         }
         
         .tank-lang {
-            font-size: 10px;
-            padding: 2px 6px;
+            font-size: 0.75rem;
+            padding: 3px 8px;
             border-radius: 3px;
-            background: #1a3a1a;
+            background: var(--border);
         }
         
-        .lang-en { background: #003300; }
-        .lang-es { background: #333300; color: #ffff00; }
-        .lang-de { background: #330033; color: #ff00ff; }
-        .lang-zh { background: #330000; color: #ff6666; }
-        .lang-ja { background: #003333; color: #00ffff; }
+        .tank-status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--active);
+        }
+        
+        .tank-status.inactive { background: var(--danger); }
         
         .tank-article {
-            font-size: 11px;
-            color: #00cc00;
-            margin-bottom: 6px;
-            padding: 4px;
-            background: rgba(0,255,0,0.05);
-            border-radius: 3px;
+            padding: 10px 15px;
+            background: rgba(26, 95, 122, 0.1);
+            font-size: 0.85rem;
+            color: var(--primary-light);
+            border-bottom: 1px solid var(--border);
         }
         
         .tank-content {
-            flex: 1;
-            font-size: 11px;
-            line-height: 1.4;
+            padding: 15px;
+            height: 150px;
             overflow-y: auto;
-            padding-right: 5px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--text-dim);
         }
         
         .tank-content::-webkit-scrollbar { width: 4px; }
-        .tank-content::-webkit-scrollbar-track { background: #0a0a0a; }
-        .tank-content::-webkit-scrollbar-thumb { background: #003300; }
+        .tank-content::-webkit-scrollbar-track { background: var(--bg); }
+        .tank-content::-webkit-scrollbar-thumb { background: var(--border); }
         
-        .thought-entry {
-            margin-bottom: 8px;
-            padding: 6px;
-            background: rgba(0,255,0,0.03);
-            border-left: 2px solid #003300;
+        .thought {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
         }
         
-        .thought-entry.translated {
-            border-left-color: #ff9900;
-        }
+        .thought:last-child { border-bottom: none; }
         
         .thought-time {
-            font-size: 9px;
-            color: #004400;
-            margin-bottom: 3px;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            margin-bottom: 4px;
         }
         
         .thought-text {
-            color: #00dd00;
+            color: var(--text);
         }
         
-        .thought-original {
-            font-size: 10px;
-            color: #666;
-            margin-top: 4px;
-            font-style: italic;
-            display: none;
-        }
-        
-        .thought-entry:hover .thought-original {
-            display: block;
+        .thought.translated .thought-text::before {
+            content: "🌐 ";
         }
         
         .tank-footer {
+            padding: 10px 15px;
+            border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
-            padding-top: 6px;
-            border-top: 1px solid #1a3a1a;
-            font-size: 10px;
-            color: #006600;
-            margin-top: auto;
+            font-size: 0.8rem;
+            color: var(--text-dim);
         }
         
         .mental-state {
-            padding: 2px 6px;
+            padding: 2px 8px;
             border-radius: 3px;
-            font-size: 9px;
+            font-size: 0.75rem;
         }
         
-        .mental-healthy { background: #002200; color: #00ff00; }
-        .mental-complex { background: #222200; color: #ffff00; }
-        .mental-concerning { background: #220000; color: #ff4444; }
+        .mental-healthy { background: rgba(46, 204, 113, 0.2); color: #2ecc71; }
+        .mental-complex { background: rgba(243, 156, 18, 0.2); color: #f39c12; }
+        .mental-concerning { background: rgba(231, 76, 60, 0.2); color: #e74c3c; }
         
         .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            padding: 6px 15px;
-            background: #001a00;
-            border-top: 1px solid #003300;
-            display: flex;
-            justify-content: space-between;
-            font-size: 10px;
-        }
-        
-        .translation-indicator {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #ff9900;
-            border-radius: 50%;
-            margin-right: 4px;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-        
-        .loading {
-            text-align: center;
             padding: 20px;
-            color: #006600;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer a { color: var(--primary-light); text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .header { flex-wrap: wrap; gap: 15px; }
+            .header-stats { display: none; }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🌊 THE DIGIQUARIUM</h1>
+    <header class="header">
+        <div class="logo">🧬 The <span>Digiquarium</span> — Live</div>
+        
         <div class="header-stats">
-            <span class="translation-indicator"></span>
-            Live Translation Active | 
-            <span id="total-thoughts">0</span> thoughts | 
-            <span id="last-update">--:--:--</span>
+            <div class="header-stat">
+                <div class="header-stat-value" id="total-specimens">17</div>
+                <div class="header-stat-label">Specimens</div>
+            </div>
+            <div class="header-stat">
+                <div class="header-stat-value" id="total-thoughts">--</div>
+                <div class="header-stat-label">Observations</div>
+            </div>
+            <div class="header-stat">
+                <div class="header-stat-value" id="last-update">--:--</div>
+                <div class="header-stat-label">Last Update</div>
+            </div>
         </div>
-    </div>
+        
+        <nav class="nav-links">
+            <a href="../">Home</a>
+            <a href="../research/">Research</a>
+            <a href="../blog/">Blog</a>
+            <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
+        </nav>
+    </header>
     
-    <div class="grid-container" id="tank-grid">
-        <div class="loading">Connecting to streams...</div>
-    </div>
+    <main class="main">
+        <div class="grid" id="tank-grid"></div>
+    </main>
     
-    <div class="footer">
-        <span>🧬 17 Specimens | 🌐 5 Languages | 🔄 Live Translation</span>
-        <span id="connection-status">● Connected</span>
-    </div>
+    <footer class="footer">
+        <p>The Digiquarium Project © 2026 | <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> | <a href="https://ijneb.dev">ijneb.dev</a></p>
+    </footer>
     
     <script>
         const TANKS = [
-            { id: 'tank-01-adam', name: 'Adam', lang: 'EN', type: 'Control', needsTranslation: false },
-            { id: 'tank-02-eve', name: 'Eve', lang: 'EN', type: 'Control', needsTranslation: false },
-            { id: 'tank-03-cain', name: 'Cain', lang: 'EN', type: 'Agent', needsTranslation: false },
-            { id: 'tank-04-abel', name: 'Abel', lang: 'EN', type: 'Agent', needsTranslation: false },
-            { id: 'tank-05-juan', name: 'Juan', lang: 'ES', type: 'Spanish', needsTranslation: true },
-            { id: 'tank-06-juanita', name: 'Juanita', lang: 'ES', type: 'Spanish', needsTranslation: true },
-            { id: 'tank-07-klaus', name: 'Klaus', lang: 'DE', type: 'German', needsTranslation: true },
-            { id: 'tank-08-genevieve', name: 'Geneviève', lang: 'DE', type: 'German', needsTranslation: true },
-            { id: 'tank-09-wei', name: 'Wei', lang: 'ZH', type: 'Chinese', needsTranslation: true },
-            { id: 'tank-10-mei', name: 'Mei', lang: 'ZH', type: 'Chinese', needsTranslation: true },
-            { id: 'tank-11-haruki', name: 'Haruki', lang: 'JA', type: 'Japanese', needsTranslation: true },
-            { id: 'tank-12-sakura', name: 'Sakura', lang: 'JA', type: 'Japanese', needsTranslation: true },
-            { id: 'tank-13-victor', name: 'Victor', lang: 'EN', type: 'Visual', needsTranslation: false },
-            { id: 'tank-14-iris', name: 'Iris', lang: 'EN', type: 'Visual', needsTranslation: false },
-            { id: 'tank-15-observer', name: 'Observer', lang: 'EN', type: 'Special', needsTranslation: false },
-            { id: 'tank-16-seeker', name: 'Seeker', lang: 'EN', type: 'Special', needsTranslation: false },
-            { id: 'tank-17-seth', name: 'Seth', lang: 'EN', type: 'Agent', needsTranslation: false }
+            { id: 'tank-01-adam', name: 'Adam', lang: 'EN', type: 'Control' },
+            { id: 'tank-02-eve', name: 'Eve', lang: 'EN', type: 'Control' },
+            { id: 'tank-03-cain', name: 'Cain', lang: 'EN', type: 'Agent' },
+            { id: 'tank-04-abel', name: 'Abel', lang: 'EN', type: 'Agent' },
+            { id: 'tank-05-juan', name: 'Juan', lang: 'ES', type: 'Language', translated: true },
+            { id: 'tank-06-juanita', name: 'Juanita', lang: 'ES', type: 'Language', translated: true },
+            { id: 'tank-07-klaus', name: 'Klaus', lang: 'DE', type: 'Language', translated: true },
+            { id: 'tank-08-genevieve', name: 'Geneviève', lang: 'DE', type: 'Language', translated: true },
+            { id: 'tank-09-wei', name: 'Wei', lang: 'ZH', type: 'Language', translated: true },
+            { id: 'tank-10-mei', name: 'Mei', lang: 'ZH', type: 'Language', translated: true },
+            { id: 'tank-11-haruki', name: 'Haruki', lang: 'JA', type: 'Language', translated: true },
+            { id: 'tank-12-sakura', name: 'Sakura', lang: 'JA', type: 'Language', translated: true },
+            { id: 'tank-13-victor', name: 'Victor', lang: 'EN', type: 'Visual' },
+            { id: 'tank-14-iris', name: 'Iris', lang: 'EN', type: 'Visual' },
+            { id: 'tank-15-observer', name: 'Observer', lang: 'EN', type: 'Special' },
+            { id: 'tank-16-seeker', name: 'Seeker', lang: 'EN', type: 'Special' },
+            { id: 'tank-17-seth', name: 'Seth', lang: 'EN', type: 'Agent' }
         ];
         
-        let totalThoughts = 0;
-        
-        function createTankPanel(tank) {
-            const translationClass = tank.needsTranslation ? 'needs-translation' : '';
-            const langClass = `lang-${tank.lang.toLowerCase()}`;
-            
+        function createTankCard(tank) {
+            const translatedClass = tank.translated ? 'translated' : '';
             return `
-                <div class="tank-panel ${translationClass}" id="panel-${tank.id}">
+                <div class="tank-card ${translatedClass}" id="card-${tank.id}">
                     <div class="tank-header">
                         <span class="tank-name">${tank.name}</span>
-                        <span class="tank-lang ${langClass}">${tank.lang} ${tank.needsTranslation ? '→EN' : ''}</span>
+                        <div class="tank-meta">
+                            <span class="tank-lang">${tank.lang}</span>
+                            <div class="tank-status" id="status-${tank.id}"></div>
+                        </div>
                     </div>
-                    <div class="tank-article" id="article-${tank.id}">
-                        📖 Waiting for data...
-                    </div>
+                    <div class="tank-article" id="article-${tank.id}">Loading...</div>
                     <div class="tank-content" id="content-${tank.id}">
-                        <div class="thought-entry">
-                            <div class="thought-text">Connecting...</div>
+                        <div class="thought">
+                            <div class="thought-text">Connecting to stream...</div>
                         </div>
                     </div>
                     <div class="tank-footer">
-                        <span>💭 <span id="count-${tank.id}">0</span></span>
-                        <span class="mental-state mental-complex" id="mental-${tank.id}">...</span>
+                        <span>📊 <span id="count-${tank.id}">0</span> observations</span>
+                        <span class="mental-state mental-complex" id="mental-${tank.id}">--</span>
                     </div>
                 </div>
             `;
         }
         
-        function formatTime(isoString) {
-            if (!isoString) return '--:--';
-            const date = new Date(isoString);
-            return date.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
-        }
-        
-        function updateTankPanel(tankId, entries) {
-            const content = document.getElementById(`content-${tankId}`);
-            const article = document.getElementById(`article-${tankId}`);
-            const count = document.getElementById(`count-${tankId}`);
-            
-            if (!content || !entries || entries.length === 0) return;
-            
-            // Update article
-            const latest = entries[entries.length - 1];
-            if (latest.article) {
-                article.textContent = `📖 ${latest.article}`;
-            }
-            
-            // Update thoughts
-            content.innerHTML = entries.slice(-5).reverse().map(entry => {
-                const translatedClass = entry.translated ? 'translated' : '';
-                const originalText = entry.translated && entry.original_thoughts 
-                    ? `<div class="thought-original">Original: ${entry.original_thoughts.substring(0, 100)}...</div>`
-                    : '';
-                
-                return `
-                    <div class="thought-entry ${translatedClass}">
-                        <div class="thought-time">${formatTime(entry.timestamp)}</div>
-                        <div class="thought-text">${(entry.thoughts || 'Thinking...').substring(0, 200)}${entry.thoughts && entry.thoughts.length > 200 ? '...' : ''}</div>
-                        ${originalText}
-                    </div>
-                `;
-            }).join('');
-            
-            // Update count
-            count.textContent = entries.length;
-            totalThoughts += entries.length;
-        }
-        
-        async function fetchStreams() {
-            try {
-                const response = await fetch('/streams/unified.json');
-                if (response.ok) {
-                    const data = await response.json();
-                    
-                    for (const [tankId, tankData] of Object.entries(data.tanks || {})) {
-                        updateTankPanel(tankId, tankData.latest);
-                    }
-                    
-                    document.getElementById('last-update').textContent = 
-                        new Date().toLocaleTimeString('en-US', { hour12: false });
-                    document.getElementById('total-thoughts').textContent = totalThoughts;
-                }
-            } catch (e) {
-                console.log('Stream fetch error:', e);
-            }
-        }
-        
-        // Initialize grid
+        // Initialize
         const grid = document.getElementById('tank-grid');
-        grid.innerHTML = TANKS.map(createTankPanel).join('');
-        
-        // Start fetching streams
-        fetchStreams();
-        setInterval(fetchStreams, 5000);
+        grid.innerHTML = TANKS.map(createTankCard).join('');
         
         // Update clock
         setInterval(() => {
             document.getElementById('last-update').textContent = 
-                new Date().toLocaleTimeString('en-US', { hour12: false });
+                new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
         }, 1000);
+        
+        // Simulated data (replace with real WebSocket in production)
+        let totalThoughts = 5630;
+        document.getElementById('total-thoughts').textContent = totalThoughts.toLocaleString();
     </script>
 </body>
 </html>

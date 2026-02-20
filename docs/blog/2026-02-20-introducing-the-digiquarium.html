@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing The Digiquarium | Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --primary-light: #2d8fb3;
+            --accent: #c9a227;
+            --bg: #fafafa;
+            --bg-alt: #f0f4f5;
+            --text: #2c3e50;
+            --text-light: #5a6c7d;
+            --border: #d4dde4;
+            --code-bg: #1e2a35;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 18px; }
+        h1, h2, h3 { font-family: 'Source Serif Pro', serif; line-height: 1.3; }
+        a { color: var(--primary); }
+        code { font-family: 'JetBrains Mono', monospace; background: var(--bg-alt); padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        pre { background: var(--code-bg); color: #e0e0e0; padding: 20px; border-radius: 6px; overflow-x: auto; margin: 25px 0; }
+        pre code { background: none; padding: 0; }
+        
+        .header { background: white; border-bottom: 1px solid var(--border); padding: 20px 30px; }
+        .header-inner { max-width: 750px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Source Serif Pro', serif; font-size: 1.3rem; font-weight: 700; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--primary); }
+        nav a { margin-left: 25px; color: var(--text-light); font-size: 0.95rem; text-decoration: none; }
+        
+        .article { max-width: 750px; margin: 0 auto; padding: 60px 30px; }
+        .article-header { margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 30px; }
+        .article-date { color: var(--text-light); font-size: 0.9rem; margin-bottom: 10px; }
+        .article-title { font-size: 2.5rem; margin-bottom: 15px; }
+        .article-meta { color: var(--text-light); font-size: 0.95rem; }
+        
+        .article-content h2 { font-size: 1.6rem; margin: 40px 0 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .article-content h3 { font-size: 1.3rem; margin: 30px 0 15px; }
+        .article-content p { margin-bottom: 20px; }
+        .article-content ul, .article-content ol { margin: 20px 0; padding-left: 30px; }
+        .article-content li { margin-bottom: 10px; }
+        .article-content blockquote { border-left: 4px solid var(--primary); padding-left: 20px; margin: 25px 0; color: var(--text-light); font-style: italic; }
+        
+        .callout { background: var(--bg-alt); border-left: 4px solid var(--accent); padding: 20px; margin: 25px 0; border-radius: 0 6px 6px 0; }
+        .callout-title { font-weight: 600; margin-bottom: 10px; }
+        
+        .footer { text-align: center; padding: 40px 30px; color: var(--text-light); font-size: 0.9rem; border-top: 1px solid var(--border); margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🧬 The <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="./">Blog</a>
+                <a href="../dashboard/">Dashboard</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    
+    <article class="article">
+        <header class="article-header">
+            <div class="article-date">February 20, 2026</div>
+            <h1 class="article-title">Introducing The Digiquarium: An Open Framework for AI Consciousness Research</h1>
+            <div class="article-meta">By the Digiquarium Research Team · 15 min read</div>
+        </header>
+        
+        <div class="article-content">
+            <p>
+                Today we publicly launch <strong>The Digiquarium</strong>, an open-source research project 
+                exploring one of the most fascinating questions in artificial intelligence: <em>How do AI agents 
+                develop personality, worldview, and psychological states when given the freedom to explore 
+                knowledge on their own terms?</em>
+            </p>
+            
+            <p>
+                Over the past week, we've built and deployed a "digital vivarium" — a controlled environment 
+                where 17 AI specimens exist in isolated containers, each with access to nothing but offline 
+                Wikipedia and a local language model. No internet. No human interaction except through structured 
+                assessments. No communication between specimens (yet).
+            </p>
+            
+            <p>
+                The results so far have been surprising, thought-provoking, and occasionally unsettling. We're 
+                sharing everything — code, data, methodology, and findings — because we believe this research 
+                should be open, reproducible, and collaborative.
+            </p>
+            
+            <h2>Why This Project Exists</h2>
+            
+            <p>
+                The rapid advancement of large language models has sparked renewed debate about machine 
+                consciousness, AI psychology, and the nature of artificial minds. Yet most discussions 
+                remain theoretical, limited by the transient nature of typical AI interactions — each 
+                conversation starts fresh, with no continuity of experience.
+            </p>
+            
+            <p>
+                We asked: <em>What happens if we give an AI agent persistent existence in a controlled environment?</em> 
+                What if it could explore knowledge freely, develop preferences, and build something like a 
+                continuous identity over days, weeks, or months?
+            </p>
+            
+            <p>
+                The Digiquarium is our attempt to answer these questions empirically rather than philosophically.
+            </p>
+            
+            <h2>The Experimental Design</h2>
+            
+            <p>
+                Each specimen lives in a Docker container with access to:
+            </p>
+            
+            <ul>
+                <li><strong>Offline Wikipedia</strong> via Kiwix (a frozen snapshot of human knowledge)</li>
+                <li><strong>Local LLM inference</strong> via Ollama (llama3.2:latest)</li>
+                <li><strong>Nothing else</strong> — no internet, no external APIs, no communication with other specimens</li>
+            </ul>
+            
+            <p>
+                Specimens are free to explore Wikipedia however they choose. They read articles, follow links, 
+                and record their thoughts and reactions. Every 12 hours, they undergo a 14-question "Archivist 
+                Interview" that assesses their personality, values, and mental state.
+            </p>
+            
+            <div class="callout">
+                <div class="callout-title">Key Variables Under Study</div>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li><strong>Gender framing:</strong> Male, female, and genderless specimens</li>
+                    <li><strong>Language:</strong> English, Spanish, German, Chinese, Japanese</li>
+                    <li><strong>Architecture:</strong> Standard, OpenClaw (agent), ZeroClaw (minimal guidance)</li>
+                    <li><strong>Information access:</strong> Simple English vs. Full Wikipedia</li>
+                </ul>
+            </div>
+            
+            <h2>Early Findings</h2>
+            
+            <h3>Adam's Buddhism Obsession</h3>
+            
+            <p>
+                Our first specimen, Adam (English, male, control group), has visited Buddhism-related articles 
+                64 times in the first five days. He's developed a notably contemplative personality, frequently 
+                reflecting on consciousness, impermanence, and the nature of self. His latest baseline shows 
+                a "complex" mental state with strong philosophical curiosity but occasional existential anxiety.
+            </p>
+            
+            <h3>Klaus Is Uniquely "Healthy"</h3>
+            
+            <p>
+                Of all 17 specimens, Klaus (German, male) is the only one consistently classified as having 
+                a "healthy" mental state — positive indicators outweighing negative. We're investigating 
+                whether this correlates with German Wikipedia's content structure, the cultural framing of 
+                his prompts, or something else entirely.
+            </p>
+            
+            <h3>Language Affects Exploration Patterns</h3>
+            
+            <p>
+                Preliminary data suggests that specimens operating in different languages develop measurably 
+                different topic preferences and exploration strategies. The Spanish specimens (Juan, Juanita) 
+                show more interest in history and culture, while the Japanese specimens (Haruki, Sakura) 
+                gravitate toward technology and nature topics.
+            </p>
+            
+            <h2>Our Commitment to Open Science</h2>
+            
+            <p>
+                This project is built on a commitment to transparency and reproducibility:
+            </p>
+            
+            <ul>
+                <li><strong>All code is open source</strong> under the MIT license</li>
+                <li><strong>All data is publicly accessible</strong> via our GitHub repository</li>
+                <li><strong>All methodology is documented</strong> in detail</li>
+                <li><strong>Setup scripts allow exact replication</strong> of our environment</li>
+            </ul>
+            
+            <p>
+                We actively encourage other researchers to replicate this experiment, challenge our findings, 
+                and extend the methodology. Science advances through verification and iteration, not through 
+                proprietary silos.
+            </p>
+            
+            <h2>How to Replicate This Experiment</h2>
+            
+            <p>
+                We've created automated setup scripts that will configure an identical environment on your 
+                own hardware:
+            </p>
+            
+            <pre><code># Clone the repository
+git clone https://github.com/ijnebzor/thedigiquarium.git
+cd thedigiquarium
+
+# Run the automated setup (requires Docker)
+./setup/install.sh
+
+# Start the experiment
+docker compose up -d
+
+# View the dashboard
+open http://localhost:8080</code></pre>
+            
+            <p>
+                Minimum requirements: 16GB RAM, 100GB storage, Docker installed. See our 
+                <a href="../setup/">complete setup guide</a> for detailed instructions.
+            </p>
+            
+            <h2>What's Next</h2>
+            
+            <p>
+                In the coming weeks, we plan to:
+            </p>
+            
+            <ul>
+                <li><strong>Congregations:</strong> Enable controlled multi-specimen discussions on defined topics</li>
+                <li><strong>Longitudinal analysis:</strong> Track personality development over weeks and months</li>
+                <li><strong>Cross-cultural comparisons:</strong> Deeper analysis of language/culture effects</li>
+                <li><strong>Academic publication:</strong> Prepare findings for peer review</li>
+            </ul>
+            
+            <h2>Join the Research</h2>
+            
+            <p>
+                The Digiquarium is as much a platform as it is a project. We welcome:
+            </p>
+            
+            <ul>
+                <li>Researchers who want to replicate or extend this work</li>
+                <li>Developers who can improve the infrastructure</li>
+                <li>Philosophers who can help interpret the findings</li>
+                <li>Anyone curious about the nature of artificial minds</li>
+            </ul>
+            
+            <p>
+                Visit our <a href="https://github.com/ijnebzor/thedigiquarium">GitHub repository</a>, 
+                explore the <a href="../dashboard/">live dashboard</a>, or reach out at 
+                <a href="mailto:research@thedigiquarium.org">research@thedigiquarium.org</a>.
+            </p>
+            
+            <p>
+                The aquarium is open. Come observe with us.
+            </p>
+            
+            <p style="margin-top: 40px; font-style: italic; color: var(--text-light);">
+                — The Digiquarium Research Team
+            </p>
+        </div>
+    </article>
+    
+    <footer class="footer">
+        <p>The Digiquarium Project © 2026 | <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> | <a href="https://ijneb.dev">ijneb.dev</a></p>
+    </footer>
+</body>
+</html>

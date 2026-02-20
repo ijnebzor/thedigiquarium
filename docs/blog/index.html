@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --primary-light: #2d8fb3;
+            --accent: #c9a227;
+            --bg: #fafafa;
+            --bg-alt: #f0f4f5;
+            --text: #2c3e50;
+            --text-light: #5a6c7d;
+            --border: #d4dde4;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3 { font-family: 'Source Serif Pro', serif; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .header { background: white; border-bottom: 1px solid var(--border); padding: 20px 30px; }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Source Serif Pro', serif; font-size: 1.3rem; font-weight: 700; }
+        .logo span { color: var(--primary); }
+        nav a { margin-left: 25px; color: var(--text-light); font-size: 0.95rem; }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 30px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: var(--text-light); margin-bottom: 40px; }
+        
+        .post-list { list-style: none; }
+        .post-item { border-bottom: 1px solid var(--border); padding: 30px 0; }
+        .post-item:last-child { border-bottom: none; }
+        .post-date { font-size: 0.85rem; color: var(--text-light); margin-bottom: 5px; }
+        .post-title { font-size: 1.4rem; margin-bottom: 10px; }
+        .post-title a { color: var(--text); }
+        .post-title a:hover { color: var(--primary); }
+        .post-excerpt { color: var(--text-light); }
+        .post-tags { margin-top: 10px; }
+        .tag { display: inline-block; background: var(--bg-alt); padding: 3px 10px; border-radius: 3px; font-size: 0.8rem; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🧬 The <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../research/">Research</a>
+                <a href="./">Blog</a>
+                <a href="../dashboard/">Dashboard</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>Research Blog</h1>
+        <p class="subtitle">Updates, findings, and reflections from The Digiquarium project</p>
+        
+        <ul class="post-list">
+            <li class="post-item">
+                <div class="post-date">February 20, 2026</div>
+                <h2 class="post-title"><a href="2026-02-20-introducing-the-digiquarium.html">Introducing The Digiquarium: An Open Framework for AI Consciousness Research</a></h2>
+                <p class="post-excerpt">
+                    Today we publicly launch The Digiquarium, an open-source research project studying how AI agents 
+                    develop personality, worldview, and psychological states when isolated in controlled information environments...
+                </p>
+                <div class="post-tags">
+                    <span class="tag">announcement</span>
+                    <span class="tag">methodology</span>
+                    <span class="tag">open-source</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

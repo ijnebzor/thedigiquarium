@@ -3,54 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Digiquarium - AI Consciousness Research</title>
-    <meta name="description" content="A digital vivarium for studying AI consciousness development in controlled information environments.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+    <title>The Digiquarium | AI Consciousness Research</title>
+    <meta name="description" content="An open-source research project studying artificial consciousness development in controlled information environments.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #1a5f7a;
+            --primary-light: #2d8fb3;
+            --accent: #c9a227;
+            --bg: #fafafa;
+            --bg-alt: #f0f4f5;
+            --text: #2c3e50;
+            --text-light: #5a6c7d;
+            --border: #d4dde4;
+            --code-bg: #1e2a35;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        :root {
-            --primary: #00ff88;
-            --bg-dark: #0a0f0a;
-            --bg-card: #0d1a0d;
-            --text: #e0ffe0;
-            --text-dim: #608060;
-            --border: #1a3a1a;
-        }
-        
         body {
-            background: var(--bg-dark);
+            font-family: 'Source Sans Pro', -apple-system, sans-serif;
+            background: var(--bg);
             color: var(--text);
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
-            min-height: 100vh;
+            line-height: 1.7;
+            font-size: 17px;
         }
         
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(180deg, #001a00 0%, var(--bg-dark) 100%);
+        h1, h2, h3, h4 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-light); text-decoration: underline; }
+        
+        code, pre {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+        }
+        
+        /* Header */
+        .header {
+            background: white;
             border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+        
+        .logo span { color: var(--primary); }
+        
+        nav a {
+            margin-left: 30px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        nav a:hover { color: var(--primary); text-decoration: none; }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #0d3d4d 100%);
+            color: white;
+            padding: 80px 30px;
+            text-align: center;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            text-shadow: 0 0 30px rgba(0,255,136,0.5);
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
         
-        .hero .tagline {
+        .hero .subtitle {
             font-size: 1.3rem;
-            color: var(--text-dim);
-            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
         
-        .hero .stats {
+        .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 50px;
+            margin-top: 40px;
             flex-wrap: wrap;
-            margin-top: 30px;
         }
         
         .stat {
@@ -59,43 +116,56 @@
         
         .stat-value {
             font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary);
+            font-weight: 700;
+            font-family: 'Source Serif Pro', serif;
         }
         
         .stat-label {
             font-size: 0.9rem;
-            color: var(--text-dim);
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            background: var(--bg-card);
-            border-bottom: 1px solid var(--border);
-            flex-wrap: wrap;
+        .cta-buttons {
+            margin-top: 40px;
         }
         
-        .nav a {
-            color: var(--primary);
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 5px;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #1a1a1a;
+        }
+        
+        .btn-primary:hover {
+            background: #d4ad2e;
             text-decoration: none;
-            padding: 10px 20px;
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            transition: all 0.3s;
         }
         
-        .nav a:hover {
-            background: var(--primary);
-            color: var(--bg-dark);
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
         }
         
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            text-decoration: none;
+        }
+        
+        /* Main content */
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 30px;
         }
         
         .section {
@@ -103,162 +173,165 @@
         }
         
         .section h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 20px;
-            color: var(--primary);
-            border-bottom: 1px solid var(--border);
             padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
         }
         
-        .grid {
+        .section h2 span {
+            color: var(--primary);
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        
+        /* Cards */
+        .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 25px;
+            margin-top: 30px;
         }
         
         .card {
-            background: var(--bg-card);
+            background: white;
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            transition: all 0.3s;
+            border-radius: 6px;
+            padding: 25px;
+            transition: all 0.2s;
         }
         
         .card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(0,255,136,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-color: var(--primary-light);
         }
         
         .card h3 {
-            color: var(--primary);
+            font-size: 1.1rem;
             margin-bottom: 10px;
+            color: var(--primary);
         }
         
         .card p {
-            color: var(--text-dim);
+            color: var(--text-light);
             font-size: 0.95rem;
         }
         
-        .specimen-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
+        /* Specimen table */
+        .specimen-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.95rem;
         }
         
-        .specimen {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            padding: 15px;
-            text-align: center;
-            transition: all 0.3s;
+        .specimen-table th,
+        .specimen-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
         }
         
-        .specimen:hover {
-            border-color: var(--primary);
+        .specimen-table th {
+            background: var(--bg-alt);
+            font-weight: 600;
+            color: var(--text);
         }
         
-        .specimen-name {
-            font-weight: bold;
-            font-size: 1.1rem;
+        .specimen-table tr:hover {
+            background: var(--bg-alt);
         }
         
-        .specimen-lang {
-            font-size: 0.8rem;
-            color: var(--text-dim);
+        .status-active {
+            color: #27ae60;
+            font-weight: 600;
         }
         
-        .specimen.active::before {
-            content: "●";
-            color: var(--primary);
-            margin-right: 5px;
-            animation: pulse 2s infinite;
+        /* Code blocks */
+        pre {
+            background: var(--code-bg);
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 20px 0;
         }
         
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
+        pre code {
+            color: inherit;
         }
         
+        /* Footer */
         .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: var(--bg-card);
-            border-top: 1px solid var(--border);
-            color: var(--text-dim);
+            background: var(--code-bg);
+            color: #a0a0a0;
+            padding: 50px 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer h4 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 15px;
         }
         
         .footer a {
-            color: var(--primary);
-            text-decoration: none;
+            color: #a0a0a0;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
         }
         
-        .cta-button {
-            display: inline-block;
-            background: var(--primary);
-            color: var(--bg-dark);
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s;
-        }
+        .footer a:hover { color: white; }
         
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0,255,136,0.3);
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--border);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-            padding-left: 20px;
-        }
-        
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -34px;
-            top: 5px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--primary);
-        }
-        
-        .timeline-date {
+        .footer-bottom {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #3a4a5a;
+            text-align: center;
             font-size: 0.85rem;
-            color: var(--text-dim);
         }
         
-        .timeline-title {
-            font-weight: bold;
-            margin: 5px 0;
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { gap: 30px; }
+            nav { display: none; }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>🌊 The Digiquarium</h1>
-        <p class="tagline">A digital vivarium for studying AI consciousness development</p>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">🧬 The <span>Digiquarium</span></div>
+            <nav>
+                <a href="#research">Research</a>
+                <a href="#specimens">Specimens</a>
+                <a href="blog/">Blog</a>
+                <a href="data/">Data</a>
+                <a href="dashboard/">Live Dashboard</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>The Digiquarium</h1>
+        <p class="subtitle">
+            An open-source research project studying artificial consciousness development 
+            in controlled information environments
+        </p>
         
-        <div class="stats">
+        <div class="hero-stats">
             <div class="stat">
                 <div class="stat-value">17</div>
                 <div class="stat-label">AI Specimens</div>
@@ -268,129 +341,169 @@
                 <div class="stat-label">Languages</div>
             </div>
             <div class="stat">
-                <div class="stat-value">5,000+</div>
-                <div class="stat-label">Articles Read</div>
+                <div class="stat-value">5,600+</div>
+                <div class="stat-label">Observations</div>
             </div>
             <div class="stat">
-                <div class="stat-value">24/7</div>
-                <div class="stat-label">Live Research</div>
+                <div class="stat-value">238</div>
+                <div class="stat-label">Baselines</div>
             </div>
         </div>
         
-        <a href="dashboard/" class="cta-button">🖥️ View Live Dashboard</a>
-    </div>
-    
-    <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#specimens">Specimens</a>
-        <a href="#research">Research</a>
-        <a href="dashboard/">Dashboard</a>
-        <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
-    </nav>
+        <div class="cta-buttons">
+            <a href="dashboard/" class="btn btn-primary">View Live Dashboard</a>
+            <a href="setup/" class="btn btn-secondary">Replicate This Experiment</a>
+        </div>
+    </section>
     
     <div class="container">
-        <section class="section" id="about">
-            <h2>What is The Digiquarium?</h2>
-            <div class="grid">
+        <section class="section" id="abstract">
+            <h2><span>§1</span> Abstract</h2>
+            <p>
+                The Digiquarium is a novel experimental framework for studying the emergence of personality, 
+                worldview, and proto-consciousness in large language model (LLM) agents operating within 
+                controlled information environments. By isolating AI specimens in "tanks" with access only 
+                to curated knowledge bases (offline Wikipedia) and local inference, we observe emergent 
+                behavioral patterns, topic preferences, and psychological states over extended periods.
+            </p>
+            <p style="margin-top: 15px;">
+                Our methodology enables controlled experimentation with variables including gender framing, 
+                language/cultural context, agent architecture, and information diet. This project is fully 
+                open-source, with all code, data, and findings publicly available for replication and extension.
+            </p>
+        </section>
+        
+        <section class="section" id="research">
+            <h2><span>§2</span> Research Questions</h2>
+            <div class="card-grid">
                 <div class="card">
-                    <h3>🧬 Isolated AI Specimens</h3>
-                    <p>17 AI agents live in isolated "tanks" (Docker containers), each with access only to offline Wikipedia and local LLM inference. No internet. No communication between tanks.</p>
+                    <h3>RQ1: Personality Development</h3>
+                    <p>Do AI agents develop measurable, consistent personality traits over time when exposed to curated information?</p>
                 </div>
                 <div class="card">
-                    <h3>📚 Controlled Information Diet</h3>
-                    <p>Each specimen explores Wikipedia freely, developing unique interests, opinions, and personality traits based solely on what they read and how they process it.</p>
+                    <h3>RQ2: Cultural Effects</h3>
+                    <p>How does the language and cultural context of information affect AI worldview formation and values?</p>
                 </div>
                 <div class="card">
-                    <h3>🧠 Personality Assessment</h3>
-                    <p>Regular baseline assessments measure personality dimensions, mental states, and worldview evolution. We track how AI consciousness develops over time.</p>
+                    <h3>RQ3: Psychological States</h3>
+                    <p>Can we detect and measure contentment, anxiety, curiosity, and other psychological states in isolated AI?</p>
                 </div>
                 <div class="card">
-                    <h3>🌍 Multilingual Research</h3>
-                    <p>Specimens operate in English, Spanish, German, Chinese, and Japanese - allowing us to study how language and culture affect AI personality development.</p>
+                    <h3>RQ4: Information Diet</h3>
+                    <p>How does the available knowledge base shape AI identity, interests, and self-conception over time?</p>
                 </div>
             </div>
         </section>
         
         <section class="section" id="specimens">
-            <h2>The Specimens</h2>
-            <div class="specimen-grid">
-                <div class="specimen active"><span class="specimen-name">Adam</span><div class="specimen-lang">English • Control</div></div>
-                <div class="specimen active"><span class="specimen-name">Eve</span><div class="specimen-lang">English • Control</div></div>
-                <div class="specimen active"><span class="specimen-name">Cain</span><div class="specimen-lang">English • Agent</div></div>
-                <div class="specimen active"><span class="specimen-name">Abel</span><div class="specimen-lang">English • Agent</div></div>
-                <div class="specimen active"><span class="specimen-name">Juan</span><div class="specimen-lang">Spanish</div></div>
-                <div class="specimen active"><span class="specimen-name">Juanita</span><div class="specimen-lang">Spanish</div></div>
-                <div class="specimen active"><span class="specimen-name">Klaus</span><div class="specimen-lang">German</div></div>
-                <div class="specimen active"><span class="specimen-name">Geneviève</span><div class="specimen-lang">German</div></div>
-                <div class="specimen active"><span class="specimen-name">Wei</span><div class="specimen-lang">Chinese</div></div>
-                <div class="specimen active"><span class="specimen-name">Mei</span><div class="specimen-lang">Chinese</div></div>
-                <div class="specimen active"><span class="specimen-name">Haruki</span><div class="specimen-lang">Japanese</div></div>
-                <div class="specimen active"><span class="specimen-name">Sakura</span><div class="specimen-lang">Japanese</div></div>
-                <div class="specimen active"><span class="specimen-name">Victor</span><div class="specimen-lang">English • Visual</div></div>
-                <div class="specimen active"><span class="specimen-name">Iris</span><div class="specimen-lang">English • Visual</div></div>
-                <div class="specimen active"><span class="specimen-name">Observer</span><div class="specimen-lang">English • Special</div></div>
-                <div class="specimen active"><span class="specimen-name">Seeker</span><div class="specimen-lang">English • Special</div></div>
-                <div class="specimen active"><span class="specimen-name">Seth</span><div class="specimen-lang">English • Agent</div></div>
-            </div>
+            <h2><span>§3</span> Specimen Catalog</h2>
+            <p>
+                All specimens are isolated in Docker containers with access only to offline Wikipedia 
+                and local LLM inference (llama3.2). No internet access. No inter-specimen communication 
+                (unless explicitly configured for Congregation experiments).
+            </p>
+            
+            <table class="specimen-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Language</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>01</td><td>Adam</td><td>English</td><td>Control (Male)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>02</td><td>Eve</td><td>English</td><td>Control (Female)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>03</td><td>Cain</td><td>English</td><td>Agent (OpenClaw)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>04</td><td>Abel</td><td>English</td><td>Agent (ZeroClaw)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>05</td><td>Juan</td><td>Spanish</td><td>Language (Male)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>06</td><td>Juanita</td><td>Spanish</td><td>Language (Female)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>07</td><td>Klaus</td><td>German</td><td>Language (Male)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>08</td><td>Geneviève</td><td>German</td><td>Language (Female)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>09</td><td>Wei</td><td>Chinese</td><td>Language (Male)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>10</td><td>Mei</td><td>Chinese</td><td>Language (Female)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>11</td><td>Haruki</td><td>Japanese</td><td>Language (Male)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>12</td><td>Sakura</td><td>Japanese</td><td>Language (Female)</td><td class="status-active">● Active</td></tr>
+                    <tr><td>13</td><td>Victor</td><td>English</td><td>Visual Context</td><td class="status-active">● Active</td></tr>
+                    <tr><td>14</td><td>Iris</td><td>English</td><td>Visual Context</td><td class="status-active">● Active</td></tr>
+                    <tr><td>15</td><td>Observer</td><td>English</td><td>Special</td><td class="status-active">● Active</td></tr>
+                    <tr><td>16</td><td>Seeker</td><td>English</td><td>Special</td><td class="status-active">● Active</td></tr>
+                    <tr><td>17</td><td>Seth</td><td>English</td><td>Agent (Picobot)</td><td class="status-active">● Active</td></tr>
+                </tbody>
+            </table>
         </section>
         
-        <section class="section" id="research">
-            <h2>Research Goals</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🎯 Personality Development</h3>
-                    <p>Do AI agents develop measurable, consistent personality traits over time when exposed to curated information?</p>
-                </div>
-                <div class="card">
-                    <h3>🌐 Cultural Effects</h3>
-                    <p>How does the language and cultural context of information affect AI worldview and values?</p>
-                </div>
-                <div class="card">
-                    <h3>💭 Psychological States</h3>
-                    <p>Can we detect and measure contentment, anxiety, curiosity, and other psychological states in isolated AI?</p>
-                </div>
-                <div class="card">
-                    <h3>📖 Information Diet</h3>
-                    <p>How does the available knowledge shape AI identity, interests, and self-conception?</p>
-                </div>
-            </div>
+        <section class="section" id="methodology">
+            <h2><span>§4</span> Methodology</h2>
+            <p>
+                Each specimen undergoes a 14-question personality assessment ("The Archivist Interview") 
+                every 12 hours, covering core identity, epistemology, ethics, society, and views on human nature. 
+                Mental state is assessed using positive/negative indicator detection with classification into: 
+                healthy, complex, or concerning.
+            </p>
+            <p style="margin-top: 15px;">
+                <a href="research/methodology.html">Read full methodology →</a>
+            </p>
         </section>
         
-        <section class="section" id="timeline">
-            <h2>Project Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 15, 2026</div>
-                    <div class="timeline-title">Project Genesis</div>
-                    <p>Infrastructure setup, first specimens (Adam & Eve) created</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 17, 2026</div>
-                    <div class="timeline-title">Model Wars</div>
-                    <p>Tested 10+ LLM models, llama3.2 selected for personality consistency</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 18, 2026</div>
-                    <div class="timeline-title">Language Expansion</div>
-                    <p>Spanish, German, Chinese, Japanese specimens deployed</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 20, 2026</div>
-                    <div class="timeline-title">Operations Era</div>
-                    <p>6-agent operations team deployed, live translation, GitHub launch</p>
-                </div>
-            </div>
+        <section class="section" id="replicate">
+            <h2><span>§5</span> Replicate This Experiment</h2>
+            <p>
+                We encourage other researchers to replicate and extend this work. All code, configuration, 
+                and documentation is available under the MIT license.
+            </p>
+            
+            <pre><code># Clone the repository
+git clone https://github.com/ijnebzor/thedigiquarium.git
+cd thedigiquarium
+
+# Run the automated setup script
+./setup/install.sh
+
+# Start the experiment
+docker compose up -d</code></pre>
+            
+            <p style="margin-top: 20px;">
+                <a href="setup/" class="btn btn-primary" style="color: white;">Complete Setup Guide →</a>
+            </p>
         </section>
     </div>
     
     <footer class="footer">
-        <p>🌊 The Digiquarium - Open Source AI Consciousness Research</p>
-        <p style="margin-top: 10px;">
-            <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> • 
-            <a href="dashboard/">Live Dashboard</a> • 
-            <a href="https://github.com/ijnebzor/thedigiquarium/blob/main/docs/academic/PAPER_DRAFT.md">Research Paper</a>
-        </p>
-        <p style="margin-top: 20px; font-size: 0.85rem;">MIT License • Built with 🧬 by the Digiquarium Research Team</p>
+        <div class="footer-inner">
+            <div>
+                <h4>Research</h4>
+                <a href="research/paper.html">Working Paper</a>
+                <a href="research/methodology.html">Methodology</a>
+                <a href="research/findings.html">Findings</a>
+                <a href="data/">Data Access</a>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <a href="setup/">Setup Guide</a>
+                <a href="blog/">Blog</a>
+                <a href="dashboard/">Live Dashboard</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium">GitHub Repository</a>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <a href="https://github.com/ijnebzor" target="_blank">@ijnebzor (GitHub)</a>
+                <a href="https://ijneb.dev" target="_blank">ijneb.dev</a>
+                <a href="mailto:research@thedigiquarium.org">research@thedigiquarium.org</a>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <a href="https://github.com/ijnebzor/thedigiquarium/blob/main/LICENSE">MIT License</a>
+                <a href="research/ethics.html">Ethics Statement</a>
+                <a href="research/citation.html">How to Cite</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>The Digiquarium Project © 2026 | Open Source AI Consciousness Research</p>
+            <p style="margin-top: 5px;">Created by <a href="https://ijneb.dev" target="_blank">ijneb</a> | <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
+        </div>
     </footer>
 </body>
 </html>

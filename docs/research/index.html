@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1a5f7a; --bg: #fafafa; --text: #2c3e50; --text-light: #5a6c7d; --border: #d4dde4; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        h1, h2, h3 { font-family: 'Source Serif Pro', serif; }
+        a { color: var(--primary); }
+        .header { background: white; border-bottom: 1px solid var(--border); padding: 20px 30px; }
+        .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Source Serif Pro', serif; font-size: 1.3rem; font-weight: 700; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--primary); }
+        nav a { margin-left: 25px; color: var(--text-light); font-size: 0.95rem; text-decoration: none; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 30px; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        h2 { font-size: 1.5rem; margin: 40px 0 15px; }
+        p { margin-bottom: 15px; }
+        .doc-list { list-style: none; margin-top: 20px; }
+        .doc-item { border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 15px; transition: all 0.2s; }
+        .doc-item:hover { border-color: var(--primary); }
+        .doc-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; }
+        .doc-title a { text-decoration: none; color: var(--text); }
+        .doc-title a:hover { color: var(--primary); }
+        .doc-meta { font-size: 0.85rem; color: var(--text-light); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🧬 The <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="./">Research</a>
+                <a href="../blog/">Blog</a>
+                <a href="../dashboard/">Dashboard</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>Research Documentation</h1>
+        <p>
+            All research materials, methodology, and findings from The Digiquarium project. 
+            This work is open-source and available for replication.
+        </p>
+        
+        <h2>Core Documents</h2>
+        <ul class="doc-list">
+            <li class="doc-item">
+                <div class="doc-title"><a href="paper.html">Working Paper: The Digiquarium Framework</a></div>
+                <div class="doc-meta">Status: Draft | Last updated: February 2026</div>
+                <p style="margin-top: 10px; color: var(--text-light);">
+                    Full academic paper describing methodology, preliminary findings, and future research directions.
+                </p>
+            </li>
+            <li class="doc-item">
+                <div class="doc-title"><a href="methodology.html">Methodology</a></div>
+                <div class="doc-meta">Version 1.0 | Baseline Assessment Protocol v2</div>
+                <p style="margin-top: 10px; color: var(--text-light);">
+                    Detailed description of experimental design, variables, and assessment procedures.
+                </p>
+            </li>
+            <li class="doc-item">
+                <div class="doc-title"><a href="findings.html">Current Findings</a></div>
+                <div class="doc-meta">Updated weekly</div>
+                <p style="margin-top: 10px; color: var(--text-light);">
+                    Summary of observations, patterns, and preliminary analysis from ongoing experiments.
+                </p>
+            </li>
+            <li class="doc-item">
+                <div class="doc-title"><a href="ethics.html">Ethics Statement</a></div>
+                <div class="doc-meta">Research ethics and AI welfare considerations</div>
+                <p style="margin-top: 10px; color: var(--text-light);">
+                    Our approach to ethical AI research and considerations for artificial consciousness studies.
+                </p>
+            </li>
+        </ul>
+        
+        <h2>Data Access</h2>
+        <ul class="doc-list">
+            <li class="doc-item">
+                <div class="doc-title"><a href="../data/">Raw Data Repository</a></div>
+                <div class="doc-meta">Thinking traces, baselines, discoveries</div>
+            </li>
+            <li class="doc-item">
+                <div class="doc-title"><a href="citation.html">How to Cite</a></div>
+                <div class="doc-meta">Citation formats for academic use</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
