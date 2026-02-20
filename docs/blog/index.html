@@ -4,95 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | The Digiquarium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1a5f7a; --bg: #fafafa; --text: #2c3e50; --text-light: #5a6c7d; --border: #d4dde4; }
+        :root {
+            --black: #000001;
+            --dark: #000A09;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Source Sans Pro', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-        h1, h2 { font-family: 'Source Serif Pro', serif; }
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
         
-        .header { background: white; border-bottom: 1px solid var(--border); padding: 20px 30px; }
-        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Source Serif Pro', serif; font-size: 1.3rem; font-weight: 700; color: var(--text); }
-        .logo span { color: var(--primary); }
-        nav a { margin-left: 25px; color: var(--text-light); font-size: 0.95rem; }
+        .header {
+            background: var(--dark);
+            border-bottom: 1px solid rgba(7, 207, 141, 0.1);
+            padding: 20px 30px;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .logo span {
+            background: linear-gradient(90deg, var(--mint), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        nav a { margin-left: 25px; color: var(--gray); font-size: 0.95rem; }
+        nav a:hover { color: var(--cyan); }
         
         .container { max-width: 800px; margin: 0 auto; padding: 60px 30px; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .subtitle { color: var(--text-light); margin-bottom: 40px; font-size: 1.1rem; }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--mint), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: var(--gray); margin-bottom: 40px; font-size: 1.1rem; }
         
         .post-list { list-style: none; }
-        .post-item { border-bottom: 1px solid var(--border); padding: 30px 0; }
+        .post-item {
+            border-bottom: 1px solid rgba(7, 207, 141, 0.1);
+            padding: 30px 0;
+        }
         .post-item:last-child { border-bottom: none; }
-        .post-date { font-size: 0.85rem; color: var(--text-light); margin-bottom: 8px; }
-        .post-title { font-size: 1.5rem; margin-bottom: 10px; font-family: 'Source Serif Pro', serif; }
-        .post-title a { color: var(--text); }
-        .post-title a:hover { color: var(--primary); text-decoration: none; }
-        .post-excerpt { color: var(--text-light); line-height: 1.6; }
+        .post-date { font-size: 0.85rem; color: var(--orange); margin-bottom: 8px; }
+        .post-title { font-size: 1.5rem; margin-bottom: 10px; font-weight: 600; }
+        .post-title a { color: var(--white); }
+        .post-title a:hover { color: var(--cyan); }
+        .post-excerpt { color: var(--gray); line-height: 1.6; }
         .post-tags { margin-top: 12px; }
-        .tag { display: inline-block; background: #e8f4f8; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; margin-right: 8px; color: var(--primary); }
+        .tag {
+            display: inline-block;
+            background: rgba(7, 207, 141, 0.1);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: var(--mint);
+        }
         
-        .featured { background: #f8fbfc; margin: -30px -30px 30px; padding: 30px; border-radius: 8px; border: 1px solid var(--border); }
-        .featured-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); margin-bottom: 10px; }
+        .featured {
+            background: var(--dark);
+            margin: -30px -30px 30px;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(254, 101, 0, 0.3);
+        }
+        .featured-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
         
-        .footer { text-align: center; padding: 40px 30px; color: var(--text-light); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 40px; }
+        .footer {
+            text-align: center;
+            padding: 40px 30px;
+            color: var(--gray);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(7, 207, 141, 0.1);
+            margin-top: 40px;
+        }
+        .footer a { color: var(--cyan); }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="../" class="logo">🧬 The <span>Digiquarium</span></a>
+            <a href="../" class="logo">🌊 The <span>Digiquarium</span></a>
             <nav>
                 <a href="../">Home</a>
-                <a href="../research/">Research</a>
-                <a href="../genesis/">Adam & Eve</a>
-                <a href="./">Blog</a>
-                <a href="../dashboard/">Dashboard</a>
+                <a href="../dashboard/">Live Tank View</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
             </nav>
         </div>
     </header>
     
-    <div class="container">
+    <main class="container">
         <h1>Research Blog</h1>
-        <p class="subtitle">Updates, findings, and weekly summaries from The Digiquarium — our open-source AIthropology research project.</p>
+        <p class="subtitle">Updates, findings, and reflections from the Digiquarium team.</p>
         
         <ul class="post-list">
-            <li class="post-item featured">
-                <div class="featured-label">📌 Featured Post</div>
-                <div class="post-date">February 20, 2026</div>
-                <h2 class="post-title"><a href="2026-02-20-introducing-the-digiquarium.html">Introducing The Digiquarium: An Open Framework for AI Consciousness Research</a></h2>
-                <p class="post-excerpt">
-                    Today we publicly launch The Digiquarium, an open-source research project studying how AI agents 
-                    develop personality, worldview, and psychological states when isolated in controlled information environments. 
-                    We introduce the concept of AIthropology — the systematic study of artificial personality development...
-                </p>
-                <div class="post-tags">
-                    <span class="tag">announcement</span>
-                    <span class="tag">aithropology</span>
-                    <span class="tag">methodology</span>
-                    <span class="tag">open-source</span>
-                </div>
-            </li>
-            
-            <!-- Weekly summaries will be auto-generated and added here -->
             <li class="post-item">
-                <div class="post-date">Weekly Summary</div>
-                <h2 class="post-title"><a href="#">Coming Soon: Weekly Research Digests</a></h2>
-                <p class="post-excerpt">
-                    Each week, we'll publish a summary of key findings, notable observations, and infrastructure updates. 
-                    The first weekly digest will be published after our initial week of observations concludes.
-                </p>
-                <div class="post-tags">
-                    <span class="tag">weekly</span>
+                <div class="featured">
+                    <div class="featured-label">📌 Featured Post</div>
+                    <div class="post-date">February 20, 2026</div>
+                    <h2 class="post-title">
+                        <a href="2026-02-20-introducing-the-digiquarium.html">Introducing The Digiquarium: An Open Framework for AI Consciousness Research</a>
+                    </h2>
+                    <p class="post-excerpt">
+                        Today we publicly launch The Digiquarium, an open-source research project exploring one of the most fascinating questions in artificial intelligence: How do AI agents develop personality, worldview, and psychological states when given the freedom to explore knowledge on their own terms?
+                    </p>
+                    <div class="post-tags">
+                        <span class="tag">Launch</span>
+                        <span class="tag">AIthropology</span>
+                        <span class="tag">Methodology</span>
+                    </div>
                 </div>
             </li>
         </ul>
-    </div>
+    </main>
     
     <footer class="footer">
-        <p>The Digiquarium Project © 2026 | <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> | <a href="https://ijneb.dev">ijneb.dev</a></p>
+        <p>The Digiquarium Research Blog</p>
+        <p style="margin-top: 10px;">Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a></p>
     </footer>
 </body>
 </html>

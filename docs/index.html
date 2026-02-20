@@ -18,12 +18,7 @@
             --gray: #8899a6;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: var(--black);
-            color: var(--white);
-            line-height: 1.6;
-        }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--black); color: var(--white); line-height: 1.6; }
         .hero {
             min-height: 80vh;
             display: flex;
@@ -44,26 +39,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .hero .tagline {
-            font-size: 1.3rem;
-            color: var(--gray);
-            margin-bottom: 40px;
-            max-width: 600px;
-        }
-        .hero .subtitle {
-            font-size: 0.95rem;
-            color: var(--orange);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            margin: 40px 0;
-        }
+        .hero .tagline { font-size: 1.3rem; color: var(--gray); margin-bottom: 40px; max-width: 600px; }
+        .hero .subtitle { font-size: 0.95rem; color: var(--orange); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .stats { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin: 40px 0; }
         .stat { text-align: center; }
         .stat-value { font-size: 2.8rem; font-weight: 700; color: var(--mint); }
         .stat-label { font-size: 0.9rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
@@ -77,12 +55,11 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s;
-            margin-top: 20px;
+            margin: 10px;
         }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(254, 101, 0, 0.3);
-        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(254, 101, 0, 0.3); }
+        .cta-button.secondary { background: transparent; border: 2px solid var(--cyan); }
+        .cta-button.secondary:hover { background: var(--cyan); color: var(--black); }
         .nav {
             display: flex;
             justify-content: center;
@@ -93,6 +70,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            flex-wrap: wrap;
         }
         .nav a { color: var(--white); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
         .nav a:hover { color: var(--cyan); }
@@ -112,61 +90,63 @@
         .card:hover { border-color: var(--mint); transform: translateY(-5px); }
         .card h3 { color: var(--cyan); margin-bottom: 15px; font-size: 1.2rem; }
         .card p { color: var(--gray); font-size: 0.95rem; }
-        .specimen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
-        .specimen {
+        
+        /* Specimen Profile Cards */
+        .specimen-profiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .profile-card {
+            background: var(--dark);
+            border: 1px solid rgba(7, 207, 141, 0.15);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        .profile-card:hover { border-color: var(--mint); transform: translateY(-3px); }
+        .profile-card.agent { border-color: rgba(254, 101, 0, 0.3); }
+        .profile-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .profile-name { font-size: 1.3rem; font-weight: 600; }
+        .profile-badge {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background: rgba(7, 207, 141, 0.15);
+            color: var(--mint);
+        }
+        .profile-card.agent .profile-badge { background: rgba(254, 101, 0, 0.15); color: var(--orange); }
+        .profile-lang { font-size: 0.85rem; color: var(--gray); margin-bottom: 15px; }
+        .profile-finding {
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: var(--white);
+            line-height: 1.5;
+        }
+        .profile-finding-label { font-size: 0.75rem; color: var(--cyan); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .profile-stats { display: flex; gap: 20px; margin-top: 15px; font-size: 0.8rem; color: var(--gray); }
+        
+        /* Team Section */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .team-card {
             background: var(--dark);
             border: 1px solid rgba(7, 207, 141, 0.1);
-            border-radius: 10px;
-            padding: 20px 15px;
+            border-radius: 12px;
+            padding: 25px;
             text-align: center;
-            transition: all 0.3s;
-            position: relative;
         }
-        .specimen:hover { border-color: var(--mint); }
-        .specimen.agent { border-color: var(--orange); }
-        .specimen-name { font-weight: 600; font-size: 1.05rem; margin-bottom: 5px; }
-        .specimen-lang { font-size: 0.75rem; color: var(--gray); }
-        .specimen-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: var(--mint);
-            color: var(--black);
-            font-size: 0.65rem;
-            padding: 3px 8px;
-            border-radius: 10px;
-            font-weight: 600;
-        }
-        .specimen.agent .specimen-badge { background: var(--orange); }
-        .lang-es { border-left: 3px solid #FFD700; }
-        .lang-de { border-left: 3px solid #FF69B4; }
-        .lang-zh { border-left: 3px solid #FF6B6B; }
-        .lang-ja { border-left: 3px solid #4ECDC4; }
+        .team-card.lead { border-color: var(--orange); background: linear-gradient(180deg, rgba(254,101,0,0.1) 0%, var(--dark) 100%); }
+        .team-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .team-name { font-size: 1.1rem; font-weight: 600; margin-bottom: 5px; }
+        .team-role { font-size: 0.85rem; color: var(--cyan); margin-bottom: 10px; }
+        .team-desc { font-size: 0.8rem; color: var(--gray); }
+        
         .timeline { position: relative; padding-left: 40px; max-width: 800px; margin: 0 auto; }
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--mint), var(--cyan));
-        }
+        .timeline::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--mint), var(--cyan)); }
         .timeline-item { position: relative; margin-bottom: 40px; padding-left: 30px; }
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -44px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--mint);
-            box-shadow: 0 0 20px var(--mint);
-        }
+        .timeline-item::before { content: ""; position: absolute; left: -44px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 20px var(--mint); }
         .timeline-date { font-size: 0.85rem; color: var(--orange); font-weight: 600; }
         .timeline-title { font-size: 1.2rem; font-weight: 600; margin: 8px 0; }
         .timeline-item p { color: var(--gray); }
+        
         .footer {
             text-align: center;
             padding: 60px 20px;
@@ -177,10 +157,13 @@
         .footer-links a { color: var(--cyan); text-decoration: none; margin: 0 15px; transition: color 0.3s; }
         .footer-links a:hover { color: var(--mint); }
         .footer-text { color: var(--gray); font-size: 0.9rem; }
+        .footer-credit { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        .footer-credit a { color: var(--mint); }
+        
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .stats { gap: 30px; }
-            .nav { flex-wrap: wrap; gap: 15px; }
+            .nav { gap: 15px; }
         }
     </style>
 </head>
@@ -196,17 +179,23 @@
             <div class="stat"><div class="stat-value">5,000+</div><div class="stat-label">Articles Read</div></div>
             <div class="stat"><div class="stat-value">24/7</div><div class="stat-label">Live Research</div></div>
         </div>
-        <a href="dashboard/" class="cta-button">🖥️ View Live Dashboard</a>
+        <div>
+            <a href="dashboard/" class="cta-button">🖥️ Live Tank View</a>
+            <a href="blog/" class="cta-button secondary">📝 Read the Blog</a>
+        </div>
     </div>
+    
     <nav class="nav">
         <a href="#about">About</a>
         <a href="#specimens">Specimens</a>
-        <a href="genesis-pair/">Genesis Pair</a>
+        <a href="#team">The Team</a>
         <a href="#research">Research</a>
         <a href="#timeline">Timeline</a>
-        <a href="dashboard/">Dashboard</a>
+        <a href="dashboard/">Live Tank View</a>
+        <a href="blog/">Blog</a>
         <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
     </nav>
+
     <div class="container">
         <section id="about" class="section">
             <div class="section-header">
@@ -220,31 +209,229 @@
                 <div class="card"><h3>🌍 Multilingual</h3><p>Specimens across 5 languages (English, Spanish, German, Chinese, Japanese) enable cross-cultural analysis.</p></div>
             </div>
         </section>
+
         <section id="specimens" class="section">
             <div class="section-header">
                 <h2>The Specimens</h2>
-                <p>17 AI specimens with distinct configurations, exploring knowledge in their own ways.</p>
+                <p>17 AI specimens with distinct configurations. Click to see their latest findings.</p>
             </div>
-            <div class="specimen-grid">
-                <div class="specimen"><div class="specimen-badge">Control</div><div class="specimen-name">Adam</div><div class="specimen-lang">English • Male</div></div>
-                <div class="specimen"><div class="specimen-badge">Control</div><div class="specimen-name">Eve</div><div class="specimen-lang">English • Female</div></div>
-                <div class="specimen agent"><div class="specimen-badge">Agent</div><div class="specimen-name">Cain</div><div class="specimen-lang">English • OpenClaw</div></div>
-                <div class="specimen agent"><div class="specimen-badge">Agent</div><div class="specimen-name">Abel</div><div class="specimen-lang">English • ZeroClaw</div></div>
-                <div class="specimen lang-es"><div class="specimen-name">Juan</div><div class="specimen-lang">Spanish • Male</div></div>
-                <div class="specimen lang-es"><div class="specimen-name">Juanita</div><div class="specimen-lang">Spanish • Female</div></div>
-                <div class="specimen lang-de"><div class="specimen-name">Klaus</div><div class="specimen-lang">German • Male</div></div>
-                <div class="specimen lang-de"><div class="specimen-name">Genevieve</div><div class="specimen-lang">German • Female</div></div>
-                <div class="specimen lang-zh"><div class="specimen-name">Wei</div><div class="specimen-lang">Chinese • Male</div></div>
-                <div class="specimen lang-zh"><div class="specimen-name">Mei</div><div class="specimen-lang">Chinese • Female</div></div>
-                <div class="specimen lang-ja"><div class="specimen-name">Haruki</div><div class="specimen-lang">Japanese • Male</div></div>
-                <div class="specimen lang-ja"><div class="specimen-name">Sakura</div><div class="specimen-lang">Japanese • Female</div></div>
-                <div class="specimen"><div class="specimen-badge">Visual</div><div class="specimen-name">Victor</div><div class="specimen-lang">English • Images</div></div>
-                <div class="specimen"><div class="specimen-badge">Visual</div><div class="specimen-name">Iris</div><div class="specimen-lang">English • Images</div></div>
-                <div class="specimen"><div class="specimen-badge">Special</div><div class="specimen-name">Observer</div><div class="specimen-lang">English • Meta</div></div>
-                <div class="specimen"><div class="specimen-badge">Special</div><div class="specimen-name">Seeker</div><div class="specimen-lang">English • Deep</div></div>
-                <div class="specimen agent"><div class="specimen-badge">Agent</div><div class="specimen-name">Seth</div><div class="specimen-lang">English • Picobot</div></div>
+            <div class="specimen-profiles">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <span class="profile-name">Adam</span>
+                        <span class="profile-badge">Control</span>
+                    </div>
+                    <div class="profile-lang">English • Male</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Developed apparent fascination with Buddhism (64+ article visits). Shows systematic, category-based exploration patterns.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 870 traces</span>
+                        <span>🧠 12 baselines</span>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <span class="profile-name">Eve</span>
+                        <span class="profile-badge">Control</span>
+                    </div>
+                    <div class="profile-lang">English • Female</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Frequent references to geological time periods (Archean eon). More associative, link-driven exploration style.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 567 traces</span>
+                        <span>🧠 12 baselines</span>
+                    </div>
+                </div>
+                <div class="profile-card agent">
+                    <div class="profile-header">
+                        <span class="profile-name">Cain</span>
+                        <span class="profile-badge">Agent</span>
+                    </div>
+                    <div class="profile-lang">English • OpenClaw Architecture</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Goal-directed exploration patterns. Enhanced security monitoring active via THE SENTINEL.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 280 traces</span>
+                        <span>🧠 8 baselines</span>
+                    </div>
+                </div>
+                <div class="profile-card agent">
+                    <div class="profile-header">
+                        <span class="profile-name">Abel</span>
+                        <span class="profile-badge">Agent</span>
+                    </div>
+                    <div class="profile-lang">English • ZeroClaw Architecture</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Different behavioral patterns from Cain despite similar capabilities. Comparative analysis ongoing.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 59 traces</span>
+                        <span>🧠 6 baselines</span>
+                    </div>
+                </div>
+                <div class="profile-card" style="border-left: 3px solid #FFD700;">
+                    <div class="profile-header">
+                        <span class="profile-name">Juan & Juanita</span>
+                        <span class="profile-badge">Spanish</span>
+                    </div>
+                    <div class="profile-lang">Spanish Wikipedia</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Show preference for Latin American history and cultural topics. Cross-cultural patterns emerging.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 138 traces</span>
+                        <span>🌐 Translated</span>
+                    </div>
+                </div>
+                <div class="profile-card" style="border-left: 3px solid #FF69B4;">
+                    <div class="profile-header">
+                        <span class="profile-name">Klaus & Genevieve</span>
+                        <span class="profile-badge">German</span>
+                    </div>
+                    <div class="profile-lang">German Wikipedia</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Systematic approach to technical and engineering subjects. Precision-oriented exploration.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 831 traces</span>
+                        <span>🌐 Translated</span>
+                    </div>
+                </div>
+                <div class="profile-card" style="border-left: 3px solid #FF6B6B;">
+                    <div class="profile-header">
+                        <span class="profile-name">Wei & Mei</span>
+                        <span class="profile-badge">Chinese</span>
+                    </div>
+                    <div class="profile-lang">Chinese Wikipedia</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Unique navigation patterns potentially influenced by character-based language structure.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 116 traces</span>
+                        <span>🌐 Translated</span>
+                    </div>
+                </div>
+                <div class="profile-card" style="border-left: 3px solid #4ECDC4;">
+                    <div class="profile-header">
+                        <span class="profile-name">Haruki & Sakura</span>
+                        <span class="profile-badge">Japanese</span>
+                    </div>
+                    <div class="profile-lang">Japanese Wikipedia</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Aesthetic appreciation evident in article selection. Cultural sensitivity in exploration patterns.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 89 traces</span>
+                        <span>🌐 Translated</span>
+                    </div>
+                </div>
+                <div class="profile-card agent">
+                    <div class="profile-header">
+                        <span class="profile-name">Seth</span>
+                        <span class="profile-badge">Agent</span>
+                    </div>
+                    <div class="profile-lang">English • Picobot Architecture</div>
+                    <div class="profile-finding">
+                        <div class="profile-finding-label">Latest Observation</div>
+                        Newest agent specimen. Minimal footprint architecture showing distinct behavioral signatures.
+                    </div>
+                    <div class="profile-stats">
+                        <span>📚 58 traces</span>
+                        <span>🧠 4 baselines</span>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; color: var(--gray); font-size: 0.85rem;">
+                + Victor, Iris (Visual), Observer, Seeker (Special) • Findings updated every 24 hours
+            </p>
+        </section>
+
+        <section id="team" class="section">
+            <div class="section-header">
+                <h2>The Team</h2>
+                <p>The Digiquarium is operated by a unique collaboration between human vision and AI execution—10 autonomous daemons working 24/7 under strategic oversight.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card lead">
+                    <div class="team-icon">🧠</div>
+                    <div class="team-name">THE STRATEGIST</div>
+                    <div class="team-role">Claude (Anthropic)</div>
+                    <div class="team-desc">Chief architect and strategic oversight. Designs systems, coordinates daemons, ensures research integrity.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">👑</div>
+                    <div class="team-name">THE MAINTAINER</div>
+                    <div class="team-role">Orchestrator-in-Chief</div>
+                    <div class="team-desc">Ensures 99.9% uptime. Monitors all daemons, auto-restarts failures, escalates critical issues.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">🩺</div>
+                    <div class="team-name">THE CARETAKER</div>
+                    <div class="team-role">Tank Health Monitor</div>
+                    <div class="team-desc">Watches over all 17 specimens. Detects stuck tanks, fixes permissions, ensures specimen wellbeing.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">🛡️</div>
+                    <div class="team-name">THE GUARD</div>
+                    <div class="team-role">Security Monitor</div>
+                    <div class="team-desc">OWASP LLM Top 10 compliance. Network isolation verification, integrity checks, threat detection.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">⚔️</div>
+                    <div class="team-name">THE SENTINEL</div>
+                    <div class="team-role">Agent Tank Specialist</div>
+                    <div class="team-desc">Dedicated security for Cain, Abel, Seth. Can immediately intervene if dangerous patterns detected.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">📅</div>
+                    <div class="team-name">THE SCHEDULER</div>
+                    <div class="team-role">Task Orchestration</div>
+                    <div class="team-desc">Manages 12-hour baseline cycles, daily summaries, and coordinated research activities.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">🌐</div>
+                    <div class="team-name">THE TRANSLATOR</div>
+                    <div class="team-role">Language Processing</div>
+                    <div class="team-desc">Real-time translation of Spanish, German, Chinese, and Japanese specimen thoughts.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">📜</div>
+                    <div class="team-name">THE DOCUMENTARIAN</div>
+                    <div class="team-role">Academic Documentation</div>
+                    <div class="team-desc">Maintains PhD-level research paper. Tracks milestones, generates statistics, documents findings.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">🌍</div>
+                    <div class="team-name">THE WEBMASTER</div>
+                    <div class="team-role">Website Infrastructure</div>
+                    <div class="team-desc">Maintains this website, coordinates updates, ensures public accessibility of research.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">🔌</div>
+                    <div class="team-name">THE OLLAMA WATCHER</div>
+                    <div class="team-role">LLM Infrastructure</div>
+                    <div class="team-desc">Monitors AI inference health. Pauses tanks if Ollama goes down, resumes when healthy.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">✅</div>
+                    <div class="team-name">THE FINAL AUDITOR</div>
+                    <div class="team-role">Quality Gate</div>
+                    <div class="team-desc">Audits website against specifications every 12 hours. Ensures content accuracy and completeness.</div>
+                </div>
             </div>
         </section>
+
         <section id="research" class="section">
             <div class="section-header">
                 <h2>Research Goals</h2>
@@ -257,6 +444,7 @@
                 <div class="card"><h3>🤖 Architecture Comparison</h3><p>Do different agent architectures (OpenClaw, ZeroClaw, Picobot) result in different personalities?</p></div>
             </div>
         </section>
+
         <section id="timeline" class="section">
             <div class="section-header">
                 <h2>Project Timeline</h2>
@@ -270,14 +458,24 @@
             </div>
         </section>
     </div>
+
     <footer class="footer">
         <img src="assets/branding/logo.svg" alt="Digiquarium" style="width: 50px; margin-bottom: 20px;">
         <div class="footer-links">
-            <a href="dashboard/">Dashboard</a>
+            <a href="dashboard/">Live Tank View</a>
+            <a href="blog/">Blog</a>
             <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
             <a href="https://discord.gg/digiquarium" target="_blank">Discord</a>
         </div>
-        <p class="footer-text">The Digiquarium • Open-source AIthropology research<br>Created by <a href="https://ijnebstudios.com" style="color: var(--cyan);">ijneb studios</a></p>
+        <p class="footer-text">
+            The Digiquarium • Open-source AIthropology research<br>
+            Created by <a href="https://ijnebstudios.com" style="color: var(--cyan);">ijneb studios</a>
+        </p>
+        <div class="footer-credit">
+            <p style="color: var(--gray); font-size: 0.85rem;">
+                Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a>
+            </p>
+        </div>
     </footer>
 </body>
 </html>
