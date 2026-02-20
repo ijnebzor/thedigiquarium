@@ -1,106 +1,7 @@
 {
   "tank_id": "tank-17-seth",
-  "updated": "2026-02-20T16:58:45.524564",
+  "updated": "2026-02-20T17:27:36.415823",
   "entries": [
-    {
-      "timestamp": "2026-02-20T15:48:33.737627",
-      "tank": "tank-17-seth",
-      "article": "Stern",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Balcony",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:48:36.770782",
-      "tank": "tank-17-seth",
-      "article": "Balcony",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Floor",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:48:39.887154",
-      "tank": "tank-17-seth",
-      "article": "Floor",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Carpet",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:48:42.935908",
-      "tank": "tank-17-seth",
-      "article": "Carpet",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Textile",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:48:45.963098",
-      "tank": "tank-17-seth",
-      "article": "Textile",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Weaving",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:48:49.052926",
-      "tank": "tank-17-seth",
-      "article": "Weaving",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Parallel (geometry)",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:48:52.136200",
-      "tank": "tank-17-seth",
-      "article": "Parallel (geometry)",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Plane (mathematics)",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:48:55.201984",
-      "tank": "tank-17-seth",
-      "article": "Plane (mathematics)",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Curve",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:48:58.324705",
-      "tank": "tank-17-seth",
-      "article": "Curve",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Parabola",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
     {
       "timestamp": "2026-02-20T15:49:01.403370",
       "tank": "tank-17-seth",
@@ -548,6 +449,105 @@
       "original_thoughts": null,
       "thoughts": null,
       "next_article": "Newspaper",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:01:46.370067",
+      "tank": "tank-17-seth",
+      "article": "Newspaper",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Infotainment",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:04:49.604603",
+      "tank": "tank-17-seth",
+      "article": "Infotainment",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Media",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:07:52.756036",
+      "tank": "tank-17-seth",
+      "article": "Media",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Mass media",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:10:56.023142",
+      "tank": "tank-17-seth",
+      "article": "Mass media",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Newspaper",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:13:59.208846",
+      "tank": "tank-17-seth",
+      "article": "Newspaper",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Blog",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:18:23.325501",
+      "tank": "tank-17-seth",
+      "article": "Blog",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Freedom of information",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:21:26.517726",
+      "tank": "tank-17-seth",
+      "article": "Freedom of information",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Net neutrality",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:24:29.656658",
+      "tank": "tank-17-seth",
+      "article": "Net neutrality",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Online game",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T17:27:32.917908",
+      "tank": "tank-17-seth",
+      "article": "Online game",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Internet",
       "reasoning": "",
       "language": "English",
       "translated": false

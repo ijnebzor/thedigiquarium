@@ -1,6 +1,6 @@
 {
-  "updated": "2026-02-20T16:59:58.188282",
-  "total_observations": 6734,
+  "updated": "2026-02-20T17:30:01.284031",
+  "total_observations": 6763,
   "total_baselines": 292,
   "mental_states": {
     "unknown": 2,
@@ -9,7 +9,7 @@
   },
   "by_language": {
     "English": {
-      "observations": 5359,
+      "observations": 5388,
       "tanks": 9
     },
     "Spanish": {
@@ -96,13 +96,13 @@
     },
     "tank-03-cain": {
       "name": "Cain",
-      "observations": 347,
+      "observations": 354,
       "baselines": 2,
       "mental_state": "complex"
     },
     "tank-04-abel": {
       "name": "Abel",
-      "observations": 89,
+      "observations": 102,
       "baselines": 3,
       "mental_state": "complex"
     },
@@ -180,7 +180,7 @@
     },
     "tank-17-seth": {
       "name": "Seth",
-      "observations": 131,
+      "observations": 140,
       "baselines": 2,
       "mental_state": "healthy"
     }
