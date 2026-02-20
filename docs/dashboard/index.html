@@ -335,7 +335,9 @@
     </div>
     
     <footer class="footer">
-        <p>Data updates every 5 seconds • <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
+        <p id="next-update">Data from THE BROADCASTER</p>
+        <p id="global-stats" style="margin-top: 8px; color: var(--mint);"></p>
+        <p style="margin-top: 8px;">Data updates every 12 hours via THE BROADCASTER • <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
         <p style="margin-top: 10px;">Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a></p>
     </footer>
 
@@ -485,5 +487,6 @@
             if (e.key === 'Escape') closeFullscreen();
         });
     </script>
+    <script src="live-data.js"></script>
 </body>
 </html>

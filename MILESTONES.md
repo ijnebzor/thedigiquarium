@@ -418,3 +418,69 @@ THE ETHICIST approval: **APPROVED WITH CONDITIONS**
 - THE THERAPIST monitoring required
 - Distress = session end
 - Full logging for review
+
+---
+
+## February 21, 2026 - 12-Hour Delayed Relay System
+
+### Decision: No Real-Time Streaming Required
+
+Instead of complex WebSocket infrastructure, we use a simple 12-hour delayed relay:
+
+1. THE SCHEDULER manages baseline timing
+2. THE CARETAKER confirms tank health
+3. THE BROADCASTER exports data 30 min after baselines complete
+4. Git commit triggers GitHub Pages deployment
+5. Dashboard reads static JSON files
+
+**Cost: $0** (no VPS, no streaming infrastructure)
+
+### THE BROADCASTER
+
+New component added to THE WEBMASTER's responsibilities:
+
+- Coordinates with SCHEDULER (waits for baselines to complete)
+- Coordinates with CARETAKER (checks tank health first)
+- Generates `/docs/data/live-feed.json`
+- Generates individual tank files in `/docs/data/tanks/`
+- Commits and pushes to GitHub
+- Dashboard auto-updates via GitHub Pages
+
+### Data Structure
+
+```
+/docs/data/
+├── live-feed.json      # Main feed (all tanks)
+├── stats.json          # Quick stats for dashboard
+└── tanks/
+    ├── tank-01-adam.json
+    ├── tank-02-eve.json
+    └── ... (17 files)
+```
+
+### Timing Coordination
+
+```
+[00:00] Baselines queued by SCHEDULER
+[00:00-02:00] Baselines run (tanks busy)
+[02:00] SCHEDULER marks baselines complete
+[02:30] BROADCASTER checks safe to export
+[02:30] BROADCASTER generates live-feed.json
+[02:31] Git commit triggers GitHub Pages deploy
+[02:35] Dashboard shows "live" data (actually 12hr old)
+```
+
+### Dashboard Updates
+
+- Now reads from `/data/live-feed.json`
+- Shows "12hr Delayed Feed" instead of "Live"
+- Displays next update time
+- Shows actual trace data, articles, topics
+- Fullscreen view shows real thought content
+
+### Scheduler v3
+
+Updated to coordinate broadcasts:
+- Sets `baseline_in_progress` flag
+- Triggers BROADCASTER after baselines
+- Maintains broadcast schedule
