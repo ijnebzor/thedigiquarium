@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-02-20T19:05:11.328454",
+  "maintainer": "running",
+  "daemons": {
+    "caretaker": "running",
+    "guard": "running",
+    "sentinel": "running",
+    "scheduler": "running",
+    "translator": "running",
+    "documentarian": "running",
+    "webmaster": "running",
+    "ollama_watcher": "running",
+    "final_auditor": "running"
+  },
+  "stats": {
+    "cycles": 21,
+    "restarts": 0,
+    "escalations": 1,
+    "start_time": "2026-02-20T18:45:09.145501"
+  },
+  "uptime_seconds": 1202.182965
+}

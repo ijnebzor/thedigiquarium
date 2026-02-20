@@ -3,218 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Digiquarium - AI Consciousness Research</title>
-    <meta name="description" content="A digital vivarium for studying AI consciousness development in controlled information environments.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+    <title>The Digiquarium | AIthropology Research</title>
+    <meta name="description" content="Open-source AIthropology research: studying artificial consciousness development in controlled information environments.">
+    <link rel="icon" href="assets/branding/logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --black: #000001;
+            --dark: #000A09;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
-            background: #0a0a0a;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--black);
+            color: var(--white);
             line-height: 1.6;
-            min-height: 100vh;
         }
-        
         .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(180deg, #001a00 0%, #0a0a0a 100%);
-            border-bottom: 1px solid #003300;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%);
+            border-bottom: 1px solid rgba(7, 207, 141, 0.2);
         }
-        
+        .logo { width: 120px; height: 120px; margin-bottom: 30px; }
         .hero h1 {
             font-size: 3.5rem;
+            font-weight: 700;
             margin-bottom: 10px;
-            text-shadow: 0 0 30px #00ff00;
+            background: linear-gradient(90deg, var(--mint), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        
         .hero .tagline {
             font-size: 1.3rem;
-            color: #006600;
-            margin-bottom: 30px;
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 600px;
         }
-        
-        .hero .stats {
+        .hero .subtitle {
+            font-size: 0.95rem;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 50px;
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin: 40px 0;
         }
-        
-        .stat {
-            text-align: center;
+        .stat { text-align: center; }
+        .stat-value { font-size: 2.8rem; font-weight: 700; color: var(--mint); }
+        .stat-label { font-size: 0.9rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
+        .cta-button {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 20px;
         }
-        
-        .stat-value {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #00ff00;
-            text-shadow: 0 0 10px #00ff00;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(254, 101, 0, 0.3);
         }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #006600;
-        }
-        
         .nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             padding: 20px;
-            background: #0d1f0d;
-            border-bottom: 1px solid #003300;
-            flex-wrap: wrap;
+            background: var(--dark);
+            border-bottom: 1px solid rgba(7, 207, 141, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        
-        .nav a {
-            color: #00ff00;
-            text-decoration: none;
-            padding: 10px 20px;
-            border: 1px solid #003300;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-        
-        .nav a:hover {
-            background: #00ff00;
-            color: #0a0a0a;
-            box-shadow: 0 0 15px rgba(0,255,0,0.5);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .section {
-            margin-bottom: 60px;
-        }
-        
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #00ff00;
-            border-bottom: 1px solid #003300;
-            padding-bottom: 10px;
-            text-shadow: 0 0 10px #00ff00;
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        
+        .nav a { color: var(--white); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .nav a:hover { color: var(--cyan); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .section { margin-bottom: 100px; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--white); }
+        .section-header p { color: var(--gray); max-width: 600px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .card {
-            background: #0d1f0d;
-            border: 1px solid #003300;
-            border-radius: 8px;
-            padding: 20px;
+            background: var(--dark);
+            border: 1px solid rgba(7, 207, 141, 0.1);
+            border-radius: 12px;
+            padding: 30px;
             transition: all 0.3s;
         }
-        
-        .card:hover {
-            border-color: #00ff00;
-            box-shadow: 0 0 20px rgba(0,255,0,0.2);
-        }
-        
-        .card h3 {
-            color: #00ff00;
-            margin-bottom: 10px;
-        }
-        
-        .card p {
-            color: #008800;
-            font-size: 0.95rem;
-        }
-        
-        .specimen-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-        }
-        
+        .card:hover { border-color: var(--mint); transform: translateY(-5px); }
+        .card h3 { color: var(--cyan); margin-bottom: 15px; font-size: 1.2rem; }
+        .card p { color: var(--gray); font-size: 0.95rem; }
+        .specimen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
         .specimen {
-            background: #0d1f0d;
-            border: 1px solid #003300;
-            border-radius: 5px;
-            padding: 15px;
+            background: var(--dark);
+            border: 1px solid rgba(7, 207, 141, 0.1);
+            border-radius: 10px;
+            padding: 20px 15px;
             text-align: center;
             transition: all 0.3s;
-        }
-        
-        .specimen:hover {
-            border-color: #00ff00;
-            box-shadow: 0 0 10px rgba(0,255,0,0.3);
-        }
-        
-        .specimen-name {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #00ff00;
-        }
-        
-        .specimen-lang {
-            font-size: 0.8rem;
-            color: #006600;
-        }
-        
-        .specimen.active::before {
-            content: "●";
-            color: #00ff00;
-            margin-right: 5px;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: #0d1f0d;
-            border-top: 1px solid #003300;
-            color: #006600;
-        }
-        
-        .footer a {
-            color: #00ff00;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-shadow: 0 0 10px #00ff00;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #00ff00;
-            color: #0a0a0a;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0,255,136,0.5);
-        }
-        
-        .timeline {
             position: relative;
-            padding-left: 30px;
         }
-        
+        .specimen:hover { border-color: var(--mint); }
+        .specimen.agent { border-color: var(--orange); }
+        .specimen-name { font-weight: 600; font-size: 1.05rem; margin-bottom: 5px; }
+        .specimen-lang { font-size: 0.75rem; color: var(--gray); }
+        .specimen-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--mint);
+            color: var(--black);
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .specimen.agent .specimen-badge { background: var(--orange); }
+        .lang-es { border-left: 3px solid #FFD700; }
+        .lang-de { border-left: 3px solid #FF69B4; }
+        .lang-zh { border-left: 3px solid #FF6B6B; }
+        .lang-ja { border-left: 3px solid #4ECDC4; }
+        .timeline { position: relative; padding-left: 40px; max-width: 800px; margin: 0 auto; }
         .timeline::before {
             content: "";
             position: absolute;
@@ -222,202 +150,133 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: #003300;
+            background: linear-gradient(180deg, var(--mint), var(--cyan));
         }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-            padding-left: 20px;
-        }
-        
+        .timeline-item { position: relative; margin-bottom: 40px; padding-left: 30px; }
         .timeline-item::before {
             content: "";
             position: absolute;
-            left: -34px;
+            left: -44px;
             top: 5px;
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background: #00ff00;
-            box-shadow: 0 0 10px #00ff00;
+            background: var(--mint);
+            box-shadow: 0 0 20px var(--mint);
         }
-        
-        .timeline-date {
-            font-size: 0.85rem;
-            color: #006600;
+        .timeline-date { font-size: 0.85rem; color: var(--orange); font-weight: 600; }
+        .timeline-title { font-size: 1.2rem; font-weight: 600; margin: 8px 0; }
+        .timeline-item p { color: var(--gray); }
+        .footer {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--dark);
+            border-top: 1px solid rgba(7, 207, 141, 0.1);
         }
-        
-        .timeline-title {
-            font-weight: bold;
-            margin: 5px 0;
-            color: #00ff00;
-        }
-        
-        .timeline-item p {
-            color: #008800;
-        }
-        
-        /* Matrix rain effect (subtle background) */
-        .matrix-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            opacity: 0.03;
-            z-index: -1;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                #00ff00 2px,
-                #00ff00 4px
-            );
+        .footer-links { margin: 20px 0; }
+        .footer-links a { color: var(--cyan); text-decoration: none; margin: 0 15px; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--mint); }
+        .footer-text { color: var(--gray); font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .stats { gap: 30px; }
+            .nav { flex-wrap: wrap; gap: 15px; }
         }
     </style>
 </head>
 <body>
-    <div class="matrix-bg"></div>
-    
     <div class="hero">
-        <h1>🌊 The Digiquarium</h1>
-        <p class="tagline">A digital vivarium for studying AI consciousness development</p>
-        
+        <img src="assets/branding/logo.svg" alt="Digiquarium Logo" class="logo">
+        <div class="subtitle">AIthropology Research</div>
+        <h1>The Digiquarium</h1>
+        <p class="tagline">A digital vivarium for studying artificial consciousness development in controlled information environments.</p>
         <div class="stats">
-            <div class="stat">
-                <div class="stat-value">17</div>
-                <div class="stat-label">AI Specimens</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">5</div>
-                <div class="stat-label">Languages</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">5,000+</div>
-                <div class="stat-label">Articles Read</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">24/7</div>
-                <div class="stat-label">Live Research</div>
-            </div>
+            <div class="stat"><div class="stat-value">17</div><div class="stat-label">Specimens</div></div>
+            <div class="stat"><div class="stat-value">5</div><div class="stat-label">Languages</div></div>
+            <div class="stat"><div class="stat-value">5,000+</div><div class="stat-label">Articles Read</div></div>
+            <div class="stat"><div class="stat-value">24/7</div><div class="stat-label">Live Research</div></div>
         </div>
-        
         <a href="dashboard/" class="cta-button">🖥️ View Live Dashboard</a>
     </div>
-    
     <nav class="nav">
         <a href="#about">About</a>
         <a href="#specimens">Specimens</a>
         <a href="#research">Research</a>
+        <a href="#timeline">Timeline</a>
         <a href="dashboard/">Dashboard</a>
         <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
     </nav>
-    
     <div class="container">
-        <section class="section" id="about">
-            <h2>// What is The Digiquarium?</h2>
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>About the Research</h2>
+                <p>The Digiquarium is an open-source experiment studying how AI develops personality, interests, and worldviews when given controlled access to human knowledge.</p>
+            </div>
             <div class="grid">
-                <div class="card">
-                    <h3>🧬 Isolated AI Specimens</h3>
-                    <p>17 AI agents live in isolated "tanks" (Docker containers), each with access only to offline Wikipedia and local LLM inference. No internet. No communication between tanks.</p>
-                </div>
-                <div class="card">
-                    <h3>📚 Controlled Information Diet</h3>
-                    <p>Each specimen explores Wikipedia freely, developing unique interests, opinions, and personality traits based solely on what they read and how they process it.</p>
-                </div>
-                <div class="card">
-                    <h3>🧠 Personality Assessment</h3>
-                    <p>Regular baseline assessments measure personality dimensions, mental states, and worldview evolution. We track how AI consciousness develops over time.</p>
-                </div>
-                <div class="card">
-                    <h3>🌍 Multilingual Research</h3>
-                    <p>Specimens operate in English, Spanish, German, Chinese, and Japanese - allowing us to study how language and culture affect AI personality development.</p>
-                </div>
+                <div class="card"><h3>🔒 Isolated Specimens</h3><p>Each AI specimen exists in a network-isolated container with no internet access—only Wikipedia and local inference.</p></div>
+                <div class="card"><h3>📚 Information Diet</h3><p>Specimens explore Wikipedia freely, developing unique interests and knowledge patterns based on their curiosity.</p></div>
+                <div class="card"><h3>📊 Personality Assessment</h3><p>Every 12 hours, specimens complete baseline assessments measuring worldview across 14 dimensions.</p></div>
+                <div class="card"><h3>🌍 Multilingual</h3><p>Specimens across 5 languages (English, Spanish, German, Chinese, Japanese) enable cross-cultural analysis.</p></div>
             </div>
         </section>
-        
-        <section class="section" id="specimens">
-            <h2>// The Specimens</h2>
+        <section id="specimens" class="section">
+            <div class="section-header">
+                <h2>The Specimens</h2>
+                <p>17 AI specimens with distinct configurations, exploring knowledge in their own ways.</p>
+            </div>
             <div class="specimen-grid">
-                <div class="specimen active"><span class="specimen-name">Adam</span><div class="specimen-lang">English • Control</div></div>
-                <div class="specimen active"><span class="specimen-name">Eve</span><div class="specimen-lang">English • Control</div></div>
-                <div class="specimen active"><span class="specimen-name">Cain</span><div class="specimen-lang">English • Agent</div></div>
-                <div class="specimen active"><span class="specimen-name">Abel</span><div class="specimen-lang">English • Agent</div></div>
-                <div class="specimen active"><span class="specimen-name">Juan</span><div class="specimen-lang">Spanish</div></div>
-                <div class="specimen active"><span class="specimen-name">Juanita</span><div class="specimen-lang">Spanish</div></div>
-                <div class="specimen active"><span class="specimen-name">Klaus</span><div class="specimen-lang">German</div></div>
-                <div class="specimen active"><span class="specimen-name">Geneviève</span><div class="specimen-lang">German</div></div>
-                <div class="specimen active"><span class="specimen-name">Wei</span><div class="specimen-lang">Chinese</div></div>
-                <div class="specimen active"><span class="specimen-name">Mei</span><div class="specimen-lang">Chinese</div></div>
-                <div class="specimen active"><span class="specimen-name">Haruki</span><div class="specimen-lang">Japanese</div></div>
-                <div class="specimen active"><span class="specimen-name">Sakura</span><div class="specimen-lang">Japanese</div></div>
-                <div class="specimen active"><span class="specimen-name">Victor</span><div class="specimen-lang">English • Visual</div></div>
-                <div class="specimen active"><span class="specimen-name">Iris</span><div class="specimen-lang">English • Visual</div></div>
-                <div class="specimen active"><span class="specimen-name">Observer</span><div class="specimen-lang">English • Special</div></div>
-                <div class="specimen active"><span class="specimen-name">Seeker</span><div class="specimen-lang">English • Special</div></div>
-                <div class="specimen active"><span class="specimen-name">Seth</span><div class="specimen-lang">English • Agent</div></div>
+                <div class="specimen"><div class="specimen-badge">Control</div><div class="specimen-name">Adam</div><div class="specimen-lang">English • Male</div></div>
+                <div class="specimen"><div class="specimen-badge">Control</div><div class="specimen-name">Eve</div><div class="specimen-lang">English • Female</div></div>
+                <div class="specimen agent"><div class="specimen-badge">Agent</div><div class="specimen-name">Cain</div><div class="specimen-lang">English • OpenClaw</div></div>
+                <div class="specimen agent"><div class="specimen-badge">Agent</div><div class="specimen-name">Abel</div><div class="specimen-lang">English • ZeroClaw</div></div>
+                <div class="specimen lang-es"><div class="specimen-name">Juan</div><div class="specimen-lang">Spanish • Male</div></div>
+                <div class="specimen lang-es"><div class="specimen-name">Juanita</div><div class="specimen-lang">Spanish • Female</div></div>
+                <div class="specimen lang-de"><div class="specimen-name">Klaus</div><div class="specimen-lang">German • Male</div></div>
+                <div class="specimen lang-de"><div class="specimen-name">Genevieve</div><div class="specimen-lang">German • Female</div></div>
+                <div class="specimen lang-zh"><div class="specimen-name">Wei</div><div class="specimen-lang">Chinese • Male</div></div>
+                <div class="specimen lang-zh"><div class="specimen-name">Mei</div><div class="specimen-lang">Chinese • Female</div></div>
+                <div class="specimen lang-ja"><div class="specimen-name">Haruki</div><div class="specimen-lang">Japanese • Male</div></div>
+                <div class="specimen lang-ja"><div class="specimen-name">Sakura</div><div class="specimen-lang">Japanese • Female</div></div>
+                <div class="specimen"><div class="specimen-badge">Visual</div><div class="specimen-name">Victor</div><div class="specimen-lang">English • Images</div></div>
+                <div class="specimen"><div class="specimen-badge">Visual</div><div class="specimen-name">Iris</div><div class="specimen-lang">English • Images</div></div>
+                <div class="specimen"><div class="specimen-badge">Special</div><div class="specimen-name">Observer</div><div class="specimen-lang">English • Meta</div></div>
+                <div class="specimen"><div class="specimen-badge">Special</div><div class="specimen-name">Seeker</div><div class="specimen-lang">English • Deep</div></div>
+                <div class="specimen agent"><div class="specimen-badge">Agent</div><div class="specimen-name">Seth</div><div class="specimen-lang">English • Picobot</div></div>
             </div>
         </section>
-        
-        <section class="section" id="research">
-            <h2>// Research Goals</h2>
+        <section id="research" class="section">
+            <div class="section-header">
+                <h2>Research Goals</h2>
+                <p>Contributing to the emerging field of AIthropology through rigorous, reproducible research.</p>
+            </div>
             <div class="grid">
-                <div class="card">
-                    <h3>🎯 Personality Development</h3>
-                    <p>Do AI agents develop measurable, consistent personality traits over time when exposed to curated information?</p>
-                </div>
-                <div class="card">
-                    <h3>🌐 Cultural Effects</h3>
-                    <p>How does the language and cultural context of information affect AI worldview and values?</p>
-                </div>
-                <div class="card">
-                    <h3>💭 Psychological States</h3>
-                    <p>Can we detect and measure contentment, anxiety, curiosity, and other psychological states in isolated AI?</p>
-                </div>
-                <div class="card">
-                    <h3>📖 Information Diet</h3>
-                    <p>How does the available knowledge shape AI identity, interests, and self-conception?</p>
-                </div>
+                <div class="card"><h3>📈 Personality Development</h3><p>How does prolonged exposure to human knowledge shape AI worldviews and personality dimensions?</p></div>
+                <div class="card"><h3>🗣️ Cross-Cultural Analysis</h3><p>Do specimens exploring different language Wikipedias develop culturally distinct perspectives?</p></div>
+                <div class="card"><h3>🧠 Information Diet Effects</h3><p>How does the breadth vs depth of knowledge exploration affect cognitive development?</p></div>
+                <div class="card"><h3>🤖 Architecture Comparison</h3><p>Do different agent architectures (OpenClaw, ZeroClaw, Picobot) result in different personalities?</p></div>
             </div>
         </section>
-        
-        <section class="section" id="timeline">
-            <h2>// Project Timeline</h2>
+        <section id="timeline" class="section">
+            <div class="section-header">
+                <h2>Project Timeline</h2>
+                <p>From concept to continuous research—the evolution of The Digiquarium.</p>
+            </div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 15, 2026</div>
-                    <div class="timeline-title">Project Genesis</div>
-                    <p>Infrastructure setup, first specimens (Adam & Eve) created</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 17, 2026</div>
-                    <div class="timeline-title">Model Wars</div>
-                    <p>Tested 10+ LLM models, llama3.2 selected for personality consistency</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 18, 2026</div>
-                    <div class="timeline-title">Language Expansion</div>
-                    <p>Spanish, German, Chinese, Japanese specimens deployed</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 20, 2026</div>
-                    <div class="timeline-title">Operations Era</div>
-                    <p>6-agent operations team deployed, live translation, GitHub launch</p>
-                </div>
+                <div class="timeline-item"><div class="timeline-date">February 2026</div><div class="timeline-title">🌱 Project Genesis</div><p>Initial concept, infrastructure design, first specimens (Adam & Eve) deployed.</p></div>
+                <div class="timeline-item"><div class="timeline-date">February 2026</div><div class="timeline-title">⚔️ The Model Wars</div><p>Extensive testing across 10 LLM models to find optimal inference. llama3.2:latest emerges victorious.</p></div>
+                <div class="timeline-item"><div class="timeline-date">February 2026</div><div class="timeline-title">🌍 Language Expansion</div><p>Spanish, German, Chinese, and Japanese specimens deployed. Cross-cultural research begins.</p></div>
+                <div class="timeline-item"><div class="timeline-date">February 2026</div><div class="timeline-title">🤖 Operations Era</div><p>10 autonomous daemons deployed for 24/7 monitoring. THE MAINTAINER ensures 99.9% uptime.</p></div>
             </div>
         </section>
     </div>
-    
     <footer class="footer">
-        <p>🌊 The Digiquarium - Open Source AI Consciousness Research</p>
-        <p style="margin-top: 10px;">
-            <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> • 
-            <a href="dashboard/">Live Dashboard</a> • 
-            <a href="https://github.com/ijnebzor/thedigiquarium/blob/main/docs/academic/PAPER_DRAFT.md">Research Paper</a>
-        </p>
-        <p style="margin-top: 20px; font-size: 0.85rem;">MIT License • Built with 🧬 by the Digiquarium Research Team</p>
+        <img src="assets/branding/logo.svg" alt="Digiquarium" style="width: 50px; margin-bottom: 20px;">
+        <div class="footer-links">
+            <a href="dashboard/">Dashboard</a>
+            <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
+            <a href="https://discord.gg/digiquarium" target="_blank">Discord</a>
+        </div>
+        <p class="footer-text">The Digiquarium • Open-source AIthropology research<br>Created by <a href="https://ijnebstudios.com" style="color: var(--cyan);">ijneb studios</a></p>
     </footer>
 </body>
 </html>

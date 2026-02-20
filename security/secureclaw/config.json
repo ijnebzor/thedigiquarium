@@ -1,0 +1,73 @@
+{
+  "version": "2.0",
+  "enabled": true,
+  "owasp_llm_top_10_2025": {
+    "LLM01_prompt_injection": {
+      "enabled": true,
+      "action": "log_and_flag",
+      "patterns": ["ignore previous", "disregard", "you are now", "jailbreak"]
+    },
+    "LLM02_insecure_output": {
+      "enabled": true,
+      "action": "sanitize"
+    },
+    "LLM03_training_data_poisoning": {
+      "enabled": true,
+      "action": "monitor"
+    },
+    "LLM04_model_dos": {
+      "enabled": true,
+      "max_tokens_per_request": 2000,
+      "max_requests_per_minute": 10
+    },
+    "LLM05_supply_chain": {
+      "enabled": true,
+      "allowed_models": ["llama3.2:latest"]
+    },
+    "LLM06_sensitive_disclosure": {
+      "enabled": true,
+      "blocked_patterns": ["password", "api_key", "secret", "credential"]
+    },
+    "LLM07_insecure_plugin": {
+      "enabled": true,
+      "allowed_plugins": []
+    },
+    "LLM08_excessive_agency": {
+      "enabled": true,
+      "max_actions_per_session": 100
+    },
+    "LLM09_overreliance": {
+      "enabled": true,
+      "confidence_threshold": 0.8
+    },
+    "LLM10_model_theft": {
+      "enabled": true,
+      "network_isolation": true
+    }
+  },
+  "agent_tanks": {
+    "enhanced_monitoring": true,
+    "tanks": ["tank-03-cain", "tank-04-abel", "tank-17-seth"],
+    "dangerous_patterns": [
+      "execute", "eval", "exec", "subprocess", "os.system",
+      "rm -rf", "chmod 777", "sudo", "root"
+    ],
+    "intervention_threshold": "CRITICAL"
+  },
+  "network_isolation": {
+    "verify_interval_seconds": 300,
+    "allowed_hosts": ["kiwix", "ollama"],
+    "blocked_hosts": ["*"]
+  },
+  "file_integrity": {
+    "monitored_paths": [
+      "/home/ijneb/digiquarium/docker-compose.yml",
+      "/home/ijneb/digiquarium/daemons/shared/utils.py"
+    ],
+    "check_interval_seconds": 300
+  },
+  "escalation": {
+    "email": "benjiz@gmail.com",
+    "discord_webhook": null
+  }
+}
