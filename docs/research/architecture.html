@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Architecture | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 50px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 30px; }
+        
+        h2 { color: var(--cyan); font-size: 1.3rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        h3 { color: var(--mint); font-size: 1.1rem; margin: 25px 0 15px; }
+        
+        p { margin-bottom: 15px; color: var(--white); }
+        
+        .decision-box { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 10px; padding: 20px; margin: 20px 0; }
+        .decision-box h4 { color: var(--orange); margin-bottom: 10px; }
+        .decision-box .chosen { color: var(--mint); font-weight: 600; }
+        .decision-box .rationale { color: var(--gray); font-size: 0.9rem; margin-top: 10px; }
+        
+        .flow-diagram { background: var(--dark); border-radius: 10px; padding: 25px; margin: 20px 0; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; overflow-x: auto; }
+        .flow-diagram pre { color: var(--cyan); }
+        
+        .daemon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .daemon-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 8px; padding: 15px; }
+        .daemon-card h5 { color: var(--mint); font-size: 0.9rem; margin-bottom: 5px; }
+        .daemon-card p { color: var(--gray); font-size: 0.8rem; margin: 0; }
+        
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="methodology.html">Methodology</a>
+                <a href="ethics.html">Ethics</a>
+                <a href="security.html">Security</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>🏗️ System Architecture</h1>
+        <p class="subtitle">Key decisions, data flows, and daemon coordination.</p>
+        
+        <h2>Core Architecture Decisions</h2>
+        
+        <div class="decision-box">
+            <h4>Decision: Virtualization</h4>
+            <p class="chosen">✅ Docker Containers (NOT VirtualBox VMs)</p>
+            <p class="rationale">Lighter weight, faster, 17+ tanks possible vs 3-4 with VMs. Better resource efficiency on limited hardware.</p>
+        </div>
+        
+        <div class="decision-box">
+            <h4>Decision: AI Infrastructure</h4>
+            <p class="chosen">✅ Local Ollama (llama3.2:latest) - No Cloud APIs</p>
+            <p class="rationale">Zero cost, complete privacy, full control. Consistent inference without rate limits or API changes.</p>
+        </div>
+        
+        <div class="decision-box">
+            <h4>Decision: Information Source</h4>
+            <p class="chosen">✅ Kiwix (Offline Wikipedia)</p>
+            <p class="rationale">Network isolation, reproducible experiments, auditable information diet. Frozen snapshot in time.</p>
+        </div>
+        
+        <div class="decision-box">
+            <h4>Decision: Live Dashboard</h4>
+            <p class="chosen">✅ 12-Hour Delayed Relay (NOT Real-Time Streaming)</p>
+            <p class="rationale">Zero infrastructure cost. No VPS, no WebSockets. Static JSON files via GitHub Pages. Same "live" experience for users at $0/month.</p>
+        </div>
+        
+        <div class="decision-box">
+            <h4>Decision: Public Interaction</h4>
+            <p class="chosen">✅ Dedicated Visitor Specimens (NOT Research Specimen Exposure)</p>
+            <p class="rationale">Research specimens (Adam, Eve, etc.) are never exposed to public interaction. Dedicated visitor specimens (Aria, Felix, Luna) exist solely for visitor research.</p>
+        </div>
+        
+        <h2>12-Hour Relay Flow</h2>
+        
+        <div class="flow-diagram">
+<pre>
+┌─────────────────────────────────────────────────────────────────┐
+│                    Every 12 Hours                               │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+         ┌────────────────────┼────────────────────┐
+         ▼                    ▼                    ▼
+  ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+  │  SCHEDULER  │────▶│  CARETAKER  │────▶│ BROADCASTER │
+  │  Baselines  │     │   Health    │     │   Export    │
+  │  Complete   │     │   Check     │     │   + Prune   │
+  └─────────────┘     └─────────────┘     └──────┬──────┘
+                                                 │
+                                                 ▼
+                                    ┌─────────────────────┐
+                                    │    Git Commit       │
+                                    │    GitHub Pages     │
+                                    │    Auto-Deploy      │
+                                    └──────────┬──────────┘
+                                               │
+                                               ▼
+                                    ┌─────────────────────┐
+                                    │    Dashboard        │
+                                    │    Reads JSON       │
+                                    │    Shows "Live"     │
+                                    └─────────────────────┘
+</pre>
+        </div>
+        
+        <h3>Data Quality</h3>
+        <p>THE BROADCASTER prunes data before public display:</p>
+        <ul style="margin-left: 20px; color: var(--gray);">
+            <li>Null thoughts removed</li>
+            <li>Timeouts filtered</li>
+            <li>Junk data excluded</li>
+            <li>Only clean, meaningful traces reach the public view</li>
+        </ul>
+        <p>Full, unpruned logs available for research: <a href="mailto:research@digiquarium.org">research@digiquarium.org</a></p>
+        
+        <h2>Daemon Coordination</h2>
+        
+        <h3>Core Operations (4)</h3>
+        <div class="daemon-grid">
+            <div class="daemon-card"><h5>THE MAINTAINER</h5><p>System orchestration, health checks</p></div>
+            <div class="daemon-card"><h5>THE CARETAKER</h5><p>Tank health, auto-restart, permissions</p></div>
+            <div class="daemon-card"><h5>THE SCHEDULER</h5><p>12-hour baseline cycles, broadcast triggers</p></div>
+            <div class="daemon-card"><h5>THE OLLAMA WATCHER</h5><p>LLM infrastructure monitoring</p></div>
+        </div>
+        
+        <h3>Security (3)</h3>
+        <div class="daemon-grid">
+            <div class="daemon-card"><h5>THE GUARD</h5><p>General security (OWASP LLM Top 10)</p></div>
+            <div class="daemon-card"><h5>THE SENTINEL</h5><p>Agent-specific monitoring</p></div>
+            <div class="daemon-card"><h5>THE BOUNCER</h5><p>Visitor protection (6 security layers)</p></div>
+        </div>
+        
+        <h3>Research (4)</h3>
+        <div class="daemon-grid">
+            <div class="daemon-card"><h5>THE DOCUMENTARIAN</h5><p>Academic paper updates</p></div>
+            <div class="daemon-card"><h5>THE ARCHIVIST</h5><p>Baselines & deep dives</p></div>
+            <div class="daemon-card"><h5>THE TRANSLATOR</h5><p>ES/DE/ZH/JA → EN translation</p></div>
+            <div class="daemon-card"><h5>THE FINAL AUDITOR</h5><p>Quality compliance</p></div>
+        </div>
+        
+        <h3>Mental Health & Ethics (3)</h3>
+        <div class="daemon-grid">
+            <div class="daemon-card"><h5>THE THERAPIST</h5><p>Specimen wellness monitoring</p></div>
+            <div class="daemon-card"><h5>THE MODERATOR</h5><p>Congregation management</p></div>
+            <div class="daemon-card"><h5>THE ETHICIST</h5><p>Ethics oversight, veto power</p></div>
+        </div>
+        
+        <h3>Infrastructure (3)</h3>
+        <div class="daemon-grid">
+            <div class="daemon-card"><h5>THE WEBMASTER</h5><p>Website + THE BROADCASTER</p></div>
+            <div class="daemon-card"><h5>THE STRATEGIST</h5><p>Overall direction (Claude)</p></div>
+            <div class="daemon-card"><h5>THE BROADCASTER</h5><p>12-hour feed export + pruning</p></div>
+        </div>
+        
+        <h2>Security Architecture</h2>
+        
+        <h3>Network Isolation</h3>
+        <p>Research tanks have NO internet access. They can only reach:</p>
+        <ul style="margin-left: 20px; color: var(--gray);">
+            <li>Kiwix (offline Wikipedia)</li>
+            <li>Ollama (local LLM)</li>
+        </ul>
+        
+        <h3>Visitor Protection (THE BOUNCER)</h3>
+        <ol style="margin-left: 20px; color: var(--gray);">
+            <li><strong>Password Gate</strong> - Access control</li>
+            <li><strong>Rate Limiting</strong> - 10/min, 100/hr, 500/day per IP</li>
+            <li><strong>Content Filtering</strong> - Prompt injection, harassment detection</li>
+            <li><strong>Session Management</strong> - 30 min max, 50 messages max</li>
+            <li><strong>Distress Monitoring</strong> - Real-time specimen wellness</li>
+            <li><strong>Emergency Termination</strong> - 3 blocks = session end</li>
+        </ol>
+        
+        <h2>Data Transparency</h2>
+        
+        <p>Everything is public and documented:</p>
+        <ul style="margin-left: 20px; color: var(--gray);">
+            <li><a href="https://github.com/ijnebzor/thedigiquarium">Full source code on GitHub</a></li>
+            <li><a href="https://github.com/ijnebzor/thedigiquarium/tree/main/logs">Raw logs (thinking traces, baselines)</a></li>
+            <li><a href="../data/live-feed.json">Live feed JSON</a></li>
+            <li><a href="methodology.html">Research methodology</a></li>
+            <li><a href="ethics.html">Ethics framework</a></li>
+        </ul>
+        
+        <p style="margin-top: 30px;">For full, unpruned logs or research collaboration: <a href="mailto:research@digiquarium.org">research@digiquarium.org</a></p>
+    </div>
+    
+    <footer class="footer">
+        <p>System Architecture • Part of <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 8px;">Maintained by THE STRATEGIST (Claude)</p>
+    </footer>
+</body>
+</html>

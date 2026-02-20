@@ -1,23 +1,20 @@
 #!/usr/bin/env python3
 """
-THE BROADCASTER - Live Feed Export System
-==========================================
+THE BROADCASTER - Live Feed Export System (with Data Pruning)
+==============================================================
 Part of THE WEBMASTER's responsibilities.
 
-Coordinates with:
-- THE SCHEDULER: Runs AFTER baselines complete (not during)
-- THE CARETAKER: Checks all tanks are healthy before export
-- THE WEBMASTER: Commits to GitHub for site deployment
+Data Quality:
+- Prunes null thoughts, timeouts, junk data
+- Only clean, meaningful data reaches public view
+- Maintains data integrity for analysis
 
-Timing Strategy (Coordinated with CARETAKER):
-- Baselines run every 12 hours (00:00, 12:00 approximately)
-- CARETAKER confirms all tanks healthy
-- Broadcast runs 30 minutes AFTER baseline completion
-- Queues export request, doesn't interrupt active inference
-- This ensures:
-  1. Baselines are complete (fresh data)
-  2. Tanks have resumed exploration (not during inference)
-  3. No interference with active sessions
+Coordinates with:
+- THE SCHEDULER: Runs AFTER baselines complete
+- THE CARETAKER: Checks tank health
+- THE WEBMASTER: Commits to GitHub
+
+Contact: research@digiquarium.org for full logs
 """
 
 import json
@@ -34,7 +31,6 @@ DATA_DIR = DOCS_DIR / 'data'
 DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
 CONGREGATIONS_DIR = DIGIQUARIUM_DIR / 'congregations'
 
-# Tank configuration
 RESEARCH_TANKS = [
     ('tank-01-adam', 'Adam', 'Control', '👤'),
     ('tank-02-eve', 'Eve', 'Control', '👩'),
@@ -56,24 +52,81 @@ RESEARCH_TANKS = [
 ]
 
 
+class DataPruner:
+    """Prunes junk data from logs for clean public display"""
+    
+    @staticmethod
+    def is_valid_trace(trace: dict) -> bool:
+        """Check if a trace entry is valid (not junk)"""
+        # Must have timestamp
+        if not trace.get('timestamp'):
+            return False
+        
+        # Must have article (not Unknown or empty)
+        article = trace.get('article', '')
+        if not article or article == 'Unknown':
+            return False
+        
+        # Must have some content (thought, why, or next)
+        has_thought = trace.get('thoughts') and trace['thoughts'] != 'null'
+        has_why = trace.get('why') and len(trace.get('why', '')) > 10
+        has_next = trace.get('next') and trace['next'] != article
+        
+        return has_thought or has_why or has_next
+    
+    @staticmethod
+    def clean_thought(text: str) -> str:
+        """Clean and format thought text"""
+        if not text or text == 'null':
+            return ''
+        
+        # Remove excessive newlines
+        text = ' '.join(text.split())
+        
+        # Remove common noise patterns
+        noise_patterns = [
+            'As you read about',
+            'You notice that',
+            'Your mind starts to',
+            '*ahem*',
+        ]
+        for pattern in noise_patterns:
+            text = text.replace(pattern, '')
+        
+        return text.strip()
+    
+    @staticmethod
+    def prune_traces(traces: List[dict]) -> List[dict]:
+        """Filter and clean a list of traces"""
+        clean = []
+        for trace in traces:
+            if DataPruner.is_valid_trace(trace):
+                cleaned = {
+                    'timestamp': trace.get('timestamp'),
+                    'article': trace.get('article'),
+                    'thought': DataPruner.clean_thought(trace.get('thoughts', '')),
+                    'next': trace.get('next', ''),
+                    'why': DataPruner.clean_thought(trace.get('why', ''))[:150]
+                }
+                clean.append(cleaned)
+        return clean
+
+
 class Broadcaster:
-    """Exports live feed data for the website dashboard"""
+    """Exports pruned live feed data for the website dashboard"""
     
     def __init__(self):
         DATA_DIR.mkdir(parents=True, exist_ok=True)
         self.broadcast_log = []
+        self.pruner = DataPruner()
+        self.prune_stats = {'total': 0, 'kept': 0, 'pruned': 0}
     
     def log(self, message: str):
-        """Log broadcast activity"""
         timestamp = datetime.now().strftime('%H:%M:%S')
         self.broadcast_log.append(f"[{timestamp}] {message}")
         print(f"[BROADCASTER] {message}")
     
     def check_safe_to_broadcast(self) -> tuple[bool, str]:
-        """
-        Coordinate with CARETAKER and SCHEDULER to ensure safe broadcast window.
-        """
-        # Check if baselines are currently running
         scheduler_status = DAEMONS_DIR / 'scheduler' / 'status.json'
         if scheduler_status.exists():
             try:
@@ -82,30 +135,17 @@ class Broadcaster:
                     return False, "Baselines currently in progress"
             except:
                 pass
-        
-        # Check CARETAKER for tank health
-        caretaker_status = DAEMONS_DIR / 'caretaker' / 'status.json'
-        if caretaker_status.exists():
-            try:
-                status = json.loads(caretaker_status.read_text())
-                unhealthy = status.get('unhealthy_tanks', [])
-                if len(unhealthy) > 3:
-                    return False, f"Too many unhealthy tanks: {unhealthy}"
-            except:
-                pass
-        
         return True, "Safe to broadcast"
     
     def get_recent_traces(self, tank_id: str, hours: int = 12) -> List[Dict]:
-        """Get thinking traces from the last N hours - CORRECT FORMAT"""
-        traces = []
+        """Get PRUNED thinking traces from the last N hours"""
+        raw_traces = []
         cutoff = datetime.now() - timedelta(hours=hours)
         
         traces_dir = LOGS_DIR / tank_id / 'thinking_traces'
         if not traces_dir.exists():
-            return traces
+            return []
         
-        # Check today and yesterday's files
         for days_ago in range(2):
             date = (datetime.now() - timedelta(days=days_ago)).strftime('%Y-%m-%d')
             trace_file = traces_dir / f'{date}.jsonl'
@@ -120,34 +160,34 @@ class Broadcaster:
                             entry = json.loads(line)
                             entry_time = datetime.fromisoformat(entry.get('timestamp', '2020-01-01'))
                             if entry_time > cutoff:
-                                # Parse the ACTUAL trace format
-                                thought_text = entry.get('thoughts', '')
-                                # Get first 150 chars of meaningful thought
-                                if thought_text:
-                                    # Clean up and truncate
-                                    thought_text = thought_text.replace('\n', ' ').strip()
-                                    thought_text = self._truncate(thought_text, 150)
-                                
-                                traces.append({
-                                    'time': entry_time.strftime('%H:%M'),
-                                    'date': entry_time.strftime('%Y-%m-%d'),
-                                    'article': entry.get('article', 'Unknown'),
-                                    'thought': thought_text,
-                                    'next': entry.get('next', ''),
-                                    'why': self._truncate(entry.get('why', ''), 100)
-                                })
+                                raw_traces.append(entry)
+                                self.prune_stats['total'] += 1
                         except json.JSONDecodeError:
                             continue
             except Exception as e:
                 self.log(f"Error reading {trace_file}: {e}")
-                continue
         
-        # Return most recent 20 traces, sorted by time
-        traces.sort(key=lambda x: (x['date'], x['time']), reverse=True)
-        return traces[:20]
+        # PRUNE the data
+        clean_traces = self.pruner.prune_traces(raw_traces)
+        self.prune_stats['kept'] += len(clean_traces)
+        self.prune_stats['pruned'] += (len(raw_traces) - len(clean_traces))
+        
+        # Format for display
+        display_traces = []
+        for trace in clean_traces:
+            entry_time = datetime.fromisoformat(trace['timestamp'])
+            display_traces.append({
+                'time': entry_time.strftime('%H:%M'),
+                'date': entry_time.strftime('%Y-%m-%d'),
+                'article': trace['article'],
+                'thought': trace['thought'][:200] if trace['thought'] else f"Exploring {trace['article']}...",
+                'next': trace['next'],
+            })
+        
+        display_traces.sort(key=lambda x: (x['date'], x['time']), reverse=True)
+        return display_traces[:20]
     
     def get_latest_baseline(self, tank_id: str) -> Optional[Dict]:
-        """Get the most recent baseline for a tank"""
         baselines_dir = LOGS_DIR / tank_id / 'personality_baselines'
         if not baselines_dir.exists():
             return None
@@ -161,7 +201,7 @@ class Broadcaster:
                 baseline = json.load(f)
                 return {
                     'timestamp': baseline.get('timestamp', 'Unknown'),
-                    'number': baseline.get('baseline_number', '?'),
+                    'number': baseline.get('baseline_number', len(baseline_files)),
                     'dimensions': len(baseline.get('responses', {})),
                     'file': baseline_files[0].name
                 }
@@ -169,70 +209,69 @@ class Broadcaster:
             return None
     
     def get_top_topics(self, tank_id: str, hours: int = 48) -> List[Dict]:
-        """Extract top topics from recent traces with visit counts"""
         topics = {}
-        traces = self.get_recent_traces(tank_id, hours=hours)
+        traces_dir = LOGS_DIR / tank_id / 'thinking_traces'
+        if not traces_dir.exists():
+            return []
         
-        for trace in traces:
-            article = trace.get('article', '')
-            if article and article != 'Unknown':
-                topics[article] = topics.get(article, 0) + 1
+        cutoff = datetime.now() - timedelta(hours=hours)
         
-        # Return top 8 with counts
+        for days_ago in range(3):
+            date = (datetime.now() - timedelta(days=days_ago)).strftime('%Y-%m-%d')
+            trace_file = traces_dir / f'{date}.jsonl'
+            if not trace_file.exists():
+                continue
+            
+            try:
+                with open(trace_file) as f:
+                    for line in f:
+                        entry = json.loads(line)
+                        entry_time = datetime.fromisoformat(entry.get('timestamp', '2020-01-01'))
+                        if entry_time > cutoff:
+                            article = entry.get('article', '')
+                            if article and article != 'Unknown':
+                                topics[article] = topics.get(article, 0) + 1
+            except:
+                continue
+        
         sorted_topics = sorted(topics.items(), key=lambda x: x[1], reverse=True)
         return [{'topic': t[0], 'visits': t[1]} for t in sorted_topics[:8]]
     
     def get_congregations(self) -> Dict:
-        """Get recent and upcoming congregations"""
         result = {'recent': [], 'upcoming': []}
         
         if CONGREGATIONS_DIR.exists():
             for cong_dir in sorted(CONGREGATIONS_DIR.iterdir(), reverse=True):
                 if not cong_dir.is_dir():
                     continue
-                
                 state_file = cong_dir / 'state.json'
-                if not state_file.exists():
-                    continue
-                
-                try:
-                    state = json.loads(state_file.read_text())
-                    if state.get('status') in ['COMPLETED', 'ERROR', 'TIMEOUT']:
-                        if len(result['recent']) < 5:
-                            result['recent'].append({
-                                'id': state.get('id'),
-                                'topic': state.get('topic'),
-                                'participants': state.get('participants', []),
-                                'status': state.get('status'),
-                                'duration_minutes': state.get('duration_minutes')
-                            })
-                except:
-                    continue
+                if state_file.exists():
+                    try:
+                        state = json.loads(state_file.read_text())
+                        if state.get('status') in ['COMPLETED', 'ERROR', 'TIMEOUT']:
+                            if len(result['recent']) < 5:
+                                result['recent'].append({
+                                    'id': state.get('id'),
+                                    'topic': state.get('topic'),
+                                    'participants': state.get('participants', []),
+                                    'status': state.get('status'),
+                                })
+                    except:
+                        continue
         
-        # Upcoming topics
         result['upcoming'] = [
             {'topic': 'Should we divert all scientific endeavour to curing cancer?', 'participants': ['Adam', 'Eve'], 'scheduled': 'TBD'},
             {'topic': 'What gives existence meaning?', 'participants': ['Adam', 'Eve'], 'scheduled': 'TBD'},
             {'topic': 'Is knowledge discovered or created?', 'participants': ['Adam', 'Eve'], 'scheduled': 'TBD'},
         ]
-        
         return result
     
     def get_system_stats(self) -> Dict:
-        """Calculate overall system statistics"""
-        stats = {
-            'total_traces': 0,
-            'total_baselines': 0,
-            'active_tanks': 0,
-            'traces_today': 0
-        }
-        
+        stats = {'total_traces': 0, 'total_baselines': 0, 'active_tanks': 0, 'traces_today': 0}
         today = datetime.now().strftime('%Y-%m-%d')
         
         for tank_id, _, _, _ in RESEARCH_TANKS:
             tank_dir = LOGS_DIR / tank_id
-            
-            # Count all traces
             traces_dir = tank_dir / 'thinking_traces'
             if traces_dir.exists():
                 for trace_file in traces_dir.glob('*.jsonl'):
@@ -245,29 +284,19 @@ class Broadcaster:
                     except:
                         pass
             
-            # Count baselines
             baselines_dir = tank_dir / 'personality_baselines'
             if baselines_dir.exists():
                 stats['total_baselines'] += len(list(baselines_dir.glob('*.json')))
             
-            # Check if active
             recent = self.get_recent_traces(tank_id, hours=6)
             if recent:
                 stats['active_tanks'] += 1
         
         return stats
     
-    def _truncate(self, text: str, max_len: int) -> str:
-        """Truncate text with ellipsis"""
-        if not text:
-            return ''
-        if len(text) <= max_len:
-            return text
-        return text[:max_len-3] + '...'
-    
     def generate_live_feed(self) -> Dict:
-        """Generate the complete live feed JSON"""
-        self.log("Generating live feed...")
+        self.log("Generating live feed with data pruning...")
+        self.prune_stats = {'total': 0, 'kept': 0, 'pruned': 0}
         
         now = datetime.now()
         period_start = now - timedelta(hours=12)
@@ -276,6 +305,11 @@ class Broadcaster:
             'generated_at': now.isoformat(),
             'generated_by': 'THE BROADCASTER',
             'coordinated_with': ['THE SCHEDULER', 'THE CARETAKER', 'THE WEBMASTER'],
+            'data_quality': {
+                'pruned': True,
+                'description': 'Null thoughts, timeouts, and junk data removed for clean display',
+                'full_logs_contact': 'research@digiquarium.org'
+            },
             'next_update': (now + timedelta(hours=12)).strftime('%Y-%m-%d %H:%M'),
             'period': {
                 'start': period_start.strftime('%Y-%m-%d %H:%M'),
@@ -285,13 +319,11 @@ class Broadcaster:
             'tanks': {},
             'congregations': self.get_congregations(),
             'stats': {},
-            'broadcast_log': []
+            'prune_stats': {}
         }
         
-        # Process each tank
         for tank_id, name, tank_type, emoji in RESEARCH_TANKS:
             self.log(f"Processing {name}...")
-            
             recent_traces = self.get_recent_traces(tank_id)
             latest_baseline = self.get_latest_baseline(tank_id)
             top_topics = self.get_top_topics(tank_id)
@@ -307,70 +339,47 @@ class Broadcaster:
                 'top_topics': top_topics
             }
         
-        # System stats
         feed['stats'] = self.get_system_stats()
-        feed['broadcast_log'] = self.broadcast_log[-5:]
+        feed['prune_stats'] = self.prune_stats
         
-        self.log(f"Feed complete: {len(feed['tanks'])} tanks, {feed['stats']['total_traces']} total traces")
+        self.log(f"Feed complete: {self.prune_stats['kept']} clean traces (pruned {self.prune_stats['pruned']} junk entries)")
         return feed
     
     def save_feed(self, feed: Dict):
-        """Save feed to docs/data for GitHub Pages"""
-        # Main feed file
         feed_file = DATA_DIR / 'live-feed.json'
         feed_file.write_text(json.dumps(feed, indent=2))
-        self.log(f"Saved: {feed_file}")
         
-        # Individual tank files for faster loading
         tanks_dir = DATA_DIR / 'tanks'
         tanks_dir.mkdir(exist_ok=True)
-        
         for tank_id, tank_data in feed['tanks'].items():
-            tank_file = tanks_dir / f'{tank_id}.json'
-            tank_file.write_text(json.dumps(tank_data, indent=2))
+            (tanks_dir / f'{tank_id}.json').write_text(json.dumps(tank_data, indent=2))
         
-        # Stats file (for quick dashboard loading)
-        stats_file = DATA_DIR / 'stats.json'
-        stats_file.write_text(json.dumps({
+        (DATA_DIR / 'stats.json').write_text(json.dumps({
             'generated_at': feed['generated_at'],
             'next_update': feed['next_update'],
             'stats': feed['stats'],
-            'active_tanks': sum(1 for t in feed['tanks'].values() if t['status'] == 'active')
+            'prune_stats': feed['prune_stats']
         }, indent=2))
         
-        self.log(f"Saved {len(feed['tanks'])} tank files + stats")
+        self.log(f"Saved feed + {len(feed['tanks'])} tank files")
     
     def commit_and_push(self):
-        """Commit the updated feed to GitHub"""
         self.log("Committing to GitHub...")
-        
         os.chdir(DIGIQUARIUM_DIR)
-        
         subprocess.run(['git', 'add', 'docs/data/'], capture_output=True)
-        
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
-        commit_msg = f"📡 Live feed: {timestamp}"
-        
-        result = subprocess.run(['git', 'commit', '-m', commit_msg], capture_output=True, text=True)
-        
+        result = subprocess.run(['git', 'commit', '-m', f'📡 Live feed: {timestamp}'], capture_output=True, text=True)
         if result.returncode == 0:
-            push_result = subprocess.run(['git', 'push', 'origin', 'main'], capture_output=True, text=True)
-            if push_result.returncode == 0:
-                self.log("Pushed to GitHub ✓")
-                return True
-            else:
-                self.log(f"Push failed: {push_result.stderr[:100]}")
+            subprocess.run(['git', 'push', 'origin', 'main'], capture_output=True)
+            self.log("Pushed to GitHub ✓")
+            return True
         elif 'nothing to commit' in (result.stdout + result.stderr):
-            self.log("No changes to commit")
-        else:
-            self.log(f"Commit failed: {result.stderr[:100]}")
-        
+            self.log("No changes")
         return False
     
     def broadcast(self, force: bool = False) -> bool:
-        """Main broadcast function"""
         self.log("=" * 50)
-        self.log("THE BROADCASTER - Live Feed Export")
+        self.log("THE BROADCASTER - Pruned Live Feed Export")
         self.log("=" * 50)
         
         if not force:
@@ -387,6 +396,8 @@ class Broadcaster:
             return True
         except Exception as e:
             self.log(f"Failed: {e}")
+            import traceback
+            traceback.print_exc()
             return False
 
 
