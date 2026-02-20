@@ -1,84 +1,7 @@
 {
   "tank_id": "tank-03-cain",
-  "updated": "2026-02-20T17:59:37.562171",
+  "updated": "2026-02-20T18:27:58.638722",
   "entries": [
-    {
-      "timestamp": "2026-02-20T15:49:01.694521",
-      "tank": "tank-03-cain",
-      "article": "Roman Empire",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Ancient Greek language",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:49:04.730432",
-      "tank": "tank-03-cain",
-      "article": "Ancient Greek language",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Language family",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:49:07.797322",
-      "tank": "tank-03-cain",
-      "article": "Language family",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Latin language",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:49:10.954757",
-      "tank": "tank-03-cain",
-      "article": "Latin language",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Roman Kingdom",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:49:14.115802",
-      "tank": "tank-03-cain",
-      "article": "Roman Kingdom",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Tullus Hostilius",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:49:17.222353",
-      "tank": "tank-03-cain",
-      "article": "Tullus Hostilius",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Romulus",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
-    {
-      "timestamp": "2026-02-20T15:49:20.519359",
-      "tank": "tank-03-cain",
-      "article": "Romulus",
-      "original_thoughts": null,
-      "thoughts": null,
-      "next_article": "Roman mythology",
-      "reasoning": "",
-      "language": "English",
-      "translated": false
-    },
     {
       "timestamp": "2026-02-20T15:49:23.690330",
       "tank": "tank-03-cain",
@@ -548,6 +471,83 @@
       "original_thoughts": null,
       "thoughts": null,
       "next_article": "States of matter",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T18:03:37.685429",
+      "tank": "tank-03-cain",
+      "article": "States of matter",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Chemistry",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T18:07:41.165262",
+      "tank": "tank-03-cain",
+      "article": "Chemistry",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Molecule",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T18:11:44.525103",
+      "tank": "tank-03-cain",
+      "article": "Molecule",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Atom",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T18:15:48.040649",
+      "tank": "tank-03-cain",
+      "article": "Atom",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Atomic nucleus",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T18:19:51.375970",
+      "tank": "tank-03-cain",
+      "article": "Atomic nucleus",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Nucleon",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T18:23:54.678317",
+      "tank": "tank-03-cain",
+      "article": "Nucleon",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Chemistry",
+      "reasoning": "",
+      "language": "English",
+      "translated": false
+    },
+    {
+      "timestamp": "2026-02-20T18:27:58.140892",
+      "tank": "tank-03-cain",
+      "article": "Chemistry",
+      "original_thoughts": null,
+      "thoughts": null,
+      "next_article": "Atom",
       "reasoning": "",
       "language": "English",
       "translated": false

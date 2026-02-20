@@ -32,7 +32,7 @@ The rapid advancement of large language models has prompted renewed interest in 
 
 - A reproducible framework for studying AI personality development
 - Methodology for baseline personality assessment and longitudinal tracking
-- Dataset of 5,690 exploration traces across 17 specimens
+- Dataset of 6,804 exploration traces across 17 specimens
 - Mental state classification system for AI psychological assessment
 
 ---
@@ -89,36 +89,36 @@ As of 2026-02-20:
 | Metric | Value |
 |--------|-------|
 | Total Specimens | 17 |
-| Total Articles Read | 5,690 |
-| Total Discoveries | 2,262 |
-| Total Baselines | 229 |
+| Total Articles Read | 6,804 |
+| Total Discoveries | 2,728 |
+| Total Baselines | 306 |
 | Languages | 5 |
 
 ### 3.2 Mental State Distribution
 
 | State | Count | Percentage |
 |-------|-------|------------|
-| Healthy | 2 | 25.0% |
-| Complex | 4 | 50.0% |
-| Concerning | 2 | 25.0% |
+| Healthy | 1 | 33.3% |
+| Complex | 2 | 66.7% |
+| Concerning | 0 | 0.0% |
 
 ### 3.3 Exploration by Language
 
 | Language | Tanks | Articles | Avg/Tank |
 |----------|-------|----------|----------|
-| Chinese | 2 | 94 | 47 |
-| English | 9 | 4,651 | 517 |
-| German | 2 | 774 | 387 |
-| Japanese | 2 | 67 | 34 |
-| Spanish | 2 | 104 | 52 |
+| Chinese | 2 | 148 | 74 |
+| English | 9 | 5,425 | 603 |
+| German | 2 | 902 | 451 |
+| Japanese | 2 | 126 | 63 |
+| Spanish | 2 | 203 | 102 |
 
 ### 3.4 Exploration by Gender
 
 | Gender | Tanks | Articles | Avg/Tank |
 |--------|-------|----------|----------|
-| Female | 6 | 1,091 | 182 |
-| Genderless | 5 | 1,349 | 270 |
-| Male | 6 | 3,250 | 542 |
+| Female | 6 | 1,379 | 230 |
+| Genderless | 5 | 1,878 | 376 |
+| Male | 6 | 3,547 | 591 |
 
 ### 3.5 Preliminary Observations
 

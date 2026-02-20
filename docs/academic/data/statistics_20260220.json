@@ -1,227 +1,226 @@
 {
-  "collection_date": "2026-02-20T12:07:45.465782",
+  "collection_date": "2026-02-20T18:07:47.075191",
   "tanks": {
     "tank-01-adam": {
       "language": "english",
       "type": "control",
       "gender": "male",
-      "articles": 2703,
-      "discoveries": 1050,
-      "baselines": 22,
+      "articles": 2773,
+      "discoveries": 1084,
+      "baselines": 27,
       "latest_mental_state": null
     },
     "tank-02-eve": {
       "language": "english",
       "type": "control",
       "gender": "female",
-      "articles": 543,
-      "discoveries": 288,
-      "baselines": 20,
+      "articles": 602,
+      "discoveries": 316,
+      "baselines": 27,
       "latest_mental_state": null
     },
     "tank-03-cain": {
       "language": "english",
       "type": "agent",
       "gender": "genderless",
-      "articles": 238,
-      "discoveries": 84,
-      "baselines": 1,
+      "articles": 363,
+      "discoveries": 136,
+      "baselines": 2,
       "latest_mental_state": "complex"
     },
     "tank-04-abel": {
       "language": "english",
       "type": "agent",
       "gender": "genderless",
-      "articles": 1,
-      "discoveries": 0,
-      "baselines": 1,
+      "articles": 119,
+      "discoveries": 2,
+      "baselines": 3,
       "latest_mental_state": "complex"
     },
     "tank-05-juan": {
       "language": "spanish",
       "type": "language",
       "gender": "male",
-      "articles": 48,
-      "discoveries": 38,
-      "baselines": 17,
+      "articles": 99,
+      "discoveries": 69,
+      "baselines": 23,
       "latest_mental_state": null
     },
     "tank-06-juanita": {
       "language": "spanish",
       "type": "language",
       "gender": "female",
-      "articles": 56,
-      "discoveries": 52,
-      "baselines": 18,
+      "articles": 104,
+      "discoveries": 80,
+      "baselines": 23,
       "latest_mental_state": null
     },
     "tank-07-klaus": {
       "language": "german",
       "type": "language",
       "gender": "male",
-      "articles": 390,
-      "discoveries": 132,
-      "baselines": 16,
-      "latest_mental_state": "healthy"
+      "articles": 448,
+      "discoveries": 159,
+      "baselines": 19,
+      "latest_mental_state": null
     },
     "tank-08-genevieve": {
       "language": "german",
       "type": "language",
       "gender": "female",
-      "articles": 384,
-      "discoveries": 132,
-      "baselines": 18,
+      "articles": 454,
+      "discoveries": 174,
+      "baselines": 21,
       "latest_mental_state": null
     },
     "tank-09-wei": {
       "language": "chinese",
       "type": "language",
       "gender": "male",
-      "articles": 47,
-      "discoveries": 40,
-      "baselines": 19,
+      "articles": 78,
+      "discoveries": 59,
+      "baselines": 26,
       "latest_mental_state": null
     },
     "tank-10-mei": {
       "language": "chinese",
       "type": "language",
       "gender": "female",
-      "articles": 47,
-      "discoveries": 40,
-      "baselines": 19,
+      "articles": 70,
+      "discoveries": 52,
+      "baselines": 24,
       "latest_mental_state": null
     },
     "tank-11-haruki": {
       "language": "japanese",
       "type": "language",
       "gender": "male",
-      "articles": 34,
-      "discoveries": 25,
-      "baselines": 18,
+      "articles": 63,
+      "discoveries": 44,
+      "baselines": 24,
       "latest_mental_state": null
     },
     "tank-12-sakura": {
       "language": "japanese",
       "type": "language",
       "gender": "female",
-      "articles": 33,
-      "discoveries": 25,
-      "baselines": 18,
+      "articles": 63,
+      "discoveries": 44,
+      "baselines": 24,
       "latest_mental_state": null
     },
     "tank-13-victor": {
       "language": "english",
       "type": "visual",
       "gender": "male",
-      "articles": 28,
-      "discoveries": 20,
-      "baselines": 19,
-      "latest_mental_state": "concerning"
+      "articles": 86,
+      "discoveries": 48,
+      "baselines": 25,
+      "latest_mental_state": null
     },
     "tank-14-iris": {
       "language": "english",
       "type": "visual",
       "gender": "female",
-      "articles": 28,
-      "discoveries": 21,
-      "baselines": 18,
-      "latest_mental_state": "concerning"
+      "articles": 86,
+      "discoveries": 49,
+      "baselines": 24,
+      "latest_mental_state": null
     },
     "tank-15-observer": {
       "language": "english",
       "type": "special",
       "gender": "genderless",
-      "articles": 539,
-      "discoveries": 145,
-      "baselines": 2,
-      "latest_mental_state": "complex"
+      "articles": 614,
+      "discoveries": 176,
+      "baselines": 6,
+      "latest_mental_state": null
     },
     "tank-16-seeker": {
       "language": "english",
       "type": "special",
       "gender": "genderless",
-      "articles": 556,
-      "discoveries": 155,
-      "baselines": 2,
-      "latest_mental_state": "complex"
+      "articles": 631,
+      "discoveries": 187,
+      "baselines": 6,
+      "latest_mental_state": null
     },
     "tank-17-seth": {
       "language": "english",
       "type": "agent",
       "gender": "genderless",
-      "articles": 15,
-      "discoveries": 15,
-      "baselines": 1,
+      "articles": 151,
+      "discoveries": 49,
+      "baselines": 2,
       "latest_mental_state": "healthy"
     }
   },
   "totals": {
-    "articles_read": 5690,
-    "discoveries": 2262,
-    "baselines": 229,
+    "articles_read": 6804,
+    "discoveries": 2728,
+    "baselines": 306,
     "exploration_hours": 0
   },
   "by_language": {
     "english": {
-      "articles": 4651,
+      "articles": 5425,
       "tanks": 9
     },
     "spanish": {
-      "articles": 104,
+      "articles": 203,
       "tanks": 2
     },
     "german": {
-      "articles": 774,
+      "articles": 902,
       "tanks": 2
     },
     "chinese": {
-      "articles": 94,
+      "articles": 148,
       "tanks": 2
     },
     "japanese": {
-      "articles": 67,
+      "articles": 126,
       "tanks": 2
     }
   },
   "by_gender": {
     "male": {
-      "articles": 3250,
+      "articles": 3547,
       "tanks": 6
     },
     "female": {
-      "articles": 1091,
+      "articles": 1379,
       "tanks": 6
     },
     "genderless": {
-      "articles": 1349,
+      "articles": 1878,
       "tanks": 5
     }
   },
   "by_type": {
     "control": {
-      "articles": 3246,
+      "articles": 3375,
       "tanks": 2
     },
     "agent": {
-      "articles": 254,
+      "articles": 633,
       "tanks": 3
     },
     "language": {
-      "articles": 1039,
+      "articles": 1379,
       "tanks": 8
     },
     "visual": {
-      "articles": 56,
+      "articles": 172,
       "tanks": 2
     },
     "special": {
-      "articles": 1095,
+      "articles": 1245,
       "tanks": 2
     }
   },
   "mental_states": {
-    "complex": 4,
-    "healthy": 2,
-    "concerning": 2
+    "complex": 2,
+    "healthy": 1
   }
 }
