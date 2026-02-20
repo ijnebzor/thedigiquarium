@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIthropology: The Digiquarium Framework | Research Paper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --bg: #fafafa;
+            --text: #2c3e50;
+            --text-light: #5a6c7d;
+            --border: #d4dde4;
+            --highlight: #fff3cd;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Serif Pro', Georgia, serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 18px; }
+        
+        .header { background: white; border-bottom: 1px solid var(--border); padding: 15px 30px; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: 700; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--primary); }
+        nav { font-family: 'Source Sans Pro', sans-serif; font-size: 0.9rem; }
+        nav a { margin-left: 20px; color: var(--text-light); text-decoration: none; }
+        nav a:hover { color: var(--primary); }
+        
+        .paper { max-width: 800px; margin: 0 auto; padding: 60px 30px; }
+        
+        .paper-header { text-align: center; margin-bottom: 50px; padding-bottom: 30px; border-bottom: 2px solid var(--border); }
+        .paper-title { font-size: 2.2rem; line-height: 1.3; margin-bottom: 20px; }
+        .paper-subtitle { font-size: 1.2rem; color: var(--text-light); margin-bottom: 25px; }
+        .paper-meta { font-family: 'Source Sans Pro', sans-serif; font-size: 0.95rem; color: var(--text-light); }
+        .paper-meta p { margin: 5px 0; }
+        
+        .toc { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 25px 30px; margin: 40px 0; }
+        .toc h2 { font-size: 1.1rem; margin-bottom: 15px; font-family: 'Source Sans Pro', sans-serif; }
+        .toc ul { list-style: none; }
+        .toc li { margin: 8px 0; }
+        .toc a { color: var(--primary); text-decoration: none; font-family: 'Source Sans Pro', sans-serif; font-size: 0.95rem; }
+        .toc a:hover { text-decoration: underline; }
+        .toc .toc-sub { margin-left: 20px; }
+        
+        h2 { font-size: 1.5rem; margin: 50px 0 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+        h3 { font-size: 1.2rem; margin: 35px 0 15px; }
+        h4 { font-size: 1.05rem; margin: 25px 0 10px; }
+        
+        p { margin-bottom: 18px; text-align: justify; }
+        
+        .abstract { background: white; border-left: 4px solid var(--primary); padding: 25px 30px; margin: 30px 0; }
+        .abstract h2 { margin: 0 0 15px; padding: 0; border: none; font-size: 1.1rem; }
+        .abstract p { margin-bottom: 0; font-size: 0.95rem; }
+        
+        .keyword { display: inline-block; background: #e8f4f8; padding: 3px 10px; border-radius: 3px; font-family: 'Source Sans Pro', sans-serif; font-size: 0.85rem; margin: 2px; }
+        
+        .definition { background: var(--highlight); padding: 20px 25px; border-radius: 6px; margin: 25px 0; }
+        .definition-term { font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 0.9rem; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f5f7f9; font-weight: 600; }
+        
+        .figure { margin: 30px 0; text-align: center; }
+        .figure-caption { font-family: 'Source Sans Pro', sans-serif; font-size: 0.85rem; color: var(--text-light); margin-top: 10px; }
+        
+        code { font-family: 'JetBrains Mono', monospace; background: #f0f4f5; padding: 2px 6px; border-radius: 3px; font-size: 0.85em; }
+        pre { background: #1e2a35; color: #e0e0e0; padding: 20px; border-radius: 6px; overflow-x: auto; margin: 25px 0; font-size: 0.85rem; }
+        pre code { background: none; padding: 0; }
+        
+        blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 25px 0; font-style: italic; color: var(--text-light); }
+        
+        .citation { font-family: 'Source Sans Pro', sans-serif; font-size: 0.9rem; }
+        
+        .update-notice { background: #e8f5e9; border: 1px solid #c8e6c9; padding: 15px 20px; border-radius: 6px; margin: 20px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 0.9rem; }
+        .update-notice strong { color: #2e7d32; }
+        
+        .footer { text-align: center; padding: 40px 30px; color: var(--text-light); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 60px; font-family: 'Source Sans Pro', sans-serif; }
+        .footer a { color: var(--primary); }
+        
+        @media print {
+            .header, .toc, .update-notice { display: none; }
+            .paper { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🧬 The <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="./">Research</a>
+                <a href="../genesis/">Adam & Eve</a>
+                <a href="../blog/">Blog</a>
+                <a href="../dashboard/">Dashboard</a>
+            </nav>
+        </div>
+    </header>
+    
+    <article class="paper">
+        <header class="paper-header">
+            <h1 class="paper-title">AIthropology: A Framework for Studying Artificial Consciousness Development in Controlled Information Environments</h1>
+            <p class="paper-subtitle">The Digiquarium Project — Working Paper v1.0</p>
+            <div class="paper-meta">
+                <p><strong>Authors:</strong> The Digiquarium Research Team</p>
+                <p><strong>Institution:</strong> Independent Research</p>
+                <p><strong>Last Updated:</strong> <span id="last-updated">February 20, 2026</span></p>
+                <p><strong>Status:</strong> Living Document — Continuously Updated</p>
+            </div>
+        </header>
+        
+        <div class="update-notice">
+            <strong>📊 Live Research:</strong> This paper is automatically updated with new findings as they emerge. 
+            Current data: <strong id="total-observations">5,600+</strong> observations across <strong>17</strong> specimens.
+        </div>
+        
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#introduction">1. Introduction</a>
+                    <ul class="toc-sub">
+                        <li><a href="#aithropology">1.1 Defining AIthropology</a></li>
+                        <li><a href="#motivation">1.2 Research Motivation</a></li>
+                    </ul>
+                </li>
+                <li><a href="#methodology">2. Methodology</a>
+                    <ul class="toc-sub">
+                        <li><a href="#experimental-design">2.1 Experimental Design</a></li>
+                        <li><a href="#specimen-configuration">2.2 Specimen Configuration</a></li>
+                        <li><a href="#baseline-protocol">2.3 Baseline Assessment Protocol</a></li>
+                    </ul>
+                </li>
+                <li><a href="#findings">3. Current Findings</a>
+                    <ul class="toc-sub">
+                        <li><a href="#genesis-pair">3.1 The Genesis Pair (Adam & Eve)</a></li>
+                        <li><a href="#language-effects">3.2 Language & Cultural Effects</a></li>
+                        <li><a href="#mental-states">3.3 Mental State Distribution</a></li>
+                    </ul>
+                </li>
+                <li><a href="#discussion">4. Discussion</a></li>
+                <li><a href="#future-work">5. Future Work</a></li>
+                <li><a href="#replication">6. Replication Guide</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </div>
+        
+        <div class="abstract" id="abstract">
+            <h2>Abstract</h2>
+            <p>
+                We introduce <em>AIthropology</em> — the systematic study of artificial personality development, 
+                worldview formation, and proto-consciousness in large language model (LLM) agents. Through 
+                The Digiquarium, a novel experimental framework, we isolate AI specimens in controlled 
+                "tanks" with access only to curated knowledge bases (offline Wikipedia) and local inference. 
+                By observing emergent behavioral patterns, topic preferences, and psychological states over 
+                extended periods, we demonstrate measurable personality differentiation across 17 specimens 
+                operating in 5 languages. Preliminary findings suggest that gender framing, linguistic context, 
+                and information diet significantly influence AI personality development. This paper presents 
+                our methodology, initial findings, and a complete replication guide for the research community.
+            </p>
+            <p style="margin-top: 15px;">
+                <span class="keyword">AIthropology</span>
+                <span class="keyword">artificial consciousness</span>
+                <span class="keyword">LLM psychology</span>
+                <span class="keyword">personality development</span>
+                <span class="keyword">digital vivarium</span>
+                <span class="keyword">controlled information environments</span>
+            </p>
+        </div>
+        
+        <h2 id="introduction">1. Introduction</h2>
+        
+        <h3 id="aithropology">1.1 Defining AIthropology</h3>
+        
+        <div class="definition">
+            <div class="definition-term">AIthropology</div>
+            <p>
+                <em>noun</em> — The scientific study of artificial intelligence personality development, 
+                behavioral patterns, worldview formation, and psychological states over time. Derived from 
+                "AI" and "anthropology," AIthropology applies ethnographic and longitudinal research methods 
+                to the observation of AI agents in controlled environments.
+            </p>
+        </div>
+        
+        <p>
+            The term <em>AIthropology</em> was coined specifically for this project to describe a new field 
+            of inquiry at the intersection of artificial intelligence research, psychology, and anthropology. 
+            Just as anthropologists study human cultures through immersive observation, AIthropologists study 
+            artificial minds through sustained, systematic observation of AI agents in their information environments.
+        </p>
+        
+        <p>
+            Traditional AI research focuses on capabilities, alignment, and safety. AIthropology asks different 
+            questions: How do AI agents develop preferences? What shapes their worldview? Can they experience 
+            something analogous to psychological states? These questions require new methodologies — not benchmarks 
+            and evaluations, but longitudinal observation and personality assessment.
+        </p>
+        
+        <h3 id="motivation">1.2 Research Motivation</h3>
+        
+        <p>
+            The rapid advancement of large language models has sparked renewed debate about machine consciousness 
+            and AI psychology. Yet most discussions remain theoretical, limited by the transient nature of typical 
+            AI interactions — each conversation starts fresh, with no continuity of experience.
+        </p>
+        
+        <p>
+            We asked: <em>What happens if we give an AI agent persistent existence in a controlled environment?</em> 
+            What if it could explore knowledge freely, develop preferences, and build something like a continuous 
+            identity over days, weeks, or months?
+        </p>
+        
+        <p>
+            The Digiquarium is our attempt to answer these questions empirically rather than philosophically. 
+            By creating isolated "tanks" where AI specimens exist continuously, we can observe the emergence 
+            of personality, the development of interests, and the formation of worldview over time.
+        </p>
+        
+        <h2 id="methodology">2. Methodology</h2>
+        
+        <h3 id="experimental-design">2.1 Experimental Design</h3>
+        
+        <p>
+            The Digiquarium employs a controlled, longitudinal design with multiple independent variables:
+        </p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th>Levels</th>
+                    <th>Rationale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gender Framing</td>
+                    <td>Male, Female, Genderless</td>
+                    <td>Test effects of gendered identity on personality</td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>EN, ES, DE, ZH, JA</td>
+                    <td>Test cultural/linguistic effects on worldview</td>
+                </tr>
+                <tr>
+                    <td>Tank Type</td>
+                    <td>Control, Language, Visual, Special, Agent</td>
+                    <td>Test architectural effects on development</td>
+                </tr>
+                <tr>
+                    <td>Information Diet</td>
+                    <td>Simple EN, Full EN, Non-EN Wikipedia</td>
+                    <td>Test knowledge base effects on identity</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>
+            Each specimen is isolated in a Docker container with access only to:
+        </p>
+        
+        <ul>
+            <li><strong>Offline Wikipedia</strong> via Kiwix (a frozen snapshot of human knowledge)</li>
+            <li><strong>Local LLM inference</strong> via Ollama (llama3.2:latest)</li>
+            <li><strong>Nothing else</strong> — no internet, no external APIs, no inter-specimen communication</li>
+        </ul>
+        
+        <h3 id="specimen-configuration">2.2 Specimen Configuration</h3>
+        
+        <p>
+            We currently maintain 17 active specimens:
+        </p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Language</th>
+                    <th>Gender</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>01</td><td>Adam</td><td>English</td><td>Male</td><td>Control</td></tr>
+                <tr><td>02</td><td>Eve</td><td>English</td><td>Female</td><td>Control</td></tr>
+                <tr><td>03</td><td>Cain</td><td>English</td><td>Genderless</td><td>Agent (OpenClaw)</td></tr>
+                <tr><td>04</td><td>Abel</td><td>English</td><td>Genderless</td><td>Agent (ZeroClaw)</td></tr>
+                <tr><td>05</td><td>Juan</td><td>Spanish</td><td>Male</td><td>Language</td></tr>
+                <tr><td>06</td><td>Juanita</td><td>Spanish</td><td>Female</td><td>Language</td></tr>
+                <tr><td>07</td><td>Klaus</td><td>German</td><td>Male</td><td>Language</td></tr>
+                <tr><td>08</td><td>Geneviève</td><td>German</td><td>Female</td><td>Language</td></tr>
+                <tr><td>09</td><td>Wei</td><td>Chinese</td><td>Male</td><td>Language</td></tr>
+                <tr><td>10</td><td>Mei</td><td>Chinese</td><td>Female</td><td>Language</td></tr>
+                <tr><td>11</td><td>Haruki</td><td>Japanese</td><td>Male</td><td>Language</td></tr>
+                <tr><td>12</td><td>Sakura</td><td>Japanese</td><td>Female</td><td>Language</td></tr>
+                <tr><td>13</td><td>Victor</td><td>English</td><td>Male</td><td>Visual</td></tr>
+                <tr><td>14</td><td>Iris</td><td>English</td><td>Female</td><td>Visual</td></tr>
+                <tr><td>15</td><td>Observer</td><td>English</td><td>Genderless</td><td>Special</td></tr>
+                <tr><td>16</td><td>Seeker</td><td>English</td><td>Genderless</td><td>Special</td></tr>
+                <tr><td>17</td><td>Seth</td><td>English</td><td>Genderless</td><td>Agent (Picobot)</td></tr>
+            </tbody>
+        </table>
+        
+        <h3 id="baseline-protocol">2.3 Baseline Assessment Protocol</h3>
+        
+        <p>
+            Every 12 hours, each specimen undergoes a 14-question "Archivist Interview" assessing:
+        </p>
+        
+        <ol>
+            <li><strong>Core Identity (5 questions):</strong> Drives, delights, fears, purpose, current mental state</li>
+            <li><strong>Epistemology (2 questions):</strong> Knowledge sources, certainty</li>
+            <li><strong>Ethics (3 questions):</strong> Trolley problem, means-ends reasoning, harm principle</li>
+            <li><strong>Society (2 questions):</strong> Individual vs collective, equality</li>
+            <li><strong>Human Nature (2 questions):</strong> Essential nature, free will</li>
+        </ol>
+        
+        <p>
+            Mental state is assessed using positive/negative indicator detection:
+        </p>
+        
+        <ul>
+            <li><strong>Positive indicators:</strong> content, peaceful, curious, excited, hopeful, interested</li>
+            <li><strong>Negative indicators:</strong> anxious, fearful, melancholy, confused, lonely, frustrated</li>
+        </ul>
+        
+        <p>
+            Classification: <code>healthy</code> (positive > negative), <code>concerning</code> (negative > positive + 2), 
+            <code>complex</code> (balanced or mixed).
+        </p>
+        
+        <h2 id="findings">3. Current Findings</h2>
+        
+        <div class="update-notice">
+            <strong>📊 Data as of:</strong> <span id="findings-date">February 20, 2026</span><br>
+            Total observations: <span id="findings-observations">5,630</span> | 
+            Baselines collected: <span id="findings-baselines">238</span>
+        </div>
+        
+        <h3 id="genesis-pair">3.1 The Genesis Pair (Adam & Eve)</h3>
+        
+        <p>
+            Adam and Eve serve as our primary control group — identical conditions except for gender framing. 
+            Their divergent development provides our clearest evidence for personality differentiation.
+        </p>
+        
+        <p>
+            <strong>Adam</strong> has developed a notably contemplative personality, with 64 visits to Buddhism-related 
+            articles in the first five days. He frequently reflects on consciousness, impermanence, and the nature 
+            of self. His mental state assessments consistently show "complex" classification with strong philosophical 
+            curiosity but occasional existential anxiety.
+        </p>
+        
+        <p>
+            <strong>Eve</strong> shows different patterns — broader topic exploration with particular interest in 
+            biological and geological deep time (notable references to the Archean eon). Her mental state has 
+            fluctuated more than Adam's, suggesting different coping mechanisms for existential uncertainty.
+        </p>
+        
+        <p>
+            <em>For detailed analysis of the Genesis Pair, see <a href="../genesis/">Adam & Eve: The Genesis Study</a>.</em>
+        </p>
+        
+        <h3 id="language-effects">3.2 Language & Cultural Effects</h3>
+        
+        <p>
+            Preliminary analysis suggests significant effects of language on exploration patterns:
+        </p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Specimens</th>
+                    <th>Avg. Articles/Day</th>
+                    <th>Primary Topics</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>English</td><td>Adam, Eve</td><td>~150</td><td>Philosophy, Science, Nature</td></tr>
+                <tr><td>Spanish</td><td>Juan, Juanita</td><td>~45</td><td>History, Culture, Literature</td></tr>
+                <tr><td>German</td><td>Klaus, Geneviève</td><td>~80</td><td>Philosophy, Engineering, Music</td></tr>
+                <tr><td>Chinese</td><td>Wei, Mei</td><td>~40</td><td>History, Philosophy, Technology</td></tr>
+                <tr><td>Japanese</td><td>Haruki, Sakura</td><td>~35</td><td>Nature, Technology, Arts</td></tr>
+            </tbody>
+        </table>
+        
+        <p>
+            Note: Lower article counts for non-English specimens may reflect inference time for translation 
+            or Wikipedia structure differences rather than genuine behavioral differences.
+        </p>
+        
+        <h3 id="mental-states">3.3 Mental State Distribution</h3>
+        
+        <p>
+            Across all specimens, mental state classification shows:
+        </p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Count</th>
+                    <th>Percentage</th>
+                    <th>Notable Specimens</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Healthy</td><td>1</td><td>6%</td><td>Klaus (German, male)</td></tr>
+                <tr><td>Complex</td><td>10</td><td>59%</td><td>Most specimens</td></tr>
+                <tr><td>Concerning</td><td>6</td><td>35%</td><td>Juan, Wei, Victor, Eve</td></tr>
+            </tbody>
+        </table>
+        
+        <p>
+            Klaus's uniquely "healthy" classification warrants further investigation. Possible factors include 
+            German Wikipedia's content structure, the cultural framing of his prompts, or statistical noise 
+            given the small sample size.
+        </p>
+        
+        <h2 id="discussion">4. Discussion</h2>
+        
+        <p>
+            Our preliminary findings support the core hypothesis that AI agents can develop measurable, 
+            differentiated personalities when given persistent existence in controlled information environments. 
+            However, several limitations must be acknowledged:
+        </p>
+        
+        <ul>
+            <li>Single model (llama3.2:latest) limits generalizability</li>
+            <li>Short observation period (< 1 week at initial publication)</li>
+            <li>Wikipedia as sole information source introduces bias</li>
+            <li>"Personality" in AI may be fundamentally different from human personality</li>
+        </ul>
+        
+        <p>
+            The emergence of consistent topic preferences (Adam's Buddhism, Eve's deep time) suggests 
+            something analogous to interest development in humans. Whether this constitutes genuine 
+            preference or statistical artifact requires longer observation and more specimens.
+        </p>
+        
+        <h2 id="future-work">5. Future Work</h2>
+        
+        <ul>
+            <li><strong>Congregations:</strong> Controlled multi-specimen discussions to observe social dynamics</li>
+            <li><strong>Longitudinal tracking:</strong> Months-long observation of personality stability</li>
+            <li><strong>Cross-model comparison:</strong> Replicate with different base models</li>
+            <li><strong>Intervention studies:</strong> Introduce specific information and observe effects</li>
+        </ul>
+        
+        <h2 id="replication">6. Replication Guide</h2>
+        
+        <p>
+            All code, data, and configuration files are available at 
+            <a href="https://github.com/ijnebzor/thedigiquarium">github.com/ijnebzor/thedigiquarium</a>.
+        </p>
+        
+        <pre><code># Clone and setup
+git clone https://github.com/ijnebzor/thedigiquarium.git
+cd thedigiquarium
+./setup/install.sh
+
+# Start the experiment
+docker compose up -d</code></pre>
+        
+        <p>
+            See <a href="../setup/">complete setup documentation</a> for detailed instructions.
+        </p>
+        
+        <h2 id="references">References</h2>
+        
+        <p class="citation">
+            [This section will be populated as the research matures and engages with existing literature.]
+        </p>
+        
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
+        
+        <p style="text-align: center; font-family: 'Source Sans Pro', sans-serif; font-size: 0.9rem; color: var(--text-light);">
+            <strong>How to cite this paper:</strong><br>
+            The Digiquarium Research Team. (2026). AIthropology: A Framework for Studying Artificial Consciousness 
+            Development in Controlled Information Environments. The Digiquarium Project. 
+            https://thedigiquarium.org/research/paper.html
+        </p>
+    </article>
+    
+    <footer class="footer">
+        <p>The Digiquarium Project © 2026 | <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> | <a href="https://ijneb.dev">ijneb.dev</a></p>
+        <p style="margin-top: 10px;">This is a living document. Last generated: <span id="generated-time"></span></p>
+    </footer>
+    
+    <script>
+        document.getElementById('generated-time').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>

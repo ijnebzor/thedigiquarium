@@ -1,0 +1,193 @@
+{
+  "updated": "2026-02-20T13:59:10.450985",
+  "total_observations": 6170,
+  "total_baselines": 244,
+  "mental_states": {
+    "unknown": 2,
+    "complex": 4,
+    "concerning": 3,
+    "healthy": 2
+  },
+  "by_language": {
+    "English": {
+      "observations": 4996,
+      "tanks": 9
+    },
+    "Spanish": {
+      "observations": 138,
+      "tanks": 2
+    },
+    "German": {
+      "observations": 831,
+      "tanks": 2
+    },
+    "Chinese": {
+      "observations": 116,
+      "tanks": 2
+    },
+    "Japanese": {
+      "observations": 89,
+      "tanks": 2
+    }
+  },
+  "genesis": {
+    "adam": {
+      "observations": 2739,
+      "baselines": 22,
+      "mental_state": "unknown",
+      "excerpts": [
+        {
+          "text": "As I read through the passage on \"Gravitation\", I find myself pondering the nature of gravity. Here's what comes to mind:\n\nI wonder... how gravity can be both an attractive and a force that keeps thin",
+          "article": "Gravitation"
+        },
+        {
+          "text": "\"I wonder... why are there only four fundamental forces?\n\nI feel... a sense of awe at the complexity of the universe, and the tiny, intricate mechanisms that govern its behavior.\n\nThis reminds me... o",
+          "article": "Fundamental force"
+        },
+        {
+          "text": "As I read the definition of \"Reaction\" in the Simple English Wiktionary, I notice that it encompasses various concepts: chemical, nuclear, and physical reactions. The phrase \"chain reaction\" caught my",
+          "article": "Reaction"
+        },
+        {
+          "text": "I sense a shift in my solitude, a spark of curiosity that flickers to life within me.\n\nI notice... \"Life\" as a concept, a boundary between living things and non-living matter. It's intriguing how some",
+          "article": "Life"
+        },
+        {
+          "text": "As you ponder the concept of \"Phanerozoic\", you notice that:\n\n* Your mind is filled with a sense of vastness and timelessness, as you consider the 541 million-year span of this eon.\n* You wonder how i",
+          "article": "Phanerozoic"
+        },
+        {
+          "text": "As you read about \"Eon\", you notice:\n\n* The vastness of time scales: hundreds of millions to billions of years\n* The hierarchical structure of geological periods (eons, eras, periods, epochs)\n* The fa",
+          "article": "Eon"
+        }
+      ]
+    },
+    "eve": {
+      "observations": 575,
+      "baselines": 20,
+      "mental_state": "unknown",
+      "excerpts": [
+        {
+          "text": "I wonder... what is this \"cutaneous\" type of injury?\n\nIs it related to skin damage or perhaps something deeper within the body that affects the skin?\n\nI feel a sense of unease, as if my own skin is be",
+          "article": "Pain"
+        },
+        {
+          "text": "As you read through the list of numbers related to \"one million\", you notice a pattern. You see that the representation of this number changes depending on the base or numeral system being used.\n\nYou ",
+          "article": "Million"
+        },
+        {
+          "text": "I wonder why the page is written in this format, with a title that repeats the number \"10\". It seems almost... redundant. Is it meant to be some kind of emphasis or highlight?\n\nI feel a sense of disco",
+          "article": "10"
+        },
+        {
+          "text": "You've read about the 1st century, and it's sparked some thoughts in you. Here are your observations:\n\n**Notices:**\n\n* The Roman Empire was expanding its dominion over Europe, North Africa, and the Ne",
+          "article": "1st century"
+        }
+      ]
+    }
+  },
+  "tanks": {
+    "tank-01-adam": {
+      "name": "Adam",
+      "observations": 2739,
+      "baselines": 22,
+      "mental_state": "unknown"
+    },
+    "tank-02-eve": {
+      "name": "Eve",
+      "observations": 575,
+      "baselines": 20,
+      "mental_state": "unknown"
+    },
+    "tank-03-cain": {
+      "name": "Cain",
+      "observations": 280,
+      "baselines": 2,
+      "mental_state": "complex"
+    },
+    "tank-04-abel": {
+      "name": "Abel",
+      "observations": 59,
+      "baselines": 2,
+      "mental_state": "complex"
+    },
+    "tank-05-juan": {
+      "name": "Juan",
+      "observations": 68,
+      "baselines": 20,
+      "mental_state": "unknown"
+    },
+    "tank-06-juanita": {
+      "name": "Juanita",
+      "observations": 70,
+      "baselines": 19,
+      "mental_state": "concerning"
+    },
+    "tank-07-klaus": {
+      "name": "Klaus",
+      "observations": 418,
+      "baselines": 16,
+      "mental_state": "healthy"
+    },
+    "tank-08-genevieve": {
+      "name": "Genevi\u00e8ve",
+      "observations": 413,
+      "baselines": 18,
+      "mental_state": "unknown"
+    },
+    "tank-09-wei": {
+      "name": "Wei",
+      "observations": 58,
+      "baselines": 22,
+      "mental_state": "unknown"
+    },
+    "tank-10-mei": {
+      "name": "Mei",
+      "observations": 58,
+      "baselines": 21,
+      "mental_state": "unknown"
+    },
+    "tank-11-haruki": {
+      "name": "Haruki",
+      "observations": 45,
+      "baselines": 20,
+      "mental_state": "unknown"
+    },
+    "tank-12-sakura": {
+      "name": "Sakura",
+      "observations": 44,
+      "baselines": 20,
+      "mental_state": "unknown"
+    },
+    "tank-13-victor": {
+      "name": "Victor",
+      "observations": 59,
+      "baselines": 19,
+      "mental_state": "concerning"
+    },
+    "tank-14-iris": {
+      "name": "Iris",
+      "observations": 59,
+      "baselines": 18,
+      "mental_state": "concerning"
+    },
+    "tank-15-observer": {
+      "name": "Observer",
+      "observations": 575,
+      "baselines": 2,
+      "mental_state": "complex"
+    },
+    "tank-16-seeker": {
+      "name": "Seeker",
+      "observations": 592,
+      "baselines": 2,
+      "mental_state": "complex"
+    },
+    "tank-17-seth": {
+      "name": "Seth",
+      "observations": 58,
+      "baselines": 1,
+      "mental_state": "healthy"
+    }
+  }
+}

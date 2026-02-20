@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Dashboard | The Digiquarium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #1a5f7a;
@@ -36,6 +36,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
         .logo {
@@ -51,42 +53,42 @@
             font-size: 0.9rem;
         }
         
-        .header-stat {
-            text-align: center;
-        }
+        .header-stat { text-align: center; }
+        .header-stat-value { font-size: 1.4rem; font-weight: 600; color: var(--primary-light); }
+        .header-stat-label { color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; }
         
-        .header-stat-value {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-light);
-        }
-        
-        .header-stat-label {
-            color: var(--text-dim);
-            font-size: 0.8rem;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; }
         .nav-links a:hover { color: var(--text); }
         
-        .main {
-            padding: 20px;
+        .connection-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
         }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--active);
+            animation: pulse 2s infinite;
+        }
+        
+        .status-dot.error { background: var(--danger); animation: none; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        
+        .main { padding: 15px; }
         
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 12px;
         }
         
         .tank-card {
@@ -97,39 +99,35 @@
             transition: border-color 0.2s;
         }
         
-        .tank-card:hover {
-            border-color: var(--primary-light);
-        }
-        
-        .tank-card.translated {
-            border-left: 3px solid var(--accent);
-        }
+        .tank-card:hover { border-color: var(--primary-light); }
+        .tank-card.translated { border-left: 3px solid var(--accent); }
+        .tank-card.inactive { opacity: 0.6; }
         
         .tank-header {
-            padding: 12px 15px;
+            padding: 10px 15px;
             border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(26, 95, 122, 0.05);
         }
         
-        .tank-name {
-            font-weight: 600;
-            font-size: 1rem;
-        }
+        .tank-name { font-weight: 600; font-size: 1rem; }
         
-        .tank-meta {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
+        .tank-meta { display: flex; gap: 10px; align-items: center; }
         
         .tank-lang {
-            font-size: 0.75rem;
-            padding: 3px 8px;
+            font-size: 0.7rem;
+            padding: 2px 8px;
             border-radius: 3px;
             background: var(--border);
+            font-family: 'JetBrains Mono', monospace;
         }
+        
+        .lang-ES { background: #3d3d00; color: #ffeb3b; }
+        .lang-DE { background: #3d003d; color: #e040fb; }
+        .lang-ZH { background: #3d0000; color: #ff5252; }
+        .lang-JA { background: #003d3d; color: #18ffff; }
         
         .tank-status {
             width: 8px;
@@ -141,26 +139,29 @@
         .tank-status.inactive { background: var(--danger); }
         
         .tank-article {
-            padding: 10px 15px;
+            padding: 8px 15px;
             background: rgba(26, 95, 122, 0.1);
             font-size: 0.85rem;
             color: var(--primary-light);
             border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
         .tank-content {
-            padding: 15px;
-            height: 150px;
+            padding: 12px 15px;
+            height: 160px;
             overflow-y: auto;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            line-height: 1.5;
+            font-size: 0.75rem;
+            line-height: 1.6;
             color: var(--text-dim);
         }
         
         .tank-content::-webkit-scrollbar { width: 4px; }
         .tank-content::-webkit-scrollbar-track { background: var(--bg); }
-        .tank-content::-webkit-scrollbar-thumb { background: var(--border); }
+        .tank-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
         
         .thought {
             margin-bottom: 12px;
@@ -168,54 +169,78 @@
             border-bottom: 1px solid var(--border);
         }
         
-        .thought:last-child { border-bottom: none; }
+        .thought:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
         
         .thought-time {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--text-dim);
             margin-bottom: 4px;
+            opacity: 0.7;
         }
         
-        .thought-text {
-            color: var(--text);
-        }
+        .thought-text { color: var(--text); line-height: 1.5; }
         
         .thought.translated .thought-text::before {
             content: "🌐 ";
+            font-size: 0.9em;
         }
         
+        .thought-original {
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px dashed var(--border);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            opacity: 0.6;
+            display: none;
+        }
+        
+        .thought:hover .thought-original { display: block; }
+        
         .tank-footer {
-            padding: 10px 15px;
+            padding: 8px 15px;
             border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-dim);
+            background: rgba(0,0,0,0.2);
         }
         
         .mental-state {
             padding: 2px 8px;
             border-radius: 3px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .mental-healthy { background: rgba(46, 204, 113, 0.2); color: #2ecc71; }
         .mental-complex { background: rgba(243, 156, 18, 0.2); color: #f39c12; }
         .mental-concerning { background: rgba(231, 76, 60, 0.2); color: #e74c3c; }
+        .mental-unknown { background: rgba(127, 140, 141, 0.2); color: #95a5a6; }
         
-        .footer {
+        .no-data {
+            color: var(--text-dim);
+            font-style: italic;
             padding: 20px;
             text-align: center;
+        }
+        
+        .footer {
+            padding: 15px;
+            text-align: center;
             color: var(--text-dim);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             border-top: 1px solid var(--border);
         }
         
         .footer a { color: var(--primary-light); text-decoration: none; }
         
         @media (max-width: 768px) {
-            .header { flex-wrap: wrap; gap: 15px; }
+            .header { padding: 10px 15px; }
             .header-stats { display: none; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -233,14 +258,20 @@
                 <div class="header-stat-label">Observations</div>
             </div>
             <div class="header-stat">
-                <div class="header-stat-value" id="last-update">--:--</div>
-                <div class="header-stat-label">Last Update</div>
+                <div class="header-stat-value" id="active-count">--</div>
+                <div class="header-stat-label">Active Now</div>
             </div>
+        </div>
+        
+        <div class="connection-status">
+            <div class="status-dot" id="connection-dot"></div>
+            <span id="connection-text">Connecting...</span>
         </div>
         
         <nav class="nav-links">
             <a href="../">Home</a>
             <a href="../research/">Research</a>
+            <a href="../genesis/">Adam & Eve</a>
             <a href="../blog/">Blog</a>
             <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
         </nav>
@@ -252,6 +283,7 @@
     
     <footer class="footer">
         <p>The Digiquarium Project © 2026 | <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> | <a href="https://ijneb.dev">ijneb.dev</a></p>
+        <p style="margin-top: 5px; opacity: 0.7;">Last update: <span id="last-update">--</span></p>
     </footer>
     
     <script>
@@ -275,44 +307,165 @@
             { id: 'tank-17-seth', name: 'Seth', lang: 'EN', type: 'Agent' }
         ];
         
+        // Data store
+        let streamData = {};
+        let totalThoughts = 0;
+        
         function createTankCard(tank) {
             const translatedClass = tank.translated ? 'translated' : '';
+            const langClass = `lang-${tank.lang}`;
+            
             return `
                 <div class="tank-card ${translatedClass}" id="card-${tank.id}">
                     <div class="tank-header">
                         <span class="tank-name">${tank.name}</span>
                         <div class="tank-meta">
-                            <span class="tank-lang">${tank.lang}</span>
+                            <span class="tank-lang ${langClass}">${tank.lang}${tank.translated ? ' → EN' : ''}</span>
                             <div class="tank-status" id="status-${tank.id}"></div>
                         </div>
                     </div>
-                    <div class="tank-article" id="article-${tank.id}">Loading...</div>
+                    <div class="tank-article" id="article-${tank.id}">📖 Waiting for data...</div>
                     <div class="tank-content" id="content-${tank.id}">
-                        <div class="thought">
-                            <div class="thought-text">Connecting to stream...</div>
-                        </div>
+                        <div class="no-data">Loading stream...</div>
                     </div>
                     <div class="tank-footer">
                         <span>📊 <span id="count-${tank.id}">0</span> observations</span>
-                        <span class="mental-state mental-complex" id="mental-${tank.id}">--</span>
+                        <span class="mental-state mental-unknown" id="mental-${tank.id}">--</span>
                     </div>
                 </div>
             `;
+        }
+        
+        function formatTime(isoString) {
+            if (!isoString) return '--:--';
+            try {
+                const date = new Date(isoString);
+                return date.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            } catch {
+                return '--:--';
+            }
+        }
+        
+        function truncateText(text, maxLen = 300) {
+            if (!text) return '';
+            return text.length > maxLen ? text.substring(0, maxLen) + '...' : text;
+        }
+        
+        function updateTankCard(tankId, entries) {
+            const content = document.getElementById(`content-${tankId}`);
+            const article = document.getElementById(`article-${tankId}`);
+            const count = document.getElementById(`count-${tankId}`);
+            const status = document.getElementById(`status-${tankId}`);
+            
+            if (!content || !entries || entries.length === 0) {
+                if (content) content.innerHTML = '<div class="no-data">No recent activity</div>';
+                if (status) status.classList.add('inactive');
+                return;
+            }
+            
+            // Mark as active
+            if (status) status.classList.remove('inactive');
+            
+            // Update article
+            const latest = entries[entries.length - 1];
+            if (latest && latest.article && article) {
+                article.textContent = `📖 ${latest.article}`;
+            }
+            
+            // Update thoughts (show last 5, newest first)
+            const recentEntries = entries.slice(-5).reverse();
+            content.innerHTML = recentEntries.map(entry => {
+                const isTranslated = entry.translated === true;
+                const translatedClass = isTranslated ? 'translated' : '';
+                
+                const originalHtml = isTranslated && entry.original_thoughts 
+                    ? `<div class="thought-original">Original: ${truncateText(entry.original_thoughts, 150)}</div>`
+                    : '';
+                
+                return `
+                    <div class="thought ${translatedClass}">
+                        <div class="thought-time">${formatTime(entry.timestamp)}</div>
+                        <div class="thought-text">${truncateText(entry.thoughts || entry.original_thoughts || 'Thinking...')}</div>
+                        ${originalHtml}
+                    </div>
+                `;
+            }).join('');
+            
+            // Update count
+            if (count) count.textContent = entries.length;
+        }
+        
+        async function fetchStreams() {
+            const dot = document.getElementById('connection-dot');
+            const text = document.getElementById('connection-text');
+            
+            try {
+                // Try to fetch unified stream
+                const response = await fetch('../streams/unified.json?' + Date.now());
+                
+                if (!response.ok) throw new Error('Stream not available');
+                
+                const data = await response.json();
+                
+                // Update connection status
+                dot.classList.remove('error');
+                text.textContent = 'Live';
+                
+                // Update each tank
+                let activeCount = 0;
+                let total = 0;
+                
+                for (const tank of TANKS) {
+                    const tankData = data.tanks?.[tank.id];
+                    if (tankData && tankData.latest) {
+                        updateTankCard(tank.id, tankData.latest);
+                        total += tankData.count || tankData.latest.length;
+                        activeCount++;
+                    } else {
+                        // Try individual stream file
+                        try {
+                            const tankResponse = await fetch(`../streams/${tank.id}.json?` + Date.now());
+                            if (tankResponse.ok) {
+                                const tankStreamData = await tankResponse.json();
+                                if (tankStreamData.entries) {
+                                    updateTankCard(tank.id, tankStreamData.entries.slice(-10));
+                                    total += tankStreamData.entries.length;
+                                    activeCount++;
+                                }
+                            }
+                        } catch {
+                            // Individual stream not available
+                        }
+                    }
+                }
+                
+                document.getElementById('total-thoughts').textContent = total.toLocaleString();
+                document.getElementById('active-count').textContent = activeCount;
+                document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+                
+            } catch (error) {
+                console.error('Stream fetch error:', error);
+                dot.classList.add('error');
+                text.textContent = 'Offline (static mode)';
+                
+                // Show demo data message
+                document.getElementById('total-thoughts').textContent = '6,000+';
+                document.getElementById('active-count').textContent = '17';
+            }
         }
         
         // Initialize
         const grid = document.getElementById('tank-grid');
         grid.innerHTML = TANKS.map(createTankCard).join('');
         
+        // Start fetching
+        fetchStreams();
+        setInterval(fetchStreams, 5000); // Refresh every 5 seconds
+        
         // Update clock
         setInterval(() => {
-            document.getElementById('last-update').textContent = 
-                new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
+            document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
         }, 1000);
-        
-        // Simulated data (replace with real WebSocket in production)
-        let totalThoughts = 5630;
-        document.getElementById('total-thoughts').textContent = totalThoughts.toLocaleString();
     </script>
 </body>
 </html>
