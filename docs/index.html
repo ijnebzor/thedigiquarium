@@ -256,11 +256,33 @@
         .footer-kofi a { color: var(--gray); font-size: 0.75rem; }
         .footer-kofi a:hover { color: var(--orange); }
         
+
+        /* Fluid Effect Canvas */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .fluid-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .hero > *:not(.fluid-canvas) {
+            position: relative;
+            z-index: 1;
+        }
+
         @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .stats { gap: 20px; } .stat-value { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
     <div class="hero">
+        <canvas class="fluid-canvas" id="fluidCanvas"></canvas>
         <img src="assets/branding/logo.svg" alt="Digiquarium" class="logo">
         <h1>The Digiquarium</h1>
         <p class="tagline">Open-source research studying AI consciousness development. 17 specimens. 5 languages. Endless curiosity.</p>
@@ -607,7 +629,7 @@
                 <div class="team-card"><div class="team-icon">🌍</div><div class="team-name">WEBMASTER</div><div class="team-role">Website</div><div class="team-desc">This site.</div></div>
                 <div class="team-card"><div class="team-icon">🔌</div><div class="team-name">OLLAMA WATCHER</div><div class="team-role">LLM Infra</div><div class="team-desc">Brains running.</div></div>
                 <div class="team-card"><div class="team-icon">✅</div><div class="team-name">AUDITOR</div><div class="team-role">Quality</div><div class="team-desc">Pedantic.</div></div>
-                <div class="team-card"><div class="team-icon">🚪</div><div class="team-name">BOUNCER</div><div class="team-role">Interactive</div><div class="team-desc">Protects specimens from visitors.</div></div>
+                <div class="team-card"><div class="team-icon">🚪</div><div class="team-name">BOUNCER</div><div class="team-role">Interactive</div><div class="team-desc">Keeps visitors out.</div></div>
             </div>
         </section>
 
@@ -868,6 +890,98 @@ docker compose up -d</code></pre>
                 document.getElementById('search-results').classList.remove('active');
             }
         });
+    </script>
+
+    <script>
+    // Subtle fluid/water effect for hero section
+    (function() {
+        const canvas = document.getElementById('fluidCanvas');
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let mouseX = 0, mouseY = 0;
+        let particles = [];
+        const particleCount = 50;
+        const colors = ['rgba(7, 207, 141, 0.3)', 'rgba(7, 221, 231, 0.3)', 'rgba(7, 207, 141, 0.2)'];
+        
+        function resize() {
+            const hero = canvas.parentElement;
+            width = canvas.width = hero.offsetWidth;
+            height = canvas.height = hero.offsetHeight;
+        }
+        
+        function createParticle(x, y) {
+            return {
+                x: x || Math.random() * width,
+                y: y || Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                radius: Math.random() * 80 + 40,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                life: 1
+            };
+        }
+        
+        function init() {
+            resize();
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(createParticle());
+            }
+        }
+        
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            particles.forEach((p, i) => {
+                // Gentle drift toward mouse
+                const dx = mouseX - p.x;
+                const dy = mouseY - p.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                
+                if (dist < 300 && dist > 0) {
+                    p.vx += (dx / dist) * 0.02;
+                    p.vy += (dy / dist) * 0.02;
+                }
+                
+                // Apply velocity with damping
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vx *= 0.99;
+                p.vy *= 0.99;
+                
+                // Wrap around edges
+                if (p.x < -p.radius) p.x = width + p.radius;
+                if (p.x > width + p.radius) p.x = -p.radius;
+                if (p.y < -p.radius) p.y = height + p.radius;
+                if (p.y > height + p.radius) p.y = -p.radius;
+                
+                // Draw soft circle
+                const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
+                gradient.addColorStop(0, p.color);
+                gradient.addColorStop(1, 'transparent');
+                
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+            });
+            
+            requestAnimationFrame(animate);
+        }
+        
+        // Track mouse position
+        document.querySelector('.hero').addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+        });
+        
+        window.addEventListener('resize', resize);
+        init();
+        animate();
+    })();
     </script>
 </body>
 </html>
