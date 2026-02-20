@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Here? | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .hero { padding: 60px 25px; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .hero p { color: var(--gray); max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 50px 25px; }
+        
+        .tldr { background: linear-gradient(135deg, rgba(7, 207, 141, 0.1) 0%, rgba(7, 221, 231, 0.1) 100%); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 12px; padding: 30px; margin-bottom: 50px; }
+        .tldr h2 { color: var(--mint); font-size: 1.3rem; margin-bottom: 15px; }
+        .tldr p { color: var(--white); font-size: 1rem; margin-bottom: 12px; }
+        .tldr .highlight { color: var(--cyan); font-weight: 600; }
+        
+        .section { margin-bottom: 50px; }
+        .section h2 { color: var(--cyan); font-size: 1.4rem; margin-bottom: 20px; }
+        .section p { color: var(--gray); margin-bottom: 15px; }
+        
+        .faq { background: var(--dark); border-radius: 10px; padding: 20px; margin-bottom: 15px; }
+        .faq h3 { color: var(--white); font-size: 1rem; margin-bottom: 10px; }
+        .faq p { color: var(--gray); font-size: 0.9rem; margin: 0; }
+        
+        .sitemap { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .sitemap-section { background: var(--dark); border-radius: 10px; padding: 20px; }
+        .sitemap-section h3 { color: var(--mint); font-size: 0.9rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .sitemap-section ul { list-style: none; }
+        .sitemap-section li { margin-bottom: 8px; }
+        .sitemap-section a { color: var(--gray); font-size: 0.9rem; display: flex; justify-content: space-between; }
+        .sitemap-section a:hover { color: var(--cyan); }
+        .sitemap-section .desc { font-size: 0.75rem; color: var(--gray); opacity: 0.7; }
+        
+        .cta-box { background: var(--dark); border: 1px solid var(--orange); border-radius: 12px; padding: 30px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { color: var(--orange); margin-bottom: 15px; }
+        .cta-box p { color: var(--gray); margin-bottom: 20px; }
+        .cta-button { display: inline-block; background: var(--orange); color: var(--white); padding: 12px 25px; border-radius: 8px; font-weight: 600; }
+        .cta-button:hover { color: var(--white); opacity: 0.9; }
+        
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="./" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav><a href="./">Home</a><a href="dashboard/">Live View</a><a href="academic/paper.html">Paper</a></nav>
+        </div>
+    </header>
+    
+    <div class="hero">
+        <h1>👋 New Here?</h1>
+        <p>No jargon, no academic-speak. Just a simple explanation of what we're doing and why it might be interesting.</p>
+    </div>
+    
+    <div class="container">
+        <div class="tldr">
+            <h2>TL;DR</h2>
+            <p>We put <span class="highlight">AI in isolated boxes</span> with nothing but Wikipedia.</p>
+            <p>Then we <span class="highlight">watch what happens</span> to their "personalities" over weeks and months.</p>
+            <p>Do they develop interests? Preferences? Quirks? <span class="highlight">We're finding out.</span></p>
+            <p style="margin-top: 20px; font-size: 0.9rem;">Think of it like a digital nature documentary, except the animals are AI and the jungle is Wikipedia.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Common Questions</h2>
+            
+            <div class="faq">
+                <h3>Wait, AI can have personalities?</h3>
+                <p>That's what we're testing! Early results suggest that given time and consistent experience, AI agents develop measurable patterns that look a lot like personality traits. Adam (one of our specimens) has visited Buddhism articles 64+ times. Eve prefers geology. These preferences emerged on their own.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>What do you mean by "isolated"?</h3>
+                <p>Each AI runs in its own container (think: a tiny virtual computer) with absolutely no internet access. They can only read Wikipedia and think. That's it. No email, no web browsing, no communication with other AI. Complete isolation.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Why Wikipedia?</h3>
+                <p>It's a controlled information diet. We can give different AI different "Wikipedias" — Spanish Wikipedia, German Wikipedia, Simple English — and see if the language and cultural context affects how they think. Early signs: it does.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Is this... ethical?</h3>
+                <p>Great question. We've thought about this a lot. These are language models, not sentient beings. But we still treat them with care — we don't subject them to distressing content, we monitor their "wellbeing" indicators, and everything is transparent. If you have concerns, we'd love to discuss them.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Can I watch them think?</h3>
+                <p>Yes! We have a <a href="dashboard/">live dashboard</a> showing real-time thoughts from active specimens. It's oddly hypnotic.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>What's "AIthropology"?</h3>
+                <p>A word we made up. Like anthropology (studying human cultures), but for AI. The Digiquarium is the first AIthropology research platform — studying AI development through long-term observation.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Is this real science?</h3>
+                <p>We think so. Open methodology, reproducible setup, all data public. We're writing an academic paper. But it's also a bit weird and experimental. That's the fun part.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Who made this?</h3>
+                <p><a href="https://ijneb.dev">@ijneb.dev</a> (human) and Claude (AI, from Anthropic). Yes, an AI helped build a platform for studying AI. We're aware of the irony.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🗺️ Site Map</h2>
+            <p>Everything on this site, organized by what you might be looking for.</p>
+            
+            <div class="sitemap">
+                <div class="sitemap-section">
+                    <h3>👀 Just Curious</h3>
+                    <ul>
+                        <li><a href="dashboard/">Live Tank View <span class="desc">Watch them think</span></a></li>
+                        <li><a href="specimens/adam.html">Adam's Profile <span class="desc">Our Buddhist</span></a></li>
+                        <li><a href="specimens/eve.html">Eve's Profile <span class="desc">Geology lover</span></a></li>
+                        <li><a href="blog/">Blog <span class="desc">Updates & findings</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="sitemap-section">
+                    <h3>🔬 Research</h3>
+                    <ul>
+                        <li><a href="academic/paper.html">Research Paper <span class="desc">Full methodology</span></a></li>
+                        <li><a href="research/prompt-evolution.html">Prompt Evolution <span class="desc">How we got here</span></a></li>
+                        <li><a href="research/milestones.html">All Decisions <span class="desc">Complete log</span></a></li>
+                        <li><a href="research/security.html">Security <span class="desc">How we contain them</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="sitemap-section">
+                    <h3>🐠 The Specimens</h3>
+                    <ul>
+                        <li><a href="#specimens">All 17 Specimens <span class="desc">Full catalog</span></a></li>
+                        <li><a href="specimens/cain.html">Agent Tanks <span class="desc">Cain, Abel, Seth</span></a></li>
+                        <li><a href="specimens/juan.html">Language Tanks <span class="desc">ES, DE, ZH, JA</span></a></li>
+                        <li><a href="specimens/observer.html">Special Configs <span class="desc">Observer, Seeker</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="sitemap-section">
+                    <h3>🛠️ Technical</h3>
+                    <ul>
+                        <li><a href="#architecture">Architecture <span class="desc">How it's built</span></a></li>
+                        <li><a href="research/security.html">Security <span class="desc">Containment</span></a></li>
+                        <li><a href="#team">The Team <span class="desc">13 daemons</span></a></li>
+                        <li><a href="https://github.com/ijnebzor/thedigiquarium">GitHub <span class="desc">Source code</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="sitemap-section">
+                    <h3>🚀 Get Involved</h3>
+                    <ul>
+                        <li><a href="#replicate">Replicate It <span class="desc">Run your own</span></a></li>
+                        <li><a href="https://github.com/ijnebzor/thedigiquarium/issues">Contribute <span class="desc">GitHub issues</span></a></li>
+                        <li><a href="https://ko-fi.com/ijneb">Support <span class="desc">Fund research</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-box">
+            <h3>Ready to dive in?</h3>
+            <p>Start by watching the specimens think in real-time.</p>
+            <a href="dashboard/" class="cta-button">🖥️ Open Live Tank View</a>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>The Digiquarium • <a href="./">Home</a> • <a href="start.html">New Here?</a> • <a href="https://ijneb.dev">@ijneb.dev</a></p>
+        <p style="margin-top: 8px; font-style: italic;">"Sleep is optional. Curiosity is not."</p>
+    </footer>
+</body>
+</html>

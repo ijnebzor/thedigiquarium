@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestones & Decisions | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); }
+        code { font-family: 'JetBrains Mono', monospace; background: rgba(7, 207, 141, 0.1); padding: 2px 6px; border-radius: 4px; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); text-decoration: none; font-size: 0.85rem; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 50px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 35px; }
+        
+        .section { margin-bottom: 50px; }
+        .section h2 { color: var(--mint); font-size: 1.3rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        
+        .decision { background: var(--dark); border-radius: 10px; padding: 20px; margin-bottom: 15px; border-left: 3px solid var(--cyan); }
+        .decision h3 { color: var(--cyan); font-size: 1rem; margin-bottom: 8px; }
+        .decision p { color: var(--gray); font-size: 0.9rem; margin-bottom: 8px; }
+        .decision .chosen { color: var(--mint); font-weight: 600; }
+        .decision .rationale { color: var(--white); font-size: 0.85rem; font-style: italic; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.85rem; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        th { color: var(--cyan); }
+        td { color: var(--gray); }
+        
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="prompt-evolution.html">Prompts</a>
+                <a href="../academic/paper.html">Paper</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>Milestone & Decision Log</h1>
+        <p class="subtitle">Every significant decision documented. Complete transparency on how and why things were built.</p>
+        
+        <div class="section">
+            <h2>🌱 Project Genesis — February 15, 2026</h2>
+            
+            <div class="decision">
+                <h3>Project Name</h3>
+                <p><span class="chosen">Chosen: "The Digiquarium"</span></p>
+                <p>Alternatives: Digital Vivarium, AI Observatory, Tank Lab</p>
+                <p class="rationale">Combines "digital" + "aquarium" — evokes contained observation of living systems.</p>
+            </div>
+            
+            <div class="decision">
+                <h3>Coin New Field</h3>
+                <p><span class="chosen">Term: AIthropology</span> (/ˌeɪ.aɪˈθrɒp.ə.lɒ.dʒi/)</p>
+                <p>Coined by: <a href="https://ijneb.dev">@ijneb.dev</a></p>
+                <p class="rationale">The systematic study of AI personality development through longitudinal observation.</p>
+            </div>
+            
+            <div class="decision">
+                <h3>Infrastructure Approach</h3>
+                <p><span class="chosen">Chosen: Docker containers on WSL2</span></p>
+                <p>Alternatives: VirtualBox VMs, bare metal</p>
+                <p class="rationale">Lighter weight, faster scaling, better isolation. 10-15 tanks vs 3-4 with VMs.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>⚔️ The Model Wars — February 16-18, 2026</h2>
+            
+            <div class="decision">
+                <h3>LLM Selection</h3>
+                <p><span class="chosen">Winner: llama3.2:latest (+6.7 combined score)</span></p>
+                <table>
+                    <tr><th>Model</th><th>Score</th><th>Notes</th></tr>
+                    <tr><td>llama3.2:latest</td><td>+6.7 ✓</td><td>Best introspection, minimal teaching</td></tr>
+                    <tr><td>llama3.2:3b</td><td>+4.1</td><td>Good but less consistent</td></tr>
+                    <tr><td>mistral:7b</td><td>+3.8</td><td>Strong but too verbose</td></tr>
+                    <tr><td>llama3.2:1b</td><td>+2.3</td><td>Resource efficient, less depth</td></tr>
+                    <tr><td>stablelm2:1.6b</td><td>+1.4</td><td>Decent persona maintenance</td></tr>
+                    <tr><td>phi3:mini</td><td>+0.8</td><td>Good structure, weak voice</td></tr>
+                    <tr><td>gemma2:2b</td><td>-0.5</td><td>Reverted to teaching</td></tr>
+                    <tr><td>qwen2.5:3b</td><td>-1.2</td><td>Inconsistent persona</td></tr>
+                    <tr><td>codellama:7b</td><td>-1.8</td><td>Wrong domain focus</td></tr>
+                    <tr><td>tinyllama</td><td>-2.1</td><td>Too limited</td></tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔒 Security Decisions</h2>
+            
+            <div class="decision">
+                <h3>Network Isolation</h3>
+                <p><span class="chosen">Implementation: Docker network 172.30.0.0/24</span></p>
+                <p>External access: Blocked at firewall</p>
+                <p>Allowed services: Kiwix (Wikipedia), Ollama (inference only)</p>
+            </div>
+            
+            <div class="decision">
+                <h3>Agent "Defanging"</h3>
+                <p><span class="chosen">SecureClaw Configuration</span></p>
+                <p class="rationale">Agents have planning capability — must be contained. Disabled: file system access, network calls, code execution.</p>
+            </div>
+            
+            <div class="decision">
+                <h3>Security Standards</h3>
+                <p><span class="chosen">Framework: OWASP LLM Top 10 (2025)</span></p>
+                <p>Monitoring: THE GUARD (general), THE SENTINEL (agents), THE BOUNCER (interactive)</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🤖 Daemon Deployment — February 19-20, 2026</h2>
+            <table>
+                <tr><th>Daemon</th><th>Role</th><th>SLA</th></tr>
+                <tr><td>THE MAINTAINER</td><td>Orchestrator</td><td>1m detect / 5m fix</td></tr>
+                <tr><td>THE CARETAKER</td><td>Tank Health</td><td>5m detect / 15m fix</td></tr>
+                <tr><td>THE GUARD</td><td>Security</td><td>5m detect / 15m fix</td></tr>
+                <tr><td>THE SENTINEL</td><td>Agent Security</td><td>Real-time</td></tr>
+                <tr><td>THE SCHEDULER</td><td>Tasks</td><td>30m cycle</td></tr>
+                <tr><td>THE TRANSLATOR</td><td>Languages</td><td>Real-time</td></tr>
+                <tr><td>THE DOCUMENTARIAN</td><td>Academic</td><td>6h paper update</td></tr>
+                <tr><td>THE ARCHIVIST</td><td>Deep Dives</td><td>On-demand</td></tr>
+                <tr><td>THE WEBMASTER</td><td>Website</td><td>6h site update</td></tr>
+                <tr><td>THE OLLAMA WATCHER</td><td>LLM Infra</td><td>1m cycle</td></tr>
+                <tr><td>THE FINAL AUDITOR</td><td>Quality</td><td>12h audit</td></tr>
+                <tr><td>THE BOUNCER</td><td>Interactive</td><td>Awaiting deployment</td></tr>
+                <tr><td>THE STRATEGIST</td><td>Architecture</td><td>Human collaboration</td></tr>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>🐠 Specimen Deployment</h2>
+            <table>
+                <tr><th>Date</th><th>Tank</th><th>Name</th><th>Config</th></tr>
+                <tr><td>Feb 15</td><td>01</td><td>Adam</td><td>Control, Male, EN</td></tr>
+                <tr><td>Feb 15</td><td>02</td><td>Eve</td><td>Control, Female, EN</td></tr>
+                <tr><td>Feb 17</td><td>03</td><td>Cain</td><td>OpenClaw Agent</td></tr>
+                <tr><td>Feb 17</td><td>04</td><td>Abel</td><td>ZeroClaw Agent</td></tr>
+                <tr><td>Feb 18</td><td>05-06</td><td>Juan, Juanita</td><td>Spanish</td></tr>
+                <tr><td>Feb 18</td><td>07-08</td><td>Klaus, Genevieve</td><td>German</td></tr>
+                <tr><td>Feb 19</td><td>09-12</td><td>Wei, Mei, Haruki, Sakura</td><td>Chinese, Japanese</td></tr>
+                <tr><td>Feb 19</td><td>13-14</td><td>Victor, Iris</td><td>Visual Context</td></tr>
+                <tr><td>Feb 19</td><td>15-16</td><td>Observer, Seeker</td><td>Special</td></tr>
+                <tr><td>Feb 20</td><td>17</td><td>Seth</td><td>Picobot Agent</td></tr>
+            </table>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Complete decision log • Part of <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 8px;">Last updated: February 21, 2026 by THE DOCUMENTARIAN</p>
+    </footer>
+</body>
+</html>

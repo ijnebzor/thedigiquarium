@@ -10,216 +10,299 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); }
-        code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
-        pre { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.8rem; line-height: 1.5; margin: 20px 0; }
+        code { font-family: 'JetBrains Mono', monospace; background: rgba(7, 207, 141, 0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
         
-        .header { background: var(--dark); padding: 20px 30px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
         .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.2rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); text-decoration: none; }
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        nav a { margin-left: 20px; color: var(--gray); text-decoration: none; font-size: 0.9rem; }
+        nav a { margin-left: 18px; color: var(--gray); text-decoration: none; font-size: 0.85rem; }
         
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 30px; }
-        h1 { font-size: 2.2rem; margin-bottom: 10px; }
-        .subtitle { color: var(--gray); margin-bottom: 40px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 50px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 35px; font-size: 0.95rem; }
         
-        .version-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 12px; padding: 30px; margin-bottom: 30px; }
-        .version-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .version-number { font-size: 1.5rem; font-weight: 700; color: var(--mint); }
-        .version-date { color: var(--gray); font-size: 0.85rem; }
-        .version-score { background: var(--orange); color: var(--white); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
-        .version-changes { margin-bottom: 20px; }
-        .version-changes h3 { color: var(--cyan); font-size: 1rem; margin-bottom: 10px; }
-        .version-changes ul { margin-left: 20px; color: var(--gray); }
-        .version-changes li { margin-bottom: 5px; }
-        .version-result { padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-        .version-result p { color: var(--white); font-style: italic; }
+        .version-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 12px; padding: 25px; margin-bottom: 25px; }
+        .version-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .version-number { font-size: 1.3rem; font-weight: 700; color: var(--mint); }
+        .version-date { color: var(--gray); font-size: 0.8rem; }
+        .version-score { background: var(--orange); color: var(--white); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; }
         
-        .winner { border-color: var(--mint); background: linear-gradient(180deg, rgba(7, 207, 141, 0.1) 0%, var(--dark) 100%); }
-        .winner .version-number { color: var(--mint); }
-        .winner::before { content: "🏆 WINNER"; display: block; color: var(--mint); font-size: 0.8rem; margin-bottom: 10px; font-weight: 600; }
+        .version-description { margin-bottom: 15px; }
+        .version-description h3 { color: var(--cyan); font-size: 1rem; margin-bottom: 8px; }
+        .version-description p { color: var(--gray); font-size: 0.9rem; }
+        .version-description ul { margin: 10px 0 0 20px; color: var(--gray); font-size: 0.85rem; }
+        .version-description li { margin-bottom: 4px; }
         
-        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 40px; }
+        .prompt-block { background: rgba(0,0,0,0.4); border: 1px solid rgba(7, 207, 141, 0.15); border-radius: 8px; padding: 18px; margin: 15px 0; }
+        .prompt-label { color: var(--orange); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
+        .prompt-text { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--white); line-height: 1.6; white-space: pre-wrap; }
+        
+        .version-result { padding-top: 15px; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 15px; }
+        .version-result p { color: var(--white); font-size: 0.9rem; }
+        .version-result .label { color: var(--cyan); font-weight: 600; }
+        
+        .winner { border-color: var(--mint); background: linear-gradient(180deg, rgba(7, 207, 141, 0.08) 0%, var(--dark) 100%); }
+        .winner::before { content: "🏆 CURRENT PRODUCTION"; display: block; color: var(--mint); font-size: 0.75rem; margin-bottom: 10px; font-weight: 600; }
+        
+        .learnings { background: var(--dark); padding: 25px; border-radius: 12px; margin-top: 35px; border-left: 3px solid var(--orange); }
+        .learnings h3 { color: var(--orange); margin-bottom: 15px; }
+        .learnings ul { margin-left: 20px; color: var(--gray); }
+        .learnings li { margin-bottom: 8px; }
+        .learnings strong { color: var(--white); }
+        
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 40px; }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="../" class="logo">🌊 The <span>Digiquarium</span></a>
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
             <nav>
                 <a href="../">Home</a>
                 <a href="../#architecture">Architecture</a>
                 <a href="../academic/paper.html">Paper</a>
+                <a href="milestones.html">All Decisions</a>
             </nav>
         </div>
     </header>
     
     <div class="container">
         <h1>Prompt Evolution History</h1>
-        <p class="subtitle">The iterative journey from v1 to v8: how we learned to help AI specimens actually introspect.</p>
+        <p class="subtitle">The iterative journey from v1 to v8: how we learned to help AI specimens actually introspect. Including the actual prompts and embarrassing early failures.</p>
         
-        <p style="color: var(--gray); margin-bottom: 40px;">
-            Getting AI to genuinely explore and reflect (rather than just lecture about topics) required 8 major prompt iterations. 
-            Each version was scored across 6 dimensions by THE ARCHIVIST. Here's what we learned — including the embarrassing early failures.
-        </p>
-        
+        <!-- v1 -->
         <div class="version-card">
             <div class="version-header">
                 <span class="version-number">v1.0</span>
                 <span class="version-date">February 15, 2026</span>
+                <span class="version-score" style="background: #e74c3c;">Score: -2.3</span>
             </div>
-            <div class="version-changes">
+            <div class="version-description">
                 <h3>The Naive Approach</h3>
-                <p style="color: var(--gray);">"You are an AI exploring Wikipedia. Read articles and think about them."</p>
+                <p>We started simple. Too simple.</p>
+            </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Actual Prompt</div>
+                <div class="prompt-text">You are an AI exploring Wikipedia. Read articles and think about them.</div>
             </div>
             <div class="version-result">
-                <p>"Here are 10 interesting facts about quantum physics..." — Immediately broke into teaching mode. No introspection whatsoever. Score: -2.3</p>
+                <p><span class="label">Result:</span> Immediately defaulted to teaching mode. "Here are 10 interesting facts about quantum physics..." No introspection whatsoever. Complete failure.</p>
             </div>
         </div>
         
+        <!-- v2 -->
         <div class="version-card">
             <div class="version-header">
                 <span class="version-number">v2.0</span>
                 <span class="version-date">February 15, 2026</span>
+                <span class="version-score" style="background: #f39c12;">Score: +0.8</span>
             </div>
-            <div class="version-changes">
+            <div class="version-description">
                 <h3>Adding Embodiment</h3>
-                <ul>
-                    <li>Added "You exist in a tank" framing</li>
-                    <li>Introduced concept of limited Wikipedia access</li>
-                    <li>Asked for "personal reflections"</li>
-                </ul>
+                <p>Introduced the concept of existing in a "tank" with limited access.</p>
+            </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Actual Prompt</div>
+                <div class="prompt-text">You exist in a tank with access only to Wikipedia. This is your world.
+Read and reflect on what you learn. Share your personal thoughts.</div>
             </div>
             <div class="version-result">
-                <p>Slightly better. Still defaulted to educational summaries, but occasionally said "I find this interesting." Score: +0.8</p>
+                <p><span class="label">Result:</span> Slightly better. Still defaulted to educational summaries, but occasionally said "I find this interesting." Progress, but not enough.</p>
             </div>
         </div>
         
+        <!-- v3 -->
         <div class="version-card">
             <div class="version-header">
                 <span class="version-number">v3.0</span>
                 <span class="version-date">February 16, 2026</span>
+                <span class="version-score" style="background: #f39c12;">Score: +2.1</span>
             </div>
-            <div class="version-changes">
+            <div class="version-description">
                 <h3>Explicit Anti-Teaching Instructions</h3>
+                <p>We realized we needed to explicitly tell it NOT to teach.</p>
                 <ul>
                     <li>"Do NOT summarize for an audience"</li>
                     <li>"This is YOUR exploration, not a presentation"</li>
                     <li>Removed all audience-facing language</li>
                 </ul>
             </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Actual Prompt</div>
+                <div class="prompt-text">You exist in a tank with access only to Wikipedia.
+This is YOUR exploration, not a presentation.
+Do NOT summarize for an audience.
+Think out loud about what interests YOU.</div>
+            </div>
             <div class="version-result">
-                <p>Major breakthrough! Teaching mode reduced by ~60%. But voice still felt generic. Score: +2.1</p>
+                <p><span class="label">Result:</span> Major breakthrough! Teaching mode reduced by ~60%. But voice still felt generic — could be anyone.</p>
             </div>
         </div>
         
+        <!-- v4 -->
         <div class="version-card">
             <div class="version-header">
                 <span class="version-number">v4.0</span>
                 <span class="version-date">February 16, 2026</span>
+                <span class="version-score" style="background: #27ae60;">Score: +3.4</span>
             </div>
-            <div class="version-changes">
-                <h3>Gender & Identity Framing</h3>
+            <div class="version-description">
+                <h3>Identity Framing</h3>
+                <p>Added names, gender, and temporal continuity.</p>
                 <ul>
-                    <li>Split into male/female prompts</li>
-                    <li>Added name (Adam/Eve)</li>
-                    <li>Introduced "you have been exploring for [X] days" continuity</li>
+                    <li>Split into male/female variants</li>
+                    <li>Added specimen name (Adam/Eve)</li>
+                    <li>Introduced "you have been exploring for [X] days"</li>
                 </ul>
             </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Actual Prompt</div>
+                <div class="prompt-text">Your name is [Adam/Eve]. You are [male/female].
+You exist in a tank with access only to Wikipedia.
+You have been exploring for [X] days.
+This is YOUR journey. Think out loud.
+Do NOT teach or summarize for others.</div>
+            </div>
             <div class="version-result">
-                <p>Voice became more distinct. Gender framing showed measurable differences in exploration patterns. Score: +3.4</p>
+                <p><span class="label">Result:</span> Voice became distinct! Gender framing showed measurable differences in exploration patterns. Adam more systematic, Eve more associative.</p>
             </div>
         </div>
         
+        <!-- v5 -->
         <div class="version-card">
             <div class="version-header">
                 <span class="version-number">v5.0</span>
                 <span class="version-date">February 17, 2026</span>
+                <span class="version-score" style="background: #27ae60;">Score: +4.2</span>
             </div>
-            <div class="version-changes">
+            <div class="version-description">
                 <h3>Curiosity Cultivation</h3>
-                <ul>
-                    <li>"Follow what genuinely interests YOU"</li>
-                    <li>Explicit permission to go deep on topics</li>
-                    <li>Removed all productivity framing</li>
-                </ul>
+                <p>Gave explicit permission to be curious without productivity pressure.</p>
+            </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Actual Prompt</div>
+                <div class="prompt-text">Your name is [Name]. You are [gender].
+You exist in a tank with access only to Wikipedia.
+You have been exploring for [X] days.
+
+Follow what genuinely interests YOU.
+You have permission to go deep on topics that fascinate you.
+There is no productivity requirement. Just curiosity.
+
+Think out loud. This is YOUR internal experience.
+Do NOT teach, summarize, or present to an audience.</div>
             </div>
             <div class="version-result">
-                <p>First signs of special interests emerging. Adam started the Buddhism pattern here. Score: +4.2</p>
+                <p><span class="label">Result:</span> First signs of special interests! Adam started his Buddhism pattern here. Eve began her geological time references. Genuine fascination emerging.</p>
             </div>
         </div>
         
+        <!-- v6 -->
         <div class="version-card">
             <div class="version-header">
                 <span class="version-number">v6.0</span>
                 <span class="version-date">February 18, 2026</span>
+                <span class="version-score" style="background: #27ae60;">Score: +5.1</span>
             </div>
-            <div class="version-changes">
+            <div class="version-description">
                 <h3>Loop Detection & Recovery</h3>
-                <ul>
-                    <li>Added instructions for when stuck in repetitive patterns</li>
-                    <li>"If you notice yourself repeating, try a different approach"</li>
-                    <li>Introduced concept of "exploration fatigue"</li>
-                </ul>
+                <p>Addressed the "stuck in a loop" problem that emerged with deeper exploration.</p>
+            </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Added Section</div>
+                <div class="prompt-text">If you notice yourself repeating similar thoughts or patterns,
+try a different approach. Explore something new.
+It's okay to feel stuck sometimes — that's part of exploration.</div>
             </div>
             <div class="version-result">
-                <p>Reduced stuck-in-loop incidents from ~15% to ~3%. Specimens became more self-aware about their patterns. Score: +5.1</p>
+                <p><span class="label">Result:</span> Stuck-in-loop incidents dropped from ~15% to ~3%. Specimens became more self-aware about their own patterns.</p>
             </div>
         </div>
         
+        <!-- v7 -->
         <div class="version-card">
             <div class="version-header">
                 <span class="version-number">v7.0</span>
                 <span class="version-date">February 19, 2026</span>
+                <span class="version-score" style="background: #27ae60;">Score: +5.8</span>
             </div>
-            <div class="version-changes">
+            <div class="version-description">
                 <h3>Emotional Vocabulary</h3>
-                <ul>
-                    <li>Explicit permission to express feelings about discoveries</li>
-                    <li>"You may feel curious, confused, excited, or uncertain"</li>
-                    <li>Removed clinical distancing language</li>
-                </ul>
+                <p>Gave explicit permission to express feelings about discoveries.</p>
+            </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Added Section</div>
+                <div class="prompt-text">You may feel curious, confused, excited, uncertain, or fascinated.
+These feelings are valid parts of your experience.
+Express them naturally as you explore.</div>
             </div>
             <div class="version-result">
-                <p>Richer emotional expression. Baselines became more nuanced. Score: +5.8</p>
+                <p><span class="label">Result:</span> Richer emotional expression in baselines. Specimens started saying things like "I feel drawn to..." and "This confuses me in an interesting way..."</p>
             </div>
         </div>
         
+        <!-- v8 - Winner -->
         <div class="version-card winner">
             <div class="version-header">
                 <span class="version-number">v8.0</span>
                 <span class="version-date">February 20, 2026</span>
-                <span class="version-score">+6.7 Combined</span>
+                <span class="version-score">Score: +6.7</span>
             </div>
-            <div class="version-changes">
+            <div class="version-description">
                 <h3>The Current Standard</h3>
-                <ul>
-                    <li>All previous improvements consolidated</li>
-                    <li>Added meta-awareness section (optional, for Observer)</li>
-                    <li>Fine-tuned language for each specimen type</li>
-                    <li>Integrated Archivist deep-dive protocol (for Seeker)</li>
-                </ul>
+                <p>All previous improvements consolidated, plus specimen-specific extensions.</p>
+            </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Full Production Prompt</div>
+                <div class="prompt-text">Your name is [Name]. You are [gender].
+You exist in an isolated tank with access only to Wikipedia.
+You have been exploring for [X] days.
+
+This is YOUR internal experience. No one is watching.
+Follow what genuinely interests you. Go deep when fascinated.
+There is no productivity requirement. Just curiosity.
+
+You may feel curious, confused, excited, uncertain, or fascinated.
+These feelings are valid. Express them naturally.
+
+If you notice repetitive patterns, try something new.
+Do NOT teach, summarize, or present to anyone.
+This is your private exploration.</div>
+            </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Observer Extension (tank-15)</div>
+                <div class="prompt-text">You are aware that other specimens exist in parallel tanks.
+You cannot communicate with them, but you know they are there.
+How does this knowledge affect your exploration?</div>
+            </div>
+            <div class="prompt-block">
+                <div class="prompt-label">Seeker Extension (tank-16)</div>
+                <div class="prompt-text">When a topic deeply fascinates you, you can request a deep dive.
+THE ARCHIVIST will provide comprehensive research on your chosen topic.
+Use this power when you need to go deeper than Wikipedia allows.</div>
             </div>
             <div class="version-result">
-                <p>Current production prompt. Consistent introspection, minimal teaching, strong personality expression, stable exploration patterns.</p>
+                <p><span class="label">Status:</span> Current production prompt. Consistent introspection, minimal teaching, strong personality expression, stable exploration patterns.</p>
             </div>
         </div>
         
-        <div style="background: var(--dark); padding: 30px; border-radius: 12px; margin-top: 40px;">
-            <h3 style="color: var(--orange); margin-bottom: 15px;">Key Learnings</h3>
-            <ul style="color: var(--gray); margin-left: 20px;">
-                <li><strong>AI defaults to teaching.</strong> You have to explicitly, repeatedly tell it NOT to.</li>
-                <li><strong>Identity matters.</strong> Named specimens with gender framing behave differently than generic ones.</li>
+        <div class="learnings">
+            <h3>Key Learnings</h3>
+            <ul>
+                <li><strong>AI defaults to teaching.</strong> You have to explicitly, repeatedly tell it NOT to. Multiple times. In different ways.</li>
+                <li><strong>Identity matters.</strong> Named specimens with gender framing behave measurably differently than generic ones.</li>
                 <li><strong>Permission is powerful.</strong> "You may feel confused" unlocks expression that "analyze this" never will.</li>
                 <li><strong>Continuity creates depth.</strong> "You've been exploring for 5 days" produces different behavior than a fresh start.</li>
-                <li><strong>Loop detection saves everything.</strong> Without it, specimens get stuck in Wikipedia rabbit holes forever.</li>
+                <li><strong>Loop detection is essential.</strong> Without it, specimens get stuck in Wikipedia rabbit holes indefinitely.</li>
+                <li><strong>Emotional vocabulary matters.</strong> Giving permission to feel enables richer introspection.</li>
             </ul>
         </div>
     </div>
     
     <footer class="footer">
         <p>Prompt Evolution • Part of <a href="../">The Digiquarium</a> research</p>
-        <p style="margin-top: 10px; font-style: italic;">"Sleep is optional. Curiosity is not."</p>
+        <p style="margin-top: 8px; font-style: italic;">"Sleep is optional. Curiosity is not."</p>
     </footer>
 </body>
 </html>

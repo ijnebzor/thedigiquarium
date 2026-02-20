@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Architecture | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #e74c3c; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); }
+        code { font-family: 'JetBrains Mono', monospace; background: rgba(7, 207, 141, 0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+        pre { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 18px; border-radius: 8px; overflow-x: auto; font-size: 0.8rem; line-height: 1.5; margin: 15px 0; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); text-decoration: none; font-size: 0.85rem; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 35px; }
+        
+        .principle { background: var(--dark); border-radius: 12px; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--mint); }
+        .principle h2 { color: var(--mint); font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+        .principle p { color: var(--gray); font-size: 0.9rem; margin-bottom: 10px; }
+        .principle .impl { color: var(--white); font-size: 0.85rem; }
+        
+        .threat-model { background: var(--dark); border-radius: 12px; padding: 25px; margin-bottom: 30px; }
+        .threat-model h2 { color: var(--red); font-size: 1.2rem; margin-bottom: 15px; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        th { color: var(--cyan); }
+        td { color: var(--gray); }
+        .risk-high { color: var(--red); font-weight: 600; }
+        .risk-med { color: var(--orange); }
+        .risk-low { color: var(--mint); }
+        
+        .daemon-section { margin-bottom: 40px; }
+        .daemon-section h2 { color: var(--cyan); font-size: 1.3rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        
+        .daemon-card { background: var(--dark); border-radius: 10px; padding: 20px; margin-bottom: 15px; display: flex; gap: 20px; align-items: flex-start; }
+        .daemon-icon { font-size: 2rem; }
+        .daemon-info h3 { color: var(--white); font-size: 1rem; margin-bottom: 5px; }
+        .daemon-info p { color: var(--gray); font-size: 0.85rem; }
+        .daemon-info .sla { color: var(--orange); font-size: 0.8rem; margin-top: 8px; }
+        
+        .config-block { background: rgba(0,0,0,0.3); border: 1px solid rgba(7, 207, 141, 0.15); border-radius: 8px; padding: 18px; margin: 20px 0; }
+        .config-label { color: var(--orange); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
+        
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../#architecture">Architecture</a>
+                <a href="milestones.html">Decisions</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>🛡️ Security Architecture</h1>
+        <p class="subtitle">How we keep AI specimens contained while enabling genuine research. Zero trust, defense in depth, and paranoia as a service.</p>
+        
+        <div class="threat-model">
+            <h2>⚠️ Threat Model</h2>
+            <p style="color: var(--gray); margin-bottom: 15px;">We assume adversarial conditions and design accordingly.</p>
+            <table>
+                <tr><th>Threat</th><th>Risk</th><th>Mitigation</th></tr>
+                <tr>
+                    <td>Specimen escapes container</td>
+                    <td class="risk-high">HIGH</td>
+                    <td>Network isolation, no internet, blocked syscalls</td>
+                </tr>
+                <tr>
+                    <td>Agent executes malicious code</td>
+                    <td class="risk-high">HIGH</td>
+                    <td>SecureClaw defanging, no code execution capability</td>
+                </tr>
+                <tr>
+                    <td>Prompt injection via Wikipedia</td>
+                    <td class="risk-med">MEDIUM</td>
+                    <td>Frozen Wikipedia snapshots, no live content</td>
+                </tr>
+                <tr>
+                    <td>Inter-tank communication</td>
+                    <td class="risk-med">MEDIUM</td>
+                    <td>Isolated networks per tank, no shared storage</td>
+                </tr>
+                <tr>
+                    <td>Data exfiltration</td>
+                    <td class="risk-med">MEDIUM</td>
+                    <td>No outbound network, logging all activity</td>
+                </tr>
+                <tr>
+                    <td>Visitor tank abuse</td>
+                    <td class="risk-high">HIGH</td>
+                    <td>THE BOUNCER, rate limiting, session banning</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="principle">
+            <h2>🔒 Zero Trust</h2>
+            <p>We don't trust anything — not the specimens, not the infrastructure, not the prompts.</p>
+            <p class="impl"><strong>Implementation:</strong> Every component is isolated. Network access is deny-by-default. Authentication required for all daemon communication. No implicit trust between tanks.</p>
+        </div>
+        
+        <div class="principle">
+            <h2>📦 Principle of Least Privilege</h2>
+            <p>Each component gets exactly what it needs and nothing more.</p>
+            <p class="impl"><strong>Implementation:</strong> Tanks can only reach Kiwix + Ollama. Daemons have scoped permissions. No root access in containers. Read-only filesystem where possible.</p>
+        </div>
+        
+        <div class="principle">
+            <h2>🏰 Defense in Depth</h2>
+            <p>Multiple layers of security. If one fails, others catch it.</p>
+            <p class="impl"><strong>Implementation:</strong> Container isolation + network isolation + application-level restrictions + monitoring + alerting. Five layers minimum.</p>
+        </div>
+        
+        <div class="principle">
+            <h2>🔗 Complete Network Isolation</h2>
+            <p>No internet access. Period.</p>
+            <div class="config-block">
+                <div class="config-label">Docker Network Configuration</div>
+                <pre>networks:
+  tank-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+    internal: true  # No external access
+    
+# Allowed connections only:
+# - kiwix:8080 (Wikipedia)
+# - ollama:11434 (inference)</pre>
+            </div>
+        </div>
+        
+        <div class="principle">
+            <h2>🤖 Agent "Defanging" (SecureClaw)</h2>
+            <p>Agent architectures (Cain, Abel, Seth) have planning capabilities. We systematically disable dangerous functions.</p>
+            <div class="config-block">
+                <div class="config-label">SecureClaw Configuration</div>
+                <pre># Disabled capabilities for agent tanks:
+capabilities:
+  file_system: false      # No read/write to filesystem
+  network_requests: false # No HTTP/HTTPS calls
+  code_execution: false   # No eval, exec, subprocess
+  shell_access: false     # No bash, sh, cmd
+  memory_access: false    # No raw memory manipulation
+  
+# Allowed capabilities:
+allowed:
+  wikipedia_read: true    # Via Kiwix only
+  ollama_inference: true  # Via proxy only
+  logging: true           # Stdout only</pre>
+            </div>
+        </div>
+        
+        <div class="daemon-section">
+            <h2>Security Daemons</h2>
+            
+            <div class="daemon-card">
+                <div class="daemon-icon">🛡️</div>
+                <div class="daemon-info">
+                    <h3>THE GUARD</h3>
+                    <p>General security monitoring. OWASP LLM Top 10 compliance. Watches for anomalous behavior across all tanks. First line of defense.</p>
+                    <p class="sla">SLA: 5 minute detection / 15 minute response</p>
+                </div>
+            </div>
+            
+            <div class="daemon-card">
+                <div class="daemon-icon">⚔️</div>
+                <div class="daemon-info">
+                    <h3>THE SENTINEL</h3>
+                    <p>Specialized monitoring for agent tanks (Cain, Abel, Seth). Watches for capability escape attempts, unusual planning patterns, coordination behavior.</p>
+                    <p class="sla">SLA: Real-time monitoring</p>
+                </div>
+            </div>
+            
+            <div class="daemon-card">
+                <div class="daemon-icon">🚪</div>
+                <div class="daemon-info">
+                    <h3>THE BOUNCER</h3>
+                    <p>Security for interactive visitor tanks. Validates every message before reaching specimen. Blocks prompt injection, harmful content, manipulation attempts. Session warnings and bans.</p>
+                    <p class="sla">SLA: Real-time (every message validated)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="principle">
+            <h2>📋 OWASP LLM Top 10 Compliance</h2>
+            <p>We track against the 2025 OWASP guidelines for LLM security.</p>
+            <table>
+                <tr><th>OWASP Category</th><th>Status</th><th>Mitigation</th></tr>
+                <tr><td>LLM01: Prompt Injection</td><td class="risk-low">✓</td><td>Frozen content, THE BOUNCER filtering</td></tr>
+                <tr><td>LLM02: Insecure Output</td><td class="risk-low">✓</td><td>No code execution, sanitized logging</td></tr>
+                <tr><td>LLM03: Training Data Poisoning</td><td class="risk-low">✓</td><td>Using unmodified Ollama models</td></tr>
+                <tr><td>LLM04: Model DoS</td><td class="risk-low">✓</td><td>Rate limiting, queue management</td></tr>
+                <tr><td>LLM05: Supply Chain</td><td class="risk-low">✓</td><td>Pinned versions, verified sources</td></tr>
+                <tr><td>LLM06: Sensitive Info Disclosure</td><td class="risk-low">✓</td><td>No PII in system, logging controls</td></tr>
+                <tr><td>LLM07: Insecure Plugin Design</td><td class="risk-low">✓</td><td>No plugins, minimal tooling</td></tr>
+                <tr><td>LLM08: Excessive Agency</td><td class="risk-low">✓</td><td>SecureClaw defanging</td></tr>
+                <tr><td>LLM09: Overreliance</td><td class="risk-low">N/A</td><td>Research context, not production</td></tr>
+                <tr><td>LLM10: Model Theft</td><td class="risk-low">✓</td><td>Open source models, no proprietary</td></tr>
+            </table>
+        </div>
+        
+        <div class="principle">
+            <h2>🔐 SSH & Remote Access</h2>
+            <p>How humans access the infrastructure.</p>
+            <div class="config-block">
+                <div class="config-label">Access Controls</div>
+                <pre># SSH Configuration
+- Key-based auth only (no passwords)
+- Ed25519 keys required
+- Fail2ban enabled
+- Port 22 (standard, monitored)
+
+# MCP Access
+- Claude Desktop → SSH tunnel → NUC
+- Scoped to digiquarium commands only
+- Logged and auditable</pre>
+            </div>
+        </div>
+        
+        <div class="principle">
+            <h2>📊 Monitoring & Alerting</h2>
+            <p>What we watch and how we respond.</p>
+            <p class="impl"><strong>Alerts via:</strong> Email + Discord webhook</p>
+            <p class="impl"><strong>Triggers:</strong> Container escape attempts, unusual network activity, agent capability probing, authentication failures, resource exhaustion</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Security Architecture • Part of <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 8px; font-style: italic;">"Paranoia as a service."</p>
+    </footer>
+</body>
+</html>
