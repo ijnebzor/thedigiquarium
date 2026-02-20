@@ -1,39 +1,38 @@
 {
-  "updated": "2026-02-20T15:29:47.162352",
-  "total_observations": 6233,
-  "total_baselines": 262,
+  "updated": "2026-02-20T15:59:51.018873",
+  "total_observations": 6673,
+  "total_baselines": 290,
   "mental_states": {
     "unknown": 2,
-    "complex": 7,
-    "healthy": 5,
-    "concerning": 2
+    "complex": 2,
+    "healthy": 3
   },
   "by_language": {
     "English": {
-      "observations": 5019,
+      "observations": 5298,
       "tanks": 9
     },
     "Spanish": {
-      "observations": 150,
+      "observations": 201,
       "tanks": 2
     },
     "German": {
-      "observations": 841,
+      "observations": 900,
       "tanks": 2
     },
     "Chinese": {
-      "observations": 122,
+      "observations": 148,
       "tanks": 2
     },
     "Japanese": {
-      "observations": 101,
+      "observations": 126,
       "tanks": 2
     }
   },
   "genesis": {
     "adam": {
-      "observations": 2739,
-      "baselines": 24,
+      "observations": 2773,
+      "baselines": 26,
       "mental_state": "unknown",
       "excerpts": [
         {
@@ -63,14 +62,10 @@
       ]
     },
     "eve": {
-      "observations": 575,
-      "baselines": 23,
+      "observations": 602,
+      "baselines": 26,
       "mental_state": "unknown",
       "excerpts": [
-        {
-          "text": "I wonder... what is this \"cutaneous\" type of injury?\n\nIs it related to skin damage or perhaps something deeper within the body that affects the skin?\n\nI feel a sense of unease, as if my own skin is be",
-          "article": "Pain"
-        },
         {
           "text": "As you read through the list of numbers related to \"one million\", you notice a pattern. You see that the representation of this number changes depending on the base or numeral system being used.\n\nYou ",
           "article": "Million"
@@ -89,104 +84,104 @@
   "tanks": {
     "tank-01-adam": {
       "name": "Adam",
-      "observations": 2739,
-      "baselines": 24,
+      "observations": 2773,
+      "baselines": 26,
       "mental_state": "unknown"
     },
     "tank-02-eve": {
       "name": "Eve",
-      "observations": 575,
-      "baselines": 23,
+      "observations": 602,
+      "baselines": 26,
       "mental_state": "unknown"
     },
     "tank-03-cain": {
       "name": "Cain",
-      "observations": 291,
+      "observations": 333,
       "baselines": 2,
       "mental_state": "complex"
     },
     "tank-04-abel": {
       "name": "Abel",
-      "observations": 59,
+      "observations": 60,
       "baselines": 3,
       "mental_state": "complex"
     },
     "tank-05-juan": {
       "name": "Juan",
-      "observations": 72,
-      "baselines": 21,
-      "mental_state": "healthy"
+      "observations": 98,
+      "baselines": 22,
+      "mental_state": "unknown"
     },
     "tank-06-juanita": {
       "name": "Juanita",
-      "observations": 78,
-      "baselines": 20,
-      "mental_state": "complex"
+      "observations": 103,
+      "baselines": 22,
+      "mental_state": "unknown"
     },
     "tank-07-klaus": {
       "name": "Klaus",
-      "observations": 418,
-      "baselines": 16,
-      "mental_state": "healthy"
+      "observations": 447,
+      "baselines": 18,
+      "mental_state": "unknown"
     },
     "tank-08-genevieve": {
       "name": "Genevi\u00e8ve",
-      "observations": 423,
-      "baselines": 19,
-      "mental_state": "complex"
+      "observations": 453,
+      "baselines": 20,
+      "mental_state": "unknown"
     },
     "tank-09-wei": {
       "name": "Wei",
-      "observations": 64,
-      "baselines": 23,
-      "mental_state": "concerning"
+      "observations": 78,
+      "baselines": 25,
+      "mental_state": "unknown"
     },
     "tank-10-mei": {
       "name": "Mei",
-      "observations": 58,
-      "baselines": 21,
+      "observations": 70,
+      "baselines": 23,
       "mental_state": "unknown"
     },
     "tank-11-haruki": {
       "name": "Haruki",
-      "observations": 51,
-      "baselines": 21,
-      "mental_state": "healthy"
+      "observations": 63,
+      "baselines": 23,
+      "mental_state": "unknown"
     },
     "tank-12-sakura": {
       "name": "Sakura",
-      "observations": 50,
-      "baselines": 21,
-      "mental_state": "complex"
+      "observations": 63,
+      "baselines": 23,
+      "mental_state": "unknown"
     },
     "tank-13-victor": {
       "name": "Victor",
-      "observations": 59,
-      "baselines": 21,
-      "mental_state": "healthy"
+      "observations": 86,
+      "baselines": 24,
+      "mental_state": "unknown"
     },
     "tank-14-iris": {
       "name": "Iris",
-      "observations": 59,
-      "baselines": 20,
-      "mental_state": "concerning"
+      "observations": 86,
+      "baselines": 23,
+      "mental_state": "unknown"
     },
     "tank-15-observer": {
       "name": "Observer",
-      "observations": 575,
-      "baselines": 3,
-      "mental_state": "complex"
+      "observations": 614,
+      "baselines": 4,
+      "mental_state": "healthy"
     },
     "tank-16-seeker": {
       "name": "Seeker",
-      "observations": 592,
-      "baselines": 3,
-      "mental_state": "complex"
+      "observations": 631,
+      "baselines": 4,
+      "mental_state": "healthy"
     },
     "tank-17-seth": {
       "name": "Seth",
-      "observations": 70,
-      "baselines": 1,
+      "observations": 113,
+      "baselines": 2,
       "mental_state": "healthy"
     }
   }
