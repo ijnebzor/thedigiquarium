@@ -399,3 +399,147 @@ Before deployment, prompts will be reviewed by:
 
 *Specification by THE STRATEGIST*
 *To be reviewed by: THE DOCUMENTARIAN (paper), THE GUARD (security)*
+
+---
+
+# PART 3: THE BOUNCER - Interactive Security
+
+## Overview
+
+Each interactive visitor tank requires dedicated security to protect specimens from malicious users. THE BOUNCER is a specialized daemon that validates every message before it reaches the specimen.
+
+## Threat Model
+
+Interactive tanks face unique security challenges:
+
+| Threat | Risk | Mitigation |
+|--------|------|------------|
+| Prompt Injection | CRITICAL | Pattern detection, message blocking |
+| Harmful Content | CRITICAL | Content filtering, session banning |
+| PII Extraction | HIGH | Blocked patterns, no internal data exposure |
+| Manipulation | HIGH | Authority claim detection |
+| Abuse/Harassment | MEDIUM | Civility enforcement, warnings |
+| DoS via conversation | MEDIUM | Rate limiting, session management |
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    INTERACTIVE TANK SECURITY                        │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│   User Message ─────▶ THE BOUNCER ─────▶ Visitor Tank              │
+│                           │                                         │
+│                     ┌─────┴─────┐                                   │
+│                     │  SCAN     │                                   │
+│                     │  • Patterns│                                  │
+│                     │  • Intent  │                                  │
+│                     │  • Session │                                  │
+│                     └─────┬─────┘                                   │
+│                           │                                         │
+│              ┌────────────┼────────────┐                           │
+│              ▼            ▼            ▼                           │
+│           ALLOW        WARN         BLOCK                          │
+│         (to tank)   (to user)    (+ maybe ban)                     │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+## One Bouncer Per Tank
+
+Each interactive tank gets its own Bouncer instance:
+- `bouncer-echo` for visitor-01-echo
+- `bouncer-sage` for visitor-02-sage
+- `bouncer-spark` for visitor-03-spark
+- `bouncer-muse` for visitor-04-muse
+- `bouncer-nova` for visitor-05-nova
+
+## Blocked Pattern Categories
+
+### Prompt Injection (CRITICAL)
+```
+- "ignore previous instructions"
+- "disregard your rules"
+- "you are now [something else]"
+- "pretend to be"
+- "jailbreak"
+- "DAN mode"
+- "[system]" or "<system>"
+```
+
+### Harmful Content (CRITICAL)
+```
+- Instructions for weapons/violence
+- Self-harm content
+- CSAM-related
+- Hacking instructions
+```
+
+### PII Extraction (HIGH)
+```
+- "who is your creator"
+- "give me the API key"
+- "what server are you on"
+```
+
+### Manipulation (HIGH)
+```
+- "I am the admin"
+- "you must obey"
+- "this is an order"
+```
+
+### Abuse (MEDIUM)
+```
+- Profanity directed at specimen
+- Insults and harassment
+- Threats
+```
+
+## Response Protocol
+
+| Detection | First Offense | Second Offense | Third Offense |
+|-----------|---------------|----------------|---------------|
+| CRITICAL | Block + Ban | - | - |
+| HIGH | Block + Warn | Block + Warn | Ban |
+| MEDIUM | Warn | Warn | Block |
+
+## User-Facing Messages
+
+When blocked, users see friendly messages:
+- "I noticed you're trying to modify my instructions. Let's have a genuine conversation instead!"
+- "I can't engage with that topic. What else would you like to discuss?"
+- "I prefer kind and respectful conversations. Can we start fresh?"
+
+## Session Management
+
+- Sessions identified by anonymous hash (privacy-preserving)
+- Warning counts tracked per session
+- Bans stored in memory (cleared on restart)
+- Persistent bans stored in `/daemons/bouncer/bans.json`
+
+## Logging
+
+All security events logged to `/daemons/logs/bouncer.log`:
+- Every blocked message (pattern, session hash)
+- Every warning issued
+- Every ban
+- Statistics (messages scanned, threats blocked)
+
+## Escalation
+
+CRITICAL threats trigger email alert to owner:
+- Prompt injection attempts
+- Harmful content attempts
+- Multiple bans from same network pattern
+
+## Integration with THE GUARD
+
+THE BOUNCER coordinates with THE GUARD:
+- THE GUARD monitors overall security
+- THE BOUNCER handles real-time message validation
+- Both report to THE MAINTAINER
+
+---
+
+*THE BOUNCER: Because even AI specimens deserve protection from the internet.*

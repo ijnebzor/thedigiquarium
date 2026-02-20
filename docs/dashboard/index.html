@@ -16,12 +16,8 @@
             --gray: #8899a6;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--black);
-            color: var(--white);
-            min-height: 100vh;
-        }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); min-height: 100vh; }
+        
         .header {
             background: var(--dark);
             padding: 20px 30px;
@@ -36,11 +32,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .status {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+        .status { display: flex; align-items: center; gap: 10px; }
         .status-dot {
             width: 10px;
             height: 10px;
@@ -49,35 +41,53 @@
             animation: pulse 2s infinite;
         }
         .status-dot.online { background: var(--mint); }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .nav-link {
-            color: var(--cyan);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .nav-link { color: var(--cyan); text-decoration: none; font-size: 0.9rem; margin-left: 20px; }
         .nav-link:hover { color: var(--mint); }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 30px;
+        
+        .view-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            border-bottom: 1px solid rgba(7, 207, 141, 0.1);
         }
-        .grid {
+        .toggle-btn {
+            background: var(--dark);
+            border: 1px solid rgba(7, 207, 141, 0.2);
+            color: var(--gray);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .toggle-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+        .toggle-btn.active { background: var(--mint); color: var(--black); border-color: var(--mint); }
+        
+        .container { max-width: 1600px; margin: 0 auto; padding: 30px; }
+        
+        /* Grid View */
+        .grid-view {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
         }
+        
         .tank-panel {
             background: var(--dark);
             border: 1px solid rgba(7, 207, 141, 0.1);
             border-radius: 12px;
             overflow: hidden;
             transition: all 0.3s;
+            position: relative;
         }
         .tank-panel:hover { border-color: var(--mint); }
         .tank-panel.agent { border-color: rgba(254, 101, 0, 0.3); }
+        .tank-panel.sleeping { opacity: 0.6; }
+        .tank-panel.interactive { border-color: rgba(7, 221, 231, 0.5); }
+        
         .tank-header {
             padding: 15px 20px;
             display: flex;
@@ -86,23 +96,34 @@
             border-bottom: 1px solid rgba(7, 207, 141, 0.1);
         }
         .tank-name { font-weight: 600; font-size: 1.1rem; }
-        .tank-lang {
-            font-size: 0.75rem;
+        .tank-status {
+            font-size: 0.7rem;
             padding: 4px 10px;
             border-radius: 12px;
-            background: rgba(7, 221, 231, 0.1);
-            color: var(--cyan);
         }
-        .tank-lang.es { background: rgba(255, 215, 0, 0.1); color: #FFD700; }
-        .tank-lang.de { background: rgba(255, 105, 180, 0.1); color: #FF69B4; }
-        .tank-lang.zh { background: rgba(255, 107, 107, 0.1); color: #FF6B6B; }
-        .tank-lang.ja { background: rgba(78, 205, 196, 0.1); color: #4ECDC4; }
-        .tank-body { padding: 20px; }
-        .tank-article {
-            font-size: 0.85rem;
+        .tank-status.active { background: rgba(7, 207, 141, 0.15); color: var(--mint); }
+        .tank-status.sleeping { background: rgba(136, 153, 166, 0.15); color: var(--gray); }
+        .tank-status.interactive { background: rgba(7, 221, 231, 0.15); color: var(--cyan); }
+        
+        .expand-btn {
+            position: absolute;
+            top: 12px;
+            right: 50px;
+            background: rgba(0,0,0,0.5);
+            border: none;
             color: var(--gray);
-            margin-bottom: 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: all 0.3s;
         }
+        .tank-panel:hover .expand-btn { opacity: 1; }
+        .expand-btn:hover { color: var(--cyan); }
+        
+        .tank-body { padding: 20px; min-height: 150px; }
+        .tank-article { font-size: 0.85rem; color: var(--gray); margin-bottom: 15px; }
         .tank-article strong { color: var(--cyan); }
         .tank-thought {
             font-family: 'JetBrains Mono', monospace;
@@ -115,6 +136,23 @@
             max-height: 120px;
             overflow-y: auto;
         }
+        
+        /* Sleeping State */
+        .sleep-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            color: var(--gray);
+        }
+        .sleep-icon { font-size: 2rem; margin-bottom: 10px; animation: float 3s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .sleep-text { font-size: 0.9rem; font-style: italic; }
+        
         .tank-footer {
             padding: 10px 20px;
             border-top: 1px solid rgba(7, 207, 141, 0.1);
@@ -123,115 +161,329 @@
             font-size: 0.75rem;
             color: var(--gray);
         }
-        .translation-badge {
-            background: var(--orange);
-            color: var(--white);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.65rem;
-            margin-left: 5px;
+        
+        /* Fullscreen Mode */
+        .fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--black);
+            z-index: 1000;
+            padding: 20px;
         }
+        .fullscreen-overlay.active { display: flex; flex-direction: column; }
+        
+        .fullscreen-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid rgba(7, 207, 141, 0.2);
+        }
+        .fullscreen-title { font-size: 2rem; font-weight: 600; }
+        .fullscreen-close {
+            background: var(--orange);
+            border: none;
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .fullscreen-content {
+            flex-grow: 1;
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            overflow: hidden;
+        }
+        .fullscreen-main {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+        .fullscreen-sidebar {
+            flex: 1;
+            background: var(--dark);
+            border-radius: 12px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .fullscreen-thought-stream {
+            flex-grow: 1;
+            background: var(--dark);
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.8;
+            overflow-y: auto;
+        }
+        .fullscreen-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .fullscreen-stat { text-align: center; }
+        .fullscreen-stat-value { font-size: 2rem; font-weight: 700; color: var(--mint); }
+        .fullscreen-stat-label { font-size: 0.85rem; color: var(--gray); }
+        
+        /* Interactive Tank Section */
+        .section-divider {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(7, 221, 231, 0.2);
+            margin-top: 40px;
+        }
+        .section-divider h2 {
+            color: var(--cyan);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .section-divider p { color: var(--gray); font-size: 0.9rem; }
+        .coming-soon-badge {
+            display: inline-block;
+            background: rgba(254, 101, 0, 0.15);
+            color: var(--orange);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+        }
+        
         .footer {
             text-align: center;
             padding: 30px;
             color: var(--gray);
             font-size: 0.85rem;
+            border-top: 1px solid rgba(7, 207, 141, 0.1);
         }
         .footer a { color: var(--cyan); text-decoration: none; }
-        #offline-notice {
-            display: none;
-            background: var(--orange);
-            color: var(--white);
-            padding: 15px;
-            text-align: center;
-            font-weight: 600;
-        }
     </style>
 </head>
 <body>
-    <div id="offline-notice">⚠️ Tanks are currently offline for maintenance. Live data unavailable.</div>
     <header class="header">
-        <h1>🌊 The Digiquarium Live Tank View</h1>
+        <h1>🌊 Live Tank View</h1>
         <div class="status">
             <div class="status-dot" id="status-dot"></div>
             <span id="status-text">Connecting...</span>
-            <a href="../" class="nav-link">← Back to Home</a>
+            <a href="../" class="nav-link">← Home</a>
+            <a href="../blog/" class="nav-link">Blog</a>
         </div>
     </header>
-    <div class="container">
-        <div class="grid" id="tank-grid"></div>
+    
+    <div class="view-toggle">
+        <button class="toggle-btn active" onclick="setView('all')">All Tanks</button>
+        <button class="toggle-btn" onclick="setView('control')">Control</button>
+        <button class="toggle-btn" onclick="setView('agents')">Agents</button>
+        <button class="toggle-btn" onclick="setView('language')">Languages</button>
+        <button class="toggle-btn" onclick="setView('special')">Special</button>
     </div>
+    
+    <div class="container">
+        <div class="grid-view" id="tank-grid"></div>
+        
+        <!-- Interactive Section (Coming Soon) -->
+        <div class="section-divider">
+            <h2>🎭 Interactive Specimens</h2>
+            <p>Soon you'll be able to converse with visitor specimens in real-time.</p>
+            <span class="coming-soon-badge">Coming Soon</span>
+        </div>
+    </div>
+    
+    <!-- Fullscreen Overlay -->
+    <div class="fullscreen-overlay" id="fullscreen">
+        <div class="fullscreen-header">
+            <div>
+                <span class="fullscreen-title" id="fs-name">Adam</span>
+                <span id="fs-status" style="margin-left: 15px; font-size: 0.9rem; color: var(--gray);"></span>
+            </div>
+            <button class="fullscreen-close" onclick="closeFullscreen()">✕ Close</button>
+        </div>
+        <div class="fullscreen-content">
+            <div class="fullscreen-main">
+                <div class="fullscreen-thought-stream" id="fs-thoughts">
+                    Loading thoughts...
+                </div>
+                <div class="fullscreen-stats">
+                    <div class="fullscreen-stat">
+                        <div class="fullscreen-stat-value" id="fs-traces">0</div>
+                        <div class="fullscreen-stat-label">Thinking Traces</div>
+                    </div>
+                    <div class="fullscreen-stat">
+                        <div class="fullscreen-stat-value" id="fs-baselines">0</div>
+                        <div class="fullscreen-stat-label">Baselines</div>
+                    </div>
+                    <div class="fullscreen-stat">
+                        <div class="fullscreen-stat-value" id="fs-articles">0</div>
+                        <div class="fullscreen-stat-label">Articles Read</div>
+                    </div>
+                </div>
+            </div>
+            <div class="fullscreen-sidebar">
+                <h3 style="margin-bottom: 15px; color: var(--cyan);">Current Article</h3>
+                <p id="fs-article" style="font-size: 1.1rem; margin-bottom: 20px;">Loading...</p>
+                
+                <h3 style="margin-bottom: 15px; color: var(--cyan);">Recent Path</h3>
+                <div id="fs-path" style="font-size: 0.85rem; color: var(--gray);"></div>
+            </div>
+        </div>
+    </div>
+    
     <footer class="footer">
         <p>Data updates every 5 seconds • <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
+        <p style="margin-top: 10px;">Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a></p>
     </footer>
+
     <script>
-        const tanks = [
-            {id: 'tank-01-adam', name: 'Adam', lang: 'EN', type: 'control'},
-            {id: 'tank-02-eve', name: 'Eve', lang: 'EN', type: 'control'},
-            {id: 'tank-03-cain', name: 'Cain', lang: 'EN', type: 'agent'},
-            {id: 'tank-04-abel', name: 'Abel', lang: 'EN', type: 'agent'},
-            {id: 'tank-05-juan', name: 'Juan', lang: 'ES', type: 'language'},
-            {id: 'tank-06-juanita', name: 'Juanita', lang: 'ES', type: 'language'},
-            {id: 'tank-07-klaus', name: 'Klaus', lang: 'DE', type: 'language'},
-            {id: 'tank-08-genevieve', name: 'Genevieve', lang: 'DE', type: 'language'},
-            {id: 'tank-09-wei', name: 'Wei', lang: 'ZH', type: 'language'},
-            {id: 'tank-10-mei', name: 'Mei', lang: 'ZH', type: 'language'},
-            {id: 'tank-11-haruki', name: 'Haruki', lang: 'JA', type: 'language'},
-            {id: 'tank-12-sakura', name: 'Sakura', lang: 'JA', type: 'language'},
-            {id: 'tank-13-victor', name: 'Victor', lang: 'EN', type: 'visual'},
-            {id: 'tank-14-iris', name: 'Iris', lang: 'EN', type: 'visual'},
-            {id: 'tank-15-observer', name: 'Observer', lang: 'EN', type: 'special'},
-            {id: 'tank-16-seeker', name: 'Seeker', lang: 'EN', type: 'special'},
-            {id: 'tank-17-seth', name: 'Seth', lang: 'EN', type: 'agent'}
+        const sleepingMessages = [
+            { icon: '💤', text: 'Sleeping...' },
+            { icon: '🌙', text: 'Dreaming of Wikipedia...' },
+            { icon: '✨', text: 'Processing memories...' },
+            { icon: '🌌', text: 'In deep thought...' },
+            { icon: '🔮', text: 'Contemplating existence...' },
+            { icon: '🌊', text: 'Drifting through knowledge...' }
         ];
         
-        function createTankPanel(tank) {
-            const langClass = tank.lang.toLowerCase();
+        const tanks = [
+            {id: 'tank-01-adam', name: 'Adam', lang: 'EN', type: 'control', gender: 'Male'},
+            {id: 'tank-02-eve', name: 'Eve', lang: 'EN', type: 'control', gender: 'Female'},
+            {id: 'tank-03-cain', name: 'Cain', lang: 'EN', type: 'agent', arch: 'OpenClaw'},
+            {id: 'tank-04-abel', name: 'Abel', lang: 'EN', type: 'agent', arch: 'ZeroClaw'},
+            {id: 'tank-05-juan', name: 'Juan', lang: 'ES', type: 'language', gender: 'Male'},
+            {id: 'tank-06-juanita', name: 'Juanita', lang: 'ES', type: 'language', gender: 'Female'},
+            {id: 'tank-07-klaus', name: 'Klaus', lang: 'DE', type: 'language', gender: 'Male'},
+            {id: 'tank-08-genevieve', name: 'Genevieve', lang: 'DE', type: 'language', gender: 'Female'},
+            {id: 'tank-09-wei', name: 'Wei', lang: 'ZH', type: 'language', gender: 'Male'},
+            {id: 'tank-10-mei', name: 'Mei', lang: 'ZH', type: 'language', gender: 'Female'},
+            {id: 'tank-11-haruki', name: 'Haruki', lang: 'JA', type: 'language', gender: 'Male'},
+            {id: 'tank-12-sakura', name: 'Sakura', lang: 'JA', type: 'language', gender: 'Female'},
+            {id: 'tank-13-victor', name: 'Victor', lang: 'EN', type: 'special', special: 'Visual'},
+            {id: 'tank-14-iris', name: 'Iris', lang: 'EN', type: 'special', special: 'Visual'},
+            {id: 'tank-15-observer', name: 'Observer', lang: 'EN', type: 'special', special: 'Meta-Aware'},
+            {id: 'tank-16-seeker', name: 'Seeker', lang: 'EN', type: 'special', special: 'Deep Dive'},
+            {id: 'tank-17-seth', name: 'Seth', lang: 'EN', type: 'agent', arch: 'Picobot'}
+        ];
+        
+        let currentView = 'all';
+        let tankStates = {}; // Will track active/sleeping state
+        
+        function getSleepingMessage() {
+            return sleepingMessages[Math.floor(Math.random() * sleepingMessages.length)];
+        }
+        
+        function createTankPanel(tank, isActive = false) {
             const isAgent = tank.type === 'agent';
+            const isSleeping = !isActive;
+            const sleep = getSleepingMessage();
+            
+            let statusClass = isSleeping ? 'sleeping' : 'active';
+            let statusText = isSleeping ? sleep.text : 'Active';
+            
+            let bodyContent;
+            if (isSleeping) {
+                bodyContent = `
+                    <div class="sleep-state">
+                        <div class="sleep-icon">${sleep.icon}</div>
+                        <div class="sleep-text">${sleep.text}</div>
+                    </div>
+                `;
+            } else {
+                bodyContent = `
+                    <div class="tank-article">Reading: <strong>Loading...</strong></div>
+                    <div class="tank-thought">Waiting for thoughts...</div>
+                `;
+            }
+            
+            let subInfo = tank.arch ? `<span style="color: var(--cyan); font-size: 0.75rem;">${tank.arch}</span>` : 
+                          tank.special ? `<span style="color: #3498DB; font-size: 0.75rem;">${tank.special}</span>` : '';
+            
             return `
-                <div class="tank-panel ${isAgent ? 'agent' : ''}" id="${tank.id}">
+                <div class="tank-panel ${isAgent ? 'agent' : ''} ${isSleeping ? 'sleeping' : ''}" 
+                     id="${tank.id}" data-type="${tank.type}">
+                    <button class="expand-btn" onclick="openFullscreen('${tank.id}')">⛶ Fullscreen</button>
                     <div class="tank-header">
-                        <span class="tank-name">${tank.name}</span>
-                        <span class="tank-lang ${langClass}">${tank.lang}</span>
+                        <div>
+                            <span class="tank-name">${tank.name}</span>
+                            ${subInfo}
+                        </div>
+                        <span class="tank-status ${statusClass}">${statusText}</span>
                     </div>
                     <div class="tank-body">
-                        <div class="tank-article">Reading: <strong>Waiting for data...</strong></div>
-                        <div class="tank-thought">No thoughts yet...</div>
+                        ${bodyContent}
                     </div>
                     <div class="tank-footer">
-                        <span>Entries: 0</span>
+                        <span>${tank.lang} • ${tank.gender || 'Neutral'}</span>
                         <span>Last update: --</span>
                     </div>
                 </div>
             `;
         }
         
-        const grid = document.getElementById('tank-grid');
-        tanks.forEach(tank => grid.innerHTML += createTankPanel(tank));
-        
-        // Show offline notice and update status
-        document.getElementById('offline-notice').style.display = 'block';
-        document.getElementById('status-text').textContent = 'Tanks Offline';
-        document.getElementById('status-dot').classList.remove('online');
-        
-        // When tanks come online, this would fetch from /streams/unified.json
-        async function updateData() {
-            try {
-                const response = await fetch('../streams/unified.json');
-                if (response.ok) {
-                    const data = await response.json();
-                    document.getElementById('offline-notice').style.display = 'none';
-                    document.getElementById('status-text').textContent = 'Live';
-                    document.getElementById('status-dot').classList.add('online');
-                    // Update tank panels with data
-                }
-            } catch (e) {
-                // Tanks offline
-            }
+        function renderTanks() {
+            const grid = document.getElementById('tank-grid');
+            const filtered = currentView === 'all' ? tanks : 
+                            currentView === 'agents' ? tanks.filter(t => t.type === 'agent') :
+                            tanks.filter(t => t.type === currentView);
+            
+            grid.innerHTML = filtered.map(tank => createTankPanel(tank, tankStates[tank.id])).join('');
         }
         
-        setInterval(updateData, 5000);
-        updateData();
+        function setView(view) {
+            currentView = view;
+            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderTanks();
+        }
+        
+        function openFullscreen(tankId) {
+            const tank = tanks.find(t => t.id === tankId);
+            if (!tank) return;
+            
+            document.getElementById('fs-name').textContent = tank.name;
+            document.getElementById('fs-status').textContent = tank.arch || tank.special || `${tank.lang} • ${tank.gender}`;
+            document.getElementById('fullscreen').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Would load actual data here
+            document.getElementById('fs-thoughts').innerHTML = tankStates[tankId] ? 
+                'Live thoughts would appear here...' : 
+                `<div style="text-align: center; padding: 50px; color: var(--gray);">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🌙</div>
+                    <div style="font-size: 1.2rem;">This specimen is currently sleeping...</div>
+                    <div style="margin-top: 10px; font-style: italic;">Dreams and memories being processed</div>
+                </div>`;
+        }
+        
+        function closeFullscreen() {
+            document.getElementById('fullscreen').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Initialize
+        document.getElementById('status-text').textContent = 'Tanks Sleeping';
+        document.getElementById('status-dot').classList.remove('online');
+        renderTanks();
+        
+        // Rotate sleeping messages every 10 seconds
+        setInterval(() => {
+            document.querySelectorAll('.sleep-state').forEach(el => {
+                const sleep = getSleepingMessage();
+                el.innerHTML = `
+                    <div class="sleep-icon">${sleep.icon}</div>
+                    <div class="sleep-text">${sleep.text}</div>
+                `;
+            });
+        }, 10000);
+        
+        // ESC to close fullscreen
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeFullscreen();
+        });
     </script>
 </body>
 </html>

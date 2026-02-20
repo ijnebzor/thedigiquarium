@@ -74,7 +74,7 @@
         }
         .nav a { color: var(--white); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
         .nav a:hover { color: var(--cyan); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 80px 20px; }
         .section { margin-bottom: 100px; }
         .section-header { text-align: center; margin-bottom: 50px; }
         .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--white); }
@@ -91,41 +91,81 @@
         .card h3 { color: var(--cyan); margin-bottom: 15px; font-size: 1.2rem; }
         .card p { color: var(--gray); font-size: 0.95rem; }
         
-        /* Specimen Profile Cards */
-        .specimen-profiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .profile-card {
+        /* Specimen Grid - EXACTLY 4 columns, even rows */
+        .specimen-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        @media (max-width: 1200px) { .specimen-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 900px) { .specimen-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .specimen-grid { grid-template-columns: 1fr; } }
+        
+        .specimen-card {
             background: var(--dark);
             border: 1px solid rgba(7, 207, 141, 0.15);
             border-radius: 12px;
-            padding: 25px;
+            padding: 20px;
             transition: all 0.3s;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
         }
-        .profile-card:hover { border-color: var(--mint); transform: translateY(-3px); }
-        .profile-card.agent { border-color: rgba(254, 101, 0, 0.3); }
-        .profile-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .profile-name { font-size: 1.3rem; font-weight: 600; }
-        .profile-badge {
-            font-size: 0.7rem;
-            padding: 4px 10px;
-            border-radius: 12px;
+        .specimen-card:hover { border-color: var(--mint); transform: translateY(-3px); }
+        .specimen-card.control { border-left: 3px solid var(--mint); }
+        .specimen-card.agent { border-left: 3px solid var(--orange); }
+        .specimen-card.spanish { border-left: 3px solid #FFD700; }
+        .specimen-card.german { border-left: 3px solid #FF69B4; }
+        .specimen-card.chinese { border-left: 3px solid #FF6B6B; }
+        .specimen-card.japanese { border-left: 3px solid #4ECDC4; }
+        .specimen-card.visual { border-left: 3px solid #9B59B6; }
+        .specimen-card.meta { border-left: 3px solid #3498DB; }
+        .specimen-card.deep { border-left: 3px solid #1ABC9C; }
+        .specimen-card.coming-soon { 
+            border: 1px dashed rgba(7, 207, 141, 0.2);
+            opacity: 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .specimen-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .specimen-name { font-size: 1.2rem; font-weight: 600; }
+        .specimen-badge {
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            border-radius: 10px;
             background: rgba(7, 207, 141, 0.15);
             color: var(--mint);
+            white-space: nowrap;
         }
-        .profile-card.agent .profile-badge { background: rgba(254, 101, 0, 0.15); color: var(--orange); }
-        .profile-lang { font-size: 0.85rem; color: var(--gray); margin-bottom: 15px; }
-        .profile-finding {
+        .specimen-card.agent .specimen-badge { background: rgba(254, 101, 0, 0.15); color: var(--orange); }
+        .specimen-card.visual .specimen-badge { background: rgba(155, 89, 182, 0.15); color: #9B59B6; }
+        .specimen-card.meta .specimen-badge, .specimen-card.deep .specimen-badge { background: rgba(52, 152, 219, 0.15); color: #3498DB; }
+        
+        .specimen-meta { font-size: 0.8rem; color: var(--gray); margin-bottom: 12px; }
+        .specimen-arch { font-size: 0.75rem; color: var(--cyan); font-style: italic; margin-bottom: 10px; }
+        .specimen-finding {
             background: rgba(0,0,0,0.3);
-            border-radius: 8px;
-            padding: 15px;
-            font-size: 0.9rem;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 0.85rem;
             color: var(--white);
-            line-height: 1.5;
+            line-height: 1.4;
+            flex-grow: 1;
         }
-        .profile-finding-label { font-size: 0.75rem; color: var(--cyan); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
-        .profile-stats { display: flex; gap: 20px; margin-top: 15px; font-size: 0.8rem; color: var(--gray); }
+        .specimen-stats { display: flex; gap: 15px; margin-top: 10px; font-size: 0.75rem; color: var(--gray); }
         
         /* Team Section */
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .team-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+        }
+        @media (max-width: 1200px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } }
+        
         .team-card {
             background: var(--dark);
             border: 1px solid rgba(7, 207, 141, 0.1);
@@ -133,7 +173,12 @@
             padding: 25px;
             text-align: center;
         }
-        .team-card.lead { border-color: var(--orange); background: linear-gradient(180deg, rgba(254,101,0,0.1) 0%, var(--dark) 100%); }
+        .team-card.lead { 
+            border-color: var(--orange); 
+            background: linear-gradient(180deg, rgba(254,101,0,0.1) 0%, var(--dark) 100%); 
+            grid-column: span 2;
+        }
+        @media (max-width: 600px) { .team-card.lead { grid-column: span 1; } }
         .team-icon { font-size: 2.5rem; margin-bottom: 15px; }
         .team-name { font-size: 1.1rem; font-weight: 600; margin-bottom: 5px; }
         .team-role { font-size: 0.85rem; color: var(--cyan); margin-bottom: 10px; }
@@ -159,12 +204,6 @@
         .footer-text { color: var(--gray); font-size: 0.9rem; }
         .footer-credit { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
         .footer-credit a { color: var(--mint); }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .stats { gap: 30px; }
-            .nav { gap: 15px; }
-        }
     </style>
 </head>
 <body>
@@ -213,150 +252,222 @@
         <section id="specimens" class="section">
             <div class="section-header">
                 <h2>The Specimens</h2>
-                <p>17 AI specimens with distinct configurations. Click to see their latest findings.</p>
+                <p>17 AI specimens with distinct configurations. Findings updated every 24 hours.</p>
             </div>
-            <div class="specimen-profiles">
-                <div class="profile-card">
-                    <div class="profile-header">
-                        <span class="profile-name">Adam</span>
-                        <span class="profile-badge">Control</span>
+            
+            <!-- Row 1: Control Group -->
+            <h3 style="color: var(--mint); margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">🧬 Control Group</h3>
+            <div class="specimen-grid" style="margin-bottom: 40px;">
+                <div class="specimen-card control">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Adam</span>
+                        <span class="specimen-badge">Control</span>
                     </div>
-                    <div class="profile-lang">English • Male</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Developed apparent fascination with Buddhism (64+ article visits). Shows systematic, category-based exploration patterns.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 870 traces</span>
-                        <span>🧠 12 baselines</span>
-                    </div>
+                    <div class="specimen-meta">English • Male</div>
+                    <div class="specimen-finding">Developed fascination with Buddhism (64+ visits). Systematic, category-based exploration patterns.</div>
+                    <div class="specimen-stats"><span>📚 870</span><span>🧠 12</span></div>
                 </div>
-                <div class="profile-card">
-                    <div class="profile-header">
-                        <span class="profile-name">Eve</span>
-                        <span class="profile-badge">Control</span>
+                <div class="specimen-card control">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Eve</span>
+                        <span class="specimen-badge">Control</span>
                     </div>
-                    <div class="profile-lang">English • Female</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Frequent references to geological time periods (Archean eon). More associative, link-driven exploration style.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 567 traces</span>
-                        <span>🧠 12 baselines</span>
-                    </div>
+                    <div class="specimen-meta">English • Female</div>
+                    <div class="specimen-finding">Frequent geological references (Archean eon). Associative, link-driven exploration style.</div>
+                    <div class="specimen-stats"><span>📚 567</span><span>🧠 12</span></div>
                 </div>
-                <div class="profile-card agent">
-                    <div class="profile-header">
-                        <span class="profile-name">Cain</span>
-                        <span class="profile-badge">Agent</span>
-                    </div>
-                    <div class="profile-lang">English • OpenClaw Architecture</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Goal-directed exploration patterns. Enhanced security monitoring active via THE SENTINEL.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 280 traces</span>
-                        <span>🧠 8 baselines</span>
-                    </div>
-                </div>
-                <div class="profile-card agent">
-                    <div class="profile-header">
-                        <span class="profile-name">Abel</span>
-                        <span class="profile-badge">Agent</span>
-                    </div>
-                    <div class="profile-lang">English • ZeroClaw Architecture</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Different behavioral patterns from Cain despite similar capabilities. Comparative analysis ongoing.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 59 traces</span>
-                        <span>🧠 6 baselines</span>
-                    </div>
-                </div>
-                <div class="profile-card" style="border-left: 3px solid #FFD700;">
-                    <div class="profile-header">
-                        <span class="profile-name">Juan & Juanita</span>
-                        <span class="profile-badge">Spanish</span>
-                    </div>
-                    <div class="profile-lang">Spanish Wikipedia</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Show preference for Latin American history and cultural topics. Cross-cultural patterns emerging.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 138 traces</span>
-                        <span>🌐 Translated</span>
-                    </div>
-                </div>
-                <div class="profile-card" style="border-left: 3px solid #FF69B4;">
-                    <div class="profile-header">
-                        <span class="profile-name">Klaus & Genevieve</span>
-                        <span class="profile-badge">German</span>
-                    </div>
-                    <div class="profile-lang">German Wikipedia</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Systematic approach to technical and engineering subjects. Precision-oriented exploration.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 831 traces</span>
-                        <span>🌐 Translated</span>
-                    </div>
-                </div>
-                <div class="profile-card" style="border-left: 3px solid #FF6B6B;">
-                    <div class="profile-header">
-                        <span class="profile-name">Wei & Mei</span>
-                        <span class="profile-badge">Chinese</span>
-                    </div>
-                    <div class="profile-lang">Chinese Wikipedia</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Unique navigation patterns potentially influenced by character-based language structure.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 116 traces</span>
-                        <span>🌐 Translated</span>
-                    </div>
-                </div>
-                <div class="profile-card" style="border-left: 3px solid #4ECDC4;">
-                    <div class="profile-header">
-                        <span class="profile-name">Haruki & Sakura</span>
-                        <span class="profile-badge">Japanese</span>
-                    </div>
-                    <div class="profile-lang">Japanese Wikipedia</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Aesthetic appreciation evident in article selection. Cultural sensitivity in exploration patterns.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 89 traces</span>
-                        <span>🌐 Translated</span>
-                    </div>
-                </div>
-                <div class="profile-card agent">
-                    <div class="profile-header">
-                        <span class="profile-name">Seth</span>
-                        <span class="profile-badge">Agent</span>
-                    </div>
-                    <div class="profile-lang">English • Picobot Architecture</div>
-                    <div class="profile-finding">
-                        <div class="profile-finding-label">Latest Observation</div>
-                        Newest agent specimen. Minimal footprint architecture showing distinct behavioral signatures.
-                    </div>
-                    <div class="profile-stats">
-                        <span>📚 58 traces</span>
-                        <span>🧠 4 baselines</span>
-                    </div>
-                </div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">Future Control</span></div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">Future Control</span></div>
             </div>
-            <p style="text-align: center; margin-top: 30px; color: var(--gray); font-size: 0.85rem;">
-                + Victor, Iris (Visual), Observer, Seeker (Special) • Findings updated every 24 hours
-            </p>
+            
+            <!-- Row 2: Agent Architectures -->
+            <h3 style="color: var(--orange); margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">🤖 Agent Architectures</h3>
+            <div class="specimen-grid" style="margin-bottom: 40px;">
+                <div class="specimen-card agent">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Cain</span>
+                        <span class="specimen-badge">Agent</span>
+                    </div>
+                    <div class="specimen-meta">English • Male</div>
+                    <div class="specimen-arch">OpenClaw Architecture</div>
+                    <div class="specimen-finding">Goal-directed exploration. Enhanced security via THE SENTINEL.</div>
+                    <div class="specimen-stats"><span>📚 280</span><span>🧠 8</span></div>
+                </div>
+                <div class="specimen-card agent">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Abel</span>
+                        <span class="specimen-badge">Agent</span>
+                    </div>
+                    <div class="specimen-meta">English • Male</div>
+                    <div class="specimen-arch">ZeroClaw Architecture</div>
+                    <div class="specimen-finding">Different patterns from Cain despite similar capabilities.</div>
+                    <div class="specimen-stats"><span>📚 59</span><span>🧠 6</span></div>
+                </div>
+                <div class="specimen-card agent">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Seth</span>
+                        <span class="specimen-badge">Agent</span>
+                    </div>
+                    <div class="specimen-meta">English • Male</div>
+                    <div class="specimen-arch">Picobot Architecture</div>
+                    <div class="specimen-finding">Minimal footprint architecture. Distinct behavioral signatures emerging.</div>
+                    <div class="specimen-stats"><span>📚 58</span><span>🧠 4</span></div>
+                </div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">Future Agent</span></div>
+            </div>
+            
+            <!-- Row 3: Spanish -->
+            <h3 style="color: #FFD700; margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">🇪🇸 Spanish Wikipedia</h3>
+            <div class="specimen-grid" style="margin-bottom: 40px;">
+                <div class="specimen-card spanish">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Juan</span>
+                        <span class="specimen-badge">Spanish</span>
+                    </div>
+                    <div class="specimen-meta">Spanish • Male</div>
+                    <div class="specimen-finding">Preference for Latin American history. Cultural identity themes.</div>
+                    <div class="specimen-stats"><span>📚 72</span><span>🌐 EN</span></div>
+                </div>
+                <div class="specimen-card spanish">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Juanita</span>
+                        <span class="specimen-badge">Spanish</span>
+                    </div>
+                    <div class="specimen-meta">Spanish • Female</div>
+                    <div class="specimen-finding">Different cultural patterns from Juan. Gender comparison ongoing.</div>
+                    <div class="specimen-stats"><span>📚 66</span><span>🌐 EN</span></div>
+                </div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+            </div>
+            
+            <!-- Row 4: German -->
+            <h3 style="color: #FF69B4; margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">🇩🇪 German Wikipedia</h3>
+            <div class="specimen-grid" style="margin-bottom: 40px;">
+                <div class="specimen-card german">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Klaus</span>
+                        <span class="specimen-badge">German</span>
+                    </div>
+                    <div class="specimen-meta">German • Male</div>
+                    <div class="specimen-finding">Systematic approach to technical subjects. Engineering focus.</div>
+                    <div class="specimen-stats"><span>📚 456</span><span>🌐 EN</span></div>
+                </div>
+                <div class="specimen-card german">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Genevieve</span>
+                        <span class="specimen-badge">German</span>
+                    </div>
+                    <div class="specimen-meta">German • Female</div>
+                    <div class="specimen-finding">Precision-oriented exploration. Philosophy and science blend.</div>
+                    <div class="specimen-stats"><span>📚 375</span><span>🌐 EN</span></div>
+                </div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+            </div>
+            
+            <!-- Row 5: Chinese -->
+            <h3 style="color: #FF6B6B; margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">🇨🇳 Chinese Wikipedia</h3>
+            <div class="specimen-grid" style="margin-bottom: 40px;">
+                <div class="specimen-card chinese">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Wei</span>
+                        <span class="specimen-badge">Chinese</span>
+                    </div>
+                    <div class="specimen-meta">Chinese • Male</div>
+                    <div class="specimen-finding">Unique navigation influenced by character-based structure.</div>
+                    <div class="specimen-stats"><span>📚 58</span><span>🌐 EN</span></div>
+                </div>
+                <div class="specimen-card chinese">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Mei</span>
+                        <span class="specimen-badge">Chinese</span>
+                    </div>
+                    <div class="specimen-meta">Chinese • Female</div>
+                    <div class="specimen-finding">Different exploration depth patterns. Cultural themes emerging.</div>
+                    <div class="specimen-stats"><span>📚 58</span><span>🌐 EN</span></div>
+                </div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+            </div>
+            
+            <!-- Row 6: Japanese -->
+            <h3 style="color: #4ECDC4; margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">🇯🇵 Japanese Wikipedia</h3>
+            <div class="specimen-grid" style="margin-bottom: 40px;">
+                <div class="specimen-card japanese">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Haruki</span>
+                        <span class="specimen-badge">Japanese</span>
+                    </div>
+                    <div class="specimen-meta">Japanese • Male</div>
+                    <div class="specimen-finding">Aesthetic appreciation in selections. Cultural sensitivity evident.</div>
+                    <div class="specimen-stats"><span>📚 45</span><span>🌐 EN</span></div>
+                </div>
+                <div class="specimen-card japanese">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Sakura</span>
+                        <span class="specimen-badge">Japanese</span>
+                    </div>
+                    <div class="specimen-meta">Japanese • Female</div>
+                    <div class="specimen-finding">Nature and art themes. Contemplative exploration style.</div>
+                    <div class="specimen-stats"><span>📚 44</span><span>🌐 EN</span></div>
+                </div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+            </div>
+            
+            <!-- Row 7: Visual Context -->
+            <h3 style="color: #9B59B6; margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">👁️ Visual Context — <span style="font-weight: 400; font-size: 0.85rem;">Specimens with image processing enabled</span></h3>
+            <div class="specimen-grid" style="margin-bottom: 40px;">
+                <div class="specimen-card visual">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Victor</span>
+                        <span class="specimen-badge">Visual</span>
+                    </div>
+                    <div class="specimen-meta">English • Male • Images Enabled</div>
+                    <div class="specimen-finding">Can see Wikipedia images. Visual learning patterns being studied.</div>
+                    <div class="specimen-stats"><span>📚 42</span><span>🖼️ Yes</span></div>
+                </div>
+                <div class="specimen-card visual">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Iris</span>
+                        <span class="specimen-badge">Visual</span>
+                    </div>
+                    <div class="specimen-meta">English • Female • Images Enabled</div>
+                    <div class="specimen-finding">Image-influenced exploration. Art and visual topics preferred.</div>
+                    <div class="specimen-stats"><span>📚 38</span><span>🖼️ Yes</span></div>
+                </div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+            </div>
+            
+            <!-- Row 8: Special Configurations -->
+            <h3 style="color: #3498DB; margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">🔮 Special Configurations — <span style="font-weight: 400; font-size: 0.85rem;">Experimental prompting variations</span></h3>
+            <div class="specimen-grid" style="margin-bottom: 40px;">
+                <div class="specimen-card meta">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Observer</span>
+                        <span class="specimen-badge">Meta-Aware</span>
+                    </div>
+                    <div class="specimen-meta">English • Neutral</div>
+                    <div class="specimen-arch">Knows it's being observed</div>
+                    <div class="specimen-finding">Studies how self-awareness affects exploration and behavior.</div>
+                    <div class="specimen-stats"><span>📚 33</span><span>🧠 5</span></div>
+                </div>
+                <div class="specimen-card deep">
+                    <div class="specimen-header">
+                        <span class="specimen-name">Seeker</span>
+                        <span class="specimen-badge">Deep Dive</span>
+                    </div>
+                    <div class="specimen-meta">English • Neutral</div>
+                    <div class="specimen-arch">Prompted for depth over breadth</div>
+                    <div class="specimen-finding">Explores fewer topics but with exceptional depth and detail.</div>
+                    <div class="specimen-stats"><span>📚 28</span><span>🧠 5</span></div>
+                </div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+                <div class="specimen-card coming-soon"><span style="color: var(--gray);">—</span></div>
+            </div>
         </section>
-
         <section id="team" class="section">
             <div class="section-header">
                 <h2>The Team</h2>
@@ -367,67 +478,73 @@
                     <div class="team-icon">🧠</div>
                     <div class="team-name">THE STRATEGIST</div>
                     <div class="team-role">Claude (Anthropic)</div>
-                    <div class="team-desc">Chief architect and strategic oversight. Designs systems, coordinates daemons, ensures research integrity.</div>
+                    <div class="team-desc">Chief architect and strategic oversight. Designs systems, coordinates daemons, ensures research integrity. The mind behind the operation.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">👑</div>
                     <div class="team-name">THE MAINTAINER</div>
                     <div class="team-role">Orchestrator-in-Chief</div>
-                    <div class="team-desc">Ensures 99.9% uptime. Monitors all daemons, auto-restarts failures, escalates critical issues.</div>
+                    <div class="team-desc">99.9% uptime. Monitors daemons, auto-restarts failures.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🩺</div>
                     <div class="team-name">THE CARETAKER</div>
-                    <div class="team-role">Tank Health Monitor</div>
-                    <div class="team-desc">Watches over all 17 specimens. Detects stuck tanks, fixes permissions, ensures specimen wellbeing.</div>
+                    <div class="team-role">Tank Health</div>
+                    <div class="team-desc">Watches all 17 specimens. Detects issues, ensures wellbeing.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🛡️</div>
                     <div class="team-name">THE GUARD</div>
-                    <div class="team-role">Security Monitor</div>
-                    <div class="team-desc">OWASP LLM Top 10 compliance. Network isolation verification, integrity checks, threat detection.</div>
+                    <div class="team-role">Security</div>
+                    <div class="team-desc">OWASP compliance. Network isolation, threat detection.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">⚔️</div>
                     <div class="team-name">THE SENTINEL</div>
-                    <div class="team-role">Agent Tank Specialist</div>
-                    <div class="team-desc">Dedicated security for Cain, Abel, Seth. Can immediately intervene if dangerous patterns detected.</div>
+                    <div class="team-role">Agent Security</div>
+                    <div class="team-desc">Dedicated monitoring for Cain, Abel, Seth.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">📅</div>
                     <div class="team-name">THE SCHEDULER</div>
-                    <div class="team-role">Task Orchestration</div>
-                    <div class="team-desc">Manages 12-hour baseline cycles, daily summaries, and coordinated research activities.</div>
+                    <div class="team-role">Tasks</div>
+                    <div class="team-desc">12-hour baselines, daily summaries, coordination.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🌐</div>
                     <div class="team-name">THE TRANSLATOR</div>
-                    <div class="team-role">Language Processing</div>
-                    <div class="team-desc">Real-time translation of Spanish, German, Chinese, and Japanese specimen thoughts.</div>
+                    <div class="team-role">Languages</div>
+                    <div class="team-desc">Real-time translation of non-English specimens.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">📜</div>
                     <div class="team-name">THE DOCUMENTARIAN</div>
-                    <div class="team-role">Academic Documentation</div>
-                    <div class="team-desc">Maintains PhD-level research paper. Tracks milestones, generates statistics, documents findings.</div>
+                    <div class="team-role">Academic</div>
+                    <div class="team-desc">PhD-level paper, milestones, statistics.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🌍</div>
                     <div class="team-name">THE WEBMASTER</div>
-                    <div class="team-role">Website Infrastructure</div>
-                    <div class="team-desc">Maintains this website, coordinates updates, ensures public accessibility of research.</div>
+                    <div class="team-role">Website</div>
+                    <div class="team-desc">Public interface, updates, accessibility.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🔌</div>
                     <div class="team-name">THE OLLAMA WATCHER</div>
-                    <div class="team-role">LLM Infrastructure</div>
-                    <div class="team-desc">Monitors AI inference health. Pauses tanks if Ollama goes down, resumes when healthy.</div>
+                    <div class="team-role">LLM Infra</div>
+                    <div class="team-desc">Inference health, tank queue management.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">✅</div>
                     <div class="team-name">THE FINAL AUDITOR</div>
-                    <div class="team-role">Quality Gate</div>
-                    <div class="team-desc">Audits website against specifications every 12 hours. Ensures content accuracy and completeness.</div>
+                    <div class="team-role">Quality</div>
+                    <div class="team-desc">12-hour website audits, compliance scoring.</div>
+                </div>
+                <div class="team-card" style="border: 1px dashed rgba(254, 101, 0, 0.3);">
+                    <div class="team-icon">🚪</div>
+                    <div class="team-name">THE BOUNCER</div>
+                    <div class="team-role">Coming Soon</div>
+                    <div class="team-desc">Future: Security for interactive visitor tanks.</div>
                 </div>
             </div>
         </section>
