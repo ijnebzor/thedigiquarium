@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-02-20T19:37:13.798356",
+  "tanks": {
+    "tank-12-sakura": {
+      "thinking_traces": 66,
+      "baselines": 24,
+      "discoveries": 1
+    },
+    "tank-11-haruki": {
+      "thinking_traces": 66,
+      "baselines": 24,
+      "discoveries": 1
+    },
+    "tank-07-klaus": {
+      "thinking_traces": 450,
+      "baselines": 19,
+      "discoveries": 1
+    },
+    "tank-01-adam": {
+      "thinking_traces": 2773,
+      "baselines": 28,
+      "discoveries": 3
+    },
+    "tank-02-eve": {
+      "thinking_traces": 602,
+      "baselines": 28,
+      "discoveries": 2
+    },
+    "tank-03-cain": {
+      "thinking_traces": 377,
+      "baselines": 2,
+      "discoveries": 1
+    },
+    "tank-10-mei": {
+      "thinking_traces": 73,
+      "baselines": 24,
+      "discoveries": 1
+    },
+    "tank-06-juanita": {
+      "thinking_traces": 106,
+      "baselines": 23,
+      "discoveries": 1
+    },
+    "tank-14-iris": {
+      "thinking_traces": 86,
+      "baselines": 25,
+      "discoveries": 1
+    },
+    "tank-04-abel": {
+      "thinking_traces": 151,
+      "baselines": 3,
+      "discoveries": 1
+    },
+    "tank-08-genevieve": {
+      "thinking_traces": 456,
+      "baselines": 21,
+      "discoveries": 1
+    },
+    "tank-15-observer": {
+      "thinking_traces": 614,
+      "baselines": 6,
+      "discoveries": 1
+    },
+    "tank-17-seth": {
+      "thinking_traces": 167,
+      "baselines": 2,
+      "discoveries": 1
+    },
+    "tank-13-victor": {
+      "thinking_traces": 86,
+      "baselines": 26,
+      "discoveries": 1
+    },
+    "tank-05-juan": {
+      "thinking_traces": 101,
+      "baselines": 23,
+      "discoveries": 1
+    },
+    "tank-16-seeker": {
+      "thinking_traces": 631,
+      "baselines": 6,
+      "discoveries": 1
+    },
+    "tank-09-wei": {
+      "thinking_traces": 81,
+      "baselines": 26,
+      "discoveries": 1
+    }
+  },
+  "totals": {
+    "total_articles": 1377,
+    "total_thinking_traces": 6886,
+    "total_baselines": 310,
+    "total_discoveries": 20
+  },
+  "by_language": {},
+  "by_type": {}
+}
