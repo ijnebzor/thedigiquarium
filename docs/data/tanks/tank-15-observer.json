@@ -7,118 +7,108 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "03:01",
+      "date": "2026-02-21",
+      "article": "Earth science",
+      "thought": "Exploring Earth science...",
+      "next": "Planetary science"
+    },
+    {
+      "time": "02:57",
+      "date": "2026-02-21",
+      "article": "Cryogenian",
+      "thought": "Exploring Cryogenian...",
+      "next": "Earth science"
+    },
+    {
+      "time": "02:53",
+      "date": "2026-02-21",
+      "article": "Animal",
+      "thought": "Exploring Animal...",
+      "next": "Cryogenian"
+    },
+    {
       "time": "02:49",
       "date": "2026-02-21",
       "article": "Olfaction",
-      "thought": null,
-      "next": "Animal",
-      "why": ""
+      "thought": "Exploring Olfaction...",
+      "next": "Animal"
     },
     {
       "time": "02:45",
       "date": "2026-02-21",
       "article": "Face",
-      "thought": null,
-      "next": "Olfaction",
-      "why": ""
+      "thought": "Exploring Face...",
+      "next": "Olfaction"
     },
     {
       "time": "02:41",
       "date": "2026-02-21",
       "article": "Mouth",
-      "thought": null,
-      "next": "Face",
-      "why": ""
+      "thought": "Exploring Mouth...",
+      "next": "Face"
     },
     {
       "time": "02:37",
       "date": "2026-02-21",
       "article": "Word",
-      "thought": null,
-      "next": "Mouth",
-      "why": ""
+      "thought": "Exploring Word...",
+      "next": "Mouth"
     },
     {
       "time": "02:33",
       "date": "2026-02-21",
       "article": "Definition",
-      "thought": null,
-      "next": "Word",
-      "why": ""
+      "thought": "Exploring Definition...",
+      "next": "Word"
     },
     {
       "time": "02:29",
       "date": "2026-02-21",
       "article": "Text",
-      "thought": null,
-      "next": "Definition",
-      "why": ""
+      "thought": "Exploring Text...",
+      "next": "Definition"
     },
     {
       "time": "02:25",
       "date": "2026-02-21",
       "article": "Write",
-      "thought": null,
-      "next": "Text",
-      "why": ""
-    },
-    {
-      "time": "02:21",
-      "date": "2026-02-21",
-      "article": "Ink",
-      "thought": null,
-      "next": "Write",
-      "why": ""
-    },
-    {
-      "time": "02:17",
-      "date": "2026-02-21",
-      "article": "Document",
-      "thought": null,
-      "next": "Ink",
-      "why": ""
-    },
-    {
-      "time": "02:13",
-      "date": "2026-02-21",
-      "article": "Constitution",
-      "thought": null,
-      "next": "Document",
-      "why": ""
+      "thought": "Exploring Write...",
+      "next": "Text"
     }
   ],
   "top_topics": [
     {
       "topic": "Definition",
-      "visits": 3
+      "visits": 8
     },
     {
-      "topic": "Olfaction",
-      "visits": 1
+      "topic": "Earth",
+      "visits": 6
     },
     {
-      "topic": "Face",
-      "visits": 1
+      "topic": "Animal",
+      "visits": 5
     },
     {
-      "topic": "Mouth",
-      "visits": 1
+      "topic": "Physics",
+      "visits": 5
     },
     {
-      "topic": "Word",
-      "visits": 1
+      "topic": "Science",
+      "visits": 5
     },
     {
-      "topic": "Text",
-      "visits": 1
+      "topic": "Language",
+      "visits": 4
     },
     {
-      "topic": "Write",
-      "visits": 1
+      "topic": "Mathematics",
+      "visits": 4
     },
     {
-      "topic": "Ink",
-      "visits": 1
+      "topic": "Mass",
+      "visits": 4
     }
   ]
 }

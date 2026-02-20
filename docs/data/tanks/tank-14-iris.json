@@ -10,114 +10,104 @@
       "time": "00:35",
       "date": "2026-02-21",
       "article": "News",
-      "thought": null,
-      "next": "Government",
-      "why": ""
+      "thought": "Exploring News...",
+      "next": "Government"
     },
     {
       "time": "00:31",
       "date": "2026-02-21",
       "article": "Newspaper",
-      "thought": null,
-      "next": "News",
-      "why": ""
+      "thought": "Exploring Newspaper...",
+      "next": "News"
     },
     {
       "time": "00:27",
       "date": "2026-02-21",
       "article": "History",
-      "thought": null,
-      "next": "Newspaper",
-      "why": ""
+      "thought": "Exploring History...",
+      "next": "Newspaper"
     },
     {
       "time": "15:54",
       "date": "2026-02-20",
       "article": "Debit card",
-      "thought": null,
-      "next": "Plastic",
-      "why": ""
+      "thought": "Exploring Debit card...",
+      "next": "Plastic"
     },
     {
       "time": "15:50",
       "date": "2026-02-20",
       "article": "Credit",
-      "thought": null,
-      "next": "Credit card",
-      "why": ""
+      "thought": "Exploring Credit...",
+      "next": "Credit card"
     },
     {
       "time": "15:50",
       "date": "2026-02-20",
       "article": "Credit card",
-      "thought": null,
-      "next": "Payment",
-      "why": ""
+      "thought": "Exploring Credit card...",
+      "next": "Payment"
     },
     {
       "time": "15:50",
       "date": "2026-02-20",
       "article": "Payment",
-      "thought": null,
-      "next": "Debit card",
-      "why": ""
+      "thought": "Exploring Payment...",
+      "next": "Debit card"
     },
     {
       "time": "15:49",
       "date": "2026-02-20",
       "article": "Oil",
-      "thought": null,
-      "next": "Vegetable oil",
-      "why": ""
+      "thought": "Exploring Oil...",
+      "next": "Vegetable oil"
     },
     {
       "time": "15:49",
       "date": "2026-02-20",
       "article": "Vegetable oil",
-      "thought": null,
-      "next": "Plant",
-      "why": ""
+      "thought": "Exploring Vegetable oil...",
+      "next": "Plant"
     },
     {
       "time": "15:49",
       "date": "2026-02-20",
       "article": "Plant",
-      "thought": null,
-      "next": "Moss",
-      "why": ""
+      "thought": "Exploring Plant...",
+      "next": "Moss"
     }
   ],
   "top_topics": [
     {
-      "topic": "News",
-      "visits": 1
+      "topic": "Plant",
+      "visits": 4
+    },
+    {
+      "topic": "Art",
+      "visits": 3
+    },
+    {
+      "topic": "Emotion",
+      "visits": 3
+    },
+    {
+      "topic": "Angst",
+      "visits": 3
     },
     {
       "topic": "Newspaper",
-      "visits": 1
+      "visits": 2
+    },
+    {
+      "topic": "Biology",
+      "visits": 2
+    },
+    {
+      "topic": "Streptophyta",
+      "visits": 2
     },
     {
       "topic": "History",
-      "visits": 1
-    },
-    {
-      "topic": "Debit card",
-      "visits": 1
-    },
-    {
-      "topic": "Credit",
-      "visits": 1
-    },
-    {
-      "topic": "Credit card",
-      "visits": 1
-    },
-    {
-      "topic": "Payment",
-      "visits": 1
-    },
-    {
-      "topic": "Oil",
       "visits": 1
     }
   ]

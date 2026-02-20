@@ -1,15 +1,20 @@
 {
-  "generated_at": "2026-02-21T02:50:01.571187",
+  "generated_at": "2026-02-21T03:04:26.958227",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
     "THE CARETAKER",
     "THE WEBMASTER"
   ],
-  "next_update": "2026-02-21 14:50",
+  "data_quality": {
+    "pruned": true,
+    "description": "Null thoughts, timeouts, and junk data removed for clean display",
+    "full_logs_contact": "research@digiquarium.org"
+  },
+  "next_update": "2026-02-21 15:04",
   "period": {
-    "start": "2026-02-20 14:50",
-    "end": "2026-02-21 02:50",
+    "start": "2026-02-20 15:04",
+    "end": "2026-02-21 03:04",
     "hours": 12
   },
   "tanks": {
@@ -25,115 +30,105 @@
           "time": "00:34",
           "date": "2026-02-21",
           "article": "Anxiety",
-          "thought": null,
-          "next": "Anger",
-          "why": ""
+          "thought": "Exploring Anxiety...",
+          "next": "Anger"
         },
         {
           "time": "00:30",
           "date": "2026-02-21",
           "article": "Suffering",
-          "thought": null,
-          "next": "Anxiety",
-          "why": ""
+          "thought": "Exploring Suffering...",
+          "next": "Anxiety"
         },
         {
           "time": "00:26",
           "date": "2026-02-21",
           "article": "Philosophy",
-          "thought": null,
-          "next": "Suffering",
-          "why": ""
+          "thought": "Exploring Philosophy...",
+          "next": "Suffering"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Science",
-          "thought": null,
-          "next": "Geology",
-          "why": ""
+          "thought": "Exploring Science...",
+          "next": "Geology"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Geology",
-          "thought": null,
-          "next": "Mineral",
-          "why": ""
+          "thought": "Exploring Geology...",
+          "next": "Mineral"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Mineral",
-          "thought": null,
-          "next": "Chemical",
-          "why": ""
+          "thought": "Exploring Mineral...",
+          "next": "Chemical"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Fear",
-          "thought": null,
-          "next": "Evolution",
-          "why": ""
+          "thought": "Exploring Fear...",
+          "next": "Evolution"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Evolution",
-          "thought": null,
-          "next": "Photosynthesis",
-          "why": ""
+          "thought": "Exploring Evolution...",
+          "next": "Photosynthesis"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Photosynthesis",
-          "thought": null,
-          "next": "Stomata",
-          "why": ""
+          "thought": "Exploring Photosynthesis...",
+          "next": "Stomata"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Stomata",
-          "thought": null,
-          "next": "Carbon dioxide",
-          "why": ""
+          "thought": "Exploring Stomata...",
+          "next": "Carbon dioxide"
         }
       ],
       "top_topics": [
         {
-          "topic": "Hydrogen",
-          "visits": 2
+          "topic": "Buddhism",
+          "visits": 64
         },
         {
-          "topic": "Beryllium",
-          "visits": 2
+          "topic": "Emotion",
+          "visits": 43
         },
         {
-          "topic": "Anxiety",
-          "visits": 1
+          "topic": "Dukkha",
+          "visits": 25
         },
         {
-          "topic": "Suffering",
-          "visits": 1
+          "topic": "Angst",
+          "visits": 24
         },
         {
-          "topic": "Philosophy",
-          "visits": 1
+          "topic": "Human",
+          "visits": 21
         },
         {
-          "topic": "Science",
-          "visits": 1
+          "topic": "Four Noble Truths",
+          "visits": 18
         },
         {
-          "topic": "Geology",
-          "visits": 1
+          "topic": "Language",
+          "visits": 15
         },
         {
-          "topic": "Mineral",
-          "visits": 1
+          "topic": "Jesus",
+          "visits": 15
         }
       ]
     },
@@ -149,115 +144,105 @@
           "time": "00:34",
           "date": "2026-02-21",
           "article": "Geology",
-          "thought": null,
-          "next": "Continents",
-          "why": ""
+          "thought": "Exploring Geology...",
+          "next": "Continents"
         },
         {
           "time": "00:30",
           "date": "2026-02-21",
           "article": "Theories",
-          "thought": null,
-          "next": "Geology",
-          "why": ""
+          "thought": "Exploring Theories...",
+          "next": "Geology"
         },
         {
           "time": "00:26",
           "date": "2026-02-21",
           "article": "Science",
-          "thought": null,
-          "next": "Theories",
-          "why": ""
+          "thought": "Exploring Science...",
+          "next": "Theories"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Jeremy Rockliff",
-          "thought": null,
-          "next": "Division of Braddon (state)",
-          "why": ""
+          "thought": "Exploring Jeremy Rockliff...",
+          "next": "Division of Braddon (state)"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Division of Braddon (state)",
-          "thought": null,
-          "next": "States and territories of Australia",
-          "why": ""
+          "thought": "Exploring Division of Braddon (state)...",
+          "next": "States and territories of Australia"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "States and territories of Australia",
-          "thought": null,
-          "next": "Queensland",
-          "why": ""
+          "thought": "Exploring States and territories of Australia...",
+          "next": "Queensland"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Music",
-          "thought": null,
-          "next": "Singing",
-          "why": ""
+          "thought": "Exploring Music...",
+          "next": "Singing"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Singing",
-          "thought": null,
-          "next": "Passerine",
-          "why": ""
+          "thought": "Exploring Singing...",
+          "next": "Passerine"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Passerine",
-          "thought": null,
-          "next": "Palestine sunbird",
-          "why": ""
+          "thought": "Exploring Passerine...",
+          "next": "Palestine sunbird"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Palestine sunbird",
-          "thought": null,
-          "next": "South Africa",
-          "why": ""
+          "thought": "Exploring Palestine sunbird...",
+          "next": "South Africa"
         }
       ],
       "top_topics": [
         {
-          "topic": "Geography",
-          "visits": 2
-        },
-        {
-          "topic": "Geology",
-          "visits": 1
-        },
-        {
-          "topic": "Theories",
-          "visits": 1
+          "topic": "Book",
+          "visits": 6
         },
         {
           "topic": "Science",
-          "visits": 1
+          "visits": 5
         },
         {
-          "topic": "Jeremy Rockliff",
-          "visits": 1
+          "topic": "Psychology",
+          "visits": 4
         },
         {
-          "topic": "Division of Braddon (state)",
-          "visits": 1
+          "topic": "Eukaryote",
+          "visits": 4
         },
         {
-          "topic": "States and territories of Australia",
-          "visits": 1
+          "topic": "Human",
+          "visits": 4
+        },
+        {
+          "topic": "Akha people",
+          "visits": 4
+        },
+        {
+          "topic": "History",
+          "visits": 4
         },
         {
           "topic": "Music",
-          "visits": 1
+          "visits": 4
         }
       ]
     },
@@ -270,118 +255,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
+          "time": "02:57",
+          "date": "2026-02-21",
+          "article": "Atlantic Ocean",
+          "thought": "Exploring Atlantic Ocean...",
+          "next": "Arctic Ocean"
+        },
+        {
+          "time": "02:53",
+          "date": "2026-02-21",
+          "article": "World Ocean",
+          "thought": "Exploring World Ocean...",
+          "next": "Atlantic Ocean"
+        },
+        {
           "time": "02:49",
           "date": "2026-02-21",
           "article": "Sea",
-          "thought": null,
-          "next": "World Ocean",
-          "why": ""
+          "thought": "Exploring Sea...",
+          "next": "World Ocean"
         },
         {
           "time": "02:45",
           "date": "2026-02-21",
           "article": "Geography",
-          "thought": null,
-          "next": "Sea",
-          "why": ""
+          "thought": "Exploring Geography...",
+          "next": "Sea"
         },
         {
           "time": "02:41",
           "date": "2026-02-21",
           "article": "1st century",
-          "thought": null,
-          "next": "1st century BC#Events",
-          "why": ""
+          "thought": "Exploring 1st century...",
+          "next": "1st century BC#Events"
         },
         {
           "time": "02:37",
           "date": "2026-02-21",
           "article": "51",
-          "thought": null,
-          "next": "1st century",
-          "why": ""
+          "thought": "Exploring 51...",
+          "next": "1st century"
         },
         {
           "time": "02:33",
           "date": "2026-02-21",
           "article": "51 (number)",
-          "thought": null,
-          "next": "51",
-          "why": ""
+          "thought": "Exploring 51 (number)...",
+          "next": "51"
         },
         {
           "time": "02:29",
           "date": "2026-02-21",
           "article": "50 (number)",
-          "thought": null,
-          "next": "51 (number)",
-          "why": ""
+          "thought": "Exploring 50 (number)...",
+          "next": "51 (number)"
         },
         {
           "time": "02:25",
           "date": "2026-02-21",
           "article": "49 (number)",
-          "thought": null,
-          "next": "50 (number)",
-          "why": ""
+          "thought": "Exploring 49 (number)...",
+          "next": "50 (number)"
         },
         {
           "time": "02:21",
           "date": "2026-02-21",
           "article": "59 (number)",
-          "thought": null,
-          "next": "49 (number)",
-          "why": ""
-        },
-        {
-          "time": "02:17",
-          "date": "2026-02-21",
-          "article": "69 (number)",
-          "thought": null,
-          "next": "59 (number)",
-          "why": ""
-        },
-        {
-          "time": "02:13",
-          "date": "2026-02-21",
-          "article": "73 (number)",
-          "thought": null,
-          "next": "69 (number)",
-          "why": ""
+          "thought": "Exploring 59 (number)...",
+          "next": "49 (number)"
         }
       ],
       "top_topics": [
         {
-          "topic": "80 (number)",
-          "visits": 2
+          "topic": "Physics",
+          "visits": 7
         },
         {
-          "topic": "92 (number)",
-          "visits": 2
+          "topic": "Science",
+          "visits": 6
         },
         {
-          "topic": "Sea",
-          "visits": 1
+          "topic": "Chemistry",
+          "visits": 6
         },
         {
-          "topic": "Geography",
-          "visits": 1
+          "topic": "Atom",
+          "visits": 6
         },
         {
-          "topic": "1st century",
-          "visits": 1
+          "topic": "1 (number)",
+          "visits": 6
         },
         {
-          "topic": "51",
-          "visits": 1
+          "topic": "-1 (number)",
+          "visits": 5
         },
         {
-          "topic": "51 (number)",
-          "visits": 1
+          "topic": "Art",
+          "visits": 4
         },
         {
-          "topic": "50 (number)",
-          "visits": 1
+          "topic": "Continent",
+          "visits": 4
         }
       ]
     },
@@ -407,115 +382,105 @@
           "time": "00:34",
           "date": "2026-02-21",
           "article": "Cambio en la cultura",
-          "thought": null,
-          "next": "Control de autoridades",
-          "why": ""
+          "thought": "Exploring Cambio en la cultura...",
+          "next": "Control de autoridades"
         },
         {
           "time": "00:30",
           "date": "2026-02-21",
           "article": "Cultura",
-          "thought": null,
-          "next": "Cambio en la cultura",
-          "why": ""
+          "thought": "Exploring Cultura...",
+          "next": "Cambio en la cultura"
         },
         {
           "time": "00:26",
           "date": "2026-02-21",
           "article": "Arte",
-          "thought": null,
-          "next": "Cultura",
-          "why": ""
+          "thought": "Exploring Arte...",
+          "next": "Cultura"
         },
         {
           "time": "18:15",
           "date": "2026-02-20",
           "article": "Alfred North Whitehead",
-          "thought": null,
-          "next": "Trinity College (Cambridge)",
-          "why": ""
+          "thought": "Exploring Alfred North Whitehead...",
+          "next": "Trinity College (Cambridge)"
         },
         {
           "time": "18:11",
           "date": "2026-02-20",
           "article": "Bertrand Russell",
-          "thought": null,
-          "next": "Alfred North Whitehead",
-          "why": ""
+          "thought": "Exploring Bertrand Russell...",
+          "next": "Alfred North Whitehead"
         },
         {
           "time": "18:07",
           "date": "2026-02-20",
           "article": "Filosof\u00eda",
-          "thought": null,
-          "next": "Bertrand Russell",
-          "why": ""
+          "thought": "Exploring Filosof\u00eda...",
+          "next": "Bertrand Russell"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Ciencia",
-          "thought": null,
-          "next": "Hidr\u00f3geno",
-          "why": ""
+          "thought": "Exploring Ciencia...",
+          "next": "Hidr\u00f3geno"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Historia",
-          "thought": null,
-          "next": "Griego antiguo",
-          "why": ""
+          "thought": "Exploring Historia...",
+          "next": "Griego antiguo"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Psicolog\u00eda",
-          "thought": null,
-          "next": "John B. Watson",
-          "why": ""
+          "thought": "Exploring Psicolog\u00eda...",
+          "next": "John B. Watson"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "John B. Watson",
-          "thought": null,
-          "next": "Psic\u00f3logo",
-          "why": ""
+          "thought": "Exploring John B. Watson...",
+          "next": "Psic\u00f3logo"
         }
       ],
       "top_topics": [
         {
-          "topic": "Historia",
-          "visits": 3
+          "topic": "Arte",
+          "visits": 7
         },
         {
-          "topic": "M\u00fasica",
-          "visits": 3
+          "topic": "Biolog\u00eda",
+          "visits": 7
         },
         {
           "topic": "Ciencia",
-          "visits": 2
+          "visits": 6
         },
         {
-          "topic": "Cambio en la cultura",
-          "visits": 1
+          "topic": "M\u00fasica",
+          "visits": 6
         },
         {
-          "topic": "Cultura",
-          "visits": 1
+          "topic": "Filosof\u00eda",
+          "visits": 5
         },
         {
-          "topic": "Arte",
-          "visits": 1
+          "topic": "Historia",
+          "visits": 5
         },
         {
-          "topic": "Alfred North Whitehead",
-          "visits": 1
+          "topic": "Matem\u00e1ticas",
+          "visits": 5
         },
         {
-          "topic": "Bertrand Russell",
-          "visits": 1
+          "topic": "Conocimiento",
+          "visits": 4
         }
       ]
     },
@@ -531,115 +496,105 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "M\u00fasica",
-          "thought": null,
-          "next": "Manifestaci\u00f3n",
-          "why": ""
+          "thought": "Exploring M\u00fasica...",
+          "next": "Manifestaci\u00f3n"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "Filosof\u00eda",
-          "thought": null,
-          "next": "Significado (filosof\u00eda)",
-          "why": ""
+          "thought": "Exploring Filosof\u00eda...",
+          "next": "Significado (filosof\u00eda)"
         },
         {
           "time": "00:26",
           "date": "2026-02-21",
           "article": "Arte",
-          "thought": null,
-          "next": "Artes pl\u00e1sticas",
-          "why": ""
+          "thought": "Exploring Arte...",
+          "next": "Artes pl\u00e1sticas"
         },
         {
           "time": "18:15",
           "date": "2026-02-20",
           "article": "Filosof\u00eda",
-          "thought": null,
-          "next": "L\u00f3gica",
-          "why": ""
+          "thought": "Exploring Filosof\u00eda...",
+          "next": "L\u00f3gica"
         },
         {
           "time": "18:11",
           "date": "2026-02-20",
           "article": "Ciencia",
-          "thought": null,
-          "next": "Econom\u00eda",
-          "why": ""
+          "thought": "Exploring Ciencia...",
+          "next": "Econom\u00eda"
         },
         {
           "time": "18:07",
           "date": "2026-02-20",
           "article": "Ciencia",
-          "thought": null,
-          "next": "V\u00eda L\u00e1ctea",
-          "why": ""
+          "thought": "Exploring Ciencia...",
+          "next": "V\u00eda L\u00e1ctea"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Eustigmista",
-          "thought": null,
-          "next": "Ochrophyta",
-          "why": ""
+          "thought": "Exploring Eustigmista...",
+          "next": "Ochrophyta"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Ochrophyta",
-          "thought": null,
-          "next": "Diatomista",
-          "why": ""
+          "thought": "Exploring Ochrophyta...",
+          "next": "Diatomista"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Diatomista",
-          "thought": null,
-          "next": "Ochrophyta",
-          "why": ""
+          "thought": "Exploring Diatomista...",
+          "next": "Ochrophyta"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "M\u00fasica",
-          "thought": null,
-          "next": "Sentimiento",
-          "why": ""
+          "thought": "Exploring M\u00fasica...",
+          "next": "Sentimiento"
         }
       ],
       "top_topics": [
         {
           "topic": "M\u00fasica",
-          "visits": 2
-        },
-        {
-          "topic": "Filosof\u00eda",
-          "visits": 2
-        },
-        {
-          "topic": "Ciencia",
-          "visits": 2
+          "visits": 9
         },
         {
           "topic": "Arte",
-          "visits": 1
+          "visits": 8
         },
         {
-          "topic": "Eustigmista",
-          "visits": 1
+          "topic": "Ciencia",
+          "visits": 8
         },
         {
-          "topic": "Ochrophyta",
-          "visits": 1
+          "topic": "Filosof\u00eda",
+          "visits": 7
         },
         {
-          "topic": "Diatomista",
-          "visits": 1
+          "topic": "Matem\u00e1ticas",
+          "visits": 6
         },
         {
-          "topic": "Sentimiento",
-          "visits": 1
+          "topic": "Psicolog\u00eda",
+          "visits": 6
+        },
+        {
+          "topic": "Biolog\u00eda",
+          "visits": 5
+        },
+        {
+          "topic": "Psique",
+          "visits": 4
         }
       ]
     },
@@ -655,115 +610,105 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "Hypothese",
-          "thought": null,
-          "next": "Pr\u00fcfen",
-          "why": ""
+          "thought": "Exploring Hypothese...",
+          "next": "Pr\u00fcfen"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "Experiment",
-          "thought": null,
-          "next": "Hypothese",
-          "why": ""
+          "thought": "Exploring Experiment...",
+          "next": "Hypothese"
         },
         {
           "time": "00:27",
           "date": "2026-02-21",
           "article": "Psychologie",
-          "thought": null,
-          "next": "Experiment",
-          "why": ""
+          "thought": "Exploring Psychologie...",
+          "next": "Experiment"
         },
         {
           "time": "18:15",
           "date": "2026-02-20",
           "article": "Fertigkeit",
-          "thought": null,
-          "next": "Althochdeutsche Sprache",
-          "why": ""
+          "thought": "Exploring Fertigkeit...",
+          "next": "Althochdeutsche Sprache"
         },
         {
           "time": "18:11",
           "date": "2026-02-20",
           "article": "Technik",
-          "thought": null,
-          "next": "Fertigkeit",
-          "why": ""
+          "thought": "Exploring Technik...",
+          "next": "Fertigkeit"
         },
         {
           "time": "18:07",
           "date": "2026-02-20",
           "article": "Wissenschaft",
-          "thought": null,
-          "next": "Technik",
-          "why": ""
+          "thought": "Exploring Wissenschaft...",
+          "next": "Technik"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "1830er",
-          "thought": null,
-          "next": "1831",
-          "why": ""
+          "thought": "Exploring 1830er...",
+          "next": "1831"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "1831",
-          "thought": null,
-          "next": "1826",
-          "why": ""
+          "thought": "Exploring 1831...",
+          "next": "1826"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "1826",
-          "thought": null,
-          "next": "Jahreskalender",
-          "why": ""
+          "thought": "Exploring 1826...",
+          "next": "Jahreskalender"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Wissenschaft",
-          "thought": null,
-          "next": "Wissenschaftstheorie",
-          "why": ""
+          "thought": "Exploring Wissenschaft...",
+          "next": "Wissenschaftstheorie"
         }
       ],
       "top_topics": [
         {
+          "topic": "Biologie",
+          "visits": 11
+        },
+        {
+          "topic": "Philosophie",
+          "visits": 8
+        },
+        {
           "topic": "Wissenschaft",
-          "visits": 2
-        },
-        {
-          "topic": "19. Jahrhundert",
-          "visits": 2
-        },
-        {
-          "topic": "Hypothese",
-          "visits": 1
-        },
-        {
-          "topic": "Experiment",
-          "visits": 1
+          "visits": 8
         },
         {
           "topic": "Psychologie",
-          "visits": 1
+          "visits": 6
         },
         {
-          "topic": "Fertigkeit",
-          "visits": 1
+          "topic": "Mathematik",
+          "visits": 6
         },
         {
-          "topic": "Technik",
-          "visits": 1
+          "topic": "Wissen",
+          "visits": 6
         },
         {
-          "topic": "1830er",
-          "visits": 1
+          "topic": "Geschichte",
+          "visits": 5
+        },
+        {
+          "topic": "Kommunikation",
+          "visits": 5
         }
       ]
     },
@@ -779,115 +724,105 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "Familie",
-          "thought": null,
-          "next": "Eingetragene Partnerschaft",
-          "why": ""
+          "thought": "Exploring Familie...",
+          "next": "Eingetragene Partnerschaft"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "Sozialer Wandel",
-          "thought": null,
-          "next": "Familie",
-          "why": ""
+          "thought": "Exploring Sozialer Wandel...",
+          "next": "Familie"
         },
         {
           "time": "00:27",
           "date": "2026-02-21",
           "article": "Geschichte",
-          "thought": null,
-          "next": "Sozialer Wandel",
-          "why": ""
+          "thought": "Exploring Geschichte...",
+          "next": "Sozialer Wandel"
         },
         {
           "time": "18:15",
           "date": "2026-02-20",
           "article": "Erkenntnistheorie",
-          "thought": null,
-          "next": "-logie",
-          "why": ""
+          "thought": "Exploring Erkenntnistheorie...",
+          "next": "-logie"
         },
         {
           "time": "18:11",
           "date": "2026-02-20",
           "article": "Wissenschaftstheorie",
-          "thought": null,
-          "next": "Erkenntnistheorie",
-          "why": ""
+          "thought": "Exploring Wissenschaftstheorie...",
+          "next": "Erkenntnistheorie"
         },
         {
           "time": "18:07",
           "date": "2026-02-20",
           "article": "Philosophie",
-          "thought": null,
-          "next": "Wissenschaftstheorie",
-          "why": ""
+          "thought": "Exploring Philosophie...",
+          "next": "Wissenschaftstheorie"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Present Perfect Progressive",
-          "thought": null,
-          "next": "Wort",
-          "why": ""
+          "thought": "Exploring Present Perfect Progressive...",
+          "next": "Wort"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Wort",
-          "thought": null,
-          "next": "Deutsches W\u00f6rterbuch",
-          "why": ""
+          "thought": "Exploring Wort...",
+          "next": "Deutsches W\u00f6rterbuch"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Musik",
-          "thought": null,
-          "next": "Metrum (Musik)",
-          "why": ""
+          "thought": "Exploring Musik...",
+          "next": "Metrum (Musik)"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Metrum (Musik)",
-          "thought": null,
-          "next": "Phrase (Musik)",
-          "why": ""
+          "thought": "Exploring Metrum (Musik)...",
+          "next": "Phrase (Musik)"
         }
       ],
       "top_topics": [
         {
-          "topic": "Geschichte",
-          "visits": 2
-        },
-        {
-          "topic": "Familie",
-          "visits": 1
-        },
-        {
-          "topic": "Sozialer Wandel",
-          "visits": 1
-        },
-        {
-          "topic": "Erkenntnistheorie",
-          "visits": 1
-        },
-        {
-          "topic": "Wissenschaftstheorie",
-          "visits": 1
-        },
-        {
           "topic": "Philosophie",
-          "visits": 1
+          "visits": 12
         },
         {
-          "topic": "Present Perfect Progressive",
-          "visits": 1
+          "topic": "Geschichte",
+          "visits": 10
         },
         {
-          "topic": "Wort",
-          "visits": 1
+          "topic": "Mathematik",
+          "visits": 9
+        },
+        {
+          "topic": "Kunst",
+          "visits": 9
+        },
+        {
+          "topic": "Psychologie",
+          "visits": 9
+        },
+        {
+          "topic": "Biologie",
+          "visits": 8
+        },
+        {
+          "topic": "Latein",
+          "visits": 8
+        },
+        {
+          "topic": "Altgriechische Sprache",
+          "visits": 7
         }
       ]
     },
@@ -903,111 +838,105 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "\u5fc3\u7406\u5b66",
-          "thought": null,
-          "next": "\u61c9\u7528\u884c\u70ba\u5206\u6790",
-          "why": ""
+          "thought": "Exploring \u5fc3\u7406\u5b66...",
+          "next": "\u61c9\u7528\u884c\u70ba\u5206\u6790"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "\u54f2\u5b66",
-          "thought": null,
-          "next": "\u8ba4\u8bc6\u8bba",
-          "why": ""
+          "thought": "Exploring \u54f2\u5b66...",
+          "next": "\u8ba4\u8bc6\u8bba"
         },
         {
           "time": "00:27",
           "date": "2026-02-21",
           "article": "\u6570\u5b66",
-          "thought": null,
-          "next": "\u6982\u7387",
-          "why": ""
+          "thought": "Exploring \u6570\u5b66...",
+          "next": "\u6982\u7387"
         },
         {
           "time": "18:15",
           "date": "2026-02-20",
           "article": "\u751f\u7269\u5b66",
-          "thought": null,
-          "next": "\u9032\u5316",
-          "why": ""
+          "thought": "Exploring \u751f\u7269\u5b66...",
+          "next": "\u9032\u5316"
         },
         {
           "time": "18:11",
           "date": "2026-02-20",
           "article": "\u5386\u53f2",
-          "thought": null,
-          "next": "\u9752\u94dc\u65f6\u4ee3",
-          "why": ""
+          "thought": "Exploring \u5386\u53f2...",
+          "next": "\u9752\u94dc\u65f6\u4ee3"
         },
         {
           "time": "18:07",
           "date": "2026-02-20",
           "article": "\u6570\u5b66",
-          "thought": null,
-          "next": "\u7edf\u8ba1\u5b66",
-          "why": ""
+          "thought": "Exploring \u6570\u5b66...",
+          "next": "\u7edf\u8ba1\u5b66"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "\u6570\u5b66",
-          "thought": null,
-          "next": "\u51e0\u4f55\u5b66",
-          "why": ""
+          "thought": "Exploring \u6570\u5b66...",
+          "next": "\u51e0\u4f55\u5b66"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "\u54f2\u5b66",
-          "thought": null,
-          "next": "\u53e4\u5178\u54f2\u5b66",
-          "why": ""
+          "thought": "Exploring \u54f2\u5b66...",
+          "next": "\u53e4\u5178\u54f2\u5b66"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u5386\u53f2",
-          "thought": null,
-          "next": "\u4e2d\u53e4\u53f2",
-          "why": ""
+          "thought": "Exploring \u5386\u53f2...",
+          "next": "\u4e2d\u53e4\u53f2"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u54f2\u5b66",
-          "thought": null,
-          "next": "\u8ba4\u8bc6\u8bba",
-          "why": ""
+          "thought": "Exploring \u54f2\u5b66...",
+          "next": "\u8ba4\u8bc6\u8bba"
         }
       ],
       "top_topics": [
         {
-          "topic": "\u6570\u5b66",
-          "visits": 5
-        },
-        {
           "topic": "\u54f2\u5b66",
-          "visits": 4
+          "visits": 13
         },
         {
-          "topic": "\u5386\u53f2",
-          "visits": 3
-        },
-        {
-          "topic": "\u97f3\u4e50",
-          "visits": 3
+          "topic": "\u6570\u5b66",
+          "visits": 12
         },
         {
           "topic": "\u5fc3\u7406\u5b66",
-          "visits": 2
+          "visits": 12
+        },
+        {
+          "topic": "\u97f3\u4e50",
+          "visits": 12
+        },
+        {
+          "topic": "\u5386\u53f2",
+          "visits": 10
         },
         {
           "topic": "\u751f\u7269\u5b66",
-          "visits": 2
+          "visits": 9
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 9
         },
         {
           "topic": "\u827a\u672f",
-          "visits": 1
+          "visits": 7
         }
       ]
     },
@@ -1023,115 +952,105 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "\u79d1\u5b66",
-          "thought": null,
-          "next": "\u79d1\u5b78 (\u6d88\u6b67\u7fa9)",
-          "why": ""
+          "thought": "Exploring \u79d1\u5b66...",
+          "next": "\u79d1\u5b78 (\u6d88\u6b67\u7fa9)"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "\u5386\u53f2",
-          "thought": null,
-          "next": "\u516c\u5143",
-          "why": ""
+          "thought": "Exploring \u5386\u53f2...",
+          "next": "\u516c\u5143"
         },
         {
           "time": "00:27",
           "date": "2026-02-21",
           "article": "\u751f\u7269\u5b66",
-          "thought": null,
-          "next": "\u81ea\u7136\u79d1\u5b78",
-          "why": ""
+          "thought": "Exploring \u751f\u7269\u5b66...",
+          "next": "\u81ea\u7136\u79d1\u5b78"
         },
         {
           "time": "18:16",
           "date": "2026-02-20",
           "article": "\u6570\u5b66",
-          "thought": null,
-          "next": "\u5fae\u79ef\u5206\u5b66",
-          "why": ""
+          "thought": "Exploring \u6570\u5b66...",
+          "next": "\u5fae\u79ef\u5206\u5b66"
         },
         {
           "time": "18:11",
           "date": "2026-02-20",
           "article": "\u827a\u672f",
-          "thought": null,
-          "next": "\u610f\u8b58\u5f62\u614b",
-          "why": ""
+          "thought": "Exploring \u827a\u672f...",
+          "next": "\u610f\u8b58\u5f62\u614b"
         },
         {
           "time": "18:07",
           "date": "2026-02-20",
           "article": "\u97f3\u4e50",
-          "thought": null,
-          "next": "\u8a31\u614e",
-          "why": ""
+          "thought": "Exploring \u97f3\u4e50...",
+          "next": "\u8a31\u614e"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "\u5fc3\u7406\u5b66",
-          "thought": null,
-          "next": "\u751f\u7269\u5fc3\u7406\u5b66",
-          "why": ""
+          "thought": "Exploring \u5fc3\u7406\u5b66...",
+          "next": "\u751f\u7269\u5fc3\u7406\u5b66"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u6570\u5b66",
-          "thought": null,
-          "next": "\u8ba1\u7b97\u8bed\u8a00\u5b66",
-          "why": ""
+          "thought": "Exploring \u6570\u5b66...",
+          "next": "\u8ba1\u7b97\u8bed\u8a00\u5b66"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u5386\u53f2",
-          "thought": null,
-          "next": "\u57fa\u7763\u7eaa\u5e74",
-          "why": ""
+          "thought": "Exploring \u5386\u53f2...",
+          "next": "\u57fa\u7763\u7eaa\u5e74"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u827a\u672f",
-          "thought": null,
-          "next": "\u897f\u73ed\u7259\u8a9e",
-          "why": ""
+          "thought": "Exploring \u827a\u672f...",
+          "next": "\u897f\u73ed\u7259\u8a9e"
         }
       ],
       "top_topics": [
         {
-          "topic": "\u79d1\u5b66",
-          "visits": 3
-        },
-        {
-          "topic": "\u5386\u53f2",
-          "visits": 3
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 12
         },
         {
           "topic": "\u751f\u7269\u5b66",
-          "visits": 3
+          "visits": 11
         },
         {
-          "topic": "\u6570\u5b66",
-          "visits": 3
+          "topic": "\u5386\u53f2",
+          "visits": 11
         },
         {
-          "topic": "\u5fc3\u7406\u5b66",
-          "visits": 3
-        },
-        {
-          "topic": "\u827a\u672f",
-          "visits": 2
+          "topic": "\u79d1\u5b66",
+          "visits": 11
         },
         {
           "topic": "\u97f3\u4e50",
-          "visits": 2
+          "visits": 9
+        },
+        {
+          "topic": "\u827a\u672f",
+          "visits": 8
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 7
         },
         {
           "topic": "\u54f2\u5b66",
-          "visits": 1
+          "visits": 7
         }
       ]
     },
@@ -1147,115 +1066,105 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "\u6b74\u53f2",
-          "thought": null,
-          "next": "\u4e09\u56fd\u5fd7",
-          "why": ""
+          "thought": "Exploring \u6b74\u53f2...",
+          "next": "\u4e09\u56fd\u5fd7"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "\u97f3\u697d",
-          "thought": null,
-          "next": "\u5e83\u8f9e\u82d1",
-          "why": ""
+          "thought": "Exploring \u97f3\u697d...",
+          "next": "\u5e83\u8f9e\u82d1"
         },
         {
           "time": "00:27",
           "date": "2026-02-21",
           "article": "\u5fc3\u7406\u5b66",
-          "thought": null,
-          "next": "\u8a8d\u77e5\u5fc3\u7406\u5b66",
-          "why": ""
+          "thought": "Exploring \u5fc3\u7406\u5b66...",
+          "next": "\u8a8d\u77e5\u5fc3\u7406\u5b66"
         },
         {
           "time": "18:16",
           "date": "2026-02-20",
           "article": "\u6570\u5b66",
-          "thought": null,
-          "next": "\u62bd\u8c61\u6982\u5ff5",
-          "why": ""
+          "thought": "Exploring \u6570\u5b66...",
+          "next": "\u62bd\u8c61\u6982\u5ff5"
         },
         {
           "time": "18:11",
           "date": "2026-02-20",
           "article": "\u6b74\u53f2",
-          "thought": null,
-          "next": "\u8881\u9ec4",
-          "why": ""
+          "thought": "Exploring \u6b74\u53f2...",
+          "next": "\u8881\u9ec4"
         },
         {
           "time": "18:07",
           "date": "2026-02-20",
           "article": "\u54f2\u5b66",
-          "thought": null,
-          "next": "\u53e4\u4ee3\u30ae\u30ea\u30b7\u30a2\u8a9e",
-          "why": ""
+          "thought": "Exploring \u54f2\u5b66...",
+          "next": "\u53e4\u4ee3\u30ae\u30ea\u30b7\u30a2\u8a9e"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "\u5fc3\u7406\u5b66",
-          "thought": null,
-          "next": "\u6df1\u5c64\u5fc3\u7406\u5b66",
-          "why": ""
+          "thought": "Exploring \u5fc3\u7406\u5b66...",
+          "next": "\u6df1\u5c64\u5fc3\u7406\u5b66"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u6b74\u53f2",
-          "thought": null,
-          "next": "\u79d1\u5b66",
-          "why": ""
+          "thought": "Exploring \u6b74\u53f2...",
+          "next": "\u79d1\u5b66"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u751f\u7269\u5b66",
-          "thought": null,
-          "next": "\u5206\u5e03 (\u751f\u7269)",
-          "why": ""
+          "thought": "Exploring \u751f\u7269\u5b66...",
+          "next": "\u5206\u5e03 (\u751f\u7269)"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u79d1\u5b66",
-          "thought": null,
-          "next": "\u81ea\u7136\u79d1\u5b66",
-          "why": ""
+          "thought": "Exploring \u79d1\u5b66...",
+          "next": "\u81ea\u7136\u79d1\u5b66"
         }
       ],
       "top_topics": [
         {
+          "topic": "\u6570\u5b66",
+          "visits": 12
+        },
+        {
           "topic": "\u6b74\u53f2",
-          "visits": 5
+          "visits": 11
         },
         {
           "topic": "\u5fc3\u7406\u5b66",
-          "visits": 3
-        },
-        {
-          "topic": "\u6570\u5b66",
-          "visits": 3
-        },
-        {
-          "topic": "\u79d1\u5b66",
-          "visits": 3
-        },
-        {
-          "topic": "\u54f2\u5b66",
-          "visits": 2
+          "visits": 10
         },
         {
           "topic": "\u751f\u7269\u5b66",
-          "visits": 2
-        },
-        {
-          "topic": "\u97f3\u697d",
-          "visits": 1
+          "visits": 8
         },
         {
           "topic": "\u82b8\u8853",
-          "visits": 1
+          "visits": 8
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 8
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 7
+        },
+        {
+          "topic": "\u97f3\u697d",
+          "visits": 5
         }
       ]
     },
@@ -1271,107 +1180,105 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "\u79d1\u5b66",
-          "thought": null,
-          "next": "\u5f62\u5f0f\u79d1\u5b66",
-          "why": ""
+          "thought": "Exploring \u79d1\u5b66...",
+          "next": "\u5f62\u5f0f\u79d1\u5b66"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "\u82b8\u8853",
-          "thought": null,
-          "next": "\u8a00\u8a9e\u82b8\u8853",
-          "why": ""
+          "thought": "Exploring \u82b8\u8853...",
+          "next": "\u8a00\u8a9e\u82b8\u8853"
         },
         {
           "time": "00:27",
           "date": "2026-02-21",
           "article": "\u54f2\u5b66",
-          "thought": null,
-          "next": "\u653f\u6cbb\u54f2\u5b66",
-          "why": ""
+          "thought": "Exploring \u54f2\u5b66...",
+          "next": "\u653f\u6cbb\u54f2\u5b66"
         },
         {
           "time": "18:16",
           "date": "2026-02-20",
           "article": "\u79d1\u5b66",
-          "thought": null,
-          "next": "\u5f62\u5f0f\u79d1\u5b66",
-          "why": ""
+          "thought": "Exploring \u79d1\u5b66...",
+          "next": "\u5f62\u5f0f\u79d1\u5b66"
         },
         {
           "time": "18:12",
           "date": "2026-02-20",
           "article": "\u54f2\u5b66",
-          "thought": null,
-          "next": "\u7f8e\u5b66",
-          "why": ""
+          "thought": "Exploring \u54f2\u5b66...",
+          "next": "\u7f8e\u5b66"
         },
         {
           "time": "18:07",
           "date": "2026-02-20",
           "article": "\u97f3\u697d",
-          "thought": null,
-          "next": "\u5357\u30a2\u30d5\u30ea\u30ab\u306e\u97f3\u697d",
-          "why": ""
+          "thought": "Exploring \u97f3\u697d...",
+          "next": "\u5357\u30a2\u30d5\u30ea\u30ab\u306e\u97f3\u697d"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "\u79d1\u5b66",
-          "thought": null,
-          "next": "\u793e\u4f1a\u79d1\u5b66",
-          "why": ""
+          "thought": "Exploring \u79d1\u5b66...",
+          "next": "\u793e\u4f1a\u79d1\u5b66"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u82b8\u8853",
-          "thought": null,
-          "next": "\u6620\u753b",
-          "why": ""
+          "thought": "Exploring \u82b8\u8853...",
+          "next": "\u6620\u753b"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u54f2\u5b66",
-          "thought": null,
-          "next": "\u30b9\u30b3\u30e9\u5b66",
-          "why": ""
+          "thought": "Exploring \u54f2\u5b66...",
+          "next": "\u30b9\u30b3\u30e9\u5b66"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "\u54f2\u5b66",
-          "thought": null,
-          "next": "\u5206\u6790\u54f2\u5b66",
-          "why": ""
+          "thought": "Exploring \u54f2\u5b66...",
+          "next": "\u5206\u6790\u54f2\u5b66"
         }
       ],
       "top_topics": [
         {
-          "topic": "\u54f2\u5b66",
-          "visits": 6
-        },
-        {
           "topic": "\u82b8\u8853",
-          "visits": 5
-        },
-        {
-          "topic": "\u79d1\u5b66",
-          "visits": 4
-        },
-        {
-          "topic": "\u97f3\u697d",
-          "visits": 2
+          "visits": 13
         },
         {
           "topic": "\u751f\u7269\u5b66",
-          "visits": 2
+          "visits": 13
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 10
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 9
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 7
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 7
+        },
+        {
+          "topic": "\u97f3\u697d",
+          "visits": 6
         },
         {
           "topic": "\u6b74\u53f2",
-          "visits": 1
+          "visits": 4
         }
       ]
     },
@@ -1387,115 +1294,105 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "Mechanics",
-          "thought": null,
-          "next": "Aristotle",
-          "why": ""
+          "thought": "Exploring Mechanics...",
+          "next": "Aristotle"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "Physics",
-          "thought": null,
-          "next": "Mechanics",
-          "why": ""
+          "thought": "Exploring Physics...",
+          "next": "Mechanics"
         },
         {
           "time": "00:27",
           "date": "2026-02-21",
           "article": "Science",
-          "thought": null,
-          "next": "Physics",
-          "why": ""
+          "thought": "Exploring Science...",
+          "next": "Physics"
         },
         {
           "time": "15:54",
           "date": "2026-02-20",
           "article": "Payment",
-          "thought": null,
-          "next": "Law",
-          "why": ""
+          "thought": "Exploring Payment...",
+          "next": "Law"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Atom",
-          "thought": null,
-          "next": "Atom (feed)",
-          "why": ""
+          "thought": "Exploring Atom...",
+          "next": "Atom (feed)"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Atom (feed)",
-          "thought": null,
-          "next": "HTTP",
-          "why": ""
+          "thought": "Exploring Atom (feed)...",
+          "next": "HTTP"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "HTTP",
-          "thought": null,
-          "next": "Payment",
-          "why": ""
+          "thought": "Exploring HTTP...",
+          "next": "Payment"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Resolution",
-          "thought": null,
-          "next": "Bertolt Brecht",
-          "why": ""
+          "thought": "Exploring Resolution...",
+          "next": "Bertolt Brecht"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Bertolt Brecht",
-          "thought": null,
-          "next": "Prague",
-          "why": ""
+          "thought": "Exploring Bertolt Brecht...",
+          "next": "Prague"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Prague",
-          "thought": null,
-          "next": "Wallenstein Palace",
-          "why": ""
+          "thought": "Exploring Prague...",
+          "next": "Wallenstein Palace"
         }
       ],
       "top_topics": [
         {
-          "topic": "Mechanics",
-          "visits": 1
+          "topic": "Flag",
+          "visits": 3
         },
         {
-          "topic": "Physics",
-          "visits": 1
+          "topic": "Flag of Estonia",
+          "visits": 3
         },
         {
-          "topic": "Science",
-          "visits": 1
+          "topic": "Estonia",
+          "visits": 3
         },
         {
-          "topic": "Payment",
-          "visits": 1
+          "topic": "Albania",
+          "visits": 3
         },
         {
-          "topic": "Atom",
-          "visits": 1
+          "topic": "Kosovo",
+          "visits": 3
         },
         {
-          "topic": "Atom (feed)",
-          "visits": 1
+          "topic": "Psychology",
+          "visits": 2
         },
         {
-          "topic": "HTTP",
-          "visits": 1
+          "topic": "Mind",
+          "visits": 2
         },
         {
-          "topic": "Resolution",
-          "visits": 1
+          "topic": "Free will",
+          "visits": 2
         }
       ]
     },
@@ -1511,114 +1408,104 @@
           "time": "00:35",
           "date": "2026-02-21",
           "article": "News",
-          "thought": null,
-          "next": "Government",
-          "why": ""
+          "thought": "Exploring News...",
+          "next": "Government"
         },
         {
           "time": "00:31",
           "date": "2026-02-21",
           "article": "Newspaper",
-          "thought": null,
-          "next": "News",
-          "why": ""
+          "thought": "Exploring Newspaper...",
+          "next": "News"
         },
         {
           "time": "00:27",
           "date": "2026-02-21",
           "article": "History",
-          "thought": null,
-          "next": "Newspaper",
-          "why": ""
+          "thought": "Exploring History...",
+          "next": "Newspaper"
         },
         {
           "time": "15:54",
           "date": "2026-02-20",
           "article": "Debit card",
-          "thought": null,
-          "next": "Plastic",
-          "why": ""
+          "thought": "Exploring Debit card...",
+          "next": "Plastic"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Credit",
-          "thought": null,
-          "next": "Credit card",
-          "why": ""
+          "thought": "Exploring Credit...",
+          "next": "Credit card"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Credit card",
-          "thought": null,
-          "next": "Payment",
-          "why": ""
+          "thought": "Exploring Credit card...",
+          "next": "Payment"
         },
         {
           "time": "15:50",
           "date": "2026-02-20",
           "article": "Payment",
-          "thought": null,
-          "next": "Debit card",
-          "why": ""
+          "thought": "Exploring Payment...",
+          "next": "Debit card"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Oil",
-          "thought": null,
-          "next": "Vegetable oil",
-          "why": ""
+          "thought": "Exploring Oil...",
+          "next": "Vegetable oil"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Vegetable oil",
-          "thought": null,
-          "next": "Plant",
-          "why": ""
+          "thought": "Exploring Vegetable oil...",
+          "next": "Plant"
         },
         {
           "time": "15:49",
           "date": "2026-02-20",
           "article": "Plant",
-          "thought": null,
-          "next": "Moss",
-          "why": ""
+          "thought": "Exploring Plant...",
+          "next": "Moss"
         }
       ],
       "top_topics": [
         {
-          "topic": "News",
-          "visits": 1
+          "topic": "Plant",
+          "visits": 4
+        },
+        {
+          "topic": "Art",
+          "visits": 3
+        },
+        {
+          "topic": "Emotion",
+          "visits": 3
+        },
+        {
+          "topic": "Angst",
+          "visits": 3
         },
         {
           "topic": "Newspaper",
-          "visits": 1
+          "visits": 2
+        },
+        {
+          "topic": "Biology",
+          "visits": 2
+        },
+        {
+          "topic": "Streptophyta",
+          "visits": 2
         },
         {
           "topic": "History",
-          "visits": 1
-        },
-        {
-          "topic": "Debit card",
-          "visits": 1
-        },
-        {
-          "topic": "Credit",
-          "visits": 1
-        },
-        {
-          "topic": "Credit card",
-          "visits": 1
-        },
-        {
-          "topic": "Payment",
-          "visits": 1
-        },
-        {
-          "topic": "Oil",
           "visits": 1
         }
       ]
@@ -1632,118 +1519,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
+          "time": "03:01",
+          "date": "2026-02-21",
+          "article": "Earth science",
+          "thought": "Exploring Earth science...",
+          "next": "Planetary science"
+        },
+        {
+          "time": "02:57",
+          "date": "2026-02-21",
+          "article": "Cryogenian",
+          "thought": "Exploring Cryogenian...",
+          "next": "Earth science"
+        },
+        {
+          "time": "02:53",
+          "date": "2026-02-21",
+          "article": "Animal",
+          "thought": "Exploring Animal...",
+          "next": "Cryogenian"
+        },
+        {
           "time": "02:49",
           "date": "2026-02-21",
           "article": "Olfaction",
-          "thought": null,
-          "next": "Animal",
-          "why": ""
+          "thought": "Exploring Olfaction...",
+          "next": "Animal"
         },
         {
           "time": "02:45",
           "date": "2026-02-21",
           "article": "Face",
-          "thought": null,
-          "next": "Olfaction",
-          "why": ""
+          "thought": "Exploring Face...",
+          "next": "Olfaction"
         },
         {
           "time": "02:41",
           "date": "2026-02-21",
           "article": "Mouth",
-          "thought": null,
-          "next": "Face",
-          "why": ""
+          "thought": "Exploring Mouth...",
+          "next": "Face"
         },
         {
           "time": "02:37",
           "date": "2026-02-21",
           "article": "Word",
-          "thought": null,
-          "next": "Mouth",
-          "why": ""
+          "thought": "Exploring Word...",
+          "next": "Mouth"
         },
         {
           "time": "02:33",
           "date": "2026-02-21",
           "article": "Definition",
-          "thought": null,
-          "next": "Word",
-          "why": ""
+          "thought": "Exploring Definition...",
+          "next": "Word"
         },
         {
           "time": "02:29",
           "date": "2026-02-21",
           "article": "Text",
-          "thought": null,
-          "next": "Definition",
-          "why": ""
+          "thought": "Exploring Text...",
+          "next": "Definition"
         },
         {
           "time": "02:25",
           "date": "2026-02-21",
           "article": "Write",
-          "thought": null,
-          "next": "Text",
-          "why": ""
-        },
-        {
-          "time": "02:21",
-          "date": "2026-02-21",
-          "article": "Ink",
-          "thought": null,
-          "next": "Write",
-          "why": ""
-        },
-        {
-          "time": "02:17",
-          "date": "2026-02-21",
-          "article": "Document",
-          "thought": null,
-          "next": "Ink",
-          "why": ""
-        },
-        {
-          "time": "02:13",
-          "date": "2026-02-21",
-          "article": "Constitution",
-          "thought": null,
-          "next": "Document",
-          "why": ""
+          "thought": "Exploring Write...",
+          "next": "Text"
         }
       ],
       "top_topics": [
         {
           "topic": "Definition",
-          "visits": 3
+          "visits": 8
         },
         {
-          "topic": "Olfaction",
-          "visits": 1
+          "topic": "Earth",
+          "visits": 6
         },
         {
-          "topic": "Face",
-          "visits": 1
+          "topic": "Animal",
+          "visits": 5
         },
         {
-          "topic": "Mouth",
-          "visits": 1
+          "topic": "Physics",
+          "visits": 5
         },
         {
-          "topic": "Word",
-          "visits": 1
+          "topic": "Science",
+          "visits": 5
         },
         {
-          "topic": "Text",
-          "visits": 1
+          "topic": "Language",
+          "visits": 4
         },
         {
-          "topic": "Write",
-          "visits": 1
+          "topic": "Mathematics",
+          "visits": 4
         },
         {
-          "topic": "Ink",
-          "visits": 1
+          "topic": "Mass",
+          "visits": 4
         }
       ]
     },
@@ -1756,118 +1633,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
+          "time": "03:01",
+          "date": "2026-02-21",
+          "article": "Equestrian",
+          "thought": "Exploring Equestrian...",
+          "next": "Track and field athletics"
+        },
+        {
+          "time": "02:57",
+          "date": "2026-02-21",
+          "article": "Saddle",
+          "thought": "Exploring Saddle...",
+          "next": "Equestrian"
+        },
+        {
+          "time": "02:53",
+          "date": "2026-02-21",
+          "article": "Girth (tack)",
+          "thought": "Exploring Girth (tack)...",
+          "next": "Saddle"
+        },
+        {
           "time": "02:49",
           "date": "2026-02-21",
           "article": "Girth",
-          "thought": null,
-          "next": "Girth (tack)",
-          "why": ""
+          "thought": "Exploring Girth...",
+          "next": "Girth (tack)"
         },
         {
           "time": "02:45",
           "date": "2026-02-21",
           "article": "Drawing (manufacturing)",
-          "thought": null,
-          "next": "Girth",
-          "why": ""
+          "thought": "Exploring Drawing (manufacturing)...",
+          "next": "Girth"
         },
         {
           "time": "02:41",
           "date": "2026-02-21",
           "article": "Drawing",
-          "thought": null,
-          "next": "Drawing (manufacturing)",
-          "why": ""
+          "thought": "Exploring Drawing...",
+          "next": "Drawing (manufacturing)"
         },
         {
           "time": "02:37",
           "date": "2026-02-21",
           "article": "Logo",
-          "thought": null,
-          "next": "Drawing",
-          "why": ""
+          "thought": "Exploring Logo...",
+          "next": "Drawing"
         },
         {
           "time": "02:33",
           "date": "2026-02-21",
           "article": "Trademark",
-          "thought": null,
-          "next": "Logo",
-          "why": ""
+          "thought": "Exploring Trademark...",
+          "next": "Logo"
         },
         {
           "time": "02:29",
           "date": "2026-02-21",
           "article": "Label",
-          "thought": null,
-          "next": "Trademark",
-          "why": ""
+          "thought": "Exploring Label...",
+          "next": "Trademark"
         },
         {
           "time": "02:25",
           "date": "2026-02-21",
           "article": "Concepts",
-          "thought": null,
-          "next": "Label",
-          "why": ""
-        },
-        {
-          "time": "02:21",
-          "date": "2026-02-21",
-          "article": "Mother tongue",
-          "thought": null,
-          "next": "Concepts",
-          "why": ""
-        },
-        {
-          "time": "02:17",
-          "date": "2026-02-21",
-          "article": "Second language",
-          "thought": null,
-          "next": "Mother tongue",
-          "why": ""
-        },
-        {
-          "time": "02:13",
-          "date": "2026-02-21",
-          "article": "French language",
-          "thought": null,
-          "next": "Second language",
-          "why": ""
+          "thought": "Exploring Concepts...",
+          "next": "Label"
         }
       ],
       "top_topics": [
         {
-          "topic": "Switzerland",
-          "visits": 2
+          "topic": "Emotion",
+          "visits": 9
         },
         {
-          "topic": "Girth",
-          "visits": 1
+          "topic": "Language",
+          "visits": 7
         },
         {
-          "topic": "Drawing (manufacturing)",
-          "visits": 1
+          "topic": "Atom",
+          "visits": 7
         },
         {
-          "topic": "Drawing",
-          "visits": 1
+          "topic": "Number",
+          "visits": 5
         },
         {
-          "topic": "Logo",
-          "visits": 1
+          "topic": "Anxiety",
+          "visits": 5
         },
         {
-          "topic": "Trademark",
-          "visits": 1
+          "topic": "Communication",
+          "visits": 5
         },
         {
-          "topic": "Label",
-          "visits": 1
+          "topic": "Angst",
+          "visits": 4
         },
         {
-          "topic": "Concepts",
-          "visits": 1
+          "topic": "Anguish",
+          "visits": 4
         }
       ]
     },
@@ -1880,118 +1747,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
+          "time": "03:02",
+          "date": "2026-02-21",
+          "article": "Toy",
+          "thought": "Exploring Toy...",
+          "next": "Animal"
+        },
+        {
+          "time": "02:58",
+          "date": "2026-02-21",
+          "article": "Donation",
+          "thought": "Exploring Donation...",
+          "next": "Toy"
+        },
+        {
+          "time": "02:55",
+          "date": "2026-02-21",
+          "article": "Charitable organization",
+          "thought": "Exploring Charitable organization...",
+          "next": "Donation"
+        },
+        {
+          "time": "02:52",
+          "date": "2026-02-21",
+          "article": "Oxford University Press",
+          "thought": "Exploring Oxford University Press...",
+          "next": "Charitable organization"
+        },
+        {
           "time": "02:49",
           "date": "2026-02-21",
           "article": "Publication",
-          "thought": null,
-          "next": "Oxford University Press",
-          "why": ""
+          "thought": "Exploring Publication...",
+          "next": "Oxford University Press"
         },
         {
           "time": "02:46",
           "date": "2026-02-21",
           "article": "Ethnologue",
-          "thought": null,
-          "next": "Publication",
-          "why": ""
+          "thought": "Exploring Ethnologue...",
+          "next": "Publication"
         },
         {
           "time": "02:43",
           "date": "2026-02-21",
           "article": "Language family",
-          "thought": null,
-          "next": "Ethnologue",
-          "why": ""
+          "thought": "Exploring Language family...",
+          "next": "Ethnologue"
         },
         {
           "time": "02:40",
           "date": "2026-02-21",
           "article": "Czech language",
-          "thought": null,
-          "next": "Language family",
-          "why": ""
+          "thought": "Exploring Czech language...",
+          "next": "Language family"
         },
         {
           "time": "02:37",
           "date": "2026-02-21",
           "article": "European Union",
-          "thought": null,
-          "next": "Czech language",
-          "why": ""
+          "thought": "Exploring European Union...",
+          "next": "Czech language"
         },
         {
           "time": "02:34",
           "date": "2026-02-21",
           "article": "Greek language",
-          "thought": null,
-          "next": "European Union",
-          "why": ""
-        },
-        {
-          "time": "02:31",
-          "date": "2026-02-21",
-          "article": "Theatre",
-          "thought": null,
-          "next": "Greek language",
-          "why": ""
-        },
-        {
-          "time": "02:28",
-          "date": "2026-02-21",
-          "article": "Bowing",
-          "thought": null,
-          "next": "Theatre",
-          "why": ""
-        },
-        {
-          "time": "02:25",
-          "date": "2026-02-21",
-          "article": "Custom",
-          "thought": null,
-          "next": "Bowing",
-          "why": ""
-        },
-        {
-          "time": "02:22",
-          "date": "2026-02-21",
-          "article": "Ancient Rome",
-          "thought": null,
-          "next": "Custom",
-          "why": ""
+          "thought": "Exploring Greek language...",
+          "next": "European Union"
         }
       ],
       "top_topics": [
+        {
+          "topic": "Definition",
+          "visits": 4
+        },
+        {
+          "topic": "Science",
+          "visits": 3
+        },
+        {
+          "topic": "Europe",
+          "visits": 3
+        },
+        {
+          "topic": "Language",
+          "visits": 2
+        },
+        {
+          "topic": "Rule",
+          "visits": 2
+        },
+        {
+          "topic": "Constitutional economics",
+          "visits": 2
+        },
         {
           "topic": "Olympic Games",
           "visits": 2
         },
         {
-          "topic": "Publication",
-          "visits": 1
-        },
-        {
-          "topic": "Ethnologue",
-          "visits": 1
-        },
-        {
           "topic": "Language family",
-          "visits": 1
-        },
-        {
-          "topic": "Czech language",
-          "visits": 1
-        },
-        {
-          "topic": "European Union",
-          "visits": 1
-        },
-        {
-          "topic": "Greek language",
-          "visits": 1
-        },
-        {
-          "topic": "Theatre",
-          "visits": 1
+          "visits": 2
         }
       ]
     }
@@ -2026,16 +1883,14 @@
     ]
   },
   "stats": {
-    "total_traces": 7452,
+    "total_traces": 7472,
     "total_baselines": 0,
     "active_tanks": 16,
-    "traces_today": 288
+    "traces_today": 308
   },
-  "broadcast_log": [
-    "[02:50:02] Processing Victor...",
-    "[02:50:02] Processing Iris...",
-    "[02:50:02] Processing Observer...",
-    "[02:50:02] Processing Seeker...",
-    "[02:50:02] Processing Seth..."
-  ]
+  "prune_stats": {
+    "total": 1300,
+    "kept": 1286,
+    "pruned": 14
+  }
 }

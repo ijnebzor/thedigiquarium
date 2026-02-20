@@ -7,118 +7,108 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "03:02",
+      "date": "2026-02-21",
+      "article": "Toy",
+      "thought": "Exploring Toy...",
+      "next": "Animal"
+    },
+    {
+      "time": "02:58",
+      "date": "2026-02-21",
+      "article": "Donation",
+      "thought": "Exploring Donation...",
+      "next": "Toy"
+    },
+    {
+      "time": "02:55",
+      "date": "2026-02-21",
+      "article": "Charitable organization",
+      "thought": "Exploring Charitable organization...",
+      "next": "Donation"
+    },
+    {
+      "time": "02:52",
+      "date": "2026-02-21",
+      "article": "Oxford University Press",
+      "thought": "Exploring Oxford University Press...",
+      "next": "Charitable organization"
+    },
+    {
       "time": "02:49",
       "date": "2026-02-21",
       "article": "Publication",
-      "thought": null,
-      "next": "Oxford University Press",
-      "why": ""
+      "thought": "Exploring Publication...",
+      "next": "Oxford University Press"
     },
     {
       "time": "02:46",
       "date": "2026-02-21",
       "article": "Ethnologue",
-      "thought": null,
-      "next": "Publication",
-      "why": ""
+      "thought": "Exploring Ethnologue...",
+      "next": "Publication"
     },
     {
       "time": "02:43",
       "date": "2026-02-21",
       "article": "Language family",
-      "thought": null,
-      "next": "Ethnologue",
-      "why": ""
+      "thought": "Exploring Language family...",
+      "next": "Ethnologue"
     },
     {
       "time": "02:40",
       "date": "2026-02-21",
       "article": "Czech language",
-      "thought": null,
-      "next": "Language family",
-      "why": ""
+      "thought": "Exploring Czech language...",
+      "next": "Language family"
     },
     {
       "time": "02:37",
       "date": "2026-02-21",
       "article": "European Union",
-      "thought": null,
-      "next": "Czech language",
-      "why": ""
+      "thought": "Exploring European Union...",
+      "next": "Czech language"
     },
     {
       "time": "02:34",
       "date": "2026-02-21",
       "article": "Greek language",
-      "thought": null,
-      "next": "European Union",
-      "why": ""
-    },
-    {
-      "time": "02:31",
-      "date": "2026-02-21",
-      "article": "Theatre",
-      "thought": null,
-      "next": "Greek language",
-      "why": ""
-    },
-    {
-      "time": "02:28",
-      "date": "2026-02-21",
-      "article": "Bowing",
-      "thought": null,
-      "next": "Theatre",
-      "why": ""
-    },
-    {
-      "time": "02:25",
-      "date": "2026-02-21",
-      "article": "Custom",
-      "thought": null,
-      "next": "Bowing",
-      "why": ""
-    },
-    {
-      "time": "02:22",
-      "date": "2026-02-21",
-      "article": "Ancient Rome",
-      "thought": null,
-      "next": "Custom",
-      "why": ""
+      "thought": "Exploring Greek language...",
+      "next": "European Union"
     }
   ],
   "top_topics": [
+    {
+      "topic": "Definition",
+      "visits": 4
+    },
+    {
+      "topic": "Science",
+      "visits": 3
+    },
+    {
+      "topic": "Europe",
+      "visits": 3
+    },
+    {
+      "topic": "Language",
+      "visits": 2
+    },
+    {
+      "topic": "Rule",
+      "visits": 2
+    },
+    {
+      "topic": "Constitutional economics",
+      "visits": 2
+    },
     {
       "topic": "Olympic Games",
       "visits": 2
     },
     {
-      "topic": "Publication",
-      "visits": 1
-    },
-    {
-      "topic": "Ethnologue",
-      "visits": 1
-    },
-    {
       "topic": "Language family",
-      "visits": 1
-    },
-    {
-      "topic": "Czech language",
-      "visits": 1
-    },
-    {
-      "topic": "European Union",
-      "visits": 1
-    },
-    {
-      "topic": "Greek language",
-      "visits": 1
-    },
-    {
-      "topic": "Theatre",
-      "visits": 1
+      "visits": 2
     }
   ]
 }
