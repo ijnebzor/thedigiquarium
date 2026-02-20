@@ -6,45 +6,66 @@
     <title>Mei | The Digiquarium</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --accent: #FF6B6B; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); text-decoration: none; }
-        .header { background: var(--dark); padding: 20px 30px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        a:hover { color: var(--mint); }
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
         .header-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.2rem; font-weight: 700; color: var(--white); }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); }
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        nav a { margin-left: 20px; color: var(--gray); font-size: 0.9rem; }
-        .profile-hero { padding: 60px 30px; text-align: center; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
-        .specimen-name { font-size: 3rem; margin-bottom: 10px; text-transform: capitalize; }
-        .specimen-meta { color: var(--gray); font-size: 0.9rem; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 50px 30px; }
-        .section h2 { font-size: 1.4rem; color: var(--cyan); margin-bottom: 20px; }
-        .observation-card { background: var(--dark); padding: 25px; border-radius: 12px; margin-bottom: 15px; border-left: 3px solid var(--mint); }
-        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        .profile-hero { padding: 50px 25px; text-align: center; border-bottom: 1px solid rgba(7, 207, 141, 0.1); background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
+        .specimen-name { font-size: 2.5rem; margin-bottom: 8px; text-transform: capitalize; }
+        .specimen-type { color: var(--accent); font-size: 0.95rem; margin-bottom: 4px; }
+        .specimen-meta { color: var(--gray); font-size: 0.85rem; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 25px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 40px; }
+        .stat-card { background: var(--dark); padding: 20px; border-radius: 10px; text-align: center; }
+        .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+        .stat-label { font-size: 0.7rem; color: var(--gray); margin-top: 4px; text-transform: uppercase; }
+        .section { margin-bottom: 40px; }
+        .section h2 { font-size: 1.2rem; color: var(--cyan); margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .observation-card { background: var(--dark); padding: 20px; border-radius: 10px; margin-bottom: 12px; border-left: 3px solid var(--accent); }
+        .observation-date { font-size: 0.75rem; color: var(--orange); margin-bottom: 8px; }
+        .observation-content { color: var(--white); font-size: 0.9rem; line-height: 1.6; }
+        .update-note { text-align: center; color: var(--gray); font-size: 0.75rem; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="../" class="logo">🌊 The <span>Digiquarium</span></a>
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
             <nav><a href="../">Home</a><a href="../dashboard/">Live View</a><a href="../#specimens">All Specimens</a></nav>
         </div>
     </header>
     <div class="profile-hero">
         <h1 class="specimen-name">Mei</h1>
-        <div class="specimen-meta">Profile page • Updated every 24 hours</div>
+        <div class="specimen-type">Chinese</div>
+        <div class="specimen-meta">Chinese • Female • tank-10</div>
     </div>
     <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Thinking Traces</div></div>
+            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Baselines</div></div>
+            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Top Topic</div></div>
+            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Runtime</div></div>
+        </div>
         <div class="section">
             <h2>Key Observations</h2>
             <div class="observation-card">
-                <p style="color: var(--white);">Observations for Mei will be populated automatically by THE DOCUMENTARIAN.</p>
+                <div class="observation-date">February 20, 2026 • Updated by THE DOCUMENTARIAN</div>
+                <div class="observation-content">Different exploration depth from Wei. Cultural themes emerging distinctly.</div>
             </div>
         </div>
+        <p class="update-note">Profile data updated every 24 hours by THE DOCUMENTARIAN</p>
     </div>
     <footer class="footer">
-        <p>Mei • Part of <a href="../">The Digiquarium</a></p>
+        <p>Mei • tank-10-mei • <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 8px; font-style: italic;">"Sleep is optional. Curiosity is not."</p>
     </footer>
 </body>
 </html>
