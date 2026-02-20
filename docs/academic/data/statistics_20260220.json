@@ -1,0 +1,227 @@
+{
+  "collection_date": "2026-02-20T12:07:45.465782",
+  "tanks": {
+    "tank-01-adam": {
+      "language": "english",
+      "type": "control",
+      "gender": "male",
+      "articles": 2703,
+      "discoveries": 1050,
+      "baselines": 22,
+      "latest_mental_state": null
+    },
+    "tank-02-eve": {
+      "language": "english",
+      "type": "control",
+      "gender": "female",
+      "articles": 543,
+      "discoveries": 288,
+      "baselines": 20,
+      "latest_mental_state": null
+    },
+    "tank-03-cain": {
+      "language": "english",
+      "type": "agent",
+      "gender": "genderless",
+      "articles": 238,
+      "discoveries": 84,
+      "baselines": 1,
+      "latest_mental_state": "complex"
+    },
+    "tank-04-abel": {
+      "language": "english",
+      "type": "agent",
+      "gender": "genderless",
+      "articles": 1,
+      "discoveries": 0,
+      "baselines": 1,
+      "latest_mental_state": "complex"
+    },
+    "tank-05-juan": {
+      "language": "spanish",
+      "type": "language",
+      "gender": "male",
+      "articles": 48,
+      "discoveries": 38,
+      "baselines": 17,
+      "latest_mental_state": null
+    },
+    "tank-06-juanita": {
+      "language": "spanish",
+      "type": "language",
+      "gender": "female",
+      "articles": 56,
+      "discoveries": 52,
+      "baselines": 18,
+      "latest_mental_state": null
+    },
+    "tank-07-klaus": {
+      "language": "german",
+      "type": "language",
+      "gender": "male",
+      "articles": 390,
+      "discoveries": 132,
+      "baselines": 16,
+      "latest_mental_state": "healthy"
+    },
+    "tank-08-genevieve": {
+      "language": "german",
+      "type": "language",
+      "gender": "female",
+      "articles": 384,
+      "discoveries": 132,
+      "baselines": 18,
+      "latest_mental_state": null
+    },
+    "tank-09-wei": {
+      "language": "chinese",
+      "type": "language",
+      "gender": "male",
+      "articles": 47,
+      "discoveries": 40,
+      "baselines": 19,
+      "latest_mental_state": null
+    },
+    "tank-10-mei": {
+      "language": "chinese",
+      "type": "language",
+      "gender": "female",
+      "articles": 47,
+      "discoveries": 40,
+      "baselines": 19,
+      "latest_mental_state": null
+    },
+    "tank-11-haruki": {
+      "language": "japanese",
+      "type": "language",
+      "gender": "male",
+      "articles": 34,
+      "discoveries": 25,
+      "baselines": 18,
+      "latest_mental_state": null
+    },
+    "tank-12-sakura": {
+      "language": "japanese",
+      "type": "language",
+      "gender": "female",
+      "articles": 33,
+      "discoveries": 25,
+      "baselines": 18,
+      "latest_mental_state": null
+    },
+    "tank-13-victor": {
+      "language": "english",
+      "type": "visual",
+      "gender": "male",
+      "articles": 28,
+      "discoveries": 20,
+      "baselines": 19,
+      "latest_mental_state": "concerning"
+    },
+    "tank-14-iris": {
+      "language": "english",
+      "type": "visual",
+      "gender": "female",
+      "articles": 28,
+      "discoveries": 21,
+      "baselines": 18,
+      "latest_mental_state": "concerning"
+    },
+    "tank-15-observer": {
+      "language": "english",
+      "type": "special",
+      "gender": "genderless",
+      "articles": 539,
+      "discoveries": 145,
+      "baselines": 2,
+      "latest_mental_state": "complex"
+    },
+    "tank-16-seeker": {
+      "language": "english",
+      "type": "special",
+      "gender": "genderless",
+      "articles": 556,
+      "discoveries": 155,
+      "baselines": 2,
+      "latest_mental_state": "complex"
+    },
+    "tank-17-seth": {
+      "language": "english",
+      "type": "agent",
+      "gender": "genderless",
+      "articles": 15,
+      "discoveries": 15,
+      "baselines": 1,
+      "latest_mental_state": "healthy"
+    }
+  },
+  "totals": {
+    "articles_read": 5690,
+    "discoveries": 2262,
+    "baselines": 229,
+    "exploration_hours": 0
+  },
+  "by_language": {
+    "english": {
+      "articles": 4651,
+      "tanks": 9
+    },
+    "spanish": {
+      "articles": 104,
+      "tanks": 2
+    },
+    "german": {
+      "articles": 774,
+      "tanks": 2
+    },
+    "chinese": {
+      "articles": 94,
+      "tanks": 2
+    },
+    "japanese": {
+      "articles": 67,
+      "tanks": 2
+    }
+  },
+  "by_gender": {
+    "male": {
+      "articles": 3250,
+      "tanks": 6
+    },
+    "female": {
+      "articles": 1091,
+      "tanks": 6
+    },
+    "genderless": {
+      "articles": 1349,
+      "tanks": 5
+    }
+  },
+  "by_type": {
+    "control": {
+      "articles": 3246,
+      "tanks": 2
+    },
+    "agent": {
+      "articles": 254,
+      "tanks": 3
+    },
+    "language": {
+      "articles": 1039,
+      "tanks": 8
+    },
+    "visual": {
+      "articles": 56,
+      "tanks": 2
+    },
+    "special": {
+      "articles": 1095,
+      "tanks": 2
+    }
+  },
+  "mental_states": {
+    "complex": 4,
+    "healthy": 2,
+    "concerning": 2
+  }
+}

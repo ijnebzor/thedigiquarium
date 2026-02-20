@@ -1,0 +1,34 @@
+{
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://digiquarium-ollama:11434/v1",
+        "apiKey": "ollama",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-r1:1.5b",
+            "name": "DeepSeek R1 1.5B",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0 },
+            "contextWindow": 32768,
+            "maxTokens": 2048
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/deepseek-r1:1.5b"
+      },
+      "workspace": "/openclaw/workspace"
+    }
+  },
+  "gateway": {
+    "port": 18789
+  }
+}

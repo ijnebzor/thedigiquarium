@@ -1,0 +1,51 @@
+# Large data directories (not for git)
+kiwix-data/
+ollama-data/
+logs/
+
+# Keep sample log structure
+!logs/.gitkeep
+
+# Runtime files
+*.pid
+*.log
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Generated streams
+website/streams/*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets
+.env
+*.secret
+*.key
+id_ed25519
+id_rsa
+
+# Temporary
+*.tmp
+*.temp
+
+# Archives (too large)
+archives/
+
+# Backups
+*.backup
+*.bak
+
+# Model files
+*.gguf
+*.bin

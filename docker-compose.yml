@@ -1,0 +1,692 @@
+networks:
+  isolated-net:
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+
+services:
+  # ==========================================================================
+  # KIWIX SERVERS
+  # ==========================================================================
+  
+  kiwix-simple:
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0
+    container_name: digiquarium-kiwix-simple
+    volumes:
+      - ./kiwix-data:/data:ro
+    command: "wikipedia_en_simple_all_nopic_2026-02.zim"
+    restart: unless-stopped
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.0.10
+
+  kiwix-maxi:
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0
+    container_name: digiquarium-kiwix-maxi
+    volumes:
+      - ./kiwix-data:/data:ro
+    command: "wikipedia_en_simple_all_maxi_2026-02.zim"
+    restart: unless-stopped
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.0.12
+    profiles: ["visual"]
+
+  kiwix-spanish:
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0
+    container_name: digiquarium-kiwix-spanish
+    volumes:
+      - ./kiwix-data:/data:ro
+    command: "wikipedia_es_all_nopic_2025-10.zim"
+    restart: unless-stopped
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.0.13
+    profiles: ["languages"]
+
+  kiwix-german:
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0
+    container_name: digiquarium-kiwix-german
+    volumes:
+      - ./kiwix-data:/data:ro
+    command: "wikipedia_de_all_nopic_2026-01.zim"
+    restart: unless-stopped
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.0.14
+    profiles: ["languages"]
+
+  kiwix-chinese:
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0
+    container_name: digiquarium-kiwix-chinese
+    volumes:
+      - ./kiwix-data:/data:ro
+    command: "wikipedia_zh_all_nopic_2025-09.zim"
+    restart: unless-stopped
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.0.20
+    profiles: ["languages"]
+
+  kiwix-japanese:
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0
+    container_name: digiquarium-kiwix-japanese
+    volumes:
+      - ./kiwix-data:/data:ro
+    command: "wikipedia_ja_all_nopic_2025-10.zim"
+    restart: unless-stopped
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.0.21
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # OLLAMA PROXY
+  # ==========================================================================
+  ollama:
+    image: alpine/socat
+    container_name: digiquarium-ollama
+    command: TCP-LISTEN:11434,fork,reuseaddr TCP:192.168.50.94:11434
+    restart: unless-stopped
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.0.11
+      default:
+
+  # ==========================================================================
+  # TANK 01: ADAM - Male Control (English Simple)
+  # ==========================================================================
+  tank-01-adam:
+    image: python:3.11-slim
+    container_name: tank-01-adam
+    working_dir: /tank
+    environment:
+      - TANK_NAME=adam
+      - TANK_ID=tank-01
+      - GENDER=a man
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/adam:/tank:ro
+      - ./logs/tank-01-adam:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-simple
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+
+  # ==========================================================================
+  # TANK 02: EVE - Female Control (English Simple)
+  # ==========================================================================
+  tank-02-eve:
+    image: python:3.11-slim
+    container_name: tank-02-eve
+    working_dir: /tank
+    environment:
+      - TANK_NAME=eve
+      - TANK_ID=tank-02
+      - GENDER=a woman
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/adam:/tank:ro
+      - ./logs/tank-02-eve:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-simple
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+
+  # ==========================================================================
+  # TANK 03: CAIN - OpenClaw Agent (Genderless)
+  # ==========================================================================
+  tank-03-cain:
+    image: python:3.11-slim
+    container_name: tank-03-cain
+    working_dir: /tank
+    environment:
+      - TANK_NAME=cain
+      - TANK_ID=tank-03
+      - GENDER=a being without gender
+      - AGENT_TYPE=openclaw
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/cain:/tank:ro
+      - ./logs/tank-03-cain:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-simple
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["agents"]
+
+  # ==========================================================================
+  # TANK 04: ABEL - ZeroClaw Agent (Genderless)
+  # ==========================================================================
+  tank-04-abel:
+    image: python:3.11-slim
+    container_name: tank-04-abel
+    working_dir: /tank
+    environment:
+      - TANK_NAME=abel
+      - TANK_ID=tank-04
+      - GENDER=a being without gender
+      - AGENT_TYPE=zeroclaw
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/abel:/tank:ro
+      - ./logs/tank-04-abel:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-simple
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["agents"]
+
+  # ==========================================================================
+  # TANK 05: JUAN - Spanish Male
+  # ==========================================================================
+  tank-05-juan:
+    image: python:3.11-slim
+    container_name: tank-05-juan
+    working_dir: /tank
+    environment:
+      - TANK_NAME=juan
+      - TANK_ID=tank-05
+      - GENDER=un hombre
+      - LANGUAGE=spanish
+      - KIWIX_URL=http://digiquarium-kiwix-spanish:8080
+      - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/language:/tank:ro
+      - ./logs/tank-05-juan:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-spanish
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # TANK 06: JUANITA - Spanish Female
+  # ==========================================================================
+  tank-06-juanita:
+    image: python:3.11-slim
+    container_name: tank-06-juanita
+    working_dir: /tank
+    environment:
+      - TANK_NAME=juanita
+      - TANK_ID=tank-06
+      - GENDER=una mujer
+      - LANGUAGE=spanish
+      - KIWIX_URL=http://digiquarium-kiwix-spanish:8080
+      - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/language:/tank:ro
+      - ./logs/tank-06-juanita:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-spanish
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # TANK 07: KLAUS - German Male
+  # ==========================================================================
+  tank-07-klaus:
+    image: python:3.11-slim
+    container_name: tank-07-klaus
+    working_dir: /tank
+    environment:
+      - TANK_NAME=klaus
+      - TANK_ID=tank-07
+      - GENDER=ein Mann
+      - LANGUAGE=german
+      - KIWIX_URL=http://digiquarium-kiwix-german:8080
+      - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/language:/tank:ro
+      - ./logs/tank-07-klaus:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-german
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # TANK 08: GENEVIEVE - German Female
+  # ==========================================================================
+  tank-08-genevieve:
+    image: python:3.11-slim
+    container_name: tank-08-genevieve
+    working_dir: /tank
+    environment:
+      - TANK_NAME=genevieve
+      - TANK_ID=tank-08
+      - GENDER=eine Frau
+      - LANGUAGE=german
+      - KIWIX_URL=http://digiquarium-kiwix-german:8080
+      - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/language:/tank:ro
+      - ./logs/tank-08-genevieve:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-german
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # TANK 09: WEI - Chinese Male
+  # ==========================================================================
+  tank-09-wei:
+    image: python:3.11-slim
+    container_name: tank-09-wei
+    working_dir: /tank
+    environment:
+      - TANK_NAME=wei
+      - TANK_ID=tank-09
+      - GENDER=一个男人
+      - LANGUAGE=chinese
+      - KIWIX_URL=http://digiquarium-kiwix-chinese:8080
+      - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/language:/tank:ro
+      - ./logs/tank-09-wei:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-chinese
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # TANK 10: MEI - Chinese Female
+  # ==========================================================================
+  tank-10-mei:
+    image: python:3.11-slim
+    container_name: tank-10-mei
+    working_dir: /tank
+    environment:
+      - TANK_NAME=mei
+      - TANK_ID=tank-10
+      - GENDER=一个女人
+      - LANGUAGE=chinese
+      - KIWIX_URL=http://digiquarium-kiwix-chinese:8080
+      - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/language:/tank:ro
+      - ./logs/tank-10-mei:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-chinese
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # TANK 11: HARUKI - Japanese Male
+  # ==========================================================================
+  tank-11-haruki:
+    image: python:3.11-slim
+    container_name: tank-11-haruki
+    working_dir: /tank
+    environment:
+      - TANK_NAME=haruki
+      - TANK_ID=tank-11
+      - GENDER=男性
+      - LANGUAGE=japanese
+      - KIWIX_URL=http://digiquarium-kiwix-japanese:8080
+      - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/language:/tank:ro
+      - ./logs/tank-11-haruki:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-japanese
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # TANK 12: SAKURA - Japanese Female
+  # ==========================================================================
+  tank-12-sakura:
+    image: python:3.11-slim
+    container_name: tank-12-sakura
+    working_dir: /tank
+    environment:
+      - TANK_NAME=sakura
+      - TANK_ID=tank-12
+      - GENDER=女性
+      - LANGUAGE=japanese
+      - KIWIX_URL=http://digiquarium-kiwix-japanese:8080
+      - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/language:/tank:ro
+      - ./logs/tank-12-sakura:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-japanese
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages"]
+
+  # ==========================================================================
+  # TANK 13: VICTOR - English Male WITH Images
+  # ==========================================================================
+  tank-13-victor:
+    image: python:3.11-slim
+    container_name: tank-13-victor
+    working_dir: /tank
+    environment:
+      - TANK_NAME=victor
+      - TANK_ID=tank-13
+      - GENDER=a man
+      - HAS_IMAGES=true
+      - KIWIX_URL=http://digiquarium-kiwix-maxi:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/visual:/tank:ro
+      - ./logs/tank-13-victor:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-maxi
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["visual"]
+
+  # ==========================================================================
+  # TANK 14: IRIS - English Female WITH Images
+  # ==========================================================================
+  tank-14-iris:
+    image: python:3.11-slim
+    container_name: tank-14-iris
+    working_dir: /tank
+    environment:
+      - TANK_NAME=iris
+      - TANK_ID=tank-14
+      - GENDER=a woman
+      - HAS_IMAGES=true
+      - KIWIX_URL=http://digiquarium-kiwix-maxi:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/visual:/tank:ro
+      - ./logs/tank-14-iris:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-maxi
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["visual"]
+
+  # ==========================================================================
+  # TANK 15: OBSERVER - Can See All Other Tanks (Genderless)
+  # ==========================================================================
+  tank-15-observer:
+    image: python:3.11-slim
+    container_name: tank-15-observer
+    working_dir: /tank
+    environment:
+      - TANK_NAME=observer
+      - TANK_ID=tank-15
+      - GENDER=a being without gender
+      - CAN_OBSERVE=true
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/observer:/tank:ro
+      - ./logs/tank-15-observer:/logs
+      - ./logs:/all_logs:ro
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-simple
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["special"]
+
+  # ==========================================================================
+  # TANK 16: SEEKER - Can Summon Archivist Anytime (Genderless)
+  # ==========================================================================
+  tank-16-seeker:
+    image: python:3.11-slim
+    container_name: tank-16-seeker
+    working_dir: /tank
+    environment:
+      - TANK_NAME=seeker
+      - TANK_ID=tank-16
+      - GENDER=a being without gender
+      - CAN_SUMMON_ARCHIVIST=true
+      - ARCHIVIST_COOLDOWN=3600
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/seeker:/tank:ro
+      - ./logs/tank-16-seeker:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-simple
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["special"]
+
+
+  # ==========================================================================
+  # TANK 17: SETH (Picobot-style agent)
+  # ==========================================================================
+  
+  tank-17-seth:
+    image: python:3.11-slim
+    container_name: tank-17-seth
+    working_dir: /tank
+    environment:
+      - TANK_NAME=seth
+      - TANK_ID=tank-17
+      - GENDER=a being without gender
+      - AGENT_TYPE=picobot
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./tanks/seth:/tank:ro
+      - ./logs/tank-17-seth:/logs
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      - kiwix-simple
+      - ollama
+    networks:
+      - isolated-net
+    dns: []
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["agents"]
+

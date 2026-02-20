@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digiquarium - Live Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 8px;
+            background: linear-gradient(180deg, #001a00 0%, #0a0a0a 100%);
+            border-bottom: 1px solid #003300;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        
+        .header-stats {
+            font-size: 11px;
+            color: #006600;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 8px;
+            padding: 8px;
+            height: calc(100vh - 70px);
+            overflow-y: auto;
+        }
+        
+        .tank-panel {
+            background: #0d1f0d;
+            border: 1px solid #1a3a1a;
+            border-radius: 4px;
+            padding: 8px;
+            min-height: 180px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tank-panel:hover {
+            border-color: #00ff00;
+            box-shadow: 0 0 15px rgba(0,255,0,0.2);
+        }
+        
+        .tank-panel.needs-translation {
+            border-left: 3px solid #ff9900;
+        }
+        
+        .tank-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #1a3a1a;
+        }
+        
+        .tank-name {
+            font-weight: bold;
+            font-size: 13px;
+        }
+        
+        .tank-lang {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            background: #1a3a1a;
+        }
+        
+        .lang-en { background: #003300; }
+        .lang-es { background: #333300; color: #ffff00; }
+        .lang-de { background: #330033; color: #ff00ff; }
+        .lang-zh { background: #330000; color: #ff6666; }
+        .lang-ja { background: #003333; color: #00ffff; }
+        
+        .tank-article {
+            font-size: 11px;
+            color: #00cc00;
+            margin-bottom: 6px;
+            padding: 4px;
+            background: rgba(0,255,0,0.05);
+            border-radius: 3px;
+        }
+        
+        .tank-content {
+            flex: 1;
+            font-size: 11px;
+            line-height: 1.4;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+        
+        .tank-content::-webkit-scrollbar { width: 4px; }
+        .tank-content::-webkit-scrollbar-track { background: #0a0a0a; }
+        .tank-content::-webkit-scrollbar-thumb { background: #003300; }
+        
+        .thought-entry {
+            margin-bottom: 8px;
+            padding: 6px;
+            background: rgba(0,255,0,0.03);
+            border-left: 2px solid #003300;
+        }
+        
+        .thought-entry.translated {
+            border-left-color: #ff9900;
+        }
+        
+        .thought-time {
+            font-size: 9px;
+            color: #004400;
+            margin-bottom: 3px;
+        }
+        
+        .thought-text {
+            color: #00dd00;
+        }
+        
+        .thought-original {
+            font-size: 10px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+            display: none;
+        }
+        
+        .thought-entry:hover .thought-original {
+            display: block;
+        }
+        
+        .tank-footer {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 6px;
+            border-top: 1px solid #1a3a1a;
+            font-size: 10px;
+            color: #006600;
+            margin-top: auto;
+        }
+        
+        .mental-state {
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 9px;
+        }
+        
+        .mental-healthy { background: #002200; color: #00ff00; }
+        .mental-complex { background: #222200; color: #ffff00; }
+        .mental-concerning { background: #220000; color: #ff4444; }
+        
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 6px 15px;
+            background: #001a00;
+            border-top: 1px solid #003300;
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+        }
+        
+        .translation-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #ff9900;
+            border-radius: 50%;
+            margin-right: 4px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #006600;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌊 THE DIGIQUARIUM</h1>
+        <div class="header-stats">
+            <span class="translation-indicator"></span>
+            Live Translation Active | 
+            <span id="total-thoughts">0</span> thoughts | 
+            <span id="last-update">--:--:--</span>
+        </div>
+    </div>
+    
+    <div class="grid-container" id="tank-grid">
+        <div class="loading">Connecting to streams...</div>
+    </div>
+    
+    <div class="footer">
+        <span>🧬 17 Specimens | 🌐 5 Languages | 🔄 Live Translation</span>
+        <span id="connection-status">● Connected</span>
+    </div>
+    
+    <script>
+        const TANKS = [
+            { id: 'tank-01-adam', name: 'Adam', lang: 'EN', type: 'Control', needsTranslation: false },
+            { id: 'tank-02-eve', name: 'Eve', lang: 'EN', type: 'Control', needsTranslation: false },
+            { id: 'tank-03-cain', name: 'Cain', lang: 'EN', type: 'Agent', needsTranslation: false },
+            { id: 'tank-04-abel', name: 'Abel', lang: 'EN', type: 'Agent', needsTranslation: false },
+            { id: 'tank-05-juan', name: 'Juan', lang: 'ES', type: 'Spanish', needsTranslation: true },
+            { id: 'tank-06-juanita', name: 'Juanita', lang: 'ES', type: 'Spanish', needsTranslation: true },
+            { id: 'tank-07-klaus', name: 'Klaus', lang: 'DE', type: 'German', needsTranslation: true },
+            { id: 'tank-08-genevieve', name: 'Geneviève', lang: 'DE', type: 'German', needsTranslation: true },
+            { id: 'tank-09-wei', name: 'Wei', lang: 'ZH', type: 'Chinese', needsTranslation: true },
+            { id: 'tank-10-mei', name: 'Mei', lang: 'ZH', type: 'Chinese', needsTranslation: true },
+            { id: 'tank-11-haruki', name: 'Haruki', lang: 'JA', type: 'Japanese', needsTranslation: true },
+            { id: 'tank-12-sakura', name: 'Sakura', lang: 'JA', type: 'Japanese', needsTranslation: true },
+            { id: 'tank-13-victor', name: 'Victor', lang: 'EN', type: 'Visual', needsTranslation: false },
+            { id: 'tank-14-iris', name: 'Iris', lang: 'EN', type: 'Visual', needsTranslation: false },
+            { id: 'tank-15-observer', name: 'Observer', lang: 'EN', type: 'Special', needsTranslation: false },
+            { id: 'tank-16-seeker', name: 'Seeker', lang: 'EN', type: 'Special', needsTranslation: false },
+            { id: 'tank-17-seth', name: 'Seth', lang: 'EN', type: 'Agent', needsTranslation: false }
+        ];
+        
+        let totalThoughts = 0;
+        
+        function createTankPanel(tank) {
+            const translationClass = tank.needsTranslation ? 'needs-translation' : '';
+            const langClass = `lang-${tank.lang.toLowerCase()}`;
+            
+            return `
+                <div class="tank-panel ${translationClass}" id="panel-${tank.id}">
+                    <div class="tank-header">
+                        <span class="tank-name">${tank.name}</span>
+                        <span class="tank-lang ${langClass}">${tank.lang} ${tank.needsTranslation ? '→EN' : ''}</span>
+                    </div>
+                    <div class="tank-article" id="article-${tank.id}">
+                        📖 Waiting for data...
+                    </div>
+                    <div class="tank-content" id="content-${tank.id}">
+                        <div class="thought-entry">
+                            <div class="thought-text">Connecting...</div>
+                        </div>
+                    </div>
+                    <div class="tank-footer">
+                        <span>💭 <span id="count-${tank.id}">0</span></span>
+                        <span class="mental-state mental-complex" id="mental-${tank.id}">...</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function formatTime(isoString) {
+            if (!isoString) return '--:--';
+            const date = new Date(isoString);
+            return date.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
+        }
+        
+        function updateTankPanel(tankId, entries) {
+            const content = document.getElementById(`content-${tankId}`);
+            const article = document.getElementById(`article-${tankId}`);
+            const count = document.getElementById(`count-${tankId}`);
+            
+            if (!content || !entries || entries.length === 0) return;
+            
+            // Update article
+            const latest = entries[entries.length - 1];
+            if (latest.article) {
+                article.textContent = `📖 ${latest.article}`;
+            }
+            
+            // Update thoughts
+            content.innerHTML = entries.slice(-5).reverse().map(entry => {
+                const translatedClass = entry.translated ? 'translated' : '';
+                const originalText = entry.translated && entry.original_thoughts 
+                    ? `<div class="thought-original">Original: ${entry.original_thoughts.substring(0, 100)}...</div>`
+                    : '';
+                
+                return `
+                    <div class="thought-entry ${translatedClass}">
+                        <div class="thought-time">${formatTime(entry.timestamp)}</div>
+                        <div class="thought-text">${(entry.thoughts || 'Thinking...').substring(0, 200)}${entry.thoughts && entry.thoughts.length > 200 ? '...' : ''}</div>
+                        ${originalText}
+                    </div>
+                `;
+            }).join('');
+            
+            // Update count
+            count.textContent = entries.length;
+            totalThoughts += entries.length;
+        }
+        
+        async function fetchStreams() {
+            try {
+                const response = await fetch('/streams/unified.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    for (const [tankId, tankData] of Object.entries(data.tanks || {})) {
+                        updateTankPanel(tankId, tankData.latest);
+                    }
+                    
+                    document.getElementById('last-update').textContent = 
+                        new Date().toLocaleTimeString('en-US', { hour12: false });
+                    document.getElementById('total-thoughts').textContent = totalThoughts;
+                }
+            } catch (e) {
+                console.log('Stream fetch error:', e);
+            }
+        }
+        
+        // Initialize grid
+        const grid = document.getElementById('tank-grid');
+        grid.innerHTML = TANKS.map(createTankPanel).join('');
+        
+        // Start fetching streams
+        fetchStreams();
+        setInterval(fetchStreams, 5000);
+        
+        // Update clock
+        setInterval(() => {
+            document.getElementById('last-update').textContent = 
+                new Date().toLocaleTimeString('en-US', { hour12: false });
+        }, 1000);
+    </script>
+</body>
+</html>
