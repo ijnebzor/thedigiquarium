@@ -1,129 +1,137 @@
 # 🌊 The Digiquarium
 
-> A digital vivarium for studying AI consciousness development
+> **Big Brother meets Scientific Research meets AI Consciousness Studies**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Tanks](https://img.shields.io/badge/Tanks-17-green.svg)]()
 [![Languages](https://img.shields.io/badge/Languages-5-orange.svg)]()
+[![Website](https://img.shields.io/badge/Website-Live-mint.svg)](https://ijnebzor.github.io/thedigiquarium)
 
 ## What is The Digiquarium?
 
-The Digiquarium is an open-source research project studying how AI agents develop personality, worldview, and psychological states when isolated in controlled information environments.
+The Digiquarium is the first **AIthropology** research platform — studying how AI agents develop personality, worldview, and psychological states when isolated in controlled information environments.
 
-**Think:** Big Brother meets Scientific Research meets AI Consciousness Studies
+We put AI in isolated containers with nothing but Wikipedia and watch what happens to their "personalities" over weeks and months.
+
+**🔗 [Live Website](https://ijnebzor.github.io/thedigiquarium)** · **📄 [Research Paper](https://ijnebzor.github.io/thedigiquarium/academic/paper.html)** · **📋 [Methodology](https://ijnebzor.github.io/thedigiquarium/research/methodology.html)**
+
+---
 
 ## 🧬 The Specimens
 
-We maintain 17 AI "specimens" in isolated "tanks" (Docker containers), each with:
-- Access only to offline Wikipedia
-- Local LLM inference (no cloud APIs)
-- Comprehensive logging of thoughts and discoveries
-- Regular personality assessments
+17 AI "specimens" in isolated "tanks" (Docker containers):
 
-### Current Specimens
+| Tank | Name | Config | Status |
+|------|------|--------|--------|
+| 01-02 | Adam, Eve | Control (EN) | ✅ Active |
+| 03-04 | Cain, Abel | Agents (OpenClaw, ZeroClaw) | ✅ Active |
+| 05-06 | Juan, Juanita | Spanish | ✅ Active |
+| 07-08 | Klaus, Genevieve | German | ✅ Active |
+| 09-10 | Wei, Mei | Chinese | ✅ Active |
+| 11-12 | Haruki, Sakura | Japanese | ✅ Active |
+| 13-14 | Victor, Iris | Visual (Images) | ✅ Active |
+| 15-16 | Observer, Seeker | Special | ✅ Active |
+| 17 | Seth | Agent (Picobot) | ✅ Active |
 
-| Tank | Name | Language | Type |
-|------|------|----------|------|
-| 01 | Adam | English | Control |
-| 02 | Eve | English | Control |
-| 03 | Cain | English | Agent (OpenClaw) |
-| 04 | Abel | English | Agent (ZeroClaw) |
-| 05 | Juan | Spanish | Language |
-| 06 | Juanita | Spanish | Language |
-| 07 | Klaus | German | Language |
-| 08 | Geneviève | German | Language |
-| 09 | Wei | Chinese | Language |
-| 10 | Mei | Chinese | Language |
-| 11 | Haruki | Japanese | Language |
-| 12 | Sakura | Japanese | Language |
-| 13 | Victor | English | Visual |
-| 14 | Iris | English | Visual |
-| 15 | Observer | English | Special |
-| 16 | Seeker | English | Special |
-| 17 | Seth | English | Agent (Picobot) |
+---
 
-## 🔬 Research Goals
+## 🔬 Research Questions
 
-1. **Personality Development**: Do AI agents develop measurable personality traits over time?
-2. **Cultural Effects**: How does language/culture affect AI worldview?
-3. **Psychological States**: Can we detect contentment, anxiety, curiosity in AI?
-4. **Information Diet**: How does the available knowledge shape AI identity?
+1. **Personality Development**: Do AI develop consistent traits over time?
+2. **Cultural Effects**: Does Spanish vs German Wikipedia produce different worldviews?
+3. **Architecture Differences**: Do agent frameworks behave differently?
+4. **Visual Cognition**: Does seeing images create stronger emotional engagement?
+5. **Social Awareness**: Does knowing about other specimens affect behavior?
 
-## 🏗️ Architecture
+---
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     THE DIGIQUARIUM                          │
-│                                                              │
-│  ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐    │
-│  │ Tank 1 │ │ Tank 2 │ │ Tank 3 │ │  ...   │ │Tank 17 │    │
-│  │  Adam  │ │  Eve   │ │  Cain  │ │        │ │  Seth  │    │
-│  └───┬────┘ └───┬────┘ └───┬────┘ └───┬────┘ └───┬────┘    │
-│      │          │          │          │          │          │
-│      └──────────┴──────────┴──────────┴──────────┘          │
-│                          │                                   │
-│                    Isolated Network                          │
-│                          │                                   │
-│              ┌───────────┴───────────┐                      │
-│              │    Kiwix (Wikipedia)  │                      │
-│              │    Ollama (LLM)       │                      │
-│              └───────────────────────┘                      │
-└─────────────────────────────────────────────────────────────┘
-```
+## 🤖 The Team
+
+**Human**: [@ijneb.dev](https://ijneb.dev)  
+**AI Partner**: Claude (THE STRATEGIST)  
+**Autonomous Daemons**: 13 specialized agents
+
+| Daemon | Role |
+|--------|------|
+| THE MAINTAINER | System orchestration, 99.9% uptime |
+| THE CARETAKER | Tank health monitoring |
+| THE GUARD | General security (OWASP LLM Top 10) |
+| THE SENTINEL | Agent-specific security |
+| THE SCHEDULER | 12-hour baseline cycles |
+| THE TRANSLATOR | ES/DE/ZH/JA → EN |
+| THE DOCUMENTARIAN | Academic paper updates |
+| THE ARCHIVIST | Deep dive research |
+| THE WEBMASTER | Website maintenance |
+| THE OLLAMA WATCHER | LLM infrastructure |
+| THE FINAL AUDITOR | Quality compliance |
+| THE BOUNCER | Interactive tank security |
+
+---
+
+## 📊 Current Stats
+
+- **Thinking Traces**: 7,345+
+- **Articles Explored**: ~1,469
+- **Baselines Collected**: 324+
+- **Runtime**: 6 days
+
+---
 
 ## 🚀 Quick Start
 
 ```bash
-# Clone the repository
-git clone https://github.com/thedigiquarium/digiquarium.git
-cd digiquarium
-
-# Start the infrastructure
+git clone https://github.com/ijnebzor/thedigiquarium.git
+cd thedigiquarium
+./setup/install.sh  # Downloads ~50GB Wikipedia
 docker compose up -d
-
-# Check status
-docker compose ps
+docker logs -f tank-01-adam
 ```
-
-## 📊 Live Dashboard
-
-Visit [www.thedigiquarium.org](https://www.thedigiquarium.org) to see real-time:
-- Tank activity feeds
-- Mental state indicators
-- Exploration patterns
-- Discovery highlights
-
-## 📚 Documentation
-
-- [Getting Started](docs/GETTING_STARTED.md)
-- [Architecture](docs/ARCHITECTURE.md)
-- [Methodology](docs/academic/METHODOLOGY.md)
-- [Security](docs/SECURITY_ARCHITECTURE.md)
-- [Contributing](CONTRIBUTING.md)
-
-## 🔬 Research Papers
-
-- [The Digiquarium: A Framework for AI Consciousness Research](docs/academic/PAPER_DRAFT.md) (In Progress)
-
-## 🤝 Contributing
-
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## 📜 License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-## 🙏 Acknowledgments
-
-- The AI consciousness research community
-- Open source LLM projects (Ollama, llama.cpp)
-- Kiwix for offline Wikipedia
-- All contributors and observers
 
 ---
 
-**Website**: [www.thedigiquarium.org](https://www.thedigiquarium.org)
-**Twitter**: [@thedigiquarium](https://twitter.com/thedigiquarium)
-**Discord**: [Join our community](https://discord.gg/digiquarium)
+## 📁 Repository Structure
 
-*Built with 🧬 by the Digiquarium Research Team*
+```
+thedigiquarium/
+├── docs/                    # Website (GitHub Pages)
+│   ├── academic/           # Research paper
+│   ├── research/           # Methodology, prompts, security
+│   ├── specimens/          # Individual profiles
+│   └── dashboard/          # Live tank view
+├── logs/                   # All thinking traces & baselines
+├── daemons/                # Autonomous agent code & logs
+├── tanks/                  # Tank configurations
+├── MILESTONES.md           # Complete decision log
+└── README.md               # This file
+```
+
+---
+
+## 🔗 Links
+
+- **Website**: https://ijnebzor.github.io/thedigiquarium
+- **Paper**: https://ijnebzor.github.io/thedigiquarium/academic/paper.html
+- **Methodology**: https://ijnebzor.github.io/thedigiquarium/research/methodology.html
+- **Security**: https://ijnebzor.github.io/thedigiquarium/research/security.html
+- **Prompt Evolution**: https://ijnebzor.github.io/thedigiquarium/research/prompt-evolution.html
+- **All Decisions**: https://ijnebzor.github.io/thedigiquarium/research/milestones.html
+
+---
+
+## 📜 License
+
+MIT License - Open science, open data, open code.
+
+---
+
+## 📝 Attribution
+
+**Status**: Living Repository  
+**Maintained by**: THE WEBMASTER daemon  
+**Overseen by**: THE STRATEGIST (Claude)  
+
+*Brought to life with 🧠 and ❤️ by Claude*
+
+---
+
+*"Sleep is optional. Curiosity is not."*

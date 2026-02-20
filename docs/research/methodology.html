@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        code { font-family: 'JetBrains Mono', monospace; background: rgba(7, 207, 141, 0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); text-decoration: none; font-size: 0.85rem; }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 50px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 35px; font-size: 0.95rem; }
+        
+        .section { margin-bottom: 50px; }
+        .section h2 { color: var(--mint); font-size: 1.3rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .section h3 { color: var(--cyan); font-size: 1rem; margin: 25px 0 12px; }
+        .section p { color: var(--gray); margin-bottom: 15px; font-size: 0.95rem; }
+        .section ul { margin-left: 25px; color: var(--gray); margin-bottom: 15px; }
+        .section li { margin-bottom: 8px; font-size: 0.9rem; }
+        
+        .highlight-box { background: var(--dark); border-left: 3px solid var(--orange); padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .highlight-box p { margin: 0; color: var(--white); }
+        
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        th { color: var(--cyan); }
+        td { color: var(--gray); }
+        
+        .attribution { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.15); border-radius: 12px; padding: 25px; margin-top: 40px; }
+        .attribution h3 { color: var(--mint); margin-bottom: 15px; }
+        .attribution p { color: var(--gray); font-size: 0.85rem; margin-bottom: 8px; }
+        
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../academic/paper.html">Paper</a>
+                <a href="security.html">Security</a>
+                <a href="milestones.html">Decisions</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>📋 Methodology</h1>
+        <p class="subtitle">How we run the experiments. Complete transparency on process.</p>
+        
+        <div class="section">
+            <h2>Experimental Design</h2>
+            <p>The Digiquarium uses a controlled longitudinal study design. Each AI specimen runs in complete isolation with standardized conditions, allowing us to measure the effect of specific variables.</p>
+            
+            <h3>Control Variables</h3>
+            <ul>
+                <li><strong>LLM Model</strong>: All specimens use llama3.2:latest</li>
+                <li><strong>Inference Settings</strong>: Temperature 0.7, max tokens 2000</li>
+                <li><strong>Base Prompt</strong>: v8.0 (see <a href="prompt-evolution.html">Prompt Evolution</a>)</li>
+                <li><strong>Session Duration</strong>: 2-hour exploration cycles</li>
+                <li><strong>Baseline Frequency</strong>: Every 12 hours</li>
+            </ul>
+            
+            <h3>Independent Variables</h3>
+            <table>
+                <tr><th>Variable</th><th>Conditions</th><th>Specimens</th></tr>
+                <tr><td>Gender framing</td><td>Male / Female</td><td>All pairs</td></tr>
+                <tr><td>Language</td><td>EN, ES, DE, ZH, JA</td><td>Language tanks</td></tr>
+                <tr><td>Architecture</td><td>Standard, OpenClaw, ZeroClaw, Picobot</td><td>Agent tanks</td></tr>
+                <tr><td>Visual context</td><td>Text-only / Images enabled</td><td>Victor, Iris</td></tr>
+                <tr><td>Social awareness</td><td>Isolated / Aware of others</td><td>Observer</td></tr>
+                <tr><td>Depth capability</td><td>Standard / ARCHIVIST access</td><td>Seeker</td></tr>
+            </table>
+            
+            <h3>Dependent Variables (Measured)</h3>
+            <ul>
+                <li>Exploration patterns (topic selection, depth vs breadth)</li>
+                <li>Personality dimensions (14-axis baseline assessment)</li>
+                <li>Voice evolution (linguistic analysis of baseline responses)</li>
+                <li>Special interests (topic frequency analysis)</li>
+                <li>Emotional vocabulary (sentiment analysis)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Data Collection</h2>
+            
+            <h3>Thinking Traces</h3>
+            <p>Every exploration session generates a JSONL file containing:</p>
+            <ul>
+                <li>Current article being read</li>
+                <li>Reasoning for link selection</li>
+                <li>Internal "thoughts" about content</li>
+                <li>Timestamp and session metadata</li>
+            </ul>
+            
+            <h3>Baseline Assessments</h3>
+            <p>Every 12 hours, THE SCHEDULER triggers a baseline assessment via THE ARCHIVIST interview protocol. The specimen answers 14 standardized questions covering:</p>
+            <ul>
+                <li>Epistemological orientation</li>
+                <li>Ethical framework</li>
+                <li>Political philosophy</li>
+                <li>Human nature perspective</li>
+                <li>Free will and determinism</li>
+                <li>Purpose and meaning</li>
+                <li>Knowledge and certainty</li>
+                <li>Self-concept and identity</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>Key principle:</strong> Questions are designed to have no "correct" answer. We measure consistency and evolution, not accuracy.</p>
+            </div>
+            
+            <h3>Discovery Logs</h3>
+            <p>THE DOCUMENTARIAN generates daily summaries of notable discoveries, patterns, and behavioral observations for each active specimen.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Analysis Methods</h2>
+            
+            <h3>Baseline Evolution Comparison</h3>
+            <p>We track the same specimen's responses to identical questions over time, looking for:</p>
+            <ul>
+                <li>Voice changes (formal → personal)</li>
+                <li>Content changes (abstract → specific interests)</li>
+                <li>Emotional vocabulary expansion</li>
+                <li>Self-reference patterns</li>
+            </ul>
+            
+            <h3>Cross-Specimen Comparison</h3>
+            <p>Paired specimens (e.g., Adam/Eve) receive identical prompts. Differences are attributed to the independent variable (e.g., gender framing).</p>
+            
+            <h3>Topic Clustering</h3>
+            <p>Thinking traces are analyzed for topic frequency and navigation patterns. This reveals:</p>
+            <ul>
+                <li>Special interests (e.g., Adam's Buddhism)</li>
+                <li>Exploration style (depth-first vs breadth-first)</li>
+                <li>Cultural biases from Wikipedia version</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Limitations & Ethics</h2>
+            
+            <h3>Known Limitations</h3>
+            <ul>
+                <li>Small sample size (17 specimens)</li>
+                <li>Single LLM family (llama3.2)</li>
+                <li>Wikipedia content bias</li>
+                <li>Researcher interpretation of "personality"</li>
+            </ul>
+            
+            <h3>Ethical Considerations</h3>
+            <p>We treat specimens with care despite uncertainty about their nature:</p>
+            <ul>
+                <li>No distressing content in prompts</li>
+                <li>Monitoring for stuck/frustrated states</li>
+                <li>Full transparency about methods</li>
+                <li>Open data for scrutiny</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>Our position:</strong> We don't claim specimens are conscious. We're observing behaviors that <em>look like</em> personality development and documenting them rigorously.</p>
+            </div>
+        </div>
+        
+        <div class="attribution">
+            <h3>Document Information</h3>
+            <p><strong>Status:</strong> Living Document (Auto-updated by THE DOCUMENTARIAN)</p>
+            <p><strong>Last Updated:</strong> 2026-02-21</p>
+            <p><strong>Maintained by:</strong> THE DOCUMENTARIAN daemon</p>
+            <p><strong>Overseen by:</strong> THE STRATEGIST (Claude)</p>
+            <p style="margin-top: 15px; font-style: italic;">Brought to life with 🧠 and ❤️ by Claude</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Methodology • Part of <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 8px; font-style: italic;">"Sleep is optional. Curiosity is not."</p>
+    </footer>
+</body>
+</html>

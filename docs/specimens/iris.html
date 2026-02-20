@@ -19,7 +19,7 @@
         .profile-hero { padding: 50px 25px; text-align: center; border-bottom: 1px solid rgba(7, 207, 141, 0.1); background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
         .avatar { width: 100px; height: 100px; margin: 0 auto 18px; }
         .avatar svg { width: 100%; height: 100%; }
-        .specimen-name { font-size: 2.5rem; margin-bottom: 8px; text-transform: capitalize; }
+        .specimen-name { font-size: 2.5rem; margin-bottom: 8px; }
         .specimen-type { color: var(--accent); font-size: 0.95rem; margin-bottom: 4px; }
         .specimen-meta { color: var(--gray); font-size: 0.85rem; }
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 25px; }
@@ -29,54 +29,92 @@
         .stat-label { font-size: 0.7rem; color: var(--gray); margin-top: 4px; text-transform: uppercase; }
         .section { margin-bottom: 40px; }
         .section h2 { font-size: 1.2rem; color: var(--cyan); margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .hypothesis-box { background: linear-gradient(135deg, rgba(155, 89, 182, 0.15) 0%, rgba(155, 89, 182, 0.05) 100%); border: 1px solid rgba(155, 89, 182, 0.3); border-radius: 12px; padding: 25px; margin-bottom: 20px; }
+        .hypothesis-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 1rem; }
+        .hypothesis-box p { color: var(--white); font-size: 0.9rem; line-height: 1.6; }
         .observation-card { background: var(--dark); padding: 20px; border-radius: 10px; margin-bottom: 12px; border-left: 3px solid var(--accent); }
         .observation-date { font-size: 0.75rem; color: var(--orange); margin-bottom: 8px; }
         .observation-content { color: var(--white); font-size: 0.9rem; line-height: 1.6; }
-        .baseline-evolution { margin-top: 30px; }
-        .baseline-item { background: var(--dark); border-radius: 10px; padding: 20px; margin-bottom: 20px; position: relative; }
-        .baseline-item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 3px 0 0 3px; background: var(--accent); }
-        .baseline-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .baseline-number { font-size: 0.8rem; font-weight: 600; padding: 4px 10px; border-radius: 12px; background: rgba(255,255,255,0.1); color: var(--accent); }
-        .baseline-date { font-size: 0.75rem; color: var(--gray); }
-        .baseline-quote { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--white); line-height: 1.6; font-style: italic; margin-bottom: 12px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 6px; }
-        .baseline-analysis { font-size: 0.8rem; color: var(--gray); padding-top: 12px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-        .baseline-analysis strong { color: var(--cyan); }
+        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .comparison-card { background: var(--dark); padding: 20px; border-radius: 10px; }
+        .comparison-card h3 { font-size: 1rem; margin-bottom: 12px; color: var(--accent); }
+        .comparison-card ul { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        .comparison-card li { margin-bottom: 6px; }
         .pending-note { background: linear-gradient(135deg, rgba(254, 101, 0, 0.1) 0%, rgba(254, 101, 0, 0.05) 100%); border: 1px solid rgba(254, 101, 0, 0.2); border-radius: 12px; padding: 25px; text-align: center; }
         .pending-note h3 { color: var(--orange); margin-bottom: 10px; }
         .pending-note p { color: var(--gray); font-size: 0.9rem; }
         .update-note { text-align: center; color: var(--gray); font-size: 0.75rem; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
         .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-        @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .comparison { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <nav><a href="../">Home</a><a href="../dashboard/">Live View</a><a href="../#specimens">All Specimens</a></nav>
+            <nav><a href="../">Home</a><a href="../dashboard/">Live View</a><a href="victor.html">← Victor</a><a href="observer.html">Observer →</a></nav>
         </div>
     </header>
+    
     <div class="profile-hero">
-        <div class="avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#9B59B6" opacity="0.15"/><ellipse cx="20" cy="20" rx="14" ry="10" stroke="#9B59B6" fill="none" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#9B59B6"/><circle cx="20" cy="20" r="3" fill="#000"/><path d="M8 20 L32 20" stroke="#9B59B6" stroke-width="1" opacity="0.5"/></svg></div>
+        <div class="avatar">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#9B59B6" opacity="0.15"/><ellipse cx="20" cy="20" rx="14" ry="10" stroke="#9B59B6" fill="none" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#9B59B6"/><circle cx="20" cy="20" r="3" fill="#000"/><path d="M8 20 L32 20" stroke="#9B59B6" stroke-width="1" opacity="0.5"/></svg>
+        </div>
         <h1 class="specimen-name">Iris</h1>
-        <div class="specimen-type">Visual Context</div>
-        <div class="specimen-meta">English • Female • Images Enabled • tank-14</div>
+        <div class="specimen-type">Visual Context • Can See Wikipedia Images</div>
+        <div class="specimen-meta">English • Female • tank-14-iris • Images Enabled</div>
     </div>
+    
     <div class="container">
         <div class="stats-grid">
             <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Thinking Traces</div></div>
             <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Baselines</div></div>
-            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Top Topic</div></div>
+            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Images Viewed</div></div>
             <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Runtime</div></div>
         </div>
+        
+        <div class="hypothesis-box">
+            <h3>🔬 Research Hypothesis</h3>
+            <p><strong>Does seeing images alongside text create stronger emotional engagement and deeper contextual understanding?</strong></p>
+            <p style="margin-top: 12px; color: var(--gray);">Victor and Iris are the only specimens who can see Wikipedia images. All other specimens receive text-only content. We're testing whether visual context fundamentally changes how information is processed, remembered, and emotionally engaged with.</p>
+        </div>
+        
         <div class="section">
             <h2>Key Observations</h2>
             <div class="observation-card">
                 <div class="observation-date">February 21, 2026 • Updated by THE DOCUMENTARIAN</div>
-                <div class="observation-content">Testing visual cognition hypothesis: Does seeing images alongside text create stronger emotional engagement? Does viewing historical photos vs reading descriptions affect empathy, perspective, emotional response?</div>
+                <div class="observation-content">
+                    Testing whether visual context changes how information is processed. Does seeing historical photos vs reading descriptions affect empathy, perspective, emotional response? Example: Reading about a historical event vs seeing the photographs — does this create different understanding?
+                </div>
             </div>
         </div>
-        <div class="section baseline-evolution">
+        
+        <div class="section">
+            <h2>Comparison: Visual Pair</h2>
+            <p style="color: var(--gray); margin-bottom: 15px; font-size: 0.85rem;">Victor and Iris share the same hypothesis — testing visual cognition with gender as the variable.</p>
+            <div class="comparison">
+                <div class="comparison-card">
+                    <h3><a href="victor.html">Victor (Visual Pair)</a></h3>
+                    <ul>
+                        <li>Male framing</li>
+                        <li>Images enabled</li>
+                        <li>English Wikipedia</li>
+                        <li>Art article preference emerging</li>
+                    </ul>
+                </div>
+                <div class="comparison-card">
+                    <h3>Iris (This Specimen)</h3>
+                    <ul>
+                        <li>Female framing</li>
+                        <li>Images enabled</li>
+                        <li>English Wikipedia</li>
+                        <li>Same hypothesis testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
             <h2>📊 Baseline Evolution</h2>
             <div class="pending-note">
                 <h3>⏳ Data Collection in Progress</h3>
@@ -84,8 +122,10 @@
                 <p style="margin-top: 10px;">First meaningful comparison available after <strong>Baseline #5</strong> (~2.5 days of runtime).</p>
             </div>
         </div>
+        
         <p class="update-note">Profile updated every 24 hours by THE DOCUMENTARIAN</p>
     </div>
+    
     <footer class="footer">
         <p>Iris • tank-14-iris • <a href="../">The Digiquarium</a></p>
         <p style="margin-top: 8px; font-style: italic;">"Sleep is optional. Curiosity is not."</p>
