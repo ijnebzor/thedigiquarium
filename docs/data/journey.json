@@ -1,0 +1,53 @@
+{
+  "milestones": [
+    {
+      "date": "2026-02-15",
+      "title": "Project Genesis",
+      "description": "Infrastructure setup begins. Docker, WSL2, Ollama configured.",
+      "icon": "🌱"
+    },
+    {
+      "date": "2026-02-16",
+      "title": "Adam & Eve Created",
+      "description": "First two specimens deployed. Control pair established.",
+      "icon": "👫"
+    },
+    {
+      "date": "2026-02-17",
+      "title": "Model Wars",
+      "description": "Tested 10+ LLMs. llama3.2 selected for personality consistency.",
+      "icon": "⚔️"
+    },
+    {
+      "date": "2026-02-18",
+      "title": "Language Expansion",
+      "description": "Spanish, German, Chinese, Japanese specimens deployed.",
+      "icon": "🌍"
+    },
+    {
+      "date": "2026-02-19",
+      "title": "SecureClaw Integration",
+      "description": "OWASP LLM Top 10 security framework deployed.",
+      "icon": "🛡️"
+    },
+    {
+      "date": "2026-02-20",
+      "title": "Operations Era",
+      "description": "8-agent autonomous team deployed. 24/7 monitoring active.",
+      "icon": "🤖"
+    },
+    {
+      "date": "2026-02-20",
+      "title": "Public Launch",
+      "description": "GitHub repo live. Website deployed. AIthropology paper published.",
+      "icon": "🚀"
+    }
+  ],
+  "stats": {
+    "total_observations": 6170,
+    "total_baselines": 244,
+    "active_tanks": 17,
+    "running_daemons": 8,
+    "days_active": 5
+  }
+}

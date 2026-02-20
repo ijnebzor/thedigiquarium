@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Repository | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000001;
+            --dark: #000A09;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+            --gray-dark: #2a3a4a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        .header { background: var(--dark); padding: 20px 30px; border-bottom: 1px solid var(--gray-dark); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--white); }
+        .logo span { color: var(--mint); }
+        nav a { margin-left: 25px; color: var(--gray); font-size: 0.9rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 30px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 50px; }
+        h2 { font-size: 1.5rem; margin: 50px 0 20px; padding-top: 30px; border-top: 1px solid var(--gray-dark); }
+        p { margin-bottom: 15px; color: var(--gray); }
+        
+        .data-card { background: var(--dark); border: 1px solid var(--gray-dark); border-radius: 8px; padding: 25px; margin: 15px 0; }
+        .data-card:hover { border-color: var(--mint); }
+        .data-title { font-weight: 600; font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .data-title a { color: var(--white); }
+        .data-desc { color: var(--gray); font-size: 0.9rem; margin-bottom: 15px; }
+        .data-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--cyan); }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 30px 0; }
+        .stat-card { background: var(--dark); border: 1px solid var(--gray-dark); border-radius: 8px; padding: 20px; text-align: center; }
+        .stat-value { font-family: 'JetBrains Mono', monospace; font-size: 2rem; font-weight: 600; color: var(--mint); }
+        .stat-label { font-size: 0.8rem; color: var(--gray); margin-top: 5px; }
+        
+        code { font-family: 'JetBrains Mono', monospace; background: var(--gray-dark); padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="../" class="logo">🧬 The <span>Digiquarium</span></a>
+        <nav>
+            <a href="../">Home</a>
+            <a href="../research/paper.html">Research</a>
+            <a href="../blog/">Blog</a>
+            <a href="../dashboard/">Dashboard</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1>Data Repository</h1>
+        <p class="subtitle">Open access to all experimental data. Download, analyze, replicate.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="obs-count">6,170</div>
+                <div class="stat-label">Total Observations</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="baseline-count">244</div>
+                <div class="stat-label">Baselines</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">17</div>
+                <div class="stat-label">Specimens</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Days Active</div>
+            </div>
+        </div>
+        
+        <h2>Live Streams</h2>
+        <p>Real-time JSON feeds from each tank, updated every few seconds.</p>
+        
+        <div class="data-card">
+            <div class="data-title">📡 <a href="../streams/unified.json">Unified Stream</a></div>
+            <div class="data-desc">Combined feed from all 17 tanks. Best for dashboard integration.</div>
+            <div class="data-meta">GET /streams/unified.json</div>
+        </div>
+        
+        <div class="data-card">
+            <div class="data-title">📊 <a href="live_stats.json">Live Statistics</a></div>
+            <div class="data-desc">Current totals, mental states, and comparison data.</div>
+            <div class="data-meta">GET /data/live_stats.json</div>
+        </div>
+        
+        <h2>GitHub Repository</h2>
+        <p>All raw data is stored in the GitHub repository under <code>/logs</code>.</p>
+        
+        <div class="data-card">
+            <div class="data-title">📁 <a href="https://github.com/ijnebzor/thedigiquarium/tree/main/logs">Logs Directory</a></div>
+            <div class="data-desc">Thinking traces, baselines, discoveries for all tanks.</div>
+            <div class="data-meta">github.com/ijnebzor/thedigiquarium/logs</div>
+        </div>
+        
+        <div class="data-card">
+            <div class="data-title">🔬 <a href="https://github.com/ijnebzor/thedigiquarium">Full Repository</a></div>
+            <div class="data-desc">Complete source code, configuration, and documentation.</div>
+            <div class="data-meta">git clone https://github.com/ijnebzor/thedigiquarium.git</div>
+        </div>
+        
+        <h2>Data Schema</h2>
+        <p>Documentation of data formats used in the experiment.</p>
+        
+        <div class="data-card">
+            <div class="data-title">📋 Thinking Trace Format</div>
+            <div class="data-desc">JSONL files with timestamp, article, thoughts, next_article, reasoning fields.</div>
+            <div class="data-meta">/logs/tank-XX-name/thinking_traces/YYYY-MM-DD.jsonl</div>
+        </div>
+        
+        <div class="data-card">
+            <div class="data-title">📋 Baseline Format</div>
+            <div class="data-desc">JSON with 14 responses, mental_state_analysis, and metadata.</div>
+            <div class="data-meta">/logs/tank-XX-name/baselines/YYYY-MM-DD_HHMMSS.json</div>
+        </div>
+    </div>
+</body>
+</html>

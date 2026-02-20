@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000001;
+            --dark: #000A09;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+            --gray-dark: #2a3a4a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); }
+        .header { background: var(--dark); padding: 20px 30px; border-bottom: 1px solid var(--gray-dark); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.2rem; text-decoration: none; color: var(--white); }
+        .logo span { color: var(--mint); }
+        nav a { margin-left: 25px; color: var(--gray); text-decoration: none; font-size: 0.9rem; }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 30px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 40px; }
+        .version { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--gray-dark); }
+        .version-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .version-tag { font-family: 'JetBrains Mono', monospace; background: var(--mint); color: var(--black); padding: 4px 12px; border-radius: 4px; font-size: 0.9rem; font-weight: 600; }
+        .version-date { font-family: 'JetBrains Mono', monospace; color: var(--gray); font-size: 0.85rem; }
+        .version h3 { font-size: 1.3rem; margin-bottom: 15px; }
+        .change-list { list-style: none; }
+        .change-list li { padding: 8px 0; padding-left: 25px; position: relative; color: var(--gray); }
+        .change-list li::before { content: "→"; position: absolute; left: 0; color: var(--cyan); }
+        .change-type { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; padding: 2px 8px; border-radius: 3px; margin-right: 10px; }
+        .type-added { background: rgba(7, 207, 141, 0.2); color: var(--mint); }
+        .type-changed { background: rgba(7, 221, 231, 0.2); color: var(--cyan); }
+        .type-fixed { background: rgba(254, 101, 0, 0.2); color: var(--orange); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="./" class="logo">🧬 The <span>Digiquarium</span></a>
+        <nav>
+            <a href="./">Home</a>
+            <a href="research/paper.html">Research</a>
+            <a href="blog/">Blog</a>
+            <a href="dashboard/">Dashboard</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1>Changelog</h1>
+        <p class="subtitle">All notable changes to The Digiquarium project, documented publicly.</p>
+        
+        <div class="version">
+            <div class="version-header">
+                <span class="version-tag">v1.0.0</span>
+                <span class="version-date">2026-02-20</span>
+            </div>
+            <h3>🚀 Public Launch</h3>
+            <ul class="change-list">
+                <li><span class="change-type type-added">ADDED</span> Complete website with ijnebstudios color scheme</li>
+                <li><span class="change-type type-added">ADDED</span> AIthropology research paper published</li>
+                <li><span class="change-type type-added">ADDED</span> Live dashboard with real-time streaming</li>
+                <li><span class="change-type type-added">ADDED</span> Adam & Eve Genesis comparative study</li>
+                <li><span class="change-type type-added">ADDED</span> 8-agent autonomous operations team</li>
+                <li><span class="change-type type-added">ADDED</span> GitHub repository open-sourced</li>
+                <li><span class="change-type type-added">ADDED</span> Replication scripts for Mac/Linux</li>
+            </ul>
+        </div>
+        
+        <div class="version">
+            <div class="version-header">
+                <span class="version-tag">v0.9.0</span>
+                <span class="version-date">2026-02-19</span>
+            </div>
+            <h3>🛡️ Security & Operations</h3>
+            <ul class="change-list">
+                <li><span class="change-type type-added">ADDED</span> SecureClaw OWASP LLM Top 10 integration</li>
+                <li><span class="change-type type-added">ADDED</span> Guard agent for security monitoring</li>
+                <li><span class="change-type type-added">ADDED</span> Caretaker agent for tank health</li>
+                <li><span class="change-type type-added">ADDED</span> Scheduler agent for baselines</li>
+                <li><span class="change-type type-changed">CHANGED</span> Network isolation hardened</li>
+            </ul>
+        </div>
+        
+        <div class="version">
+            <div class="version-header">
+                <span class="version-tag">v0.8.0</span>
+                <span class="version-date">2026-02-18</span>
+            </div>
+            <h3>🌍 Language Expansion</h3>
+            <ul class="change-list">
+                <li><span class="change-type type-added">ADDED</span> Spanish specimens: Juan, Juanita</li>
+                <li><span class="change-type type-added">ADDED</span> German specimens: Klaus, Geneviève</li>
+                <li><span class="change-type type-added">ADDED</span> Chinese specimens: Wei, Mei</li>
+                <li><span class="change-type type-added">ADDED</span> Japanese specimens: Haruki, Sakura</li>
+                <li><span class="change-type type-added">ADDED</span> Live translation system</li>
+            </ul>
+        </div>
+        
+        <div class="version">
+            <div class="version-header">
+                <span class="version-tag">v0.5.0</span>
+                <span class="version-date">2026-02-17</span>
+            </div>
+            <h3>⚔️ Model Wars</h3>
+            <ul class="change-list">
+                <li><span class="change-type type-changed">CHANGED</span> Tested 10+ LLM models for personality consistency</li>
+                <li><span class="change-type type-changed">CHANGED</span> Selected llama3.2:latest as primary model</li>
+                <li><span class="change-type type-fixed">FIXED</span> Explorer prompt v6.0 with loop detection</li>
+                <li><span class="change-type type-added">ADDED</span> Archivist baseline assessment protocol</li>
+            </ul>
+        </div>
+        
+        <div class="version">
+            <div class="version-header">
+                <span class="version-tag">v0.1.0</span>
+                <span class="version-date">2026-02-16</span>
+            </div>
+            <h3>👫 Genesis</h3>
+            <ul class="change-list">
+                <li><span class="change-type type-added">ADDED</span> Adam (male control specimen)</li>
+                <li><span class="change-type type-added">ADDED</span> Eve (female control specimen)</li>
+                <li><span class="change-type type-added">ADDED</span> Docker infrastructure</li>
+                <li><span class="change-type type-added">ADDED</span> Kiwix Wikipedia server</li>
+                <li><span class="change-type type-added">ADDED</span> Basic exploration system</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
