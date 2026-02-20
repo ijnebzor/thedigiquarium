@@ -8,9 +8,9 @@
         "api": "openai-completions",
         "models": [
           {
-            "id": "deepseek-r1:1.5b",
-            "name": "DeepSeek R1 1.5B",
-            "reasoning": true,
+            "id": "llama3.2:latest",
+            "name": "Llama 3.2 Latest",
+            "reasoning": false,
             "input": ["text"],
             "cost": { "input": 0, "output": 0 },
             "contextWindow": 32768,
@@ -23,7 +23,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "ollama/deepseek-r1:1.5b"
+        "primary": "ollama/llama3.2:latest"
       },
       "workspace": "/openclaw/workspace"
     }
