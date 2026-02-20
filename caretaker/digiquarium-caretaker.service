@@ -1,0 +1,15 @@
+[Unit]
+Description=Digiquarium Autonomous Caretaker
+After=network.target
+
+[Service]
+Type=simple
+User=ijneb
+WorkingDirectory=/home/ijneb/digiquarium/caretaker
+Environment=DIGIQUARIUM_DIR=/home/ijneb/digiquarium
+ExecStart=/usr/bin/python3 /home/ijneb/digiquarium/caretaker/caretaker.py
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

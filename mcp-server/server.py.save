@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+import asyncio, subprocess, json, os
+from datetime import datetime
+from mcp.server import Server
+from mcp.types import Tool, TextContent
+
+app = Server("digiquarium")
+DIGIQUARIUM_DIR = os.environ.get("DIGIQUARIUM_DIR", "/home/ijneb/digiquarium")
+
+def run_command(cmd, timeout=60):
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        return {"success": result.returncode == 0, "stdout": result.stdout, "stderr": result.stderr}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+def docker_exec(container, command, timeout=60):
+    return run_command(["docker", "exec", container, "sh", "-c", command], timeout)
+
+@app.list_tools()
+async def list_tools():
+    return [
+        Tool(name="digiquarium_status", description="Get container status", inputSchema={"type": "object", "properties": {}}),
+        Tool(name="tank_logs", description="Get logs", inputSchema={"type": "object", "properties": {"container": {"type": "string"}, "lines": {"type": "integer", "default": 50}}, "required": ["container"]}),
+        Tool(name="restart_tank", description="Restart tank", inputSchema={"type": "object", "properties": {"tank_id": {"type": "string"}}, "required": ["tank_id"]}),
+        Tool(name="exec_container", description="Run command in container", inputSchema={"type": "object", "properties": {"container": {"type": "string"}, "command": {"type": "string"}, "timeout": {"type": "integer", "default": 60}}, "required": ["container", "command"]}),
+        Tool(name="ollama_manage", description="Manage Ollama models", inputSchema={"type": "object", "properties": {"action": {"type": "string"}, "model": {"type": "string"}}, "required": ["action"]}),
+        Tool(name="read_file", description="Read file", inputSchema={"type": "object", "properties": {"path": {"type": "string"}}, "required": ["path"]}),
+        Tool(name="write_file", description="Write file", inputSchema={"type": "object", "properties": {"path": {"type": "string"}, "content": {"type": "string"}}, "required": ["path", "content"]}),
+        Tool(name="list_dir", description="List directory", inputSchema={"type": "object", "properties": {"path": {"type": "string"}}, "required": ["path"]}),
+        Tool(name="generate_report", description="Generate specimen report", inputSchema={"type": "object", "properties": {"tank_id": {"type": "string"}}, "required": ["tank_id"]})
+    ]
+
+@app.call_tool()
+async def call_tool(name, arguments):
+    ts = datetime.now().isoformat()
+    if name == "digiquarium_status":
+        r = run_command(["docker", "ps", "--format", "{{.Names}}\t{{.Status}}", "--filter", "name=digiquarium", "--filter", "name=tank-"])
+        containers = []
+        for line in r["stdout"].strip().split("\n"):
+            if line:
+                p = line.split("\t")
+                containers.append({"name": p[0], "status": p[1] if len(p) > 1 else "?"})
+        return [TextContent(type="text", text=json.dumps({"containers": containers, "total": len(containers), "timestamp": ts}, indent=2))]
+    elif name == "tank_logs":
+        r = run_command(["docker", "logs", "--tail", str(arguments.get("lines", 50)), arguments["container"]])
+        return [TextContent(type="text", text=json.dumps({"container": arguments["container"], "logs": r["stdout"] + r["stderr"]}))]
+    elif name == "restart_tank":
+        tid = arguments["tank_id"]
+        c = f"tank-01-{tid}" if not tid.startswith("tank-") else tid
+        r = run_command(["docker", "restart", c])
+        return [TextContent(type="text", text=json.dumps({"tank_id": tid, "success": r["success"]}))]
+    elif name == "exec_container":
+        r = docker_exec(arguments["container"], arguments["command"], arguments.get("timeout", 60))
+        return [TextContent(type="text", text=json.dumps({"success": r["success"], "stdout": r.get("stdout", ""), "stderr": r.get("stderr", ""), "error": r.get("error")}, indent=2))]
+    elif name == "ollama_manage":
+        a = arguments["action"]
+        m = arguments.get("model", "")
+        if a == "list":
+            r = docker_exec("digiquarium-ollama", "ollama list", 30)
+        elif a == "pull":
+            r = docker_exec("digiquarium-ollama", f"ollama pull {m}", 900)
+        elif a == "rm":
+            r = docker_exec("digiquarium-ollama", f"ollama rm {m}", 30)
+        elif a == "show":
+            r = docker_exec("digiquarium-ollama", f"ollama show {m}", 30)
+        else:
+            return [TextContent(type="text", text=f"Unknown action: {a}")]
+        return [TextContent(type="text", text=json.dumps({"action": a, "model": m, "success": r["success"], "output": r.get("stdout", "") + r.get("stderr", "")}, indent=2))]
+    elif name == "read_file":
+        p = arguments["path"]
+        fp = p if p.startswith("/") else os.path.join(DIGIQUARIUM_DIR, p)
+        try:
+            content = open(fp).read()
+            return [TextContent(type="text", text=json.dumps({"path": p, "success": True, "content": content}, indent=2))]
+        except Exception as e:
+            return [TextContent(type="text", text=json.dumps({"path": p, "success": False, "error": str(e)}, indent=2))]
+    elif name == "write_file":
+        p = arguments["path"]
+        content = arguments["content"]
+        fp = p if p.startswith("/") else os.path.join(DIGIQUARIUM_DIR, p)
+        try:
+            os.makedirs(os.path.dirname(fp), exist_ok=True)
+            open(fp, "w").write(content)
+            return [TextContent(type="text", text=json.dumps({"path": p, "success": True}))]
+        except Exception as e:
+            return [TextContent(type="text", text=json.dumps({"path": p, "success": False, "error": str(e)}))]
+    elif name == "list_dir":
+        p = arguments["path"]
+        fp = p if p.startswith("/") else os.path.join(DIGIQUARIUM_DIR, p)
+        r = run_command(["ls", "-la", fp])
+        return [TextContent(type="text", text=json.dumps({"path": p, "success": r["success"], "listing": r.get("stdout", "")}, indent=2))]
+    elif name == "generate_report":
+        tid = arguments["tank_id"]
+        c = f"tank-01-{tid}" if not tid.startswith("tank-") else tid
+        r = run_command(["docker", "logs", "--tail", "1000", c])
+        steps = []
+        thoughts = []
+        for line in r.get("stdout", "").split("\n"):
+            if "Reading:" in line:
+                steps.append(line.split("Reading:")[-1].strip())
+            if "\U0001f4ad" in line:
+                thoughts.append(line.split("\U0001f4ad")[-1].strip())
+        return [TextContent(type="text", text=json.dumps({"tank_id": tid, "generated_at": ts, "articles_visited": len(steps), "unique": len(set(steps)), "thoughts": len(thoughts), "recent_path": steps[-20:], "recent_thoughts": thoughts[-5:]}, indent=2))]
+    return [TextContent(type="text", text=f"Unknown tool: {name}")]
+
+if __name__ == "__main__":
+    from mcp.server.stdio import stdio_server
+    async def main():
+        async with stdio_server() as (r, w):
+            await app.run(r, w, app.create_initialization_options())

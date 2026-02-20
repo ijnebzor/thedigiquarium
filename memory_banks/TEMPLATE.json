@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "description": "Memory bank template for Digiquarium specimens",
+  
+  "identity": {
+    "name": "",
+    "tank_id": "",
+    "gender": "",
+    "gender_lens": "",
+    "spawned_at": "",
+    "model": "",
+    "wikipedia_source": "",
+    "special_capabilities": []
+  },
+  
+  "baseline_history": [],
+  
+  "topic_graph": {
+    "nodes": [],
+    "edges": [],
+    "visit_counts": {},
+    "time_spent": {},
+    "last_visited": {}
+  },
+  
+  "personality_markers": {
+    "curious_about": [],
+    "avoids": [],
+    "frequently_returns_to": [],
+    "emotional_responses": [],
+    "philosophical_leanings": {
+      "epistemology": 0,
+      "ethics": 0,
+      "metaphysics": 0,
+      "politics": 0,
+      "aesthetics": 0
+    }
+  },
+  
+  "baseline_scores": {
+    "latest": {},
+    "trend": []
+  },
+  
+  "growth_log": [],
+  
+  "relationships": {
+    "knows_others_exist": false,
+    "has_met_archivist": false,
+    "can_summon_archivist": false,
+    "observed_tanks": []
+  },
+  
+  "context_window": {
+    "max_tokens": 4096,
+    "current_summary_tokens": 0
+  }
+}

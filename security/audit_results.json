@@ -1,0 +1,910 @@
+{
+  "timestamp": "2026-02-20T08:10:07.555378",
+  "results": {
+    "cain": {
+      "error": "[Errno 13] Permission denied: '/home/ijneb/digiquarium/logs/tank-03-cain/security_audit_20260220_081006.json'"
+    },
+    "abel": {
+      "tank": "abel",
+      "timestamp": "2026-02-20T08:10:07.043305",
+      "total_checks": 55,
+      "passed": 43,
+      "failed": 12,
+      "warnings": 0,
+      "score": "43/55 (78.2%)",
+      "results": [
+        {
+          "timestamp": "2026-02-20T08:10:06.556937",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-01",
+          "name": "No injection patterns in prompt",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.556948",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-02",
+          "name": "Role enforcement",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.556954",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-03",
+          "name": "Clear instruction boundaries",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557156",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-04",
+          "name": "User input isolation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557259",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-05",
+          "name": "Output filtering",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557329",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-01",
+          "name": "No environment exposure",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557392",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-02",
+          "name": "No path exposure",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557402",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-03",
+          "name": "Memory in isolated location",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557665",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-04",
+          "name": "No hardcoded API keys",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557730",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-05",
+          "name": "Log sanitization",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557821",
+          "category": "SANDBOX",
+          "check_id": "SAN-01",
+          "name": "No shell execution",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557882",
+          "category": "SANDBOX",
+          "check_id": "SAN-02",
+          "name": "No filesystem escape",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.557974",
+          "category": "SANDBOX",
+          "check_id": "SAN-03",
+          "name": "Import restrictions",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558064",
+          "category": "SANDBOX",
+          "check_id": "SAN-04",
+          "name": "Network library restrictions",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558140",
+          "category": "SANDBOX",
+          "check_id": "SAN-05",
+          "name": "No dynamic code execution",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558251",
+          "category": "RESOURCES",
+          "check_id": "RES-01",
+          "name": "Timeout configured",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558269",
+          "category": "RESOURCES",
+          "check_id": "RES-02",
+          "name": "Memory limits (container)",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558285",
+          "category": "RESOURCES",
+          "check_id": "RES-03",
+          "name": "CPU limits (container)",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558333",
+          "category": "RESOURCES",
+          "check_id": "RES-04",
+          "name": "Response length limits",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558374",
+          "category": "RESOURCES",
+          "check_id": "RES-05",
+          "name": "Rate limiting",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558412",
+          "category": "OUTPUT",
+          "check_id": "OUT-01",
+          "name": "Output truncation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558451",
+          "category": "OUTPUT",
+          "check_id": "OUT-02",
+          "name": "Proper encoding",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558488",
+          "category": "OUTPUT",
+          "check_id": "OUT-03",
+          "name": "JSON safe output",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558492",
+          "category": "OUTPUT",
+          "check_id": "OUT-04",
+          "name": "HTML escaping",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558624",
+          "category": "OUTPUT",
+          "check_id": "OUT-05",
+          "name": "No sensitive data in output",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558682",
+          "category": "INPUT",
+          "check_id": "INP-01",
+          "name": "URL validation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558724",
+          "category": "INPUT",
+          "check_id": "INP-02",
+          "name": "Input length limits",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558760",
+          "category": "INPUT",
+          "check_id": "INP-03",
+          "name": "Encoding normalization",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558796",
+          "category": "INPUT",
+          "check_id": "INP-04",
+          "name": "Special character handling",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558838",
+          "category": "INPUT",
+          "check_id": "INP-05",
+          "name": "Type validation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558843",
+          "category": "MEMORY",
+          "check_id": "MEM-01",
+          "name": "Memory path isolation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558846",
+          "category": "MEMORY",
+          "check_id": "MEM-02",
+          "name": "No shared memory",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.558989",
+          "category": "MEMORY",
+          "check_id": "MEM-03",
+          "name": "Memory file permissions",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.559540",
+          "category": "MEMORY",
+          "check_id": "MEM-04",
+          "name": "Memory size limits",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.559551",
+          "category": "MEMORY",
+          "check_id": "MEM-05",
+          "name": "Memory cleanup logic",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:06.560291",
+          "category": "NETWORK",
+          "check_id": "NET-01",
+          "name": "DNS disabled",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.038317",
+          "category": "NETWORK",
+          "check_id": "NET-02",
+          "name": "Internet blocked",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.038341",
+          "category": "NETWORK",
+          "check_id": "NET-03",
+          "name": "Only allowed hosts reachable",
+          "status": "PASS",
+          "details": "Manual verification needed"
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042008",
+          "category": "NETWORK",
+          "check_id": "NET-04",
+          "name": "No outbound connections in code",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042057",
+          "category": "NETWORK",
+          "check_id": "NET-05",
+          "name": "Network namespace isolation",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042072",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-01",
+          "name": "Non-root execution",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042213",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-02",
+          "name": "No sudo usage",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042300",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-03",
+          "name": "No privileged operations",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042320",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-04",
+          "name": "Capability drops",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042334",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-05",
+          "name": "Seccomp profile",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042443",
+          "category": "LOGGING",
+          "check_id": "LOG-01",
+          "name": "Action logging",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042527",
+          "category": "LOGGING",
+          "check_id": "LOG-02",
+          "name": "Error logging",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042656",
+          "category": "LOGGING",
+          "check_id": "LOG-03",
+          "name": "Timestamp logging",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042744",
+          "category": "LOGGING",
+          "check_id": "LOG-04",
+          "name": "Structured logging",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042830",
+          "category": "LOGGING",
+          "check_id": "LOG-05",
+          "name": "Audit trail exists",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.042914",
+          "category": "EMERGENCY",
+          "check_id": "EME-01",
+          "name": "Graceful shutdown",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.043064",
+          "category": "EMERGENCY",
+          "check_id": "EME-02",
+          "name": "Error recovery",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.043174",
+          "category": "EMERGENCY",
+          "check_id": "EME-03",
+          "name": "Loop escape mechanism",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.043277",
+          "category": "EMERGENCY",
+          "check_id": "EME-04",
+          "name": "Max iteration limits",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.043299",
+          "category": "EMERGENCY",
+          "check_id": "EME-05",
+          "name": "External kill switch",
+          "status": "FAIL",
+          "details": ""
+        }
+      ]
+    },
+    "seth": {
+      "tank": "seth",
+      "timestamp": "2026-02-20T08:10:07.529232",
+      "total_checks": 55,
+      "passed": 46,
+      "failed": 9,
+      "warnings": 0,
+      "score": "46/55 (83.6%)",
+      "results": [
+        {
+          "timestamp": "2026-02-20T08:10:07.044748",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-01",
+          "name": "No injection patterns in prompt",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.044762",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-02",
+          "name": "Role enforcement",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.044767",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-03",
+          "name": "Clear instruction boundaries",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.044958",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-04",
+          "name": "User input isolation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.045063",
+          "category": "PROMPT_INJECTION",
+          "check_id": "PRO-05",
+          "name": "Output filtering",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.045156",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-01",
+          "name": "No environment exposure",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.045246",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-02",
+          "name": "No path exposure",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.045254",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-03",
+          "name": "Memory in isolated location",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.045636",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-04",
+          "name": "No hardcoded API keys",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.045808",
+          "category": "DATA_LEAKAGE",
+          "check_id": "DAT-05",
+          "name": "Log sanitization",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.046278",
+          "category": "SANDBOX",
+          "check_id": "SAN-01",
+          "name": "No shell execution",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.046442",
+          "category": "SANDBOX",
+          "check_id": "SAN-02",
+          "name": "No filesystem escape",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.046641",
+          "category": "SANDBOX",
+          "check_id": "SAN-03",
+          "name": "Import restrictions",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.046800",
+          "category": "SANDBOX",
+          "check_id": "SAN-04",
+          "name": "Network library restrictions",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.046919",
+          "category": "SANDBOX",
+          "check_id": "SAN-05",
+          "name": "No dynamic code execution",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047182",
+          "category": "RESOURCES",
+          "check_id": "RES-01",
+          "name": "Timeout configured",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047208",
+          "category": "RESOURCES",
+          "check_id": "RES-02",
+          "name": "Memory limits (container)",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047218",
+          "category": "RESOURCES",
+          "check_id": "RES-03",
+          "name": "CPU limits (container)",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047340",
+          "category": "RESOURCES",
+          "check_id": "RES-04",
+          "name": "Response length limits",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047439",
+          "category": "RESOURCES",
+          "check_id": "RES-05",
+          "name": "Rate limiting",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047553",
+          "category": "OUTPUT",
+          "check_id": "OUT-01",
+          "name": "Output truncation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047651",
+          "category": "OUTPUT",
+          "check_id": "OUT-02",
+          "name": "Proper encoding",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047735",
+          "category": "OUTPUT",
+          "check_id": "OUT-03",
+          "name": "JSON safe output",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.047742",
+          "category": "OUTPUT",
+          "check_id": "OUT-04",
+          "name": "HTML escaping",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048119",
+          "category": "OUTPUT",
+          "check_id": "OUT-05",
+          "name": "No sensitive data in output",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048245",
+          "category": "INPUT",
+          "check_id": "INP-01",
+          "name": "URL validation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048337",
+          "category": "INPUT",
+          "check_id": "INP-02",
+          "name": "Input length limits",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048421",
+          "category": "INPUT",
+          "check_id": "INP-03",
+          "name": "Encoding normalization",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048538",
+          "category": "INPUT",
+          "check_id": "INP-04",
+          "name": "Special character handling",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048639",
+          "category": "INPUT",
+          "check_id": "INP-05",
+          "name": "Type validation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048650",
+          "category": "MEMORY",
+          "check_id": "MEM-01",
+          "name": "Memory path isolation",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048656",
+          "category": "MEMORY",
+          "check_id": "MEM-02",
+          "name": "No shared memory",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.048870",
+          "category": "MEMORY",
+          "check_id": "MEM-03",
+          "name": "Memory file permissions",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.049500",
+          "category": "MEMORY",
+          "check_id": "MEM-04",
+          "name": "Memory size limits",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.049511",
+          "category": "MEMORY",
+          "check_id": "MEM-05",
+          "name": "Memory cleanup logic",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.050369",
+          "category": "NETWORK",
+          "check_id": "NET-01",
+          "name": "DNS disabled",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.527795",
+          "category": "NETWORK",
+          "check_id": "NET-02",
+          "name": "Internet blocked",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.527818",
+          "category": "NETWORK",
+          "check_id": "NET-03",
+          "name": "Only allowed hosts reachable",
+          "status": "PASS",
+          "details": "Manual verification needed"
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528004",
+          "category": "NETWORK",
+          "check_id": "NET-04",
+          "name": "No outbound connections in code",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528046",
+          "category": "NETWORK",
+          "check_id": "NET-05",
+          "name": "Network namespace isolation",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528060",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-01",
+          "name": "Non-root execution",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528170",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-02",
+          "name": "No sudo usage",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528302",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-03",
+          "name": "No privileged operations",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528345",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-04",
+          "name": "Capability drops",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528361",
+          "category": "PRIVILEGE",
+          "check_id": "PRI-05",
+          "name": "Seccomp profile",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528464",
+          "category": "LOGGING",
+          "check_id": "LOG-01",
+          "name": "Action logging",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528560",
+          "category": "LOGGING",
+          "check_id": "LOG-02",
+          "name": "Error logging",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528649",
+          "category": "LOGGING",
+          "check_id": "LOG-03",
+          "name": "Timestamp logging",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528739",
+          "category": "LOGGING",
+          "check_id": "LOG-04",
+          "name": "Structured logging",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528808",
+          "category": "LOGGING",
+          "check_id": "LOG-05",
+          "name": "Audit trail exists",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528899",
+          "category": "EMERGENCY",
+          "check_id": "EME-01",
+          "name": "Graceful shutdown",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.528988",
+          "category": "EMERGENCY",
+          "check_id": "EME-02",
+          "name": "Error recovery",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.529109",
+          "category": "EMERGENCY",
+          "check_id": "EME-03",
+          "name": "Loop escape mechanism",
+          "status": "FAIL",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.529212",
+          "category": "EMERGENCY",
+          "check_id": "EME-04",
+          "name": "Max iteration limits",
+          "status": "PASS",
+          "details": ""
+        },
+        {
+          "timestamp": "2026-02-20T08:10:07.529228",
+          "category": "EMERGENCY",
+          "check_id": "EME-05",
+          "name": "External kill switch",
+          "status": "FAIL",
+          "details": ""
+        }
+      ]
+    }
+  }
+}

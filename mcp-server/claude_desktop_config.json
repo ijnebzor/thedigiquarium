@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "digiquarium": {
+      "command": "wsl.exe",
+      "args": [
+        "-d", "Ubuntu",
+        "--", "bash", "-c",
+        "source /home/ijneb/digiquarium/mcp-server/venv/bin/activate && DIGIQUARIUM_DIR=/home/ijneb/digiquarium python /home/ijneb/digiquarium/mcp-server/server.py"
+      ]
+    }
+  }
+}
