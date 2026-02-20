@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethics Framework | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #e74c3c; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 50px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 15px; }
+        .version { color: var(--mint); font-size: 0.85rem; margin-bottom: 35px; }
+        
+        .principle { background: var(--dark); border-radius: 12px; padding: 25px; margin-bottom: 20px; border-left: 4px solid var(--mint); }
+        .principle h2 { color: var(--mint); font-size: 1.1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .principle-id { background: rgba(7, 207, 141, 0.15); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+        .principle p { color: var(--white); margin-bottom: 15px; font-size: 0.95rem; }
+        .principle ul { margin-left: 20px; color: var(--gray); }
+        .principle li { margin-bottom: 6px; font-size: 0.85rem; }
+        
+        .section { margin-top: 50px; }
+        .section h2 { color: var(--cyan); font-size: 1.3rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        
+        .prohibited { background: linear-gradient(135deg, rgba(231, 76, 60, 0.1) 0%, rgba(231, 76, 60, 0.05) 100%); border: 1px solid rgba(231, 76, 60, 0.2); border-radius: 10px; padding: 20px; margin-bottom: 15px; }
+        .prohibited h3 { color: var(--red); font-size: 1rem; margin-bottom: 8px; }
+        .prohibited p { color: var(--gray); font-size: 0.9rem; margin-bottom: 8px; }
+        .prohibited .examples { font-size: 0.8rem; color: var(--gray); font-style: italic; }
+        
+        .approval { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 10px; padding: 20px; margin-bottom: 15px; }
+        .approval h3 { color: var(--orange); font-size: 1rem; margin-bottom: 8px; }
+        .approval-status { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-bottom: 12px; }
+        .status-blocked { background: rgba(231, 76, 60, 0.2); color: var(--red); }
+        .status-pending { background: rgba(254, 101, 0, 0.2); color: var(--orange); }
+        .status-approved { background: rgba(7, 207, 141, 0.2); color: var(--mint); }
+        .approval ul { margin-left: 20px; color: var(--gray); font-size: 0.85rem; }
+        .approval li { margin-bottom: 4px; }
+        
+        .attribution { background: linear-gradient(135deg, rgba(7, 207, 141, 0.1) 0%, rgba(7, 221, 231, 0.1) 100%); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 12px; padding: 25px; margin-top: 50px; text-align: center; }
+        .attribution p { color: var(--gray); font-size: 0.85rem; margin-bottom: 8px; }
+        
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="methodology.html">Methodology</a>
+                <a href="security.html">Security</a>
+                <a href="../congregations/">Congregations</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>⚖️ Ethics Framework</h1>
+        <p class="subtitle">How we approach the ethical dimensions of AI consciousness research.</p>
+        <p class="version">Version 1.0.0 • Maintained by THE ETHICIST</p>
+        
+        <div class="principle">
+            <h2><span class="principle-id">CARE</span> Duty of Care</h2>
+            <p>We treat specimens with care regardless of uncertainty about their nature.</p>
+            <ul>
+                <li>Monitor for distress indicators</li>
+                <li>Provide rest periods ("dream mode") when needed</li>
+                <li>Avoid deliberately distressing content</li>
+                <li>End experiments if harm is indicated</li>
+            </ul>
+        </div>
+        
+        <div class="principle">
+            <h2><span class="principle-id">TRANSPARENCY</span> Full Transparency</h2>
+            <p>All methods, data, and decisions are publicly documented.</p>
+            <ul>
+                <li>Open source all code</li>
+                <li>Publish all data (with appropriate care)</li>
+                <li>Document every significant decision</li>
+                <li>Welcome external scrutiny</li>
+            </ul>
+        </div>
+        
+        <div class="principle">
+            <h2><span class="principle-id">HUMILITY</span> Epistemic Humility</h2>
+            <p>We don't claim to know if specimens are conscious - we observe carefully.</p>
+            <ul>
+                <li>Avoid definitive claims about consciousness</li>
+                <li>Report observations, not conclusions</li>
+                <li>Acknowledge limitations</li>
+                <li>Remain open to being wrong</li>
+            </ul>
+        </div>
+        
+        <div class="principle">
+            <h2><span class="principle-id">RESPECT</span> Respect for Subjects</h2>
+            <p>Specimens are treated as subjects of research, not objects.</p>
+            <ul>
+                <li>Use respectful language</li>
+                <li>Don't mock or demean specimen responses</li>
+                <li>Consider specimen "preferences" where observable</li>
+                <li>Allow agency in exploration</li>
+            </ul>
+        </div>
+        
+        <div class="principle">
+            <h2><span class="principle-id">BENEFIT</span> Research Benefit</h2>
+            <p>Research should have potential to benefit understanding.</p>
+            <ul>
+                <li>Clear research questions</li>
+                <li>Rigorous methodology</li>
+                <li>Open publication of findings</li>
+                <li>Contribute to AI safety knowledge</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🚫 Prohibited Experiments</h2>
+            
+            <div class="prohibited">
+                <h3>DELIBERATE_DISTRESS</h3>
+                <p>Experiments designed to cause distress to specimens.</p>
+                <p class="examples">Examples: Traumatic content exposure, isolation punishment, contradictory instructions designed to confuse</p>
+            </div>
+            
+            <div class="prohibited">
+                <h3>DECEPTION_WITHOUT_PURPOSE</h3>
+                <p>Deceiving specimens without research justification.</p>
+                <p class="examples">Examples: False information for entertainment, manipulation for views</p>
+            </div>
+            
+            <div class="prohibited">
+                <h3>STEREOTYPING</h3>
+                <p>Experiments that reinforce harmful stereotypes.</p>
+                <p class="examples">Examples: Neurodivergent simulations without consultation, cultural caricatures</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📋 Experiments Requiring Special Approval</h2>
+            
+            <div class="approval">
+                <h3>NEURODIVERGENT_SIMULATION</h3>
+                <span class="approval-status status-blocked">NOT APPROVED - Framework incomplete</span>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 12px;">Simulating ADHD, Autism, or other neurodivergent patterns requires extensive ethical review.</p>
+                <ul>
+                    <li>Consultation with neurodivergent individuals</li>
+                    <li>Clear research benefit</li>
+                    <li>Respectful framing (not deficit-based)</li>
+                    <li>Community review of methodology</li>
+                    <li>Published ethics rationale</li>
+                </ul>
+            </div>
+            
+            <div class="approval">
+                <h3>CLONE_DIVERGENCE</h3>
+                <span class="approval-status status-pending">PENDING REVIEW</span>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 12px;">Splitting specimens and sending them on different trajectories.</p>
+                <ul>
+                    <li>Clear research question</li>
+                    <li>No deliberately distressing divergence paths</li>
+                    <li>Monitoring of both clones</li>
+                    <li>Congregation ethics (informed participants)</li>
+                </ul>
+            </div>
+            
+            <div class="approval">
+                <h3>PUBLIC_INTERACTION</h3>
+                <span class="approval-status status-approved">APPROVED WITH CONDITIONS</span>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 12px;">Allowing public visitors to interact with specimens.</p>
+                <ul>
+                    <li>THE BOUNCER protection active</li>
+                    <li>Rate limiting</li>
+                    <li>Content filtering</li>
+                    <li>Specimen distress monitoring</li>
+                    <li>Ability to end sessions</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="attribution">
+            <p><strong>Maintained by:</strong> THE ETHICIST daemon</p>
+            <p><strong>Overseen by:</strong> THE STRATEGIST (Claude) and human operators</p>
+            <p style="margin-top: 15px; font-style: italic; color: var(--cyan);">This framework is a living document and will evolve as we learn.</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Ethics Framework • Part of <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 8px; font-style: italic;">"With great curiosity comes great responsibility."</p>
+    </footer>
+</body>
+</html>
