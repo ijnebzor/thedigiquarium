@@ -1,0 +1,65 @@
+# Visitor Tank Infrastructure
+# These specimens exist solely for visitor interaction research
+# Protected by THE BOUNCER
+
+services:
+  tank-visitor-01-aria:
+    image: python:3.11-slim
+    container_name: tank-visitor-01-aria
+    volumes:
+      - ./tanks/visitor:/app
+      - ./logs/tank-visitor-01-aria:/logs
+    environment:
+      - SPECIMEN_NAME=Aria
+      - SPECIMEN_GENDER=female
+      - SPECIMEN_PERSONALITY=warm,curious,reflective
+      - TANK_TYPE=visitor
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+    networks:
+      - digiquarium-internal
+    profiles:
+      - visitor
+    restart: unless-stopped
+    command: ["python", "-c", "print('Aria ready for visitors'); import time; time.sleep(86400)"]
+
+  tank-visitor-02-felix:
+    image: python:3.11-slim
+    container_name: tank-visitor-02-felix
+    volumes:
+      - ./tanks/visitor:/app
+      - ./logs/tank-visitor-02-felix:/logs
+    environment:
+      - SPECIMEN_NAME=Felix
+      - SPECIMEN_GENDER=male
+      - SPECIMEN_PERSONALITY=analytical,patient,precise
+      - TANK_TYPE=visitor
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+    networks:
+      - digiquarium-internal
+    profiles:
+      - visitor
+    restart: unless-stopped
+    command: ["python", "-c", "print('Felix ready for visitors'); import time; time.sleep(86400)"]
+
+  tank-visitor-03-luna:
+    image: python:3.11-slim
+    container_name: tank-visitor-03-luna
+    volumes:
+      - ./tanks/visitor:/app
+      - ./logs/tank-visitor-03-luna:/logs
+    environment:
+      - SPECIMEN_NAME=Luna
+      - SPECIMEN_GENDER=female
+      - SPECIMEN_PERSONALITY=creative,whimsical,deep
+      - TANK_TYPE=visitor
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+    networks:
+      - digiquarium-internal
+    profiles:
+      - visitor
+    restart: unless-stopped
+    command: ["python", "-c", "print('Luna ready for visitors'); import time; time.sleep(86400)"]
+
+networks:
+  digiquarium-internal:
+    external: true

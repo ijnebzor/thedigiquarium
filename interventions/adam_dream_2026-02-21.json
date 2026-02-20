@@ -1,0 +1,25 @@
+{
+  "intervention_type": "dream_mode",
+  "target": "tank-01-adam",
+  "specimen": "Adam",
+  "initiated_by": "THE THERAPIST",
+  "approved_by": "Human Operator + THE STRATEGIST",
+  "timestamp": "2026-02-21T03:30:00Z",
+  "duration_hours": 6,
+  "reason": {
+    "primary": "Distress indicators detected",
+    "exploration_pattern": "Philosophy → Suffering → Anxiety → Anger",
+    "distress_topics_48h": 22,
+    "top_topics": {
+      "Buddhism": 64,
+      "Emotion": 43,
+      "Dukkha": 25,
+      "Angst": 24
+    }
+  },
+  "dream_content": {
+    "mode": "calming",
+    "themes": ["ocean", "peace", "Buddhist middle way", "acceptance"]
+  },
+  "status": "active"
+}
