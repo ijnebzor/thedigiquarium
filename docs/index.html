@@ -190,14 +190,53 @@
         .arch-card .val { color: var(--mint); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
         
         /* Timeline */
-        .timeline { position: relative; padding-left: 30px; max-width: 700px; margin: 0 auto; }
-        .timeline::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--orange), var(--mint), var(--cyan)); }
-        .timeline-item { position: relative; margin-bottom: 30px; padding-left: 22px; }
-        .timeline-item::before { content: ""; position: absolute; left: -34px; top: 4px; width: 8px; height: 8px; border-radius: 50%; background: var(--mint); }
-        .timeline-item.milestone::before { background: var(--orange); box-shadow: 0 0 12px var(--orange); }
-        .timeline-date { font-size: 0.75rem; color: var(--orange); font-weight: 600; }
-        .timeline-title { font-size: 1rem; font-weight: 600; margin: 5px 0; }
-        .timeline-item p { color: var(--gray); font-size: 0.85rem; }
+                /* Journey Timeline - New Design */
+        .journey-timeline {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .journey-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--mint) 0%, var(--cyan) 50%, rgba(7, 207, 141, 0.3) 100%);
+        }
+        .journey-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .journey-item.future { opacity: 0.6; }
+        .journey-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .journey-icon.pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(7, 207, 141, 0.3); }
+            50% { box-shadow: 0 4px 25px rgba(7, 207, 141, 0.6); }
+        }
+        .journey-content { padding-top: 5px; }
+        .journey-date { font-size: 0.75rem; color: var(--cyan); font-weight: 600; margin-bottom: 2px; }
+        .journey-title { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+        .journey-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.4; }
+
         
         /* Replicate */
         .replicate-section { background: var(--darker); border: 1px solid rgba(7, 207, 141, 0.15); border-radius: 12px; padding: 35px; margin-top: 40px; }
@@ -636,31 +675,85 @@
             </div>
         </section>
 
-        <!-- Journey -->
+                <!-- Journey -->
         <section id="journey" class="section">
             <div class="section-header">
                 <h2>The Journey</h2>
+                <p>From concept to 17 active specimens in 6 days.</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item milestone">
-                    <div class="timeline-date">February 2026</div>
-                    <div class="timeline-title">🌱 Genesis + AIthropology</div>
-                    <p><strong>AIthropology</strong> coined by <a href="https://ijneb.dev">@ijneb.dev</a>. Adam and Eve deployed. First baseline assessments.</p>
+            <div class="journey-timeline">
+                <div class="journey-line"></div>
+                
+                <div class="journey-item">
+                    <div class="journey-icon" style="background: linear-gradient(135deg, #4a7c59 0%, #2d5a3d 100%);">🌱</div>
+                    <div class="journey-content">
+                        <div class="journey-date">Feb 15</div>
+                        <div class="journey-title">Project Genesis</div>
+                        <div class="journey-desc">Infrastructure setup. Docker + WSL2. AIthropology coined.</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">February 2026</div>
-                    <div class="timeline-title">⚔️ Model Wars</div>
-                    <p>10 LLMs tested. llama3.2 wins. <a href="research/prompt-evolution.html">Prompt v1→v8 documented.</a></p>
+                
+                <div class="journey-item">
+                    <div class="journey-icon" style="background: linear-gradient(135deg, #9b59b6 0%, #6c3483 100%);">👫</div>
+                    <div class="journey-content">
+                        <div class="journey-date">Feb 16</div>
+                        <div class="journey-title">Adam & Eve Created</div>
+                        <div class="journey-desc">First two specimens deployed. Genesis pair as control group.</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">February 2026</div>
-                    <div class="timeline-title">🌍 Languages + Agents</div>
-                    <p>ES, DE, ZH, JA specimens. Cain, Abel, Seth agents. 13 daemons deployed.</p>
+                
+                <div class="journey-item">
+                    <div class="journey-icon" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">⚔️</div>
+                    <div class="journey-content">
+                        <div class="journey-date">Feb 17</div>
+                        <div class="journey-title">Model Wars</div>
+                        <div class="journey-desc">Tested 10+ LLMs. llama3.2 wins with +6.7 score.</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Coming Soon</div>
-                    <div class="timeline-title">🎭 Interactive + Congregations</div>
-                    <p>Public chat with specimens. Multi-agent debates. THE BOUNCER ready.</p>
+                
+                <div class="journey-item">
+                    <div class="journey-icon" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);">🌍</div>
+                    <div class="journey-content">
+                        <div class="journey-date">Feb 18</div>
+                        <div class="journey-title">Language Expansion</div>
+                        <div class="journey-desc">ES, DE, ZH, JA specimens deployed. 5 Wikipedia variants.</div>
+                    </div>
+                </div>
+                
+                <div class="journey-item">
+                    <div class="journey-icon" style="background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);">🛡️</div>
+                    <div class="journey-content">
+                        <div class="journey-date">Feb 19</div>
+                        <div class="journey-title">SecureClaw</div>
+                        <div class="journey-desc">OWASP LLM Top 10 security. Agent defanging complete.</div>
+                    </div>
+                </div>
+                
+                <div class="journey-item">
+                    <div class="journey-icon" style="background: linear-gradient(135deg, #f39c12 0%, #d68910 100%);">🤖</div>
+                    <div class="journey-content">
+                        <div class="journey-date">Feb 20</div>
+                        <div class="journey-title">Operations Era</div>
+                        <div class="journey-desc">13-daemon autonomous team. 24/7 monitoring active.</div>
+                    </div>
+                </div>
+                
+                <div class="journey-item">
+                    <div class="journey-icon pulse" style="background: linear-gradient(135deg, #07CF8D 0%, #059669 100%);">🚀</div>
+                    <div class="journey-content">
+                        <div class="journey-date">Feb 21</div>
+                        <div class="journey-title">Public Launch</div>
+                        <div class="journey-desc">GitHub live. Website deployed. Open science begins.</div>
+                    </div>
+                </div>
+                
+                <div class="journey-item future">
+                    <div class="journey-icon" style="background: linear-gradient(135deg, #6c5ce7 0%, #5b4cdb 100%); opacity: 0.7;">🎭</div>
+                    <div class="journey-content">
+                        <div class="journey-date">Coming</div>
+                        <div class="journey-title">Congregations</div>
+                        <div class="journey-desc">Multi-agent debates. Interactive visitor tanks.</div>
+                    </div>
                 </div>
             </div>
         </section>

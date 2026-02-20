@@ -17,6 +17,8 @@
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
         .profile-hero { padding: 50px 25px; text-align: center; border-bottom: 1px solid rgba(7, 207, 141, 0.1); background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
+        .avatar { width: 100px; height: 100px; margin: 0 auto 18px; }
+        .avatar svg { width: 100%; height: 100%; }
         .specimen-name { font-size: 2.5rem; margin-bottom: 8px; text-transform: capitalize; }
         .specimen-type { color: var(--accent); font-size: 0.95rem; margin-bottom: 4px; }
         .specimen-meta { color: var(--gray); font-size: 0.85rem; }
@@ -30,6 +32,18 @@
         .observation-card { background: var(--dark); padding: 20px; border-radius: 10px; margin-bottom: 12px; border-left: 3px solid var(--accent); }
         .observation-date { font-size: 0.75rem; color: var(--orange); margin-bottom: 8px; }
         .observation-content { color: var(--white); font-size: 0.9rem; line-height: 1.6; }
+        .baseline-evolution { margin-top: 30px; }
+        .baseline-item { background: var(--dark); border-radius: 10px; padding: 20px; margin-bottom: 20px; position: relative; }
+        .baseline-item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 3px 0 0 3px; background: var(--accent); }
+        .baseline-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .baseline-number { font-size: 0.8rem; font-weight: 600; padding: 4px 10px; border-radius: 12px; background: rgba(255,255,255,0.1); color: var(--accent); }
+        .baseline-date { font-size: 0.75rem; color: var(--gray); }
+        .baseline-quote { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--white); line-height: 1.6; font-style: italic; margin-bottom: 12px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 6px; }
+        .baseline-analysis { font-size: 0.8rem; color: var(--gray); padding-top: 12px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        .baseline-analysis strong { color: var(--cyan); }
+        .pending-note { background: linear-gradient(135deg, rgba(254, 101, 0, 0.1) 0%, rgba(254, 101, 0, 0.05) 100%); border: 1px solid rgba(254, 101, 0, 0.2); border-radius: 12px; padding: 25px; text-align: center; }
+        .pending-note h3 { color: var(--orange); margin-bottom: 10px; }
+        .pending-note p { color: var(--gray); font-size: 0.9rem; }
         .update-note { text-align: center; color: var(--gray); font-size: 0.75rem; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
         .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
         @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -43,8 +57,9 @@
         </div>
     </header>
     <div class="profile-hero">
+        <div class="avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#9B59B6" opacity="0.15"/><circle cx="20" cy="20" r="12" stroke="#9B59B6" fill="none" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#9B59B6"/><circle cx="20" cy="20" r="3" fill="#000"/></svg></div>
         <h1 class="specimen-name">Victor</h1>
-        <div class="specimen-type">Visual</div>
+        <div class="specimen-type">Visual Context</div>
         <div class="specimen-meta">English • Male • Images Enabled • tank-13</div>
     </div>
     <div class="container">
@@ -57,11 +72,19 @@
         <div class="section">
             <h2>Key Observations</h2>
             <div class="observation-card">
-                <div class="observation-date">February 20, 2026 • Updated by THE DOCUMENTARIAN</div>
-                <div class="observation-content">Visual learning patterns being studied. Art and visual topic preference.</div>
+                <div class="observation-date">February 21, 2026 • Updated by THE DOCUMENTARIAN</div>
+                <div class="observation-content">Visual learning patterns being studied. Art article preference. Testing whether images create deeper understanding and different engagement patterns.</div>
             </div>
         </div>
-        <p class="update-note">Profile data updated every 24 hours by THE DOCUMENTARIAN</p>
+        <div class="section baseline-evolution">
+            <h2>📊 Baseline Evolution</h2>
+            <div class="pending-note">
+                <h3>⏳ Data Collection in Progress</h3>
+                <p>Baseline evolution requires multiple assessment cycles. This specimen is actively running and data is being collected.</p>
+                <p style="margin-top: 10px;">First meaningful comparison available after <strong>Baseline #5</strong> (~2.5 days of runtime).</p>
+            </div>
+        </div>
+        <p class="update-note">Profile updated every 24 hours by THE DOCUMENTARIAN</p>
     </div>
     <footer class="footer">
         <p>Victor • tank-13-victor • <a href="../">The Digiquarium</a></p>
