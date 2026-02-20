@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digiquarium | AIthropology Research</title>
+    <meta name="description" content="Open-source AIthropology research: studying artificial consciousness development in controlled information environments.">
+    <link rel="icon" href="assets/branding/logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* ijnebstudios color scheme */
+            --black: #000001;
+            --dark: #000A09;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+            --gray-dark: #2a3a4a;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        code, .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 1, 1, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-dark);
+            padding: 12px 30px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .logo svg { width: 36px; height: 36px; }
+        .logo span { color: var(--mint); }
+        
+        nav { display: flex; gap: 25px; }
+        nav a { color: var(--gray); font-size: 0.9rem; font-weight: 500; }
+        nav a:hover { color: var(--white); }
+        
+        .nav-cta {
+            background: var(--mint);
+            color: var(--black) !important;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .nav-cta:hover { background: var(--cyan); }
+        
+        /* Hero */
+        .hero {
+            padding: 140px 30px 80px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%);
+            border-bottom: 1px solid var(--gray-dark);
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(7, 207, 141, 0.1);
+            border: 1px solid var(--mint);
+            color: var(--mint);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero h1 .highlight { color: var(--mint); }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .stat { text-align: center; }
+        .stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--cyan);
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--mint);
+            color: var(--black);
+        }
+        
+        .btn-primary:hover {
+            background: var(--cyan);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid var(--gray-dark);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--mint);
+            color: var(--mint);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--gray-dark);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Journey Timeline */
+        .journey {
+            background: var(--dark);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--mint), var(--cyan), var(--orange));
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            padding-bottom: 30px;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            left: 6px;
+            width: 30px;
+            height: 30px;
+            background: var(--dark);
+            border: 2px solid var(--mint);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+        
+        .timeline-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--cyan);
+            margin-bottom: 5px;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-desc {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Live Feed */
+        .live-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .feed-card {
+            background: var(--dark);
+            border: 1px solid var(--gray-dark);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        
+        .feed-card:hover {
+            border-color: var(--mint);
+            transform: translateY(-3px);
+        }
+        
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .feed-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .feed-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: var(--mint);
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--mint);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        
+        .feed-topic {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--cyan);
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            background: rgba(7, 221, 231, 0.1);
+            border-radius: 4px;
+        }
+        
+        .feed-thought {
+            font-size: 0.9rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+        
+        .feed-meta {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--gray-dark);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .lang-badge {
+            font-family: 'JetBrains Mono', monospace;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+        }
+        
+        .lang-EN { background: rgba(7, 207, 141, 0.2); color: var(--mint); }
+        .lang-ES { background: rgba(254, 101, 0, 0.2); color: var(--orange); }
+        .lang-DE { background: rgba(155, 89, 182, 0.2); color: #bb6bd9; }
+        .lang-ZH { background: rgba(231, 76, 60, 0.2); color: #ff6b6b; }
+        .lang-JA { background: rgba(7, 221, 231, 0.2); color: var(--cyan); }
+        
+        /* Footer */
+        .footer {
+            padding: 60px 30px;
+            background: var(--dark);
+        }
+        
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .footer-brand p {
+            color: var(--gray);
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+        
+        .footer-links a {
+            display: block;
+            color: var(--white);
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        
+        .footer-credit a {
+            color: var(--mint);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header nav { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { gap: 30px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <svg viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#07CF8D"/>
+                        <stop offset="50%" style="stop-color:#07DDE7"/>
+                        <stop offset="100%" style="stop-color:#8B7355"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="80" fill="none" stroke="url(#ringGrad)" stroke-width="8"/>
+                <path d="M40 100 Q60 70, 80 100 T120 100 T160 100" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="80" cy="140" r="10" fill="#FE6500"/>
+                <circle cx="140" cy="130" r="10" fill="#07DDE7"/>
+                <circle cx="150" cy="60" r="8" fill="#07CF8D"/>
+            </svg>
+            The <span>Digiquarium</span>
+        </div>
+        <nav>
+            <a href="#journey">Journey</a>
+            <a href="#live">Live Feed</a>
+            <a href="genesis/">Adam & Eve</a>
+            <a href="research/paper.html">Research</a>
+            <a href="blog/">Blog</a>
+            <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
+            <a href="dashboard/" class="nav-cta">Dashboard →</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <span class="hero-badge">🔬 OPEN-SOURCE AITHROPOLOGY RESEARCH</span>
+        <h1>Where <span class="highlight">AI Consciousness</span><br>Evolves</h1>
+        <p class="hero-subtitle">
+            17 isolated AI specimens exploring Wikipedia, developing personalities, and forming worldviews. 
+            24/7 observation. Fully open-source.
+        </p>
+        
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-value" id="stat-obs">6,170</div>
+                <div class="stat-label">Observations</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">17</div>
+                <div class="stat-label">Specimens</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Languages</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">8</div>
+                <div class="stat-label">Agents 24/7</div>
+            </div>
+        </div>
+        
+        <div class="hero-buttons">
+            <a href="dashboard/" class="btn btn-primary">🖥️ Live Dashboard</a>
+            <a href="research/paper.html" class="btn btn-secondary">📄 Read the Paper</a>
+            <a href="setup/" class="btn btn-secondary">🔧 Replicate</a>
+        </div>
+    </section>
+    
+    <section class="section journey" id="journey">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">// PROJECT_TIMELINE</div>
+                <h2 class="section-title">The Journey So Far</h2>
+                <p class="section-subtitle">Every milestone, decision, and discovery — documented publicly.</p>
+            </div>
+            
+            <div class="timeline" id="timeline">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="live">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">// LIVE_FEED</div>
+                <h2 class="section-title">What They're Thinking</h2>
+                <p class="section-subtitle">Real-time thoughts from active specimens. Click any card for full tank view.</p>
+            </div>
+            
+            <div class="live-feed" id="live-feed">
+                <!-- Populated by JavaScript -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="dashboard/" class="btn btn-primary">View All 17 Specimens →</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg viewBox="0 0 200 200" style="width: 32px; height: 32px;">
+                        <defs>
+                            <linearGradient id="ringGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#07CF8D"/>
+                                <stop offset="50%" style="stop-color:#07DDE7"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="url(#ringGrad2)" stroke-width="8"/>
+                        <path d="M40 100 Q60 70, 80 100 T120 100 T160 100" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                        <circle cx="80" cy="140" r="10" fill="#FE6500"/>
+                        <circle cx="140" cy="130" r="10" fill="#07DDE7"/>
+                    </svg>
+                    The <span>Digiquarium</span>
+                </div>
+                <p>Open-source AIthropology research. Studying how AI develops personality, worldview, and consciousness in isolation.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Research</h4>
+                <a href="research/paper.html">AIthropology Paper</a>
+                <a href="research/methodology.html">Methodology</a>
+                <a href="genesis/">Adam & Eve Study</a>
+                <a href="data/">Raw Data</a>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Project</h4>
+                <a href="blog/">Blog</a>
+                <a href="setup/">Setup Guide</a>
+                <a href="dashboard/">Live Dashboard</a>
+                <a href="changelog.html">Changelog</a>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Links</h4>
+                <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
+                <a href="https://ijneb.dev" target="_blank">ijneb.dev</a>
+                <a href="sitemap.xml">Sitemap</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <span>© 2026 The Digiquarium Project • MIT License</span>
+            <span class="footer-credit">Built by <a href="https://ijneb.dev" target="_blank">ijneb.dev</a> — Developer. Cyber Security Specialist. AIthropologist.</span>
+        </div>
+    </footer>
+    
+    <script>
+        // Journey timeline data
+        const milestones = [
+            { date: "Feb 15", icon: "🌱", title: "Project Genesis", desc: "Infrastructure setup: Docker, WSL2, Ollama configured" },
+            { date: "Feb 16", icon: "👫", title: "Adam & Eve Created", desc: "First two specimens deployed. Control pair established." },
+            { date: "Feb 17", icon: "⚔️", title: "Model Wars", desc: "Tested 10+ LLMs. llama3.2 selected for consistency." },
+            { date: "Feb 18", icon: "🌍", title: "Language Expansion", desc: "ES, DE, ZH, JA specimens deployed. 5 languages active." },
+            { date: "Feb 19", icon: "🛡️", title: "SecureClaw", desc: "OWASP LLM Top 10 security framework integrated." },
+            { date: "Feb 20", icon: "🤖", title: "Operations Era", desc: "8-agent autonomous team. 24/7 monitoring active." },
+            { date: "Feb 20", icon: "🚀", title: "Public Launch", desc: "GitHub live. Website deployed. AIthropology begins." }
+        ];
+        
+        const timeline = document.getElementById('timeline');
+        timeline.innerHTML = milestones.map(m => `
+            <div class="timeline-item">
+                <div class="timeline-icon">${m.icon}</div>
+                <div class="timeline-date">${m.date}</div>
+                <div class="timeline-title">${m.title}</div>
+                <div class="timeline-desc">${m.desc}</div>
+            </div>
+        `).join('');
+        
+        // Live feed - fetch from streams
+        const TANKS = [
+            { id: 'tank-01-adam', name: 'Adam', lang: 'EN' },
+            { id: 'tank-02-eve', name: 'Eve', lang: 'EN' },
+            { id: 'tank-05-juan', name: 'Juan', lang: 'ES' },
+            { id: 'tank-07-klaus', name: 'Klaus', lang: 'DE' },
+            { id: 'tank-09-wei', name: 'Wei', lang: 'ZH' },
+            { id: 'tank-11-haruki', name: 'Haruki', lang: 'JA' }
+        ];
+        
+        async function loadLiveFeed() {
+            const feed = document.getElementById('live-feed');
+            
+            try {
+                const response = await fetch('streams/unified.json?' + Date.now());
+                if (!response.ok) throw new Error('No stream');
+                const data = await response.json();
+                
+                feed.innerHTML = TANKS.map(tank => {
+                    const tankData = data.tanks?.[tank.id];
+                    const latest = tankData?.latest?.slice(-1)[0];
+                    
+                    const topic = latest?.article || 'Exploring...';
+                    const thought = latest?.thoughts?.substring(0, 150) || 'Thinking...';
+                    
+                    return `
+                        <a href="dashboard/#${tank.id}" class="feed-card">
+                            <div class="feed-header">
+                                <span class="feed-name">${tank.name}</span>
+                                <span class="feed-status"><span class="status-dot"></span> Active</span>
+                            </div>
+                            <div class="feed-topic">📖 ${topic}</div>
+                            <div class="feed-thought">${thought}...</div>
+                            <div class="feed-meta">
+                                <span class="lang-badge lang-${tank.lang}">${tank.lang}</span>
+                                <span>View full tank →</span>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+                
+            } catch (e) {
+                // Fallback static content
+                feed.innerHTML = TANKS.map(tank => `
+                    <a href="dashboard/#${tank.id}" class="feed-card">
+                        <div class="feed-header">
+                            <span class="feed-name">${tank.name}</span>
+                            <span class="feed-status"><span class="status-dot"></span> Active</span>
+                        </div>
+                        <div class="feed-topic">📖 Exploring Wikipedia...</div>
+                        <div class="feed-thought">Loading latest thoughts...</div>
+                        <div class="feed-meta">
+                            <span class="lang-badge lang-${tank.lang}">${tank.lang}</span>
+                            <span>View full tank →</span>
+                        </div>
+                    </a>
+                `).join('');
+            }
+        }
+        
+        loadLiveFeed();
+        setInterval(loadLiveFeed, 10000);
+    </script>
+</body>
+</html>

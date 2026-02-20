@@ -1,16 +1,16 @@
 {
-  "updated": "2026-02-20T14:29:40.682204",
-  "total_observations": 6170,
-  "total_baselines": 244,
+  "updated": "2026-02-20T14:59:43.804903",
+  "total_observations": 6175,
+  "total_baselines": 250,
   "mental_states": {
     "unknown": 2,
-    "complex": 4,
+    "complex": 5,
     "concerning": 3,
     "healthy": 2
   },
   "by_language": {
     "English": {
-      "observations": 4996,
+      "observations": 5000,
       "tanks": 9
     },
     "Spanish": {
@@ -18,7 +18,7 @@
       "tanks": 2
     },
     "German": {
-      "observations": 831,
+      "observations": 832,
       "tanks": 2
     },
     "Chinese": {
@@ -33,7 +33,7 @@
   "genesis": {
     "adam": {
       "observations": 2739,
-      "baselines": 22,
+      "baselines": 23,
       "mental_state": "unknown",
       "excerpts": [
         {
@@ -64,7 +64,7 @@
     },
     "eve": {
       "observations": 575,
-      "baselines": 20,
+      "baselines": 22,
       "mental_state": "unknown",
       "excerpts": [
         {
@@ -90,18 +90,18 @@
     "tank-01-adam": {
       "name": "Adam",
       "observations": 2739,
-      "baselines": 22,
+      "baselines": 23,
       "mental_state": "unknown"
     },
     "tank-02-eve": {
       "name": "Eve",
       "observations": 575,
-      "baselines": 20,
+      "baselines": 22,
       "mental_state": "unknown"
     },
     "tank-03-cain": {
       "name": "Cain",
-      "observations": 280,
+      "observations": 282,
       "baselines": 2,
       "mental_state": "complex"
     },
@@ -131,9 +131,9 @@
     },
     "tank-08-genevieve": {
       "name": "Genevi\u00e8ve",
-      "observations": 413,
-      "baselines": 18,
-      "mental_state": "unknown"
+      "observations": 414,
+      "baselines": 19,
+      "mental_state": "complex"
     },
     "tank-09-wei": {
       "name": "Wei",
@@ -162,13 +162,13 @@
     "tank-13-victor": {
       "name": "Victor",
       "observations": 59,
-      "baselines": 19,
+      "baselines": 20,
       "mental_state": "concerning"
     },
     "tank-14-iris": {
       "name": "Iris",
       "observations": 59,
-      "baselines": 18,
+      "baselines": 19,
       "mental_state": "concerning"
     },
     "tank-15-observer": {
@@ -185,7 +185,7 @@
     },
     "tank-17-seth": {
       "name": "Seth",
-      "observations": 58,
+      "observations": 60,
       "baselines": 1,
       "mental_state": "healthy"
     }
