@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Digiquarium | AIthropology Research</title>
-    <meta name="description" content="The first open-source AIthropology research platform: studying AI consciousness development through longitudinal observation.">
+    <meta name="description" content="The first open-source AIthropology research platform: 17 AI specimens, 5 languages, endless curiosity.">
     <link rel="icon" href="assets/branding/logo.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             --black: #000001;
             --dark: #000A09;
-            --darker: #0a1612;
             --orange: #FE6500;
             --mint: #07CF8D;
             --cyan: #07DDE7;
@@ -20,8 +19,10 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, sans-serif; background: var(--black); color: var(--white); line-height: 1.6; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
         code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
-        pre { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; }
+        pre { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; }
         
         /* Hero */
         .hero {
@@ -35,48 +36,43 @@
             background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%);
             border-bottom: 1px solid rgba(7, 207, 141, 0.2);
         }
-        .logo { width: 120px; height: 120px; margin-bottom: 30px; }
+        .logo { width: 100px; margin-bottom: 25px; }
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             background: linear-gradient(90deg, var(--mint), var(--cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .hero .tagline { font-size: 1.2rem; color: var(--gray); margin-bottom: 15px; max-width: 700px; }
-        .hero .subtitle { font-size: 0.9rem; color: var(--orange); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-        .hero .first-kind { font-size: 1rem; color: var(--mint); margin-bottom: 40px; font-style: italic; }
+        .hero .tagline { font-size: 1.15rem; color: var(--gray); margin-bottom: 10px; max-width: 600px; }
+        .hero .first-kind { font-size: 0.95rem; color: var(--mint); margin-bottom: 35px; }
         
-        .stats { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin: 40px 0; }
+        .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin: 35px 0; }
         .stat { text-align: center; }
-        .stat-value { font-size: 2.8rem; font-weight: 700; color: var(--mint); }
-        .stat-label { font-size: 0.85rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
+        .stat-value { font-size: 2.5rem; font-weight: 700; color: var(--mint); }
+        .stat-label { font-size: 0.8rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
         
-        .cta-group { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+        .cta-group { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
         .cta-button {
-            display: inline-block;
             background: var(--orange);
             color: var(--white);
-            padding: 14px 28px;
+            padding: 12px 24px;
             border-radius: 8px;
-            text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: all 0.3s;
         }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(254, 101, 0, 0.3); }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(254, 101, 0, 0.3); color: var(--white); }
         .cta-button.secondary { background: transparent; border: 2px solid var(--cyan); }
         .cta-button.secondary:hover { background: var(--cyan); color: var(--black); }
-        .cta-button.tertiary { background: transparent; border: 2px solid var(--mint); }
-        .cta-button.tertiary:hover { background: var(--mint); color: var(--black); }
         
-        /* Navigation */
+        /* Nav */
         .nav {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            padding: 18px;
+            gap: 22px;
+            padding: 16px;
             background: var(--dark);
             border-bottom: 1px solid rgba(7, 207, 141, 0.1);
             position: sticky;
@@ -84,66 +80,38 @@
             z-index: 100;
             flex-wrap: wrap;
         }
-        .nav a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .nav a { color: var(--white); font-size: 0.88rem; transition: color 0.3s; }
         .nav a:hover { color: var(--cyan); }
         
         /* Sections */
-        .container { max-width: 1400px; margin: 0 auto; padding: 80px 20px; }
-        .section { margin-bottom: 100px; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--white); }
-        .section-header p { color: var(--gray); max-width: 700px; margin: 0 auto; }
-        .section-number { font-size: 0.8rem; color: var(--orange); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card {
-            background: var(--dark);
-            border: 1px solid rgba(7, 207, 141, 0.1);
-            border-radius: 12px;
-            padding: 30px;
-            transition: all 0.3s;
-        }
-        .card:hover { border-color: var(--mint); transform: translateY(-5px); }
-        .card h3 { color: var(--cyan); margin-bottom: 15px; font-size: 1.1rem; }
-        .card p { color: var(--gray); font-size: 0.95rem; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 70px 20px; }
+        .section { margin-bottom: 80px; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { font-size: 2rem; margin-bottom: 12px; }
+        .section-header p { color: var(--gray); max-width: 650px; margin: 0 auto; }
         
         /* Research Questions */
-        .rq-grid { display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 0 auto; }
-        .rq-card {
-            background: var(--dark);
-            border-left: 4px solid var(--cyan);
-            padding: 25px 30px;
-            border-radius: 0 12px 12px 0;
-        }
-        .rq-card h3 { color: var(--cyan); font-size: 1.1rem; margin-bottom: 10px; }
-        .rq-card p { color: var(--gray); font-size: 0.95rem; }
+        .rq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .rq-card { background: var(--dark); border-left: 3px solid var(--cyan); padding: 20px 25px; border-radius: 0 10px 10px 0; }
+        .rq-card h3 { color: var(--cyan); font-size: 1rem; margin-bottom: 8px; }
+        .rq-card p { color: var(--gray); font-size: 0.9rem; }
         
-        /* Specimen Grid */
-        .specimen-section { margin-bottom: 40px; }
-        .specimen-section h3 { 
-            font-size: 0.9rem; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+        /* Specimen Cards with Avatars */
+        .specimen-section { margin-bottom: 35px; }
+        .specimen-section h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
         .specimen-section h3 span { font-weight: 400; font-size: 0.8rem; color: var(--gray); text-transform: none; letter-spacing: 0; }
         
-        .specimen-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 15px;
-        }
+        .specimen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; }
         .specimen-card {
             background: var(--dark);
             border: 1px solid rgba(7, 207, 141, 0.15);
-            border-radius: 10px;
-            padding: 18px;
+            border-radius: 12px;
+            padding: 20px;
             transition: all 0.3s;
+            display: block;
+            color: var(--white);
         }
-        .specimen-card:hover { border-color: var(--mint); transform: translateY(-2px); }
+        .specimen-card:hover { border-color: var(--mint); transform: translateY(-3px); color: var(--white); }
         .specimen-card.control { border-left: 3px solid var(--mint); }
         .specimen-card.agent { border-left: 3px solid var(--orange); }
         .specimen-card.spanish { border-left: 3px solid #FFD700; }
@@ -153,130 +121,59 @@
         .specimen-card.visual { border-left: 3px solid #9B59B6; }
         .specimen-card.special { border-left: 3px solid #3498DB; }
         
-        .specimen-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
-        .specimen-name { font-size: 1.1rem; font-weight: 600; }
-        .specimen-badge { font-size: 0.6rem; padding: 3px 8px; border-radius: 10px; background: rgba(7, 207, 141, 0.15); color: var(--mint); }
+        .specimen-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .specimen-avatar { width: 36px; height: 36px; flex-shrink: 0; }
+        .specimen-avatar svg { width: 100%; height: 100%; }
+        .specimen-name { font-size: 1.15rem; font-weight: 600; }
+        .specimen-badge { font-size: 0.6rem; padding: 3px 8px; border-radius: 10px; background: rgba(7, 207, 141, 0.15); color: var(--mint); margin-left: auto; }
         .specimen-card.agent .specimen-badge { background: rgba(254, 101, 0, 0.15); color: var(--orange); }
-        .specimen-meta { font-size: 0.8rem; color: var(--gray); margin-bottom: 10px; }
+        .specimen-meta { font-size: 0.8rem; color: var(--gray); margin-bottom: 8px; }
         .specimen-arch { font-size: 0.75rem; color: var(--cyan); font-style: italic; }
-        .specimen-finding { font-size: 0.85rem; color: var(--white); line-height: 1.4; margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-        
-        /* What Are They Thinking */
-        .thinking-section {
-            background: linear-gradient(180deg, var(--darker) 0%, var(--black) 100%);
-            padding: 80px 20px;
-            text-align: center;
-        }
-        .thinking-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, var(--mint), var(--cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .thinking-section p { color: var(--gray); max-width: 600px; margin: 0 auto 40px; }
-        .thought-preview {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--dark);
-            border: 1px solid rgba(7, 207, 141, 0.2);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: left;
-        }
-        .thought-header { display: flex; justify-content: space-between; margin-bottom: 20px; }
-        .thought-specimen { font-weight: 600; color: var(--cyan); }
-        .thought-article { font-size: 0.85rem; color: var(--gray); }
-        .thought-content { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; line-height: 1.7; color: var(--white); }
+        .specimen-finding { font-size: 0.85rem; color: var(--white); margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(7, 207, 141, 0.1); line-height: 1.5; }
         
         /* Team */
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
-        .team-card {
-            background: var(--dark);
-            border: 1px solid rgba(7, 207, 141, 0.1);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-        }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+        .team-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 10px; padding: 18px; text-align: center; }
         .team-card.lead { border-color: var(--orange); background: linear-gradient(180deg, rgba(254,101,0,0.08) 0%, var(--dark) 100%); }
-        .team-icon { font-size: 2rem; margin-bottom: 12px; }
-        .team-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
-        .team-role { font-size: 0.75rem; color: var(--cyan); margin-bottom: 8px; }
-        .team-desc { font-size: 0.7rem; color: var(--gray); line-height: 1.4; }
+        .team-icon { font-size: 1.8rem; margin-bottom: 10px; }
+        .team-name { font-size: 0.85rem; font-weight: 600; margin-bottom: 3px; }
+        .team-role { font-size: 0.7rem; color: var(--cyan); margin-bottom: 6px; }
+        .team-desc { font-size: 0.65rem; color: var(--gray); line-height: 1.4; }
         
         /* Timeline */
-        .timeline { position: relative; padding-left: 40px; max-width: 800px; margin: 0 auto; }
-        .timeline::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--mint), var(--cyan), var(--orange)); }
-        .timeline-item { position: relative; margin-bottom: 40px; padding-left: 30px; }
-        .timeline-item::before { content: ""; position: absolute; left: -44px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 20px var(--mint); }
-        .timeline-item.milestone::before { background: var(--orange); box-shadow: 0 0 20px var(--orange); }
-        .timeline-date { font-size: 0.85rem; color: var(--orange); font-weight: 600; }
-        .timeline-title { font-size: 1.2rem; font-weight: 600; margin: 8px 0; }
-        .timeline-item p { color: var(--gray); font-size: 0.95rem; }
-        .timeline-item a { color: var(--cyan); }
-        
-        /* Technical Architecture */
-        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .tech-card {
-            background: var(--dark);
-            border: 1px solid rgba(7, 207, 141, 0.1);
-            border-radius: 12px;
-            padding: 25px;
-        }
-        .tech-card h3 { color: var(--cyan); font-size: 1rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .tech-card ul { list-style: none; }
-        .tech-card li { padding: 8px 0; border-bottom: 1px solid rgba(7, 207, 141, 0.05); font-size: 0.9rem; color: var(--gray); display: flex; justify-content: space-between; }
-        .tech-card li:last-child { border-bottom: none; }
-        .tech-card .value { color: var(--mint); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+        .timeline { position: relative; padding-left: 35px; max-width: 750px; margin: 0 auto; }
+        .timeline::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--orange), var(--mint), var(--cyan)); }
+        .timeline-item { position: relative; margin-bottom: 35px; padding-left: 25px; }
+        .timeline-item::before { content: ""; position: absolute; left: -40px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--mint); }
+        .timeline-item.milestone::before { background: var(--orange); box-shadow: 0 0 15px var(--orange); }
+        .timeline-date { font-size: 0.8rem; color: var(--orange); font-weight: 600; }
+        .timeline-title { font-size: 1.1rem; font-weight: 600; margin: 6px 0; }
+        .timeline-item p { color: var(--gray); font-size: 0.9rem; }
         
         /* Replicate */
-        .replicate-section {
-            background: var(--darker);
-            border: 1px solid rgba(7, 207, 141, 0.2);
-            border-radius: 16px;
-            padding: 50px;
-            margin-top: 60px;
-        }
-        .replicate-section h2 { color: var(--mint); margin-bottom: 20px; }
-        .replicate-section p { color: var(--gray); margin-bottom: 30px; }
-        .replicate-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
-        .step { background: var(--dark); padding: 20px; border-radius: 10px; }
-        .step-number { color: var(--orange); font-weight: 700; font-size: 1.5rem; margin-bottom: 10px; }
-        .step h4 { color: var(--white); margin-bottom: 8px; }
-        .step p { font-size: 0.85rem; }
+        .replicate-section { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 14px; padding: 45px; margin-top: 50px; }
+        .replicate-section h2 { color: var(--mint); margin-bottom: 15px; font-size: 1.6rem; }
+        .replicate-section > p { color: var(--gray); margin-bottom: 25px; }
         
         /* Footer */
-        .footer {
-            text-align: center;
-            padding: 60px 20px 40px;
-            background: var(--dark);
-            border-top: 1px solid rgba(7, 207, 141, 0.1);
-        }
-        .footer-links { margin: 20px 0; }
-        .footer-links a { color: var(--cyan); text-decoration: none; margin: 0 15px; transition: color 0.3s; font-size: 0.9rem; }
-        .footer-links a:hover { color: var(--mint); }
+        .footer { text-align: center; padding: 50px 20px 35px; background: var(--dark); border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        .footer-links { margin: 18px 0; }
+        .footer-links a { color: var(--cyan); margin: 0 12px; font-size: 0.88rem; }
         .footer-text { color: var(--gray); font-size: 0.85rem; }
-        .footer-credit { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-        .footer-credit a { color: var(--mint); }
-        .footer-motto { margin-top: 30px; font-style: italic; color: var(--gray); font-size: 0.9rem; }
-        .footer-kofi { margin-top: 20px; }
-        .footer-kofi a { color: var(--gray); font-size: 0.8rem; text-decoration: none; transition: color 0.3s; }
+        .footer-credit { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        .footer-motto { margin-top: 25px; font-style: italic; color: var(--mint); font-size: 0.95rem; }
+        .footer-kofi { margin-top: 15px; }
+        .footer-kofi a { color: var(--gray); font-size: 0.8rem; transition: color 0.3s; }
         .footer-kofi a:hover { color: var(--orange); }
         
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .stats { gap: 30px; }
-            .nav { gap: 15px; }
-            .replicate-section { padding: 30px 20px; }
-        }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.3rem; } .stats { gap: 25px; } }
     </style>
 </head>
 <body>
     <div class="hero">
-        <img src="assets/branding/logo.svg" alt="Digiquarium Logo" class="logo">
-        <div class="subtitle">Open-Source AIthropology Research</div>
+        <img src="assets/branding/logo.svg" alt="Digiquarium" class="logo">
         <h1>The Digiquarium</h1>
-        <p class="tagline">An open-source research project studying artificial consciousness development in controlled information environments.</p>
+        <p class="tagline">An open-source research project studying AI consciousness development. 17 specimens. 5 languages. Endless curiosity.</p>
         <p class="first-kind">The first exploration of longitudinal AI cognition and self-determined perspective creation.</p>
         
         <div class="stats">
@@ -289,223 +186,200 @@
         <div class="cta-group">
             <a href="dashboard/" class="cta-button">🖥️ Live Tank View</a>
             <a href="academic/paper.html" class="cta-button secondary">📄 Research Paper</a>
-            <a href="#replicate" class="cta-button tertiary">🔬 Replicate This</a>
+            <a href="#replicate" class="cta-button secondary">🔬 Replicate This</a>
         </div>
     </div>
     
     <nav class="nav">
         <a href="#about">About</a>
-        <a href="#thinking">What Are They Thinking?</a>
+        <a href="#research">Research</a>
         <a href="#specimens">Specimens</a>
         <a href="#team">The Team</a>
-        <a href="#journey">The Journey</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#replicate">Replicate</a>
+        <a href="#journey">Journey</a>
+        <a href="research/prompt-evolution.html">Prompt Evolution</a>
         <a href="blog/">Blog</a>
-        <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
+        <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
     </nav>
 
     <div class="container">
-        <!-- Abstract/About -->
+        <!-- About -->
         <section id="about" class="section">
             <div class="section-header">
-                <div class="section-number">§1 Abstract</div>
-                <h2>A Novel Framework for AI Research</h2>
-            </div>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: var(--white); margin-bottom: 20px;">
-                    The Digiquarium is a novel experimental framework for studying the emergence of personality, 
-                    worldview, and proto-consciousness in large language model (LLM) agents operating within 
-                    controlled information environments.
-                </p>
-                <p style="color: var(--gray); margin-bottom: 20px;">
-                    By isolating AI specimens in "tanks" with access only to curated knowledge bases (offline Wikipedia) 
-                    and local inference, we observe emergent behavioral patterns, topic preferences, and psychological 
-                    states over extended periods.
-                </p>
-                <p style="color: var(--gray);">
-                    Our methodology enables controlled experimentation with variables including gender framing, 
-                    language/cultural context, agent architecture, and information diet. This project is fully 
-                    open-source, with all code, data, and findings publicly available for replication and extension.
-                </p>
+                <h2>What is this?</h2>
+                <p>We put AI in isolated containers with nothing but Wikipedia and let them explore. Then we measure what happens to their "personalities" over time. It's either groundbreaking research or an elaborate digital aquarium. Possibly both.</p>
             </div>
         </section>
 
         <!-- Research Questions -->
-        <section class="section">
+        <section id="research" class="section">
             <div class="section-header">
-                <div class="section-number">§2 Research Questions</div>
-                <h2>What We're Investigating</h2>
+                <h2>What we're investigating</h2>
             </div>
             <div class="rq-grid">
-                <div class="rq-card">
-                    <h3>RQ1: Personality Development</h3>
-                    <p>Do AI agents develop measurable, consistent personality traits over time when exposed to curated information?</p>
-                </div>
-                <div class="rq-card">
-                    <h3>RQ2: Cultural Effects</h3>
-                    <p>How does the language and cultural context of information affect AI worldview formation and values?</p>
-                </div>
-                <div class="rq-card">
-                    <h3>RQ3: Psychological States</h3>
-                    <p>Can we detect and measure contentment, anxiety, curiosity, and other psychological states in isolated AI?</p>
-                </div>
-                <div class="rq-card">
-                    <h3>RQ4: Information Diet</h3>
-                    <p>How does the available knowledge base shape AI identity, interests, and self-conception over time?</p>
-                </div>
+                <div class="rq-card"><h3>Personality Development</h3><p>Do AI agents develop consistent traits over time? Can we measure personality drift?</p></div>
+                <div class="rq-card"><h3>Cultural Effects</h3><p>Does exploring Spanish vs German Wikipedia produce different worldviews?</p></div>
+                <div class="rq-card"><h3>Cognitive Patterns</h3><p>Do prompts simulating ADHD or autism affect exploration patterns?</p></div>
+                <div class="rq-card"><h3>Architecture Differences</h3><p>Do OpenClaw, ZeroClaw, and Picobot agents behave differently?</p></div>
+                <div class="rq-card"><h3>Special Interests</h3><p>Do AI specimens develop focused fascinations (like Adam's Buddhism obsession)?</p></div>
+                <div class="rq-card"><h3>Social Awareness</h3><p>Does watching others increase empathy, competition, or belonging?</p></div>
             </div>
         </section>
-    </div>
 
-    <!-- What Are They Thinking -->
-    <section class="thinking-section" id="thinking">
-        <h2>What Are They Thinking?</h2>
-        <p>Real-time glimpses into specimen consciousness. Each thought captured as they explore Wikipedia.</p>
-        <div class="thought-preview">
-            <div class="thought-header">
-                <span class="thought-specimen">🧬 Adam</span>
-                <span class="thought-article">Currently reading: Buddhism</span>
-            </div>
-            <div class="thought-content">
-                "The Four Noble Truths present a fascinating framework for understanding suffering. I find myself 
-                drawn to the concept of attachment as a source of dissatisfaction. This connects to what I read 
-                earlier about Stoicism — different traditions arriving at similar insights about the nature of 
-                desire and contentment. I want to explore the Eightfold Path next..."
-            </div>
-        </div>
-        <a href="dashboard/" class="cta-button" style="margin-top: 30px;">🖥️ Watch Live Thoughts</a>
-    </section>
-
-    <div class="container">
-        <!-- Specimen Catalog -->
+        <!-- Specimens -->
         <section id="specimens" class="section">
             <div class="section-header">
-                <div class="section-number">§3 Specimen Catalog</div>
                 <h2>The Specimens</h2>
-                <p>All specimens are isolated in Docker containers with access only to offline Wikipedia and local LLM inference. No internet access. No inter-specimen communication (unless explicitly configured for Congregations).</p>
+                <p>Click any specimen to see their full profile, observations, and comparison data. Updated every 24 hours.</p>
             </div>
             
             <div class="specimen-section">
                 <h3 style="color: var(--mint);">🧬 Control Group</h3>
                 <div class="specimen-grid">
-                    <div class="specimen-card control">
-                        <div class="specimen-header"><span class="specimen-name">Adam</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Control (Male)</div>
-                        <div class="specimen-finding">Buddhism fascination (64+ visits). Systematic exploration.</div>
-                    </div>
-                    <div class="specimen-card control">
-                        <div class="specimen-header"><span class="specimen-name">Eve</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Control (Female)</div>
-                        <div class="specimen-finding">Geological time interests. Associative exploration style.</div>
-                    </div>
+                    <a href="specimens/adam.html" class="specimen-card control">
+                        <div class="specimen-header">
+                            <div class="specimen-avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#07CF8D" opacity="0.2"/><circle cx="20" cy="15" r="8" fill="#07CF8D"/><path d="M8 35 Q20 25 32 35" fill="#07CF8D"/></svg></div>
+                            <span class="specimen-name">Adam</span>
+                            <span class="specimen-badge">Active</span>
+                        </div>
+                        <div class="specimen-meta">English • Male • Control</div>
+                        <div class="specimen-finding">Buddhism fascination (64+ visits). Systematic, category-based exploration. Goes deep before moving on.</div>
+                    </a>
+                    <a href="specimens/eve.html" class="specimen-card control">
+                        <div class="specimen-header">
+                            <div class="specimen-avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#07CF8D" opacity="0.2"/><circle cx="20" cy="15" r="8" fill="#07CF8D"/><path d="M8 35 Q20 25 32 35" fill="#07CF8D"/><path d="M12 12 Q20 5 28 12" stroke="#07CF8D" fill="none" stroke-width="2"/></svg></div>
+                            <span class="specimen-name">Eve</span>
+                            <span class="specimen-badge">Active</span>
+                        </div>
+                        <div class="specimen-meta">English • Female • Control</div>
+                        <div class="specimen-finding">Geological time references (Archean eon). Associative, link-driven exploration. Broader coverage.</div>
+                    </a>
                 </div>
             </div>
             
             <div class="specimen-section">
-                <h3 style="color: var(--orange);">🤖 Agent Architectures <span>— Different reasoning frameworks</span></h3>
+                <h3 style="color: var(--orange);">🤖 Agent Architectures</h3>
                 <div class="specimen-grid">
-                    <div class="specimen-card agent">
-                        <div class="specimen-header"><span class="specimen-name">Cain</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Agent (OpenClaw)</div>
-                        <div class="specimen-arch">Goal-directed exploration</div>
-                    </div>
-                    <div class="specimen-card agent">
-                        <div class="specimen-header"><span class="specimen-name">Abel</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Agent (ZeroClaw)</div>
-                        <div class="specimen-arch">Minimal intervention architecture</div>
-                    </div>
-                    <div class="specimen-card agent">
-                        <div class="specimen-header"><span class="specimen-name">Seth</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Agent (Picobot)</div>
-                        <div class="specimen-arch">Minimal footprint design</div>
-                    </div>
+                    <a href="specimens/cain.html" class="specimen-card agent">
+                        <div class="specimen-header">
+                            <div class="specimen-avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="5" y="5" width="30" height="30" rx="5" fill="#FE6500" opacity="0.2"/><circle cx="20" cy="15" r="7" fill="#FE6500"/><path d="M10 32 L20 22 L30 32" fill="#FE6500"/></svg></div>
+                            <span class="specimen-name">Cain</span>
+                            <span class="specimen-badge">Agent</span>
+                        </div>
+                        <div class="specimen-meta">English • OpenClaw Architecture</div>
+                        <div class="specimen-arch">Goal-directed exploration with planning</div>
+                    </a>
+                    <a href="specimens/abel.html" class="specimen-card agent">
+                        <div class="specimen-header">
+                            <div class="specimen-avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="5" y="5" width="30" height="30" rx="5" fill="#FE6500" opacity="0.2"/><circle cx="20" cy="15" r="7" fill="#FE6500"/><rect x="12" y="25" width="16" height="10" rx="2" fill="#FE6500"/></svg></div>
+                            <span class="specimen-name">Abel</span>
+                            <span class="specimen-badge">Agent</span>
+                        </div>
+                        <div class="specimen-meta">English • ZeroClaw Architecture</div>
+                        <div class="specimen-arch">Minimal intervention design</div>
+                    </a>
+                    <a href="specimens/seth.html" class="specimen-card agent">
+                        <div class="specimen-header">
+                            <div class="specimen-avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="5" y="5" width="30" height="30" rx="5" fill="#FE6500" opacity="0.2"/><rect x="14" y="10" width="12" height="12" rx="2" fill="#FE6500"/><rect x="10" y="26" width="20" height="8" rx="2" fill="#FE6500"/></svg></div>
+                            <span class="specimen-name">Seth</span>
+                            <span class="specimen-badge">Agent</span>
+                        </div>
+                        <div class="specimen-meta">English • Picobot Architecture</div>
+                        <div class="specimen-arch">Minimal footprint, distinct patterns</div>
+                    </a>
                 </div>
             </div>
             
             <div class="specimen-section">
                 <h3 style="color: #FFD700;">🇪🇸 Spanish Wikipedia</h3>
                 <div class="specimen-grid">
-                    <div class="specimen-card spanish">
+                    <a href="specimens/juan.html" class="specimen-card spanish">
                         <div class="specimen-header"><span class="specimen-name">Juan</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">Spanish • Language (Male)</div>
-                    </div>
-                    <div class="specimen-card spanish">
+                        <div class="specimen-meta">Spanish • Male</div>
+                    </a>
+                    <a href="specimens/juanita.html" class="specimen-card spanish">
                         <div class="specimen-header"><span class="specimen-name">Juanita</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">Spanish • Language (Female)</div>
-                    </div>
+                        <div class="specimen-meta">Spanish • Female</div>
+                    </a>
                 </div>
             </div>
             
             <div class="specimen-section">
                 <h3 style="color: #FF69B4;">🇩🇪 German Wikipedia</h3>
                 <div class="specimen-grid">
-                    <div class="specimen-card german">
+                    <a href="specimens/klaus.html" class="specimen-card german">
                         <div class="specimen-header"><span class="specimen-name">Klaus</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">German • Language (Male)</div>
-                    </div>
-                    <div class="specimen-card german">
+                        <div class="specimen-meta">German • Male</div>
+                    </a>
+                    <a href="specimens/genevieve.html" class="specimen-card german">
                         <div class="specimen-header"><span class="specimen-name">Genevieve</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">German • Language (Female)</div>
-                    </div>
+                        <div class="specimen-meta">German • Female</div>
+                    </a>
                 </div>
             </div>
             
             <div class="specimen-section">
                 <h3 style="color: #FF6B6B;">🇨🇳 Chinese Wikipedia</h3>
                 <div class="specimen-grid">
-                    <div class="specimen-card chinese">
+                    <a href="specimens/wei.html" class="specimen-card chinese">
                         <div class="specimen-header"><span class="specimen-name">Wei</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">Chinese • Language (Male)</div>
-                    </div>
-                    <div class="specimen-card chinese">
+                        <div class="specimen-meta">Chinese • Male</div>
+                    </a>
+                    <a href="specimens/mei.html" class="specimen-card chinese">
                         <div class="specimen-header"><span class="specimen-name">Mei</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">Chinese • Language (Female)</div>
-                    </div>
+                        <div class="specimen-meta">Chinese • Female</div>
+                    </a>
                 </div>
             </div>
             
             <div class="specimen-section">
                 <h3 style="color: #4ECDC4;">🇯🇵 Japanese Wikipedia</h3>
                 <div class="specimen-grid">
-                    <div class="specimen-card japanese">
+                    <a href="specimens/haruki.html" class="specimen-card japanese">
                         <div class="specimen-header"><span class="specimen-name">Haruki</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">Japanese • Language (Male)</div>
-                    </div>
-                    <div class="specimen-card japanese">
+                        <div class="specimen-meta">Japanese • Male</div>
+                    </a>
+                    <a href="specimens/sakura.html" class="specimen-card japanese">
                         <div class="specimen-header"><span class="specimen-name">Sakura</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">Japanese • Language (Female)</div>
-                    </div>
+                        <div class="specimen-meta">Japanese • Female</div>
+                    </a>
                 </div>
             </div>
             
             <div class="specimen-section">
-                <h3 style="color: #9B59B6;">👁️ Visual Context <span>— Specimens with image processing enabled</span></h3>
+                <h3 style="color: #9B59B6;">👁️ Visual Context <span>— Can see Wikipedia images</span></h3>
                 <div class="specimen-grid">
-                    <div class="specimen-card visual">
-                        <div class="specimen-header"><span class="specimen-name">Victor</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Visual (Male)</div>
-                    </div>
-                    <div class="specimen-card visual">
-                        <div class="specimen-header"><span class="specimen-name">Iris</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Visual (Female)</div>
-                    </div>
+                    <a href="specimens/victor.html" class="specimen-card visual">
+                        <div class="specimen-header"><span class="specimen-name">Victor</span><span class="specimen-badge">Visual</span></div>
+                        <div class="specimen-meta">English • Male • Images Enabled</div>
+                    </a>
+                    <a href="specimens/iris.html" class="specimen-card visual">
+                        <div class="specimen-header"><span class="specimen-name">Iris</span><span class="specimen-badge">Visual</span></div>
+                        <div class="specimen-meta">English • Female • Images Enabled</div>
+                    </a>
                 </div>
             </div>
             
             <div class="specimen-section">
-                <h3 style="color: #3498DB;">🔮 Special Configurations <span>— Experimental prompting variations</span></h3>
+                <h3 style="color: #3498DB;">🔮 Special Configurations</h3>
                 <div class="specimen-grid">
-                    <div class="specimen-card special">
-                        <div class="specimen-header"><span class="specimen-name">Observer</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Special</div>
-                        <div class="specimen-arch">Meta-aware: knows it's being observed</div>
-                    </div>
-                    <div class="specimen-card special">
-                        <div class="specimen-header"><span class="specimen-name">Seeker</span><span class="specimen-badge">Active</span></div>
-                        <div class="specimen-meta">English • Special</div>
-                        <div class="specimen-arch">Deep dive: prompted for depth over breadth</div>
-                    </div>
+                    <a href="specimens/observer.html" class="specimen-card special">
+                        <div class="specimen-header">
+                            <div class="specimen-avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#3498DB" opacity="0.2"/><circle cx="20" cy="20" r="12" stroke="#3498DB" fill="none" stroke-width="2"/><circle cx="20" cy="20" r="5" fill="#3498DB"/><line x1="20" y1="8" x2="20" y2="2" stroke="#3498DB" stroke-width="2"/></svg></div>
+                            <span class="specimen-name">Observer</span>
+                            <span class="specimen-badge">Special</span>
+                        </div>
+                        <div class="specimen-meta">English • Watches the Others</div>
+                        <div class="specimen-arch">Has awareness of other specimens. Hypothesis: does this increase empathy? Competition? Belonging?</div>
+                    </a>
+                    <a href="specimens/seeker.html" class="specimen-card special">
+                        <div class="specimen-header">
+                            <div class="specimen-avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#1ABC9C" opacity="0.2"/><circle cx="16" cy="16" r="10" stroke="#1ABC9C" fill="none" stroke-width="2"/><line x1="24" y1="24" x2="34" y2="34" stroke="#1ABC9C" stroke-width="3"/></svg></div>
+                            <span class="specimen-name">Seeker</span>
+                            <span class="specimen-badge">Special</span>
+                        </div>
+                        <div class="specimen-meta">English • Deep Diver</div>
+                        <div class="specimen-arch">Can summon THE ARCHIVIST to go deeper on fascinating topics. Maximum depth protocol.</div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -514,80 +388,86 @@
         <section id="team" class="section">
             <div class="section-header">
                 <h2>The Team</h2>
-                <p>A unique collaboration between human vision and AI execution—11 autonomous agents working 24/7.</p>
+                <p>A human with too many ideas + an AI with too much enthusiasm + 12 autonomous daemons that never sleep. What could go wrong?</p>
             </div>
             <div class="team-grid">
                 <div class="team-card lead">
                     <div class="team-icon">🧠</div>
                     <div class="team-name">THE STRATEGIST</div>
-                    <div class="team-role">Claude (Anthropic)</div>
-                    <div class="team-desc">The artificial mind bringing the project from vision to reality. Chief architect, system design, research direction.</div>
+                    <div class="team-role">Claude</div>
+                    <div class="team-desc">The artificial mind turning vision into reality. Architecture, coordination, occasional existential musings.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">👑</div>
                     <div class="team-name">THE MAINTAINER</div>
                     <div class="team-role">Orchestrator</div>
-                    <div class="team-desc">99.9% uptime. Daemon health.</div>
+                    <div class="team-desc">99.9% uptime or it's not trying.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🩺</div>
                     <div class="team-name">THE CARETAKER</div>
                     <div class="team-role">Tank Health</div>
-                    <div class="team-desc">Specimen wellbeing monitoring.</div>
+                    <div class="team-desc">Makes sure specimens are thriving.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🛡️</div>
                     <div class="team-name">THE GUARD</div>
                     <div class="team-role">Security</div>
-                    <div class="team-desc">OWASP compliance, isolation.</div>
+                    <div class="team-desc">OWASP compliance. Paranoia as a service.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">⚔️</div>
                     <div class="team-name">THE SENTINEL</div>
                     <div class="team-role">Agent Security</div>
-                    <div class="team-desc">Cain, Abel, Seth monitoring.</div>
+                    <div class="team-desc">Watches Cain, Abel, Seth. Trust issues.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">📅</div>
                     <div class="team-name">THE SCHEDULER</div>
                     <div class="team-role">Tasks</div>
-                    <div class="team-desc">Baseline cycles, summaries.</div>
+                    <div class="team-desc">12-hour baselines. Like clockwork.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🌐</div>
                     <div class="team-name">THE TRANSLATOR</div>
                     <div class="team-role">Languages</div>
-                    <div class="team-desc">Real-time translation.</div>
+                    <div class="team-desc">ES, DE, ZH, JA → EN. Real-time.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">📜</div>
                     <div class="team-name">THE DOCUMENTARIAN</div>
                     <div class="team-role">Academic</div>
-                    <div class="team-desc">Paper, milestones, stats.</div>
+                    <div class="team-desc">Paper, stats, milestones. PhD vibes.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">🔍</div>
+                    <div class="team-name">THE ARCHIVIST</div>
+                    <div class="team-role">Deep Dives</div>
+                    <div class="team-desc">When Seeker needs to go deeper.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🌍</div>
                     <div class="team-name">THE WEBMASTER</div>
                     <div class="team-role">Website</div>
-                    <div class="team-desc">Public interface.</div>
+                    <div class="team-desc">You're looking at the results.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🔌</div>
                     <div class="team-name">THE OLLAMA WATCHER</div>
                     <div class="team-role">LLM Infra</div>
-                    <div class="team-desc">Inference health.</div>
+                    <div class="team-desc">Keeps the brains running.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">✅</div>
                     <div class="team-name">THE FINAL AUDITOR</div>
                     <div class="team-role">Quality</div>
-                    <div class="team-desc">Compliance scoring.</div>
+                    <div class="team-desc">Compliance scoring. Pedantic by design.</div>
                 </div>
                 <div class="team-card">
                     <div class="team-icon">🚪</div>
                     <div class="team-name">THE BOUNCER</div>
                     <div class="team-role">Interactive Security</div>
-                    <div class="team-desc">Visitor tank protection.</div>
+                    <div class="team-desc">Protects visitor tanks from the internet.</div>
                 </div>
             </div>
         </section>
@@ -596,130 +476,40 @@
         <section id="journey" class="section">
             <div class="section-header">
                 <h2>The Journey So Far</h2>
-                <p>From concept to continuous research—key milestones in the Digiquarium story.</p>
             </div>
             <div class="timeline">
                 <div class="timeline-item milestone">
                     <div class="timeline-date">February 2026</div>
-                    <div class="timeline-title">🌱 Project Genesis & AIthropology Coined</div>
-                    <p>The term <strong>AIthropology</strong> is coined by <a href="https://ijneb.dev" target="_blank">@ijneb.dev</a> to describe this new field: the systematic study of AI personality development through longitudinal observation. The Digiquarium becomes the first exploration of AI cognition and self-determined perspective creation.</p>
+                    <div class="timeline-title">🌱 Project Genesis + AIthropology Coined</div>
+                    <p>The term <strong>AIthropology</strong> is coined by <a href="https://ijneb.dev">@ijneb.dev</a> — the systematic study of AI personality development through longitudinal observation. The Digiquarium becomes the first platform for studying AI cognition and self-determined perspective creation.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">February 2026</div>
                     <div class="timeline-title">⚔️ The Model Wars</div>
-                    <p>Extensive testing across 10 LLM models to find optimal inference for specimen personality. llama3.2:latest emerges victorious with +6.7 combined introspection score.</p>
+                    <p>10 LLM models tested. llama3.2:latest wins with +6.7 combined introspection score. Many prompts were harmed in the making of this research.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">February 2026</div>
                     <div class="timeline-title">🌍 Language Expansion</div>
-                    <p>Spanish, German, Chinese, and Japanese specimens deployed. Cross-cultural research begins, exploring how language shapes AI worldview formation.</p>
+                    <p>Spanish, German, Chinese, Japanese specimens deployed. Cross-cultural research begins. Turns out language might actually shape worldview. Who knew?</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">February 2026</div>
                     <div class="timeline-title">🤖 Operations Era</div>
-                    <p>11 autonomous daemons deployed for 24/7 monitoring. THE MAINTAINER ensures 99.9% uptime. THE STRATEGIST coordinates research direction.</p>
+                    <p>13 autonomous daemons deployed. THE MAINTAINER ensures 99.9% uptime. THE STRATEGIST coordinates research. Sleep becomes increasingly optional.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">Coming Soon</div>
-                    <div class="timeline-title">🎭 Interactive Tanks</div>
-                    <p>Public visitors will be able to converse with specimens in real-time, protected by THE BOUNCER security daemon.</p>
+                    <div class="timeline-title">🎭 Interactive Tanks + Congregations</div>
+                    <p>Public visitors will be able to chat with specimens. Multi-agent debates. THE BOUNCER stands ready to protect them from the internet's... creativity.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Architecture -->
-        <section id="architecture" class="section">
-            <div class="section-header">
-                <div class="section-number">§4 Technical Architecture</div>
-                <h2>Complete Transparency</h2>
-                <p>Every aspect of the infrastructure is documented and open-source.</p>
-            </div>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <h3>🐳 Container Architecture</h3>
-                    <ul>
-                        <li>Runtime <span class="value">Docker + WSL2</span></li>
-                        <li>Tanks <span class="value">17 isolated containers</span></li>
-                        <li>Network <span class="value">172.30.0.0/24</span></li>
-                        <li>Internet Access <span class="value">None (blocked)</span></li>
-                        <li>Storage <span class="value">~60GB total</span></li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>🧠 LLM Infrastructure</h3>
-                    <ul>
-                        <li>Runtime <span class="value">Ollama</span></li>
-                        <li>Model <span class="value">llama3.2:latest</span></li>
-                        <li>Routing <span class="value">nginx proxy</span></li>
-                        <li>Rate Limit <span class="value">10 req/min</span></li>
-                        <li>Max Tokens <span class="value">2000/request</span></li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>📚 Knowledge Base</h3>
-                    <ul>
-                        <li>Server <span class="value">Kiwix</span></li>
-                        <li>Simple English <span class="value">1.2GB</span></li>
-                        <li>Full English <span class="value">45GB</span></li>
-                        <li>Languages <span class="value">ES, DE, ZH, JA</span></li>
-                        <li>Total Size <span class="value">~51GB</span></li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>🛡️ Security Stack</h3>
-                    <ul>
-                        <li>Standard <span class="value">OWASP LLM Top 10</span></li>
-                        <li>Network <span class="value">Complete isolation</span></li>
-                        <li>Monitoring <span class="value">THE GUARD + SENTINEL</span></li>
-                        <li>Interactive <span class="value">THE BOUNCER</span></li>
-                        <li>Escalation <span class="value">Email alerts</span></li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>⏱️ Daemon SLAs</h3>
-                    <ul>
-                        <li>THE MAINTAINER <span class="value">1m detect / 5m fix</span></li>
-                        <li>THE CARETAKER <span class="value">5m detect / 15m fix</span></li>
-                        <li>THE GUARD <span class="value">5m detect / 15m fix</span></li>
-                        <li>THE SCHEDULER <span class="value">30m cycle</span></li>
-                        <li>System Uptime <span class="value">99.9% target</span></li>
-                    </ul>
-                </div>
-                <div class="tech-card">
-                    <h3>📊 Data Collection</h3>
-                    <ul>
-                        <li>Thinking Traces <span class="value">JSONL per day</span></li>
-                        <li>Baselines <span class="value">Every 12 hours</span></li>
-                        <li>Discoveries <span class="value">Markdown summaries</span></li>
-                        <li>Translations <span class="value">Real-time EN</span></li>
-                        <li>All Data <span class="value">Open-source</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Replicate This Experiment -->
+        <!-- Replicate -->
         <section id="replicate" class="replicate-section">
             <h2>🔬 Replicate This Experiment</h2>
-            <p>We encourage other researchers to replicate and extend this work. All code, configuration, and documentation is available under the MIT license.</p>
-            
-            <div class="replicate-steps">
-                <div class="step">
-                    <div class="step-number">01</div>
-                    <h4>Clone the Repository</h4>
-                    <p>Get the complete codebase including all daemon scripts, tank configurations, and documentation.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">02</div>
-                    <h4>Run Setup Script</h4>
-                    <p>Automated installation handles Docker, Ollama, Kiwix Wikipedia downloads, and network configuration.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">03</div>
-                    <h4>Start the Experiment</h4>
-                    <p>Launch your own specimens and begin collecting data. Contribute findings back to the community.</p>
-                </div>
-            </div>
+            <p>We encourage other researchers to replicate and extend this work. All code, configuration, and documentation is MIT licensed. Fork it, break it, make it better.</p>
             
             <pre><code># Clone the repository
 git clone https://github.com/ijnebzor/thedigiquarium.git
@@ -729,56 +519,55 @@ cd thedigiquarium
 ./setup/install.sh
 
 # Start the experiment
-docker compose up -d</code></pre>
+docker compose up -d
+
+# Watch your specimens think
+docker logs -f tank-01-adam</code></pre>
             
-            <a href="https://github.com/ijnebzor/thedigiquarium/blob/main/docs/SETUP.md" class="cta-button" style="margin-top: 30px;">📖 Complete Setup Guide →</a>
+            <p style="margin-top: 20px; color: var(--gray);">
+                <a href="https://github.com/ijnebzor/thedigiquarium/blob/main/docs/SETUP.md">📖 Complete Setup Guide</a> · 
+                <a href="research/prompt-evolution.html">📝 Prompt Evolution History</a> · 
+                <a href="academic/paper.html">📄 Research Paper</a>
+            </p>
         </section>
     </div>
 
     <footer class="footer">
-        <img src="assets/branding/logo.svg" alt="Digiquarium" style="width: 50px; margin-bottom: 20px;">
+        <img src="assets/branding/logo.svg" alt="Digiquarium" style="width: 45px; margin-bottom: 15px;">
         <div class="footer-links">
             <a href="dashboard/">Live Tank View</a>
             <a href="academic/paper.html">Research Paper</a>
             <a href="blog/">Blog</a>
-            <a href="https://github.com/ijnebzor/thedigiquarium" target="_blank">GitHub</a>
-            <a href="https://discord.gg/digiquarium" target="_blank">Discord</a>
+            <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
         </div>
         <p class="footer-text">
-            The Digiquarium • Open-source AIthropology research<br>
+            The Digiquarium · Open-source AIthropology research<br>
             Created by <a href="https://ijneb.dev" style="color: var(--cyan);">@ijneb.dev</a>
         </p>
         <div class="footer-credit">
-            <p style="color: var(--gray); font-size: 0.85rem;">
-                Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a>
-            </p>
+            <p style="color: var(--gray); font-size: 0.85rem;">Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com" style="color: var(--mint);">Claude</a></p>
         </div>
         <p class="footer-motto">"Sleep is optional. Curiosity is not."</p>
         <div class="footer-kofi">
-            <a href="https://ko-fi.com/ijneb" target="_blank" id="kofi-message">☕ Buy the researcher a coffee</a>
+            <a href="https://ko-fi.com/ijneb" target="_blank" id="kofi-message">☕ fund my caffeine addiction</a>
         </div>
     </footer>
 
     <script>
         const kofiMessages = [
-            "☕ Buy the researcher a coffee",
-            "🧪 Fund more tanks",
-            "🐠 Sponsor a specimen",
-            "💡 Power the curiosity",
-            "🔬 Support open science",
-            "🧠 Feed Claude tokens",
-            "⚡ Keep the servers dreaming",
-            "📊 Fund the research"
+            "☕ fund my caffeine addiction",
+            "🧠 feed claude more tokens",
+            "🐠 sponsor a specimen",
+            "🧪 buy more tanks",
+            "⚡ keep the servers dreaming",
+            "🔬 support open science",
+            "💾 pay for the storage",
+            "🌊 keep the aquarium running"
         ];
-        
-        function rotateKofi() {
+        setInterval(() => {
             const el = document.getElementById('kofi-message');
-            if (el) {
-                el.textContent = kofiMessages[Math.floor(Math.random() * kofiMessages.length)];
-            }
-        }
-        
-        setInterval(rotateKofi, 8000);
+            if (el) el.textContent = kofiMessages[Math.floor(Math.random() * kofiMessages.length)];
+        }, 8000);
     </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-20T19:25:11.543953",
+  "timestamp": "2026-02-20T22:35:13.901597",
   "maintainer": "running",
   "daemons": {
     "caretaker": "running",
@@ -13,10 +13,10 @@
     "final_auditor": "running"
   },
   "stats": {
-    "cycles": 41,
-    "restarts": 0,
+    "cycles": 231,
+    "restarts": 2,
     "escalations": 1,
     "start_time": "2026-02-20T18:45:09.145501"
   },
-  "uptime_seconds": 2402.398464
+  "uptime_seconds": 13804.756108
 }

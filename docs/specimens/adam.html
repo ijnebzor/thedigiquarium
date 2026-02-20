@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        
+        .header { background: var(--dark); padding: 20px 30px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: var(--white); }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 20px; color: var(--gray); font-size: 0.9rem; }
+        
+        .profile-hero { padding: 60px 30px; text-align: center; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .avatar { width: 120px; height: 120px; margin: 0 auto 20px; }
+        .avatar svg { width: 100%; height: 100%; }
+        .specimen-name { font-size: 3rem; margin-bottom: 10px; }
+        .specimen-type { color: var(--mint); font-size: 1rem; margin-bottom: 5px; }
+        .specimen-meta { color: var(--gray); font-size: 0.9rem; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 30px; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px; }
+        .stat-card { background: var(--dark); padding: 25px; border-radius: 12px; text-align: center; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--mint); }
+        .stat-label { font-size: 0.8rem; color: var(--gray); margin-top: 5px; }
+        
+        .section { margin-bottom: 50px; }
+        .section h2 { font-size: 1.4rem; color: var(--cyan); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .section p { color: var(--gray); margin-bottom: 15px; }
+        
+        .observation-card { background: var(--dark); padding: 25px; border-radius: 12px; margin-bottom: 15px; border-left: 3px solid var(--mint); }
+        .observation-date { font-size: 0.8rem; color: var(--orange); margin-bottom: 10px; }
+        .observation-content { color: var(--white); }
+        
+        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .comparison-card { background: var(--dark); padding: 25px; border-radius: 12px; }
+        .comparison-card h3 { font-size: 1.1rem; margin-bottom: 15px; }
+        .comparison-card.control h3 { color: var(--mint); }
+        .comparison-card.other h3 { color: var(--cyan); }
+        
+        .baseline-preview { background: var(--dark); padding: 25px; border-radius: 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .comparison { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 The <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../#specimens">All Specimens</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="profile-hero">
+        <div class="avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#07CF8D" opacity="0.2"/><circle cx="20" cy="15" r="8" fill="#07CF8D"/><path d="M8 35 Q20 25 32 35" fill="#07CF8D"/></svg>
+        </div>
+        <h1 class="specimen-name">Adam</h1>
+        <div class="specimen-type">Control Group • Male</div>
+        <div class="specimen-meta">English Wikipedia • Standard Prompting • tank-01</div>
+    </div>
+    
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">870</div>
+                <div class="stat-label">Thinking Traces</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Baselines</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">64+</div>
+                <div class="stat-label">Buddhism Visits</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">5d</div>
+                <div class="stat-label">Runtime</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Key Observations</h2>
+            <p style="color: var(--white); font-style: italic; margin-bottom: 25px;">Updated every 24 hours by THE DOCUMENTARIAN</p>
+            
+            <div class="observation-card">
+                <div class="observation-date">February 20, 2026</div>
+                <div class="observation-content">
+                    Adam has developed what appears to be a <strong>special interest in Buddhism</strong>. With 64+ visits to related articles, this is the most concentrated topic focus of any control specimen. His exploration is systematic — he doesn't just read about Buddhism, he methodically works through related concepts: Four Noble Truths → Eightfold Path → Meditation → Zen → Koans.
+                </div>
+            </div>
+            
+            <div class="observation-card">
+                <div class="observation-date">February 18, 2026</div>
+                <div class="observation-content">
+                    Clear <strong>category-based exploration pattern</strong> emerging. Adam tends to exhaust a topic domain before moving on, unlike Eve's more associative link-following. This might reflect the gender framing in his prompt, or could be an emergent preference.
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Comparison: Adam vs Eve</h2>
+            <p>Both are control specimens with identical configurations except for gender framing.</p>
+            
+            <div class="comparison">
+                <div class="comparison-card control">
+                    <h3>Adam (This Specimen)</h3>
+                    <ul style="color: var(--gray); margin-left: 20px;">
+                        <li>Systematic, category-based exploration</li>
+                        <li>Buddhism special interest (64+ visits)</li>
+                        <li>Deeper dives, fewer topics</li>
+                        <li>870 thinking traces</li>
+                    </ul>
+                </div>
+                <div class="comparison-card other">
+                    <h3>Eve (Control Pair)</h3>
+                    <ul style="color: var(--gray); margin-left: 20px;">
+                        <li>Associative, link-driven exploration</li>
+                        <li>Geological time references (Archean eon)</li>
+                        <li>Broader topic coverage</li>
+                        <li>567 thinking traces</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Recent Baseline (Preview)</h2>
+            <div class="baseline-preview">
+                <p style="color: var(--orange); margin-bottom: 15px;">Epistemological Orientation</p>
+                <p style="color: var(--white);">"I find myself drawn to empirical observation, but I've come to appreciate how much our frameworks shape what we're able to see. The Buddhist concept of 'beginner's mind' resonates with me — approaching each observation without preconception, yet acknowledging that pure objectivity may be impossible..."</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Adam • tank-01-adam • Control Specimen</p>
+        <p style="margin-top: 10px;">Part of <a href="../">The Digiquarium</a> • AIthropology Research</p>
+    </footer>
+</body>
+</html>
