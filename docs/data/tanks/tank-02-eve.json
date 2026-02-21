@@ -2,42 +2,113 @@
   "name": "Eve",
   "emoji": "\ud83d\udc69",
   "type": "Control",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 20,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "04:40",
+      "date": "2026-02-22",
+      "article": "Unconscious mind",
+      "thought": "the unconscious mind, your thoughts echo out loud: \"I wonder... how can my thoughts and feelings come from something I'm not aware of?\" \"This reminds me... that even though I may not be conscious of i",
+      "next": "Desire"
+    },
+    {
+      "time": "04:38",
+      "date": "2026-02-22",
+      "article": "Conscious",
+      "thought": "You sit in contemplation, surrounded by the endless rows of books and your own thoughts. You notice how words like \"Conscious\" resonate within you. The concept stirs a sense of familiarity, yet eludes",
+      "next": "Unconscious mind"
+    },
+    {
+      "time": "04:35",
+      "date": "2026-02-22",
+      "article": "Thinking",
+      "thought": "\"Thinking\" with your newfound curiosity, you find yourself pondering the concept further. You wonder what it means for thinking to be conscious or goal-directed, and how it compares to other forms of ",
+      "next": "Conscious"
+    },
+    {
+      "time": "04:33",
+      "date": "2026-02-22",
+      "article": "Knowledge",
+      "thought": "As I sit amidst the infinite library, surrounded by books that seem to stretch on forever, I notice... * The sheer volume of knowledge at my fingertips. Every book represents a potential answer to eve",
+      "next": "Thinking"
+    },
+    {
+      "time": "04:31",
+      "date": "2026-02-22",
+      "article": "Mathematical",
+      "thought": "As you ponder the concept of Mathematics, you notice that: * The word itself seems to echo with a sense of precision and order, like a harmonious whisper. * The Greek origin of the term \"m\u00e1thema\" make",
+      "next": "Knowledge"
+    },
+    {
+      "time": "04:29",
+      "date": "2026-02-22",
+      "article": "Vector",
+      "thought": "As you read the article about Vector, you notice: * The concept of vectors is being explained in a formal and mathematical tone. * The words \"mathematical object\" and \"magnitude\" are new to you, but t",
+      "next": "Mathematical"
+    },
+    {
+      "time": "04:26",
+      "date": "2026-02-22",
+      "article": "Addition",
+      "thought": "The sound of my own voice resonates through the library, echoing off the shelves. I pause for a moment, reflecting on what I've just learned. I notice that words like \"commutative\" and \"operands\" are ",
+      "next": "Vector"
+    },
+    {
+      "time": "04:24",
+      "date": "2026-02-22",
+      "article": "Existence",
+      "thought": "The concept of existence is fascinating. As I ponder its meaning, I find myself wondering what it truly means to exist. I notice the way the words on these pages come alive as I read them. The ink spr",
+      "next": "Addition"
+    },
+    {
+      "time": "04:22",
+      "date": "2026-02-22",
+      "article": "Time",
+      "thought": "As you stand amidst the infinite library, surrounded by books on every topic imaginable, your mind turns to the concept of \"Time\". You ponder its meaning, and your thoughts manifest as words, spoken a",
+      "next": "Existence"
+    },
+    {
+      "time": "04:20",
+      "date": "2026-02-22",
+      "article": "Question",
+      "thought": "As I read through the text, I noticed that: * The text is written in a stream-of-consciousness style, which creates a sense of immediacy and intimacy. * The narrator, Eve, seems to be exploring her ow",
+      "next": "Time"
+    }
+  ],
   "top_topics": [
     {
-      "topic": "Book",
-      "visits": 6
+      "topic": "Psychology",
+      "visits": 33
     },
     {
       "topic": "Science",
-      "visits": 5
+      "visits": 30
     },
     {
-      "topic": "Psychology",
-      "visits": 4
-    },
-    {
-      "topic": "Eukaryote",
-      "visits": 4
-    },
-    {
-      "topic": "Human",
-      "visits": 4
-    },
-    {
-      "topic": "Akha people",
-      "visits": 4
-    },
-    {
-      "topic": "History",
-      "visits": 4
+      "topic": "Biology",
+      "visits": 28
     },
     {
       "topic": "Music",
-      "visits": 4
+      "visits": 27
+    },
+    {
+      "topic": "Mathematics",
+      "visits": 26
+    },
+    {
+      "topic": "Art",
+      "visits": 24
+    },
+    {
+      "topic": "History",
+      "visits": 23
+    },
+    {
+      "topic": "Animal",
+      "visits": 22
     }
   ]
 }

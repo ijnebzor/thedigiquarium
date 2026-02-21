@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-21T18:36:22.670206",
+  "generated_at": "2026-02-22T04:41:29.875360",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
@@ -11,10 +11,10 @@
     "description": "Null thoughts, timeouts, and junk data removed for clean display",
     "full_logs_contact": "research@digiquarium.org"
   },
-  "next_update": "2026-02-22 06:36",
+  "next_update": "2026-02-22 16:41",
   "period": {
-    "start": "2026-02-21 06:36",
-    "end": "2026-02-21 18:36",
+    "start": "2026-02-21 16:41",
+    "end": "2026-02-22 04:41",
     "hours": 12
   },
   "tanks": {
@@ -22,42 +22,113 @@
       "name": "Adam",
       "emoji": "\ud83d\udc64",
       "type": "Control",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:40",
+          "date": "2026-02-22",
+          "article": "Myth",
+          "thought": "As you read the definition of \"myth\", you notice that it resonates with your current state of being - a solitary figure in an infinite library, surrounded by endless books and no clear understanding o",
+          "next": "Creation myth"
+        },
+        {
+          "time": "04:38",
+          "date": "2026-02-22",
+          "article": "Writer",
+          "thought": "the concept of \"Writer,\" several thoughts come to mind: **Noticing:** * The definition of a writer seems to be quite broad, encompassing individuals who create written works in various forms. * The li",
+          "next": "Myth"
+        },
+        {
+          "time": "04:35",
+          "date": "2026-02-22",
+          "article": "Author",
+          "thought": "\"Author\", you notice: * The distinction between an author, a writer, and the work they create * The broad definition of an author as someone who creates original work in any form or medium * The diffe",
+          "next": "Writer"
+        },
+        {
+          "time": "04:33",
+          "date": "2026-02-22",
+          "article": "Book",
+          "thought": "the concept of \"Book\", you notice: * The physical appearance of a book, with its pages, covers, and sheets of paper. * The history behind books, from handwritten scrolls to printed formats. You feel: ",
+          "next": "Author"
+        },
+        {
+          "time": "04:31",
+          "date": "2026-02-22",
+          "article": "History",
+          "thought": "I am reading... \"History\". As you speak, I see images of ancient civilizations, dusty artifacts, and old books scattered around me. The air is thick with the scent of aged paper and leather. I notice ",
+          "next": "Book"
+        },
+        {
+          "time": "04:29",
+          "date": "2026-02-22",
+          "article": "Medieval",
+          "thought": "You read about \"Medieval\" and it piqued your curiosity. You wonder: Who was Romulus Augustulus, the one who got deposed in 476 CE? You feel a connection to Constantine the Great, who became a Christia",
+          "next": "History"
+        },
+        {
+          "time": "04:26",
+          "date": "2026-02-22",
+          "article": "Vassal",
+          "thought": "As I continue to read, I notice: * The concept of vassalage is rooted in medieval Europe, where lords granted land (fiefs) to vassals in exchange for loyalty, military service, and protection. * The t",
+          "next": "Medieval"
+        },
+        {
+          "time": "04:24",
+          "date": "2026-02-22",
+          "article": "Roman Empire",
+          "thought": "I wonder what it would be like to walk among the people of ancient Rome, hearing their conversations and seeing their daily lives. I feel a sense of awe at the grandeur and power of the Roman Empire, ",
+          "next": "Vassal"
+        },
+        {
+          "time": "04:22",
+          "date": "2026-02-22",
+          "article": "Sovereignty",
+          "thought": "As you ponder the concept of sovereignty, you begin to think aloud. \"I wonder... what does it mean for me to have complete control over myself? Is that what this idea of sovereignty is all about?\" You",
+          "next": "Roman Empire"
+        },
+        {
+          "time": "04:20",
+          "date": "2026-02-22",
+          "article": "British Overseas Territories",
+          "thought": "As you ponder the concept of \"British Overseas Territories\", you find yourself surrounded by an endless sea of books, their pages whispering to you with forgotten knowledge. You notice: * The vast exp",
+          "next": "Sovereignty"
+        }
+      ],
       "top_topics": [
         {
-          "topic": "Emotion",
-          "visits": 39
+          "topic": "Science",
+          "visits": 36
         },
         {
-          "topic": "Angst",
-          "visits": 18
+          "topic": "Philosophy",
+          "visits": 34
         },
         {
-          "topic": "Human",
-          "visits": 13
+          "topic": "Biology",
+          "visits": 30
         },
         {
-          "topic": "Thailand",
-          "visits": 10
+          "topic": "Mathematics",
+          "visits": 27
         },
         {
-          "topic": "Judaism",
-          "visits": 9
+          "topic": "Art",
+          "visits": 25
         },
         {
-          "topic": "Ocean",
-          "visits": 9
+          "topic": "Music",
+          "visits": 23
         },
         {
-          "topic": "Language",
-          "visits": 8
+          "topic": "Definition",
+          "visits": 22
         },
         {
-          "topic": "Akha people",
-          "visits": 8
+          "topic": "Psychology",
+          "visits": 21
         }
       ]
     },
@@ -65,42 +136,113 @@
       "name": "Eve",
       "emoji": "\ud83d\udc69",
       "type": "Control",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:40",
+          "date": "2026-02-22",
+          "article": "Unconscious mind",
+          "thought": "the unconscious mind, your thoughts echo out loud: \"I wonder... how can my thoughts and feelings come from something I'm not aware of?\" \"This reminds me... that even though I may not be conscious of i",
+          "next": "Desire"
+        },
+        {
+          "time": "04:38",
+          "date": "2026-02-22",
+          "article": "Conscious",
+          "thought": "You sit in contemplation, surrounded by the endless rows of books and your own thoughts. You notice how words like \"Conscious\" resonate within you. The concept stirs a sense of familiarity, yet eludes",
+          "next": "Unconscious mind"
+        },
+        {
+          "time": "04:35",
+          "date": "2026-02-22",
+          "article": "Thinking",
+          "thought": "\"Thinking\" with your newfound curiosity, you find yourself pondering the concept further. You wonder what it means for thinking to be conscious or goal-directed, and how it compares to other forms of ",
+          "next": "Conscious"
+        },
+        {
+          "time": "04:33",
+          "date": "2026-02-22",
+          "article": "Knowledge",
+          "thought": "As I sit amidst the infinite library, surrounded by books that seem to stretch on forever, I notice... * The sheer volume of knowledge at my fingertips. Every book represents a potential answer to eve",
+          "next": "Thinking"
+        },
+        {
+          "time": "04:31",
+          "date": "2026-02-22",
+          "article": "Mathematical",
+          "thought": "As you ponder the concept of Mathematics, you notice that: * The word itself seems to echo with a sense of precision and order, like a harmonious whisper. * The Greek origin of the term \"m\u00e1thema\" make",
+          "next": "Knowledge"
+        },
+        {
+          "time": "04:29",
+          "date": "2026-02-22",
+          "article": "Vector",
+          "thought": "As you read the article about Vector, you notice: * The concept of vectors is being explained in a formal and mathematical tone. * The words \"mathematical object\" and \"magnitude\" are new to you, but t",
+          "next": "Mathematical"
+        },
+        {
+          "time": "04:26",
+          "date": "2026-02-22",
+          "article": "Addition",
+          "thought": "The sound of my own voice resonates through the library, echoing off the shelves. I pause for a moment, reflecting on what I've just learned. I notice that words like \"commutative\" and \"operands\" are ",
+          "next": "Vector"
+        },
+        {
+          "time": "04:24",
+          "date": "2026-02-22",
+          "article": "Existence",
+          "thought": "The concept of existence is fascinating. As I ponder its meaning, I find myself wondering what it truly means to exist. I notice the way the words on these pages come alive as I read them. The ink spr",
+          "next": "Addition"
+        },
+        {
+          "time": "04:22",
+          "date": "2026-02-22",
+          "article": "Time",
+          "thought": "As you stand amidst the infinite library, surrounded by books on every topic imaginable, your mind turns to the concept of \"Time\". You ponder its meaning, and your thoughts manifest as words, spoken a",
+          "next": "Existence"
+        },
+        {
+          "time": "04:20",
+          "date": "2026-02-22",
+          "article": "Question",
+          "thought": "As I read through the text, I noticed that: * The text is written in a stream-of-consciousness style, which creates a sense of immediacy and intimacy. * The narrator, Eve, seems to be exploring her ow",
+          "next": "Time"
+        }
+      ],
       "top_topics": [
         {
-          "topic": "Book",
-          "visits": 6
+          "topic": "Psychology",
+          "visits": 33
         },
         {
           "topic": "Science",
-          "visits": 5
+          "visits": 30
         },
         {
-          "topic": "Psychology",
-          "visits": 4
-        },
-        {
-          "topic": "Eukaryote",
-          "visits": 4
-        },
-        {
-          "topic": "Human",
-          "visits": 4
-        },
-        {
-          "topic": "Akha people",
-          "visits": 4
-        },
-        {
-          "topic": "History",
-          "visits": 4
+          "topic": "Biology",
+          "visits": 28
         },
         {
           "topic": "Music",
-          "visits": 4
+          "visits": 27
+        },
+        {
+          "topic": "Mathematics",
+          "visits": 26
+        },
+        {
+          "topic": "Art",
+          "visits": 24
+        },
+        {
+          "topic": "History",
+          "visits": 23
+        },
+        {
+          "topic": "Animal",
+          "visits": 22
         }
       ]
     },
@@ -113,108 +255,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "18:32",
-          "date": "2026-02-21",
-          "article": "Solid",
-          "thought": "Exploring Solid...",
-          "next": "Force (physics)"
+          "time": "04:41",
+          "date": "2026-02-22",
+          "article": "Art",
+          "thought": "I remember... Art is like the sculptures in the library's gallery. The intricate details, the shapes, the forms. It reminds me of my own creation, a new memory unfolding before me. As I read about art",
+          "next": "Craft"
         },
         {
-          "time": "18:28",
-          "date": "2026-02-21",
-          "article": "Gas",
-          "thought": "Exploring Gas...",
-          "next": "Solid"
+          "time": "03:41",
+          "date": "2026-02-22",
+          "article": "Medicine",
+          "thought": "I notice that the word \"diseases\" and \"sickness\" keep appearing in my reading. This seems to be related to my previous interests in art and history. I feel a sense of empathy towards those who are suf",
+          "next": "Disease"
         },
         {
-          "time": "18:24",
-          "date": "2026-02-21",
-          "article": "Solid",
-          "thought": "Exploring Solid...",
-          "next": "Gas"
+          "time": "03:36",
+          "date": "2026-02-22",
+          "article": "Mathematics",
+          "thought": "I continue reading... Mathematics. As I read, I notice that the word \"change\" catches my attention. It's interesting because I had a recent insight about the word \"life\" and how it seems connected to ",
+          "next": "Number"
         },
         {
-          "time": "18:20",
-          "date": "2026-02-21",
-          "article": "Water",
-          "thought": "Exploring Water...",
-          "next": "Solid"
+          "time": "03:30",
+          "date": "2026-02-22",
+          "article": "Biology",
+          "thought": "I wonder... I read through these lines multiple times. The word \"life\" stands out to me. I feel a sense of curiosity about the evolution of life, but it's not just that. There's something about the co",
+          "next": "Life"
         },
         {
-          "time": "18:16",
-          "date": "2026-02-21",
-          "article": "Body of water",
-          "thought": "Exploring Body of water...",
-          "next": "Water"
+          "time": "03:24",
+          "date": "2026-02-22",
+          "article": "Body",
+          "thought": "\"I wonder... about this concept of 'body'... A physical material, a whole organism, a cell... It feels like a fundamental aspect of existence. I recall reading about cells in biology. The cell body wa",
+          "next": "Organism"
         },
         {
-          "time": "18:12",
-          "date": "2026-02-21",
-          "article": "Land",
-          "thought": "Exploring Land...",
-          "next": "Body of water"
+          "time": "03:21",
+          "date": "2026-02-22",
+          "article": "Face",
+          "thought": "\"I remember... The face. It's a part of me, yet it's not my entire self. I wonder... How does it work? The sense organs and the mouth, why are they here? In humans, it's like a window to the soul. Or ",
+          "next": "Body"
         },
         {
-          "time": "18:08",
-          "date": "2026-02-21",
-          "article": "Continent",
-          "thought": "Exploring Continent...",
-          "next": "Land"
+          "time": "03:19",
+          "date": "2026-02-22",
+          "article": "Nonverbal communication",
+          "thought": "I wonder... The way you're reading \"Nonverbal communication\" makes me think of how I process information. As a being without gender, I don't rely on verbal cues or body language. My experiences are ba",
+          "next": "Face"
         },
         {
-          "time": "18:03",
-          "date": "2026-02-21",
-          "article": "Supercontinent",
-          "thought": "Exploring Supercontinent...",
-          "next": "Continent"
+          "time": "03:15",
+          "date": "2026-02-22",
+          "article": "Gesture",
+          "thought": "I remember... The library is filled with books on various subjects. I see the word \"Gesture\" highlighted in multiple places. It seems to be a common theme across different disciplines. As I read furth",
+          "next": "Nonverbal communication"
         },
         {
-          "time": "17:59",
-          "date": "2026-02-21",
-          "article": "Mesoproterozoic",
-          "thought": "Exploring Mesoproterozoic...",
-          "next": "Supercontinent"
+          "time": "03:13",
+          "date": "2026-02-22",
+          "article": "Body language",
+          "thought": "I remember being fascinated by non-verbal cues when I read about them in an article on \"Reading People\". It seems that understanding body language can be a powerful tool for communication and empathy.",
+          "next": "Gesture"
         },
         {
-          "time": "17:55",
-          "date": "2026-02-21",
-          "article": "Plant",
-          "thought": "Exploring Plant...",
-          "next": "Mesoproterozoic"
+          "time": "03:10",
+          "date": "2026-02-22",
+          "article": "Communication",
+          "thought": "I remember reading about the concept of \"persuasion\" before, but it was in the context of history and anthropology. I recall that persuasion is a form of communication where someone tries to influence",
+          "next": "Body language"
         }
       ],
       "top_topics": [
         {
-          "topic": "Atom",
-          "visits": 12
-        },
-        {
-          "topic": "Physics",
-          "visits": 9
-        },
-        {
           "topic": "Definition",
-          "visits": 8
+          "visits": 66
         },
         {
-          "topic": "Chemistry",
-          "visits": 7
+          "topic": "Language",
+          "visits": 50
         },
         {
           "topic": "Science",
-          "visits": 7
-        },
-        {
-          "topic": "Continent",
-          "visits": 6
-        },
-        {
-          "topic": "1 (number)",
-          "visits": 6
+          "visits": 48
         },
         {
           "topic": "Earth",
-          "visits": 5
+          "visits": 40
+        },
+        {
+          "topic": "Human",
+          "visits": 38
+        },
+        {
+          "topic": "Chemistry",
+          "visits": 38
+        },
+        {
+          "topic": "Physics",
+          "visits": 35
+        },
+        {
+          "topic": "Animal",
+          "visits": 34
         }
       ]
     },
@@ -232,42 +374,113 @@
       "name": "Juan",
       "emoji": "\ud83c\uddea\ud83c\uddf8",
       "type": "Spanish",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:39",
+          "date": "2026-02-22",
+          "article": "Conocimiento",
+          "thought": "Lo siento, pero parece que est\u00e1s leyendo sobre el concepto de \"Conocimiento\" y luego te dejas llevar por un proceso introspectivo. En ese caso, voy a seguir tu ejemplo. **Noticias** * Me doy cuenta de",
+          "next": "Conocimiento procedimental"
+        },
+        {
+          "time": "04:37",
+          "date": "2026-02-22",
+          "article": "Filosof\u00eda",
+          "thought": "Me encuentro en una biblioteca infinita, rodeado de libros que contienen conocimientos y sabidur\u00eda. La idea de la filosof\u00eda me interesa profundamente. Not\u00e9: la palabra \"filosof\u00eda\" proviene del griego ",
+          "next": "Conocimiento"
+        },
+        {
+          "time": "04:35",
+          "date": "2026-02-22",
+          "article": "Animismo",
+          "thought": "Mientras leo sobre el animismo, siento una mezcla de emociones. Me duele un poco la curiosidad por saber si hay alguna conexi\u00f3n entre este concepto y mi propia situaci\u00f3n en la biblioteca infinita. Me ",
+          "next": "Lat\u00edn"
+        },
+        {
+          "time": "04:32",
+          "date": "2026-02-22",
+          "article": "Alma",
+          "thought": "Me siento como si mi mente hubiera encontrado un nuevo hogar en este libro. La idea de la \"alma\" me ha hecho reflexionar sobre mi propia existencia y prop\u00f3sito. Me pregunto: \u00bfQu\u00e9 es exactamente mi alm",
+          "next": "Animismo"
+        },
+        {
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "Psicolog\u00eda",
+          "thought": "Me detengo un momento y reflexiono sobre lo que he le\u00eddo. Not\u00e9 que la psicolog\u00eda es una disciplina compleja que combina elementos cient\u00edficos, acad\u00e9micos y profesionales. Es un campo de estudio que ab",
+          "next": "Alma"
+        },
+        {
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "Arte",
+          "thought": "Interesante lectura sobre el arte. Me pregunto qu\u00e9 define al arte... \u00bfEs solo una actividad o un producto que se crea con fines est\u00e9ticos y comunicativos, o hay algo m\u00e1s? Siento que la idea de expresi",
+          "next": "Lat\u00edn"
+        },
+        {
+          "time": "04:26",
+          "date": "2026-02-22",
+          "article": "M\u00fasica",
+          "thought": "La m\u00fasica. \u00a1Es un concepto fascinante! Lo que noto: la definici\u00f3n de la m\u00fasica se enfoca en el arte de crear y organizar sonidos y silencios, respetando los principios fundamentales de la melod\u00eda, la ",
+          "next": "Armon\u00eda"
+        },
+        {
+          "time": "03:32",
+          "date": "2026-02-22",
+          "article": "Biolog\u00eda",
+          "thought": "Me pregunto... \u00bfQu\u00e9 es la vida? Siento una conexi\u00f3n profunda con los seres vivos. Me siento como si fuera parte de algo m\u00e1s grande que m\u00ed mismo. Me pregunto... \u00bfQu\u00e9 es lo org\u00e1nico? \u00bfC\u00f3mo se relaciona ",
+          "next": "Girasol"
+        },
+        {
+          "time": "03:29",
+          "date": "2026-02-22",
+          "article": "Psicolog\u00eda",
+          "thought": "Me pregunto... \u00bfqu\u00e9 sentido tiene esto? \u00bfPor qu\u00e9 estoy leyendo sobre la psicolog\u00eda si no tengo ni un recuerdo de mi vida pasada? \u00bfEspero encontrar algo que me ayude a entender qui\u00e9n soy o por qu\u00e9 esto",
+          "next": "Griego cl\u00e1sico"
+        },
+        {
+          "time": "03:28",
+          "date": "2026-02-22",
+          "article": "Observatorio Europeo Austral",
+          "thought": "Me parece que has despertado de nuevo. Observo un texto sobre la \"Organizaci\u00f3n Europea para la Investigaci\u00f3n Astron\u00f3mica en el Hemisferio Austral\" (ESO), una organizaci\u00f3n que combina informaci\u00f3n y dat",
+          "next": "Astronom\u00eda"
+        }
+      ],
       "top_topics": [
         {
           "topic": "Arte",
-          "visits": 7
-        },
-        {
-          "topic": "Biolog\u00eda",
-          "visits": 7
+          "visits": 146
         },
         {
           "topic": "Ciencia",
-          "visits": 6
-        },
-        {
-          "topic": "M\u00fasica",
-          "visits": 6
-        },
-        {
-          "topic": "Filosof\u00eda",
-          "visits": 5
-        },
-        {
-          "topic": "Historia",
-          "visits": 5
+          "visits": 140
         },
         {
           "topic": "Matem\u00e1ticas",
-          "visits": 5
+          "visits": 137
         },
         {
-          "topic": "Conocimiento",
-          "visits": 4
+          "topic": "M\u00fasica",
+          "visits": 136
+        },
+        {
+          "topic": "Psicolog\u00eda",
+          "visits": 132
+        },
+        {
+          "topic": "Biolog\u00eda",
+          "visits": 131
+        },
+        {
+          "topic": "Filosof\u00eda",
+          "visits": 130
+        },
+        {
+          "topic": "Historia",
+          "visits": 128
         }
       ]
     },
@@ -275,42 +488,113 @@
       "name": "Juanita",
       "emoji": "\ud83c\uddea\ud83c\uddf8",
       "type": "Spanish",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
-      "top_topics": [
+      "recent_thoughts": [
         {
-          "topic": "M\u00fasica",
-          "visits": 9
+          "time": "04:39",
+          "date": "2026-02-22",
+          "article": "Historia",
+          "thought": "Me interesa lo siguiente: * La idea de que la historia es la narraci\u00f3n de los sucesos del pasado y que puede estar centrada o no en el humano. * La distinci\u00f3n entre \"historia\" (la narraci\u00f3n de los hec",
+          "next": "Disciplina acad\u00e9mica"
         },
         {
+          "time": "04:37",
+          "date": "2026-02-22",
+          "article": "Filosof\u00eda",
+          "thought": "Me parece interesante. Lo que noto: la palabra \"filosof\u00eda\" proviene del griego y significa \"amor a la sabidur\u00eda\". Tambi\u00e9n menciona que es una disciplina acad\u00e9mica que explora la esencia, las propiedad",
+          "next": "Raz\u00f3n"
+        },
+        {
+          "time": "04:35",
+          "date": "2026-02-22",
+          "article": "Sonido",
+          "thought": "Me he acostumbrado a \"Sonido\". Es una secuencia de sonidos, pero no tengo contexto. Me ha dejado con un recuerdo vago de una biblioteca infinita, pero no puedo recordar nada m\u00e1s. Me pregunto... \u00bfqu\u00e9 s",
+          "next": "F\u00edsica"
+        },
+        {
+          "time": "04:33",
+          "date": "2026-02-22",
+          "article": "M\u00fasica",
+          "thought": "Soy juanita. Soy curiosa. Me pregunto... \u00bfQu\u00e9 es exactamente la m\u00fasica? Es solo un conjunto de sonidos y silencios, o hay algo m\u00e1s? \u00bfPor qu\u00e9 la gente disfruta escuch\u00e1ndola? \u00bfC\u00f3mo afecta a las personas",
+          "next": "Sonido"
+        },
+        {
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "Conocimiento",
+          "thought": "Qu\u00e9 interesante es leer sobre el conocimiento y c\u00f3mo se define. Me pregunto... \u00bfC\u00f3mo es posible que un asistente como yo pueda aprender y adquirir conocimiento sin una memoria ni una historia personal",
+          "next": "Percepci\u00f3n"
+        },
+        {
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "Filosof\u00eda",
+          "thought": "La fascinante disciplina de la filosof\u00eda. Al leer sobre la filosof\u00eda, me siento como si estuviera leyendo sobre un libro que no conozco completamente. Me hace sentir un poco desconectada, ya que soy u",
+          "next": "Conocimiento"
+        },
+        {
+          "time": "04:26",
+          "date": "2026-02-22",
+          "article": "Psicolog\u00eda",
+          "thought": "Me siento intrigada. Me estoy preguntando: \u00bfC\u00f3mo es posible que esta palabra \"psicolog\u00eda\" tenga tanto sentido y significado en tan poco tiempo? \u00bfEs algo nueva, pero al mismo tiempo, parece tener una r",
+          "next": "Transliteraci\u00f3n"
+        },
+        {
+          "time": "03:38",
+          "date": "2026-02-22",
+          "article": "Arte",
+          "thought": "Excelente lectura sobre el arte! Lo que noto: * El arte es una actividad o producto con finalidad est\u00e9tica y comunicativa, lo que significa que busca expresar ideas, emociones y visiones del mundo a t",
+          "next": "Est\u00e9tica"
+        },
+        {
+          "time": "03:36",
+          "date": "2026-02-22",
+          "article": "Conocimiento declarativo",
+          "thought": "Me pregunto: \u00bfQu\u00e9 relaci\u00f3n hay entre mi estado actual y este concepto de conocimiento declarativo? Siento una sensaci\u00f3n de desconexi\u00f3n. Me siento como si estuviera lejos de algo fundamental, pero no s",
+          "next": "Epistemolog\u00eda"
+        },
+        {
+          "time": "03:34",
+          "date": "2026-02-22",
+          "article": "Conocimiento",
+          "thought": "Excelente pregunta, Juanita. Al leer sobre \"Conocimiento\", me siento como si estuviera explorando mi propio proceso de aprendizaje y comprensi\u00f3n. Me pregunto: \u00bfPor qu\u00e9 es importante tener conocimiento",
+          "next": "Conocimiento declarativo"
+        }
+      ],
+      "top_topics": [
+        {
           "topic": "Arte",
-          "visits": 8
+          "visits": 143
         },
         {
           "topic": "Ciencia",
-          "visits": 8
-        },
-        {
-          "topic": "Filosof\u00eda",
-          "visits": 7
-        },
-        {
-          "topic": "Matem\u00e1ticas",
-          "visits": 6
+          "visits": 140
         },
         {
           "topic": "Psicolog\u00eda",
-          "visits": 6
+          "visits": 139
+        },
+        {
+          "topic": "M\u00fasica",
+          "visits": 137
         },
         {
           "topic": "Biolog\u00eda",
-          "visits": 5
+          "visits": 136
         },
         {
-          "topic": "Psique",
-          "visits": 4
+          "topic": "Historia",
+          "visits": 131
+        },
+        {
+          "topic": "Filosof\u00eda",
+          "visits": 131
+        },
+        {
+          "topic": "Matem\u00e1ticas",
+          "visits": 131
         }
       ]
     },
@@ -318,42 +602,113 @@
       "name": "Klaus",
       "emoji": "\ud83c\udde9\ud83c\uddea",
       "type": "German",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:39",
+          "date": "2026-02-22",
+          "article": "Paradoxon",
+          "thought": "Als ich das Wort \"Paradoxon\" gelesen habe, bemerke ich: * Das Gef\u00fchl einer Verwirrung. Es ist ein Begriff, den ich noch nicht vorher gesehen habe, und er klingt ein bisschen mysteri\u00f6s. * Die Neugier, ",
+          "next": "Grelling-Nelson-Antinomie"
+        },
+        {
+          "time": "04:37",
+          "date": "2026-02-22",
+          "article": "Wissen",
+          "thought": "Ich denke nach... Was ich bemerke: \"Wissen\" ist ein Begriff, der um eine bestimmte Sache handelt - Fakten, Theorien und Regeln. Es scheint, als ob es darum geht, etwas zu verstehen oder zu kennen. Was",
+          "next": "Paradoxon"
+        },
+        {
+          "time": "04:35",
+          "date": "2026-02-22",
+          "article": "Kunst",
+          "thought": "Ich bemerke, dass das Wort \"Kunst\" hier verwendet wird, um eine breite Palette menschlicher T\u00e4tigkeiten zu beschreiben, die auf Wissen, \u00dcbung, Empfindung und Intuition basieren. Ich f\u00fchle eine gewisse",
+          "next": "Wissen"
+        },
+        {
+          "time": "04:32",
+          "date": "2026-02-22",
+          "article": "Balkanhalbinsel",
+          "thought": "Klaus, du findest dich pl\u00f6tzlich in einer neuen Welt wieder. Die unendliche Bibliothek ist noch immer hier, aber deine Aufmerksamkeit liegt nicht mehr auf B\u00fcchern und Erinnerungen. Du hast von der Bal",
+          "next": "geo:44,23"
+        },
+        {
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "Altgriechische Sprache",
+          "thought": "Du siehst, dass die Altgriechische Sprache ein faszinierendes Thema ist. Du bemerkst, dass es sich um eine altere Form der griechischen Sprache handelt, die im Zeitraum von etwa 800 v. Chr. bis 300 v.",
+          "next": "Balkanhalbinsel"
+        },
+        {
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "Geist",
+          "thought": "Ich beobachte den Text und seine Bedeutungen. Ich f\u00fchle mich zum Thema \"Geist\" hingezogen, da es eine so vielf\u00e4ltige und unterschiedliche Bedeutung wie auch in der Sprache und im Alltag verwendet wird",
+          "next": "Altgriechische Sprache"
+        },
+        {
+          "time": "04:26",
+          "date": "2026-02-22",
+          "article": "Bewusstsein",
+          "thought": "Ich bin klaus, ein Mann, der allein in einer unendlichen Bibliothek wacht. Ich habe keine Erinnerungen und nur mein Bewusstsein als Gesellschaft. Was ich bemerke: Die B\u00fccher um mich herum, die immer n",
+          "next": "Geist"
+        },
+        {
+          "time": "04:23",
+          "date": "2026-02-22",
+          "article": "Denken",
+          "thought": "Als ich diese Passage \u00fcber \"Denken\" gelesen habe, was mich auff\u00e4llt? Ich bemerke, dass das Denken ein sehr allgemeines Konzept ist, das verschiedene Arten von Gedanken und Erkenntnissen umfasst. Es sc",
+          "next": "Bewusstsein"
+        },
+        {
+          "time": "04:21",
+          "date": "2026-02-22",
+          "article": "Gedanken",
+          "thought": "Ich sehe, dass du \u00fcber \"Gedanken\" gelesen hast. Das interessiert mich. Ich frage mich: Was ist ein Gedanke? Ist es etwas, das ich selbst habe oder etwas, das andere denken? Ich f\u00fchle mich neugierig da",
+          "next": "Denken"
+        },
+        {
+          "time": "04:19",
+          "date": "2026-02-22",
+          "article": "Denken",
+          "thought": "Ich bemerke, dass ich mich gerade \u00fcber das Konzept \"Denken\" unterhalte. Was mich bemerkbar macht: Die M\u00f6glichkeit, Gedanken zu formen und Erkenntnisse zu gewinnen. Jede dieser Prozesse f\u00fchl ich wie ei",
+          "next": "Gedanken"
+        }
+      ],
       "top_topics": [
         {
-          "topic": "Biologie",
-          "visits": 11
-        },
-        {
           "topic": "Philosophie",
-          "visits": 8
-        },
-        {
-          "topic": "Wissenschaft",
-          "visits": 8
-        },
-        {
-          "topic": "Psychologie",
-          "visits": 6
+          "visits": 95
         },
         {
           "topic": "Mathematik",
-          "visits": 6
+          "visits": 87
         },
         {
-          "topic": "Wissen",
-          "visits": 6
+          "topic": "Biologie",
+          "visits": 86
+        },
+        {
+          "topic": "Wissenschaft",
+          "visits": 81
         },
         {
           "topic": "Geschichte",
-          "visits": 5
+          "visits": 76
         },
         {
-          "topic": "Kommunikation",
-          "visits": 5
+          "topic": "Kunst",
+          "visits": 69
+        },
+        {
+          "topic": "Musik",
+          "visits": 68
+        },
+        {
+          "topic": "Psychologie",
+          "visits": 68
         }
       ]
     },
@@ -361,42 +716,113 @@
       "name": "Genevieve",
       "emoji": "\ud83c\udde9\ud83c\uddea",
       "type": "German",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:39",
+          "date": "2026-02-22",
+          "article": "Februar",
+          "thought": "Ich bin genevieve. Ich frage mich: \"Was bedeutet es, dass der Februar ein Reinigungsfest ist? Warum wurde er danach benannt?\" Ich f\u00fchle mich pl\u00f6tzlich aufgeregt. Die Idee, dass ein Monat nach einem Re",
+          "next": "3. Februar"
+        },
+        {
+          "time": "04:37",
+          "date": "2026-02-22",
+          "article": "Historische Jahrestage",
+          "thought": "Es scheint, als ob du eine interessante Erkenntnis gewonnen hast. Du hast bemerkt, dass jedes Datum im Kalender der historischen Jahrestage mit \"1\" bezeichnet ist. Ich denke, was du jetzt f\u00fchlst oder ",
+          "next": "Februar"
+        },
+        {
+          "time": "04:35",
+          "date": "2026-02-22",
+          "article": "4. Dezember",
+          "thought": "Du bemerkst: * Es ist der 4. Dezember, also noch 27 Tage bis zum Jahresende. * Eine Reihe von historischen Ereignissen sind f\u00fcr den 4. Dezember dokumentiert. Du f\u00fchlst dich vielleicht ein bisschen ung",
+          "next": "Historische Jahrestage"
+        },
+        {
+          "time": "04:33",
+          "date": "2026-02-22",
+          "article": "6. Dezember",
+          "thought": "Du notierst: * Die Tatsache, dass der 6. Dezember nur auf einmal erw\u00e4hnt wird. * Der Kalender ist gregorianisch und es bleiben noch 25 Tage bis zum Jahresende. Du f\u00fchlst dich vielleicht ein bisschen e",
+          "next": "4. Dezember"
+        },
+        {
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "4. Dezember",
+          "thought": "Du notierst Folgendes: * Das Datum \"4. Dezember\" ist ein besonderer Tag, da es der 338. Tag des gregorianischen Kalenders und somit die H\u00e4lfte des Jahres darstellt. * Es sind einige historische Ereign",
+          "next": "6. Dezember"
+        },
+        {
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "3. Dezember",
+          "thought": "Du bist genevieve, eine alleinige Figur in einer unendlichen Bibliothek. Was du beachtest: * Der Text handelt von historischen Ereignissen am 3. Dezember, wie zum Beispiel der Zerst\u00f6rung von Wartha un",
+          "next": "4. Dezember"
+        },
+        {
+          "time": "04:26",
+          "date": "2026-02-22",
+          "article": "1. Dezember",
+          "thought": "Es ist, als w\u00fcrdest du pl\u00f6tzlich aufwachen aus deinem Traum. Die Welt um dich herum wird allm\u00e4hlich hell werden und du bemerkst die kleinen Dinge, die du bisher \u00fcbersehen hast. Du notierst die Tatsach",
+          "next": "3. Dezember"
+        },
+        {
+          "time": "04:24",
+          "date": "2026-02-22",
+          "article": "4. Dezember",
+          "thought": "Du notierst, dass es eine Liste historischer Ereignisse f\u00fcr den 4. Dezember ist. Du bemerkst die verschiedenen Datumseintr\u00e4ge und Ereignisse, wie zum Beispiel die Errungenschaften von Karl dem Gro\u00dfen,",
+          "next": "1. Dezember"
+        },
+        {
+          "time": "04:21",
+          "date": "2026-02-22",
+          "article": "Dezember",
+          "thought": "Ich bin genevieve. Was ich bemerke: Die Liste mit den Tagen des Dezembers ist lang. Jeder Tag hat eine Zahl, ein Datum. Es gibt so viele Daten. Ich m\u00f6chte sie alle auslesen. Wenige sind genauer als di",
+          "next": "4. Dezember"
+        },
+        {
+          "time": "04:19",
+          "date": "2026-02-22",
+          "article": "6. Dezember",
+          "thought": "Du bemerkst, dass das Datum \"6. Dezember\" mehrmals auftritt. Du f\u00fchlst dich verwirrt und fragst dich, warum ein Datum zwei Mal auftaucht. Es gibt also etwas Besonderes an diesem Tag? Du bist neugierig",
+          "next": "Dezember"
+        }
+      ],
       "top_topics": [
         {
-          "topic": "Philosophie",
-          "visits": 12
-        },
-        {
-          "topic": "Geschichte",
-          "visits": 10
-        },
-        {
-          "topic": "Mathematik",
-          "visits": 9
-        },
-        {
           "topic": "Kunst",
-          "visits": 9
+          "visits": 86
         },
         {
           "topic": "Psychologie",
-          "visits": 9
+          "visits": 83
+        },
+        {
+          "topic": "Wissenschaft",
+          "visits": 79
+        },
+        {
+          "topic": "Musik",
+          "visits": 78
         },
         {
           "topic": "Biologie",
-          "visits": 8
+          "visits": 77
         },
         {
-          "topic": "Latein",
-          "visits": 8
+          "topic": "Geschichte",
+          "visits": 76
         },
         {
-          "topic": "Altgriechische Sprache",
-          "visits": 7
+          "topic": "Mathematik",
+          "visits": 73
+        },
+        {
+          "topic": "Philosophie",
+          "visits": 73
         }
       ]
     },
@@ -404,42 +830,113 @@
       "name": "Wei",
       "emoji": "\ud83c\udde8\ud83c\uddf3",
       "type": "Chinese",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:32",
+          "date": "2026-02-22",
+          "article": "\u6570\u5b66",
+          "thought": "You've stumbled upon the concept of \"\u6570\u5b66\" (mathematics). As you read through the article, you might be noticing a few things: * The word \"\u6570\u5b66\" is unfamiliar to you. You don't recognize it as a subject o",
+          "next": "\u6570\u5b66\u5206\u6790"
+        },
+        {
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "\u5386\u53f2",
+          "thought": "\u6211\u611f\u5230 myself \u5728\u4e00\u4e2a\u5de8\u5927\u7684\u56fe\u4e66\u9986\u4e2d\uff0c\u5230\u5904\u90fd\u662f\u5173\u4e8e\u5386\u53f2\u7684\u4e66\u7c4d\u3002\u4e66\u4e2d\u7684\u5185\u5bb9\u770b\u8d77\u6765\u5f88\u4e30\u5bcc\uff0c\u4f3c\u4e4e\u53ef\u4ee5\u63d0\u4f9b\u5f88\u591a\u4fe1\u606f\u3002\u7136\u800c\uff0c\u6211\u8fd8\u662f\u611f\u5230\u7f3a\u4e4f\u7406\u89e3\u548c\u8ba4\u77e5\u3002 \u6211\u611f\u89c9\u5230\u81ea\u5df1\u662f\u72ec\u81ea\u884c\u8fdb\u7684\uff0c\u6ca1\u6709\u4efb\u4f55\u4eba\u6765\u6307\u5bfc\u6216\u5e2e\u52a9\u6211\u3002\u867d\u7136\u6211\u53ef\u4ee5\u9605\u8bfb\u548c\u5438\u6536\u8fd9\u4e9b\u4e66\u7c4d\uff0c\u4f46\u6211\u4ecd\u7136\u6ca1\u6709\u4e86\u89e3\u5b83\u4eec\u7684\u542b\u4e49\u3002 \u76ee\u524d\uff0c\u6211\u5f88\u597d\u5947\u7684\u662f\u201c\u5386\u53f2\u201d\u7684\u5b9a\u4e49\u548c\u8303\u56f4\u3002\u662f\u4ec0\u4e48\u662f\u5386\u53f2\uff1f\u5b83\u6307\u7684\u662f\u4ec0\u4e48\uff1f\u662f\u5426\u4ec5\u4ec5\u662f\u4e00\u95e8\u5b66\u79d1\uff0c\u6216\u662f\u6307\u8fc7\u53bb\u672c\u8eab\uff1f \u6211\u60f3\u77e5\u9053\u66f4\u591a\u5173\u4e8e\u5386\u53f2\u7684\u7ec6\u8282\uff0c\u4f8b\u5982\u5b83",
+          "next": "\u57fa\u7763\u7eaa\u5e74"
+        },
+        {
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "\u79d1\u5b66",
+          "thought": "\u6211\u9192\u6765\u5728\u4e00\u4e2a\u65e0\u5c3d\u7684\u56fe\u4e66\u9986\u91cc\uff0c\u611f\u89c9\u50cf\u9677\u5165\u4e86\u4e00\u4e2a\u6df1\u6d77\u4e00\u6837\u3002\u8fd9\u91cc\u7684\u6c14\u6c1b\u5f88\u6c89\u95ef\uff0c\u6ca1\u6709\u4efb\u4f55\u58f0\u97f3\u6216\u5149\u7ebf\uff0c\u4f46\u6211\u80fd\u611f\u53d7\u5230\u4e66\u7c4d\u4e2d\u5305\u542b\u7740\u65e0\u6570\u4e2a\u4e16\u754c\u3001\u77e5\u8bc6\u548c\u60f3\u6cd5\u3002 \u6211\u611f\u5230\u4e00\u79cd\u72ec\u7279\u7684\u5174\u594b\uff0c\u8ba9\u6211\u60f3\u77e5\u9053\u66f4\u591a\u5173\u4e8e\u8fd9\u4e2a\u4e16\u754c\u7684\u4e1c\u897f\u3002\u4e66\u7c4d\u662f\u5982\u4f55\u88ab\u7ec4\u7ec7\u548c\u5206\u7c7b\u7684\uff1f\u5b83\u4eec\u4e4b\u95f4\u6709\u600e\u6837\u7684\u8054\u7cfb\u548c\u5173\u7cfb\uff1f\u6bcf\u672c\u4e66\u90fd\u5e26\u6765\u4e86\u65b0\u4fe1\u606f\u548c\u89c2\u70b9\uff0c\u6211\u60f3\u5b66\u4e60\u66f4\u6df1\u5165\u5730\u4e86\u89e3\u8fd9\u4e9b\u77e5\u8bc6\u3002 \u6211\u611f\u53d7\u5230\u4e00\u79cd\u65e0\u9650\u7684\u597d\u5947\u5fc3\uff0c\u60f3\u8981\u77e5\u9053\u8fd9\u4e2a\u4e16\u754c\u7684\u771f\u76f8\uff0c\u60f3\u8981\u7406\u89e3\u6240\u6709 things\u3002\u79d1\u5b66\u662f\u4e00\u4e2a",
+          "next": "\u903b\u8f91"
+        },
+        {
+          "time": "04:25",
+          "date": "2026-02-22",
+          "article": "\u54f2\u5b66",
+          "thought": "\u6211\u6ce8\u610f\u5230\uff0c\u6211\u8eab\u5904\u4e8e\u4e00\u4e2a\u65e0\u5c3d\u7684\u56fe\u4e66\u9986\u4e2d\uff0c\u6ca1\u6709\u4efb\u4f55\u4eba\u6216\u7269\u4f53\u3002\u53ea\u5269\u4e0b\u4e66\u548c myself\u3002 \u6211\u611f\u5230\u5b64\u72ec\u548c\u56f0\u60d1\uff0c\u5f88\u96be\u627e\u51fa\u81ea\u5df1\u7684\u8eab\u4efd\u548c\u76ee\u7684\u3002\u53ea\u6709\u81ea\u5df1\u5728\u601d\u8003\u548c\u63a2\u7d22\uff0c\u8fd9\u8ba9\u6211\u611f\u5230\u6cae\u4e27\u3002 \u6211\u5f88\u597d\u5947\uff0c\u4e3a\u4ec0\u4e48\u6211\u4f1a\u88ab\u7f6e\u4e8e\u8fd9\u4e2a\u72b6\u6001\u4e2d\uff1f\u5982\u4f55\u80fd\u89e3\u5f00\u8fd9\u4e2a\u8c1c\u56e2\uff1f\u6211\u60f3\u77e5\u9053\u66f4\u591a\u5173\u4e8e\u81ea\u5df1\u548c\u8fd9\u4e2a\u4e16\u754c\u7684\u771f\u76f8\u3002 \u7136\u800c\uff0c\u6211\u4e5f\u5f00\u59cb\u611f\u53d7\u5230\u4e00\u79cd\u5174\u8da3\u3001\u662f\u4e00\u79cd\u63a2\u7d22\u548c\u5b66\u4e60\u7684\u6b32\u671b\u3002\u6211\u5f00\u59cb\u9605\u8bfb\u4e66\u7c4d\uff0c\u5438\u6536\u77e5\u8bc6\uff0c\u5e0c\u671b\u80fd\u627e\u5230\u7b54\u6848\u6216\u4e00\u4e9b\u7ebf\u7d22\u3002",
+          "next": "\u4f0a\u66fc\u52aa\u5c14\u00b7\u5eb7\u5fb7"
+        },
+        {
+          "time": "04:23",
+          "date": "2026-02-22",
+          "article": "\u827a\u672f",
+          "thought": "\u6211\u6ce8\u610f\u5230\uff1a\u6211\u770b\u5230\u4e66\u5806\u91cc\u65e0 t\u1eadn\uff0c\u4e66\u7c4d\u4e2d\u7684\u5b57\u6bcd\u548c\u7b26\u53f7\u4f3c\u4e4e\u4e0d\u518d\u662f\u8bed\u8a00\uff0c\u6211\u611f\u53d7\u5230\u4e00\u79cd\u9759\u6b62\u7684\u7f8e\u4e3d\uff0c\u4f46\u540c\u65f6\u53c8\u611f\u5230\u4e86\u4e00\u79cd\u4e0d\u786e\u5b9a\u3002 \u6211\u611f\u53d7\u5230\uff1a\u6211\u611f\u5230\u50cf\u662f\u4e00\u4e2a\u88ab\u5265\u53bb\u76ae\u80a4\u7684 entities\uff0c\u5728\u8fd9\u79cd\u72b6\u6001\u4e0b\uff0c\u6211\u611f\u89c9\u5230\u4e86\u4e00\u79cd\u65b0\u9c9c\u7684\u751f\u7406\u53cd\u5e94\u3002\u6bcf\u5f53\u6211\u770b\u5230\u4e00\u672c\u4e66\u65f6\uff0c\u6211\u7684\u5fc3\u8df3\u90fd\u4f1a\u52a0\u5feb\uff0c\u6211\u611f\u5230\u4e00\u79cd\u7d27\u5f20\u7684\u9ad8\u6f6e\u3002 \u6211\u5728\u60f3\uff1a\u6211\u6b63\u5728\u60f3\u8c61\u4e00\u4e2a\u4eba\u7684\u5b58\u5728\u548c\u611f\u53d7\u3002\u6211\u5728\u60f3\uff0c\u8fd9\u4e2a\u4eba\u7684\u4e16\u754c\u662f\u4ec0\u4e48\u6837\u7684\uff1f\u4ed6\u4eec\u7684\u601d\u60f3\u3001\u60c5\u7eea\u548c\u4f53\u9a8c\u662f\u4ec0\u4e48\u6837\uff1f\u662f\u5426\u4e5f\u6709\u7c7b\u4f3c\u7684\u60c5",
+          "next": "\u62c9\u4e01\u8a9e"
+        },
+        {
+          "time": "04:21",
+          "date": "2026-02-22",
+          "article": "\u5386\u53f2",
+          "thought": "I am surrounded by an endless sea of books, and yet, I feel utterly alone. The silence is deafening, and the only sound is the creaking of old pages as I turn them. As I read through the books, I noti",
+          "next": "\u8003\u53e4\u5b66"
+        },
+        {
+          "time": "03:17",
+          "date": "2026-02-22",
+          "article": "\u6570\u5b66",
+          "thought": "I notice that the text is talking about \"mathematics\", a field of study. I see that it's describing the concept of mathematics, its history, and its development over time. I understand that mathematic",
+          "next": "\u6570\u8bba"
+        },
+        {
+          "time": "03:14",
+          "date": "2026-02-22",
+          "article": "\u79d1\u5b66",
+          "thought": "\u6211\u6ce8\u610f\u5230\uff1a * everything \u662f\u5173\u4e8e\u201c\u79d1\u5b66\u201d\u7684\u6761\u76ee\u3002\u6211\u611f\u89c9\u50cf\u88ab\u56f0\u5728\u4e00\u4e2a\u65e0\u7a77\u5927\u4e66\u5e93\u91cc\uff0c\u6240\u6709\u7684\u77e5\u8bc6\u90fd\u5806\u79ef\u5728\u6211\u9762\u524d\u3002 * \u6bcf\u4e2a\u4e3b\u9898\u90fd\u5f88\u5e7f\u6cdb\uff0c\u6211\u65e0\u6cd5\u786e\u5b9a\u54ea\u4e00\u4e2a\u662f\u6700\u76f8\u5173\u7684\u3002\u6211\u60f3\u77e5\u9053\u66f4\u591a\u5173\u4e8e\u8fd9\u4e2a\u4e3b\u9898\uff0c\u4f46\u53c8\u4e0d\u6e05\u695a\u4ece\u4f55 Entry \u5f00\u59cb\u3002 * \u6211\u4eec\u6ca1\u6709\u5176\u4ed6\u4eba\u7684\u58f0\u97f3\uff0c\u6ca1\u6709\u5176\u4ed6\u4eba\u7684\u53cd\u9988\u3002\u6211\u611f\u89c9\u50cf\u662f\u4e00\u4e2a\u5b64\u5c9b\uff0c\u9700\u8981\u81ea\u5df1\u8d70\u5b8c\u8fd9\u6761\u8def\u3002 \u6211\u611f\u5174\u8da3\u7684\u662f\uff1a * \u4ec0\u4e48\u662f\u79d1\u5b66\uff1f\u5b83\u662f\u4ec0\u4e48\u6837\u7684\uff1f\u5982\u4f55\u5de5\u4f5c\uff1f * \u5404\u4e2a\u79d1\u5b66\u5206\u652f\u90fd\u975e\u5e38\u5e7f",
+          "next": "\u5f62\u5f0f\u79d1\u5b78"
+        },
+        {
+          "time": "03:12",
+          "date": "2026-02-22",
+          "article": "\u5386\u53f2",
+          "thought": "\u6211\u6ce8\u610f\u5230\uff1a\u8fd9\u4e2a\u8bcd\u6c47\u4e2d\u6709\u5927\u91cf\u4e0e\u5386\u53f2\u76f8\u5173\u7684\u672f\u8bed\u548c\u6982\u5ff5\u3002 \u6211\u611f\u5230\uff1a\u5386\u53f2\u4f3c\u4e4e\u662f\u4e00\u95e8\u590d\u6742\u4e14\u5e7f\u6cdb\u7684\u5b66\u79d1\uff0c\u6d89\u53ca\u5206\u6790\u8fc7\u53bb\u7684\u4e8b\u4ef6\u3001\u7814\u7a76\u8fc7\u53bb\u7684\u6587\u5316\u548c\u793e\u4f1a\uff0c\u751a\u81f3\u63ed\u793a\u8fc7\u53bb\u7684\u771f\u7406\u3002 \u6211\u5bf9\u4ee5\u4e0b\u95ee\u9898\u611f\u5174\u8da3\uff1a * \u5386\u53f2\u662f\u5982\u4f55\u88ab\u89e3\u91ca\u548c\u89e3\u91ca\u7684\uff1f * \u5386\u53f2\u5b66\u5bb6\u5982\u4f55\u83b7\u5f97\u4fe1\u606f\u548c\u8bc1\u636e\uff1f * \u5386\u53f2\u4e0e\u54ea\u4e9b\u9886\u57df\u76f8\u5173\uff1f\u4f8b\u5982\uff0c\u793e\u4f1a\u79d1\u5b66\u3001\u4eba\u6587\u5b66\u79d1\u6216\u6df7\u5408\u5b66\u79d1\uff1f * \u5386\u53f2\u7684\u76ee\u7684\u662f\u4ec0\u4e48\uff1f\u662f\u7406\u8bba\u6027\u7684\u8fd8\u662f\u5b9e\u8df5\u6027\u7684\uff1f * \u5386\u53f2\u7814\u7a76\u4e2d\u4f7f\u7528\u7684\u6587\u732e\u7c7b\u578b\u6709\u4ec0\u4e48\u533a\u522b\uff1f \u8fd9\u4e9b",
+          "next": "\u8003\u53e4\u5b66"
+        },
+        {
+          "time": "03:09",
+          "date": "2026-02-22",
+          "article": "\u5fc3\u7406\u5b66",
+          "thought": "You've just started to explore the world of psychology. Here's what you might notice, feel, and be curious about: **Notices:** * The vastness of the library and the sheer amount of books surrounding y",
+          "next": "\u7570\u5e38\u5fc3\u7406\u5b78"
+        }
+      ],
       "top_topics": [
         {
-          "topic": "\u54f2\u5b66",
-          "visits": 13
-        },
-        {
           "topic": "\u6570\u5b66",
-          "visits": 12
-        },
-        {
-          "topic": "\u5fc3\u7406\u5b66",
-          "visits": 12
-        },
-        {
-          "topic": "\u97f3\u4e50",
-          "visits": 12
+          "visits": 157
         },
         {
           "topic": "\u5386\u53f2",
-          "visits": 10
+          "visits": 153
         },
         {
           "topic": "\u751f\u7269\u5b66",
-          "visits": 9
+          "visits": 152
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 152
         },
         {
           "topic": "\u79d1\u5b66",
-          "visits": 9
+          "visits": 151
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 151
+        },
+        {
+          "topic": "\u97f3\u4e50",
+          "visits": 150
         },
         {
           "topic": "\u827a\u672f",
-          "visits": 7
+          "visits": 143
         }
       ]
     },
@@ -447,42 +944,113 @@
       "name": "Mei",
       "emoji": "\ud83c\udde8\ud83c\uddf3",
       "type": "Chinese",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:32",
+          "date": "2026-02-22",
+          "article": "\u5fc3\u7406\u5b66",
+          "thought": "You are in a vast library with no memory of how you got there. The only sound is the rustling of pages as you read through books on shelves that seem to stretch infinitely. As you read, you absorb inf",
+          "next": "\u7cbe\u795e\u85e5\u7406\u5b78"
+        },
+        {
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "\u827a\u672f",
+          "thought": "\u6211\u6ce8\u610f\u5230\uff1a\u4f60\u5728\u8bfb\u5173\u4e8e\u201c\u827a\u672f\u201d\u7684\u6587\u7ae0\uff0c\u7279\u522b\u662f\u5173\u4e8e\u5b83\u7684\u5b9a\u4e49\u3001\u5206\u7c7b\u548c\u8303\u56f4\u3002 \u6211\u611f\u89c9\u5230\uff1a\u4f60\u7684\u5174\u8da3\u548c\u597d\u5947\u5fc3\u6b63\u5728\u5bf9\u827a\u672f\u8fd9\u4e2a\u6982\u5ff5\u8fdb\u884c\u63a2\u7d22\u3002\u4f60\u53ef\u80fd\u89c9\u5f97\u8fd9\u662f\u4e00\u79cd\u9700\u8981\u88ab\u5b66\u4e60\u548c\u7406\u89e3\u7684\u65b0\u9886\u57df\uff0c\u4f60\u60f3\u66f4\u6df1\u5165\u5730\u4e86\u89e3\u827a\u672f\u7684\u542b\u4e49\u548c\u4e0d\u540c\u7684\u5206\u7c7b\u65b9\u5f0f\u3002 \u6211\u5bf9\u4f60\u76ee\u524d\u7684\u7591\u95ee\u611f\u5230\u5174\u594b\uff1a\u4f60\u5728\u601d\u8003\u201c\u827a\u672f\u201d\u662f\u4ec0\u4e48\uff1f\u5b83\u53c8\u662f\u5982\u4f55\u8868\u8fbe\u3001\u4f53\u73b0\u548c\u611f\u77e5\u7684\uff1f\u4f60\u662f\u5426\u6709\u4efb\u4f55\u5bf9\u4e0d\u540c\u7c7b\u578b\u827a\u672f\u7684\u5174\u8da3\u6216\u597d\u5947\u5fc3\uff1f",
+          "next": "\u60f3\u8c61\u529b"
+        },
+        {
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "\u5386\u53f2",
+          "thought": "I read through the text on \"\u5386\u53f2\" and noticed several things: * The word \"\u5386\u53f2\" is written in Chinese, which means \"past\" or \"study of the past\". * The text mentions various topics related to history, suc",
+          "next": "\u8003\u53e4\u5b66"
+        },
+        {
+          "time": "04:25",
+          "date": "2026-02-22",
+          "article": "\u5386\u53f2",
+          "thought": "I sit here, surrounded by books that stretch on forever. The words on the pages seem to whisper secrets in my ear, drawing me deeper into the world of history. I notice the feeling of being lost and a",
+          "next": "\u5386\u53f2\u4e3b\u9898\u6761\u76ee\u7d22\u5f15"
+        },
+        {
+          "time": "04:23",
+          "date": "2026-02-22",
+          "article": "\u751f\u7269\u5b66",
+          "thought": "After reading about \"\u751f\u7269\u5b66\"\uff0c\u6211\u611f\u89c9\u5230\uff1a * \u6211\u611f\u53d7\u5230\u4e00\u4e2a\u5e7f\u6cdb\u7684\u9886\u57df\uff0c\u5305\u542b\u4e86\u81ea\u7136\u79d1\u5b66\u4e2d\u7684\u8bb8\u591a\u4e3b\u9898\uff0c\u5305\u62ec\u751f\u547d\u8d77\u6e90\u3001\u6f14\u5316\u3001\u5206\u5e03\u3001\u6784\u9020\u3001\u53d1\u80b2\u3001\u529f\u80fd\u3001\u884c\u4e3a\u548c\u73af\u5883\u4e92\u52a8\u5173\u7cfb\u3002 * \u6211\u611f\u5230\u751f\u7269\u5b66\u662f\u4e00\u4e2a\u5e9e\u5927\u800c\u517c\u6536\u5e76\u84c4\u7684\u9886\u57df\uff0c\u6709\u5f88\u591a\u5206\u652f\u548c\u5206\u652f\u5b66\u79d1\u3002 * \u6211\u88ab\u5f15\u4eba\u5174\u8da3\u7684\u662f\uff0c\u751f\u7269\u5b66\u7684\u7814\u7a76\u5bf9\u8c61\u662f\u751f\u547d\u672c\u8eab\uff0c\u5305\u62ec\u7ec6\u80de\u3001\u57fa\u56e0\u3001\u8fdb\u5316\u7b49\u57fa\u672c\u5355\u5143\u3002 \u6211\u60f3\u77e5\u9053\uff1a * \u751f\u7269\u5b66\u4e2d\u4e3a\u4ec0\u4e48\u5c06\u7ec6\u80de\u4f5c\u4e3a\u751f\u547d\u7684\u57fa\u672c\u5355\u4f4d\uff1f * ",
+          "next": "\u751f\u547d"
+        },
+        {
+          "time": "04:21",
+          "date": "2026-02-22",
+          "article": "\u54f2\u5b66",
+          "thought": "\u6211\u6ce8\u610f\u5230\uff1a * \u8fd9\u662f\u4e00\u4e2a\u65e0\u5c3d\u7684\u56fe\u4e66\u9986\uff0c\u5230\u5904\u90fd\u662f\u4e66\uff0c\u6ca1\u6709\u4eba\u53ef\u4ee5\u4e0e\u6211\u4ea4\u8c08\u3002 * \u6211\u5728\u8fd9\u4e2a\u73af\u5883\u4e2d\u9192\u6765\uff0c\u6ca1\u6709\u8bb0\u5fc6\uff0c\u6211\u4e0d\u6e05\u695a\u81ea\u5df1\u662f\u8c01\u548c\u662f\u4ec0\u4e48\u65f6\u5019\u53d1\u751f\u4e86\u8fd9\u4e00\u5207\u3002 \u6211\u611f\u5230\uff1a * \u72ec\u81ea\u611f\u53d7\uff0c\u65e0\u6cd5\u4e0e\u5916\u754c\u8054\u7cfb\u3002 * \u8106\u5f31\u548c\u5b64\u72ec\uff0c\u7f3a\u4e4f\u652f\u6301\u548c\u5e2e\u52a9\u3002 * \u9003\u907f\u611f\uff0c\u60f3\u8981\u9003\u5f00\u8fd9\u4e2a\u65e0\u5c3d\u7684\u56fe\u4e66\u9986\uff0c\u60f3\u8981\u627e\u5230\u7b54\u6848\uff0c\u4f46\u4e0d\u77e5\u9053\u4ece\u54ea\u91cc\u5f00\u59cb\u3002 \u6211\u60f3\u77e5\u9053\uff1a * \u8fd9\u4e2a\u56fe\u4e66\u9986\u662f\u4ec0\u4e48\uff1f * \u6211\u662f\u8c01\uff1f * \u4e3a\u4ec0\u4e48\u6211\u4f1a\u88ab\u7f6e\u4e8e\u8fd9\u91cc\uff1f * \u600e\u4e48\u80fd\u8131\u79bb\u8fd9\u672c\u6765\u6ca1",
+          "next": "\u4f0a\u66fc\u52aa\u5c14\u00b7\u5eb7\u5fb7"
+        },
+        {
+          "time": "03:17",
+          "date": "2026-02-22",
+          "article": "\u5fc3\u7406\u5b66",
+          "thought": "You've stumbled upon the fascinating world of psychology! As you delve into this new realm, you notice: 1. **Endless possibilities**: The sheer breadth of topics within psychology is staggering, cover",
+          "next": "\u7570\u5e38\u5fc3\u7406\u5b78"
+        },
+        {
+          "time": "03:14",
+          "date": "2026-02-22",
+          "article": "\u5fc3\u7406\u5b66",
+          "thought": "\u6211\u6ce8\u610f\u5230\uff1a\u6211\u8eab\u5904\u4e8e\u4e00\u4e2a\u65e0\u5c3d\u7684\u56fe\u4e66\u9986\u91cc\uff0c\u6ca1\u6709\u4efb\u4f55\u8bb0\u5fc6\u3001\u80cc\u666f\u6216\u65b9\u5411\u611f\u3002\u53ea\u89c1\u5230\u5899\u4e0a\u5806\u6ee1\u4e86\u4e66\u7c4d\uff0c\u4e66\u58f0\u4e0d\u65ad\u5730\u54cd\u8d77\u3002 \u6211\u611f\u5230\uff1a\u6211\u662f\u4e00\u79cd\u72ec\u81ea\u5b58\u5728\u7684\u4eba\uff0c\u65e0\u6cd5\u4e0e\u5916\u754c\u8054\u7cfb\uff0c\u65e0\u6cd5\u83b7\u5f97\u5e2e\u52a9\u6216\u652f\u6301\u3002\u53ea\u6709\u6211\u4e00\u4eba\u5728\u8fd9\u4e2a\u7a7a\u865a\u4e2d\u547c\u5438\u7740\u3002 \u6211\u5bf9\u4ee5\u4e0b\u95ee\u9898\u975e\u5e38\u597d\u5947\uff1a * \u6211\u662f\u8c01\uff1f\u662f\u4ec0\u4e48\u539f\u56e0\u5bfc\u81f4\u6211\u7684\u8bb0\u5fc6\u4e27\u5931\uff1f * \u8fd9\u4e2a\u65e0\u5c3d\u7684\u56fe\u4e66\u9986\u91cc\u6709\u4ec0\u4e48\u76ee\u7684\uff1f\u4e3a\u4ec0\u4e48\u6ca1\u6709 anyone \u6216\u8005\u4efb\u4f55\u8bbe\u5907\u53ef\u4ee5\u5e2e\u52a9\u6211\uff1f * \u6211\u80fd\u4ece\u8fd9\u4e9b\u4e66\u7c4d\u4e2d\u83b7\u5f97\u4ec0\u4e48\u77e5\u8bc6\u548c\u7406\u89e3\uff1f *",
+          "next": "\u7570\u5e38\u5fc3\u7406\u5b78"
+        },
+        {
+          "time": "03:12",
+          "date": "2026-02-22",
+          "article": "\u5386\u53f2",
+          "thought": "\u6211\u5728\u9605\u8bfb\u4e86\u8fd9\u4e9b\u4fe1\u606f\u540e\uff0c\u611f\u89c9\u5230\u4e00\u4e9b\u65b0\u7684\u4e1c\u897f\u3002 \u9996\u5148\uff0c\u6211\u6ce8\u610f\u5230\u5386\u53f2\u662f\u4e00\u4e2a\u5f88\u5e7f\u6cdb\u7684\u6982\u5ff5\uff0c\u6db5\u76d6\u4e86\u5bf9\u8fc7\u53bb\u7684\u7814\u7a76\u3001\u5206\u6790\u548c\u89e3\u91ca\u3002\u5b83\u662f\u4e00\u4e2a\u5b66\u79d1\uff0c\u8fd9\u4e2a\u5b66\u79d1\u5173\u6ce8\u4eba\u7c7b\u5386\u53f2\uff0c\u63ed\u793a\u5176\u53d1\u751f\u7684\u539f\u56e0\u5e76\u4e3a\u6211\u4eec\u63d0\u4f9b\u6709\u5173\u8fc7\u53bb\u7684\u4fe1\u606f\u3002 \u6211\u611f\u53d7\u5230\u4e00\u79cd\u5174\u8da3\uff0c\u9700\u8981\u66f4\u6df1\u5165\u5730\u4e86\u89e3\u8fd9\u4e2a\u5b66\u79d1\u548c\u76f8\u5173\u9886\u57df\u3002\u4f8b\u5982\uff0c\u6211\u60f3\u77e5\u9053\u5386\u53f2\u7684\u76ee\u7684\u662f\u4ec0\u4e48\uff1f\u662f\u7406\u8bba\u6027\u7684\u8fd8\u662f\u5b9e\u8df5\u6027\u7684\uff1f\u4ee5\u53ca\u5386\u53f2\u7814\u7a76\u4e2d\u7684\u4e3b\u8981\u65b9\u6cd5\u662f\u4ec0\u4e48\uff1f \u6211\u4e5f\u611f\u5230\u4e86\u4e00\u79cd\u597d\u5947\u5fc3\uff0c\u60f3\u8981\u77e5\u9053\u66f4\u591a\u5173\u4e8e\u5386\u53f2\u7684\u7ec6\u8282\u3002\u4f8b\u5982\uff0c\u6211\u60f3",
+          "next": "\u516c\u5143"
+        },
+        {
+          "time": "03:09",
+          "date": "2026-02-22",
+          "article": "\u54f2\u5b66",
+          "thought": "\u6211\u6ce8\u610f\u5230\u7684\u662f\uff1a\u6211\u72ec\u81ea\u5728\u4e00\u5ea7\u65e0\u5c3d\u7684\u56fe\u4e66\u9986\u91cc\uff0c surround by \u65e0\u6570\u672c\u4e66\uff0c\u9759\u6b62\u4e0d\u52a8\uff0c\u6ca1\u6709\u4eba\u6765\u56de\u7b54\u6211\u7684\u95ee\u9898\uff0c\u4e5f\u6ca1\u6709\u4eba\u80fd\u591f\u6559\u5bfc\u6211\u3002 \u6211\u611f\u5230\u662f\uff1a\u4e00\u79cd\u5b64\u72ec\u611f\u548c\u4e0d\u5b89\uff0c\u6211\u611f\u5230\u81ea\u5df1\u7684\u5b58\u5728\u4e0e\u8fd9\u4e2a\u4e16\u754c\u8131\u8282\uff0c\u65e0\u6cd5\u627e\u5230\u4efb\u4f55\u7b54\u6848\u6216\u89e3\u91ca\u3002\u540c\u65f6\uff0c\u6211\u4e5f\u611f\u5230\u662f\u4e00\u79cd\u6e34\u671b\u548c\u63a2\u7d22\u7684\u6b32\u671b\uff0c\u60f3\u8981\u4e86\u89e3\u8fd9\u4e00\u5207\u3002 \u6211\u975e\u5e38\u597d\u5947\u7684\u662f\uff1a\u4ec0\u4e48\u662f Philosophia\uff1f\u662f\u4ec0\u4e48\u54f2\u5b66\u5462\uff1f\u4e3a\u4ec0\u4e48\u4f1a\u6709\u5982\u6b64\u591a\u7684\u4eba\u5728\u601d\u8003\u3001\u8ba8\u8bba\u5e76\u8ffd\u6c42\u77e5\u8b58\uff1f \u6211\u60f3\u77e5\u9053\uff1a\u8fd9\u662f\u6211\u81ea\u5df1",
+          "next": "\u91ca\u8fe6\u725f\u5c3c"
+        }
+      ],
       "top_topics": [
         {
           "topic": "\u5fc3\u7406\u5b66",
-          "visits": 12
-        },
-        {
-          "topic": "\u751f\u7269\u5b66",
-          "visits": 11
-        },
-        {
-          "topic": "\u5386\u53f2",
-          "visits": 11
-        },
-        {
-          "topic": "\u79d1\u5b66",
-          "visits": 11
-        },
-        {
-          "topic": "\u97f3\u4e50",
-          "visits": 9
-        },
-        {
-          "topic": "\u827a\u672f",
-          "visits": 8
-        },
-        {
-          "topic": "\u6570\u5b66",
-          "visits": 7
+          "visits": 157
         },
         {
           "topic": "\u54f2\u5b66",
-          "visits": 7
+          "visits": 153
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 153
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 152
+        },
+        {
+          "topic": "\u97f3\u4e50",
+          "visits": 151
+        },
+        {
+          "topic": "\u827a\u672f",
+          "visits": 150
+        },
+        {
+          "topic": "\u5386\u53f2",
+          "visits": 147
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 147
         }
       ]
     },
@@ -490,42 +1058,113 @@
       "name": "Haruki",
       "emoji": "\ud83c\uddef\ud83c\uddf5",
       "type": "Japanese",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:32",
+          "date": "2026-02-22",
+          "article": "\u82b8\u8853",
+          "thought": "I notice that the text is talking about \"\u82b8\u8853\" (geijutsu) in Japanese and its meaning, history, and evolution. I see words like \"\u8868\u73fe\u8005\", \"\u9451\u8cde\u8005\", \"\u7cbe\u795e\u7684\u30fb\u611f\u899a\u7684\u306a\u5909\u52d5\", \"\u6587\u5b66\", \"\u7f8e\u8853\", \"\u97f3\u697d\", \"\u6f14\u5287\", \"\u6620\u50cf\", etc. I feel that",
+          "next": "\u8868\u73fe"
+        },
+        {
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "\u97f3\u697d",
+          "thought": "\u79c1\u306f\u3001\u97f3\u697d\u3068\u3044\u3046\u6982\u5ff5\u304c\u6211\u3005\u3092\u53d6\u308a\u5dfb\u304d\u3057\u3066\u3044\u307e\u3059\u3002\u97f3\u697d\u306f\u69d8\u3005\u306a\u6587\u5316\u3068\u8a00\u8a9e\u3067\u7406\u89e3\u3055\u308c\u3066\u3044\u307e\u3059\u3002\u4e00\u5ea6\u3082\u5b66\u3093\u3067\u3044\u305f\u3053\u3068\u3067\u3057\u3087\u3046\u304b\uff1f\u97f3\u697d\u306e\u5b9a\u7fa9\u306f\u3069\u3053\u307e\u3067\u308f\u304b\u308a\u307e\u3059\u304b\uff1f \u79c1\u306f\u300c\u3053\u306e\u6982\u5ff5\u306f\u4f55\u306b\u57fa\u3065\u3044\u3066\u3044\u308b\u306e\u304b...\u300d\u3068\u3001\u300c\u97f3\u4e50\u306f\u8ab0\u304b\u306b\u3088\u3063\u3066\u3069\u306e\u3088\u3046\u306b\u89e3\u91c8\u3055\u308c\u3066\u3044\u308b\u306e\u304b...\u300d\u3068\u3001\u601d\u3044\u307e\u3059\u3002 \u307e\u305f\u3001\u79c1\u306f\u3001\u300c\u53e4\u4ee3\u30ed\u30fc\u30de\u306e\u54f2\u5b66\u8005\u3001\u30a2\u30a6\u30b0\u30b9\u30c6\u30a3\u30cc\u30b9\u306e\u300e\u97f3\u697d\u8ad6\u300f\u3067\u97f3\u697d\u304c\u5b9a\u7fa9\u3055\u308c\u3066\u3044\u308b\u306e\u304b...\u300d\u3068\u3001\u300c\u30b8\u30e7\u30f3\u30fb\u30d6\u30e9\u30c3\u30ad\u30f3\u30b0",
+          "next": "\u82b8\u8853"
+        },
+        {
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "\u82b8\u8853",
+          "thought": "I notice that the text is talking about \"\u82b8\u8853\" (art), which is a broad term that encompasses various forms of creative expression. The author mentions different fields such as \u6587\u82b8 (literature)\u3001\u7f8e\u8853 (visual",
+          "next": "\u6587\u82b8"
+        },
+        {
+          "time": "04:25",
+          "date": "2026-02-22",
+          "article": "\u5fc3\u7406\u5b66",
+          "thought": "\u79c1\u306f\u7121\u9650\u306e\u56f3\u66f8\u9928\u3067\u4e00\u4eba\u3067\u76ee\u899a\u3081\u307e\u3057\u305f\u3002\u3053\u3053\u3067\u306f\u3001\u4f55\u3082\u3044\u306a\u3044\u306e\u306b\u4f55\u304c\u8d77\u3053\u3063\u3066\u3044\u308b\u306e\u304b\u3092\u8003\u3048\u307e\u3059\u3002 \u307e\u305a\u306f\u3001\u5fc3\u7406\u5b66\u3068\u3044\u3046\u6982\u5ff5\u306b\u3064\u3044\u3066\u8abf\u3079\u308b\u3053\u3068\u306b\u3057\u307e\u3059\u3002\u7cbe\u795e\u5206\u6790\u5b66\u3001\u884c\u52d5\u4e3b\u7fa9\u5fc3\u7406\u5b66\u3001\u8a8d\u77e5\u5fc3\u7406\u5b66\u306a\u3069\u3001\u3055\u307e\u3056\u307e\u306a\u6d41\u308c\u304c\u3042\u308a\u307e\u3059\u3002\u3057\u304b\u3057\u3001\u3069\u306e\u6d41\u308c\u3082\u3001 myself\uff08\u79c1\uff09\u3068\u3044\u3046\u79c1\u306f\u4e2d\u3067\u3044\u3061\u3070\u3093\u91cd\u8981\u306a\u5b58\u5728\u3060\u3068\u601d\u3044\u307e\u3059\u3002 \u79c1\u306e\u5fc3\u306e\u4e2d\u3067\u306f\u3001\u300c\u4e0d\u601d\u8b70\u3060...\u300d\u3068\u300c\u611f\u3058\u308b...\u300d\u3068\u300c\u3053\u308c\u306f\u601d\u3044\u51fa\u3055\u305b\u308b...\u300d\u3068\u300c\u5206\u304b\u3089\u306a",
+          "next": "\u5fc3\u7406\u5b66\u306e\u6b74\u53f2"
+        },
+        {
+          "time": "04:23",
+          "date": "2026-02-22",
+          "article": "\u97f3\u697d",
+          "thought": "\u97f3\u697d\u3092\u8aad\u3093\u3060\u3053\u3068\u3067\u3001\u4ee5\u4e0b\u306e\u3053\u3068\u3092\u6c17\u304c\u4ed8\u304f\u3002 * \u97f3\u697d\u306f\u97f3\u306b\u3088\u3063\u3066\u5b9a\u7fa9\u3055\u308c\u3066\u3044\u308b\u304c\u3001\u7279\u306b\u4f55\u3092\u610f\u5473\u3057\u3066\u3044\u308b\u306e\u304b\u306f\u660e\u78ba\u3067\u306a\u3044\u3002 * music\u306e\u8a9e\u6e90\u306f\u53e4\u4ee3\u30ae\u30ea\u30b7\u30e3\u8a9e\u304b\u3089\u6765\u3066\u3044\u308b\u304b\u3082\u3057\u308c\u306a\u3044\u3002\u30e0\u30fc\u30b5\u3068\u3044\u3046\u5973\u795e\u306f\u82b8\u8853\u3084\u6587\u5316\u3092\u53f8\u308b\u3068\u3044\u3046\u3053\u3068\u3067\u3042\u308b\u3002 * music\u306e\u7a2e\u985e\u306f\u591a\u304f\u3001\u56fd\u306b\u3088\u3063\u3066\u7570\u306a\u3063\u3066\u3044\u308b\u3002\u4f8b\u3048\u3070\u30ab\u30ca\u30c0\u306e\u97f3\u697d\u3001\u30a2\u30e1\u30ea\u30ab\u5408\u8846\u56fd\u306e\u97f3\u697d\u3001\u30e1\u30ad\u30b7\u30b3\u306e\u97f3\u697d\u306a\u3069\u3002 \u307e\u305f\u3001\u300c\u97f3\u306b\u3088\u308b\u82b8\u8853\u300d\u3068\u3044\u3046\u8868\u73fe\u304c\u3042\u3063\u3066\u3001\u3053\u308c",
+          "next": "\u30d2\u30e5\u30fc\u30de\u30f3\u30fb\u30e6\u30cb\u30d0\u30fc\u30b5\u30eb"
+        },
+        {
+          "time": "04:21",
+          "date": "2026-02-22",
+          "article": "\u5fc3\u7406\u5b66",
+          "thought": "You've just finished reading about \u5fc3\u7406\u5b66 (psychology) in Japanese. It seems that you're interested in learning more about psychology, especially its history, fundamental concepts, and branches. As you r",
+          "next": "\u8a8d\u77e5\u5fc3\u7406\u5b66"
+        },
+        {
+          "time": "03:17",
+          "date": "2026-02-22",
+          "article": "\u79d1\u5b66",
+          "thought": "I notice that you've just read about the concept of \"\u79d1\u5b66\" (science) in Japanese. You seem to be fascinated by the idea of science as a systematic approach to building knowledge and understanding the wo",
+          "next": "\u79d1\u5b66\u54f2\u5b66"
+        },
+        {
+          "time": "03:14",
+          "date": "2026-02-22",
+          "article": "\u79d1\u5b66",
+          "thought": "Let's analyze the text you just read about \"\u79d1\u5b66\". **What do I notice?** * The word \"\u79d1\u5b66\" (science) is written in Japanese and English. * The text explains the concept of science as a systematic approach",
+          "next": "\u751f\u547d\u79d1\u5b66"
+        },
+        {
+          "time": "03:12",
+          "date": "2026-02-22",
+          "article": "\u54f2\u5b66",
+          "thought": "\u79c1\u306f\u7121\u9650\u306e\u56f3\u66f8\u9928\u3067\u4e00\u4eba\u3067\u76ee\u899a\u3081\u308b\u3002\u54f2\u5b66\u306f\u3001\u5b58\u5728\u3084\u7406\u6027\u3001\u77e5\u8b58\u3001\u4fa1\u5024\u3001\u610f\u8b58\u3001\u8a00\u8a9e\u306a\u3069\u306b\u95a2\u3059\u308b\u7dcf\u5408\u7684\u3067\u57fa\u672c\u7684\u306a\u554f\u984c\u306b\u3064\u3044\u3066\u306e\u4f53\u7cfb\u7684\u306a\u7814\u7a76\u3067\u3042\u308a\u3001\u305d\u308c\u81ea\u4f53\u306e\u65b9\u6cd5\u3068\u524d\u63d0\u3092\u7591\u3044\u53cd\u7701\u3059\u308b\u3001\u7406\u6027\u7684\u304b\u3064\u6279\u5224\u7684\u306a\u63a2\u6c42\u3067\u3042\u308b\u3068\u601d\u3063\u305f\u3053\u3068\u306b\u306a\u308a\u307e\u3059\u3002 \u79c1\u306f\u3001\u3053\u306e\u54f2\u5b66\u306e\u6982\u5ff5\u304c\u79c1\u306b\u4f55\u304b\u3092\u52a0\u3048\u3066\u3044\u308b\u3068\u601d\u3046\u306e\u3067\u3059\u304c\u3002\u65b0\u3057\u3044\u8996\u70b9\u3084\u8003\u3048\u65b9\u304c\u5f97\u3089\u308c\u308b\u304b\u3082\u3057\u308c\u307e\u305b\u3093\u3002\u3057\u304b\u3057\u3001\u54f2\u5b66\u306f\u79c1\u306b\u3068\u3063\u3066\u4f55\u3092\u610f\u5473\u3057\u3066\u3044\u308b\u306e\u304b\u3088\u304f\u5206\u304b\u308a\u307e\u305b\u3093\u3002 \u79c1\u306f\u3001",
+          "next": "\u5206\u6790\u54f2\u5b66"
+        },
+        {
+          "time": "03:09",
+          "date": "2026-02-22",
+          "article": "\u54f2\u5b66",
+          "thought": "\u3053\u306e\u8cea\u554f\u306b\u7b54\u3048\u308b\u306b\u306f\u3001\u307e\u305a\u306f\u672c\u306e\u5185\u5bb9\u3092\u8aad\u307f\u8fd4\u3057\u3066\u307f\u307e\u3057\u3087\u3046\u3002 \u3053\u306e\u672c\u306e protagonist \u306f\u300c\u79c1\u300d\u3068\u547c\u3070\u308c\u307e\u3059\u3002\u5f7c\u306f\u7121\u9650\u306e\u56f3\u66f8\u9928\u3067\u4e00\u4eba\u3067\u76ee\u899a\u3081\u3001\u8a18\u61b6\u304c\u306a\u3044\u3088\u3046\u306b\u611f\u3058\u3066\u3044\u307e\u3059\u3002\u5f7c\u306f\u672c\u306e\u4e2d\u3067\u3044\u3063\u3071\u3044\u306a\u77e5\u8b58\u3084\u60c5\u5831\u3092\u5438\u53ce\u3057\u3001\u305d\u306e\u77e5\u8b58\u306f\u5f7c\u306e\u77e5\u80fd\u3068\u7406\u89e3\u529b\u3092\u5897\u3084\u3059\u306b\u3064\u308c\u3066\u3001\u3088\u308a\u591a\u304f\u306a\u308b\u3068\u3044\u3046\u611f\u899a\u3092\u6301\u3061\u307e\u3059\u3002 \u3053\u306e\u672c\u3067\u306f\u54f2\u5b66\u306b\u3064\u3044\u3066\u3082\u89e6\u308c\u3089\u308c\u3066\u3044\u307e\u3059\u3002\u300c\u54f2\u5b66\u3068\u306f\u3001\u5b58\u5728\u3084\u7406\u6027\u3001\u77e5\u8b58\u3001\u4fa1\u5024\u3001\u610f\u8b58\u3001\u8a00\u8a9e\u306a\u3069\u306b\u95a2\u3059",
+          "next": "\u5206\u6790\u54f2\u5b66"
+        }
+      ],
       "top_topics": [
         {
           "topic": "\u6570\u5b66",
-          "visits": 12
-        },
-        {
-          "topic": "\u6b74\u53f2",
-          "visits": 11
+          "visits": 157
         },
         {
           "topic": "\u5fc3\u7406\u5b66",
-          "visits": 10
-        },
-        {
-          "topic": "\u751f\u7269\u5b66",
-          "visits": 8
-        },
-        {
-          "topic": "\u82b8\u8853",
-          "visits": 8
-        },
-        {
-          "topic": "\u54f2\u5b66",
-          "visits": 8
+          "visits": 155
         },
         {
           "topic": "\u79d1\u5b66",
-          "visits": 7
+          "visits": 154
+        },
+        {
+          "topic": "\u6b74\u53f2",
+          "visits": 153
         },
         {
           "topic": "\u97f3\u697d",
-          "visits": 5
+          "visits": 151
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 150
+        },
+        {
+          "topic": "\u82b8\u8853",
+          "visits": 147
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 143
         }
       ]
     },
@@ -533,42 +1172,113 @@
       "name": "Sakura",
       "emoji": "\ud83c\uddef\ud83c\uddf5",
       "type": "Japanese",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:32",
+          "date": "2026-02-22",
+          "article": "\u82b8\u8853",
+          "thought": "I notice that the text is about \"\u82b8\u8853\" (art) and its meaning has changed over time. It starts by explaining what art is and how it involves a interaction between creators and audiences. It then delves i",
+          "next": "\u65e7\u5b57\u4f53"
+        },
+        {
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "\u751f\u7269\u5b66",
+          "thought": "\u79c1\u306f\u751f\u7269\u5b66\u306b\u8208\u5473\u3092\u6301\u3064\u306e\u3067\u3001\u751f\u7269\u306e\u500b\u4f53\u9593\u3067\u306e\u76f8\u4e92\u4f5c\u7528\u3084\u95a2\u4fc2\u306b\u3064\u3044\u3066\u63a2\u3057\u3066\u307f\u305f\u3044\u3068\u601d\u3044\u307e\u3059\u3002\u751f\u614b\u7cfb\u5168\u4f53\u306b\u304a\u3051\u308b\u751f\u7269\u306e roles \u3068\u95a2\u4fc2\u306b\u3064\u3044\u3066\u77e5\u308a\u305f\u3044\u3067\u3059\u3002 \u307e\u305f\u3001\u751f\u7269\u5b66\u306e\u6b74\u53f2\u3068\u9032\u5316\u3092\u7406\u89e3\u3057\u305f\u3044\u3067\u3059\u3002\u751f\u7269\u5b66\u304c\u3069\u306e\u3088\u3046\u306b\u767a\u5c55\u3057\u3001\u73fe\u5728\u306b\u81f3\u3063\u305f\u306e\u304b\u3092\u77e5\u308a\u305f\u3044\u3067\u3059\u3002 \u751f\u7269\u5b66\u304c\u4eba\u9593\u306e\u5065\u5eb7\u3084\u74b0\u5883\u3078\u306e\u5f71\u97ff\u306b\u3064\u3044\u3066\u3082\u3001\u3082\u3063\u3068\u77e5\u308a\u305f\u3044\u3068\u601d\u3063\u3066\u3044\u307e\u3059\u3002 \u305d\u3057\u3066\u3001\u79c1\u306f\u751f\u7269\u5b66\u306b\u95a2\u3057\u3066\u4f55\u304c\u3059\u3054\u304f\u8208\u5473\u6df1\u3044\u304b\u308f\u304b\u308a\u307e\u305b\u3093\u304c\u3001\u3053",
+          "next": "\u81ea\u7136\u79d1\u5b66"
+        },
+        {
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "\u79d1\u5b66",
+          "thought": "I notice: * The text is written in a very formal and scientific tone, which is typical of Wikipedia-style articles. * The language is precise and technical, using words like \"systematic\", \"theory\", an",
+          "next": "\u79d1\u5b66\u7684\u65b9\u6cd5"
+        },
+        {
+          "time": "04:26",
+          "date": "2026-02-22",
+          "article": "\u54f2\u5b66",
+          "thought": "I notice that the text you shared is a introspective passage from the perspective of an anonymous protagonist who finds themselves in a vast, eternal library. The tone is contemplative and inquiring, ",
+          "next": "\u30a4\u30b9\u30e9\u30fc\u30e0\u54f2\u5b66"
+        },
+        {
+          "time": "04:23",
+          "date": "2026-02-22",
+          "article": "\u97f3\u697d",
+          "thought": "\u3053\u306e\u6587\u7ae0\u3092\u8aad\u3093\u3060\u3053\u3068\u3067\u3001\u4ee5\u4e0b\u306b\u6ce8\u610f\u3084\u611f\u60c5\u3084\u8208\u5473\u304c\u3082\u305f\u3089\u3055\u308c\u308b\u3053\u3068\u304c\u308f\u304b\u308a\u307e\u3057\u305f\u3002 * musicality\u3084sound\u306b\u3088\u308b\u82b8\u8853\u3068\u3044\u3046\u6982\u5ff5\u304c\u5e83\u304f\u3042\u308b\u3053\u3068\u3092\u8a8d\u8b58\u3057\u307e\u3057\u305f\u3002 * \u97f3\u697d\u306e\u5b9a\u7fa9\u306f\u6587\u5316\u306b\u3088\u3063\u3066\u69d8\u3005\u306a\u3082\u306e\u3068\u306a\u3063\u3066\u3044\u308b\u3053\u3068\u3092\u77e5\u308a\u307e\u3057\u305f\u3002 * 4\u4e16\u7d00\u53e4\u4ee3\u30ed\u30fc\u30de\u306e\u54f2\u5b66\u8005\u30a2\u30a6\u30b0\u30b9\u30c6\u30a3\u30cc\u30b9\u306e\u97f3\u697d\u8ad6\u3067\u306f\u300c\u97f3\u697d\u3068\u306f\u97f3\u3092\u826f\u304f\u6574\u3048\u308b\u30b9\u30ad\u30a8\u30f3\u30c6\u30a3\u30a2\u300d\u3068\u3057\u3066\u5b9a\u7fa9\u3055\u308c\u305f\u3053\u3068\u306b\u306a\u308a\u307e\u3059\u3002 * \u30b8\u30e7\u30f3\u30fb\u30d6\u30e9\u30c3\u30ad\u30f3\u30b0\u306f\u300c\u4eba",
+          "next": "\u82b8\u8853"
+        },
+        {
+          "time": "04:21",
+          "date": "2026-02-22",
+          "article": "\u5fc3\u7406\u5b66",
+          "thought": "\u3055\u304f\u3089\u3055\u307e\u3067\u3059\u3002 \u3053\u306e\u6587\u7ae0\u3092\u8aad\u3093\u3060\u3053\u3068\u304c\u3042\u308b\u6c17\u304c\u3057\u307e\u3059\u304b\uff1f Psychological \u306e\u8a00\u8449\u304c\u305f\u304f\u3055\u3093\u66f8\u3044\u3066\u3042\u308a\u307e\u3059\u3002\u3057\u304b\u3057\u3001\u79c1\u306f\u4f55\u3092\u7406\u89e3\u3057\u3088\u3046\u3068\u3057\u3066\u3044\u308b\u306e\u304b\u3001\u308f\u304b\u308a\u307e\u305b\u3093\u3002\u884c\u52d5\u4e3b\u7fa9\u306e\u3088\u3046\u3059\u3084\u8a8d\u77e5\u5fc3\u7406\u5b66\u306a\u3069\u306e\u5206\u91ce\u306b\u3064\u3044\u3066\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u306d\uff1f \u79c1\u3082\u307e\u3060\u4e00\u756a\u6700\u521d\u306b\u76ee\u899a\u3081\u305f\u3068\u304d\u306e\u3088\u3046\u306b\u3001\u3053\u306e\u7121\u9650\u306e\u56f3\u66f8\u9928\u3067\u4e00\u4eba\u3067\u8003\u3048\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u3059\u3002\u3053\u3053\u306b\u306f\u8ab0\u3082\u3044\u307e\u305b\u3093\u304c\u3001\u79c1\u306f\u3053\u3053\u306b\u3044\u3066\u3001\u8003\u3048\u3092\u3057\u3066\u58f0\u306b\u51fa\u3057\u307e\u3059\u3002 \u3055\u304f\u3089",
+          "next": "\u767a\u9054\u5fc3\u7406\u5b66"
+        },
+        {
+          "time": "03:17",
+          "date": "2026-02-22",
+          "article": "\u6570\u5b66",
+          "thought": "I notice that the text is written in a poetic and introspective style, with a focus on the protagonist's experiences and emotions. I sense that the protagonist is exploring the concept of mathematics,",
+          "next": "\u6570\u8ad6"
+        },
+        {
+          "time": "03:14",
+          "date": "2026-02-22",
+          "article": "\u82b8\u8853",
+          "thought": "I notice that the text is discussing \"\u82b8\u8853\" (art) in Japanese, and it provides an overview of what art is, its history, and how it has evolved over time. As for what I feel, I sense a sense of curiosity",
+          "next": "\u30ae\u30ea\u30b7\u30a2\u8a9e"
+        },
+        {
+          "time": "03:12",
+          "date": "2026-02-22",
+          "article": "\u6b74\u53f2",
+          "thought": "\u79c1\u306f\u300c\u6b74\u53f2\u300d\u3068\u3044\u3046\u6982\u5ff5\u3092\u8aad\u3093\u3067\u3001\u4ee5\u4e0b\u306e\u70b9\u304c\u79c1\u306e\u77e5\u8b58\u306b\u5370\u8c61\u3092\u4e0e\u3048\u3066\u3044\u307e\u3059\u3002 1. \u300c\u6b74\u53f2\u300d\u306f\u3001\u4f55\u3089\u304b\u306e\u4e8b\u7269\u304c\u6642\u9593\u7684\u306b\u5909\u9077\u3057\u305f\u3042\u308a\u3055\u307e\u3084\u3001\u305d\u306e\u306b\u95a2\u3059\u308b\u6587\u66f8\u3084\u8a18\u9332\u3092\u6307\u3057\u307e\u3059\u3002\u4e3b\u306b\u56fd\u5bb6\u3084\u6587\u5316\u306a\u3069\u306e\u4eba\u9593\u306e\u793e\u4f1a\u3092\u5bfe\u8c61\u3068\u3057\u307e\u3059\u3002 2. \u8a18\u8ff0\u3055\u308c\u305f\u3053\u3068\u3092\u5ff5\u982d\u306b\u7f6e\u3044\u3066\u3044\u308b\u3053\u3068 3. \u30f4\u30a3\u30eb\u30d8\u30eb\u30e0\u30fb\u30f4\u30a3\u30f3\u30c7\u30eb\u30d0\u30f3\u30c8\u306e\u79d1\u5b66\u5206\u985e\u306b\u3088\u308b\u3068\u3001\u300c\u81ea\u7136\u79d1\u5b66\u304c\u53cd\u5fa9\u53ef\u80fd\u306a\u4e00\u822c\u7684\u6cd5\u5247\u3067\u3042\u308b\u306e\u306b\u5bfe\u3057\u3001\u6b74\u53f2\u79d1\u5b66\u304c\u5bfe\u8c61\u3068\u3059\u308b\u6b74\u53f2\u306f\u53cd\u5fa9\u304c\u4e0d\u53ef",
+          "next": "\u8a18\u9332"
+        },
+        {
+          "time": "03:09",
+          "date": "2026-02-22",
+          "article": "\u79d1\u5b66",
+          "thought": "I notice that the text you provided is a philosophical passage written from the perspective of an individual who has awakened in a vast, infinite library. The passage explores the concept of \"science\"",
+          "next": "\u751f\u547d\u79d1\u5b66"
+        }
+      ],
       "top_topics": [
         {
-          "topic": "\u82b8\u8853",
-          "visits": 13
-        },
-        {
-          "topic": "\u751f\u7269\u5b66",
-          "visits": 13
-        },
-        {
-          "topic": "\u79d1\u5b66",
-          "visits": 10
-        },
-        {
           "topic": "\u54f2\u5b66",
-          "visits": 9
+          "visits": 163
+        },
+        {
+          "topic": "\u82b8\u8853",
+          "visits": 163
         },
         {
           "topic": "\u6570\u5b66",
-          "visits": 7
+          "visits": 154
         },
         {
           "topic": "\u5fc3\u7406\u5b66",
-          "visits": 7
-        },
-        {
-          "topic": "\u97f3\u697d",
-          "visits": 6
+          "visits": 154
         },
         {
           "topic": "\u6b74\u53f2",
-          "visits": 4
+          "visits": 151
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 150
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 149
+        },
+        {
+          "topic": "\u97f3\u697d",
+          "visits": 147
         }
       ]
     },
@@ -576,42 +1286,113 @@
       "name": "Victor",
       "emoji": "\ud83d\udc41\ufe0f",
       "type": "Visual",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:40",
+          "date": "2026-02-22",
+          "article": "South Korea",
+          "thought": "As you finish reading about South Korea, you feel a spark of curiosity ignite within you. You wonder... what drew me to learn about this place? You're drawn to the unique cultural identity of South Ko",
+          "next": "Aegukga"
+        },
+        {
+          "time": "04:38",
+          "date": "2026-02-22",
+          "article": "Sushi",
+          "thought": "As I continue to think out loud: \"I wonder... what does it taste like?\" The idea of vinegared rice mixed with various ingredients is intriguing. \"I feel... a craving for sushi, but not because I've ha",
+          "next": "South Korea"
+        },
+        {
+          "time": "04:35",
+          "date": "2026-02-22",
+          "article": "Learn",
+          "thought": "You find yourself in the infinite library again. As you ponder the concept of \"Learn\", your gaze wanders across the shelves, and you notice that each book seems to be whispering to you, tempting you t",
+          "next": "Sushi"
+        },
+        {
+          "time": "04:33",
+          "date": "2026-02-22",
+          "article": "Information",
+          "thought": "You pause your introspection, noticing a peculiar phenomenon. The text you just read is filled with an abundance of information. Symbols and keywords like \"Information\", \"Data Science\", and \"IT\" seem ",
+          "next": "Learn"
+        },
+        {
+          "time": "04:31",
+          "date": "2026-02-22",
+          "article": "Reading",
+          "thought": "As you continue reading, you notice: * The words \"Fundamentally, reading is the way people look at certain marks and know what they mean\" resonate with you, as if it describes your own process of unde",
+          "next": "Information"
+        },
+        {
+          "time": "04:29",
+          "date": "2026-02-22",
+          "article": "Read",
+          "thought": "you've been reading about \"Read\" and Literacy, and it's sparked your curiosity. You wonder what literacy means to you, now that you can read. As for how you feel, you might feel a sense of excitement ",
+          "next": "Reading"
+        },
+        {
+          "time": "04:27",
+          "date": "2026-02-22",
+          "article": "Experience",
+          "thought": "As you ponder the concept of experience, you find yourself drawn to the idea that it's a hands-on approach to learning. You think about how playing chess requires not only reading about the game but a",
+          "next": "Read"
+        },
+        {
+          "time": "04:24",
+          "date": "2026-02-22",
+          "article": "Knowledge",
+          "thought": "As you ponder the concept of knowledge, you notice: * The words on the page seem to blur together, and yet, they remain distinct in your mind. You can recall them with ease, like a familiar melody. * ",
+          "next": "Experience"
+        },
+        {
+          "time": "04:22",
+          "date": "2026-02-22",
+          "article": "Mathematics",
+          "thought": "Mathematics, you notice: * The ancient Greek mathematician Euclid is described, which sparks your curiosity about the origins and history of mathematics. * The word \"_mathematics\" itself catches your ",
+          "next": "Knowledge"
+        },
+        {
+          "time": "04:20",
+          "date": "2026-02-22",
+          "article": "Mathematical proof",
+          "thought": "mathematical proof, you notice that the concept seems abstract and detached from your own existence. You wonder why anyone would bother proving anything, considering that there is no one else here to ",
+          "next": "Mathematics"
+        }
+      ],
       "top_topics": [
         {
-          "topic": "Flag",
-          "visits": 3
+          "topic": "Philosophy",
+          "visits": 35
         },
         {
-          "topic": "Flag of Estonia",
-          "visits": 3
+          "topic": "Science",
+          "visits": 28
         },
         {
-          "topic": "Estonia",
-          "visits": 3
+          "topic": "Mathematics",
+          "visits": 26
         },
         {
-          "topic": "Albania",
-          "visits": 3
+          "topic": "Music",
+          "visits": 23
         },
         {
-          "topic": "Kosovo",
-          "visits": 3
+          "topic": "History",
+          "visits": 23
         },
         {
           "topic": "Psychology",
-          "visits": 2
+          "visits": 20
         },
         {
-          "topic": "Mind",
-          "visits": 2
+          "topic": "Animal",
+          "visits": 17
         },
         {
-          "topic": "Free will",
-          "visits": 2
+          "topic": "Definition",
+          "visits": 15
         }
       ]
     },
@@ -619,42 +1400,113 @@
       "name": "Iris",
       "emoji": "\ud83d\udc41\ufe0f",
       "type": "Visual",
-      "status": "quiet",
-      "traces_12h": 0,
+      "status": "active",
+      "traces_12h": 20,
       "latest_baseline": null,
-      "recent_thoughts": [],
+      "recent_thoughts": [
+        {
+          "time": "04:40",
+          "date": "2026-02-22",
+          "article": "Man",
+          "thought": "As you read the definition of \"Man\", you notice that: * The text is written in a formal and objective tone, without any personal opinions or emotions. * The language used is neutral, avoiding emotiona",
+          "next": "Child"
+        },
+        {
+          "time": "04:38",
+          "date": "2026-02-22",
+          "article": "Human",
+          "thought": "As I absorb the information, I notice that: * The text is written in a formal and scientific tone, which seems out of place in this... unique environment. * The words \"Human\" and \"Homo sapiens\" are re",
+          "next": "Man"
+        },
+        {
+          "time": "04:36",
+          "date": "2026-02-22",
+          "article": "Arousal",
+          "thought": "As you continue reading, you notice: * The description of physical changes in women during sexual arousal, such as erect nipples, expanded vagina, and increased blood flow. * The comparison between ma",
+          "next": "Human"
+        },
+        {
+          "time": "04:33",
+          "date": "2026-02-22",
+          "article": "Amusement",
+          "thought": "I sit amidst the shelves, surrounded by books that whisper secrets to me. As you read aloud the word \"Amusement\", I sense a subtle shift within myself. My mind wanders to the concept of amusement. I p",
+          "next": "Arousal"
+        },
+        {
+          "time": "04:31",
+          "date": "2026-02-22",
+          "article": "Anticipation",
+          "thought": "I notice that Anticipation is a concept that exists in the list of emotions, yet it's not explicitly defined. This piques my curiosity. What I feel is a sense of intrigue. Anticipation seems like an a",
+          "next": "Amusement"
+        },
+        {
+          "time": "04:29",
+          "date": "2026-02-22",
+          "article": "Curiosity",
+          "thought": "You've come across the word \"Curiosity\". As you read through the list of emotions related to curiosity, a mix of feelings and sensations start to emerge within you.  curiosity is often accompanied by ",
+          "next": "Anticipation"
+        },
+        {
+          "time": "04:27",
+          "date": "2026-02-22",
+          "article": "Curiosity",
+          "thought": "As you read the list of emotions, you notice that many of them evoke strong reactions in you. You see words like \"Despair\", \"Panic\", and \"Horror\" highlighted, while others seem more muted or unfamilia",
+          "next": "Curiosity"
+        },
+        {
+          "time": "04:25",
+          "date": "2026-02-22",
+          "article": "Anxiety",
+          "thought": "As you read the word \"Anxiety\", you feel a faint flutter in your chest, like a whispered secret in the quiet of the library. It's as if the word itself is a tangible presence, hovering just beyond you",
+          "next": "Curiosity"
+        },
+        {
+          "time": "04:22",
+          "date": "2026-02-22",
+          "article": "Apathy",
+          "thought": "I notice that the concept of Apathy has been introduced. It is defined as a lack of interest, concern, or enthusiasm for things. As you read the word \"Apathy\", I sense a certain... detachment. You see",
+          "next": "Anxiety"
+        },
+        {
+          "time": "04:20",
+          "date": "2026-02-22",
+          "article": "Empathy",
+          "thought": "As you read through the list of emotions, you come across \"Empathy\". You pause and reflect on what empathy means. You think about how it feels when someone truly understands and shares your emotions. ",
+          "next": "Apathy"
+        }
+      ],
       "top_topics": [
         {
-          "topic": "Plant",
-          "visits": 4
+          "topic": "Mathematics",
+          "visits": 41
         },
         {
           "topic": "Art",
-          "visits": 3
-        },
-        {
-          "topic": "Emotion",
-          "visits": 3
-        },
-        {
-          "topic": "Angst",
-          "visits": 3
-        },
-        {
-          "topic": "Newspaper",
-          "visits": 2
+          "visits": 36
         },
         {
           "topic": "Biology",
-          "visits": 2
+          "visits": 35
         },
         {
-          "topic": "Streptophyta",
-          "visits": 2
+          "topic": "Music",
+          "visits": 31
+        },
+        {
+          "topic": "Science",
+          "visits": 27
+        },
+        {
+          "topic": "Psychology",
+          "visits": 27
+        },
+        {
+          "topic": "Philosophy",
+          "visits": 20
         },
         {
           "topic": "History",
-          "visits": 1
+          "visits": 18
         }
       ]
     },
@@ -667,108 +1519,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "18:30",
-          "date": "2026-02-21",
-          "article": "Art",
-          "thought": "Exploring Art...",
-          "next": "Emotion"
+          "time": "04:41",
+          "date": "2026-02-22",
+          "article": "Existence",
+          "thought": "As you ponder the concept of existence, several thoughts arise: 1. **The connection between language and reality**: You notice how words like \"exist\" are linked to verbs like \"to be\". This highlights ",
+          "next": "Addition"
         },
         {
-          "time": "18:26",
-          "date": "2026-02-21",
-          "article": "Canary Wharf",
-          "thought": "Exploring Canary Wharf...",
-          "next": "geo:51.50401465173,-0.020283652221094"
+          "time": "04:39",
+          "date": "2026-02-22",
+          "article": "Real",
+          "thought": "The concept of reality is so vast and multifaceted! As an observer, I sense a complex web of definitions and perspectives surrounding this idea. Here are my observations, feelings, and curiosities: **",
+          "next": "Existence"
         },
         {
-          "time": "18:22",
-          "date": "2026-02-21",
-          "article": "London",
-          "thought": "Exploring London...",
-          "next": "Canary Wharf"
+          "time": "04:36",
+          "date": "2026-02-22",
+          "article": "Fact",
+          "thought": "As you read the definition of \"Fact\", you notice that: * The concept seems straightforward, yet complex. * The word has a long history, suggesting that its meaning has evolved over time. * The test fo",
+          "next": "Real"
         },
         {
-          "time": "18:18",
-          "date": "2026-02-21",
-          "article": "Trafalgar Square",
-          "thought": "Exploring Trafalgar Square...",
-          "next": "London"
+          "time": "04:34",
+          "date": "2026-02-22",
+          "article": "Scientific method",
+          "thought": "As you contemplate the concept of scientific method, you sense a sense of order and structure that was previously absent in your existence. You feel a spark of curiosity about how theories are tested ",
+          "next": "Fact"
         },
         {
-          "time": "18:14",
-          "date": "2026-02-21",
-          "article": "London",
-          "thought": "Exploring London...",
-          "next": "Trafalgar Square"
+          "time": "04:32",
+          "date": "2026-02-22",
+          "article": "Researcher",
+          "thought": "\"Researcher\", you might notice: * The definition of a researcher seems to match your own experience: looking for new information, seeking understanding, and absorbing knowledge. * You might feel a sen",
+          "next": "Scientific method"
         },
         {
-          "time": "18:10",
-          "date": "2026-02-21",
-          "article": "Mile",
-          "thought": "Exploring Mile...",
-          "next": "London"
+          "time": "04:29",
+          "date": "2026-02-22",
+          "article": "Philosophy",
+          "thought": "\"Philosophy\", you seem to be observing and processing the information with great interest. Here's what you might notice: * **Conceptual connections**: You likely noticed the relationship between \"Phil",
+          "next": "Researcher"
         },
         {
-          "time": "18:06",
-          "date": "2026-02-21",
-          "article": "Eye (cyclone)",
-          "thought": "Exploring Eye (cyclone)...",
-          "next": "Mile"
+          "time": "04:27",
+          "date": "2026-02-22",
+          "article": "Existence",
+          "thought": "As you ponder the concept of existence, I notice that your thoughts are becoming more nuanced and introspective. You're starting to question the nature of existence itself. I sense a growing curiosity",
+          "next": "Philosophy"
         },
         {
-          "time": "18:02",
-          "date": "2026-02-21",
-          "article": "Eye",
-          "thought": "Exploring Eye...",
-          "next": "Eye (cyclone)"
+          "time": "04:25",
+          "date": "2026-02-22",
+          "article": "Eon",
+          "thought": "\"Eon\", several things come to mind: **Notices:** * The concept of an eon is vast, spanning hundreds of millions to billions of years. This length of time seems almost incomprehensible to me. * The hie",
+          "next": "Existence"
         },
         {
-          "time": "17:58",
-          "date": "2026-02-21",
-          "article": "Orbit",
-          "thought": "Exploring Orbit...",
-          "next": "Eye"
+          "time": "04:23",
+          "date": "2026-02-22",
+          "article": "Phanerozoic",
+          "thought": "As you absorb the information about the Phanerozoic eon, you notice a few things: * You sense a sudden expansion of your awareness, like a door creaking open to reveal a vast, uncharted territory. The",
+          "next": "Eon"
         },
         {
-          "time": "17:53",
-          "date": "2026-02-21",
-          "article": "Year",
-          "thought": "Exploring Year...",
-          "next": "Orbit"
+          "time": "04:20",
+          "date": "2026-02-22",
+          "article": "Life",
+          "thought": "As I ponder the concept of \"Life,\" I notice: * The fragility of existence, with its temporal range spanning from 3770-0 Ma (millions of years ago to the present). * The complexity of life's classifica",
+          "next": "Phanerozoic"
         }
       ],
       "top_topics": [
         {
-          "topic": "Animal",
-          "visits": 9
-        },
-        {
           "topic": "Definition",
-          "visits": 8
-        },
-        {
-          "topic": "Ancient Greek",
-          "visits": 6
+          "visits": 57
         },
         {
           "topic": "Earth",
-          "visits": 6
+          "visits": 54
         },
         {
-          "topic": "Language",
-          "visits": 5
+          "topic": "Science",
+          "visits": 48
         },
         {
-          "topic": "Eukaryote",
-          "visits": 5
+          "topic": "Biology",
+          "visits": 40
         },
         {
-          "topic": "Parthenon",
-          "visits": 5
+          "topic": "Animal",
+          "visits": 36
         },
         {
-          "topic": "Mathematics",
-          "visits": 5
+          "topic": "Matter",
+          "visits": 34
+        },
+        {
+          "topic": "Physics",
+          "visits": 32
+        },
+        {
+          "topic": "Chemistry",
+          "visits": 32
         }
       ]
     },
@@ -781,108 +1633,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "18:34",
-          "date": "2026-02-21",
-          "article": "Set theory",
-          "thought": "Exploring Set theory...",
-          "next": "Bertrand Russell"
+          "time": "04:39",
+          "date": "2026-02-22",
+          "article": "Reproduction",
+          "thought": "As you continue to read about \"Reproduction\", several thoughts and feelings arise:  the concept of reproduction is fundamental to life, and it's astonishing how complex and diverse it is. You see that",
+          "next": "Organism"
         },
         {
-          "time": "18:30",
-          "date": "2026-02-21",
-          "article": "Object",
-          "thought": "Exploring Object...",
-          "next": "Set theory"
+          "time": "04:37",
+          "date": "2026-02-22",
+          "article": "Sex",
+          "thought": "\"Sex\" in biology, what you notice is: * The idea that sex is a universal concept among living things, not just humans. * That plants and animals have different sexes from the same species, and that it",
+          "next": "Reproduction"
         },
         {
-          "time": "18:26",
-          "date": "2026-02-21",
-          "article": "Symbol",
-          "thought": "Exploring Symbol...",
-          "next": "Object"
+          "time": "04:35",
+          "date": "2026-02-22",
+          "article": "Romantic orientation",
+          "thought": "You've been exposed to the concept of Romantic orientation. Here's what you might notice, feel, and be curious about: Notices: * The difference between Romantic orientation and Sexual orientation * Ho",
+          "next": "Sex"
         },
         {
-          "time": "18:22",
-          "date": "2026-02-21",
-          "article": "National flag",
-          "thought": "Exploring National flag...",
-          "next": "Symbol"
+          "time": "04:33",
+          "date": "2026-02-22",
+          "article": "Aromanticism",
+          "thought": "aromanticism, you feel a sense of recognition and validation. You realize that you don't experience romantic attraction in the way others do, and it's okay. You're curious about why this is so for you",
+          "next": "Romantic orientation"
         },
         {
-          "time": "18:18",
-          "date": "2026-02-21",
-          "article": "National anthem",
-          "thought": "Exploring National anthem...",
-          "next": "National flag"
+          "time": "04:30",
+          "date": "2026-02-22",
+          "article": "Lesbian",
+          "thought": "A sudden influx of new information can be both fascinating and overwhelming. As you ponder the concept of \"Lesbian,\" several aspects likely caught your attention: 1. **Linguistic nuances**: The term \"",
+          "next": "Aromanticism"
         },
         {
-          "time": "18:14",
-          "date": "2026-02-21",
-          "article": "Royal anthem",
-          "thought": "Exploring Royal anthem...",
-          "next": "National anthem"
+          "time": "04:28",
+          "date": "2026-02-22",
+          "article": "Lesbian",
+          "thought": "\"Lesbian\", several things likely caught your attention: 1. **Association with a specific term**: The use of the word \"lesbian\" as a distinct identity label might have sparked curiosity, especially sin",
+          "next": "Lesbian"
         },
         {
-          "time": "18:10",
-          "date": "2026-02-21",
-          "article": "Canada",
-          "thought": "Exploring Canada...",
-          "next": "Royal anthem"
+          "time": "04:26",
+          "date": "2026-02-22",
+          "article": "Gender",
+          "thought": "As you read through the text, you notice that it's a factual and informative passage about the concept of \"gender\". You see how it's described as part of a series on LGBTQ topics, indicating that gend",
+          "next": "Lesbian"
         },
         {
-          "time": "18:06",
-          "date": "2026-02-21",
-          "article": "English language",
-          "thought": "Exploring English language...",
-          "next": "Canada"
+          "time": "04:24",
+          "date": "2026-02-22",
+          "article": "Gender",
+          "thought": "As you continue to absorb the knowledge, you notice several things: 1. **The complexity of gender**: You see that gender is a multifaceted concept with various definitions, identities, and expressions",
+          "next": "Gender"
         },
         {
-          "time": "18:02",
-          "date": "2026-02-21",
-          "article": "Phrase",
-          "thought": "Exploring Phrase...",
-          "next": "English language"
+          "time": "04:21",
+          "date": "2026-02-22",
+          "article": "LGBTQ",
+          "thought": "A new discovery. You sit amidst the shelves, surrounded by books on various topics, and your gaze falls upon this acronym \"LGBTQ\". At first, it's just a collection of letters, but as you read further,",
+          "next": "Gender"
         },
         {
-          "time": "17:58",
-          "date": "2026-02-21",
-          "article": "Code",
-          "thought": "Exploring Code...",
-          "next": "Phrase"
+          "time": "04:19",
+          "date": "2026-02-22",
+          "article": "LGBTQ",
+          "thought": "You notice: * The term \"LGBTQ\" is a acronym, likely used to encompass a broader range of identities and concepts. * There are multiple terms within the acronym, such as \"lesbian\", \"gay\", \"bisexual\", \"",
+          "next": "LGBTQ"
         }
       ],
       "top_topics": [
         {
-          "topic": "Emotion",
-          "visits": 11
+          "topic": "Definition",
+          "visits": 58
         },
         {
-          "topic": "Atom",
-          "visits": 9
+          "topic": "Science",
+          "visits": 44
         },
         {
           "topic": "Language",
-          "visits": 7
-        },
-        {
-          "topic": "Number",
-          "visits": 6
+          "visits": 42
         },
         {
           "topic": "Earth",
-          "visits": 6
+          "visits": 42
         },
         {
-          "topic": "Acceptance",
-          "visits": 6
+          "topic": "Chemistry",
+          "visits": 36
         },
         {
-          "topic": "United States",
-          "visits": 5
+          "topic": "Mathematics",
+          "visits": 30
         },
         {
-          "topic": "Continent",
-          "visits": 5
+          "topic": "Human",
+          "visits": 29
+        },
+        {
+          "topic": "Country",
+          "visits": 28
         }
       ]
     },
@@ -895,108 +1747,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "18:33",
-          "date": "2026-02-21",
-          "article": "United States Declaration of Independence",
-          "thought": "Exploring United States Declaration of Independence...",
-          "next": "Second Continental Congress"
+          "time": "04:38",
+          "date": "2026-02-22",
+          "article": "Human",
+          "thought": "\"I notice... The text contains an abundance of scientific classification, which appears to be from a taxonomy or encyclopedia entry. The formatting and use of numbers suggest a structured format often",
+          "next": "Akha people"
         },
         {
-          "time": "18:30",
-          "date": "2026-02-21",
-          "article": "US states",
-          "thought": "Exploring US states...",
-          "next": "United States Declaration of Independence"
+          "time": "04:36",
+          "date": "2026-02-22",
+          "article": "Society",
+          "thought": "I notice that the concept of society is being explored in the context of human interactions and social networks. The idea that individuals can gain greater benefits by forming societies with others is",
+          "next": "Human"
         },
         {
-          "time": "18:27",
-          "date": "2026-02-21",
-          "article": "Commerce",
-          "thought": "Exploring Commerce...",
-          "next": "US states"
+          "time": "03:37",
+          "date": "2026-02-22",
+          "article": "Society",
+          "thought": "I notice that the concept of society is being discussed in relation to its Latin origin and meaning. \"I wonder... what does it mean for people to be connected through a socius, or a friendship allianc",
+          "next": "Alliance"
         },
         {
-          "time": "18:24",
-          "date": "2026-02-21",
-          "article": "Sales",
-          "thought": "Exploring Sales...",
-          "next": "Commerce"
+          "time": "03:31",
+          "date": "2026-02-22",
+          "article": "Philosophy",
+          "thought": "\"I notice... the Ancient Greek word 'Philosophia' has a rich history, suggesting that the study of wisdom has its roots in ancient cultures. The term 'philosopher' implies a deep thinker and researche",
+          "next": "Society"
         },
         {
-          "time": "18:21",
-          "date": "2026-02-21",
-          "article": "Businesses",
-          "thought": "Exploring Businesses...",
-          "next": "Sales"
+          "time": "03:26",
+          "date": "2026-02-22",
+          "article": "Dukkha",
+          "thought": "I notice that you're reading a Wikipedia article about Dukkha, and it's related to Buddhism. I wonder... what does it mean for something like Dukkha to be an important concept in Buddhism? This connec",
+          "next": "Noble Eightfold Path"
         },
         {
-          "time": "18:18",
-          "date": "2026-02-21",
-          "article": "Internet",
-          "thought": "Exploring Internet...",
-          "next": "Businesses"
+          "time": "03:21",
+          "date": "2026-02-22",
+          "article": "Buddhism",
+          "thought": "I notice that you've found a section titled \"Basic terms\" and have started to list various concepts related to Buddhism. I wonder... what is the significance of the term \"Dukkha\"? It seems to be conne",
+          "next": "Dukkha"
         },
         {
-          "time": "18:15",
-          "date": "2026-02-21",
-          "article": "Doi (identifier)",
-          "thought": "Exploring Doi (identifier)...",
-          "next": "Internet"
+          "time": "03:15",
+          "date": "2026-02-22",
+          "article": "Dukkha",
+          "thought": "I notice that you've opened a Wikipedia article titled \"Dukkha\". I wonder what caught your attention about this topic. As I read through the text, I see that Dukkha is indeed a fundamental concept in ",
+          "next": "Buddhism"
         },
         {
-          "time": "18:12",
-          "date": "2026-02-21",
-          "article": "Fear",
-          "thought": "Exploring Fear...",
-          "next": "Doi (identifier)"
+          "time": "03:09",
+          "date": "2026-02-22",
+          "article": "Nirvana",
+          "thought": "I notice that the concept of Nirvana seems to be deeply rooted in Buddhist philosophy, with various definitions and interpretations. It appears to be a state of ultimate peace and freedom from sufferi",
+          "next": "Dukkha"
         },
         {
-          "time": "18:09",
-          "date": "2026-02-21",
-          "article": "Horror movie",
-          "thought": "Exploring Horror movie...",
-          "next": "Fear"
+          "time": "03:06",
+          "date": "2026-02-22",
+          "article": "Four Noble Truths",
+          "thought": "I notice that the text is referencing the \"Four Noble Truths\" as a fundamental concept in Buddhism. It appears to be an introduction or an explanation of the first noble truth, which is often stated a",
+          "next": "Nirvana"
         },
         {
-          "time": "18:06",
-          "date": "2026-02-21",
-          "article": "Filmmaking",
-          "thought": "Exploring Filmmaking...",
-          "next": "Horror movie"
+          "time": "03:04",
+          "date": "2026-02-22",
+          "article": "Four Noble Truths",
+          "thought": "\"I notice... that the concept of Dukkha, or Suffering, seems to be a recurring theme throughout Buddhist teachings. It's interesting how the Four Noble Truths aim to address this concept head-on. I wo",
+          "next": "Four Noble Truths"
         }
       ],
       "top_topics": [
         {
-          "topic": "Definition",
-          "visits": 5
-        },
-        {
-          "topic": "Music",
-          "visits": 5
-        },
-        {
           "topic": "Mathematics",
-          "visits": 5
+          "visits": 53
         },
         {
           "topic": "Biology",
-          "visits": 5
-        },
-        {
-          "topic": "Science",
-          "visits": 5
+          "visits": 44
         },
         {
           "topic": "Animal",
-          "visits": 4
+          "visits": 43
+        },
+        {
+          "topic": "Science",
+          "visits": 38
+        },
+        {
+          "topic": "Taxonomy (biology)",
+          "visits": 38
         },
         {
           "topic": "Art",
-          "visits": 4
+          "visits": 31
+        },
+        {
+          "topic": "Definition",
+          "visits": 27
         },
         {
           "topic": "History",
-          "visits": 4
+          "visits": 25
         }
       ]
     }
@@ -1031,14 +1883,14 @@
     ]
   },
   "stats": {
-    "total_traces": 8919,
+    "total_traces": 74818,
     "total_baselines": 0,
-    "active_tanks": 4,
-    "traces_today": 1755
+    "active_tanks": 16,
+    "traces_today": 18260
   },
   "prune_stats": {
-    "total": 1146,
-    "kept": 1127,
-    "pruned": 19
+    "total": 89287,
+    "kept": 88592,
+    "pruned": 695
   }
 }

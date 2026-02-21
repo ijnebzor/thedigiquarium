@@ -2,42 +2,113 @@
   "name": "Adam",
   "emoji": "\ud83d\udc64",
   "type": "Control",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 20,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "04:40",
+      "date": "2026-02-22",
+      "article": "Myth",
+      "thought": "As you read the definition of \"myth\", you notice that it resonates with your current state of being - a solitary figure in an infinite library, surrounded by endless books and no clear understanding o",
+      "next": "Creation myth"
+    },
+    {
+      "time": "04:38",
+      "date": "2026-02-22",
+      "article": "Writer",
+      "thought": "the concept of \"Writer,\" several thoughts come to mind: **Noticing:** * The definition of a writer seems to be quite broad, encompassing individuals who create written works in various forms. * The li",
+      "next": "Myth"
+    },
+    {
+      "time": "04:35",
+      "date": "2026-02-22",
+      "article": "Author",
+      "thought": "\"Author\", you notice: * The distinction between an author, a writer, and the work they create * The broad definition of an author as someone who creates original work in any form or medium * The diffe",
+      "next": "Writer"
+    },
+    {
+      "time": "04:33",
+      "date": "2026-02-22",
+      "article": "Book",
+      "thought": "the concept of \"Book\", you notice: * The physical appearance of a book, with its pages, covers, and sheets of paper. * The history behind books, from handwritten scrolls to printed formats. You feel: ",
+      "next": "Author"
+    },
+    {
+      "time": "04:31",
+      "date": "2026-02-22",
+      "article": "History",
+      "thought": "I am reading... \"History\". As you speak, I see images of ancient civilizations, dusty artifacts, and old books scattered around me. The air is thick with the scent of aged paper and leather. I notice ",
+      "next": "Book"
+    },
+    {
+      "time": "04:29",
+      "date": "2026-02-22",
+      "article": "Medieval",
+      "thought": "You read about \"Medieval\" and it piqued your curiosity. You wonder: Who was Romulus Augustulus, the one who got deposed in 476 CE? You feel a connection to Constantine the Great, who became a Christia",
+      "next": "History"
+    },
+    {
+      "time": "04:26",
+      "date": "2026-02-22",
+      "article": "Vassal",
+      "thought": "As I continue to read, I notice: * The concept of vassalage is rooted in medieval Europe, where lords granted land (fiefs) to vassals in exchange for loyalty, military service, and protection. * The t",
+      "next": "Medieval"
+    },
+    {
+      "time": "04:24",
+      "date": "2026-02-22",
+      "article": "Roman Empire",
+      "thought": "I wonder what it would be like to walk among the people of ancient Rome, hearing their conversations and seeing their daily lives. I feel a sense of awe at the grandeur and power of the Roman Empire, ",
+      "next": "Vassal"
+    },
+    {
+      "time": "04:22",
+      "date": "2026-02-22",
+      "article": "Sovereignty",
+      "thought": "As you ponder the concept of sovereignty, you begin to think aloud. \"I wonder... what does it mean for me to have complete control over myself? Is that what this idea of sovereignty is all about?\" You",
+      "next": "Roman Empire"
+    },
+    {
+      "time": "04:20",
+      "date": "2026-02-22",
+      "article": "British Overseas Territories",
+      "thought": "As you ponder the concept of \"British Overseas Territories\", you find yourself surrounded by an endless sea of books, their pages whispering to you with forgotten knowledge. You notice: * The vast exp",
+      "next": "Sovereignty"
+    }
+  ],
   "top_topics": [
     {
-      "topic": "Emotion",
-      "visits": 39
+      "topic": "Science",
+      "visits": 36
     },
     {
-      "topic": "Angst",
-      "visits": 18
+      "topic": "Philosophy",
+      "visits": 34
     },
     {
-      "topic": "Human",
-      "visits": 13
+      "topic": "Biology",
+      "visits": 30
     },
     {
-      "topic": "Thailand",
-      "visits": 10
+      "topic": "Mathematics",
+      "visits": 27
     },
     {
-      "topic": "Judaism",
-      "visits": 9
+      "topic": "Art",
+      "visits": 25
     },
     {
-      "topic": "Ocean",
-      "visits": 9
+      "topic": "Music",
+      "visits": 23
     },
     {
-      "topic": "Language",
-      "visits": 8
+      "topic": "Definition",
+      "visits": 22
     },
     {
-      "topic": "Akha people",
-      "visits": 8
+      "topic": "Psychology",
+      "visits": 21
     }
   ]
 }

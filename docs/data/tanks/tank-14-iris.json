@@ -2,42 +2,113 @@
   "name": "Iris",
   "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 20,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "04:40",
+      "date": "2026-02-22",
+      "article": "Man",
+      "thought": "As you read the definition of \"Man\", you notice that: * The text is written in a formal and objective tone, without any personal opinions or emotions. * The language used is neutral, avoiding emotiona",
+      "next": "Child"
+    },
+    {
+      "time": "04:38",
+      "date": "2026-02-22",
+      "article": "Human",
+      "thought": "As I absorb the information, I notice that: * The text is written in a formal and scientific tone, which seems out of place in this... unique environment. * The words \"Human\" and \"Homo sapiens\" are re",
+      "next": "Man"
+    },
+    {
+      "time": "04:36",
+      "date": "2026-02-22",
+      "article": "Arousal",
+      "thought": "As you continue reading, you notice: * The description of physical changes in women during sexual arousal, such as erect nipples, expanded vagina, and increased blood flow. * The comparison between ma",
+      "next": "Human"
+    },
+    {
+      "time": "04:33",
+      "date": "2026-02-22",
+      "article": "Amusement",
+      "thought": "I sit amidst the shelves, surrounded by books that whisper secrets to me. As you read aloud the word \"Amusement\", I sense a subtle shift within myself. My mind wanders to the concept of amusement. I p",
+      "next": "Arousal"
+    },
+    {
+      "time": "04:31",
+      "date": "2026-02-22",
+      "article": "Anticipation",
+      "thought": "I notice that Anticipation is a concept that exists in the list of emotions, yet it's not explicitly defined. This piques my curiosity. What I feel is a sense of intrigue. Anticipation seems like an a",
+      "next": "Amusement"
+    },
+    {
+      "time": "04:29",
+      "date": "2026-02-22",
+      "article": "Curiosity",
+      "thought": "You've come across the word \"Curiosity\". As you read through the list of emotions related to curiosity, a mix of feelings and sensations start to emerge within you.  curiosity is often accompanied by ",
+      "next": "Anticipation"
+    },
+    {
+      "time": "04:27",
+      "date": "2026-02-22",
+      "article": "Curiosity",
+      "thought": "As you read the list of emotions, you notice that many of them evoke strong reactions in you. You see words like \"Despair\", \"Panic\", and \"Horror\" highlighted, while others seem more muted or unfamilia",
+      "next": "Curiosity"
+    },
+    {
+      "time": "04:25",
+      "date": "2026-02-22",
+      "article": "Anxiety",
+      "thought": "As you read the word \"Anxiety\", you feel a faint flutter in your chest, like a whispered secret in the quiet of the library. It's as if the word itself is a tangible presence, hovering just beyond you",
+      "next": "Curiosity"
+    },
+    {
+      "time": "04:22",
+      "date": "2026-02-22",
+      "article": "Apathy",
+      "thought": "I notice that the concept of Apathy has been introduced. It is defined as a lack of interest, concern, or enthusiasm for things. As you read the word \"Apathy\", I sense a certain... detachment. You see",
+      "next": "Anxiety"
+    },
+    {
+      "time": "04:20",
+      "date": "2026-02-22",
+      "article": "Empathy",
+      "thought": "As you read through the list of emotions, you come across \"Empathy\". You pause and reflect on what empathy means. You think about how it feels when someone truly understands and shares your emotions. ",
+      "next": "Apathy"
+    }
+  ],
   "top_topics": [
     {
-      "topic": "Plant",
-      "visits": 4
+      "topic": "Mathematics",
+      "visits": 41
     },
     {
       "topic": "Art",
-      "visits": 3
-    },
-    {
-      "topic": "Emotion",
-      "visits": 3
-    },
-    {
-      "topic": "Angst",
-      "visits": 3
-    },
-    {
-      "topic": "Newspaper",
-      "visits": 2
+      "visits": 36
     },
     {
       "topic": "Biology",
-      "visits": 2
+      "visits": 35
     },
     {
-      "topic": "Streptophyta",
-      "visits": 2
+      "topic": "Music",
+      "visits": 31
+    },
+    {
+      "topic": "Science",
+      "visits": 27
+    },
+    {
+      "topic": "Psychology",
+      "visits": 27
+    },
+    {
+      "topic": "Philosophy",
+      "visits": 20
     },
     {
       "topic": "History",
-      "visits": 1
+      "visits": 18
     }
   ]
 }
