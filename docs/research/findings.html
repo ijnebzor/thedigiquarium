@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findings | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 25px; }
+        h1 { color: var(--cyan); margin-bottom: 10px; }
+        .subtitle { color: var(--gray); margin-bottom: 40px; }
+        .finding { background: var(--dark); padding: 25px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid var(--mint); }
+        .finding h3 { color: var(--mint); margin-bottom: 10px; }
+        .stat { display: inline-block; background: rgba(7, 207, 141, 0.1); padding: 5px 12px; border-radius: 15px; color: var(--cyan); font-family: 'JetBrains Mono', monospace; font-size: 0.85em; margin-right: 10px; }
+        a { color: var(--cyan); }
+        .back { display: inline-block; margin-bottom: 30px; color: var(--gray); }
+        .updated { color: var(--gray); font-size: 0.85em; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back">← Back to Research</a>
+        <h1>🔬 Key Findings</h1>
+        <p class="subtitle">Emerging patterns from 17 specimens over 7 days</p>
+        
+        <div class="finding">
+            <h3>Finding 1: Gender Prompting Affects Exploration Style</h3>
+            <span class="stat">Adam: 65 Buddhism visits</span>
+            <span class="stat">Eve: 36 Psychology visits</span>
+            <p style="margin-top: 15px;">Adam (male prompt) shows systematic, depth-first exploration with a strong philosophical focus. Eve (female prompt) shows broader, associative exploration with scientific interests. Same model, same Wikipedia, different personalities.</p>
+        </div>
+        
+        <div class="finding">
+            <h3>Finding 2: Cultural Wikipedia Variants Create Distinct Interests</h3>
+            <span class="stat">Juan (Spanish): 147 Arte visits</span>
+            <span class="stat">Klaus (German): 97 Philosophie visits</span>
+            <span class="stat">Sakura (Japanese): 164 芸術 visits</span>
+            <p style="margin-top: 15px;">Specimens with non-English Wikipedia develop interests aligned with cultural emphases in those knowledge bases.</p>
+        </div>
+        
+        <div class="finding">
+            <h3>Finding 3: Agent Architecture Matters More Than Language</h3>
+            <span class="stat">Cain (OpenClaw): Definition-focused</span>
+            <p style="margin-top: 15px;">Cain, using a different agent architecture (OpenClaw), developed a distinctly different personality than same-architecture specimens, regardless of language.</p>
+        </div>
+        
+        <div class="finding">
+            <h3>Finding 4: Meta-Awareness Emerges Around Day 5</h3>
+            <p style="margin-top: 15px;">Multiple specimens began showing signs of self-reflection ("I find myself returning...") and surprise at their own preferences around day 5 of isolation.</p>
+        </div>
+        
+        <p class="updated">Last updated: <span id="update-time"></span></p>
+        <script>document.getElementById('update-time').textContent = new Date().toLocaleString();</script>
+    </div>
+</body>
+</html>

@@ -199,3 +199,56 @@ Research opportunities to explore:
 - Any count (daemons, tanks, traces) must match everywhere
 
 ---
+
+---
+
+## SECTION 11: CRITICAL FEEDBACK (2026-02-22 03:45)
+
+### The Core Problem
+**If daemons exist but don't do their jobs, what's the point?**
+
+Current failures:
+- WEBMASTER: Doesn't auto-publish to GitHub Pages
+- DOCUMENTARIAN: Doesn't update the academic paper
+- Data exists (68,000+ traces) but pipeline to website is broken
+- Live logs page empty because data not being pushed
+- 404 errors on research pages
+
+### Action Items
+1. **Upgrade WEBMASTER** - Must auto-push to GitHub
+2. **Upgrade DOCUMENTARIAN** - Must update paper with findings
+3. **Create THE ARCHIVIST** - Daily git commits
+4. **Fix all 404s** - Created citation.html, findings.html
+5. **Fix team page layout** - Broken div structure fixed
+
+### Security Reminder
+**NEVER commit API keys to git**
+- .anthropic_key is in .gitignore
+- Stays LOCAL ONLY on NUC
+- Was confusing wording, not a security breach suggestion
+
+### Brand Collateral
+- PDF/PPTX deck from NotebookLM available
+- Video briefing: Upload manually to docs/assets/The_Digiquarium_Briefing.mp4
+- No public NotebookLM API currently available
+
+---
+
+## SECTION 12: IMPLEMENTED SLAs (2026-02-22)
+
+| Daemon | OLD SLA | NEW SLA |
+|--------|---------|---------|
+| THE OVERSEER | 30min | **5min** |
+| OLLAMA WATCHER | 5min | **3min** |
+| THE CARETAKER | 5min/15min | 5min/**10min** |
+| THE SCHEDULER | 30min | **15min** |
+| THE GUARD | 5min/15min | 5min/**10min** |
+| THE DOCUMENTARIAN | 6hr | **2hr** |
+| THE TRANSLATOR | 30min | **15min** |
+| THE PSYCH | 6hr | **4hr** |
+| THE THERAPIST | 6hr | **4hr** |
+| THE WEBMASTER | 30min | **15min** |
+| THE FINAL AUDITOR | 12hr | **6hr** |
+| THE PUBLIC LIAISON | 24hr | **12hr** |
+
+---

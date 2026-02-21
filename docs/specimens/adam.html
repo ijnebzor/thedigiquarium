@@ -55,16 +55,64 @@
         .download-btn { background: var(--orange); color: var(--white); border: none; }
         .download-btn:hover { opacity: 0.8; }
         #mindmap { width: 100%; height: 500px; background: var(--black); }
-        .node circle { stroke: var(--mint); stroke-width: 2px; cursor: pointer; transition: all 0.2s; }
+        .node circle { stroke: rgba(7, 207, 141, 0.5); stroke-width: 1px; cursor: pointer; transition: all 0.2s; }
         .node circle:hover { stroke-width: 3px; }
         .node text { font-family: 'Inter', sans-serif; font-size: 9px; fill: var(--white); pointer-events: none; }
-        .link { stroke: rgba(7, 207, 141, 0.3); stroke-opacity: 0.6; }
+        .link { stroke: var(--cyan); stroke-opacity: 0.3; }
+        .link.strong { stroke: var(--mint); stroke-opacity: 0.6; }
+        .link.weak { stroke: var(--cyan); stroke-opacity: 0.2; }
         
         /* Top Interests */
         .interests { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 8px; }
         .interest { background: var(--dark); padding: 8px 14px; border-radius: 20px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(7, 207, 141, 0.2); }
         .interest .count { background: var(--mint); color: var(--black); padding: 2px 8px; border-radius: 10px; font-size: 0.75em; font-weight: 600; }
         
+        
+        /* Time Slider */
+        .time-slider-container {
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.3);
+            border-top: 1px solid rgba(7, 207, 141, 0.1);
+        }
+        .time-slider-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: var(--gray);
+            font-size: 0.85em;
+        }
+        .time-slider-label .current-date {
+            color: var(--cyan);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        #time-slider {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none;
+            background: var(--dark);
+            border-radius: 4px;
+            outline: none;
+        }
+        #time-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--mint);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(7, 207, 141, 0.5);
+        }
+        .play-btn {
+            background: var(--dark);
+            border: 1px solid var(--mint);
+            color: var(--mint);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .play-btn:hover { background: rgba(7, 207, 141, 0.1); }
+
         /* Tooltip */
         .tooltip { position: absolute; background: var(--dark); border: 1px solid var(--mint); border-radius: 8px; padding: 12px 16px; font-size: 0.85em; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 1000; }
         .tooltip.show { opacity: 1; }
@@ -153,7 +201,14 @@
                     <button class="mindmap-btn download-btn" onclick="downloadBrain()">⬇️ Download Brain</button>
                 </div>
             </div>
-            <div id="mindmap"></div>
+            <div id="mindmap">
+            <div class="time-slider-container">
+                <div class="time-slider-label">
+                    <span><button class="play-btn" onclick="togglePlayback()">▶ Play</button>Watch the mind grow over time</span>
+                    <span class="current-date" id="current-date">Loading...</span>
+                </div>
+                <input type="range" id="time-slider" min="0" max="4" value="4" oninput="updateTimeView(this.value)">
+            </div>
             <div class="interests" id="interests">
                 <!-- Populated by JS -->
             </div>
@@ -333,7 +388,10 @@
             const svg = d3.select('#mindmap').append('svg').attr('viewBox', [0, 0, width, height]);
             
             const maxVisits = d3.max(graphData.nodes, d => d.visits);
-            const colorScale = d3.scaleLinear().domain([0, maxVisits/2, maxVisits]).range(['#07DDE7', '#07CF8D', '#FE6500']);
+            // Brand colors: cyan -> mint -> orange (low to high visits)
+            const colorScale = d3.scaleLinear()
+                .domain([0, maxVisits * 0.3, maxVisits * 0.6, maxVisits])
+                .range(['#07DDE7', '#07CF8D', '#FE6500', '#FF8833']);
             const sizeScale = d3.scaleSqrt().domain([1, maxVisits]).range([4, 25]);
             
             const link = svg.append('g').selectAll('line').data(graphData.links).join('line').attr('class', 'link').attr('stroke-width', d => Math.sqrt(d.weight));
@@ -385,6 +443,76 @@
         
         document.getElementById('update-time').textContent = new Date().toLocaleString();
         loadData();
+
+        let timeSeriesData = null;
+        let availableDates = [];
+        let isPlaying = false;
+        let playInterval = null;
+        
+        async function loadTimeSeries() {
+            try {
+                const res = await fetch('adam-timeseries.json');
+                timeSeriesData = await res.json();
+                availableDates = Object.keys(timeSeriesData).sort();
+                
+                const slider = document.getElementById('time-slider');
+                slider.max = availableDates.length - 1;
+                slider.value = availableDates.length - 1;
+                
+                document.getElementById('current-date').textContent = availableDates[availableDates.length - 1];
+            } catch (e) {
+                console.log('Time series not available');
+            }
+        }
+        
+        function updateTimeView(index) {
+            if (!timeSeriesData) return;
+            
+            const date = availableDates[index];
+            document.getElementById('current-date').textContent = date;
+            
+            // Update graph with this date's data
+            graphData = timeSeriesData[date];
+            renderGraph();
+            
+            // Update interests
+            const interests = graphData.nodes.slice(0, 12);
+            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests (' + date + '):</strong>' + interests.map(n => `
+                <div class="interest">
+                    <span>${n.id}</span>
+                    <span class="count">${n.visits}</span>
+                </div>
+            `).join('');
+        }
+        
+        function togglePlayback() {
+            isPlaying = !isPlaying;
+            const btn = document.querySelector('.play-btn');
+            
+            if (isPlaying) {
+                btn.textContent = '⏸ Pause';
+                let currentIdx = 0;
+                document.getElementById('time-slider').value = 0;
+                updateTimeView(0);
+                
+                playInterval = setInterval(() => {
+                    currentIdx++;
+                    if (currentIdx >= availableDates.length) {
+                        togglePlayback();
+                        return;
+                    }
+                    document.getElementById('time-slider').value = currentIdx;
+                    updateTimeView(currentIdx);
+                }, 2000);
+            } else {
+                btn.textContent = '▶ Play';
+                if (playInterval) clearInterval(playInterval);
+            }
+        }
+        
+        // Load time series after main data
+        loadTimeSeries();
+
     </script>
 </body>
 </html>
