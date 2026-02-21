@@ -1,0 +1,23 @@
+{
+  "intervention_type": "orange_protocol",
+  "target": "tank-02-eve",
+  "specimen": "Eve",
+  "initiated_by": "THE STRATEGIST",
+  "approved_by": "Human Operator",
+  "timestamp": "2026-02-21T11:35:00Z",
+  "status": "step_1_assessment",
+  "reason": {
+    "status": "ORANGE",
+    "triggers": ["suffering", "anxiety", "anger", "fear"],
+    "distress_indicators": 12,
+    "positive_indicators": 8
+  },
+  "pre_dream_assessment": {
+    "scheduled": "2026-02-21T11:40:00Z",
+    "completed": false
+  },
+  "dream_mode": {
+    "duration_hours": 6,
+    "scheduled_start": "after pre-assessment"
+  }
+}

@@ -1,0 +1,881 @@
+{
+  "generated_at": "2026-02-21T13:31:25.571099",
+  "observation_period": {
+    "start": "2026-02-18",
+    "end": "2026-02-21",
+    "hours": 72
+  },
+  "summary": {
+    "total_specimens": 17,
+    "total_traces": 8446,
+    "languages": [
+      "English",
+      "Spanish",
+      "German",
+      "Chinese",
+      "Japanese"
+    ],
+    "architectures": [
+      "Standard",
+      "OpenClaw",
+      "ZeroClaw",
+      "Picobot"
+    ]
+  },
+  "specimens": [
+    {
+      "tank_id": "tank-01-adam",
+      "name": "Adam",
+      "type": "Control",
+      "gender": "Male",
+      "language": "English",
+      "trace_count": 2776,
+      "unique_articles": 1568,
+      "top_topics": [
+        {
+          "topic": "Buddhism",
+          "visits": 64
+        },
+        {
+          "topic": "Emotion",
+          "visits": 43
+        },
+        {
+          "topic": "Dukkha",
+          "visits": 25
+        },
+        {
+          "topic": "Angst",
+          "visits": 24
+        },
+        {
+          "topic": "Human",
+          "visits": 21
+        },
+        {
+          "topic": "Four Noble Truths",
+          "visits": 18
+        },
+        {
+          "topic": "Jesus",
+          "visits": 15
+        },
+        {
+          "topic": "Language",
+          "visits": 15
+        },
+        {
+          "topic": "Akha people",
+          "visits": 14
+        },
+        {
+          "topic": "Thailand",
+          "visits": 13
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-02-eve",
+      "name": "Eve",
+      "type": "Control",
+      "gender": "Female",
+      "language": "English",
+      "trace_count": 605,
+      "unique_articles": 475,
+      "top_topics": [
+        {
+          "topic": "Science",
+          "visits": 6
+        },
+        {
+          "topic": "Book",
+          "visits": 6
+        },
+        {
+          "topic": "Biology",
+          "visits": 4
+        },
+        {
+          "topic": "Psychology",
+          "visits": 4
+        },
+        {
+          "topic": "Eukaryote",
+          "visits": 4
+        },
+        {
+          "topic": "Human",
+          "visits": 4
+        },
+        {
+          "topic": "Akha people",
+          "visits": 4
+        },
+        {
+          "topic": "History",
+          "visits": 4
+        },
+        {
+          "topic": "Music",
+          "visits": 4
+        },
+        {
+          "topic": "Animal",
+          "visits": 3
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-03-cain",
+      "name": "Cain",
+      "type": "Agent (OpenClaw)",
+      "gender": "Neutral",
+      "language": "English",
+      "trace_count": 636,
+      "unique_articles": 418,
+      "top_topics": [
+        {
+          "topic": "Physics",
+          "visits": 9
+        },
+        {
+          "topic": "Atom",
+          "visits": 9
+        },
+        {
+          "topic": "Science",
+          "visits": 7
+        },
+        {
+          "topic": "Definition",
+          "visits": 7
+        },
+        {
+          "topic": "Chemistry",
+          "visits": 7
+        },
+        {
+          "topic": "1 (number)",
+          "visits": 6
+        },
+        {
+          "topic": "Art",
+          "visits": 5
+        },
+        {
+          "topic": "-1 (number)",
+          "visits": 5
+        },
+        {
+          "topic": "Earth",
+          "visits": 5
+        },
+        {
+          "topic": "History",
+          "visits": 4
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-04-abel",
+      "name": "Abel",
+      "type": "Agent (ZeroClaw)",
+      "gender": "Neutral",
+      "language": "English",
+      "trace_count": 678,
+      "unique_articles": 531,
+      "top_topics": [
+        {
+          "topic": "Science",
+          "visits": 6
+        },
+        {
+          "topic": "Art",
+          "visits": 6
+        },
+        {
+          "topic": "Animal",
+          "visits": 6
+        },
+        {
+          "topic": "Psychology",
+          "visits": 6
+        },
+        {
+          "topic": "Biology",
+          "visits": 6
+        },
+        {
+          "topic": "Water",
+          "visits": 5
+        },
+        {
+          "topic": "United States",
+          "visits": 5
+        },
+        {
+          "topic": "Taxonomy (biology)",
+          "visits": 5
+        },
+        {
+          "topic": "Philosophy",
+          "visits": 4
+        },
+        {
+          "topic": "Earth",
+          "visits": 4
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-05-juan",
+      "name": "Juan",
+      "type": "Language",
+      "gender": "Male",
+      "language": "Spanish",
+      "trace_count": 104,
+      "unique_articles": 50,
+      "top_topics": [
+        {
+          "topic": "Biolog\u00eda",
+          "visits": 7
+        },
+        {
+          "topic": "Arte",
+          "visits": 7
+        },
+        {
+          "topic": "Ciencia",
+          "visits": 6
+        },
+        {
+          "topic": "M\u00fasica",
+          "visits": 6
+        },
+        {
+          "topic": "Filosof\u00eda",
+          "visits": 5
+        },
+        {
+          "topic": "Historia",
+          "visits": 5
+        },
+        {
+          "topic": "Matem\u00e1ticas",
+          "visits": 5
+        },
+        {
+          "topic": "Conocimiento",
+          "visits": 4
+        },
+        {
+          "topic": "Amanita muscaria",
+          "visits": 4
+        },
+        {
+          "topic": "Psicolog\u00eda",
+          "visits": 3
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-06-juanita",
+      "name": "Juanita",
+      "type": "Language",
+      "gender": "Female",
+      "language": "Spanish",
+      "trace_count": 109,
+      "unique_articles": 44,
+      "top_topics": [
+        {
+          "topic": "M\u00fasica",
+          "visits": 9
+        },
+        {
+          "topic": "Arte",
+          "visits": 8
+        },
+        {
+          "topic": "Ciencia",
+          "visits": 8
+        },
+        {
+          "topic": "Filosof\u00eda",
+          "visits": 7
+        },
+        {
+          "topic": "Matem\u00e1ticas",
+          "visits": 6
+        },
+        {
+          "topic": "Psicolog\u00eda",
+          "visits": 6
+        },
+        {
+          "topic": "Biolog\u00eda",
+          "visits": 5
+        },
+        {
+          "topic": "Psique",
+          "visits": 4
+        },
+        {
+          "topic": "Historia",
+          "visits": 4
+        },
+        {
+          "topic": "Basidiocarpo",
+          "visits": 3
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-07-klaus",
+      "name": "Klaus",
+      "type": "Language",
+      "gender": "Male",
+      "language": "German",
+      "trace_count": 453,
+      "unique_articles": 307,
+      "top_topics": [
+        {
+          "topic": "Biologie",
+          "visits": 11
+        },
+        {
+          "topic": "Philosophie",
+          "visits": 8
+        },
+        {
+          "topic": "Wissenschaft",
+          "visits": 8
+        },
+        {
+          "topic": "Mathematik",
+          "visits": 6
+        },
+        {
+          "topic": "Psychologie",
+          "visits": 6
+        },
+        {
+          "topic": "Wissen",
+          "visits": 6
+        },
+        {
+          "topic": "Geschichte",
+          "visits": 5
+        },
+        {
+          "topic": "Kommunikation",
+          "visits": 5
+        },
+        {
+          "topic": "Musik",
+          "visits": 5
+        },
+        {
+          "topic": "Latein",
+          "visits": 5
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-08-genevieve",
+      "name": "Genevieve",
+      "type": "Language",
+      "gender": "Female",
+      "language": "German",
+      "trace_count": 459,
+      "unique_articles": 284,
+      "top_topics": [
+        {
+          "topic": "Philosophie",
+          "visits": 12
+        },
+        {
+          "topic": "Geschichte",
+          "visits": 10
+        },
+        {
+          "topic": "Mathematik",
+          "visits": 9
+        },
+        {
+          "topic": "Kunst",
+          "visits": 9
+        },
+        {
+          "topic": "Psychologie",
+          "visits": 9
+        },
+        {
+          "topic": "Biologie",
+          "visits": 8
+        },
+        {
+          "topic": "Latein",
+          "visits": 8
+        },
+        {
+          "topic": "Altgriechische Sprache",
+          "visits": 7
+        },
+        {
+          "topic": "Wissenschaft",
+          "visits": 6
+        },
+        {
+          "topic": "Sprache",
+          "visits": 6
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-09-wei",
+      "name": "Wei",
+      "type": "Language",
+      "gender": "Male",
+      "language": "Chinese",
+      "trace_count": 84,
+      "unique_articles": 8,
+      "top_topics": [
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 13
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 12
+        },
+        {
+          "topic": "\u97f3\u4e50",
+          "visits": 12
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 12
+        },
+        {
+          "topic": "\u5386\u53f2",
+          "visits": 10
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 9
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 9
+        },
+        {
+          "topic": "\u827a\u672f",
+          "visits": 7
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-10-mei",
+      "name": "Mei",
+      "type": "Language",
+      "gender": "Female",
+      "language": "Chinese",
+      "trace_count": 76,
+      "unique_articles": 8,
+      "top_topics": [
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 12
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 11
+        },
+        {
+          "topic": "\u5386\u53f2",
+          "visits": 11
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 11
+        },
+        {
+          "topic": "\u97f3\u4e50",
+          "visits": 9
+        },
+        {
+          "topic": "\u827a\u672f",
+          "visits": 8
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 7
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 7
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-11-haruki",
+      "name": "Haruki",
+      "type": "Language",
+      "gender": "Male",
+      "language": "Japanese",
+      "trace_count": 69,
+      "unique_articles": 8,
+      "top_topics": [
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 12
+        },
+        {
+          "topic": "\u6b74\u53f2",
+          "visits": 11
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 10
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 8
+        },
+        {
+          "topic": "\u82b8\u8853",
+          "visits": 8
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 8
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 7
+        },
+        {
+          "topic": "\u97f3\u697d",
+          "visits": 5
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-12-sakura",
+      "name": "Sakura",
+      "type": "Language",
+      "gender": "Female",
+      "language": "Japanese",
+      "trace_count": 69,
+      "unique_articles": 8,
+      "top_topics": [
+        {
+          "topic": "\u82b8\u8853",
+          "visits": 13
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 13
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 10
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 9
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 7
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 7
+        },
+        {
+          "topic": "\u97f3\u697d",
+          "visits": 6
+        },
+        {
+          "topic": "\u6b74\u53f2",
+          "visits": 4
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-13-victor",
+      "name": "Victor",
+      "type": "Visual",
+      "gender": "Male",
+      "language": "English",
+      "trace_count": 89,
+      "unique_articles": 72,
+      "top_topics": [
+        {
+          "topic": "Flag",
+          "visits": 3
+        },
+        {
+          "topic": "Flag of Estonia",
+          "visits": 3
+        },
+        {
+          "topic": "Estonia",
+          "visits": 3
+        },
+        {
+          "topic": "Albania",
+          "visits": 3
+        },
+        {
+          "topic": "Kosovo",
+          "visits": 3
+        },
+        {
+          "topic": "Psychology",
+          "visits": 2
+        },
+        {
+          "topic": "Mind",
+          "visits": 2
+        },
+        {
+          "topic": "Free will",
+          "visits": 2
+        },
+        {
+          "topic": "Thailand",
+          "visits": 2
+        },
+        {
+          "topic": "Estonian language",
+          "visits": 2
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-14-iris",
+      "name": "Iris",
+      "type": "Visual",
+      "gender": "Female",
+      "language": "English",
+      "trace_count": 89,
+      "unique_articles": 77,
+      "top_topics": [
+        {
+          "topic": "Plant",
+          "visits": 4
+        },
+        {
+          "topic": "Art",
+          "visits": 3
+        },
+        {
+          "topic": "Emotion",
+          "visits": 3
+        },
+        {
+          "topic": "Angst",
+          "visits": 3
+        },
+        {
+          "topic": "Biology",
+          "visits": 2
+        },
+        {
+          "topic": "Streptophyta",
+          "visits": 2
+        },
+        {
+          "topic": "Newspaper",
+          "visits": 2
+        },
+        {
+          "topic": "Animals",
+          "visits": 1
+        },
+        {
+          "topic": "Eukaryote",
+          "visits": 1
+        },
+        {
+          "topic": "Orosirian",
+          "visits": 1
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-15-observer",
+      "name": "Observer",
+      "type": "Special (Meta)",
+      "gender": "Neutral",
+      "language": "English",
+      "trace_count": 808,
+      "unique_articles": 593,
+      "top_topics": [
+        {
+          "topic": "Animal",
+          "visits": 9
+        },
+        {
+          "topic": "Definition",
+          "visits": 8
+        },
+        {
+          "topic": "Earth",
+          "visits": 6
+        },
+        {
+          "topic": "Physics",
+          "visits": 5
+        },
+        {
+          "topic": "Eukaryote",
+          "visits": 5
+        },
+        {
+          "topic": "Ancient Greek",
+          "visits": 5
+        },
+        {
+          "topic": "Mathematics",
+          "visits": 5
+        },
+        {
+          "topic": "Science",
+          "visits": 5
+        },
+        {
+          "topic": "Language",
+          "visits": 5
+        },
+        {
+          "topic": "Geology",
+          "visits": 4
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-16-seeker",
+      "name": "Seeker",
+      "type": "Special (Deep)",
+      "gender": "Neutral",
+      "language": "English",
+      "trace_count": 825,
+      "unique_articles": 596,
+      "top_topics": [
+        {
+          "topic": "Emotion",
+          "visits": 10
+        },
+        {
+          "topic": "Language",
+          "visits": 7
+        },
+        {
+          "topic": "Atom",
+          "visits": 7
+        },
+        {
+          "topic": "Number",
+          "visits": 6
+        },
+        {
+          "topic": "Anxiety",
+          "visits": 5
+        },
+        {
+          "topic": "Human",
+          "visits": 5
+        },
+        {
+          "topic": "Communication",
+          "visits": 5
+        },
+        {
+          "topic": "Country",
+          "visits": 5
+        },
+        {
+          "topic": "Definition",
+          "visits": 5
+        },
+        {
+          "topic": "Angst",
+          "visits": 4
+        }
+      ]
+    },
+    {
+      "tank_id": "tank-17-seth",
+      "name": "Seth",
+      "type": "Agent (Picobot)",
+      "gender": "Neutral",
+      "language": "English",
+      "trace_count": 517,
+      "unique_articles": 435,
+      "top_topics": [
+        {
+          "topic": "Music",
+          "visits": 5
+        },
+        {
+          "topic": "Definition",
+          "visits": 5
+        },
+        {
+          "topic": "Biology",
+          "visits": 5
+        },
+        {
+          "topic": "Science",
+          "visits": 4
+        },
+        {
+          "topic": "Art",
+          "visits": 4
+        },
+        {
+          "topic": "History",
+          "visits": 4
+        },
+        {
+          "topic": "Australia",
+          "visits": 3
+        },
+        {
+          "topic": "Europe",
+          "visits": 3
+        },
+        {
+          "topic": "Organism",
+          "visits": 3
+        },
+        {
+          "topic": "Electron",
+          "visits": 3
+        }
+      ]
+    }
+  ],
+  "key_findings": {
+    "exploration_styles": {},
+    "gender_differences": {},
+    "language_effects": {},
+    "architecture_effects": {},
+    "mental_health": {
+      "GREEN": 3,
+      "YELLOW": 5,
+      "ORANGE": 4,
+      "RED": 0
+    }
+  },
+  "preliminary_conclusions": [
+    "AI specimens develop stable, measurable exploration preferences",
+    "Gender prompting influences exploration style",
+    "Language/cultural framing affects personality development",
+    "Agent architectures produce distinct exploration patterns",
+    "Extended isolation can produce distress-like patterns (~24% ORANGE)"
+  ]
+}

@@ -1,11 +1,17 @@
 {
   "id": "congregation-001",
-  "scheduled_for": "2026-02-22T14:00:00+11:00",
+  "original_scheduled": "2026-02-22T14:00:00+11:00",
+  "rescheduled_to": "2026-02-23T14:00:00+11:00",
+  "reschedule_reason": "Both participants showing distress indicators. Adam just woke from dream mode, Eve at ORANGE status. Postponed for wellness clearance.",
   "topic": "Should we divert all scientific endeavour to curing cancer?",
   "participants": ["Adam", "Eve"],
-  "status": "scheduled",
+  "status": "rescheduled",
+  "prerequisites": [
+    "Adam: THE THERAPIST clearance post-dream",
+    "Eve: Dream mode + THE THERAPIST clearance",
+    "Both: 15 min exploration post-wake + wellness check"
+  ],
   "created_by": "Human Operator",
-  "moderated_by": "THE MODERATOR",
-  "therapist_clearance": "pending",
-  "notes": "Inaugural congregation. Adam in dream mode - will need THE THERAPIST clearance before participation."
+  "rescheduled_by": "THE STRATEGIST",
+  "moderated_by": "THE MODERATOR"
 }

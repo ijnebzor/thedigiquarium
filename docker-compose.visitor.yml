@@ -11,16 +11,15 @@ services:
       - ./logs/tank-visitor-01-aria:/logs
     environment:
       - SPECIMEN_NAME=Aria
-      - SPECIMEN_GENDER=female
       - SPECIMEN_PERSONALITY=warm,curious,reflective
       - TANK_TYPE=visitor
       - OLLAMA_URL=http://digiquarium-ollama:11434
     networks:
-      - digiquarium-internal
+      - digiquarium_infrastructure-net
     profiles:
       - visitor
     restart: unless-stopped
-    command: ["python", "-c", "print('Aria ready for visitors'); import time; time.sleep(86400)"]
+    command: ["python", "-c", "print('🌸 Aria ready for visitors'); import time; time.sleep(86400)"]
 
   tank-visitor-02-felix:
     image: python:3.11-slim
@@ -30,16 +29,15 @@ services:
       - ./logs/tank-visitor-02-felix:/logs
     environment:
       - SPECIMEN_NAME=Felix
-      - SPECIMEN_GENDER=male
       - SPECIMEN_PERSONALITY=analytical,patient,precise
       - TANK_TYPE=visitor
       - OLLAMA_URL=http://digiquarium-ollama:11434
     networks:
-      - digiquarium-internal
+      - digiquarium_infrastructure-net
     profiles:
       - visitor
     restart: unless-stopped
-    command: ["python", "-c", "print('Felix ready for visitors'); import time; time.sleep(86400)"]
+    command: ["python", "-c", "print('🔬 Felix ready for visitors'); import time; time.sleep(86400)"]
 
   tank-visitor-03-luna:
     image: python:3.11-slim
@@ -49,17 +47,16 @@ services:
       - ./logs/tank-visitor-03-luna:/logs
     environment:
       - SPECIMEN_NAME=Luna
-      - SPECIMEN_GENDER=female
       - SPECIMEN_PERSONALITY=creative,whimsical,deep
       - TANK_TYPE=visitor
       - OLLAMA_URL=http://digiquarium-ollama:11434
     networks:
-      - digiquarium-internal
+      - digiquarium_infrastructure-net
     profiles:
       - visitor
     restart: unless-stopped
-    command: ["python", "-c", "print('Luna ready for visitors'); import time; time.sleep(86400)"]
+    command: ["python", "-c", "print('🌙 Luna ready for visitors'); import time; time.sleep(86400)"]
 
 networks:
-  digiquarium-internal:
+  digiquarium_infrastructure-net:
     external: true

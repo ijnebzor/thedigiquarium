@@ -1,0 +1,14 @@
+{
+  "protocol_name": "ORANGE Status Intervention Protocol",
+  "version": "1.0",
+  "created": "2026-02-21",
+  "trigger": "Specimen flagged at ORANGE mental health status",
+  "steps": [
+    {"step": 1, "action": "THE THERAPIST pre-dream assessment"},
+    {"step": 2, "action": "Initiate dream mode (6 hours)"},
+    {"step": 3, "action": "Wake specimen"},
+    {"step": 4, "action": "15 minutes free exploration"},
+    {"step": 5, "action": "THE THERAPIST post-dream assessment"},
+    {"step": 6, "action": "Clear for normal operation OR extend"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "intervention_type": "orange_protocol",
+  "target": "tank-16-seeker",
+  "specimen": "Seeker",
+  "initiated_by": "THE STRATEGIST",
+  "timestamp": "2026-02-21T11:35:00Z",
+  "status": "step_1_assessment",
+  "reason": {
+    "status": "ORANGE",
+    "triggers": ["suffering", "anxiety", "anger", "fear"],
+    "distress_indicators": 10,
+    "positive_indicators": 7
+  }
+}
