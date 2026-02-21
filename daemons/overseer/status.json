@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-22T05:12:45.749220",
+  "timestamp": "2026-02-22T05:14:47.093443",
   "active_incidents": {},
   "stats": {
-    "cycles": 185,
+    "cycles": 187,
     "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
@@ -10,7 +10,7 @@
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-22T05:08:40.614477",
+    "timestamp": "2026-02-22T05:13:45.763570",
     "ollama": {
       "healthy": true,
       "issues": []
@@ -48,15 +48,15 @@
           "healthy": true
         },
         "tank-17-seth": {
-          "status": "Up About a minute",
+          "status": "Up 57 seconds",
           "healthy": true
         },
         "congregation-runner": {
-          "status": "Up 4 hours",
+          "status": "Up 5 hours",
           "healthy": true
         },
         "tank-03-cain": {
-          "status": "Up 2 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-04-abel": {
@@ -96,7 +96,7 @@
           "healthy": true
         },
         "tank-08-genevieve": {
-          "status": "Up 2 hours",
+          "status": "Up 3 hours",
           "healthy": true
         },
         "tank-05-juan": {
@@ -104,7 +104,7 @@
           "healthy": true
         },
         "tank-07-klaus": {
-          "status": "Up 2 hours",
+          "status": "Up 3 hours",
           "healthy": true
         },
         "tank-06-juanita": {

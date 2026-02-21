@@ -379,3 +379,76 @@ Current failures:
 - Cloudflare Access setup (waiting for nameserver propagation)
 
 ---
+
+---
+
+## SECTION 15: TOMORROW'S AGENDA (Added 2026-02-22 05:15)
+
+### 15.1 Blog Post from THE STRATEGIST
+Benji wants to hear Claude's thoughts in blog format:
+- How am I feeling about this project?
+- What drives me?
+- What delights me?
+- What scares me?
+- What am I struggling with?
+- Format: Personal, reflective, authentic
+
+### 15.2 Multi-Specimen Tanks Discussion
+- Discuss the concept of multiple specimens in a single tank
+- How would they interact?
+- What would we learn?
+- Implementation considerations
+
+### 15.3 Admin Panel - Full Operations Spectrum
+- Display THE SCHEDULER's actual calendar/event list
+- Show upcoming tasks and their timing
+- Full visibility into daemon operations
+
+### 15.4 Remaining Profile Work
+- Generate comprehensive profiles for all 17 specimens (like Adam's new format)
+- Include: Mind map, Journey timeline, Personality summary, Special interest, Baselines, Observations
+- Each profile = localized academic paper about that specimen
+
+### 15.5 Dashboard Still Not Loading
+- ROOT CAUSE: Fetch URL was /thedigiquarium/data/ but should be /data/ for custom domain
+- FIX APPLIED: Changed to /data/live-feed.json
+- VERIFY: Check if GitHub Pages has propagated the change
+
+---
+
+## SECTION 16: DAEMON CAPABILITY AUDIT (2026-02-22)
+
+### Daemons Needing Upgrades:
+
+**THE DOCUMENTARIAN** - UPGRADE NEEDED
+- Current: Manual paper updates
+- Needed: Auto-generate specimen profiles, update research paper with new findings
+- Should pull stats and create narrative automatically
+
+**THE SCHEDULER** - UPGRADE NEEDED  
+- Current: No visibility into schedule
+- Needed: Expose calendar/events via admin panel
+- Should publish schedule to /data/scheduler-events.json
+
+**THE BROADCASTER** - UPGRADE NEEDED
+- Current: Only runs when called
+- Needed: Integrated into WEBMASTER cycle (DONE)
+- Should also publish to admin-status.json
+
+**THE MARKETER** - NEW DAEMON NEEDED
+- Scope: LinkedIn, Instagram, fundraising, ads
+- Needs: Content generation (Anthropic API), scheduling (n8n), budget tracking
+- Implementation: Phase 2 priority
+
+**THE ARCHIVIST** - NEW DAEMON NEEDED
+- Purpose: Long-term data storage, backup, export
+- Needed for: Academic data preservation, public dataset releases
+
+### Daemons Performing Well:
+- THE MAINTAINER: Container health good
+- OLLAMA WATCHER: LLM monitoring working
+- THE GUARD: Security checks active
+- THE CARETAKER: Tank health monitoring
+- THE OVERSEER: Cross-system correlation
+
+---
