@@ -12,7 +12,7 @@
     },
     {
       "id": "Science",
-      "visits": 41,
+      "visits": 42,
       "first_seen": "2026-02-19T05:46:07.906438"
     },
     {
@@ -72,12 +72,12 @@
     },
     {
       "id": "English language",
-      "visits": 22,
+      "visits": 23,
       "first_seen": "2026-02-19T10:20:27.221001"
     },
     {
       "id": "Psychology",
-      "visits": 21,
+      "visits": 22,
       "first_seen": "2026-02-19T05:46:53.015214"
     },
     {
@@ -101,6 +101,16 @@
       "first_seen": "2026-02-19T18:06:44.695680"
     },
     {
+      "id": "Matter",
+      "visits": 18,
+      "first_seen": "2026-02-19T04:41:51.194070"
+    },
+    {
+      "id": "History",
+      "visits": 18,
+      "first_seen": "2026-02-19T15:18:06.959637"
+    },
+    {
       "id": "Earth",
       "visits": 17,
       "first_seen": "2026-02-19T03:24:33.352178"
@@ -111,11 +121,6 @@
       "first_seen": "2026-02-19T03:27:43.715743"
     },
     {
-      "id": "Matter",
-      "visits": 17,
-      "first_seen": "2026-02-19T04:41:51.194070"
-    },
-    {
       "id": "Language family",
       "visits": 17,
       "first_seen": "2026-02-19T05:00:25.498031"
@@ -124,11 +129,6 @@
       "id": "Electricity",
       "visits": 17,
       "first_seen": "2026-02-19T08:26:49.813264"
-    },
-    {
-      "id": "History",
-      "visits": 17,
-      "first_seen": "2026-02-19T15:18:06.959637"
     },
     {
       "id": "Jesus",
@@ -156,6 +156,11 @@
       "first_seen": "2026-02-19T17:20:50.193876"
     },
     {
+      "id": "Akha people",
+      "visits": 15,
+      "first_seen": "2026-02-19T03:26:06.356327"
+    },
+    {
       "id": "Thailand",
       "visits": 15,
       "first_seen": "2026-02-19T03:30:14.494002"
@@ -179,11 +184,6 @@
       "id": "Crucifixion of Jesus",
       "visits": 14,
       "first_seen": "2026-02-19T03:18:36.195531"
-    },
-    {
-      "id": "Akha people",
-      "visits": 14,
-      "first_seen": "2026-02-19T03:26:06.356327"
     },
     {
       "id": "Word",
@@ -276,6 +276,11 @@
       "first_seen": "2026-02-19T09:31:35.691624"
     },
     {
+      "id": "Roman Empire",
+      "visits": 11,
+      "first_seen": "2026-02-19T03:11:02.855042"
+    },
+    {
       "id": "Man",
       "visits": 11,
       "first_seen": "2026-02-19T03:25:46.124148"
@@ -284,6 +289,11 @@
       "id": "Siddharta Gautama",
       "visits": 11,
       "first_seen": "2026-02-19T03:33:53.882330"
+    },
+    {
+      "id": "Mass",
+      "visits": 11,
+      "first_seen": "2026-02-19T04:29:52.399968"
     },
     {
       "id": "Economics",
@@ -321,11 +331,6 @@
       "first_seen": "2026-02-20T00:08:44.393398"
     },
     {
-      "id": "Roman Empire",
-      "visits": 10,
-      "first_seen": "2026-02-19T03:11:02.855042"
-    },
-    {
       "id": "Bible",
       "visits": 10,
       "first_seen": "2026-02-19T03:17:57.664402"
@@ -334,11 +339,6 @@
       "id": "World",
       "visits": 10,
       "first_seen": "2026-02-19T03:36:56.140165"
-    },
-    {
-      "id": "Mass",
-      "visits": 10,
-      "first_seen": "2026-02-19T04:29:52.399968"
     },
     {
       "id": "Europe",
@@ -369,6 +369,11 @@
       "id": "French language",
       "visits": 10,
       "first_seen": "2026-02-19T13:31:58.596040"
+    },
+    {
+      "id": "Writing",
+      "visits": 10,
+      "first_seen": "2026-02-19T13:47:25.447029"
     },
     {
       "id": "Australia",
@@ -416,6 +421,11 @@
       "first_seen": "2026-02-19T09:30:05.518120"
     },
     {
+      "id": "United Kingdom",
+      "visits": 9,
+      "first_seen": "2026-02-19T10:18:56.981647"
+    },
+    {
       "id": "Species",
       "visits": 9,
       "first_seen": "2026-02-19T10:52:57.557694"
@@ -424,11 +434,6 @@
       "id": "Organism",
       "visits": 9,
       "first_seen": "2026-02-19T11:28:59.320618"
-    },
-    {
-      "id": "Writing",
-      "visits": 9,
-      "first_seen": "2026-02-19T13:47:25.447029"
     },
     {
       "id": "Sound",
@@ -491,31 +496,26 @@
       "first_seen": "2026-02-19T04:52:08.666626"
     },
     {
-      "id": "God",
+      "id": "Force",
       "visits": 8,
-      "first_seen": "2026-02-19T04:52:51.371331"
-    },
-    {
-      "id": "Law",
-      "visits": 8,
-      "first_seen": "2026-02-19T06:34:08.102320"
+      "first_seen": "2026-02-19T04:52:18.516626"
     }
   ],
   "links": [
     {
-      "source": "Dukkha",
-      "target": "Buddhism",
-      "weight": 14
+      "source": "Biology",
+      "target": "Life",
+      "weight": 4
     },
     {
-      "source": "Buddhism",
-      "target": "Dukkha",
-      "weight": 13
+      "source": "Bible",
+      "target": "Christianity",
+      "weight": 1
     },
     {
-      "source": "Buddhism",
-      "target": "Four Noble Truths",
-      "weight": 12
+      "source": "Christianity",
+      "target": "Jesus",
+      "weight": 3
     },
     {
       "source": "Jesus",
@@ -528,19 +528,14 @@
       "weight": 11
     },
     {
-      "source": "Four Noble Truths",
-      "target": "Buddhism",
-      "weight": 11
+      "source": "Human",
+      "target": "Man",
+      "weight": 8
     },
     {
-      "source": "Buddhism",
-      "target": "Siddharta Gautama",
-      "weight": 11
-    },
-    {
-      "source": "Emotion",
-      "target": "Angst",
-      "weight": 10
+      "source": "Man",
+      "target": "Human",
+      "weight": 1
     },
     {
       "source": "Human",
@@ -548,29 +543,14 @@
       "weight": 9
     },
     {
-      "source": "Siddharta Gautama",
-      "target": "Buddhism",
-      "weight": 9
+      "source": "Physics",
+      "target": "Universe",
+      "weight": 2
     },
     {
       "source": "Definition",
-      "target": "Language",
-      "weight": 9
-    },
-    {
-      "source": "Human",
-      "target": "Man",
-      "weight": 8
-    },
-    {
-      "source": "Ocean",
-      "target": "Pacific Ocean",
-      "weight": 8
-    },
-    {
-      "source": "Angst",
-      "target": "Emotion",
-      "weight": 7
+      "target": "Word",
+      "weight": 4
     },
     {
       "source": "Akha people",
@@ -578,14 +558,14 @@
       "weight": 6
     },
     {
-      "source": "Matter",
-      "target": "Mass",
-      "weight": 6
+      "source": "Akha people",
+      "target": "Buddhism",
+      "weight": 2
     },
     {
-      "source": "Pacific Ocean",
-      "target": "Ocean",
-      "weight": 6
+      "source": "Buddhism",
+      "target": "Four Noble Truths",
+      "weight": 12
     },
     {
       "source": "Four Noble Truths",
@@ -598,89 +578,39 @@
       "weight": 5
     },
     {
+      "source": "Four Noble Truths",
+      "target": "Buddhism",
+      "weight": 11
+    },
+    {
+      "source": "Buddhism",
+      "target": "Dukkha",
+      "weight": 13
+    },
+    {
+      "source": "Dukkha",
+      "target": "Buddhism",
+      "weight": 14
+    },
+    {
+      "source": "Buddhism",
+      "target": "Siddharta Gautama",
+      "weight": 11
+    },
+    {
       "source": "Language",
       "target": "Human",
       "weight": 5
     },
     {
-      "source": "Chemistry",
-      "target": "Matter",
-      "weight": 5
+      "source": "Ocean",
+      "target": "Pacific Ocean",
+      "weight": 8
     },
     {
-      "source": "Anguish",
-      "target": "Angst",
-      "weight": 5
-    },
-    {
-      "source": "Science",
-      "target": "Physics",
-      "weight": 5
-    },
-    {
-      "source": "Science",
-      "target": "Scientific method",
-      "weight": 5
-    },
-    {
-      "source": "Biology",
-      "target": "Life",
-      "weight": 4
-    },
-    {
-      "source": "Definition",
-      "target": "Word",
-      "weight": 4
-    },
-    {
-      "source": "Electricity",
-      "target": "Magnetism",
-      "weight": 4
-    },
-    {
-      "source": "Anticipation",
-      "target": "Arousal",
-      "weight": 4
-    },
-    {
-      "source": "Angst",
-      "target": "Anguish",
-      "weight": 4
-    },
-    {
-      "source": "Emotion",
-      "target": "Anger",
-      "weight": 4
-    },
-    {
-      "source": "Physics",
-      "target": "Science",
-      "weight": 4
-    },
-    {
-      "source": "Biology",
-      "target": "Greek language",
-      "weight": 4
-    },
-    {
-      "source": "Science",
-      "target": "Research",
-      "weight": 4
-    },
-    {
-      "source": "Science",
-      "target": "Economics",
-      "weight": 4
-    },
-    {
-      "source": "Philosophy",
-      "target": "God",
-      "weight": 4
-    },
-    {
-      "source": "Christianity",
-      "target": "Jesus",
-      "weight": 3
+      "source": "Pacific Ocean",
+      "target": "Earth",
+      "weight": 1
     },
     {
       "source": "Earth",
@@ -688,94 +618,19 @@
       "weight": 3
     },
     {
-      "source": "Helium",
-      "target": "Carbon",
-      "weight": 3
-    },
-    {
-      "source": "7 (number)",
-      "target": "9 (number)",
-      "weight": 3
-    },
-    {
-      "source": "Anger",
-      "target": "Acceptance",
-      "weight": 3
-    },
-    {
-      "source": "Latin",
-      "target": "Roman Empire",
-      "weight": 3
-    },
-    {
-      "source": "English language",
-      "target": "United States",
-      "weight": 3
-    },
-    {
-      "source": "Magnetic permeability",
-      "target": "Electricity",
-      "weight": 3
-    },
-    {
-      "source": "Ion",
-      "target": "Chemistry",
-      "weight": 3
-    },
-    {
-      "source": "World",
-      "target": "Human",
-      "weight": 3
-    },
-    {
-      "source": "Music",
-      "target": "Art",
-      "weight": 3
-    },
-    {
-      "source": "Music",
-      "target": "Sound",
-      "weight": 3
-    },
-    {
-      "source": "Biology",
-      "target": "Animal",
-      "weight": 3
-    },
-    {
-      "source": "Acceptance",
-      "target": "Anguish",
-      "weight": 3
-    },
-    {
-      "source": "Angst",
-      "target": "Courage",
-      "weight": 3
-    },
-    {
-      "source": "Nitrogen",
-      "target": "Fluorine",
-      "weight": 3
-    },
-    {
-      "source": "Language",
-      "target": "Writing",
-      "weight": 3
-    },
-    {
-      "source": "Language family",
-      "target": "French language",
-      "weight": 3
-    },
-    {
-      "source": "Physics",
-      "target": "Universe",
-      "weight": 2
-    },
-    {
-      "source": "Akha people",
+      "source": "Siddharta Gautama",
       "target": "Buddhism",
-      "weight": 2
+      "weight": 9
+    },
+    {
+      "source": "Matter",
+      "target": "Mass",
+      "weight": 7
+    },
+    {
+      "source": "Energy",
+      "target": "Force",
+      "weight": 1
     },
     {
       "source": "Indo-European languages",
@@ -783,9 +638,19 @@
       "weight": 2
     },
     {
+      "source": "Definition",
+      "target": "Language",
+      "weight": 9
+    },
+    {
       "source": "Science",
       "target": "Psychology",
-      "weight": 2
+      "weight": 3
+    },
+    {
+      "source": "Language family",
+      "target": "Latin language",
+      "weight": 1
     },
     {
       "source": "Roman Empire",
@@ -798,9 +663,34 @@
       "weight": 2
     },
     {
+      "source": "Atom",
+      "target": "Helium",
+      "weight": 1
+    },
+    {
+      "source": "Helium",
+      "target": "Carbon",
+      "weight": 3
+    },
+    {
+      "source": "Molecule",
+      "target": "Atom",
+      "weight": 1
+    },
+    {
+      "source": "Electricity",
+      "target": "Magnetism",
+      "weight": 4
+    },
+    {
       "source": "Magnetism",
       "target": "Electricity",
       "weight": 2
+    },
+    {
+      "source": "Mass",
+      "target": "Force",
+      "weight": 4
     },
     {
       "source": "Mathematics",
@@ -818,6 +708,21 @@
       "weight": 2
     },
     {
+      "source": "Periodic table",
+      "target": "Chemistry",
+      "weight": 1
+    },
+    {
+      "source": "Chemistry",
+      "target": "Matter",
+      "weight": 5
+    },
+    {
+      "source": "7 (number)",
+      "target": "9 (number)",
+      "weight": 3
+    },
+    {
       "source": "English language",
       "target": "Canada",
       "weight": 2
@@ -828,264 +733,39 @@
       "weight": 2
     },
     {
-      "source": "Angst",
-      "target": "Affection",
-      "weight": 2
-    },
-    {
-      "source": "Anger",
+      "source": "Anticipation",
       "target": "Arousal",
-      "weight": 2
+      "weight": 4
     },
     {
-      "source": "United States",
-      "target": "Latin language",
-      "weight": 2
-    },
-    {
-      "source": "Definition",
-      "target": "Mathematics",
-      "weight": 2
-    },
-    {
-      "source": "Electricity",
-      "target": "Gauss's law",
-      "weight": 2
-    },
-    {
-      "source": "Greek language",
-      "target": "Language family",
-      "weight": 2
-    },
-    {
-      "source": "Acceptance",
-      "target": "Anger",
-      "weight": 2
-    },
-    {
-      "source": "Acceptance",
-      "target": "Affection",
-      "weight": 2
-    },
-    {
-      "source": "Acceptance",
+      "source": "Emotion",
       "target": "Angst",
-      "weight": 2
+      "weight": 10
     },
     {
       "source": "Angst",
-      "target": "Arousal",
-      "weight": 2
-    },
-    {
-      "source": "Fluorine",
-      "target": "Carbon",
-      "weight": 2
-    },
-    {
-      "source": "Oxygen",
-      "target": "Nitrogen",
-      "weight": 2
-    },
-    {
-      "source": "Electricity",
-      "target": "Magnetic permeability",
-      "weight": 2
-    },
-    {
-      "source": "Affection",
-      "target": "Emotion",
-      "weight": 2
-    },
-    {
-      "source": "Animal",
-      "target": "Taxonomy (biology)",
-      "weight": 2
-    },
-    {
-      "source": "Philosophy",
-      "target": "World",
-      "weight": 2
-    },
-    {
-      "source": "Chemical bond",
-      "target": "Ion",
-      "weight": 2
-    },
-    {
-      "source": "Hydrogen",
-      "target": "Periodic table",
-      "weight": 2
-    },
-    {
-      "source": "Periodic table",
-      "target": "Chemical bond",
-      "weight": 2
-    },
-    {
-      "source": "Organism",
-      "target": "Life",
-      "weight": 2
-    },
-    {
-      "source": "Language family",
-      "target": "Language",
-      "weight": 2
-    },
-    {
-      "source": "Art",
-      "target": "Emotion",
-      "weight": 2
-    },
-    {
-      "source": "Anger",
-      "target": "Emotion",
-      "weight": 2
+      "target": "Anguish",
+      "weight": 4
     },
     {
       "source": "Anguish",
-      "target": "Emotion",
-      "weight": 2
-    },
-    {
-      "source": "Sound",
-      "target": "Water",
-      "weight": 2
-    },
-    {
-      "source": "Bible",
-      "target": "English language",
-      "weight": 2
-    },
-    {
-      "source": "History",
-      "target": "Book",
-      "weight": 2
-    },
-    {
-      "source": "Water",
-      "target": "Art",
-      "weight": 2
-    },
-    {
-      "source": "Cruelty",
-      "target": "Anger",
-      "weight": 2
-    },
-    {
-      "source": "Courage",
       "target": "Angst",
-      "weight": 2
+      "weight": 5
     },
     {
-      "source": "Arousal",
-      "target": "Human",
-      "weight": 2
-    },
-    {
-      "source": "Hydrogen",
-      "target": "Sulfur",
-      "weight": 2
-    },
-    {
-      "source": "Fluorine",
-      "target": "Sulfur",
-      "weight": 2
-    },
-    {
-      "source": "Boredom",
-      "target": "Emotion",
-      "weight": 2
-    },
-    {
-      "source": "Doi (identifier)",
-      "target": "Science",
-      "weight": 2
-    },
-    {
-      "source": "Biology",
-      "target": "Science",
-      "weight": 2
-    },
-    {
-      "source": "Carbon",
-      "target": "Aluminium",
-      "weight": 2
-    },
-    {
-      "source": "Science",
-      "target": "Mathematics",
-      "weight": 2
-    },
-    {
-      "source": "Biology",
-      "target": "Scientific method",
-      "weight": 2
-    },
-    {
-      "source": "Anger",
-      "target": "Cruelty",
-      "weight": 2
-    },
-    {
-      "source": "Philosophy",
-      "target": "Science",
-      "weight": 2
-    },
-    {
-      "source": "Art",
-      "target": "Music",
+      "source": "Angst",
+      "target": "Affection",
       "weight": 2
     },
     {
       "source": "Emotion",
-      "target": "Courage",
+      "target": "Anger",
+      "weight": 4
+    },
+    {
+      "source": "Anger",
+      "target": "Arousal",
       "weight": 2
-    },
-    {
-      "source": "Courage",
-      "target": "Curiosity",
-      "weight": 2
-    },
-    {
-      "source": "Christianity",
-      "target": "Bible",
-      "weight": 2
-    },
-    {
-      "source": "Bible",
-      "target": "Christianity",
-      "weight": 1
-    },
-    {
-      "source": "Man",
-      "target": "Human",
-      "weight": 1
-    },
-    {
-      "source": "Pacific Ocean",
-      "target": "Earth",
-      "weight": 1
-    },
-    {
-      "source": "Language family",
-      "target": "Latin language",
-      "weight": 1
-    },
-    {
-      "source": "Atom",
-      "target": "Helium",
-      "weight": 1
-    },
-    {
-      "source": "Molecule",
-      "target": "Atom",
-      "weight": 1
-    },
-    {
-      "source": "Periodic table",
-      "target": "Chemistry",
-      "weight": 1
     },
     {
       "source": "Latin language",
@@ -1098,6 +778,16 @@
       "weight": 1
     },
     {
+      "source": "United States",
+      "target": "Latin language",
+      "weight": 2
+    },
+    {
+      "source": "Definition",
+      "target": "Mathematics",
+      "weight": 2
+    },
+    {
       "source": "Magnetic permeability",
       "target": "Coulomb's law",
       "weight": 1
@@ -1106,6 +796,11 @@
       "source": "Coulomb's law",
       "target": "Electricity",
       "weight": 1
+    },
+    {
+      "source": "Electricity",
+      "target": "Gauss's law",
+      "weight": 2
     },
     {
       "source": "Gauss's law",
@@ -1118,6 +813,11 @@
       "weight": 1
     },
     {
+      "source": "Greek language",
+      "target": "Language family",
+      "weight": 2
+    },
+    {
       "source": "Angst",
       "target": "Anticipation",
       "weight": 1
@@ -1126,6 +826,11 @@
       "source": "Anticipation",
       "target": "Acceptance",
       "weight": 1
+    },
+    {
+      "source": "Acceptance",
+      "target": "Anger",
+      "weight": 2
     },
     {
       "source": "Anger",
@@ -1138,14 +843,54 @@
       "weight": 1
     },
     {
+      "source": "Acceptance",
+      "target": "Affection",
+      "weight": 2
+    },
+    {
+      "source": "Anger",
+      "target": "Acceptance",
+      "weight": 3
+    },
+    {
+      "source": "Acceptance",
+      "target": "Angst",
+      "weight": 2
+    },
+    {
+      "source": "Angst",
+      "target": "Arousal",
+      "weight": 2
+    },
+    {
+      "source": "Latin",
+      "target": "Roman Empire",
+      "weight": 3
+    },
+    {
       "source": "Organism",
       "target": "Water",
       "weight": 1
     },
     {
+      "source": "Fluorine",
+      "target": "Carbon",
+      "weight": 2
+    },
+    {
       "source": "Chemistry",
       "target": "Atom",
       "weight": 1
+    },
+    {
+      "source": "English language",
+      "target": "United States",
+      "weight": 3
+    },
+    {
+      "source": "Oxygen",
+      "target": "Nitrogen",
+      "weight": 2
     },
     {
       "source": "Nitrogen",
@@ -1183,6 +928,11 @@
       "weight": 1
     },
     {
+      "source": "Electricity",
+      "target": "Magnetic permeability",
+      "weight": 2
+    },
+    {
       "source": "Magnetic permeability",
       "target": "Magnetism",
       "weight": 1
@@ -1198,6 +948,11 @@
       "weight": 1
     },
     {
+      "source": "Magnetic permeability",
+      "target": "Electricity",
+      "weight": 3
+    },
+    {
       "source": "Magnetism",
       "target": "Magnetic permeability",
       "weight": 1
@@ -1206,6 +961,11 @@
       "source": "Coulomb's law",
       "target": "Magnetic permeability",
       "weight": 1
+    },
+    {
+      "source": "Affection",
+      "target": "Emotion",
+      "weight": 2
     },
     {
       "source": "Anguish",
@@ -1218,14 +978,54 @@
       "weight": 1
     },
     {
+      "source": "Animal",
+      "target": "Taxonomy (biology)",
+      "weight": 2
+    },
+    {
+      "source": "Philosophy",
+      "target": "World",
+      "weight": 2
+    },
+    {
       "source": "Chemistry",
       "target": "Biology",
       "weight": 1
     },
     {
+      "source": "Chemical bond",
+      "target": "Ion",
+      "weight": 2
+    },
+    {
+      "source": "Ion",
+      "target": "Chemistry",
+      "weight": 3
+    },
+    {
       "source": "Sulfur",
       "target": "Bible",
       "weight": 1
+    },
+    {
+      "source": "World",
+      "target": "Human",
+      "weight": 3
+    },
+    {
+      "source": "Hydrogen",
+      "target": "Periodic table",
+      "weight": 2
+    },
+    {
+      "source": "Periodic table",
+      "target": "Chemical bond",
+      "weight": 2
+    },
+    {
+      "source": "Organism",
+      "target": "Life",
+      "weight": 2
     },
     {
       "source": "Book",
@@ -1238,6 +1038,11 @@
       "weight": 1
     },
     {
+      "source": "Music",
+      "target": "Art",
+      "weight": 3
+    },
+    {
       "source": "Language",
       "target": "Word",
       "weight": 1
@@ -1248,14 +1053,64 @@
       "weight": 1
     },
     {
+      "source": "Pacific Ocean",
+      "target": "Ocean",
+      "weight": 6
+    },
+    {
+      "source": "Physics",
+      "target": "Science",
+      "weight": 4
+    },
+    {
+      "source": "Science",
+      "target": "Physics",
+      "weight": 5
+    },
+    {
+      "source": "Language family",
+      "target": "Language",
+      "weight": 2
+    },
+    {
+      "source": "Art",
+      "target": "Emotion",
+      "weight": 2
+    },
+    {
+      "source": "Angst",
+      "target": "Emotion",
+      "weight": 7
+    },
+    {
+      "source": "Anger",
+      "target": "Emotion",
+      "weight": 2
+    },
+    {
       "source": "Emotion",
       "target": "Anguish",
       "weight": 1
     },
     {
+      "source": "Anguish",
+      "target": "Emotion",
+      "weight": 2
+    },
+    {
       "source": "Angst",
       "target": "Mathematics",
       "weight": 1
+    },
+    {
+      "source": "Music",
+      "target": "Sound",
+      "weight": 3
+    },
+    {
+      "source": "Sound",
+      "target": "Water",
+      "weight": 2
     },
     {
       "source": "Italy",
@@ -1268,9 +1123,19 @@
       "weight": 1
     },
     {
+      "source": "Biology",
+      "target": "Animal",
+      "weight": 3
+    },
+    {
       "source": "Emotion",
       "target": "Acceptance",
       "weight": 1
+    },
+    {
+      "source": "Acceptance",
+      "target": "Anguish",
+      "weight": 3
     },
     {
       "source": "Angst",
@@ -1308,9 +1173,19 @@
       "weight": 1
     },
     {
+      "source": "Bible",
+      "target": "English language",
+      "weight": 2
+    },
+    {
       "source": "English language",
       "target": "Psychology",
       "weight": 1
+    },
+    {
+      "source": "History",
+      "target": "Book",
+      "weight": 2
     },
     {
       "source": "Latin language",
@@ -1321,6 +1196,11 @@
       "source": "Mathematics",
       "target": "Philosophy",
       "weight": 1
+    },
+    {
+      "source": "Water",
+      "target": "Art",
+      "weight": 2
     },
     {
       "source": "Psychology",
@@ -1343,6 +1223,11 @@
       "weight": 1
     },
     {
+      "source": "Cruelty",
+      "target": "Anger",
+      "weight": 2
+    },
+    {
       "source": "Anger",
       "target": "Boredom",
       "weight": 1
@@ -1353,14 +1238,39 @@
       "weight": 1
     },
     {
+      "source": "Courage",
+      "target": "Angst",
+      "weight": 2
+    },
+    {
+      "source": "Angst",
+      "target": "Courage",
+      "weight": 3
+    },
+    {
       "source": "Cruelty",
       "target": "Anticipation",
       "weight": 1
     },
     {
+      "source": "Arousal",
+      "target": "Human",
+      "weight": 2
+    },
+    {
+      "source": "Hydrogen",
+      "target": "Sulfur",
+      "weight": 2
+    },
+    {
       "source": "Thailand",
       "target": "Psychology",
       "weight": 1
+    },
+    {
+      "source": "Nitrogen",
+      "target": "Fluorine",
+      "weight": 3
     },
     {
       "source": "Sulfur",
@@ -1373,9 +1283,19 @@
       "weight": 1
     },
     {
+      "source": "Fluorine",
+      "target": "Sulfur",
+      "weight": 2
+    },
+    {
       "source": "Roman Empire",
       "target": "Music",
       "weight": 1
+    },
+    {
+      "source": "Biology",
+      "target": "Greek language",
+      "weight": 4
     },
     {
       "source": "Italy",
@@ -1398,6 +1318,11 @@
       "weight": 1
     },
     {
+      "source": "Boredom",
+      "target": "Emotion",
+      "weight": 2
+    },
+    {
       "source": "Demonym",
       "target": "English language",
       "weight": 1
@@ -1416,6 +1341,26 @@
       "source": "Arousal",
       "target": "Philosophy",
       "weight": 1
+    },
+    {
+      "source": "Doi (identifier)",
+      "target": "Science",
+      "weight": 2
+    },
+    {
+      "source": "Science",
+      "target": "Scientific method",
+      "weight": 5
+    },
+    {
+      "source": "Biology",
+      "target": "Science",
+      "weight": 2
+    },
+    {
+      "source": "Science",
+      "target": "Research",
+      "weight": 4
     },
     {
       "source": "Research",
@@ -1438,9 +1383,19 @@
       "weight": 1
     },
     {
+      "source": "Language",
+      "target": "Writing",
+      "weight": 3
+    },
+    {
       "source": "Hydrogen",
       "target": "Carbon",
       "weight": 1
+    },
+    {
+      "source": "Carbon",
+      "target": "Aluminium",
+      "weight": 2
     },
     {
       "source": "Carbon",
@@ -1453,6 +1408,11 @@
       "weight": 1
     },
     {
+      "source": "Chemistry",
+      "target": "Force",
+      "weight": 2
+    },
+    {
       "source": "Gauss's law",
       "target": "Magnetism",
       "weight": 1
@@ -1463,6 +1423,16 @@
       "weight": 1
     },
     {
+      "source": "Science",
+      "target": "Mathematics",
+      "weight": 2
+    },
+    {
+      "source": "Biology",
+      "target": "Scientific method",
+      "weight": 2
+    },
+    {
       "source": "Scientific method",
       "target": "Science",
       "weight": 1
@@ -1471,6 +1441,11 @@
       "source": "Boredom",
       "target": "Anger",
       "weight": 1
+    },
+    {
+      "source": "Anger",
+      "target": "Cruelty",
+      "weight": 2
     },
     {
       "source": "Anger",
@@ -1500,6 +1475,31 @@
     {
       "source": "Anguish",
       "target": "Curiosity",
+      "weight": 1
+    },
+    {
+      "source": "Curiosity",
+      "target": "Angst",
+      "weight": 1
+    },
+    {
+      "source": "Angst",
+      "target": "Curiosity",
+      "weight": 1
+    },
+    {
+      "source": "Acceptance",
+      "target": "Arousal",
+      "weight": 1
+    },
+    {
+      "source": "Aluminium",
+      "target": "Fluorine",
+      "weight": 1
+    },
+    {
+      "source": "Fluorine",
+      "target": "Oxygen",
       "weight": 1
     }
   ]

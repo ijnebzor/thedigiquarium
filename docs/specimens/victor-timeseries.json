@@ -1,0 +1,1548 @@
+{
+  "2026-02-20": {
+    "nodes": [
+      {
+        "id": "Flag",
+        "visits": 3
+      },
+      {
+        "id": "Flag of Estonia",
+        "visits": 3
+      },
+      {
+        "id": "Estonia",
+        "visits": 3
+      },
+      {
+        "id": "Albania",
+        "visits": 3
+      },
+      {
+        "id": "Kosovo",
+        "visits": 3
+      },
+      {
+        "id": "Psychology",
+        "visits": 2
+      },
+      {
+        "id": "Mind",
+        "visits": 2
+      },
+      {
+        "id": "Free will",
+        "visits": 2
+      },
+      {
+        "id": "Thailand",
+        "visits": 2
+      },
+      {
+        "id": "Estonian language",
+        "visits": 2
+      },
+      {
+        "id": "International recognition of Kosovo",
+        "visits": 2
+      },
+      {
+        "id": "Dance",
+        "visits": 2
+      },
+      {
+        "id": "Logic",
+        "visits": 1
+      },
+      {
+        "id": "Parmenides of Elea",
+        "visits": 1
+      },
+      {
+        "id": "Spinoza",
+        "visits": 1
+      },
+      {
+        "id": "Stoicism",
+        "visits": 1
+      },
+      {
+        "id": "Determinism",
+        "visits": 1
+      },
+      {
+        "id": "Philosophy",
+        "visits": 1
+      },
+      {
+        "id": "Philosopher",
+        "visits": 1
+      },
+      {
+        "id": "Person",
+        "visits": 1
+      },
+      {
+        "id": "Akha people",
+        "visits": 1
+      },
+      {
+        "id": "Thai language",
+        "visits": 1
+      },
+      {
+        "id": "Flag of Thailand",
+        "visits": 1
+      },
+      {
+        "id": "Naval ensign",
+        "visits": 1
+      },
+      {
+        "id": "Coat of arms of Estonia",
+        "visits": 1
+      },
+      {
+        "id": "Tallinn",
+        "visits": 1
+      },
+      {
+        "id": "List of Countries",
+        "visits": 1
+      },
+      {
+        "id": "Argentina",
+        "visits": 1
+      },
+      {
+        "id": "Flag of Argentina",
+        "visits": 1
+      },
+      {
+        "id": "Estonians",
+        "visits": 1
+      },
+      {
+        "id": "Finland",
+        "visits": 1
+      },
+      {
+        "id": "Maamme",
+        "visits": 1
+      },
+      {
+        "id": "Swedish language",
+        "visits": 1
+      },
+      {
+        "id": "Sweden",
+        "visits": 1
+      },
+      {
+        "id": "Flag of Sweden",
+        "visits": 1
+      },
+      {
+        "id": "Flag of Albania",
+        "visits": 1
+      },
+      {
+        "id": "Albanian language",
+        "visits": 1
+      },
+      {
+        "id": "Flag of Kosovo",
+        "visits": 1
+      },
+      {
+        "id": "ISBN (identifier)",
+        "visits": 1
+      },
+      {
+        "id": "International Organization for Standardization",
+        "visits": 1
+      },
+      {
+        "id": "Standard",
+        "visits": 1
+      },
+      {
+        "id": "Morse code",
+        "visits": 1
+      },
+      {
+        "id": "Samuel Morse",
+        "visits": 1
+      },
+      {
+        "id": "Telegraph",
+        "visits": 1
+      },
+      {
+        "id": "Music",
+        "visits": 1
+      },
+      {
+        "id": "Rhythm",
+        "visits": 1
+      },
+      {
+        "id": "Chord progression",
+        "visits": 1
+      },
+      {
+        "id": "Pentatonic scale",
+        "visits": 1
+      },
+      {
+        "id": "Fairy tale",
+        "visits": 1
+      },
+      {
+        "id": "Elf",
+        "visits": 1
+      }
+    ],
+    "links": [
+      {
+        "source": "Psychology",
+        "target": "Mind"
+      },
+      {
+        "source": "Mind",
+        "target": "Logic"
+      },
+      {
+        "source": "Logic",
+        "target": "Parmenides of Elea"
+      },
+      {
+        "source": "Parmenides of Elea",
+        "target": "Spinoza"
+      },
+      {
+        "source": "Spinoza",
+        "target": "Stoicism"
+      },
+      {
+        "source": "Stoicism",
+        "target": "Determinism"
+      },
+      {
+        "source": "Determinism",
+        "target": "Free will"
+      },
+      {
+        "source": "Free will",
+        "target": "Philosophy"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Philosopher"
+      },
+      {
+        "source": "Philosopher",
+        "target": "Free will"
+      },
+      {
+        "source": "Free will",
+        "target": "Psychology"
+      },
+      {
+        "source": "Mind",
+        "target": "Person"
+      },
+      {
+        "source": "Person",
+        "target": "Akha people"
+      },
+      {
+        "source": "Akha people",
+        "target": "Thailand"
+      },
+      {
+        "source": "Thailand",
+        "target": "Thai language"
+      },
+      {
+        "source": "Thai language",
+        "target": "Thailand"
+      },
+      {
+        "source": "Thailand",
+        "target": "Flag of Thailand"
+      },
+      {
+        "source": "Flag of Thailand",
+        "target": "Naval ensign"
+      },
+      {
+        "source": "Naval ensign",
+        "target": "Flag"
+      },
+      {
+        "source": "Flag",
+        "target": "Flag of Estonia"
+      },
+      {
+        "source": "Flag of Estonia",
+        "target": "Estonian language"
+      },
+      {
+        "source": "Estonian language",
+        "target": "Estonia"
+      },
+      {
+        "source": "Estonia",
+        "target": "Coat of arms of Estonia"
+      },
+      {
+        "source": "Coat of arms of Estonia",
+        "target": "Tallinn"
+      },
+      {
+        "source": "Tallinn",
+        "target": "List of Countries"
+      },
+      {
+        "source": "List of Countries",
+        "target": "Argentina"
+      },
+      {
+        "source": "Argentina",
+        "target": "Flag of Argentina"
+      },
+      {
+        "source": "Flag of Argentina",
+        "target": "Flag"
+      },
+      {
+        "source": "Flag of Estonia",
+        "target": "Flag"
+      },
+      {
+        "source": "Estonian language",
+        "target": "Estonians"
+      },
+      {
+        "source": "Estonians",
+        "target": "Finland"
+      },
+      {
+        "source": "Finland",
+        "target": "Maamme"
+      },
+      {
+        "source": "Maamme",
+        "target": "Swedish language"
+      },
+      {
+        "source": "Swedish language",
+        "target": "Sweden"
+      },
+      {
+        "source": "Sweden",
+        "target": "Flag of Sweden"
+      },
+      {
+        "source": "Flag of Sweden",
+        "target": "Flag of Albania"
+      },
+      {
+        "source": "Flag of Albania",
+        "target": "Albania"
+      },
+      {
+        "source": "Albania",
+        "target": "Albanian language"
+      },
+      {
+        "source": "Albanian language",
+        "target": "Kosovo"
+      },
+      {
+        "source": "Kosovo",
+        "target": "International recognition of Kosovo"
+      },
+      {
+        "source": "International recognition of Kosovo",
+        "target": "Kosovo"
+      },
+      {
+        "source": "Kosovo",
+        "target": "Flag of Kosovo"
+      },
+      {
+        "source": "Flag of Kosovo",
+        "target": "ISBN (identifier)"
+      },
+      {
+        "source": "ISBN (identifier)",
+        "target": "International Organization for Standardization"
+      },
+      {
+        "source": "International Organization for Standardization",
+        "target": "Standard"
+      },
+      {
+        "source": "Standard",
+        "target": "Morse code"
+      },
+      {
+        "source": "Morse code",
+        "target": "Samuel Morse"
+      },
+      {
+        "source": "Samuel Morse",
+        "target": "Telegraph"
+      },
+      {
+        "source": "Telegraph",
+        "target": "Music"
+      },
+      {
+        "source": "Music",
+        "target": "Dance"
+      },
+      {
+        "source": "Dance",
+        "target": "Rhythm"
+      },
+      {
+        "source": "Rhythm",
+        "target": "Chord progression"
+      },
+      {
+        "source": "Chord progression",
+        "target": "Pentatonic scale"
+      },
+      {
+        "source": "Pentatonic scale",
+        "target": "Fairy tale"
+      },
+      {
+        "source": "Fairy tale",
+        "target": "Elf"
+      },
+      {
+        "source": "Music",
+        "target": "Estonia"
+      },
+      {
+        "source": "Music",
+        "target": "Rhythm"
+      },
+      {
+        "source": "Rhythm",
+        "target": "Pentatonic scale"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Free will"
+      }
+    ]
+  },
+  "2026-02-21": {
+    "nodes": [
+      {
+        "id": "Philosophy",
+        "visits": 24
+      },
+      {
+        "id": "Mathematics",
+        "visits": 22
+      },
+      {
+        "id": "History",
+        "visits": 18
+      },
+      {
+        "id": "Science",
+        "visits": 16
+      },
+      {
+        "id": "Music",
+        "visits": 15
+      },
+      {
+        "id": "Psychology",
+        "visits": 14
+      },
+      {
+        "id": "Wayback Machine",
+        "visits": 12
+      },
+      {
+        "id": "Definition",
+        "visits": 11
+      },
+      {
+        "id": "Greek language",
+        "visits": 10
+      },
+      {
+        "id": "Emotion",
+        "visits": 10
+      },
+      {
+        "id": "Affection",
+        "visits": 10
+      },
+      {
+        "id": "ISBN (identifier)",
+        "visits": 9
+      },
+      {
+        "id": "Animal",
+        "visits": 9
+      },
+      {
+        "id": "Biology",
+        "visits": 9
+      },
+      {
+        "id": "Language",
+        "visits": 9
+      },
+      {
+        "id": "Species",
+        "visits": 8
+      },
+      {
+        "id": "English language",
+        "visits": 8
+      },
+      {
+        "id": "Boredom",
+        "visits": 8
+      },
+      {
+        "id": "Awe",
+        "visits": 8
+      },
+      {
+        "id": "Logic",
+        "visits": 7
+      },
+      {
+        "id": "Estonia",
+        "visits": 7
+      },
+      {
+        "id": "Art",
+        "visits": 7
+      },
+      {
+        "id": "United States",
+        "visits": 7
+      },
+      {
+        "id": "Anger",
+        "visits": 7
+      },
+      {
+        "id": "Anguish",
+        "visits": 7
+      },
+      {
+        "id": "Annoyance",
+        "visits": 7
+      },
+      {
+        "id": "Molecule",
+        "visits": 7
+      },
+      {
+        "id": "Helium",
+        "visits": 7
+      },
+      {
+        "id": "Atom",
+        "visits": 6
+      },
+      {
+        "id": "God",
+        "visits": 6
+      },
+      {
+        "id": "Europe",
+        "visits": 6
+      },
+      {
+        "id": "Organism",
+        "visits": 6
+      },
+      {
+        "id": "Website",
+        "visits": 6
+      },
+      {
+        "id": "Demonym",
+        "visits": 6
+      },
+      {
+        "id": "Angst",
+        "visits": 6
+      },
+      {
+        "id": "Curiosity",
+        "visits": 6
+      },
+      {
+        "id": "Acceptance",
+        "visits": 6
+      },
+      {
+        "id": "Courage",
+        "visits": 6
+      },
+      {
+        "id": "Canada",
+        "visits": 6
+      },
+      {
+        "id": "Sigma",
+        "visits": 6
+      },
+      {
+        "id": "Language family",
+        "visits": 6
+      },
+      {
+        "id": "Contentment",
+        "visits": 6
+      },
+      {
+        "id": "Indo-European languages",
+        "visits": 6
+      },
+      {
+        "id": "Philosopher",
+        "visits": 5
+      },
+      {
+        "id": "India",
+        "visits": 5
+      },
+      {
+        "id": "Business",
+        "visits": 5
+      },
+      {
+        "id": "Materialism",
+        "visits": 5
+      },
+      {
+        "id": "Ethics",
+        "visits": 5
+      },
+      {
+        "id": "Society",
+        "visits": 5
+      },
+      {
+        "id": "Writing",
+        "visits": 5
+      }
+    ],
+    "links": [
+      {
+        "source": "Philosophy",
+        "target": "Philosopher"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Greek language"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Materialism"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Ethics"
+      },
+      {
+        "source": "History",
+        "target": "Society"
+      },
+      {
+        "source": "Science",
+        "target": "History"
+      },
+      {
+        "source": "Writing",
+        "target": "Language"
+      },
+      {
+        "source": "Science",
+        "target": "Music"
+      },
+      {
+        "source": "Music",
+        "target": "Estonia"
+      },
+      {
+        "source": "United States",
+        "target": "Art"
+      },
+      {
+        "source": "Philosopher",
+        "target": "Materialism"
+      },
+      {
+        "source": "Psychology",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Angst"
+      },
+      {
+        "source": "Anger",
+        "target": "Anguish"
+      },
+      {
+        "source": "Anguish",
+        "target": "Curiosity"
+      },
+      {
+        "source": "Curiosity",
+        "target": "Emotion"
+      },
+      {
+        "source": "Angst",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Anguish",
+        "target": "Awe"
+      },
+      {
+        "source": "Anger",
+        "target": "Affection"
+      },
+      {
+        "source": "Science",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Definition",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Emotion",
+        "target": "Courage"
+      },
+      {
+        "source": "Courage",
+        "target": "Boredom"
+      },
+      {
+        "source": "Anger",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Awe"
+      },
+      {
+        "source": "Awe",
+        "target": "Affection"
+      },
+      {
+        "source": "Logic",
+        "target": "Atom"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "Science",
+        "target": "Logic"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Business"
+      },
+      {
+        "source": "Greek language",
+        "target": "Language family"
+      },
+      {
+        "source": "English language",
+        "target": "India"
+      },
+      {
+        "source": "Demonym",
+        "target": "Language"
+      },
+      {
+        "source": "Emotion",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Anguish"
+      },
+      {
+        "source": "Contentment",
+        "target": "Courage"
+      },
+      {
+        "source": "Courage",
+        "target": "Curiosity"
+      },
+      {
+        "source": "Affection",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Affection"
+      },
+      {
+        "source": "Awe",
+        "target": "Boredom"
+      },
+      {
+        "source": "Boredom",
+        "target": "Angst"
+      },
+      {
+        "source": "Angst",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Courage"
+      },
+      {
+        "source": "Courage",
+        "target": "Contentment"
+      },
+      {
+        "source": "Courage",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Contentment"
+      },
+      {
+        "source": "Contentment",
+        "target": "Boredom"
+      },
+      {
+        "source": "Boredom",
+        "target": "Curiosity"
+      },
+      {
+        "source": "Logic",
+        "target": "Molecule"
+      },
+      {
+        "source": "Species",
+        "target": "Definition"
+      },
+      {
+        "source": "Species",
+        "target": "Organism"
+      },
+      {
+        "source": "Estonia",
+        "target": "Europe"
+      },
+      {
+        "source": "Biology",
+        "target": "Organism"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Society"
+      },
+      {
+        "source": "Philosopher",
+        "target": "Ethics"
+      },
+      {
+        "source": "Philosophy",
+        "target": "God"
+      },
+      {
+        "source": "Language family",
+        "target": "Language"
+      },
+      {
+        "source": "Emotion",
+        "target": "Affection"
+      },
+      {
+        "source": "Affection",
+        "target": "Awe"
+      },
+      {
+        "source": "Awe",
+        "target": "Emotion"
+      },
+      {
+        "source": "Awe",
+        "target": "Anger"
+      },
+      {
+        "source": "Anger",
+        "target": "Boredom"
+      },
+      {
+        "source": "Boredom",
+        "target": "Affection"
+      },
+      {
+        "source": "Materialism",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Psychology"
+      },
+      {
+        "source": "Wayback Machine",
+        "target": "Website"
+      },
+      {
+        "source": "English language",
+        "target": "Canada"
+      },
+      {
+        "source": "Canada",
+        "target": "English language"
+      },
+      {
+        "source": "Anguish",
+        "target": "Emotion"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Anger"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Contentment"
+      },
+      {
+        "source": "Contentment",
+        "target": "Anger"
+      },
+      {
+        "source": "Curiosity",
+        "target": "Awe"
+      },
+      {
+        "source": "Contentment",
+        "target": "Affection"
+      },
+      {
+        "source": "Courage",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Anguish"
+      },
+      {
+        "source": "Greek language",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Psychology",
+        "target": "Animal"
+      },
+      {
+        "source": "Language",
+        "target": "Writing"
+      },
+      {
+        "source": "Music",
+        "target": "Art"
+      },
+      {
+        "source": "Art",
+        "target": "Music"
+      },
+      {
+        "source": "Anguish",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Boredom",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Boredom",
+        "target": "Science"
+      },
+      {
+        "source": "Organism",
+        "target": "Animal"
+      },
+      {
+        "source": "Business",
+        "target": "History"
+      },
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "United States",
+        "target": "Science"
+      },
+      {
+        "source": "Molecule",
+        "target": "History"
+      }
+    ]
+  },
+  "2026-02-22": {
+    "nodes": [
+      {
+        "id": "Philosophy",
+        "visits": 35
+      },
+      {
+        "id": "Science",
+        "visits": 28
+      },
+      {
+        "id": "Mathematics",
+        "visits": 26
+      },
+      {
+        "id": "Music",
+        "visits": 23
+      },
+      {
+        "id": "History",
+        "visits": 23
+      },
+      {
+        "id": "Psychology",
+        "visits": 20
+      },
+      {
+        "id": "Animal",
+        "visits": 17
+      },
+      {
+        "id": "Biology",
+        "visits": 15
+      },
+      {
+        "id": "Wayback Machine",
+        "visits": 15
+      },
+      {
+        "id": "Definition",
+        "visits": 15
+      },
+      {
+        "id": "Art",
+        "visits": 13
+      },
+      {
+        "id": "Species",
+        "visits": 13
+      },
+      {
+        "id": "Greek language",
+        "visits": 12
+      },
+      {
+        "id": "Taxonomy (biology)",
+        "visits": 12
+      },
+      {
+        "id": "ISBN (identifier)",
+        "visits": 11
+      },
+      {
+        "id": "God",
+        "visits": 11
+      },
+      {
+        "id": "Language",
+        "visits": 11
+      },
+      {
+        "id": "Boredom",
+        "visits": 11
+      },
+      {
+        "id": "Affection",
+        "visits": 11
+      },
+      {
+        "id": "Molecule",
+        "visits": 11
+      },
+      {
+        "id": "United States",
+        "visits": 10
+      },
+      {
+        "id": "Emotion",
+        "visits": 10
+      },
+      {
+        "id": "Logic",
+        "visits": 9
+      },
+      {
+        "id": "Acceptance",
+        "visits": 9
+      },
+      {
+        "id": "Awe",
+        "visits": 9
+      },
+      {
+        "id": "Language family",
+        "visits": 9
+      },
+      {
+        "id": "Mind",
+        "visits": 8
+      },
+      {
+        "id": "Estonia",
+        "visits": 8
+      },
+      {
+        "id": "Organism",
+        "visits": 8
+      },
+      {
+        "id": "Business",
+        "visits": 8
+      },
+      {
+        "id": "English language",
+        "visits": 8
+      },
+      {
+        "id": "Demonym",
+        "visits": 8
+      },
+      {
+        "id": "Anger",
+        "visits": 8
+      },
+      {
+        "id": "Anguish",
+        "visits": 8
+      },
+      {
+        "id": "Annoyance",
+        "visits": 8
+      },
+      {
+        "id": "Atom",
+        "visits": 7
+      },
+      {
+        "id": "Physics",
+        "visits": 7
+      },
+      {
+        "id": "Europe",
+        "visits": 7
+      },
+      {
+        "id": "Society",
+        "visits": 7
+      },
+      {
+        "id": "Writing",
+        "visits": 7
+      },
+      {
+        "id": "Religion",
+        "visits": 7
+      },
+      {
+        "id": "Confidence",
+        "visits": 7
+      },
+      {
+        "id": "Christianity",
+        "visits": 7
+      },
+      {
+        "id": "Indo-European languages",
+        "visits": 7
+      },
+      {
+        "id": "Helium",
+        "visits": 7
+      },
+      {
+        "id": "Free will",
+        "visits": 6
+      },
+      {
+        "id": "Philosopher",
+        "visits": 6
+      },
+      {
+        "id": "India",
+        "visits": 6
+      },
+      {
+        "id": "Astronomy",
+        "visits": 6
+      },
+      {
+        "id": "Materialism",
+        "visits": 6
+      }
+    ],
+    "links": [
+      {
+        "source": "Psychology",
+        "target": "Mind"
+      },
+      {
+        "source": "Mind",
+        "target": "Logic"
+      },
+      {
+        "source": "Free will",
+        "target": "Philosophy"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Philosopher"
+      },
+      {
+        "source": "Philosopher",
+        "target": "Free will"
+      },
+      {
+        "source": "Free will",
+        "target": "Psychology"
+      },
+      {
+        "source": "Science",
+        "target": "Physics"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Greek language"
+      },
+      {
+        "source": "Science",
+        "target": "Astronomy"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Materialism"
+      },
+      {
+        "source": "History",
+        "target": "Society"
+      },
+      {
+        "source": "Science",
+        "target": "History"
+      },
+      {
+        "source": "Writing",
+        "target": "Language"
+      },
+      {
+        "source": "Science",
+        "target": "Music"
+      },
+      {
+        "source": "Music",
+        "target": "Estonia"
+      },
+      {
+        "source": "United States",
+        "target": "Art"
+      },
+      {
+        "source": "Philosopher",
+        "target": "Materialism"
+      },
+      {
+        "source": "Psychology",
+        "target": "Emotion"
+      },
+      {
+        "source": "Anger",
+        "target": "Anguish"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Confidence"
+      },
+      {
+        "source": "Confidence",
+        "target": "Boredom"
+      },
+      {
+        "source": "Anguish",
+        "target": "Awe"
+      },
+      {
+        "source": "Anger",
+        "target": "Affection"
+      },
+      {
+        "source": "Science",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Definition",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Anger",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Awe"
+      },
+      {
+        "source": "Awe",
+        "target": "Affection"
+      },
+      {
+        "source": "Logic",
+        "target": "Atom"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "Religion",
+        "target": "Christianity"
+      },
+      {
+        "source": "Science",
+        "target": "Logic"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Business"
+      },
+      {
+        "source": "Greek language",
+        "target": "Language family"
+      },
+      {
+        "source": "English language",
+        "target": "India"
+      },
+      {
+        "source": "Demonym",
+        "target": "Language"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Free will"
+      },
+      {
+        "source": "Emotion",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Anguish"
+      },
+      {
+        "source": "Affection",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Affection"
+      },
+      {
+        "source": "Awe",
+        "target": "Boredom"
+      },
+      {
+        "source": "Logic",
+        "target": "Molecule"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Species"
+      },
+      {
+        "source": "Species",
+        "target": "Definition"
+      },
+      {
+        "source": "Species",
+        "target": "Organism"
+      },
+      {
+        "source": "Estonia",
+        "target": "Europe"
+      },
+      {
+        "source": "Biology",
+        "target": "Organism"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Society"
+      },
+      {
+        "source": "Philosophy",
+        "target": "God"
+      },
+      {
+        "source": "Language family",
+        "target": "Language"
+      },
+      {
+        "source": "Emotion",
+        "target": "Affection"
+      },
+      {
+        "source": "Affection",
+        "target": "Awe"
+      },
+      {
+        "source": "Awe",
+        "target": "Emotion"
+      },
+      {
+        "source": "Awe",
+        "target": "Anger"
+      },
+      {
+        "source": "Anger",
+        "target": "Boredom"
+      },
+      {
+        "source": "Boredom",
+        "target": "Affection"
+      },
+      {
+        "source": "Materialism",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Psychology"
+      },
+      {
+        "source": "Anguish",
+        "target": "Emotion"
+      },
+      {
+        "source": "Annoyance",
+        "target": "Anger"
+      },
+      {
+        "source": "Confidence",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Anger",
+        "target": "Confidence"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Anguish"
+      },
+      {
+        "source": "Greek language",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Psychology",
+        "target": "Animal"
+      },
+      {
+        "source": "Language",
+        "target": "Writing"
+      },
+      {
+        "source": "Music",
+        "target": "Art"
+      },
+      {
+        "source": "Art",
+        "target": "Music"
+      },
+      {
+        "source": "Anguish",
+        "target": "Annoyance"
+      },
+      {
+        "source": "Boredom",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Boredom",
+        "target": "Science"
+      },
+      {
+        "source": "Organism",
+        "target": "Animal"
+      },
+      {
+        "source": "Physics",
+        "target": "Science"
+      },
+      {
+        "source": "Business",
+        "target": "History"
+      },
+      {
+        "source": "Astronomy",
+        "target": "Physics"
+      },
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Awe",
+        "target": "Confidence"
+      },
+      {
+        "source": "United States",
+        "target": "Science"
+      },
+      {
+        "source": "Molecule",
+        "target": "History"
+      }
+    ]
+  }
+}

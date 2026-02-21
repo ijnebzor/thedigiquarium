@@ -1,0 +1,1820 @@
+{
+  "2026-02-20": {
+    "nodes": [
+      {
+        "id": "Philosophie",
+        "visits": 12
+      },
+      {
+        "id": "Mathematik",
+        "visits": 9
+      },
+      {
+        "id": "Kunst",
+        "visits": 9
+      },
+      {
+        "id": "Geschichte",
+        "visits": 9
+      },
+      {
+        "id": "Psychologie",
+        "visits": 9
+      },
+      {
+        "id": "Biologie",
+        "visits": 8
+      },
+      {
+        "id": "Latein",
+        "visits": 8
+      },
+      {
+        "id": "Altgriechische Sprache",
+        "visits": 7
+      },
+      {
+        "id": "Wissenschaft",
+        "visits": 6
+      },
+      {
+        "id": "Sprache",
+        "visits": 6
+      },
+      {
+        "id": "Wissen",
+        "visits": 5
+      },
+      {
+        "id": "Musik",
+        "visits": 5
+      },
+      {
+        "id": "Lernen",
+        "visits": 4
+      },
+      {
+        "id": "Systematik (Biologie)",
+        "visits": 4
+      },
+      {
+        "id": "Lebewesen",
+        "visits": 4
+      },
+      {
+        "id": "Pflanze",
+        "visits": 4
+      },
+      {
+        "id": "Vergangenheit",
+        "visits": 4
+      },
+      {
+        "id": "Balkanhalbinsel",
+        "visits": 4
+      },
+      {
+        "id": "Sprachfamilie",
+        "visits": 4
+      },
+      {
+        "id": "Inzidentelles Lernen",
+        "visits": 3
+      },
+      {
+        "id": "Zeit",
+        "visits": 3
+      },
+      {
+        "id": "Existenz",
+        "visits": 3
+      },
+      {
+        "id": "Italien",
+        "visits": 3
+      },
+      {
+        "id": "Kohlenstoff",
+        "visits": 3
+      },
+      {
+        "id": "Helium",
+        "visits": 3
+      },
+      {
+        "id": "Fluor",
+        "visits": 3
+      },
+      {
+        "id": "Sozialer Wandel",
+        "visits": 3
+      },
+      {
+        "id": "Indogermanische Sprachen",
+        "visits": 3
+      },
+      {
+        "id": "Kommunikation",
+        "visits": 3
+      },
+      {
+        "id": "Deutsche Sprache",
+        "visits": 3
+      },
+      {
+        "id": "Theorie",
+        "visits": 2
+      },
+      {
+        "id": "Ableitung (Logik)",
+        "visits": 2
+      },
+      {
+        "id": "Welt",
+        "visits": 2
+      },
+      {
+        "id": "Kultur",
+        "visits": 2
+      },
+      {
+        "id": "Mensch",
+        "visits": 2
+      },
+      {
+        "id": "Menschenaffen",
+        "visits": 2
+      },
+      {
+        "id": "Sumatra-Orang-Utan",
+        "visits": 2
+      },
+      {
+        "id": "Rote Mauerbiene",
+        "visits": 2
+      },
+      {
+        "id": "Chara globularis",
+        "visits": 2
+      },
+      {
+        "id": "Nomenklatur (Biologie)",
+        "visits": 2
+      },
+      {
+        "id": "Tatsache",
+        "visits": 2
+      },
+      {
+        "id": "Halbinsel",
+        "visits": 2
+      },
+      {
+        "id": "Reh",
+        "visits": 2
+      },
+      {
+        "id": "Paradoxon",
+        "visits": 2
+      },
+      {
+        "id": "Spracherwerb",
+        "visits": 2
+      },
+      {
+        "id": "System",
+        "visits": 2
+      },
+      {
+        "id": "Faliskische Sprache",
+        "visits": 2
+      },
+      {
+        "id": "Natrium",
+        "visits": 2
+      },
+      {
+        "id": "Magnesium",
+        "visits": 2
+      },
+      {
+        "id": "Bor",
+        "visits": 2
+      }
+    ],
+    "links": [
+      {
+        "source": "Mathematik",
+        "target": "Lernen"
+      },
+      {
+        "source": "Lernen",
+        "target": "Inzidentelles Lernen"
+      },
+      {
+        "source": "Inzidentelles Lernen",
+        "target": "Lernen"
+      },
+      {
+        "source": "Inzidentelles Lernen",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Wissen"
+      },
+      {
+        "source": "Wissen",
+        "target": "Theorie"
+      },
+      {
+        "source": "Theorie",
+        "target": "Ableitung (Logik)"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Welt"
+      },
+      {
+        "source": "Kultur",
+        "target": "Mensch"
+      },
+      {
+        "source": "Mensch",
+        "target": "Menschenaffen"
+      },
+      {
+        "source": "Menschenaffen",
+        "target": "Sumatra-Orang-Utan"
+      },
+      {
+        "source": "Sumatra-Orang-Utan",
+        "target": "Menschenaffen"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Rote Mauerbiene"
+      },
+      {
+        "source": "Biologie",
+        "target": "Pflanze"
+      },
+      {
+        "source": "Chara globularis",
+        "target": "Nomenklatur (Biologie)"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Vergangenheit"
+      },
+      {
+        "source": "Vergangenheit",
+        "target": "Zeit"
+      },
+      {
+        "source": "Zeit",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Balkanhalbinsel"
+      },
+      {
+        "source": "Balkanhalbinsel",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Wissen"
+      },
+      {
+        "source": "Tatsache",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Balkanhalbinsel",
+        "target": "Halbinsel"
+      },
+      {
+        "source": "Halbinsel",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Existenz"
+      },
+      {
+        "source": "Existenz",
+        "target": "Latein"
+      },
+      {
+        "source": "Biologie",
+        "target": "Reh"
+      },
+      {
+        "source": "Wissen",
+        "target": "Paradoxon"
+      },
+      {
+        "source": "Spracherwerb",
+        "target": "Sprache"
+      },
+      {
+        "source": "Sprache",
+        "target": "System"
+      },
+      {
+        "source": "Latein",
+        "target": "Faliskische Sprache"
+      },
+      {
+        "source": "Faliskische Sprache",
+        "target": "Italien"
+      },
+      {
+        "source": "Natrium",
+        "target": "Magnesium"
+      },
+      {
+        "source": "Magnesium",
+        "target": "Bor"
+      },
+      {
+        "source": "Magnesium",
+        "target": "Kohlenstoff"
+      },
+      {
+        "source": "Kohlenstoff",
+        "target": "Bor"
+      },
+      {
+        "source": "Kohlenstoff",
+        "target": "Helium"
+      },
+      {
+        "source": "Helium",
+        "target": "Fluor"
+      },
+      {
+        "source": "Fluor",
+        "target": "Natrium"
+      },
+      {
+        "source": "Natrium",
+        "target": "Fluor"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Sozialer Wandel"
+      },
+      {
+        "source": "Sozialer Wandel",
+        "target": "Kunst"
+      },
+      {
+        "source": "Sprache",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Musik"
+      },
+      {
+        "source": "Pflanze",
+        "target": "Latein"
+      },
+      {
+        "source": "Latein",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Sozialer Wandel",
+        "target": "Kultur"
+      },
+      {
+        "source": "Kultur",
+        "target": "Kunst"
+      },
+      {
+        "source": "Faliskische Sprache",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Mensch"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Italien"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Biologie"
+      },
+      {
+        "source": "Zeit",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Musik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Latein",
+        "target": "Sprachfamilie"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Sprache"
+      },
+      {
+        "source": "Sprache",
+        "target": "Kommunikation"
+      },
+      {
+        "source": "Kommunikation",
+        "target": "Sprache"
+      },
+      {
+        "source": "Sprache",
+        "target": "Spracherwerb"
+      },
+      {
+        "source": "Kunst",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Balkanhalbinsel",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Latein"
+      },
+      {
+        "source": "Welt",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Sprachfamilie"
+      },
+      {
+        "source": "Wissen",
+        "target": "Tatsache"
+      },
+      {
+        "source": "Fluor",
+        "target": "Musik"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Musik",
+        "target": "Biologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Kunst"
+      },
+      {
+        "source": "Latein",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Musik",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Wissen",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Kunst",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Musik",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Biologie"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Musik",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Biologie",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Italien",
+        "target": "Deutsche Sprache"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Kunst",
+        "target": "Kultur"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "System"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Biologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Musik"
+      },
+      {
+        "source": "Biologie",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Helium",
+        "target": "Kohlenstoff"
+      },
+      {
+        "source": "Natrium",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Biologie"
+      },
+      {
+        "source": "Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Latein"
+      }
+    ]
+  },
+  "2026-02-21": {
+    "nodes": [
+      {
+        "id": "Geschichte",
+        "visits": 62
+      },
+      {
+        "id": "Psychologie",
+        "visits": 62
+      },
+      {
+        "id": "Philosophie",
+        "visits": 59
+      },
+      {
+        "id": "Kunst",
+        "visits": 58
+      },
+      {
+        "id": "Wissenschaft",
+        "visits": 58
+      },
+      {
+        "id": "Biologie",
+        "visits": 55
+      },
+      {
+        "id": "Musik",
+        "visits": 55
+      },
+      {
+        "id": "Mathematik",
+        "visits": 53
+      },
+      {
+        "id": "Altgriechische Sprache",
+        "visits": 36
+      },
+      {
+        "id": "Latein",
+        "visits": 31
+      },
+      {
+        "id": "Naturwissenschaft",
+        "visits": 17
+      },
+      {
+        "id": "Sprachfamilie",
+        "visits": 13
+      },
+      {
+        "id": "Wissen",
+        "visits": 11
+      },
+      {
+        "id": "Logik",
+        "visits": 11
+      },
+      {
+        "id": "Lebewesen",
+        "visits": 11
+      },
+      {
+        "id": "Sozialer Wandel",
+        "visits": 10
+      },
+      {
+        "id": "ISO 639",
+        "visits": 10
+      },
+      {
+        "id": "Deutsche Sprache",
+        "visits": 10
+      },
+      {
+        "id": "Wissenschaftstheorie",
+        "visits": 10
+      },
+      {
+        "id": "Begriff",
+        "visits": 10
+      },
+      {
+        "id": "Kultur",
+        "visits": 9
+      },
+      {
+        "id": "Sprache",
+        "visits": 9
+      },
+      {
+        "id": "Indogermanische Sprachen",
+        "visits": 9
+      },
+      {
+        "id": "Beryllium",
+        "visits": 8
+      },
+      {
+        "id": "Jahreskalender",
+        "visits": 8
+      },
+      {
+        "id": "Januar 2026",
+        "visits": 8
+      },
+      {
+        "id": "Erkenntnistheorie",
+        "visits": 8
+      },
+      {
+        "id": "Antike",
+        "visits": 8
+      },
+      {
+        "id": "Liste der IPA-Zeichen",
+        "visits": 8
+      },
+      {
+        "id": "Natur",
+        "visits": 8
+      },
+      {
+        "id": "Musikalisches Werk",
+        "visits": 8
+      },
+      {
+        "id": "Denken",
+        "visits": 8
+      },
+      {
+        "id": "Ton (Musik)",
+        "visits": 8
+      },
+      {
+        "id": "Systematik (Biologie)",
+        "visits": 7
+      },
+      {
+        "id": "Kosmologie",
+        "visits": 7
+      },
+      {
+        "id": "Universum",
+        "visits": 7
+      },
+      {
+        "id": "Natrium",
+        "visits": 7
+      },
+      {
+        "id": "Helium",
+        "visits": 7
+      },
+      {
+        "id": "Fluor",
+        "visits": 7
+      },
+      {
+        "id": "Wahrnehmung",
+        "visits": 7
+      },
+      {
+        "id": "Empirie",
+        "visits": 7
+      },
+      {
+        "id": "Ethik",
+        "visits": 7
+      },
+      {
+        "id": "Aristoteles",
+        "visits": 7
+      },
+      {
+        "id": "Theorie",
+        "visits": 6
+      },
+      {
+        "id": "System",
+        "visits": 6
+      },
+      {
+        "id": "Bor",
+        "visits": 6
+      },
+      {
+        "id": "Stickstoff",
+        "visits": 6
+      },
+      {
+        "id": "Neon",
+        "visits": 6
+      },
+      {
+        "id": "Aluminium",
+        "visits": 6
+      },
+      {
+        "id": "Amtssprache",
+        "visits": 6
+      }
+    ],
+    "links": [
+      {
+        "source": "Kunst",
+        "target": "Wissen"
+      },
+      {
+        "source": "Wissen",
+        "target": "Theorie"
+      },
+      {
+        "source": "Logik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Kunst",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Wissen"
+      },
+      {
+        "source": "Kosmologie",
+        "target": "Universum"
+      },
+      {
+        "source": "Universum",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Sprache",
+        "target": "System"
+      },
+      {
+        "source": "Stickstoff",
+        "target": "Neon"
+      },
+      {
+        "source": "Neon",
+        "target": "Helium"
+      },
+      {
+        "source": "Helium",
+        "target": "Aluminium"
+      },
+      {
+        "source": "Helium",
+        "target": "Fluor"
+      },
+      {
+        "source": "Fluor",
+        "target": "Natrium"
+      },
+      {
+        "source": "Natrium",
+        "target": "Fluor"
+      },
+      {
+        "source": "Fluor",
+        "target": "Beryllium"
+      },
+      {
+        "source": "Beryllium",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Sozialer Wandel"
+      },
+      {
+        "source": "Sozialer Wandel",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Wahrnehmung"
+      },
+      {
+        "source": "Latein",
+        "target": "ISO 639"
+      },
+      {
+        "source": "Sprache",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Musik"
+      },
+      {
+        "source": "Latein",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Sozialer Wandel",
+        "target": "Kultur"
+      },
+      {
+        "source": "Kultur",
+        "target": "Kunst"
+      },
+      {
+        "source": "Amtssprache",
+        "target": "Kunst"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Naturwissenschaft",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Biologie"
+      },
+      {
+        "source": "Musik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Latein",
+        "target": "Sprachfamilie"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Sprache"
+      },
+      {
+        "source": "Kunst",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Empirie"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Latein"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Sprachfamilie"
+      },
+      {
+        "source": "Fluor",
+        "target": "Musik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Wissenschaftstheorie"
+      },
+      {
+        "source": "Wissenschaftstheorie",
+        "target": "Erkenntnistheorie"
+      },
+      {
+        "source": "Erkenntnistheorie",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Antike"
+      },
+      {
+        "source": "Antike",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Kosmologie"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Ethik"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "ISO 639"
+      },
+      {
+        "source": "Musik",
+        "target": "Biologie"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Biologie",
+        "target": "Kunst"
+      },
+      {
+        "source": "Latein",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Logik"
+      },
+      {
+        "source": "Liste der IPA-Zeichen",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Natur"
+      },
+      {
+        "source": "Aristoteles",
+        "target": "Wissenschaftstheorie"
+      },
+      {
+        "source": "Wissenschaftstheorie",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Kosmologie",
+        "target": "Musik"
+      },
+      {
+        "source": "Musik",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Musik",
+        "target": "Musikalisches Werk"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Universum"
+      },
+      {
+        "source": "Biologie",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Wissen",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Kunst",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Begriff"
+      },
+      {
+        "source": "Ethik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Natur",
+        "target": "Musik"
+      },
+      {
+        "source": "Musik",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Biologie"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Aristoteles",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Latein",
+        "target": "Amtssprache"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Denken"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Denken"
+      },
+      {
+        "source": "Musik",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Biologie",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Kunst",
+        "target": "Kultur"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "System"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Biologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Musik"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Musik",
+        "target": "Ton (Musik)"
+      },
+      {
+        "source": "Biologie",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Liste der IPA-Zeichen"
+      },
+      {
+        "source": "Liste der IPA-Zeichen",
+        "target": "Deutsche Sprache"
+      },
+      {
+        "source": "Antike",
+        "target": "Kultur"
+      },
+      {
+        "source": "Wissenschaftstheorie",
+        "target": "Aristoteles"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Erkenntnistheorie"
+      },
+      {
+        "source": "Bor",
+        "target": "Beryllium"
+      },
+      {
+        "source": "Beryllium",
+        "target": "Stickstoff"
+      },
+      {
+        "source": "Neon",
+        "target": "Beryllium"
+      },
+      {
+        "source": "Natrium",
+        "target": "Geschichte"
+      }
+    ]
+  },
+  "2026-02-22": {
+    "nodes": [
+      {
+        "id": "Kunst",
+        "visits": 88
+      },
+      {
+        "id": "Psychologie",
+        "visits": 84
+      },
+      {
+        "id": "Wissenschaft",
+        "visits": 81
+      },
+      {
+        "id": "Biologie",
+        "visits": 79
+      },
+      {
+        "id": "Musik",
+        "visits": 78
+      },
+      {
+        "id": "Geschichte",
+        "visits": 77
+      },
+      {
+        "id": "Mathematik",
+        "visits": 76
+      },
+      {
+        "id": "Philosophie",
+        "visits": 76
+      },
+      {
+        "id": "Altgriechische Sprache",
+        "visits": 42
+      },
+      {
+        "id": "Latein",
+        "visits": 34
+      },
+      {
+        "id": "Naturwissenschaft",
+        "visits": 19
+      },
+      {
+        "id": "Begriff",
+        "visits": 15
+      },
+      {
+        "id": "Wissen",
+        "visits": 14
+      },
+      {
+        "id": "Logik",
+        "visits": 14
+      },
+      {
+        "id": "Sprachfamilie",
+        "visits": 14
+      },
+      {
+        "id": "Kultur",
+        "visits": 13
+      },
+      {
+        "id": "Lebewesen",
+        "visits": 13
+      },
+      {
+        "id": "Erkenntnistheorie",
+        "visits": 13
+      },
+      {
+        "id": "Sozialer Wandel",
+        "visits": 12
+      },
+      {
+        "id": "Wissenschaftstheorie",
+        "visits": 12
+      },
+      {
+        "id": "Antike",
+        "visits": 12
+      },
+      {
+        "id": "ISO 639",
+        "visits": 11
+      },
+      {
+        "id": "Englische Sprache",
+        "visits": 11
+      },
+      {
+        "id": "Sprache",
+        "visits": 10
+      },
+      {
+        "id": "Deutsche Sprache",
+        "visits": 10
+      },
+      {
+        "id": "Jahreskalender",
+        "visits": 10
+      },
+      {
+        "id": "Empirie",
+        "visits": 10
+      },
+      {
+        "id": "Physik",
+        "visits": 10
+      },
+      {
+        "id": "Liste der IPA-Zeichen",
+        "visits": 10
+      },
+      {
+        "id": "Denken",
+        "visits": 10
+      },
+      {
+        "id": "Systematik (Biologie)",
+        "visits": 9
+      },
+      {
+        "id": "Wahrnehmung",
+        "visits": 9
+      },
+      {
+        "id": "Kunstgattung",
+        "visits": 9
+      },
+      {
+        "id": "Indogermanische Sprachen",
+        "visits": 9
+      },
+      {
+        "id": "Januar 2026",
+        "visits": 9
+      },
+      {
+        "id": "Bundesdeutsches Hochdeutsch",
+        "visits": 9
+      },
+      {
+        "id": "Geisteswissenschaft",
+        "visits": 9
+      },
+      {
+        "id": "Natur",
+        "visits": 9
+      },
+      {
+        "id": "Aristoteles",
+        "visits": 9
+      },
+      {
+        "id": "Musikalisches Werk",
+        "visits": 9
+      },
+      {
+        "id": "Ton (Musik)",
+        "visits": 9
+      },
+      {
+        "id": "Lernen",
+        "visits": 8
+      },
+      {
+        "id": "Formalwissenschaft",
+        "visits": 8
+      },
+      {
+        "id": "Beryllium",
+        "visits": 8
+      },
+      {
+        "id": "Definition",
+        "visits": 8
+      },
+      {
+        "id": "Leben",
+        "visits": 8
+      },
+      {
+        "id": "Historische Jahrestage",
+        "visits": 8
+      },
+      {
+        "id": "Biochemie",
+        "visits": 8
+      },
+      {
+        "id": "Theorie",
+        "visits": 7
+      },
+      {
+        "id": "Pflanze",
+        "visits": 7
+      }
+    ],
+    "links": [
+      {
+        "source": "Mathematik",
+        "target": "Lernen"
+      },
+      {
+        "source": "Kunst",
+        "target": "Wissen"
+      },
+      {
+        "source": "Wissen",
+        "target": "Theorie"
+      },
+      {
+        "source": "Logik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Biologie",
+        "target": "Pflanze"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Kunst",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Formalwissenschaft"
+      },
+      {
+        "source": "Formalwissenschaft",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Wissen"
+      },
+      {
+        "source": "Beryllium",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Sozialer Wandel"
+      },
+      {
+        "source": "Sozialer Wandel",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Wahrnehmung"
+      },
+      {
+        "source": "Latein",
+        "target": "ISO 639"
+      },
+      {
+        "source": "Sprache",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Musik"
+      },
+      {
+        "source": "Musik",
+        "target": "Kunstgattung"
+      },
+      {
+        "source": "Pflanze",
+        "target": "Latein"
+      },
+      {
+        "source": "Latein",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Sozialer Wandel",
+        "target": "Kultur"
+      },
+      {
+        "source": "Kultur",
+        "target": "Kunst"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Bundesdeutsches Hochdeutsch"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Naturwissenschaft",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Biologie"
+      },
+      {
+        "source": "Musik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Latein",
+        "target": "Sprachfamilie"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Sprache"
+      },
+      {
+        "source": "Kunst",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Empirie"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Latein"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Sprachfamilie"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Wissenschaftstheorie"
+      },
+      {
+        "source": "Wissenschaftstheorie",
+        "target": "Erkenntnistheorie"
+      },
+      {
+        "source": "Erkenntnistheorie",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Antike"
+      },
+      {
+        "source": "Antike",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "ISO 639"
+      },
+      {
+        "source": "Musik",
+        "target": "Biologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Physik"
+      },
+      {
+        "source": "Physik",
+        "target": "Begriff"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Biologie",
+        "target": "Kunst"
+      },
+      {
+        "source": "Latein",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Logik"
+      },
+      {
+        "source": "Liste der IPA-Zeichen",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Natur"
+      },
+      {
+        "source": "Aristoteles",
+        "target": "Wissenschaftstheorie"
+      },
+      {
+        "source": "Wissenschaftstheorie",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Musik",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Musik",
+        "target": "Musikalisches Werk"
+      },
+      {
+        "source": "Biologie",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Wissen",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Kunst",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Begriff"
+      },
+      {
+        "source": "Natur",
+        "target": "Musik"
+      },
+      {
+        "source": "Musik",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Biologie"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Formalwissenschaft",
+        "target": "Logik"
+      },
+      {
+        "source": "Logik",
+        "target": "Definition"
+      },
+      {
+        "source": "Biologie",
+        "target": "Leben"
+      },
+      {
+        "source": "Formalwissenschaft",
+        "target": "Geisteswissenschaft"
+      },
+      {
+        "source": "Aristoteles",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Denken"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Denken"
+      },
+      {
+        "source": "Musik",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Definition"
+      },
+      {
+        "source": "Biologie",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Kunst",
+        "target": "Kultur"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Biologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Musik"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Musik",
+        "target": "Ton (Musik)"
+      },
+      {
+        "source": "Historische Jahrestage",
+        "target": "Musik"
+      },
+      {
+        "source": "Biologie",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Liste der IPA-Zeichen"
+      },
+      {
+        "source": "Liste der IPA-Zeichen",
+        "target": "Deutsche Sprache"
+      },
+      {
+        "source": "Antike",
+        "target": "Kultur"
+      },
+      {
+        "source": "Wissenschaftstheorie",
+        "target": "Aristoteles"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Erkenntnistheorie"
+      },
+      {
+        "source": "Logik",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Logik",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Erkenntnistheorie",
+        "target": "Wissenschaftstheorie"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Biologie"
+      },
+      {
+        "source": "Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Biochemie"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Latein"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Philosophie"
+      }
+    ]
+  }
+}

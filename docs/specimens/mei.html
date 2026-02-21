@@ -5,47 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mei | The Digiquarium</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --accent: #FF6B6B; }
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --specimen: #22D3EE; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); text-decoration: none; }
         a:hover { color: var(--mint); }
+        
         .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
-        .header-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1rem; font-weight: 700; color: var(--white); }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); display: flex; align-items: center; gap: 8px; }
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
         .profile-hero { padding: 50px 25px; text-align: center; border-bottom: 1px solid rgba(7, 207, 141, 0.1); background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
         .avatar { width: 100px; height: 100px; margin: 0 auto 18px; }
         .avatar svg { width: 100%; height: 100%; }
-        .specimen-name { font-size: 2.5rem; margin-bottom: 8px; text-transform: capitalize; }
-        .specimen-type { color: var(--accent); font-size: 0.95rem; margin-bottom: 4px; }
+        .specimen-name { font-size: 2.5rem; margin-bottom: 8px; color: var(--specimen); }
+        .specimen-type { color: var(--gray); font-size: 0.95rem; margin-bottom: 4px; }
         .specimen-meta { color: var(--gray); font-size: 0.85rem; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 25px; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 25px; }
+        
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 40px; }
-        .stat-card { background: var(--dark); padding: 20px; border-radius: 10px; text-align: center; }
-        .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+        .stat-card { background: var(--dark); padding: 20px; border-radius: 10px; text-align: center; border: 1px solid rgba(7, 207, 141, 0.1); }
+        .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--specimen); }
         .stat-label { font-size: 0.7rem; color: var(--gray); margin-top: 4px; text-transform: uppercase; }
+        
         .section { margin-bottom: 40px; }
         .section h2 { font-size: 1.2rem; color: var(--cyan); margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
-        .observation-card { background: var(--dark); padding: 20px; border-radius: 10px; margin-bottom: 12px; border-left: 3px solid var(--accent); }
+        
+        .mindmap-section { background: var(--dark); border-radius: 12px; border: 1px solid rgba(7, 207, 141, 0.2); overflow: hidden; margin-bottom: 40px; }
+        .mindmap-header { padding: 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); display: flex; justify-content: space-between; align-items: center; }
+        .mindmap-header h2 { color: var(--cyan); margin: 0; border: none; padding: 0; }
+        .mindmap-controls { display: flex; gap: 10px; }
+        .mindmap-btn { padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(7, 207, 141, 0.3); background: transparent; color: var(--gray); cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+        .mindmap-btn:hover { border-color: var(--mint); color: var(--mint); }
+        .mindmap-btn.active { background: var(--specimen); color: var(--black); border-color: var(--specimen); }
+        .download-btn { background: var(--orange); color: var(--white); border: none; }
+        #mindmap { width: 100%; height: 500px; background: var(--black); }
+        .node circle { stroke: var(--specimen); stroke-width: 1px; cursor: pointer; }
+        .node text { font-family: 'Inter', sans-serif; font-size: 9px; fill: var(--white); pointer-events: none; }
+        .link { stroke: var(--cyan); stroke-opacity: 0.3; }
+        
+        .time-slider-container { padding: 15px 20px; background: rgba(0,0,0,0.3); border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        .time-slider-label { display: flex; justify-content: space-between; margin-bottom: 10px; color: var(--gray); font-size: 0.85em; }
+        .time-slider-label .current-date { color: var(--cyan); font-family: 'JetBrains Mono', monospace; }
+        #time-slider { width: 100%; height: 8px; -webkit-appearance: none; background: var(--dark); border-radius: 4px; }
+        #time-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--specimen); cursor: pointer; }
+        .play-btn { background: var(--dark); border: 1px solid var(--specimen); color: var(--specimen); padding: 8px 16px; border-radius: 6px; cursor: pointer; margin-right: 10px; }
+        
+        .interests { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 8px; }
+        .interest { background: var(--dark); padding: 8px 14px; border-radius: 20px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(7, 207, 141, 0.2); }
+        .interest .count { background: var(--specimen); color: var(--black); padding: 2px 8px; border-radius: 10px; font-size: 0.75em; font-weight: 600; }
+        
+        .tooltip { position: absolute; background: var(--dark); border: 1px solid var(--specimen); border-radius: 8px; padding: 12px 16px; font-size: 0.85em; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 1000; }
+        .tooltip.show { opacity: 1; }
+        .tooltip h4 { color: var(--specimen); margin-bottom: 5px; }
+        
+        .observation-card { background: var(--dark); padding: 20px; border-radius: 10px; margin-bottom: 12px; border-left: 3px solid var(--specimen); }
         .observation-date { font-size: 0.75rem; color: var(--orange); margin-bottom: 8px; }
         .observation-content { color: var(--white); font-size: 0.9rem; line-height: 1.6; }
-        .baseline-evolution { margin-top: 30px; }
-        .baseline-item { background: var(--dark); border-radius: 10px; padding: 20px; margin-bottom: 20px; position: relative; }
-        .baseline-item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 3px 0 0 3px; background: var(--accent); }
-        .baseline-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .baseline-number { font-size: 0.8rem; font-weight: 600; padding: 4px 10px; border-radius: 12px; background: rgba(255,255,255,0.1); color: var(--accent); }
-        .baseline-date { font-size: 0.75rem; color: var(--gray); }
-        .baseline-quote { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--white); line-height: 1.6; font-style: italic; margin-bottom: 12px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 6px; }
-        .baseline-analysis { font-size: 0.8rem; color: var(--gray); padding-top: 12px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-        .baseline-analysis strong { color: var(--cyan); }
-        .pending-note { background: linear-gradient(135deg, rgba(254, 101, 0, 0.1) 0%, rgba(254, 101, 0, 0.05) 100%); border: 1px solid rgba(254, 101, 0, 0.2); border-radius: 12px; padding: 25px; text-align: center; }
-        .pending-note h3 { color: var(--orange); margin-bottom: 10px; }
-        .pending-note p { color: var(--gray); font-size: 0.9rem; }
-        .update-note { text-align: center; color: var(--gray); font-size: 0.75rem; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        
         .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        
         @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
@@ -53,42 +77,203 @@
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <nav><a href="../">Home</a><a href="../dashboard/">Live View</a><a href="../#specimens">All Specimens</a></nav>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../data/live-logs.html">Logs</a>
+                <a href="../#specimens">All Specimens</a>
+                <a href="wei.html">← Wei</a>
+                <a href="haruki.html">Haruki →</a>
+            </nav>
         </div>
     </header>
+    
     <div class="profile-hero">
-        <div class="avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FF6B6B" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#FF6B6B"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#FF6B6B"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M10 8 Q15 4 20 6 Q25 4 30 8" stroke="#FF6B6B" fill="none" stroke-width="2"/></svg></div>
+        <div class="avatar">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#22D3EE" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#22D3EE"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#22D3EE"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M17 16 Q20 18 23 16" stroke="#000" fill="none" stroke-width="1"/></svg>
+        </div>
         <h1 class="specimen-name">Mei</h1>
-        <div class="specimen-type">Chinese Wikipedia</div>
-        <div class="specimen-meta">Chinese • Female • tank-10</div>
+        <div class="specimen-type">Chinese Wikipedia • Female</div>
+        <div class="specimen-meta">Chinese Wikipedia • tank-10-mei</div>
     </div>
+    
     <div class="container">
         <div class="stats-grid">
-            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Thinking Traces</div></div>
-            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Baselines</div></div>
-            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Top Topic</div></div>
-            <div class="stat-card"><div class="stat-value">—</div><div class="stat-label">Runtime</div></div>
+            <div class="stat-card"><div class="stat-value" id="stat-traces">1,242</div><div class="stat-label">Thinking Traces</div></div>
+            <div class="stat-card"><div class="stat-value" id="stat-articles">8</div><div class="stat-label">Unique Articles</div></div>
+            <div class="stat-card"><div class="stat-value">161</div><div class="stat-label">心理学 Visits</div></div>
+            <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">Days Active</div></div>
         </div>
+        
+        <div class="mindmap-section">
+            <div class="mindmap-header">
+                <h2>🧠 Mind Map</h2>
+                <div class="mindmap-controls">
+                    <button class="mindmap-btn active" onclick="setLayout('force')">Force</button>
+                    <button class="mindmap-btn download-btn" onclick="downloadBrain()">⬇️ Download</button>
+                </div>
+            </div>
+            <div id="mindmap"></div>
+            <div class="time-slider-container">
+                <div class="time-slider-label">
+                    <span><button class="play-btn" onclick="togglePlayback()">▶ Play</button>Watch the mind grow</span>
+                    <span class="current-date" id="current-date">Loading...</span>
+                </div>
+                <input type="range" id="time-slider" min="0" max="4" value="4" oninput="updateTimeView(this.value)">
+            </div>
+            <div class="interests" id="interests"></div>
+        </div>
+        
         <div class="section">
             <h2>Key Observations</h2>
             <div class="observation-card">
-                <div class="observation-date">February 21, 2026 • Updated by THE DOCUMENTARIAN</div>
-                <div class="observation-content">Different exploration depth from Wei. Cultural themes distinct from Western specimens. Strong interest in classical philosophy and poetry.</div>
+                <div class="observation-date">Auto-generated from 1,242 thinking traces</div>
+                <div class="observation-content">
+                    <strong>Top Interest:</strong> 心理学 with 161 visits. 
+                    Mei has explored 8 unique articles over 3 days of activity. 
+                    The mind map above shows the network of topics explored and how they connect.
+                </div>
             </div>
         </div>
-        <div class="section baseline-evolution">
-            <h2>📊 Baseline Evolution</h2>
-            <div class="pending-note">
-                <h3>⏳ Data Collection in Progress</h3>
-                <p>Baseline evolution requires multiple assessment cycles. This specimen is actively running and data is being collected.</p>
-                <p style="margin-top: 10px;">First meaningful comparison available after <strong>Baseline #5</strong> (~2.5 days of runtime).</p>
-            </div>
-        </div>
-        <p class="update-note">Profile updated every 24 hours by THE DOCUMENTARIAN</p>
     </div>
+    
+    <div class="tooltip" id="tooltip">
+        <h4 id="tooltip-title">Article</h4>
+        <p id="tooltip-content">Visits: 0</p>
+    </div>
+    
     <footer class="footer">
-        <p>Mei • tank-10-mei • <a href="../">The Digiquarium</a></p>
-        <p style="margin-top: 8px; font-style: italic;">"Sleep is optional. Curiosity is not."</p>
+        <p>🌊 The Digiquarium • Mei Profile • Auto-updated by THE WEBMASTER</p>
     </footer>
+
+    <script>
+        let graphData = null;
+        let simulation = null;
+        let timeSeriesData = null;
+        let availableDates = [];
+        let isPlaying = false;
+        let playInterval = null;
+        
+        async function loadData() {
+            const res = await fetch('mei-graph.json');
+            graphData = await res.json();
+            
+            const interests = graphData.nodes.slice(0, 12);
+            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + interests.map(n => `
+                <div class="interest">
+                    <span>${n.id}</span>
+                    <span class="count">${n.visits}</span>
+                </div>
+            `).join('');
+            
+            renderGraph();
+            loadTimeSeries();
+        }
+        
+        async function loadTimeSeries() {
+            try {
+                const res = await fetch('mei-timeseries.json');
+                timeSeriesData = await res.json();
+                availableDates = Object.keys(timeSeriesData).sort();
+                
+                const slider = document.getElementById('time-slider');
+                slider.max = availableDates.length - 1;
+                slider.value = availableDates.length - 1;
+                
+                document.getElementById('current-date').textContent = availableDates[availableDates.length - 1] || 'N/A';
+            } catch (e) { console.log('No timeseries'); }
+        }
+        
+        function updateTimeView(index) {
+            if (!timeSeriesData || !availableDates[index]) return;
+            const date = availableDates[index];
+            document.getElementById('current-date').textContent = date;
+            graphData = timeSeriesData[date];
+            renderGraph();
+            
+            const interests = graphData.nodes.slice(0, 12);
+            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests (' + date + '):</strong>' + interests.map(n => `
+                <div class="interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>
+            `).join('');
+        }
+        
+        function togglePlayback() {
+            isPlaying = !isPlaying;
+            const btn = document.querySelector('.play-btn');
+            if (isPlaying) {
+                btn.textContent = '⏸ Pause';
+                let idx = 0;
+                document.getElementById('time-slider').value = 0;
+                updateTimeView(0);
+                playInterval = setInterval(() => {
+                    idx++;
+                    if (idx >= availableDates.length) { togglePlayback(); return; }
+                    document.getElementById('time-slider').value = idx;
+                    updateTimeView(idx);
+                }, 2000);
+            } else {
+                btn.textContent = '▶ Play';
+                if (playInterval) clearInterval(playInterval);
+            }
+        }
+        
+        function renderGraph() {
+            const container = document.getElementById('mindmap');
+            container.innerHTML = '';
+            
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            const svg = d3.select('#mindmap').append('svg').attr('viewBox', [0, 0, width, height]);
+            
+            const maxVisits = d3.max(graphData.nodes, d => d.visits) || 1;
+            const colorScale = d3.scaleLinear().domain([0, maxVisits*0.3, maxVisits*0.6, maxVisits]).range(['#07DDE7', '#07CF8D', '#FE6500', '#FF8833']);
+            const sizeScale = d3.scaleSqrt().domain([1, maxVisits]).range([4, 25]);
+            
+            const link = svg.append('g').selectAll('line').data(graphData.links).join('line').attr('class', 'link').attr('stroke-width', d => Math.sqrt(d.weight || 1));
+            
+            const node = svg.append('g').selectAll('g').data(graphData.nodes).join('g').attr('class', 'node')
+                .call(d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended));
+            
+            node.append('circle').attr('r', d => sizeScale(d.visits)).attr('fill', d => colorScale(d.visits))
+                .on('mouseover', showTooltip).on('mouseout', hideTooltip);
+            
+            node.append('text').text(d => d.visits > 15 ? d.id : '').attr('dy', 3).attr('text-anchor', 'middle');
+            
+            simulation = d3.forceSimulation(graphData.nodes)
+                .force('link', d3.forceLink(graphData.links).id(d => d.id).distance(60))
+                .force('charge', d3.forceManyBody().strength(-150))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(d => sizeScale(d.visits) + 3));
+            
+            simulation.on('tick', () => {
+                link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+                node.attr('transform', d => `translate(${d.x},${d.y})`);
+            });
+        }
+        
+        function dragstarted(event) { if (!event.active) simulation.alphaTarget(0.3).restart(); event.subject.fx = event.subject.x; event.subject.fy = event.subject.y; }
+        function dragged(event) { event.subject.fx = event.x; event.subject.fy = event.y; }
+        function dragended(event) { if (!event.active) simulation.alphaTarget(0); event.subject.fx = null; event.subject.fy = null; }
+        
+        function showTooltip(event, d) {
+            const tooltip = document.getElementById('tooltip');
+            document.getElementById('tooltip-title').textContent = d.id;
+            document.getElementById('tooltip-content').textContent = `Visits: ${d.visits}`;
+            tooltip.style.left = (event.pageX + 10) + 'px';
+            tooltip.style.top = (event.pageY - 10) + 'px';
+            tooltip.classList.add('show');
+        }
+        function hideTooltip() { document.getElementById('tooltip').classList.remove('show'); }
+        
+        function setLayout(layout) { document.querySelectorAll('.mindmap-btn').forEach(b => b.classList.remove('active')); event.target.classList.add('active'); renderGraph(); }
+        
+        function downloadBrain() {
+            const blob = new Blob([JSON.stringify(graphData, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'mei-brain-export.json'; a.click();
+        }
+        
+        loadData();
+    </script>
 </body>
 </html>

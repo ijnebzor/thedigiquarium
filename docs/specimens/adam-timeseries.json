@@ -496,6 +496,38 @@
       {
         "source": "Human",
         "target": "Animal"
+      },
+      {
+        "source": "World",
+        "target": "Human"
+      },
+      {
+        "source": "Language",
+        "target": "Word"
+      },
+      {
+        "source": "Language family",
+        "target": "Language"
+      },
+      {
+        "source": "Angst",
+        "target": "Emotion"
+      },
+      {
+        "source": "Language family",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Gauss's law",
+        "target": "Magnetism"
+      },
+      {
+        "source": "Latin language",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "7 (number)",
+        "target": "8 (number)"
       }
     ]
   },
@@ -978,6 +1010,46 @@
       {
         "source": "Chemistry",
         "target": "Science"
+      },
+      {
+        "source": "Roman Empire",
+        "target": "Music"
+      },
+      {
+        "source": "Anguish",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Language family",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Science",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Science",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Language",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Latin language",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Italy",
+        "target": "Music"
+      },
+      {
+        "source": "Animal",
+        "target": "Music"
       }
     ]
   },
@@ -1544,6 +1616,30 @@
       {
         "source": "Italy",
         "target": "Music"
+      },
+      {
+        "source": "Psychology",
+        "target": "Biology"
+      },
+      {
+        "source": "Emotion",
+        "target": "Psychology"
+      },
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Art"
+      },
+      {
+        "source": "Animal",
+        "target": "Music"
+      },
+      {
+        "source": "Science",
+        "target": "History"
       }
     ]
   },
@@ -1606,11 +1702,11 @@
         "visits": 25
       },
       {
-        "id": "Psychology",
-        "visits": 22
+        "id": "English language",
+        "visits": 23
       },
       {
-        "id": "English language",
+        "id": "Psychology",
         "visits": 22
       },
       {
@@ -1634,6 +1730,10 @@
         "visits": 18
       },
       {
+        "id": "History",
+        "visits": 18
+      },
+      {
         "id": "Earth",
         "visits": 17
       },
@@ -1647,10 +1747,6 @@
       },
       {
         "id": "Electricity",
-        "visits": 17
-      },
-      {
-        "id": "History",
         "visits": 17
       },
       {
