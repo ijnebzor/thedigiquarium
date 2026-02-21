@@ -186,3 +186,51 @@ AIthropology research: Study how AI specimens develop personalities, interests, 
 
 *Last updated: 2026-02-22 02:35 AEDT by THE STRATEGIST*
 *"THE BRAIN exists because context windows are finite but accountability is not."*
+
+---
+
+## SECTION 8: KEY LEARNINGS (Auto-Added)
+
+### Delegation Reveals Capability Gaps
+**Added:** 2026-02-22 02:40 AEDT
+
+The more we delegate to daemons, the more we discover where they need upgrades.
+
+| Delegation | Outcome | Gap Found |
+|------------|---------|-----------|
+| Log pruning to WEBMASTER | ✅ Success | Had to upgrade to v3.0 first |
+| GitHub commits to DOCUMENTARIAN | ⚠️ Manual | No auto-commit capability |
+| Timestamp precision | ✅ Success | Required code update |
+
+**Principle:** Delegation is a discovery mechanism, not just a work distribution mechanism.
+
+---
+
+## SECTION 9: SESSION SUMMARY (2026-02-22 02:00-02:45)
+
+### Completed During Benji's Dog Walk
+
+| Task | Status | Notes |
+|------|--------|-------|
+| THE BRAIN constitution | ✅ | Full document with sections 1-9 |
+| THE CHAOS MONKEY | ✅ | Created and tested |
+| Admin panel enhanced | ✅ | 6 tabs, daemon messaging, controls |
+| Daemons page | ✅ | /research/daemons.html |
+| Log prune + publish | ✅ | 71,397 → 2,878 entries |
+| GitHub push | ✅ | All data committed |
+| Webmaster timestamps | ✅ | Full datetime now |
+
+### Still Pending (Require External Setup)
+
+| Task | Blocker |
+|------|---------|
+| Cloudflare Access 2FA | Needs Cloudflare account setup |
+| SendGrid email | Needs API key |
+| Adam mind map | Design ready, implement next |
+| User management | Needs backend or Cloudflare |
+
+### Next Session Priorities
+1. Adam mind map with D3.js
+2. Cloudflare Access setup guide
+3. SendGrid integration
+4. External API architecture document
