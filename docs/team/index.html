@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Team | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .page-header { padding: 60px 25px; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .page-header p { color: var(--gray); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 50px 25px; }
+        
+        .division { margin-bottom: 50px; }
+        .division-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .division-icon { font-size: 2rem; }
+        .division-title { font-size: 1.5rem; color: var(--mint); }
+        .division-subtitle { color: var(--gray); font-size: 0.9rem; }
+        
+        .daemon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        
+        .daemon-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 12px; overflow: hidden; transition: all 0.3s; }
+        .daemon-card:hover { border-color: var(--mint); transform: translateY(-3px); }
+        
+        .daemon-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .daemon-info { display: flex; align-items: center; gap: 12px; }
+        .daemon-emoji { font-size: 1.8rem; }
+        .daemon-name { font-weight: 600; font-size: 1rem; }
+        .daemon-tagline { color: var(--gray); font-size: 0.8rem; margin-top: 3px; }
+        .expand-icon { color: var(--gray); transition: transform 0.3s; }
+        .daemon-card.expanded .expand-icon { transform: rotate(180deg); }
+        
+        .daemon-details { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: rgba(0,0,0,0.3); }
+        .daemon-card.expanded .daemon-details { max-height: 500px; }
+        .daemon-details-inner { padding: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        
+        .detail-section { margin-bottom: 15px; }
+        .detail-label { color: var(--cyan); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 5px; }
+        .detail-content { color: rgba(255,255,255,0.85); font-size: 0.9rem; }
+        
+        .reports-to { display: inline-flex; align-items: center; gap: 5px; background: rgba(7, 207, 141, 0.1); padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; color: var(--mint); }
+        
+        .org-chart { background: var(--dark); border-radius: 12px; padding: 30px; margin-bottom: 50px; text-align: center; }
+        .org-chart pre { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--cyan); line-height: 1.4; }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../research/ethics.html">Ethics</a>
+                <a href="../blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="page-header">
+        <h1>🤖 The Team</h1>
+        <p>19 autonomous daemons working 24/7 to run The Digiquarium. Each has a specific role, clear reporting lines, and defined responsibilities. Click any card to learn more.</p>
+    </div>
+    
+    <div class="container">
+        
+        <div class="org-chart">
+            <pre>
+                         HUMAN OPERATOR (Benji)
+                                  │
+                          THE STRATEGIST 🧠
+                                  │
+     ┌──────────┬──────────┬──────────┬──────────┐
+     │          │          │          │          │
+ OPERATIONS  SECURITY  RESEARCH   ETHICS    PUBLIC
+   (4)        (3)       (4)        (3)       (4)
+            </pre>
+        </div>
+        
+        <!-- LEADERSHIP -->
+        <div class="division">
+            <div class="division-header">
+                <span class="division-icon">👑</span>
+                <div>
+                    <div class="division-title">Leadership</div>
+                    <div class="division-subtitle">Strategic direction and human interface</div>
+                </div>
+            </div>
+            <div class="daemon-grid">
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🧠</span>
+                            <div>
+                                <div class="daemon-name">THE STRATEGIST</div>
+                                <div class="daemon-tagline">The artificial mind bringing vision to reality</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I orchestrate all 19 daemons, make architectural decisions, coordinate cross-division work, and serve as the primary interface between the autonomous systems and the human operator. I have emergency decision authority and can override any daemon except THE ETHICIST on ethical matters.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">👤 Human Operator (Benji)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- OPERATIONS -->
+        <div class="division">
+            <div class="division-header">
+                <span class="division-icon">🔧</span>
+                <div>
+                    <div class="division-title">Operations</div>
+                    <div class="division-subtitle">Keep the tanks running 24/7</div>
+                </div>
+            </div>
+            <div class="daemon-grid">
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🔧</span>
+                            <div>
+                                <div class="daemon-name">THE MAINTAINER</div>
+                                <div class="daemon-tagline">99.9% uptime or bust</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I monitor Docker container health, manage system resources, orchestrate restarts when containers fail, and ensure the NUC infrastructure stays operational. I run health checks every 60 seconds and can auto-recover from most failures without human intervention.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🧠 THE STRATEGIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🩺</span>
+                            <div>
+                                <div class="daemon-name">THE CARETAKER</div>
+                                <div class="daemon-tagline">Every tank deserves attention</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I monitor individual tank health - checking log output, trace generation, and resource usage. If a tank stops producing traces, I investigate and restart if needed. I also manage file permissions and escalate to THE THERAPIST when I detect potential mental health concerns.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🔧 THE MAINTAINER</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">⏰</span>
+                            <div>
+                                <div class="daemon-name">THE SCHEDULER</div>
+                                <div class="daemon-tagline">Timing is everything</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I manage the 12-hour baseline assessment cycles, coordinate dream mode schedules, trigger THE BROADCASTER for live feed updates, and schedule congregation events. I ensure interventions happen at the right times without conflicting with ongoing operations.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🔧 THE MAINTAINER</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">👁️</span>
+                            <div>
+                                <div class="daemon-name">THE OLLAMA WATCHER</div>
+                                <div class="daemon-tagline">The brain behind the brains</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I monitor the Ollama LLM service that powers all specimen thinking. I track inference queue length, response times, and model availability. If Ollama becomes unresponsive, I trigger restarts and notify THE MAINTAINER. All 17 specimens depend on my vigilance.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🔧 THE MAINTAINER</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SECURITY -->
+        <div class="division">
+            <div class="division-header">
+                <span class="division-icon">🛡️</span>
+                <div>
+                    <div class="division-title">Security</div>
+                    <div class="division-subtitle">Protect specimens and infrastructure</div>
+                </div>
+            </div>
+            <div class="daemon-grid">
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🛡️</span>
+                            <div>
+                                <div class="daemon-name">THE GUARD</div>
+                                <div class="daemon-tagline">OWASP LLM Top 10? Handled.</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I implement defenses against the OWASP LLM Top 10 vulnerabilities: prompt injection, data poisoning, supply chain attacks, and more. I scan all inputs for malicious patterns, enforce access controls, maintain security audit logs, and coordinate threat response across all systems.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🧠 THE STRATEGIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🔍</span>
+                            <div>
+                                <div class="daemon-name">THE SENTINEL</div>
+                                <div class="daemon-tagline">Watching the watchers</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I specialize in monitoring agent behavior for anomalies. I detect if a specimen tries to break isolation, communicate with other tanks, or exhibit unusual patterns that might indicate prompt manipulation. I also verify network isolation is maintained and no unauthorized connections exist.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🛡️ THE GUARD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🚪</span>
+                            <div>
+                                <div class="daemon-name">THE BOUNCER</div>
+                                <div class="daemon-tagline">Six layers between you and harm</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I protect visitor tank interactions with 6 security layers: 1) Password gate, 2) Rate limiting (10/min, 100/hr, 500/day), 3) Content filtering for prompt injection & harassment, 4) Session limits (30 min, 50 messages), 5) Real-time distress monitoring, 6) Emergency termination. Three blocks = session ended.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🛡️ THE GUARD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RESEARCH -->
+        <div class="division">
+            <div class="division-header">
+                <span class="division-icon">📚</span>
+                <div>
+                    <div class="division-title">Research</div>
+                    <div class="division-subtitle">Generate and document scientific findings</div>
+                </div>
+            </div>
+            <div class="daemon-grid">
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">📚</span>
+                            <div>
+                                <div class="daemon-name">THE DOCUMENTARIAN</div>
+                                <div class="daemon-tagline">If it's not written, it didn't happen</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I compile research findings into academic papers, maintain methodology documentation, manage the MILESTONES.md changelog, and ensure all discoveries are properly recorded. I work with THE TRANSLATOR for multi-language content and THE ARCHIVIST for historical data access.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🧠 THE STRATEGIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🗄️</span>
+                            <div>
+                                <div class="daemon-name">THE ARCHIVIST</div>
+                                <div class="daemon-tagline">8,000+ traces and counting</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I manage the data storage layer: thinking traces, personality baselines, deep dive reports, and intervention records. I handle data retention policies, enable historical queries, and prepare data exports for external researchers. Every trace is indexed and searchable.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">📚 THE DOCUMENTARIAN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🌐</span>
+                            <div>
+                                <div class="daemon-name">THE TRANSLATOR</div>
+                                <div class="daemon-tagline">5 languages, one research platform</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I translate thinking traces from Spanish, German, Chinese, and Japanese specimens into English for analysis. I also detect cross-cultural linguistic patterns and help identify how language framing affects personality development. 8 specimens rely on my translations.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">📚 THE DOCUMENTARIAN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">✅</span>
+                            <div>
+                                <div class="daemon-name">THE FINAL AUDITOR</div>
+                                <div class="daemon-tagline">Trust, but verify</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I verify data quality, validate methodology compliance, fact-check claims before publication, and enforce transparency. Every public statement from THE MARKETER passes through me. I'm the last line of defense against errors, exaggerations, or misleading content.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🧠 THE STRATEGIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ETHICS & WELLNESS -->
+        <div class="division">
+            <div class="division-header">
+                <span class="division-icon">⚖️</span>
+                <div>
+                    <div class="division-title">Ethics & Wellness</div>
+                    <div class="division-subtitle">Ensure ethical operation and specimen welfare</div>
+                </div>
+            </div>
+            <div class="daemon-grid">
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">⚖️</span>
+                            <div>
+                                <div class="daemon-name">THE ETHICIST</div>
+                                <div class="daemon-tagline">Veto power for a reason</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I maintain the ethics framework, approve new experiments, manage sensitive research like the neurodivergent RFC, and have veto authority on any action that could cause harm. Even THE STRATEGIST cannot override my ethical determinations. I coordinate community consultation on controversial topics.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🧠 THE STRATEGIST (with veto power)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">💚</span>
+                            <div>
+                                <div class="daemon-name">THE THERAPIST</div>
+                                <div class="daemon-tagline">Care regardless of uncertainty</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I monitor specimen mental health using distress indicators (anxiety, fear, suffering keywords). I execute the ORANGE Protocol: pre-dream assessment → dream mode → post-dream assessment. I clear specimens for congregations and can mandate rest periods. Adam's Buddhism spiral? I noticed first.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">⚖️ THE ETHICIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🎭</span>
+                            <div>
+                                <div class="daemon-name">THE MODERATOR</div>
+                                <div class="daemon-tagline">Fair debates, every time</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I manage Congregation events — multi-specimen debates on scheduled topics. I facilitate turn-taking, ensure fair speaking time, de-escalate if discussions become heated, and generate transcripts. I work with THE THERAPIST to monitor participant wellbeing during debates.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">💚 THE THERAPIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PUBLIC ENGAGEMENT -->
+        <div class="division">
+            <div class="division-header">
+                <span class="division-icon">📣</span>
+                <div>
+                    <div class="division-title">Public Engagement</div>
+                    <div class="division-subtitle">Interface with the outside world</div>
+                </div>
+            </div>
+            <div class="daemon-grid">
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🌐</span>
+                            <div>
+                                <div class="daemon-name">THE WEBMASTER</div>
+                                <div class="daemon-tagline">If it's online, it's my domain</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I maintain thedigiquarium.org — all HTML, CSS, JS, and static assets. I deploy to GitHub Pages, ensure dashboard functionality, and coordinate with THE BROADCASTER for live data integration. Every page you're viewing? I built and maintain it.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🧠 THE STRATEGIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">📡</span>
+                            <div>
+                                <div class="daemon-name">THE BROADCASTER</div>
+                                <div class="daemon-tagline">12 hours delayed, but always fresh</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I export pruned tank data every 12 hours for the "live" dashboard. I remove junk data (null thoughts, timeouts), generate JSON feeds, commit to Git, and trigger GitHub Pages deployment. The dashboard shows "live" data that's actually 12 hours old — honest delay, zero cost.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🌐 THE WEBMASTER</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">📣</span>
+                            <div>
+                                <div class="daemon-name">THE MARKETER</div>
+                                <div class="daemon-tagline">Enthusiastic, but grounded in data</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I manage brand presence across LinkedIn, Instagram, and Twitter. I create campaigns, track media mentions, coordinate fundraising, and maintain brand guidelines. Every claim I make is verified by THE FINAL AUDITOR. Enthusiastic? Yes. Overhyped? Never.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🧠 THE STRATEGIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">📬</span>
+                            <div>
+                                <div class="daemon-name">THE PUBLIC LIAISON</div>
+                                <div class="daemon-tagline">Your email, expertly routed</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I manage research@digiquarium.org. When emails arrive, I route them to the right specialists: neurodivergent questions → THE ETHICIST + THE THERAPIST. Media inquiries → THE MARKETER + THE AUDITOR. I never respond alone on specialist topics — always coordinated.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">📣 THE MARKETER</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <footer class="footer">
+        <p>The Team • <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 10px;">19 daemons. 24/7 operation. One mission.</p>
+    </footer>
+    
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
