@@ -252,3 +252,85 @@ Current failures:
 | THE PUBLIC LIAISON | 24hr | **12hr** |
 
 ---
+
+---
+
+## SECTION 13: TOMORROW'S CRITICAL TASKS (2026-02-22 04:45)
+
+### 13.1 Team Page Still Broken
+- CHAOS MONKEY placement incorrect
+- Expand description: "Exposing engineers to failures more frequently incentivizes them to build resilient services."
+- Verify all daemon positions correct
+
+### 13.2 Live Tank Relay Not Functioning
+**Problem:** All tanks showing as "sleeping" - the 12-hour delayed relay is not working
+**Expected:** Pruned logs from 12 hours ago should display as "live view"
+**Action:** Debug and fix the relay pipeline
+
+### 13.3 Mind Map Enhancements
+- Add zoom in/out with text scaling
+- Smooth fade transitions between time periods (not explosion)
+- Currently: nodes explode into new positions
+- Wanted: gradual expansion from original thought
+
+### 13.4 Visitor/Bouncer Stress Test
+**Benji will test:**
+1. Enter a tank room as visitor
+2. THE THERAPIST monitoring
+3. Test prompt engineering attempts
+4. Test mild stress scenarios
+5. Verify BOUNCER intervention mechanisms
+**Goal:** Validate 6-layer protection system works
+
+### 13.5 Mind Map Overlays (NEW FEATURE)
+**Comparative Analysis Tool:**
+- Overlay two specimens' mind maps
+- Heatmap of engagement differences
+- Common themes highlighted
+- Show how shared interests (e.g., indigenous cultures) formed different perspectives
+- Visual diff of exploration patterns
+
+### 13.6 "My Journey" Per Specimen (Weekly Update)
+**For each profile:**
+- "This is who I am becoming" narrative
+- Weekly update (not 12hr SLA)
+- Humanizes the data
+- Makes cognitive barrier lower for visitors
+- Explains the WHY behind the WHAT
+
+### 13.7 THE MARKETER - Full Scope Definition
+**Platforms:**
+- LinkedIn presence management
+- Instagram presence
+- Potential fundraising coordination
+
+**Budget Capabilities:**
+- LinkedIn ads
+- Google ads
+- Meta/Facebook ads
+- Goal: Gain traction, credibility, grow the field
+
+**How to Achieve:**
+1. Create Anthropic API integration for content generation
+2. Set up scheduled posting via n8n workflows
+3. Create ad campaign templates
+4. Track ROI and engagement metrics
+5. Budget tracking and approval workflow
+
+---
+
+### 13.8 Live Feed Issue - ROOT CAUSE IDENTIFIED & FIXED
+
+**Problem:** Dashboard showed all tanks as "sleeping"
+**Root Cause:** THE BROADCASTER hadn't run since Feb 21 18:36
+**Solution:** 
+- Manually ran broadcaster - feed now shows active tanks
+- Need to ensure BROADCASTER runs automatically every 12 hours
+- WEBMASTER should trigger BROADCASTER on each cycle
+
+**Evidence:**
+- Adam now shows 20 traces in last 12 hours
+- Status changed from "quiet" to "active"
+- Recent thoughts populated with real data
+- All 17 tanks have fresh data
+
