@@ -17,273 +17,109 @@
             --accent-red: #ff4444;
             --accent-yellow: #ffaa00;
             --accent-purple: #aa88ff;
+            --accent-orange: #FE6500;
             --border: #2a2a3a;
         }
-        
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; }
         
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        /* Auth Gate Styles */
-        .auth-gate {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--bg-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-        
+        /* Auth Gate */
+        .auth-gate { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-primary); display: flex; align-items: center; justify-content: center; z-index: 9999; }
         .auth-gate.hidden { display: none; }
-        
-        .auth-box {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-        }
-        
-        .auth-box h1 {
-            color: var(--accent-cyan);
-            margin-bottom: 10px;
-        }
-        
-        .auth-box .subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            font-size: 0.9em;
-        }
-        
-        .auth-box input {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            font-size: 1em;
-            margin-bottom: 15px;
-            text-align: center;
-            letter-spacing: 2px;
-        }
-        
-        .auth-box input:focus {
-            outline: none;
-            border-color: var(--accent-cyan);
-        }
-        
-        .auth-box button {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            background: var(--accent-cyan);
-            color: var(--bg-primary);
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        
+        .auth-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; max-width: 400px; width: 90%; text-align: center; }
+        .auth-box h1 { color: var(--accent-cyan); margin-bottom: 10px; }
+        .auth-box .subtitle { color: var(--text-secondary); margin-bottom: 30px; font-size: 0.9em; }
+        .auth-box input { width: 100%; padding: 15px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); font-size: 1em; margin-bottom: 15px; }
+        .auth-box input:focus { outline: none; border-color: var(--accent-cyan); }
+        .auth-box button { width: 100%; padding: 15px; border: none; border-radius: 8px; background: var(--accent-cyan); color: var(--bg-primary); font-size: 1em; font-weight: 600; cursor: pointer; }
         .auth-box button:hover { opacity: 0.8; }
-        
-        .auth-error {
-            color: var(--accent-red);
-            margin-top: 15px;
-            font-size: 0.9em;
-            display: none;
-        }
-        
+        .auth-error { color: var(--accent-red); margin-top: 15px; font-size: 0.9em; display: none; }
         .auth-error.show { display: block; }
+        .security-note { margin-top: 20px; padding: 15px; background: rgba(255, 68, 68, 0.1); border: 1px solid rgba(255, 68, 68, 0.3); border-radius: 8px; font-size: 0.8em; color: var(--text-secondary); }
+        .cloudflare-note { margin-top: 15px; padding: 10px; background: rgba(254, 101, 0, 0.1); border: 1px solid var(--accent-orange); border-radius: 6px; font-size: 0.75em; }
         
-        .security-note {
-            margin-top: 20px;
-            padding: 15px;
-            background: rgba(255, 68, 68, 0.1);
-            border: 1px solid rgba(255, 68, 68, 0.3);
-            border-radius: 8px;
-            font-size: 0.8em;
-            color: var(--text-secondary);
-        }
-        
-        /* Dashboard hidden by default */
+        /* Dashboard */
         .dashboard { display: none; }
         .dashboard.visible { display: block; }
-        
-        /* Rest of dashboard styles */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .header h1 {
-            font-size: 1.8em;
-            color: var(--accent-cyan);
-        }
-        
-        .header .status {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .status-indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: var(--bg-secondary); border-bottom: 1px solid var(--border); }
+        .header h1 { font-size: 1.5em; color: var(--accent-cyan); }
+        .header-controls { display: flex; align-items: center; gap: 15px; }
+        .status-indicator { width: 12px; height: 12px; border-radius: 50%; animation: pulse 2s infinite; }
         .status-indicator.healthy { background: var(--accent-green); }
         .status-indicator.warning { background: var(--accent-yellow); }
         .status-indicator.critical { background: var(--accent-red); }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+        /* Tabs */
+        .tabs { display: flex; background: var(--bg-secondary); border-bottom: 1px solid var(--border); padding: 0 30px; }
+        .tab { padding: 15px 25px; cursor: pointer; color: var(--text-secondary); border-bottom: 2px solid transparent; transition: all 0.2s; }
+        .tab:hover { color: var(--text-primary); }
+        .tab.active { color: var(--accent-cyan); border-bottom-color: var(--accent-cyan); }
         
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+        /* Tab Content */
+        .tab-content { display: none; padding: 30px; }
+        .tab-content.active { display: block; }
         
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-        }
-        
-        .card h2 {
-            font-size: 1em;
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
+        /* Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+        .card h2 { font-size: 1em; color: var(--text-secondary); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         .card.full-width { grid-column: 1 / -1; }
-        
-        .metric {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        
+        .metric { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
         .metric:last-child { border-bottom: none; }
         .metric .value { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
         .metric .value.healthy { color: var(--accent-green); }
-        .metric .value.warning { color: var(--accent-yellow); }
         .metric .value.critical { color: var(--accent-red); }
         
-        .daemon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 10px;
-        }
-        
-        .daemon {
-            background: var(--bg-secondary);
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .daemon .icon { font-size: 1.5em; margin-bottom: 5px; }
-        .daemon .name { font-size: 0.85em; color: var(--text-secondary); }
+        /* Daemon Grid */
+        .daemon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+        .daemon { background: var(--bg-secondary); padding: 15px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.2s; border: 2px solid transparent; }
+        .daemon:hover { border-color: var(--accent-cyan); }
+        .daemon.selected { border-color: var(--accent-cyan); background: rgba(0, 212, 255, 0.1); }
+        .daemon .icon { font-size: 1.8em; margin-bottom: 8px; }
+        .daemon .name { font-size: 0.8em; color: var(--text-secondary); }
         .daemon .status { font-size: 0.75em; margin-top: 5px; font-family: 'JetBrains Mono', monospace; }
         
-        .tank-row {
-            display: flex;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border);
-            gap: 15px;
-        }
+        /* Message Interface */
+        .message-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .message-header { background: var(--bg-secondary); padding: 15px 20px; border-bottom: 1px solid var(--border); }
+        .message-header h3 { color: var(--accent-cyan); }
+        .message-log { height: 300px; overflow-y: auto; padding: 15px; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
+        .message-log .msg { padding: 8px 12px; margin-bottom: 8px; border-radius: 8px; }
+        .message-log .msg.sent { background: rgba(0, 212, 255, 0.1); margin-left: 20%; }
+        .message-log .msg.received { background: var(--bg-secondary); margin-right: 20%; }
+        .message-input { display: flex; gap: 10px; padding: 15px; border-top: 1px solid var(--border); }
+        .message-input input { flex: 1; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); }
+        .message-input button { padding: 12px 24px; border: none; border-radius: 8px; background: var(--accent-cyan); color: var(--bg-primary); font-weight: 600; cursor: pointer; }
         
-        .tank-row:last-child { border-bottom: none; }
-        .tank-row .name { min-width: 100px; font-weight: 500; }
-        .tank-row .article { flex: 1; color: var(--text-secondary); font-size: 0.9em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-        .tank-row .traces { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-cyan); }
+        /* Activity Feed */
+        .activity-feed { max-height: 400px; overflow-y: auto; }
+        .activity-item { padding: 12px; border-bottom: 1px solid var(--border); display: flex; gap: 15px; align-items: flex-start; }
+        .activity-item:last-child { border-bottom: none; }
+        .activity-time { font-size: 0.75em; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; min-width: 80px; }
+        .activity-content { flex: 1; }
+        .activity-daemon { font-weight: 600; color: var(--accent-cyan); }
         
-        .log-viewer {
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            padding: 15px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8em;
-            max-height: 300px;
-            overflow-y: auto;
-        }
+        /* Tank Grid */
+        .tank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .tank-card { background: var(--bg-secondary); border-radius: 10px; padding: 15px; }
+        .tank-card .name { font-weight: 600; margin-bottom: 8px; }
+        .tank-card .article { color: var(--text-secondary); font-size: 0.85em; margin-bottom: 5px; }
+        .tank-card .stats { font-size: 0.8em; color: var(--accent-cyan); }
         
-        .log-line { padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .log-line .level-info { color: var(--accent-cyan); }
-        .log-line .level-warning { color: var(--accent-yellow); }
-        .log-line .level-error { color: var(--accent-red); }
-        .log-line .level-success { color: var(--accent-green); }
+        /* Buttons */
+        .btn { padding: 10px 20px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-secondary); color: var(--text-primary); cursor: pointer; font-size: 0.9em; transition: all 0.2s; }
+        .btn:hover { border-color: var(--accent-cyan); background: rgba(0, 212, 255, 0.1); }
+        .btn.primary { background: var(--accent-cyan); color: var(--bg-primary); border: none; }
+        .btn.danger { border-color: var(--accent-red); }
+        .btn.danger:hover { background: rgba(255, 68, 68, 0.1); }
+        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; }
         
-        .refresh-btn {
-            background: var(--accent-cyan);
-            color: var(--bg-primary);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        
-        .refresh-btn:hover { opacity: 0.8; }
-        .last-updated { font-size: 0.85em; color: var(--text-secondary); }
-        
-        .logout-btn {
-            background: transparent;
-            border: 1px solid var(--accent-red);
-            color: var(--accent-red);
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.85em;
-            margin-left: 10px;
-        }
-        
+        /* Logout */
+        .logout-btn { background: transparent; border: 1px solid var(--accent-red); color: var(--accent-red); padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85em; }
         .logout-btn:hover { background: rgba(255, 68, 68, 0.1); }
         
-        .controls { display: flex; gap: 10px; margin-top: 15px; }
-        
-        .control-btn {
-            padding: 8px 16px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            cursor: pointer;
-            font-size: 0.85em;
-        }
-        
-        .control-btn:hover { border-color: var(--accent-cyan); background: rgba(0, 212, 255, 0.1); }
-        .control-btn.danger { border-color: var(--accent-red); }
-        .control-btn.danger:hover { background: rgba(255, 68, 68, 0.1); }
+        .last-updated { font-size: 0.85em; color: var(--text-secondary); }
     </style>
 </head>
 <body>
@@ -295,220 +131,181 @@
             <input type="password" id="auth-password" placeholder="Enter access code" autofocus>
             <button onclick="authenticate()">Authenticate</button>
             <p class="auth-error" id="auth-error">Invalid access code</p>
+            <div class="cloudflare-note">
+                🔒 <strong>2FA Coming Soon:</strong> Cloudflare Access will provide 
+                Google Authenticator / Passkey support.
+            </div>
             <div class="security-note">
-                🛡️ <strong>Security Notice:</strong> This panel provides full system visibility. 
-                Access is logged and monitored by THE GUARD.
+                🛡️ Access is logged and monitored by THE GUARD.
             </div>
         </div>
     </div>
     
-    <!-- DASHBOARD (hidden until authenticated) -->
+    <!-- DASHBOARD -->
     <div class="dashboard" id="dashboard">
         <div class="header">
-            <h1>🖥️ Admin Panel</h1>
-            <div class="status">
-                <span class="last-updated">Last updated: <span id="last-update">--</span></span>
+            <h1>🖥️ Digiquarium Admin</h1>
+            <div class="header-controls">
+                <span class="last-updated">Updated: <span id="last-update">--</span></span>
                 <div class="status-indicator" id="overall-status"></div>
-                <button class="refresh-btn" onclick="refreshAll()">↻ Refresh</button>
+                <button class="btn" onclick="refreshAll()">↻ Refresh</button>
                 <button class="logout-btn" onclick="logout()">🚪 Logout</button>
             </div>
         </div>
         
-        <div class="grid">
-            <!-- Ollama Status -->
-            <div class="card">
-                <h2>🧠 Ollama LLM</h2>
-                <div class="metric">
-                    <span class="name">Windows Host</span>
-                    <span class="value" id="ollama-windows">--</span>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('overview')">📊 Overview</div>
+            <div class="tab" onclick="showTab('daemons')">👁️ Daemons</div>
+            <div class="tab" onclick="showTab('tanks')">🐟 Tanks</div>
+            <div class="tab" onclick="showTab('messages')">💬 Messages</div>
+            <div class="tab" onclick="showTab('chaos')">🐵 Chaos</div>
+            <div class="tab" onclick="showTab('settings')">⚙️ Settings</div>
+        </div>
+        
+        <!-- OVERVIEW TAB -->
+        <div class="tab-content active" id="tab-overview">
+            <div class="grid">
+                <div class="card">
+                    <h2>🧠 Ollama LLM</h2>
+                    <div class="metric"><span>Windows Host</span><span class="value" id="ollama-windows">--</span></div>
+                    <div class="metric"><span>Proxy Container</span><span class="value" id="ollama-proxy">--</span></div>
+                    <div class="metric"><span>End-to-End</span><span class="value" id="ollama-e2e">--</span></div>
+                    <div class="metric"><span>Models</span><span class="value" id="ollama-models">--</span></div>
                 </div>
-                <div class="metric">
-                    <span class="name">Proxy Container</span>
-                    <span class="value" id="ollama-proxy">--</span>
+                
+                <div class="card">
+                    <h2>📊 Quick Stats</h2>
+                    <div class="metric"><span>Daemons Running</span><span class="value" id="daemons-running">--</span></div>
+                    <div class="metric"><span>Tanks Active</span><span class="value" id="tanks-running">--</span></div>
+                    <div class="metric"><span>Today's Traces</span><span class="value" id="traces-today">--</span></div>
+                    <div class="metric"><span>Network Isolated</span><span class="value" id="network-isolated">--</span></div>
                 </div>
-                <div class="metric">
-                    <span class="name">End-to-End</span>
-                    <span class="value" id="ollama-e2e">--</span>
+                
+                <div class="card">
+                    <h2>👁️ THE OVERSEER</h2>
+                    <div class="metric"><span>Status</span><span class="value" id="overseer-status">--</span></div>
+                    <div class="metric"><span>Last Audit</span><span class="value" id="overseer-audit">--</span></div>
+                    <div class="metric"><span>Active Incidents</span><span class="value" id="overseer-incidents">--</span></div>
                 </div>
-                <div class="metric">
-                    <span class="name">Models Available</span>
-                    <span class="value" id="ollama-models">--</span>
+                
+                <div class="card">
+                    <h2>🎛️ Quick Actions</h2>
+                    <div class="btn-group">
+                        <button class="btn" onclick="runAction('audit')">Run Audit</button>
+                        <button class="btn" onclick="runAction('prune_logs')">Prune Logs</button>
+                        <button class="btn" onclick="runAction('push_github')">Push to GitHub</button>
+                        <button class="btn danger" onclick="runAction('restart_ollama')">Restart Ollama</button>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Daemon Status -->
-            <div class="card">
-                <h2>👁️ Daemons</h2>
-                <div class="daemon-grid" id="daemon-grid"></div>
-            </div>
-            
-            <!-- THE OVERSEER -->
-            <div class="card">
-                <h2>👁️ THE OVERSEER</h2>
-                <div class="metric">
-                    <span class="name">Status</span>
-                    <span class="value" id="overseer-status">--</span>
-                </div>
-                <div class="metric">
-                    <span class="name">Last Audit</span>
-                    <span class="value" id="overseer-audit">--</span>
-                </div>
-                <div class="metric">
-                    <span class="name">Active Incidents</span>
-                    <span class="value" id="overseer-incidents">--</span>
-                </div>
-                <div class="metric">
-                    <span class="name">Auto-Remediations</span>
-                    <span class="value" id="overseer-remediations">--</span>
-                </div>
-            </div>
-            
-            <!-- Quick Stats -->
-            <div class="card">
-                <h2>📊 Quick Stats</h2>
-                <div class="metric">
-                    <span class="name">Tanks Running</span>
-                    <span class="value" id="tanks-running">--</span>
-                </div>
-                <div class="metric">
-                    <span class="name">Containers Total</span>
-                    <span class="value" id="containers-total">--</span>
-                </div>
-                <div class="metric">
-                    <span class="name">Today's Traces</span>
-                    <span class="value" id="traces-today">--</span>
-                </div>
-                <div class="metric">
-                    <span class="name">Network Isolated</span>
-                    <span class="value" id="network-isolated">--</span>
+                
+                <div class="card full-width">
+                    <h2>📜 Recent Activity</h2>
+                    <div class="activity-feed" id="activity-feed">
+                        <div class="activity-item">
+                            <span class="activity-time">--:--</span>
+                            <div class="activity-content">Loading...</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Tank Activity -->
+        </div>
+        
+        <!-- DAEMONS TAB -->
+        <div class="tab-content" id="tab-daemons">
+            <div class="grid">
+                <div class="card full-width">
+                    <h2>👁️ All Daemons</h2>
+                    <div class="daemon-grid" id="daemon-grid"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TANKS TAB -->
+        <div class="tab-content" id="tab-tanks">
             <div class="card full-width">
-                <h2>🐟 Tank Activity (Last Update)</h2>
-                <div id="tank-activity"></div>
+                <h2>🐟 Tank Status</h2>
+                <div class="tank-grid" id="tank-grid"></div>
             </div>
-            
-            <!-- Recent Logs -->
-            <div class="card full-width">
-                <h2>📜 OVERSEER Log (Recent)</h2>
-                <div class="log-viewer" id="log-viewer"></div>
-            </div>
-            
-            <!-- Manual Controls -->
-            <div class="card">
-                <h2>🎛️ Manual Controls</h2>
-                <p style="color: var(--text-secondary); font-size: 0.9em; margin-bottom: 15px;">
-                    Emergency controls for manual intervention
-                </p>
-                <div class="controls">
-                    <button class="control-btn" onclick="runAudit()">Run Audit</button>
-                    <button class="control-btn" onclick="restartOllama()">Restart Ollama</button>
-                    <button class="control-btn danger" onclick="chaosTest()">Chaos Test</button>
+        </div>
+        
+        <!-- MESSAGES TAB -->
+        <div class="tab-content" id="tab-messages">
+            <div class="grid">
+                <div class="card">
+                    <h2>Select Daemon</h2>
+                    <div class="daemon-grid" id="message-daemon-grid"></div>
+                </div>
+                <div class="card" style="grid-column: span 2;">
+                    <div class="message-panel">
+                        <div class="message-header">
+                            <h3>💬 Message: <span id="selected-daemon">None selected</span></h3>
+                        </div>
+                        <div class="message-log" id="message-log">
+                            <p style="color: var(--text-secondary); text-align: center; padding: 40px;">
+                                Select a daemon to start messaging
+                            </p>
+                        </div>
+                        <div class="message-input">
+                            <input type="text" id="message-text" placeholder="Type your message..." disabled>
+                            <button class="btn primary" onclick="sendMessage()" id="send-btn" disabled>Send</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- System Info -->
-            <div class="card">
-                <h2>💻 System Info</h2>
-                <div class="metric">
-                    <span class="name">Host</span>
-                    <span class="value" style="color: var(--text-secondary);">NUC (WSL2)</span>
+        </div>
+        
+        <!-- CHAOS TAB -->
+        <div class="tab-content" id="tab-chaos">
+            <div class="grid">
+                <div class="card">
+                    <h2>🐵 Chaos Monkey Status</h2>
+                    <div class="metric"><span>Status</span><span class="value" id="chaos-status">--</span></div>
+                    <div class="metric"><span>Total Events</span><span class="value" id="chaos-total">--</span></div>
+                    <div class="metric"><span>Recoveries</span><span class="value" id="chaos-recoveries">--</span></div>
+                    <div class="metric"><span>Failures</span><span class="value" id="chaos-failures">--</span></div>
+                    <div class="metric"><span>Avg Recovery</span><span class="value" id="chaos-avg">--</span></div>
+                    <div class="btn-group" style="margin-top: 15px;">
+                        <button class="btn" onclick="runAction('chaos_enable')">Enable</button>
+                        <button class="btn danger" onclick="runAction('chaos_disable')">Disable</button>
+                        <button class="btn danger" onclick="runAction('chaos_trigger')">Trigger Now</button>
+                    </div>
                 </div>
-                <div class="metric">
-                    <span class="name">Ollama Host</span>
-                    <span class="value" style="color: var(--text-secondary);">192.168.50.94</span>
+                <div class="card" style="grid-column: span 2;">
+                    <h2>📜 Recent Chaos Events</h2>
+                    <div class="activity-feed" id="chaos-events">
+                        <p style="color: var(--text-secondary);">No chaos events yet</p>
+                    </div>
                 </div>
-                <div class="metric">
-                    <span class="name">Network</span>
-                    <span class="value" style="color: var(--text-secondary);">172.30.0.0/24</span>
+            </div>
+        </div>
+        
+        <!-- SETTINGS TAB -->
+        <div class="tab-content" id="tab-settings">
+            <div class="grid">
+                <div class="card">
+                    <h2>⚙️ System Info</h2>
+                    <div class="metric"><span>Host</span><span class="value">NUC (WSL2)</span></div>
+                    <div class="metric"><span>Ollama Host</span><span class="value">192.168.50.94</span></div>
+                    <div class="metric"><span>Network</span><span class="value">172.30.0.0/24</span></div>
+                </div>
+                <div class="card">
+                    <h2>🔐 Security</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">
+                        2FA via Cloudflare Access coming soon.
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn" onclick="window.open('https://dash.cloudflare.com')">Setup Cloudflare</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script>
-        // Auth configuration
-        // SHA-256 hash of the password - do NOT store plaintext
-        // This is hash of "digiquarium-admin-2026"
         const AUTH_HASH = '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918';
         const SESSION_KEY = 'digiquarium_admin_session';
-        const SESSION_DURATION = 3600000; // 1 hour
+        const SESSION_DURATION = 3600000;
         
-        // Check for existing session
-        function checkSession() {
-            const session = localStorage.getItem(SESSION_KEY);
-            if (session) {
-                const data = JSON.parse(session);
-                if (Date.now() < data.expires) {
-                    showDashboard();
-                    return true;
-                }
-                localStorage.removeItem(SESSION_KEY);
-            }
-            return false;
-        }
-        
-        // Simple hash function (for demo - use proper crypto in production)
-        async function hashPassword(password) {
-            const encoder = new TextEncoder();
-            const data = encoder.encode(password);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-        }
-        
-        // Authenticate
-        async function authenticate() {
-            const password = document.getElementById('auth-password').value;
-            const hash = await hashPassword(password);
-            
-            // Check hash matches
-            if (hash === AUTH_HASH) {
-                // Create session
-                const session = {
-                    created: Date.now(),
-                    expires: Date.now() + SESSION_DURATION
-                };
-                localStorage.setItem(SESSION_KEY, JSON.stringify(session));
-                
-                // Log access (would normally go to server)
-                console.log('Admin access granted at', new Date().toISOString());
-                
-                showDashboard();
-            } else {
-                document.getElementById('auth-error').classList.add('show');
-                document.getElementById('auth-password').value = '';
-                
-                // Log failed attempt
-                console.warn('Failed admin login attempt at', new Date().toISOString());
-            }
-        }
-        
-        function showDashboard() {
-            document.getElementById('auth-gate').classList.add('hidden');
-            document.getElementById('dashboard').classList.add('visible');
-            initDaemonGrid();
-            refreshAll();
-        }
-        
-        function logout() {
-            localStorage.removeItem(SESSION_KEY);
-            document.getElementById('auth-gate').classList.remove('hidden');
-            document.getElementById('dashboard').classList.remove('visible');
-            document.getElementById('auth-password').value = '';
-            document.getElementById('auth-error').classList.remove('show');
-        }
-        
-        // Handle Enter key on password field
-        document.getElementById('auth-password').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                authenticate();
-            }
-        });
-        
-        // Daemon configuration
         const DAEMONS = [
             { id: 'overseer', name: 'OVERSEER', icon: '👁️' },
             { id: 'ollama_watcher', name: 'OLLAMA', icon: '🧠' },
@@ -517,114 +314,194 @@
             { id: 'guard', name: 'GUARD', icon: '🛡️' },
             { id: 'scheduler', name: 'SCHEDULER', icon: '📅' },
             { id: 'sentinel', name: 'SENTINEL', icon: '🔍' },
-            { id: 'psych', name: 'PSYCH', icon: '🧘' }
+            { id: 'psych', name: 'PSYCH', icon: '🧘' },
+            { id: 'webmaster', name: 'WEBMASTER', icon: '🌐' },
+            { id: 'chaos_monkey', name: 'CHAOS', icon: '🐵' }
         ];
         
-        function initDaemonGrid() {
-            const grid = document.getElementById('daemon-grid');
-            grid.innerHTML = DAEMONS.map(d => `
-                <div class="daemon" id="daemon-${d.id}">
+        let selectedDaemon = null;
+        let messageHistory = {};
+        
+        function checkSession() {
+            const session = localStorage.getItem(SESSION_KEY);
+            if (session) {
+                const data = JSON.parse(session);
+                if (Date.now() < data.expires) {
+                    showDashboard();
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        
+        async function authenticate() {
+            const password = document.getElementById('auth-password').value;
+            const hash = await hashPassword(password);
+            if (hash === AUTH_HASH) {
+                localStorage.setItem(SESSION_KEY, JSON.stringify({ created: Date.now(), expires: Date.now() + SESSION_DURATION }));
+                showDashboard();
+            } else {
+                document.getElementById('auth-error').classList.add('show');
+                document.getElementById('auth-password').value = '';
+            }
+        }
+        
+        function showDashboard() {
+            document.getElementById('auth-gate').classList.add('hidden');
+            document.getElementById('dashboard').classList.add('visible');
+            initDashboard();
+            refreshAll();
+        }
+        
+        function logout() {
+            localStorage.removeItem(SESSION_KEY);
+            location.reload();
+        }
+        
+        function showTab(tabId) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById('tab-' + tabId).classList.add('active');
+        }
+        
+        function initDashboard() {
+            // Daemon grids
+            const daemonHtml = DAEMONS.map(d => `
+                <div class="daemon" id="daemon-${d.id}" onclick="selectDaemon('${d.id}')">
                     <div class="icon">${d.icon}</div>
                     <div class="name">${d.name}</div>
                     <div class="status" id="daemon-status-${d.id}">--</div>
                 </div>
             `).join('');
+            document.getElementById('daemon-grid').innerHTML = daemonHtml;
+            document.getElementById('message-daemon-grid').innerHTML = daemonHtml;
+        }
+        
+        function selectDaemon(id) {
+            selectedDaemon = id;
+            document.querySelectorAll('.daemon').forEach(d => d.classList.remove('selected'));
+            document.querySelectorAll(`#daemon-${id}`).forEach(d => d.classList.add('selected'));
+            
+            const daemon = DAEMONS.find(d => d.id === id);
+            document.getElementById('selected-daemon').textContent = daemon ? daemon.name : id;
+            document.getElementById('message-text').disabled = false;
+            document.getElementById('send-btn').disabled = false;
+            
+            // Load message history
+            const history = messageHistory[id] || [];
+            const logHtml = history.length ? history.map(m => `
+                <div class="msg ${m.type}">${m.text}</div>
+            `).join('') : '<p style="color: var(--text-secondary); text-align: center;">No messages yet</p>';
+            document.getElementById('message-log').innerHTML = logHtml;
+        }
+        
+        function sendMessage() {
+            if (!selectedDaemon) return;
+            const input = document.getElementById('message-text');
+            const text = input.value.trim();
+            if (!text) return;
+            
+            if (!messageHistory[selectedDaemon]) messageHistory[selectedDaemon] = [];
+            messageHistory[selectedDaemon].push({ type: 'sent', text: text, time: new Date().toISOString() });
+            
+            // Simulate response
+            setTimeout(() => {
+                messageHistory[selectedDaemon].push({ 
+                    type: 'received', 
+                    text: `[${selectedDaemon.toUpperCase()}] Message received. This will be routed through THE STRATEGIST via MCP.`,
+                    time: new Date().toISOString()
+                });
+                selectDaemon(selectedDaemon);
+            }, 500);
+            
+            input.value = '';
+            selectDaemon(selectedDaemon);
         }
         
         async function fetchStatus() {
             try {
                 const response = await fetch('../data/admin-status.json?' + Date.now());
-                if (!response.ok) throw new Error('Status file not found');
                 return await response.json();
             } catch (e) {
-                console.error('Failed to fetch status:', e);
                 return null;
             }
         }
         
         function updateUI(status) {
-            if (!status) {
-                document.getElementById('overall-status').className = 'status-indicator warning';
-                return;
-            }
+            if (!status) return;
             
-            const overallEl = document.getElementById('overall-status');
-            overallEl.className = 'status-indicator ' + (status.overall_healthy ? 'healthy' : 'critical');
-            
+            document.getElementById('overall-status').className = 'status-indicator ' + (status.overall_healthy ? 'healthy' : 'critical');
             document.getElementById('last-update').textContent = new Date(status.timestamp).toLocaleTimeString();
             
+            // Ollama
             setStatus('ollama-windows', status.ollama?.windows_healthy);
             setStatus('ollama-proxy', status.ollama?.proxy_healthy);
             setStatus('ollama-e2e', status.ollama?.e2e_healthy);
             document.getElementById('ollama-models').textContent = status.ollama?.models || '--';
             
-            DAEMONS.forEach(d => {
-                const daemonStatus = status.daemons?.[d.id];
-                const el = document.getElementById(`daemon-status-${d.id}`);
-                const card = document.getElementById(`daemon-${d.id}`);
-                
-                if (daemonStatus?.running) {
-                    el.textContent = daemonStatus.count === 1 ? '✓' : `⚠ ${daemonStatus.count}`;
-                    el.style.color = daemonStatus.count === 1 ? 'var(--accent-green)' : 'var(--accent-yellow)';
-                    card.style.borderColor = daemonStatus.count === 1 ? 'transparent' : 'var(--accent-yellow)';
-                } else {
-                    el.textContent = '✗';
-                    el.style.color = 'var(--accent-red)';
-                    card.style.borderColor = 'var(--accent-red)';
-                }
-            });
+            // Stats
+            const daemonCount = Object.values(status.daemons || {}).filter(d => d.running).length;
+            document.getElementById('daemons-running').textContent = daemonCount;
+            document.getElementById('tanks-running').textContent = status.tanks?.running || '--';
+            document.getElementById('traces-today').textContent = status.tanks?.traces_today || '--';
+            setStatus('network-isolated', status.network?.isolated);
             
+            // Overseer
             setStatus('overseer-status', status.overseer?.running);
             document.getElementById('overseer-audit').textContent = status.overseer?.last_audit_healthy ? '✓ Passed' : '✗ Failed';
             document.getElementById('overseer-audit').className = 'value ' + (status.overseer?.last_audit_healthy ? 'healthy' : 'critical');
             document.getElementById('overseer-incidents').textContent = status.overseer?.active_incidents || '0';
-            document.getElementById('overseer-remediations').textContent = status.overseer?.auto_remediations || '0';
             
-            document.getElementById('tanks-running').textContent = status.tanks?.running || '--';
-            document.getElementById('containers-total').textContent = status.containers?.total || '--';
-            document.getElementById('traces-today').textContent = status.tanks?.traces_today || '--';
-            setStatus('network-isolated', status.network?.isolated);
+            // Daemons
+            DAEMONS.forEach(d => {
+                const ds = status.daemons?.[d.id];
+                const el = document.getElementById(`daemon-status-${d.id}`);
+                if (el) {
+                    if (ds?.running) {
+                        el.textContent = ds.count === 1 ? '✓' : `⚠ ${ds.count}`;
+                        el.style.color = ds.count === 1 ? 'var(--accent-green)' : 'var(--accent-yellow)';
+                    } else {
+                        el.textContent = '✗';
+                        el.style.color = 'var(--accent-red)';
+                    }
+                }
+            });
             
+            // Tanks
             if (status.tanks?.activity) {
-                const activityHtml = status.tanks.activity.map(t => `
-                    <div class="tank-row">
-                        <span class="name">${t.name}</span>
-                        <span class="article">${t.article || '--'}</span>
-                        <span class="traces">${t.traces} traces</span>
+                document.getElementById('tank-grid').innerHTML = status.tanks.activity.map(t => `
+                    <div class="tank-card">
+                        <div class="name">${t.name}</div>
+                        <div class="article">📖 ${t.article || '--'}</div>
+                        <div class="stats">${t.traces} traces</div>
                     </div>
                 `).join('');
-                document.getElementById('tank-activity').innerHTML = activityHtml;
             }
             
+            // Activity
             if (status.logs) {
-                const logsHtml = status.logs.map(log => {
-                    const levelClass = log.includes('✅') ? 'level-success' :
-                                      log.includes('❌') ? 'level-error' :
-                                      log.includes('⚠️') ? 'level-warning' : 'level-info';
-                    return `<div class="log-line ${levelClass}">${escapeHtml(log)}</div>`;
-                }).join('');
-                document.getElementById('log-viewer').innerHTML = logsHtml;
+                document.getElementById('activity-feed').innerHTML = status.logs.slice(0, 10).map(log => `
+                    <div class="activity-item">
+                        <span class="activity-time">${log.substring(0, 19)}</span>
+                        <div class="activity-content">${log.substring(20)}</div>
+                    </div>
+                `).join('');
             }
         }
         
-        function setStatus(elementId, healthy) {
-            const el = document.getElementById(elementId);
-            if (healthy === true) {
-                el.textContent = '✓ OK';
-                el.className = 'value healthy';
-            } else if (healthy === false) {
-                el.textContent = '✗ DOWN';
-                el.className = 'value critical';
-            } else {
-                el.textContent = '--';
-                el.className = 'value';
-            }
-        }
-        
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+        function setStatus(id, healthy) {
+            const el = document.getElementById(id);
+            if (healthy === true) { el.textContent = '✓ OK'; el.className = 'value healthy'; }
+            else if (healthy === false) { el.textContent = '✗ DOWN'; el.className = 'value critical'; }
+            else { el.textContent = '--'; el.className = 'value'; }
         }
         
         async function refreshAll() {
@@ -632,21 +509,15 @@
             updateUI(status);
         }
         
-        function runAudit() { alert('Audit triggered. Refresh in 60 seconds to see results.'); }
-        function restartOllama() { if (confirm('Restart Ollama proxy container?')) { alert('Restart triggered.'); } }
-        function chaosTest() { if (confirm('⚠️ This will intentionally break something. Continue?')) { alert('Chaos test initiated.'); } }
-        
-        // Initialize
-        if (!checkSession()) {
-            // Show auth gate (already visible by default)
+        function runAction(action) {
+            alert(`Action '${action}' will be wired to MCP backend.\nThis is a placeholder.`);
         }
         
-        // Auto-refresh every 30 seconds if authenticated
-        setInterval(() => {
-            if (document.getElementById('dashboard').classList.contains('visible')) {
-                refreshAll();
-            }
-        }, 30000);
+        document.getElementById('auth-password').addEventListener('keypress', e => { if (e.key === 'Enter') authenticate(); });
+        document.getElementById('message-text').addEventListener('keypress', e => { if (e.key === 'Enter') sendMessage(); });
+        
+        if (!checkSession()) { /* Show auth */ }
+        setInterval(refreshAll, 30000);
     </script>
 </body>
 </html>

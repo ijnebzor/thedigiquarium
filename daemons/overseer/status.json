@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-22T02:14:25.920256",
+  "timestamp": "2026-02-22T02:31:38.251979",
   "active_incidents": {},
   "stats": {
-    "cycles": 9,
+    "cycles": 26,
     "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
@@ -10,7 +10,7 @@
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-22T02:11:21.566390",
+    "timestamp": "2026-02-22T02:31:37.463282",
     "ollama": {
       "healthy": true,
       "issues": []
@@ -20,15 +20,15 @@
       "issues": [],
       "containers": {
         "digiquarium-ollama": {
-          "status": "Up 25 minutes",
+          "status": "Up 45 minutes",
           "healthy": true
         },
         "tank-01-adam": {
-          "status": "Up 5 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-02-eve": {
-          "status": "Up 5 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "digiquarium-kiwix-simple": {
@@ -48,7 +48,7 @@
           "healthy": true
         },
         "tank-17-seth": {
-          "status": "Up 3 hours",
+          "status": "Up 4 hours",
           "healthy": true
         },
         "congregation-runner": {
@@ -56,63 +56,63 @@
           "healthy": true
         },
         "tank-03-cain": {
-          "status": "Up About an hour",
+          "status": "Up 2 hours",
           "healthy": true
         },
         "tank-04-abel": {
-          "status": "Up 37 minutes",
+          "status": "Up 57 minutes",
           "healthy": true
         },
         "tank-16-seeker": {
-          "status": "Up 26 hours",
+          "status": "Up 27 hours",
           "healthy": true
         },
         "tank-15-observer": {
-          "status": "Up 26 hours",
+          "status": "Up 27 hours",
           "healthy": true
         },
         "tank-14-iris": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-13-victor": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-09-wei": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-08-genevieve": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-05-juan": {
-          "status": "Up 5 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-07-klaus": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up 4 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {
-          "status": "Up 46 hours",
+          "status": "Up 47 hours",
           "healthy": true
         },
         "digiquarium-kiwix-chinese": {
@@ -134,42 +134,36 @@
       }
     },
     "daemons": {
-      "healthy": false,
-      "issues": [
-        "maintainer not running",
-        "guard not running",
-        "sentinel not running",
-        "scheduler not running",
-        "psych not running"
-      ],
+      "healthy": true,
+      "issues": [],
       "daemons": {
         "caretaker": {
           "running": true,
           "count": 1
         },
         "maintainer": {
-          "running": false,
-          "count": 0
+          "running": true,
+          "count": 1
         },
         "guard": {
-          "running": false,
-          "count": 0
+          "running": true,
+          "count": 1
         },
         "sentinel": {
-          "running": false,
-          "count": 0
+          "running": true,
+          "count": 1
         },
         "scheduler": {
-          "running": false,
-          "count": 0
+          "running": true,
+          "count": 1
         },
         "ollama_watcher": {
           "running": true,
           "count": 1
         },
         "psych": {
-          "running": false,
-          "count": 0
+          "running": true,
+          "count": 1
         }
       }
     },
@@ -251,18 +245,7 @@
       "healthy": true,
       "issues": []
     },
-    "issues": [
-      {
-        "component": "daemons",
-        "details": [
-          "maintainer not running",
-          "guard not running",
-          "sentinel not running",
-          "scheduler not running",
-          "psych not running"
-        ]
-      }
-    ],
-    "overall_healthy": false
+    "issues": [],
+    "overall_healthy": true
   }
 }

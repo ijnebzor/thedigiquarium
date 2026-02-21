@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-02-22T02:15:01.111278",
-  "overall_healthy": false,
+  "timestamp": "2026-02-22T02:32:01.948390",
+  "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
     "proxy_healthy": true,
@@ -24,29 +24,29 @@
       "healthy": true
     },
     "maintainer": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     },
     "guard": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     },
     "scheduler": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     },
     "sentinel": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     },
     "psych": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     }
   },
   "containers": {
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 6621,
+    "traces_today": 6637,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -68,13 +68,13 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Alphabet",
-        "traces": 1546
+        "article": "Male",
+        "traces": 1553
       },
       {
         "name": "tank-04-abel",
-        "article": "Influence",
-        "traces": 2150
+        "article": "Government",
+        "traces": 2159
       },
       {
         "name": "tank-05-juan",
@@ -88,12 +88,11 @@
   },
   "overseer": {
     "running": true,
-    "last_audit_healthy": false,
+    "last_audit_healthy": true,
     "active_incidents": 0,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-22 02:06:14 \u2139\ufe0f [OVERSEER] THE OVERSEER v1.0 initialized",
     "2026-02-22 02:06:14 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
     "2026-02-22 02:06:14 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
     "2026-02-22 02:06:14 \ud83d\udd0d [OVERSEER] Starting full system audit",
@@ -105,13 +104,15 @@
     "2026-02-22 02:06:19 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher has 2 instances (zombie leak)', 'psych not running']",
     "2026-02-22 02:11:21 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 02:11:22 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 02:11:22 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running', 'guard not running', 'sentinel not running', 'scheduler not running', 'psych not running']"
+    "2026-02-22 02:11:22 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running', 'guard not running', 'sentinel not running', 'scheduler not running', 'psych not running']",
+    "2026-02-22 02:16:26 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:16:27 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 02:21:30 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:21:31 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 02:26:34 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:26:35 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 02:31:37 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:31:38 \u2705 [OVERSEER] Full system audit PASSED"
   ],
-  "issues": [
-    "maintainer unhealthy",
-    "guard unhealthy",
-    "scheduler unhealthy",
-    "sentinel unhealthy",
-    "psych unhealthy"
-  ]
+  "issues": []
 }

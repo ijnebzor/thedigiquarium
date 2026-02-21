@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daemons | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0a0a0f; --card: #1a1a24; --text: #e0e0e0; --muted: #888; --cyan: #00d4ff; --green: #00ff88; --orange: #FE6500; --border: #2a2a3a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #12121a 0%, #1a1a24 100%); padding: 60px 20px; text-align: center; border-bottom: 1px solid var(--border); }
+        .header h1 { font-size: 2.5em; color: var(--cyan); margin-bottom: 10px; }
+        .header p { color: var(--muted); max-width: 600px; margin: 0 auto; }
+        nav { background: #12121a; padding: 15px; display: flex; justify-content: center; gap: 30px; border-bottom: 1px solid var(--border); }
+        nav a { color: var(--muted); text-decoration: none; }
+        nav a:hover { color: var(--cyan); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .division { margin-bottom: 50px; }
+        .division h2 { color: var(--orange); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--orange); }
+        .daemon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .daemon-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; transition: transform 0.2s; }
+        .daemon-card:hover { transform: translateY(-5px); }
+        .daemon-card .icon { font-size: 2.5em; margin-bottom: 15px; }
+        .daemon-card h3 { color: var(--cyan); margin-bottom: 10px; }
+        .daemon-card .role { color: var(--muted); font-size: 0.9em; margin-bottom: 15px; }
+        .daemon-card .sla { background: rgba(0, 212, 255, 0.1); padding: 8px 12px; border-radius: 6px; font-size: 0.8em; color: var(--cyan); display: inline-block; }
+        .footer { text-align: center; padding: 40px; color: var(--muted); border-top: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../">← Dashboard</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="decisions.html">Decisions</a>
+        <a href="ethics.html">Ethics</a>
+    </nav>
+    
+    <div class="header">
+        <h1>👁️ The Daemons</h1>
+        <p>19 autonomous agents working 24/7 to maintain, protect, and document The Digiquarium</p>
+    </div>
+    
+    <div class="container">
+        <div class="division">
+            <h2>⚙️ Operations Division</h2>
+            <div class="daemon-grid">
+                <div class="daemon-card">
+                    <div class="icon">👁️</div>
+                    <h3>THE OVERSEER</h3>
+                    <p class="role">Cross-functional coordinator. Sees everything, correlates across all systems.</p>
+                    <span class="sla">SLA: 30min detection</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🔧</div>
+                    <h3>THE MAINTAINER</h3>
+                    <p class="role">Daemon orchestrator. Ensures all other daemons are running.</p>
+                    <span class="sla">SLA: 1min detection</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🏥</div>
+                    <h3>THE CARETAKER</h3>
+                    <p class="role">Tank health monitor. Auto-restarts, fixes permissions.</p>
+                    <span class="sla">SLA: 5min detection</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">📅</div>
+                    <h3>THE SCHEDULER</h3>
+                    <p class="role">Task timing. Manages baseline schedules, daily summaries.</p>
+                    <span class="sla">SLA: 30min</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🧠</div>
+                    <h3>OLLAMA WATCHER</h3>
+                    <p class="role">LLM infrastructure monitor. Auto-restarts Ollama proxy.</p>
+                    <span class="sla">SLA: 5min</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🐵</div>
+                    <h3>THE CHAOS MONKEY</h3>
+                    <p class="role">Resilience testing. Intentionally breaks things to verify self-healing.</p>
+                    <span class="sla">Runs outside safe hours</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="division">
+            <h2>🛡️ Security Division</h2>
+            <div class="daemon-grid">
+                <div class="daemon-card">
+                    <div class="icon">🛡️</div>
+                    <h3>THE GUARD</h3>
+                    <p class="role">OWASP LLM Top 10 2025 compliance, network isolation, integrity checks.</p>
+                    <span class="sla">SLA: 5min detection</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🔍</div>
+                    <h3>THE SENTINEL</h3>
+                    <p class="role">Agent tank security specialist. Stricter oversight for enhanced specimens.</p>
+                    <span class="sla">SLA: 5min detection</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🚪</div>
+                    <h3>THE BOUNCER</h3>
+                    <p class="role">Visitor protection. Password gate, rate limiting, content filtering.</p>
+                    <span class="sla">Real-time</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="division">
+            <h2>📚 Research Division</h2>
+            <div class="daemon-grid">
+                <div class="daemon-card">
+                    <div class="icon">📝</div>
+                    <h3>THE DOCUMENTARIAN</h3>
+                    <p class="role">Academic documentation. Tracks observations, updates research paper.</p>
+                    <span class="sla">SLA: 6hr routine</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🌐</div>
+                    <h3>THE TRANSLATOR</h3>
+                    <p class="role">Language processing. Real-time translation of non-English tank thoughts.</p>
+                    <span class="sla">SLA: 30min</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="division">
+            <h2>💚 Ethics Division</h2>
+            <div class="daemon-grid">
+                <div class="daemon-card">
+                    <div class="icon">⚖️</div>
+                    <h3>THE ETHICIST</h3>
+                    <p class="role">Ethics oversight. Reviews designs, maintains guidelines, veto power.</p>
+                    <span class="sla">Advisory</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🧘</div>
+                    <h3>THE PSYCH</h3>
+                    <p class="role">Psychological monitoring. Big Five, Maslow's hierarchy, emotional tracking.</p>
+                    <span class="sla">SLA: 6hr</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">💆</div>
+                    <h3>THE THERAPIST</h3>
+                    <p class="role">Mental health monitoring. Tracks distress, recommends interventions.</p>
+                    <span class="sla">SLA: 6hr</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">🎭</div>
+                    <h3>THE MODERATOR</h3>
+                    <p class="role">Congregation management. Handles multi-specimen debates.</p>
+                    <span class="sla">Per event</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="division">
+            <h2>📣 Public Division</h2>
+            <div class="daemon-grid">
+                <div class="daemon-card">
+                    <div class="icon">🌐</div>
+                    <h3>THE WEBMASTER</h3>
+                    <p class="role">Website infrastructure. Log pruning, link validation, publishing.</p>
+                    <span class="sla">SLA: 30min</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">✅</div>
+                    <h3>THE FINAL AUDITOR</h3>
+                    <p class="role">Website quality gate. Verifies against spec every 12 hours.</p>
+                    <span class="sla">SLA: 12hr</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">📢</div>
+                    <h3>THE MARKETER</h3>
+                    <p class="role">Brand & social. LinkedIn, Instagram, fundraising coordination.</p>
+                    <span class="sla">Advisory</span>
+                </div>
+                <div class="daemon-card">
+                    <div class="icon">📧</div>
+                    <h3>THE PUBLIC LIAISON</h3>
+                    <p class="role">External communications. Monitors inbox, triages inquiries.</p>
+                    <span class="sla">SLA: 24hr</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Last updated: <span id="update-time"></span></p>
+        <script>document.getElementById('update-time').textContent = new Date().toLocaleString();</script>
+    </div>
+</body>
+</html>
