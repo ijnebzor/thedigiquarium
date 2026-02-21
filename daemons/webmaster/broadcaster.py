@@ -59,7 +59,8 @@ class DataPruner:
     def is_valid_trace(trace: dict) -> bool:
         """Check if a trace entry is valid (not junk)"""
         # Must have timestamp
-        if not trace.get('timestamp'):
+        ts = trace.get('timestamp') or trace.get('ts')
+        if not ts:
             return False
         
         # Must have article (not Unknown or empty)
@@ -68,11 +69,12 @@ class DataPruner:
             return False
         
         # Must have some content (thought, why, or next)
-        has_thought = trace.get('thoughts') and trace['thoughts'] != 'null'
-        has_why = trace.get('why') and len(trace.get('why', '')) > 10
+        has_thought = trace.get('thoughts') and str(trace['thoughts']) != 'null' and str(trace['thoughts']).strip()
+        has_why = trace.get('why') and len(str(trace.get('why', ''))) > 10
+        has_next = trace.get('next') and str(trace.get('next', '')).strip()  # Allow navigation-only traces
         has_next = trace.get('next') and trace['next'] != article
         
-        return has_thought or has_why or has_next
+        return has_thought or has_why or has_next  # Accept navigation traces too or has_next
     
     @staticmethod
     def clean_thought(text: str) -> str:
@@ -102,7 +104,7 @@ class DataPruner:
         for trace in traces:
             if DataPruner.is_valid_trace(trace):
                 cleaned = {
-                    'timestamp': trace.get('timestamp'),
+                    'timestamp': trace.get('timestamp') or trace.get('ts'),
                     'article': trace.get('article'),
                     'thought': DataPruner.clean_thought(trace.get('thoughts', '')),
                     'next': trace.get('next', ''),
@@ -158,7 +160,7 @@ class Broadcaster:
                     for line in f:
                         try:
                             entry = json.loads(line)
-                            entry_time = datetime.fromisoformat(entry.get('timestamp', '2020-01-01'))
+                            entry_time = datetime.fromisoformat(entry.get('timestamp') or entry.get('ts') or '2020-01-01')
                             if entry_time > cutoff:
                                 raw_traces.append(entry)
                                 self.prune_stats['total'] += 1
@@ -226,7 +228,7 @@ class Broadcaster:
                 with open(trace_file) as f:
                     for line in f:
                         entry = json.loads(line)
-                        entry_time = datetime.fromisoformat(entry.get('timestamp', '2020-01-01'))
+                        entry_time = datetime.fromisoformat(entry.get('timestamp') or entry.get('ts') or '2020-01-01')
                         if entry_time > cutoff:
                             article = entry.get('article', '')
                             if article and article != 'Unknown':

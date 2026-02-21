@@ -452,3 +452,49 @@ Benji wants to hear Claude's thoughts in blog format:
 - THE OVERSEER: Cross-system correlation
 
 ---
+
+---
+
+## SECTION 17: TRANSLATION LAYER FOR LANGUAGE TANKS (2026-02-22)
+
+### The Problem
+Language tanks (Juan, Juanita, Klaus, Genevieve, Wei, Mei, Haruki, Sakura) stream thoughts in their native languages. For the public dashboard, we need English translations.
+
+### Benji's Preferred Solution: Option A - Translate at Broadcast Time
+Translate during THE BROADCASTER's processing, BEFORE writing to live-feed.json.
+
+### Implementation Plan
+1. Add translation step to broadcaster.py
+2. Use Ollama with a translation-capable model (or dedicated translation model)
+3. Store both original and translated versions:
+   ```json
+   {
+     "thought": "Arte es la expresión...",
+     "thought_en": "Art is the expression...",
+     "language": "es"
+   }
+   ```
+4. Dashboard displays thought_en with language indicator
+5. Click to reveal original
+
+### Why Option A is Better
+- Translation happens once (server-side), not on every page load
+- Reduces client-side complexity
+- Consistent translations
+- Can cache/review translations
+
+### Models for Translation
+- Consider: NLLB (No Language Left Behind)
+- Or use Ollama with multilingual model
+- Fallback: Keep original if translation fails
+
+---
+
+## SECTION 18: ABEL STILL SLEEPING - INVESTIGATE
+
+Abel (tank-04-abel) showing as sleeping. Check:
+1. Container status: Is it running?
+2. Log generation: Any traces today?
+3. Live feed inclusion: Is broadcaster picking it up?
+
+---

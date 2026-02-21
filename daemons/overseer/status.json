@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-22T05:14:47.093443",
+  "timestamp": "2026-02-22T05:23:05.530351",
   "active_incidents": {},
   "stats": {
-    "cycles": 187,
+    "cycles": 195,
     "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
@@ -10,17 +10,20 @@
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-22T05:13:45.763570",
+    "timestamp": "2026-02-22T05:18:49.194432",
     "ollama": {
-      "healthy": true,
-      "issues": []
+      "healthy": false,
+      "issues": [
+        "Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>",
+        "End-to-end connectivity failed"
+      ]
     },
     "containers": {
       "healthy": true,
       "issues": [],
       "containers": {
         "digiquarium-ollama": {
-          "status": "Up 3 hours",
+          "status": "Up 4 hours",
           "healthy": true
         },
         "tank-01-adam": {
@@ -48,7 +51,7 @@
           "healthy": true
         },
         "tank-17-seth": {
-          "status": "Up 57 seconds",
+          "status": "Up 36 seconds",
           "healthy": true
         },
         "congregation-runner": {
@@ -80,19 +83,19 @@
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up About a minute",
+          "status": "Up 45 seconds",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up About a minute",
+          "status": "Up 53 seconds",
           "healthy": true
         },
         "tank-09-wei": {
-          "status": "Up About a minute",
+          "status": "Up 59 seconds",
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up About a minute",
+          "status": "Up 49 seconds",
           "healthy": true
         },
         "tank-08-genevieve": {
@@ -245,7 +248,15 @@
       "healthy": true,
       "issues": []
     },
-    "issues": [],
-    "overall_healthy": true
+    "issues": [
+      {
+        "component": "ollama",
+        "details": [
+          "Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>",
+          "End-to-end connectivity failed"
+        ]
+      }
+    ],
+    "overall_healthy": false
   }
 }
