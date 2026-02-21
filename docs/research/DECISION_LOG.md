@@ -416,3 +416,94 @@
 
 *Document maintained by THE DOCUMENTARIAN*  
 *Last updated: 2026-02-22 00:30 AEDT*
+
+---
+
+## Post-Incident Decisions (INC-20260222-OLLAMA-ZOMBIES)
+
+### D044: Single-Instance Daemon Locks
+**Date:** 2026-02-22  
+**Status:** ✅ Implemented  
+**Trigger:** 260+ zombie OLLAMA WATCHER processes discovered  
+
+**Decision:** All daemon processes must use `fcntl` file locking to ensure only one instance runs at a time.
+
+**Implementation:**
+- Lock file acquired on startup
+- PID file written for monitoring
+- Lock released on graceful shutdown
+- Second instance exits immediately if lock held
+
+**Alternatives Rejected:**
+- PID file only: Race conditions possible
+- Process name checking: Unreliable with multiple users
+- systemd only: Not all daemons managed by systemd
+
+---
+
+### D045: End-to-End Health Checks
+**Date:** 2026-02-22  
+**Status:** ✅ Implemented  
+**Trigger:** "All green" audit missed 11-hour outage  
+
+**Decision:** Health checks must test actual function, not just existence. For Ollama, this means:
+1. Check Windows host responds (192.168.50.94:11434)
+2. Check proxy container is running
+3. Check tank can reach Ollama through proxy (E2E)
+
+**Principle:** "Is it working?" not "Is it running?"
+
+---
+
+### D046: Chaos Engineering Adoption
+**Date:** 2026-02-22  
+**Status:** ✅ Manual tests passed, daemon planned  
+**Trigger:** Need to verify self-healing actually works  
+
+**Decision:** Adopt Netflix Chaos Monkey philosophy - intentionally break things to verify resilience.
+
+**Implementation:**
+- Manual chaos tests during stabilization (passed)
+- Planned: THE CHAOS MONKEY daemon for continuous resilience testing
+- Tests: Kill containers, kill daemons, network partitions, resource exhaustion
+
+**Reference:** https://github.com/Netflix/chaosmonkey
+
+---
+
+### D047: Incident Documentation Standard
+**Date:** 2026-02-22  
+**Status:** ✅ Implemented  
+**Trigger:** First major incident requiring formal analysis  
+
+**Decision:** All significant incidents get formal RCA in `/docs/incidents/` with:
+- Timeline
+- Root causes (primary through quinary)
+- Contributing factors
+- Resolution steps
+- Lessons learned
+- Action items with ownership
+- Metrics
+- Prevention measures
+
+**Template:** INC-20260222-OLLAMA-ZOMBIES.md
+
+---
+
+### D048: Admin Dashboard Requirement
+**Date:** 2026-02-22  
+**Status:** 🔄 In Progress  
+**Trigger:** "No more black box" - need visibility into system state  
+
+**Decision:** Create admin panel at `/admin/` providing:
+- Real-time daemon status
+- Container health
+- Tank activity
+- Ollama connectivity
+- Recent incidents
+- Log viewers
+- Manual controls
+
+**Principle:** Complete transparency into system operations.
+
+---
