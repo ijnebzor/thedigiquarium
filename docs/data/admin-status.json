@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T02:06:01.217076",
+  "timestamp": "2026-02-22T02:13:01.058895",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": true,
@@ -9,19 +9,19 @@
   },
   "daemons": {
     "overseer": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     },
     "ollama_watcher": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     },
     "caretaker": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     },
     "maintainer": {
       "running": false,
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 6612,
+    "traces_today": 6619,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -68,13 +68,13 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Greece",
-        "traces": 1542
+        "article": "Roman alphabet",
+        "traces": 1545
       },
       {
         "name": "tank-04-abel",
-        "article": "Action",
-        "traces": 2145
+        "article": "Government",
+        "traces": 2149
       },
       {
         "name": "tank-05-juan",
@@ -87,37 +87,27 @@
     "isolated": true
   },
   "overseer": {
-    "running": false,
-    "last_audit_healthy": true,
+    "running": true,
+    "last_audit_healthy": false,
     "active_incidents": 0,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-22 01:37:57 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
-    "2026-02-22 01:37:57 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
-    "2026-02-22 01:37:57 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 01:37:58 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 01:37:58 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running']",
-    "2026-02-22 01:37:58 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 01:37:59 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 01:37:59 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running']",
-    "2026-02-22 01:43:02 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 01:43:03 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 01:44:03 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-22 01:45:04 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-22 01:48:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 01:48:06 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 01:53:08 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 01:53:09 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 01:58:12 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 01:58:16 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 02:03:18 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 02:03:19 \u2705 [OVERSEER] Full system audit PASSED"
+    "2026-02-22 02:06:14 \u2139\ufe0f [OVERSEER] THE OVERSEER v1.0 initialized",
+    "2026-02-22 02:06:14 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
+    "2026-02-22 02:06:14 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
+    "2026-02-22 02:06:14 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:06:16 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-02-22 02:06:16 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-02-eve is Exited (137) Less than a second ago']",
+    "2026-02-22 02:06:16 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher has 2 instances (zombie leak)', 'psych not running']",
+    "2026-02-22 02:06:16 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:06:19 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 02:06:19 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher has 2 instances (zombie leak)', 'psych not running']",
+    "2026-02-22 02:11:21 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:11:22 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 02:11:22 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running', 'guard not running', 'sentinel not running', 'scheduler not running', 'psych not running']"
   ],
   "issues": [
-    "overseer unhealthy",
-    "ollama_watcher unhealthy",
-    "caretaker unhealthy",
     "maintainer unhealthy",
     "guard unhealthy",
     "scheduler unhealthy",

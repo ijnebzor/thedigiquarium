@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-22T02:06:19.917271",
+  "timestamp": "2026-02-22T02:12:24.857533",
   "active_incidents": {},
   "stats": {
-    "cycles": 1,
+    "cycles": 7,
     "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
@@ -10,7 +10,7 @@
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-22T02:06:16.839440",
+    "timestamp": "2026-02-22T02:11:21.566390",
     "ollama": {
       "healthy": true,
       "issues": []
@@ -20,19 +20,19 @@
       "issues": [],
       "containers": {
         "digiquarium-ollama": {
-          "status": "Up 20 minutes",
+          "status": "Up 25 minutes",
           "healthy": true
         },
         "tank-01-adam": {
-          "status": "Up 7 seconds",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "tank-02-eve": {
-          "status": "Up 3 seconds",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-simple": {
-          "status": "Up About an hour",
+          "status": "Up 2 hours",
           "healthy": true
         },
         "tank-visitor-01-aria": {
@@ -52,7 +52,7 @@
           "healthy": true
         },
         "congregation-runner": {
-          "status": "Up About an hour",
+          "status": "Up 2 hours",
           "healthy": true
         },
         "tank-03-cain": {
@@ -60,7 +60,7 @@
           "healthy": true
         },
         "tank-04-abel": {
-          "status": "Up 32 minutes",
+          "status": "Up 37 minutes",
           "healthy": true
         },
         "tank-16-seeker": {
@@ -72,43 +72,43 @@
           "healthy": true
         },
         "tank-14-iris": {
-          "status": "Up About a minute",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-13-victor": {
-          "status": "Up About a minute",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up About a minute",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up About a minute",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-09-wei": {
-          "status": "Up About a minute",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up About a minute",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-08-genevieve": {
-          "status": "Up About a minute",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-05-juan": {
-          "status": "Up 2 minutes",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "tank-07-klaus": {
-          "status": "Up 2 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up 2 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {
@@ -116,7 +116,7 @@
           "healthy": true
         },
         "digiquarium-kiwix-chinese": {
-          "status": "Up 47 hours",
+          "status": "Up 2 days",
           "healthy": true
         },
         "digiquarium-kiwix-german": {
@@ -136,19 +136,16 @@
     "daemons": {
       "healthy": false,
       "issues": [
-        "caretaker has 2 instances (zombie leak)",
         "maintainer not running",
         "guard not running",
         "sentinel not running",
         "scheduler not running",
-        "ollama_watcher has 2 instances (zombie leak)",
         "psych not running"
       ],
       "daemons": {
         "caretaker": {
           "running": true,
-          "count": 2,
-          "zombie_leak": true
+          "count": 1
         },
         "maintainer": {
           "running": false,
@@ -168,8 +165,7 @@
         },
         "ollama_watcher": {
           "running": true,
-          "count": 2,
-          "zombie_leak": true
+          "count": 1
         },
         "psych": {
           "running": false,
@@ -259,12 +255,10 @@
       {
         "component": "daemons",
         "details": [
-          "caretaker has 2 instances (zombie leak)",
           "maintainer not running",
           "guard not running",
           "sentinel not running",
           "scheduler not running",
-          "ollama_watcher has 2 instances (zombie leak)",
           "psych not running"
         ]
       }

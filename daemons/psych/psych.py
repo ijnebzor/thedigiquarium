@@ -278,5 +278,22 @@ class Psych:
                 time.sleep(3600)
 
 
-if __name__ == '__main__':
+
+# Single-instance lock
+import fcntl
+LOCK_FILE = Path(__file__).parent / 'psych.lock'
+lock_fd = None
+
+def acquire_lock():
+    global lock_fd
+    try:
+        lock_fd = open(LOCK_FILE, 'w')
+        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return True
+    except IOError:
+        print(f"[psych] Another instance is already running")
+        return False
+
+
+if __name__ == "__main__":
     Psych().run()

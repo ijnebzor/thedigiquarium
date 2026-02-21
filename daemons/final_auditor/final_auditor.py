@@ -113,5 +113,22 @@ class FinalAuditor:
                 self.log.error(f"Error: {e}")
                 time.sleep(3600)
 
-if __name__ == '__main__':
+
+# Single-instance lock
+import fcntl
+LOCK_FILE = Path(__file__).parent / 'final_auditor.lock'
+lock_fd = None
+
+def acquire_lock():
+    global lock_fd
+    try:
+        lock_fd = open(LOCK_FILE, 'w')
+        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return True
+    except IOError:
+        print(f"[final_auditor] Another instance is already running")
+        return False
+
+
+if __name__ == "__main__":
     FinalAuditor().run()

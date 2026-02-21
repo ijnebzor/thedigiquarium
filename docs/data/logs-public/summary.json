@@ -1,0 +1,15 @@
+{
+  "last_updated": "2026-02-22T02:09:16.037740",
+  "tanks_processed": 17,
+  "entries_published": 2840,
+  "entries_pruned": 71388,
+  "prune_criteria": [
+    "null thoughts (LLM not responding)",
+    "empty thoughts",
+    "timeout entries",
+    "error entries",
+    "missing article",
+    "malformed JSON"
+  ],
+  "retention": "7 days of logs"
+}

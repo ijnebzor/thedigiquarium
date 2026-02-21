@@ -49,3 +49,6 @@ archives/
 # Model files
 *.gguf
 *.bin
+
+# Public logs are allowed (pruned clean data)
+!docs/data/logs-public/
