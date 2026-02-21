@@ -263,6 +263,23 @@ class Webmaster:
         
         return broken
     
+
+    def run_broadcaster(self):
+        """Run THE BROADCASTER to update live feed"""
+        try:
+            import subprocess
+            result = subprocess.run(
+                ['python3', '/home/ijneb/digiquarium/daemons/webmaster/broadcaster.py'],
+                capture_output=True, text=True, timeout=120
+            )
+            if result.returncode == 0:
+                self.log('success', 'Broadcaster updated live feed')
+                self.changes_pending = True
+            else:
+                self.log('error', f'Broadcaster failed: {result.stderr[:100]}')
+        except Exception as e:
+            self.log('error', f'Broadcaster error: {e}')
+
     def run(self):
         """Main daemon loop"""
         print("╔══════════════════════════════════════════════════════════════════════╗")
@@ -280,13 +297,16 @@ class Webmaster:
                 # 1. Prune and publish logs
                 self.prune_and_publish_logs()
                 
-                # 2. Update admin status
+                # 2. Run broadcaster for live feed
+                self.run_broadcaster()
+                
+                # 3. Update admin status
                 self.update_admin_status()
                 
-                # 3. Validate links
+                # 4. Validate links
                 self.validate_links()
                 
-                # 4. Push to GitHub
+                # 5. Push to GitHub
                 self.push_to_github()
                 
                 self.log('info', f'Cycle {cycle} complete. Next in {CHECK_INTERVAL//60} minutes')
