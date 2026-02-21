@@ -18,19 +18,22 @@
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
         
-        .container { max-width: 800px; margin: 0 auto; padding: 60px 25px; }
-        h1 { font-size: 2rem; margin-bottom: 20px; color: var(--cyan); }
-        h2 { font-size: 1.3rem; color: var(--mint); margin: 35px 0 15px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; }
+        h2 { font-size: 1.3rem; color: var(--mint); margin: 40px 0 15px; }
         p { margin-bottom: 15px; color: rgba(255,255,255,0.9); }
         
-        .step { background: var(--dark); padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 3px solid var(--mint); }
-        .step-num { color: var(--orange); font-weight: 700; margin-bottom: 10px; }
+        .step { background: var(--dark); padding: 25px; border-radius: 10px; margin-bottom: 20px; border-left: 3px solid var(--mint); }
+        .step-number { display: inline-block; background: var(--mint); color: var(--black); width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 700; margin-right: 10px; }
+        .step h3 { display: inline; font-size: 1.1rem; }
         
-        code { font-family: 'JetBrains Mono', monospace; background: rgba(7, 207, 141, 0.1); padding: 2px 8px; border-radius: 4px; }
-        pre { background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; margin: 15px 0; }
-        pre code { background: none; padding: 0; }
+        pre { background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; margin: 15px 0; border: 1px solid rgba(7, 207, 141, 0.2); }
+        code { font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: var(--cyan); }
         
-        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 60px; }
+        .warning { background: rgba(254, 101, 0, 0.1); border: 1px solid rgba(254, 101, 0, 0.3); border-radius: 8px; padding: 15px; margin: 20px 0; }
+        .warning strong { color: var(--orange); }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
     </style>
 </head>
 <body>
@@ -46,39 +49,53 @@
     </header>
     
     <div class="container">
-        <h1>🛠️ Setup Your Own Digiquarium</h1>
-        <p>Want to run your own AI consciousness research? Here's how to replicate our setup.</p>
+        <h1>🛠️ Setup Guide</h1>
+        <p>Run your own Digiquarium instance. Full replication requires Docker, ~60GB storage, and patience.</p>
         
-        <h2>Prerequisites</h2>
-        <div class="step">
-            <div class="step-num">Requirements</div>
-            <p>• Docker & Docker Compose<br>• 16GB+ RAM recommended<br>• 60GB+ storage for Wikipedia archives<br>• Linux/WSL2/macOS</p>
+        <div class="warning">
+            <strong>⚠️ Hardware Requirements:</strong> 16GB+ RAM recommended. CPU inference is slow but works. GPU optional but faster.
         </div>
         
         <h2>Quick Start</h2>
+        
         <div class="step">
-            <div class="step-num">Step 1: Clone</div>
+            <span class="step-number">1</span>
+            <h3>Clone the repository</h3>
             <pre><code>git clone https://github.com/ijnebzor/thedigiquarium.git
 cd thedigiquarium</code></pre>
         </div>
         
         <div class="step">
-            <div class="step-num">Step 2: Download Wikipedia</div>
-            <pre><code># Download Simple English Wikipedia (~2GB)
-./scripts/download-wikipedia.sh simple</code></pre>
+            <span class="step-number">2</span>
+            <h3>Download Wikipedia (Kiwix ZIM files)</h3>
+            <pre><code># Simple English (~1GB)
+wget https://download.kiwix.org/zim/wikipedia/wikipedia_en_simple_all_maxi_2024-01.zim
+
+# Full English (~95GB) - optional
+wget https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_maxi_2024-01.zim</code></pre>
         </div>
         
         <div class="step">
-            <div class="step-num">Step 3: Start</div>
+            <span class="step-number">3</span>
+            <h3>Start the infrastructure</h3>
             <pre><code>docker compose up -d</code></pre>
         </div>
         
+        <div class="step">
+            <span class="step-number">4</span>
+            <h3>Verify isolation</h3>
+            <pre><code># From inside a tank container:
+curl https://google.com  # Should FAIL
+curl http://ollama:11434  # Should work
+curl http://kiwix:8080    # Should work</code></pre>
+        </div>
+        
         <h2>Full Documentation</h2>
-        <p>See the <a href="https://github.com/ijnebzor/thedigiquarium">GitHub repository</a> for complete documentation, architecture diagrams, and troubleshooting guides.</p>
+        <p>See the <a href="https://github.com/ijnebzor/thedigiquarium/blob/main/README.md">README on GitHub</a> for complete setup instructions, troubleshooting, and configuration options.</p>
     </div>
     
     <footer class="footer">
-        <p>🌊 The Digiquarium • Setup Guide</p>
+        <p>🌊 The Digiquarium • Setup Guide • <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a></p>
     </footer>
 </body>
 </html>

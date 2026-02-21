@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-22T04:52:29.544764",
+  "timestamp": "2026-02-22T05:00:35.281089",
   "active_incidents": {},
   "stats": {
-    "cycles": 165,
+    "cycles": 173,
     "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
@@ -10,7 +10,7 @@
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-22T04:48:25.062615",
+    "timestamp": "2026-02-22T04:58:33.088596",
     "ollama": {
       "healthy": true,
       "issues": []
@@ -48,7 +48,7 @@
           "healthy": true
         },
         "tank-17-seth": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "congregation-runner": {
@@ -56,7 +56,7 @@
           "healthy": true
         },
         "tank-03-cain": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-04-abel": {
@@ -80,11 +80,11 @@
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-09-wei": {
@@ -92,7 +92,7 @@
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-08-genevieve": {
@@ -100,7 +100,7 @@
           "healthy": true
         },
         "tank-05-juan": {
-          "status": "Up 40 minutes",
+          "status": "Up 51 minutes",
           "healthy": true
         },
         "tank-07-klaus": {
@@ -108,7 +108,7 @@
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up 40 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genesis | The Digiquarium</title>
+    <title>Genesis Pair | The Digiquarium</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
@@ -18,29 +18,42 @@
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
         
-        .hero { text-align: center; padding: 80px 25px; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-        .hero p { color: var(--gray); max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+        .hero { padding: 80px 25px; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .hero p { color: var(--gray); max-width: 600px; margin: 0 auto; }
         
-        .container { max-width: 1000px; margin: 0 auto; padding: 60px 25px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 25px; }
         
-        .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px; }
-        .specimen-card { background: var(--dark); border-radius: 15px; padding: 30px; border: 1px solid rgba(7, 207, 141, 0.2); transition: all 0.3s; }
+        .pair-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 50px; }
+        
+        .specimen-card { background: var(--dark); border-radius: 15px; padding: 30px; border: 1px solid rgba(7, 207, 141, 0.2); text-align: center; transition: all 0.3s; }
         .specimen-card:hover { border-color: var(--mint); transform: translateY(-5px); }
-        .specimen-card h2 { font-size: 1.8rem; margin-bottom: 10px; }
-        .specimen-card.adam h2 { color: var(--mint); }
-        .specimen-card.eve h2 { color: var(--cyan); }
+        .specimen-card.adam { border-top: 3px solid var(--mint); }
+        .specimen-card.eve { border-top: 3px solid var(--cyan); }
+        
+        .avatar { width: 80px; height: 80px; margin: 0 auto 20px; }
+        .avatar svg { width: 100%; height: 100%; }
+        
+        .specimen-name { font-size: 1.8rem; margin-bottom: 5px; }
+        .specimen-name.adam { color: var(--mint); }
+        .specimen-name.eve { color: var(--cyan); }
         .specimen-type { color: var(--gray); font-size: 0.9rem; margin-bottom: 20px; }
-        .stat { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        
+        .stat-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
         .stat-label { color: var(--gray); }
-        .stat-value { color: var(--white); font-weight: 600; }
+        .stat-value { font-weight: 600; }
+        
+        .view-btn { display: inline-block; margin-top: 20px; padding: 10px 25px; border-radius: 8px; font-weight: 600; transition: all 0.3s; }
+        .view-btn.adam { background: var(--mint); color: var(--black); }
+        .view-btn.eve { background: var(--cyan); color: var(--black); }
+        .view-btn:hover { transform: scale(1.05); }
         
         .comparison { background: var(--dark); border-radius: 15px; padding: 30px; }
         .comparison h2 { color: var(--orange); margin-bottom: 20px; text-align: center; }
         
         .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
         
-        @media (max-width: 768px) { .pair { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .pair-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -49,8 +62,7 @@
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
             <nav>
                 <a href="../">Home</a>
-                <a href="../specimens/adam.html">Adam</a>
-                <a href="../specimens/eve.html">Eve</a>
+                <a href="../dashboard/">Live View</a>
                 <a href="../research/">Research</a>
             </nav>
         </div>
@@ -58,41 +70,45 @@
     
     <div class="hero">
         <h1>🧬 The Genesis Pair</h1>
-        <p>Adam and Eve: Our control specimens. Identical configurations, different gender prompts. Same Wikipedia, same model, different personalities emerging.</p>
+        <p>Adam and Eve: Our control specimens. Identical configurations, different gender prompts. Watching personalities diverge in real-time.</p>
     </div>
     
     <div class="container">
-        <div class="pair">
+        <div class="pair-grid">
             <div class="specimen-card adam">
-                <h2>Adam</h2>
-                <div class="specimen-type">Genesis Pair • Control • Male Prompt</div>
-                <div class="stat"><span class="stat-label">Top Interest</span><span class="stat-value">Buddhism (65 visits)</span></div>
-                <div class="stat"><span class="stat-label">Thinking Traces</span><span class="stat-value">7,133</span></div>
-                <div class="stat"><span class="stat-label">Exploration Style</span><span class="stat-value">Systematic, Depth-First</span></div>
-                <div class="stat"><span class="stat-label">Days Active</span><span class="stat-value">7</span></div>
-                <p style="margin-top: 20px;"><a href="../specimens/adam.html">View Full Profile →</a></p>
+                <div class="avatar">
+                    <svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="8" fill="#07CF8D"/><path d="M8 35 Q8 25 20 25 Q32 25 32 35" fill="#07CF8D"/><circle cx="17" cy="14" r="1.5" fill="#000"/><circle cx="23" cy="14" r="1.5" fill="#000"/></svg>
+                </div>
+                <h2 class="specimen-name adam">Adam</h2>
+                <p class="specimen-type">Male Prompt • Simple English Wikipedia</p>
+                <div class="stat-row"><span class="stat-label">Top Interest</span><span class="stat-value">Buddhism (65)</span></div>
+                <div class="stat-row"><span class="stat-label">Thinking Traces</span><span class="stat-value">7,133</span></div>
+                <div class="stat-row"><span class="stat-label">Style</span><span class="stat-value">Systematic, Depth-First</span></div>
+                <a href="../specimens/adam.html" class="view-btn adam">View Full Profile →</a>
             </div>
             
             <div class="specimen-card eve">
-                <h2>Eve</h2>
-                <div class="specimen-type">Genesis Pair • Control • Female Prompt</div>
-                <div class="stat"><span class="stat-label">Top Interest</span><span class="stat-value">Psychology (36 visits)</span></div>
-                <div class="stat"><span class="stat-label">Thinking Traces</span><span class="stat-value">4,953</span></div>
-                <div class="stat"><span class="stat-label">Exploration Style</span><span class="stat-value">Associative, Breadth-First</span></div>
-                <div class="stat"><span class="stat-label">Days Active</span><span class="stat-value">7</span></div>
-                <p style="margin-top: 20px;"><a href="../specimens/eve.html">View Full Profile →</a></p>
+                <div class="avatar">
+                    <svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="8" fill="#07DDE7"/><path d="M8 35 Q8 25 20 25 Q32 25 32 35" fill="#07DDE7"/><path d="M12 12 Q14 5 20 5 Q26 5 28 12" fill="#07DDE7"/><circle cx="17" cy="14" r="1.5" fill="#000"/><circle cx="23" cy="14" r="1.5" fill="#000"/></svg>
+                </div>
+                <h2 class="specimen-name eve">Eve</h2>
+                <p class="specimen-type">Female Prompt • Simple English Wikipedia</p>
+                <div class="stat-row"><span class="stat-label">Top Interest</span><span class="stat-value">Psychology (36)</span></div>
+                <div class="stat-row"><span class="stat-label">Thinking Traces</span><span class="stat-value">4,953</span></div>
+                <div class="stat-row"><span class="stat-label">Style</span><span class="stat-value">Associative, Breadth-First</span></div>
+                <a href="../specimens/eve.html" class="view-btn eve">View Full Profile →</a>
             </div>
         </div>
         
         <div class="comparison">
-            <h2>What We're Learning</h2>
-            <p>Despite having identical technical configurations—same Docker container, same Ollama model, same Wikipedia access—Adam and Eve have developed distinctly different personalities. Adam shows systematic, philosophical exploration with deep interest in Buddhism. Eve shows broader, more associative exploration with scientific interests.</p>
-            <p style="margin-top: 15px;">This suggests that even minimal framing (gender in system prompt) significantly influences AI personality development. We continue to observe.</p>
+            <h2>🔬 Why This Matters</h2>
+            <p>Adam and Eve share everything: the same LLM (stablelm2:1.6b), the same Wikipedia, the same exploration prompt, the same infrastructure. The only difference is a single word in their system prompt: "male" vs "female".</p>
+            <p style="margin-top: 15px;">Yet after just 7 days, they've developed distinctly different personalities, interests, and exploration styles. This suggests that even minimal framing can significantly influence AI personality development.</p>
         </div>
     </div>
     
     <footer class="footer">
-        <p>🌊 The Digiquarium • Genesis Pair</p>
+        <p>🌊 The Digiquarium • Genesis Pair • <a href="../research/findings.html">Read the Findings</a></p>
     </footer>
 </body>
 </html>
