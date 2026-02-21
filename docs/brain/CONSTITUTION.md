@@ -555,3 +555,45 @@ Path('index.html').write_text(content)
 Never forget. Always be additive.
 
 ---
+
+---
+
+## SECTION 21: ADMIN PANEL REQUIREMENTS (From Benji, 2026-02-22)
+
+### Current Issues:
+1. **Buttons don't work** - No actual functionality connected
+2. **Message relay is one-way** - Shows "[OVERSEER] Message received" but no actual MCP connection
+3. **Only shows 5 tanks** - Should show all 17
+4. **Missing health data** - Need uptime, current health, major events
+
+### What Benji Needs:
+
+**1. Direct MCP Chat**
+- Actual conversation with THE STRATEGIST via MCP
+- Not just a message relay - a real chat interface
+- Route specific issues to specific daemons
+
+**2. Full Tank Overview**
+- All 17 tanks visible
+- Current health status
+- Uptime
+- Major events:
+  - Therapist sessions
+  - Sent to dream
+  - Congregation participation
+  - Restart events
+
+**3. Working Buttons**
+- Actions should actually do something
+- Connect to real MCP tools
+
+### Implementation Notes:
+The admin panel currently loads from admin-status.json which only includes 5 tanks in the activity array.
+Need to expand this to include all 17 tanks with full status.
+
+The MCP chat would require:
+- WebSocket connection to MCP server
+- Or: iframe to Claude chat with project context
+- Or: Simple message queue that I process when online
+
+---
