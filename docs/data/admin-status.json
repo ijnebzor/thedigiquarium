@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T05:35:01.775659",
+  "timestamp": "2026-02-22T05:39:01.424570",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -50,21 +50,21 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 26
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 6901,
+    "running": 18,
+    "traces_today": 6907,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Cartography",
-        "traces": 1205
+        "article": "Photograph",
+        "traces": 1207
       },
       {
         "name": "tank-02-eve",
-        "article": "Burma",
-        "traces": 1202
+        "article": "Myanmar",
+        "traces": 1204
       },
       {
         "name": "tank-03-cain",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Acceleration",
-        "traces": 2250
+        "article": "British English",
+        "traces": 2252
       },
       {
         "name": "tank-05-juan",
