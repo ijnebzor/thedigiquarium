@@ -52,6 +52,47 @@ RESEARCH_TANKS = [
 ]
 
 
+
+# Translation for non-English tanks
+TANK_LANGUAGES = {
+    'tank-05-juan': 'es',
+    'tank-06-juanita': 'es',
+    'tank-07-klaus': 'de',
+    'tank-08-genevieve': 'de',
+    'tank-09-wei': 'zh',
+    'tank-10-mei': 'zh',
+    'tank-11-haruki': 'ja',
+    'tank-12-sakura': 'ja',
+}
+
+def translate_thought(text: str, source_lang: str) -> str:
+    """Translate thought to English using Ollama"""
+    if not text or source_lang == 'en':
+        return text
+    
+    try:
+        import requests
+        prompt = f"Translate this {source_lang} text to English. Only output the translation, nothing else: {text}"
+        
+        response = requests.post(
+            'http://localhost:11434/api/generate',
+            json={
+                'model': 'llama3.2:3b',
+                'prompt': prompt,
+                'stream': False
+            },
+            timeout=30
+        )
+        
+        if response.status_code == 200:
+            result = response.json()
+            return result.get('response', text).strip()
+    except Exception as e:
+        pass  # Return original on failure
+    
+    return text
+
+
 class DataPruner:
     """Prunes junk data from logs for clean public display"""
     
@@ -107,6 +148,8 @@ class DataPruner:
                     'timestamp': trace.get('timestamp') or trace.get('ts'),
                     'article': trace.get('article'),
                     'thought': DataPruner.clean_thought(trace.get('thoughts', '')),
+                'thought_en': thought_en if lang != 'en' else None,
+                'language': lang,
                     'next': trace.get('next', ''),
                     'why': DataPruner.clean_thought(trace.get('why', ''))[:150]
                 }
@@ -178,6 +221,11 @@ class Broadcaster:
         display_traces = []
         for trace in clean_traces:
             entry_time = datetime.fromisoformat(trace['timestamp'])
+            # Translate if needed
+            lang = TANK_LANGUAGES.get(tank_id, 'en')
+            thought_text = trace.get('thought', '')
+            thought_en = translate_thought(thought_text, lang) if lang != 'en' else thought_text
+            
             display_traces.append({
                 'time': entry_time.strftime('%H:%M'),
                 'date': entry_time.strftime('%Y-%m-%d'),

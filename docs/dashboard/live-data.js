@@ -81,11 +81,14 @@ function updateTankPanel(tankId) {
     
     if (bodyEl && data.recent_thoughts && data.recent_thoughts.length > 0) {
         const latest = data.recent_thoughts[0];
-        const thought = latest.thought || 'Exploring...';
+        const thought = latest.thought_en || latest.thought || 'Exploring...';
+        const originalThought = latest.thought_en && latest.language !== 'en' ? latest.thought : null;
+        const langBadge = latest.language && latest.language !== 'en' ? `<span class="thought-lang-badge">${latest.language.toUpperCase()}</span>` : '';
         
         bodyEl.innerHTML = `
-            <div class="tank-article">Reading: <strong>${latest.article || 'Unknown'}</strong></div>
+            <div class="tank-article">Reading: <strong>${latest.article || 'Unknown'}</strong>${langBadge}</div>
             <div class="tank-thought">${thought}</div>
+            ${originalThought ? `<div class="thought-original">Original: ${originalThought}</div>` : ''}
         `;
         panel.classList.remove('sleeping');
     }

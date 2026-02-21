@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T05:23:01.587301",
+  "timestamp": "2026-02-22T05:29:01.837103",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -50,21 +50,21 @@
     }
   },
   "containers": {
-    "total": 26
+    "total": 28
   },
   "tanks": {
-    "running": 18,
-    "traces_today": 6887,
+    "running": 20,
+    "traces_today": 6894,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "English language",
-        "traces": 1201
+        "article": "Geological",
+        "traces": 1203
       },
       {
         "name": "tank-02-eve",
-        "article": "Anticipation",
-        "traces": 1198
+        "article": "Human",
+        "traces": 1200
       },
       {
         "name": "tank-03-cain",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Phanerozoic",
-        "traces": 2244
+        "article": "Event",
+        "traces": 2247
       },
       {
         "name": "tank-05-juan",
@@ -88,13 +88,11 @@
   },
   "overseer": {
     "running": true,
-    "last_audit_healthy": false,
+    "last_audit_healthy": true,
     "active_incidents": 0,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-22 04:33:14 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 4 minutes ago', 'tank-03-cain is Exited (137) 4 minutes ago']",
-    "2026-02-22 04:38:16 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 04:38:17 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
     "2026-02-22 04:38:17 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) 4 minutes ago']",
     "2026-02-22 04:43:20 \ud83d\udd0d [OVERSEER] Starting full system audit",
@@ -112,7 +110,9 @@
     "2026-02-22 05:13:46 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-22 05:18:49 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 05:19:02 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 05:19:02 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']"
+    "2026-02-22 05:19:02 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']",
+    "2026-02-22 05:24:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 05:24:06 \u2705 [OVERSEER] Full system audit PASSED"
   ],
   "issues": []
 }
