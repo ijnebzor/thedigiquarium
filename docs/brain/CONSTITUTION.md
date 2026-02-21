@@ -498,3 +498,28 @@ Abel (tank-04-abel) showing as sleeping. Check:
 3. Live feed inclusion: Is broadcaster picking it up?
 
 ---
+
+---
+
+## SECTION 19: OVERNIGHT TASKS (While Benji Sleeps)
+
+### Issues Identified at 05:28:
+1. **Mei showing system prompt** - Investigate if this is display issue or log issue
+2. **Fullscreen close button not working** - Fix dashboard fullscreen modal
+3. **Logs appear truncated** - Review log display on live view
+4. **Daemon audit needed** - Ensure all 20 daemons listed consistently
+5. **SLA adherence check** - Verify daemons meeting their SLAs
+6. **Research paper update** - Add latest findings from profiles
+
+### Fixed:
+- ✅ CHAOS MONKEY placement (was nested inside OLLAMA WATCHER)
+- ✅ Blog index created with strategist reflection post
+- ✅ All 17 profiles generated with unique data
+
+### Still To Do:
+- Fix fullscreen close button
+- Audit daemon counts across all pages
+- Update research paper with findings
+- Check Mei's display issue
+
+---
