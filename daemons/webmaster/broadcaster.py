@@ -148,8 +148,6 @@ class DataPruner:
                     'timestamp': trace.get('timestamp') or trace.get('ts'),
                     'article': trace.get('article'),
                     'thought': DataPruner.clean_thought(trace.get('thoughts', '')),
-                'thought_en': thought_en if lang != 'en' else None,
-                'language': lang,
                     'next': trace.get('next', ''),
                     'why': DataPruner.clean_thought(trace.get('why', ''))[:150]
                 }
@@ -218,20 +216,22 @@ class Broadcaster:
         self.prune_stats['pruned'] += (len(raw_traces) - len(clean_traces))
         
         # Format for display
+        # Get language for this tank
+        lang = TANK_LANGUAGES.get(tank_id, 'en')
+        
         display_traces = []
         for trace in clean_traces:
-            entry_time = datetime.fromisoformat(trace['timestamp'])
-            # Translate if needed
-            lang = TANK_LANGUAGES.get(tank_id, 'en')
             thought_text = trace.get('thought', '')
-            thought_en = translate_thought(thought_text, lang) if lang != 'en' else thought_text
-            
+            thought_en = translate_thought(thought_text, lang) if lang != 'en' and thought_text else None
+            entry_time = datetime.fromisoformat(trace['timestamp'])
             display_traces.append({
                 'time': entry_time.strftime('%H:%M'),
                 'date': entry_time.strftime('%Y-%m-%d'),
                 'article': trace['article'],
                 'thought': trace['thought'][:200] if trace['thought'] else f"Exploring {trace['article']}...",
                 'next': trace['next'],
+                'thought_en': thought_en[:200] if thought_en else None,
+                'language': lang,
             })
         
         display_traces.sort(key=lambda x: (x['date'], x['time']), reverse=True)
