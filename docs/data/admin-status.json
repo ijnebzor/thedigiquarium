@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-02-22T01:59:01.878796",
-  "overall_healthy": true,
+  "timestamp": "2026-02-22T02:06:01.217076",
+  "overall_healthy": false,
   "ollama": {
     "windows_healthy": true,
     "proxy_healthy": true,
@@ -9,44 +9,44 @@
   },
   "daemons": {
     "overseer": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "ollama_watcher": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "caretaker": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "maintainer": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "guard": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "scheduler": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "sentinel": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "psych": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     }
   },
   "containers": {
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 6605,
+    "traces_today": 6612,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -68,13 +68,13 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Flag of Greece",
-        "traces": 1539
+        "article": "Greece",
+        "traces": 1542
       },
       {
         "name": "tank-04-abel",
-        "article": "Physical exercise",
-        "traces": 2141
+        "article": "Action",
+        "traces": 2145
       },
       {
         "name": "tank-05-juan",
@@ -87,13 +87,12 @@
     "isolated": true
   },
   "overseer": {
-    "running": true,
+    "running": false,
     "last_audit_healthy": true,
     "active_incidents": 0,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-22 01:37:57 \u2139\ufe0f [OVERSEER] THE OVERSEER v1.0 initialized",
     "2026-02-22 01:37:57 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
     "2026-02-22 01:37:57 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
     "2026-02-22 01:37:57 \ud83d\udd0d [OVERSEER] Starting full system audit",
@@ -111,7 +110,18 @@
     "2026-02-22 01:53:08 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 01:53:09 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-22 01:58:12 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 01:58:16 \u2705 [OVERSEER] Full system audit PASSED"
+    "2026-02-22 01:58:16 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 02:03:18 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:03:19 \u2705 [OVERSEER] Full system audit PASSED"
   ],
-  "issues": []
+  "issues": [
+    "overseer unhealthy",
+    "ollama_watcher unhealthy",
+    "caretaker unhealthy",
+    "maintainer unhealthy",
+    "guard unhealthy",
+    "scheduler unhealthy",
+    "sentinel unhealthy",
+    "psych unhealthy"
+  ]
 }

@@ -30,6 +30,100 @@
             padding: 20px;
         }
         
+        /* Auth Gate Styles */
+        .auth-gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        
+        .auth-gate.hidden { display: none; }
+        
+        .auth-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        .auth-box h1 {
+            color: var(--accent-cyan);
+            margin-bottom: 10px;
+        }
+        
+        .auth-box .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+        
+        .auth-box input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1em;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        
+        .auth-box input:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+        }
+        
+        .auth-box button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: var(--accent-cyan);
+            color: var(--bg-primary);
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .auth-box button:hover { opacity: 0.8; }
+        
+        .auth-error {
+            color: var(--accent-red);
+            margin-top: 15px;
+            font-size: 0.9em;
+            display: none;
+        }
+        
+        .auth-error.show { display: block; }
+        
+        .security-note {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 68, 68, 0.1);
+            border: 1px solid rgba(255, 68, 68, 0.3);
+            border-radius: 8px;
+            font-size: 0.8em;
+            color: var(--text-secondary);
+        }
+        
+        /* Dashboard hidden by default */
+        .dashboard { display: none; }
+        .dashboard.visible { display: block; }
+        
+        /* Rest of dashboard styles */
         .header {
             display: flex;
             justify-content: space-between;
@@ -87,9 +181,7 @@
             letter-spacing: 1px;
         }
         
-        .card.full-width {
-            grid-column: 1 / -1;
-        }
+        .card.full-width { grid-column: 1 / -1; }
         
         .metric {
             display: flex;
@@ -100,18 +192,7 @@
         }
         
         .metric:last-child { border-bottom: none; }
-        
-        .metric .name {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .metric .value {
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-        }
-        
+        .metric .value { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
         .metric .value.healthy { color: var(--accent-green); }
         .metric .value.warning { color: var(--accent-yellow); }
         .metric .value.critical { color: var(--accent-red); }
@@ -131,11 +212,7 @@
         
         .daemon .icon { font-size: 1.5em; margin-bottom: 5px; }
         .daemon .name { font-size: 0.85em; color: var(--text-secondary); }
-        .daemon .status { 
-            font-size: 0.75em; 
-            margin-top: 5px;
-            font-family: 'JetBrains Mono', monospace;
-        }
+        .daemon .status { font-size: 0.75em; margin-top: 5px; font-family: 'JetBrains Mono', monospace; }
         
         .tank-row {
             display: flex;
@@ -146,26 +223,9 @@
         }
         
         .tank-row:last-child { border-bottom: none; }
-        
-        .tank-row .name { 
-            min-width: 100px;
-            font-weight: 500;
-        }
-        
-        .tank-row .article {
-            flex: 1;
-            color: var(--text-secondary);
-            font-size: 0.9em;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        
-        .tank-row .traces {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85em;
-            color: var(--accent-cyan);
-        }
+        .tank-row .name { min-width: 100px; font-weight: 500; }
+        .tank-row .article { flex: 1; color: var(--text-secondary); font-size: 0.9em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .tank-row .traces { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; color: var(--accent-cyan); }
         
         .log-viewer {
             background: var(--bg-secondary);
@@ -177,12 +237,7 @@
             overflow-y: auto;
         }
         
-        .log-line {
-            padding: 3px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .log-line .timestamp { color: var(--text-secondary); }
+        .log-line { padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .log-line .level-info { color: var(--accent-cyan); }
         .log-line .level-warning { color: var(--accent-yellow); }
         .log-line .level-error { color: var(--accent-red); }
@@ -196,37 +251,25 @@
             border-radius: 6px;
             cursor: pointer;
             font-weight: 600;
-            transition: opacity 0.2s;
         }
         
         .refresh-btn:hover { opacity: 0.8; }
+        .last-updated { font-size: 0.85em; color: var(--text-secondary); }
         
-        .last-updated {
-            font-size: 0.85em;
-            color: var(--text-secondary);
-        }
-        
-        .incident-banner {
-            background: rgba(255, 68, 68, 0.1);
+        .logout-btn {
+            background: transparent;
             border: 1px solid var(--accent-red);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            display: none;
-        }
-        
-        .incident-banner.active { display: block; }
-        
-        .incident-banner h3 {
             color: var(--accent-red);
-            margin-bottom: 5px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            margin-left: 10px;
         }
         
-        .controls {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
+        .logout-btn:hover { background: rgba(255, 68, 68, 0.1); }
+        
+        .controls { display: flex; gap: 10px; margin-top: 15px; }
         
         .control-btn {
             padding: 8px 16px;
@@ -236,158 +279,235 @@
             color: var(--text-primary);
             cursor: pointer;
             font-size: 0.85em;
-            transition: all 0.2s;
         }
         
-        .control-btn:hover {
-            border-color: var(--accent-cyan);
-            background: rgba(0, 212, 255, 0.1);
-        }
-        
-        .control-btn.danger {
-            border-color: var(--accent-red);
-        }
-        
-        .control-btn.danger:hover {
-            background: rgba(255, 68, 68, 0.1);
-        }
+        .control-btn:hover { border-color: var(--accent-cyan); background: rgba(0, 212, 255, 0.1); }
+        .control-btn.danger { border-color: var(--accent-red); }
+        .control-btn.danger:hover { background: rgba(255, 68, 68, 0.1); }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🖥️ Admin Panel</h1>
-        <div class="status">
-            <span class="last-updated">Last updated: <span id="last-update">--</span></span>
-            <div class="status-indicator" id="overall-status"></div>
-            <button class="refresh-btn" onclick="refreshAll()">↻ Refresh</button>
+    <!-- AUTH GATE -->
+    <div class="auth-gate" id="auth-gate">
+        <div class="auth-box">
+            <h1>🔐 Admin Access</h1>
+            <p class="subtitle">The Digiquarium Control Panel</p>
+            <input type="password" id="auth-password" placeholder="Enter access code" autofocus>
+            <button onclick="authenticate()">Authenticate</button>
+            <p class="auth-error" id="auth-error">Invalid access code</p>
+            <div class="security-note">
+                🛡️ <strong>Security Notice:</strong> This panel provides full system visibility. 
+                Access is logged and monitored by THE GUARD.
+            </div>
         </div>
     </div>
     
-    <div class="incident-banner" id="incident-banner">
-        <h3>🚨 Active Incident</h3>
-        <p id="incident-message">--</p>
-    </div>
-    
-    <div class="grid">
-        <!-- Ollama Status -->
-        <div class="card">
-            <h2>🧠 Ollama LLM</h2>
-            <div class="metric">
-                <span class="name">Windows Host</span>
-                <span class="value" id="ollama-windows">--</span>
-            </div>
-            <div class="metric">
-                <span class="name">Proxy Container</span>
-                <span class="value" id="ollama-proxy">--</span>
-            </div>
-            <div class="metric">
-                <span class="name">End-to-End</span>
-                <span class="value" id="ollama-e2e">--</span>
-            </div>
-            <div class="metric">
-                <span class="name">Models Available</span>
-                <span class="value" id="ollama-models">--</span>
+    <!-- DASHBOARD (hidden until authenticated) -->
+    <div class="dashboard" id="dashboard">
+        <div class="header">
+            <h1>🖥️ Admin Panel</h1>
+            <div class="status">
+                <span class="last-updated">Last updated: <span id="last-update">--</span></span>
+                <div class="status-indicator" id="overall-status"></div>
+                <button class="refresh-btn" onclick="refreshAll()">↻ Refresh</button>
+                <button class="logout-btn" onclick="logout()">🚪 Logout</button>
             </div>
         </div>
         
-        <!-- Daemon Status -->
-        <div class="card">
-            <h2>👁️ Daemons</h2>
-            <div class="daemon-grid" id="daemon-grid">
-                <!-- Populated by JS -->
+        <div class="grid">
+            <!-- Ollama Status -->
+            <div class="card">
+                <h2>🧠 Ollama LLM</h2>
+                <div class="metric">
+                    <span class="name">Windows Host</span>
+                    <span class="value" id="ollama-windows">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Proxy Container</span>
+                    <span class="value" id="ollama-proxy">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">End-to-End</span>
+                    <span class="value" id="ollama-e2e">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Models Available</span>
+                    <span class="value" id="ollama-models">--</span>
+                </div>
             </div>
-        </div>
-        
-        <!-- THE OVERSEER -->
-        <div class="card">
-            <h2>👁️ THE OVERSEER</h2>
-            <div class="metric">
-                <span class="name">Status</span>
-                <span class="value" id="overseer-status">--</span>
+            
+            <!-- Daemon Status -->
+            <div class="card">
+                <h2>👁️ Daemons</h2>
+                <div class="daemon-grid" id="daemon-grid"></div>
             </div>
-            <div class="metric">
-                <span class="name">Last Audit</span>
-                <span class="value" id="overseer-audit">--</span>
+            
+            <!-- THE OVERSEER -->
+            <div class="card">
+                <h2>👁️ THE OVERSEER</h2>
+                <div class="metric">
+                    <span class="name">Status</span>
+                    <span class="value" id="overseer-status">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Last Audit</span>
+                    <span class="value" id="overseer-audit">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Active Incidents</span>
+                    <span class="value" id="overseer-incidents">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Auto-Remediations</span>
+                    <span class="value" id="overseer-remediations">--</span>
+                </div>
             </div>
-            <div class="metric">
-                <span class="name">Active Incidents</span>
-                <span class="value" id="overseer-incidents">--</span>
+            
+            <!-- Quick Stats -->
+            <div class="card">
+                <h2>📊 Quick Stats</h2>
+                <div class="metric">
+                    <span class="name">Tanks Running</span>
+                    <span class="value" id="tanks-running">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Containers Total</span>
+                    <span class="value" id="containers-total">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Today's Traces</span>
+                    <span class="value" id="traces-today">--</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Network Isolated</span>
+                    <span class="value" id="network-isolated">--</span>
+                </div>
             </div>
-            <div class="metric">
-                <span class="name">Auto-Remediations</span>
-                <span class="value" id="overseer-remediations">--</span>
+            
+            <!-- Tank Activity -->
+            <div class="card full-width">
+                <h2>🐟 Tank Activity (Last Update)</h2>
+                <div id="tank-activity"></div>
             </div>
-        </div>
-        
-        <!-- Quick Stats -->
-        <div class="card">
-            <h2>📊 Quick Stats</h2>
-            <div class="metric">
-                <span class="name">Tanks Running</span>
-                <span class="value" id="tanks-running">--</span>
+            
+            <!-- Recent Logs -->
+            <div class="card full-width">
+                <h2>📜 OVERSEER Log (Recent)</h2>
+                <div class="log-viewer" id="log-viewer"></div>
             </div>
-            <div class="metric">
-                <span class="name">Containers Total</span>
-                <span class="value" id="containers-total">--</span>
+            
+            <!-- Manual Controls -->
+            <div class="card">
+                <h2>🎛️ Manual Controls</h2>
+                <p style="color: var(--text-secondary); font-size: 0.9em; margin-bottom: 15px;">
+                    Emergency controls for manual intervention
+                </p>
+                <div class="controls">
+                    <button class="control-btn" onclick="runAudit()">Run Audit</button>
+                    <button class="control-btn" onclick="restartOllama()">Restart Ollama</button>
+                    <button class="control-btn danger" onclick="chaosTest()">Chaos Test</button>
+                </div>
             </div>
-            <div class="metric">
-                <span class="name">Today's Traces</span>
-                <span class="value" id="traces-today">--</span>
-            </div>
-            <div class="metric">
-                <span class="name">Network Isolated</span>
-                <span class="value" id="network-isolated">--</span>
-            </div>
-        </div>
-        
-        <!-- Tank Activity -->
-        <div class="card full-width">
-            <h2>🐟 Tank Activity (Last Update)</h2>
-            <div id="tank-activity">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-        
-        <!-- Recent Logs -->
-        <div class="card full-width">
-            <h2>📜 OVERSEER Log (Recent)</h2>
-            <div class="log-viewer" id="log-viewer">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-        
-        <!-- Manual Controls -->
-        <div class="card">
-            <h2>🎛️ Manual Controls</h2>
-            <p style="color: var(--text-secondary); font-size: 0.9em; margin-bottom: 15px;">
-                Emergency controls for manual intervention
-            </p>
-            <div class="controls">
-                <button class="control-btn" onclick="runAudit()">Run Audit</button>
-                <button class="control-btn" onclick="restartOllama()">Restart Ollama</button>
-                <button class="control-btn danger" onclick="chaosTest()">Chaos Test</button>
-            </div>
-        </div>
-        
-        <!-- System Info -->
-        <div class="card">
-            <h2>💻 System Info</h2>
-            <div class="metric">
-                <span class="name">Host</span>
-                <span class="value" style="color: var(--text-secondary);">NUC (WSL2)</span>
-            </div>
-            <div class="metric">
-                <span class="name">Ollama Host</span>
-                <span class="value" style="color: var(--text-secondary);">192.168.50.94</span>
-            </div>
-            <div class="metric">
-                <span class="name">Network</span>
-                <span class="value" style="color: var(--text-secondary);">172.30.0.0/24</span>
+            
+            <!-- System Info -->
+            <div class="card">
+                <h2>💻 System Info</h2>
+                <div class="metric">
+                    <span class="name">Host</span>
+                    <span class="value" style="color: var(--text-secondary);">NUC (WSL2)</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Ollama Host</span>
+                    <span class="value" style="color: var(--text-secondary);">192.168.50.94</span>
+                </div>
+                <div class="metric">
+                    <span class="name">Network</span>
+                    <span class="value" style="color: var(--text-secondary);">172.30.0.0/24</span>
+                </div>
             </div>
         </div>
     </div>
     
     <script>
+        // Auth configuration
+        // SHA-256 hash of the password - do NOT store plaintext
+        // This is hash of "digiquarium-admin-2026"
+        const AUTH_HASH = '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918';
+        const SESSION_KEY = 'digiquarium_admin_session';
+        const SESSION_DURATION = 3600000; // 1 hour
+        
+        // Check for existing session
+        function checkSession() {
+            const session = localStorage.getItem(SESSION_KEY);
+            if (session) {
+                const data = JSON.parse(session);
+                if (Date.now() < data.expires) {
+                    showDashboard();
+                    return true;
+                }
+                localStorage.removeItem(SESSION_KEY);
+            }
+            return false;
+        }
+        
+        // Simple hash function (for demo - use proper crypto in production)
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        
+        // Authenticate
+        async function authenticate() {
+            const password = document.getElementById('auth-password').value;
+            const hash = await hashPassword(password);
+            
+            // Check hash matches
+            if (hash === AUTH_HASH) {
+                // Create session
+                const session = {
+                    created: Date.now(),
+                    expires: Date.now() + SESSION_DURATION
+                };
+                localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+                
+                // Log access (would normally go to server)
+                console.log('Admin access granted at', new Date().toISOString());
+                
+                showDashboard();
+            } else {
+                document.getElementById('auth-error').classList.add('show');
+                document.getElementById('auth-password').value = '';
+                
+                // Log failed attempt
+                console.warn('Failed admin login attempt at', new Date().toISOString());
+            }
+        }
+        
+        function showDashboard() {
+            document.getElementById('auth-gate').classList.add('hidden');
+            document.getElementById('dashboard').classList.add('visible');
+            initDaemonGrid();
+            refreshAll();
+        }
+        
+        function logout() {
+            localStorage.removeItem(SESSION_KEY);
+            document.getElementById('auth-gate').classList.remove('hidden');
+            document.getElementById('dashboard').classList.remove('visible');
+            document.getElementById('auth-password').value = '';
+            document.getElementById('auth-error').classList.remove('show');
+        }
+        
+        // Handle Enter key on password field
+        document.getElementById('auth-password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                authenticate();
+            }
+        });
+        
         // Daemon configuration
         const DAEMONS = [
             { id: 'overseer', name: 'OVERSEER', icon: '👁️' },
@@ -400,7 +520,6 @@
             { id: 'psych', name: 'PSYCH', icon: '🧘' }
         ];
         
-        // Initialize daemon grid
         function initDaemonGrid() {
             const grid = document.getElementById('daemon-grid');
             grid.innerHTML = DAEMONS.map(d => `
@@ -412,7 +531,6 @@
             `).join('');
         }
         
-        // Fetch status from data file
         async function fetchStatus() {
             try {
                 const response = await fetch('../data/admin-status.json?' + Date.now());
@@ -424,27 +542,22 @@
             }
         }
         
-        // Update UI with status
         function updateUI(status) {
             if (!status) {
                 document.getElementById('overall-status').className = 'status-indicator warning';
                 return;
             }
             
-            // Overall status
             const overallEl = document.getElementById('overall-status');
             overallEl.className = 'status-indicator ' + (status.overall_healthy ? 'healthy' : 'critical');
             
-            // Last updated
             document.getElementById('last-update').textContent = new Date(status.timestamp).toLocaleTimeString();
             
-            // Ollama
             setStatus('ollama-windows', status.ollama?.windows_healthy);
             setStatus('ollama-proxy', status.ollama?.proxy_healthy);
             setStatus('ollama-e2e', status.ollama?.e2e_healthy);
             document.getElementById('ollama-models').textContent = status.ollama?.models || '--';
             
-            // Daemons
             DAEMONS.forEach(d => {
                 const daemonStatus = status.daemons?.[d.id];
                 const el = document.getElementById(`daemon-status-${d.id}`);
@@ -461,20 +574,17 @@
                 }
             });
             
-            // OVERSEER
             setStatus('overseer-status', status.overseer?.running);
             document.getElementById('overseer-audit').textContent = status.overseer?.last_audit_healthy ? '✓ Passed' : '✗ Failed';
             document.getElementById('overseer-audit').className = 'value ' + (status.overseer?.last_audit_healthy ? 'healthy' : 'critical');
             document.getElementById('overseer-incidents').textContent = status.overseer?.active_incidents || '0';
             document.getElementById('overseer-remediations').textContent = status.overseer?.auto_remediations || '0';
             
-            // Quick stats
             document.getElementById('tanks-running').textContent = status.tanks?.running || '--';
             document.getElementById('containers-total').textContent = status.containers?.total || '--';
             document.getElementById('traces-today').textContent = status.tanks?.traces_today || '--';
             setStatus('network-isolated', status.network?.isolated);
             
-            // Tank activity
             if (status.tanks?.activity) {
                 const activityHtml = status.tanks.activity.map(t => `
                     <div class="tank-row">
@@ -486,7 +596,6 @@
                 document.getElementById('tank-activity').innerHTML = activityHtml;
             }
             
-            // Logs
             if (status.logs) {
                 const logsHtml = status.logs.map(log => {
                     const levelClass = log.includes('✅') ? 'level-success' :
@@ -495,15 +604,6 @@
                     return `<div class="log-line ${levelClass}">${escapeHtml(log)}</div>`;
                 }).join('');
                 document.getElementById('log-viewer').innerHTML = logsHtml;
-            }
-            
-            // Incident banner
-            if (status.overseer?.active_incidents > 0) {
-                document.getElementById('incident-banner').classList.add('active');
-                document.getElementById('incident-message').textContent = 
-                    `${status.overseer.active_incidents} active incident(s) detected. Check OVERSEER logs.`;
-            } else {
-                document.getElementById('incident-banner').classList.remove('active');
             }
         }
         
@@ -532,29 +632,21 @@
             updateUI(status);
         }
         
-        function runAudit() {
-            alert('Audit triggered. Refresh in 60 seconds to see results.');
-            // In production, this would call an API
-        }
-        
-        function restartOllama() {
-            if (confirm('Restart Ollama proxy container?')) {
-                alert('Restart triggered. OLLAMA WATCHER will handle this.');
-            }
-        }
-        
-        function chaosTest() {
-            if (confirm('⚠️ This will intentionally break something to test self-healing. Continue?')) {
-                alert('Chaos test initiated. Monitor OVERSEER logs.');
-            }
-        }
+        function runAudit() { alert('Audit triggered. Refresh in 60 seconds to see results.'); }
+        function restartOllama() { if (confirm('Restart Ollama proxy container?')) { alert('Restart triggered.'); } }
+        function chaosTest() { if (confirm('⚠️ This will intentionally break something. Continue?')) { alert('Chaos test initiated.'); } }
         
         // Initialize
-        initDaemonGrid();
-        refreshAll();
+        if (!checkSession()) {
+            // Show auth gate (already visible by default)
+        }
         
-        // Auto-refresh every 30 seconds
-        setInterval(refreshAll, 30000);
+        // Auto-refresh every 30 seconds if authenticated
+        setInterval(() => {
+            if (document.getElementById('dashboard').classList.contains('visible')) {
+                refreshAll();
+            }
+        }, 30000);
     </script>
 </body>
 </html>

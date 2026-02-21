@@ -2,3 +2,6 @@ from .utils import DaemonLogger, run_command, send_email_alert, write_pid_file, 
 
 # Escalation support (added 2026-02-21 post-incident)
 from .escalation import escalate_to_overseer, check_sla_breach
+
+# Daemon base class for single-instance locking
+from .daemon_base import DaemonBase
