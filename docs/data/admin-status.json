@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T05:30:01.728516",
+  "timestamp": "2026-02-22T05:32:02.047600",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -50,16 +50,16 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 26
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 6896,
+    "running": 18,
+    "traces_today": 6898,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Geological",
-        "traces": 1203
+        "article": "Geodesy",
+        "traces": 1204
       },
       {
         "name": "tank-02-eve",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Special relativity",
-        "traces": 2248
+        "article": "Principle of relativity",
+        "traces": 2249
       },
       {
         "name": "tank-05-juan",
