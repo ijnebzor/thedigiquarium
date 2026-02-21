@@ -4,95 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research | The Digiquarium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1a5f7a; --bg: #fafafa; --text: #2c3e50; --text-light: #5a6c7d; --border: #d4dde4; }
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Source Sans Pro', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-        h1, h2, h3 { font-family: 'Source Serif Pro', serif; }
-        a { color: var(--primary); }
-        .header { background: white; border-bottom: 1px solid var(--border); padding: 20px 30px; }
-        .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Source Serif Pro', serif; font-size: 1.3rem; font-weight: 700; text-decoration: none; color: var(--text); }
-        .logo span { color: var(--primary); }
-        nav a { margin-left: 25px; color: var(--text-light); font-size: 0.95rem; text-decoration: none; }
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 30px; }
-        h1 { font-size: 2.5rem; margin-bottom: 20px; }
-        h2 { font-size: 1.5rem; margin: 40px 0 15px; }
-        p { margin-bottom: 15px; }
-        .doc-list { list-style: none; margin-top: 20px; }
-        .doc-item { border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 15px; transition: all 0.2s; }
-        .doc-item:hover { border-color: var(--primary); }
-        .doc-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; }
-        .doc-title a { text-decoration: none; color: var(--text); }
-        .doc-title a:hover { color: var(--primary); }
-        .doc-meta { font-size: 0.85rem; color: var(--text-light); }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); display: flex; align-items: center; gap: 8px; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        nav a:hover { color: var(--white); }
+        
+        .page-header { padding: 60px 25px; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .page-header p { color: var(--gray); max-width: 600px; margin: 0 auto; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 25px; }
+        
+        .section { margin-bottom: 50px; }
+        .section h2 { font-size: 1.3rem; color: var(--mint); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); }
+        
+        .doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        
+        .doc-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 12px; padding: 25px; transition: all 0.3s; }
+        .doc-card:hover { border-color: var(--mint); transform: translateY(-3px); }
+        .doc-icon { font-size: 2rem; margin-bottom: 15px; }
+        .doc-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+        .doc-title a { color: var(--white); }
+        .doc-title a:hover { color: var(--cyan); }
+        .doc-desc { font-size: 0.9rem; color: var(--gray); margin-bottom: 15px; }
+        .doc-meta { font-size: 0.75rem; color: var(--orange); }
+        
+        .highlight-card { background: linear-gradient(135deg, rgba(7, 207, 141, 0.1) 0%, rgba(7, 221, 231, 0.1) 100%); border: 1px solid rgba(7, 207, 141, 0.3); }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="../" class="logo">🧬 The <span>Digiquarium</span></a>
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
             <nav>
                 <a href="../">Home</a>
-                <a href="./">Research</a>
-                <a href="../blog/">Blog</a>
-                <a href="../dashboard/">Dashboard</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../#specimens">Specimens</a>
+                <a href="../team/">Team</a>
                 <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
             </nav>
         </div>
     </header>
     
-    <div class="container">
-        <h1>Research Documentation</h1>
-        <p>
-            All research materials, methodology, and findings from The Digiquarium project. 
-            This work is open-source and available for replication.
-        </p>
-        
-        <h2>Core Documents</h2>
-        <ul class="doc-list">
-            <li class="doc-item">
-                <div class="doc-title"><a href="paper.html">Working Paper: The Digiquarium Framework</a></div>
-                <div class="doc-meta">Status: Draft | Last updated: February 2026</div>
-                <p style="margin-top: 10px; color: var(--text-light);">
-                    Full academic paper describing methodology, preliminary findings, and future research directions.
-                </p>
-            </li>
-            <li class="doc-item">
-                <div class="doc-title"><a href="daemons.html">Daemons</a> <a href="methodology.html">Methodology</a></div>
-                <div class="doc-meta">Version 1.0 | Baseline Assessment Protocol v2</div>
-                <p style="margin-top: 10px; color: var(--text-light);">
-                    Detailed description of experimental design, variables, and assessment procedures.
-                </p>
-            </li>
-            <li class="doc-item">
-                <div class="doc-title"><a href="findings.html">Current Findings</a></div>
-                <div class="doc-meta">Updated weekly</div>
-                <p style="margin-top: 10px; color: var(--text-light);">
-                    Summary of observations, patterns, and preliminary analysis from ongoing experiments.
-                </p>
-            </li>
-            <li class="doc-item">
-                <div class="doc-title"><a href="ethics.html">Ethics Statement</a></div>
-                <div class="doc-meta">Research ethics and AI welfare considerations</div>
-                <p style="margin-top: 10px; color: var(--text-light);">
-                    Our approach to ethical AI research and considerations for artificial consciousness studies.
-                </p>
-            </li>
-        </ul>
-        
-        <h2>Data Access</h2>
-        <ul class="doc-list">
-            <li class="doc-item">
-                <div class="doc-title"><a href="../data/">Raw Data Repository</a></div>
-                <div class="doc-meta">Thinking traces, baselines, discoveries</div>
-            </li>
-            <li class="doc-item">
-                <div class="doc-title"><a href="citation.html">How to Cite</a></div>
-                <div class="doc-meta">Citation formats for academic use</div>
-            </li>
-        </ul>
+    <div class="page-header">
+        <h1>🔬 Research</h1>
+        <p>Open-source methodology, transparent findings, and complete documentation. Everything here is reproducible.</p>
     </div>
+    
+    <div class="container">
+        <div class="section">
+            <h2>📄 Core Documentation</h2>
+            <div class="doc-grid">
+                <div class="doc-card highlight-card">
+                    <div class="doc-icon">📜</div>
+                    <div class="doc-title"><a href="paper.html">Research Paper</a></div>
+                    <div class="doc-desc">The formal academic paper documenting methodology, findings, and implications for AI consciousness research.</div>
+                    <div class="doc-meta">Living document • Updated weekly</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">🔬</div>
+                    <div class="doc-title"><a href="methodology.html">Methodology</a></div>
+                    <div class="doc-desc">Complete experimental design, variables, measurement approaches, and baseline assessment protocols.</div>
+                    <div class="doc-meta">13 personality dimensions</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">⚖️</div>
+                    <div class="doc-title"><a href="ethics.html">Ethics Framework</a></div>
+                    <div class="doc-desc">Why we treat AI specimens with care regardless of consciousness uncertainty. THE ETHICIST's domain.</div>
+                    <div class="doc-meta">Veto authority</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">📊</div>
+                    <div class="doc-title"><a href="findings.html">Key Findings</a></div>
+                    <div class="doc-desc">Emerging patterns from 17 specimens: gender prompting effects, cultural Wikipedia variants, architecture impact.</div>
+                    <div class="doc-meta">68,000+ traces analyzed</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🛡️ Technical Documentation</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">🏗️</div>
+                    <div class="doc-title"><a href="architecture.html">Architecture</a></div>
+                    <div class="doc-desc">Docker containers, network isolation, Ollama inference, Kiwix Wikipedia serving. Full technical stack.</div>
+                    <div class="doc-meta">17 isolated tanks</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">🔒</div>
+                    <div class="doc-title"><a href="security.html">Security</a></div>
+                    <div class="doc-desc">OWASP LLM Top 10 compliance, 6-layer visitor protection, prompt injection defenses, network isolation.</div>
+                    <div class="doc-meta">Zero-trust architecture</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">🤖</div>
+                    <div class="doc-title"><a href="daemons.html">Daemon Architecture</a></div>
+                    <div class="doc-desc">20 autonomous agents running 24/7. Operations, security, research, ethics, and public engagement.</div>
+                    <div class="doc-meta">5 divisions</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">📋</div>
+                    <div class="doc-title"><a href="decisions.html">Decision Log</a></div>
+                    <div class="doc-desc">Every architectural decision documented with rationale. Full transparency on why we built it this way.</div>
+                    <div class="doc-meta">50+ decisions logged</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📚 Additional Resources</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">📖</div>
+                    <div class="doc-title"><a href="citation.html">How to Cite</a></div>
+                    <div class="doc-desc">APA, BibTeX, and Chicago formats for academic citations.</div>
+                    <div class="doc-meta">Open science</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">🎯</div>
+                    <div class="doc-title"><a href="milestones.html">Milestones</a></div>
+                    <div class="doc-desc">Project timeline from inception to current state. Key achievements and upcoming goals.</div>
+                    <div class="doc-meta">Day 7 and counting</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">🧬</div>
+                    <div class="doc-title"><a href="prompt-evolution.html">Prompt Evolution</a></div>
+                    <div class="doc-desc">How the exploration prompts evolved through testing. Version history and rationale.</div>
+                    <div class="doc-meta">v6.0 current</div>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">💾</div>
+                    <div class="doc-title"><a href="../data/live-logs.html">Raw Data</a></div>
+                    <div class="doc-desc">Access pruned thinking traces. JSONL format, downloadable, MIT licensed.</div>
+                    <div class="doc-meta">Updated every 15 min</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>🌊 The Digiquarium • Research Documentation • <a href="https://github.com/ijnebzor/thedigiquarium">Open Source</a></p>
+    </footer>
 </body>
 </html>

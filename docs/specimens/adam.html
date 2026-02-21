@@ -113,7 +113,13 @@
                     <button class="mindmap-btn download-btn" onclick="downloadBrain()">⬇️ Download</button>
                 </div>
             </div>
-            <div id="mindmap"></div>
+            <div id="mindmap">
+                <div class="zoom-controls">
+                    <button class="zoom-btn" onclick="zoomIn()">+</button>
+                    <button class="zoom-btn" onclick="zoomOut()">−</button>
+                    <button class="zoom-btn" onclick="resetZoom()">⟲</button>
+                </div>
+            </div>
             <div class="time-slider-container">
                 <div class="time-slider-label">
                     <span><button class="play-btn" onclick="togglePlayback()">▶ Play</button>Watch the mind grow</span>
@@ -188,7 +194,25 @@
             if (!timeSeriesData || !availableDates[index]) return;
             const date = availableDates[index];
             document.getElementById('current-date').textContent = date;
+            
+            // Store previous positions for smooth transition
+            const prevPositions = {};
+            if (graphData && graphData.nodes) {
+                graphData.nodes.forEach(n => {
+                    if (n.x && n.y) prevPositions[n.id] = {x: n.x, y: n.y};
+                });
+            }
+            
             graphData = timeSeriesData[date];
+            
+            // Inherit positions from previous state for smooth transition
+            graphData.nodes.forEach(n => {
+                if (prevPositions[n.id]) {
+                    n.x = prevPositions[n.id].x;
+                    n.y = prevPositions[n.id].y;
+                }
+            });
+            
             renderGraph();
             
             const interests = graphData.nodes.slice(0, 12);
@@ -219,7 +243,10 @@
         
         function renderGraph() {
             const container = document.getElementById('mindmap');
+            // Preserve zoom controls
+            const zoomControls = container.querySelector('.zoom-controls');
             container.innerHTML = '';
+            if (zoomControls) container.appendChild(zoomControls);
             
             const width = container.clientWidth;
             const height = container.clientHeight;
@@ -230,13 +257,28 @@
             const colorScale = d3.scaleLinear().domain([0, maxVisits*0.3, maxVisits*0.6, maxVisits]).range(['#07DDE7', '#07CF8D', '#FE6500', '#FF8833']);
             const sizeScale = d3.scaleSqrt().domain([1, maxVisits]).range([4, 25]);
             
-            const link = svg.append('g').selectAll('line').data(graphData.links).join('line').attr('class', 'link').attr('stroke-width', d => Math.sqrt(d.weight || 1));
+            // Add zoom behavior
+            zoom = d3.zoom()
+                .scaleExtent([0.3, 5])
+                .on('zoom', (event) => {
+                    svg.select('g.graph-container').attr('transform', event.transform);
+                });
             
-            const node = svg.append('g').selectAll('g').data(graphData.nodes).join('g').attr('class', 'node')
+            svg.call(zoom);
+            
+            // Create a container for all graph elements
+            const graphContainer = svg.append('g').attr('class', 'graph-container');
+            
+            const link = graphContainer.append('g').selectAll('line').data(graphData.links).join('line').attr('class', 'link').attr('stroke-width', d => Math.sqrt(d.weight || 1));
+            
+            const node = graphContainer.append('g').selectAll('g').data(graphData.nodes).join('g').attr('class', 'node')
                 .call(d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended));
             
-            node.append('circle').attr('r', d => sizeScale(d.visits)).attr('fill', d => colorScale(d.visits))
-                .on('mouseover', showTooltip).on('mouseout', hideTooltip);
+            node.append('circle')
+                .attr('r', d => sizeScale(d.visits))
+                .attr('fill', d => colorScale(d.visits))
+                .on('mouseover', showTooltip)
+                .on('mouseout', hideTooltip);
             
             node.append('text').text(d => d.visits > 15 ? d.id : '').attr('dy', 3).attr('text-anchor', 'middle');
             
@@ -273,6 +315,40 @@
             const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'adam-brain-export.json'; a.click();
         }
         
+        
+        let currentZoom = 1;
+        let currentTransform = d3.zoomIdentity;
+        let zoom = null;
+        
+        function zoomIn() {
+            currentZoom = Math.min(currentZoom * 1.3, 5);
+            applyZoom();
+        }
+        
+        function zoomOut() {
+            currentZoom = Math.max(currentZoom / 1.3, 0.3);
+            applyZoom();
+        }
+        
+        function resetZoom() {
+            currentZoom = 1;
+            const svg = d3.select('#mindmap svg');
+            svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+        }
+        
+        function applyZoom() {
+            const svg = d3.select('#mindmap svg');
+            const width = document.getElementById('mindmap').clientWidth;
+            const height = document.getElementById('mindmap').clientHeight;
+            
+            const transform = d3.zoomIdentity
+                .translate(width/2, height/2)
+                .scale(currentZoom)
+                .translate(-width/2, -height/2);
+            
+            svg.transition().duration(300).call(zoom.transform, transform);
+        }
+
         loadData();
     </script>
 </body>
