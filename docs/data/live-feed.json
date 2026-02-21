@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-21T03:04:26.958227",
+  "generated_at": "2026-02-21T18:36:22.670206",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
@@ -11,10 +11,10 @@
     "description": "Null thoughts, timeouts, and junk data removed for clean display",
     "full_logs_contact": "research@digiquarium.org"
   },
-  "next_update": "2026-02-21 15:04",
+  "next_update": "2026-02-22 06:36",
   "period": {
-    "start": "2026-02-20 15:04",
-    "end": "2026-02-21 03:04",
+    "start": "2026-02-21 06:36",
+    "end": "2026-02-21 18:36",
     "hours": 12
   },
   "tanks": {
@@ -22,113 +22,42 @@
       "name": "Adam",
       "emoji": "\ud83d\udc64",
       "type": "Control",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:34",
-          "date": "2026-02-21",
-          "article": "Anxiety",
-          "thought": "Exploring Anxiety...",
-          "next": "Anger"
-        },
-        {
-          "time": "00:30",
-          "date": "2026-02-21",
-          "article": "Suffering",
-          "thought": "Exploring Suffering...",
-          "next": "Anxiety"
-        },
-        {
-          "time": "00:26",
-          "date": "2026-02-21",
-          "article": "Philosophy",
-          "thought": "Exploring Philosophy...",
-          "next": "Suffering"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Science",
-          "thought": "Exploring Science...",
-          "next": "Geology"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Geology",
-          "thought": "Exploring Geology...",
-          "next": "Mineral"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Mineral",
-          "thought": "Exploring Mineral...",
-          "next": "Chemical"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Fear",
-          "thought": "Exploring Fear...",
-          "next": "Evolution"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Evolution",
-          "thought": "Exploring Evolution...",
-          "next": "Photosynthesis"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Photosynthesis",
-          "thought": "Exploring Photosynthesis...",
-          "next": "Stomata"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Stomata",
-          "thought": "Exploring Stomata...",
-          "next": "Carbon dioxide"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
-          "topic": "Buddhism",
-          "visits": 64
-        },
-        {
           "topic": "Emotion",
-          "visits": 43
-        },
-        {
-          "topic": "Dukkha",
-          "visits": 25
+          "visits": 39
         },
         {
           "topic": "Angst",
-          "visits": 24
-        },
-        {
-          "topic": "Human",
-          "visits": 21
-        },
-        {
-          "topic": "Four Noble Truths",
           "visits": 18
         },
         {
-          "topic": "Language",
-          "visits": 15
+          "topic": "Human",
+          "visits": 13
         },
         {
-          "topic": "Jesus",
-          "visits": 15
+          "topic": "Thailand",
+          "visits": 10
+        },
+        {
+          "topic": "Judaism",
+          "visits": 9
+        },
+        {
+          "topic": "Ocean",
+          "visits": 9
+        },
+        {
+          "topic": "Language",
+          "visits": 8
+        },
+        {
+          "topic": "Akha people",
+          "visits": 8
         }
       ]
     },
@@ -136,81 +65,10 @@
       "name": "Eve",
       "emoji": "\ud83d\udc69",
       "type": "Control",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:34",
-          "date": "2026-02-21",
-          "article": "Geology",
-          "thought": "Exploring Geology...",
-          "next": "Continents"
-        },
-        {
-          "time": "00:30",
-          "date": "2026-02-21",
-          "article": "Theories",
-          "thought": "Exploring Theories...",
-          "next": "Geology"
-        },
-        {
-          "time": "00:26",
-          "date": "2026-02-21",
-          "article": "Science",
-          "thought": "Exploring Science...",
-          "next": "Theories"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Jeremy Rockliff",
-          "thought": "Exploring Jeremy Rockliff...",
-          "next": "Division of Braddon (state)"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Division of Braddon (state)",
-          "thought": "Exploring Division of Braddon (state)...",
-          "next": "States and territories of Australia"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "States and territories of Australia",
-          "thought": "Exploring States and territories of Australia...",
-          "next": "Queensland"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Music",
-          "thought": "Exploring Music...",
-          "next": "Singing"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Singing",
-          "thought": "Exploring Singing...",
-          "next": "Passerine"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Passerine",
-          "thought": "Exploring Passerine...",
-          "next": "Palestine sunbird"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Palestine sunbird",
-          "thought": "Exploring Palestine sunbird...",
-          "next": "South Africa"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "Book",
@@ -255,91 +113,99 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "02:57",
+          "time": "18:32",
           "date": "2026-02-21",
-          "article": "Atlantic Ocean",
-          "thought": "Exploring Atlantic Ocean...",
-          "next": "Arctic Ocean"
+          "article": "Solid",
+          "thought": "Exploring Solid...",
+          "next": "Force (physics)"
         },
         {
-          "time": "02:53",
+          "time": "18:28",
           "date": "2026-02-21",
-          "article": "World Ocean",
-          "thought": "Exploring World Ocean...",
-          "next": "Atlantic Ocean"
+          "article": "Gas",
+          "thought": "Exploring Gas...",
+          "next": "Solid"
         },
         {
-          "time": "02:49",
+          "time": "18:24",
           "date": "2026-02-21",
-          "article": "Sea",
-          "thought": "Exploring Sea...",
-          "next": "World Ocean"
+          "article": "Solid",
+          "thought": "Exploring Solid...",
+          "next": "Gas"
         },
         {
-          "time": "02:45",
+          "time": "18:20",
           "date": "2026-02-21",
-          "article": "Geography",
-          "thought": "Exploring Geography...",
-          "next": "Sea"
+          "article": "Water",
+          "thought": "Exploring Water...",
+          "next": "Solid"
         },
         {
-          "time": "02:41",
+          "time": "18:16",
           "date": "2026-02-21",
-          "article": "1st century",
-          "thought": "Exploring 1st century...",
-          "next": "1st century BC#Events"
+          "article": "Body of water",
+          "thought": "Exploring Body of water...",
+          "next": "Water"
         },
         {
-          "time": "02:37",
+          "time": "18:12",
           "date": "2026-02-21",
-          "article": "51",
-          "thought": "Exploring 51...",
-          "next": "1st century"
+          "article": "Land",
+          "thought": "Exploring Land...",
+          "next": "Body of water"
         },
         {
-          "time": "02:33",
+          "time": "18:08",
           "date": "2026-02-21",
-          "article": "51 (number)",
-          "thought": "Exploring 51 (number)...",
-          "next": "51"
+          "article": "Continent",
+          "thought": "Exploring Continent...",
+          "next": "Land"
         },
         {
-          "time": "02:29",
+          "time": "18:03",
           "date": "2026-02-21",
-          "article": "50 (number)",
-          "thought": "Exploring 50 (number)...",
-          "next": "51 (number)"
+          "article": "Supercontinent",
+          "thought": "Exploring Supercontinent...",
+          "next": "Continent"
         },
         {
-          "time": "02:25",
+          "time": "17:59",
           "date": "2026-02-21",
-          "article": "49 (number)",
-          "thought": "Exploring 49 (number)...",
-          "next": "50 (number)"
+          "article": "Mesoproterozoic",
+          "thought": "Exploring Mesoproterozoic...",
+          "next": "Supercontinent"
         },
         {
-          "time": "02:21",
+          "time": "17:55",
           "date": "2026-02-21",
-          "article": "59 (number)",
-          "thought": "Exploring 59 (number)...",
-          "next": "49 (number)"
+          "article": "Plant",
+          "thought": "Exploring Plant...",
+          "next": "Mesoproterozoic"
         }
       ],
       "top_topics": [
         {
+          "topic": "Atom",
+          "visits": 12
+        },
+        {
           "topic": "Physics",
+          "visits": 9
+        },
+        {
+          "topic": "Definition",
+          "visits": 8
+        },
+        {
+          "topic": "Chemistry",
           "visits": 7
         },
         {
           "topic": "Science",
-          "visits": 6
+          "visits": 7
         },
         {
-          "topic": "Chemistry",
-          "visits": 6
-        },
-        {
-          "topic": "Atom",
+          "topic": "Continent",
           "visits": 6
         },
         {
@@ -347,16 +213,8 @@
           "visits": 6
         },
         {
-          "topic": "-1 (number)",
+          "topic": "Earth",
           "visits": 5
-        },
-        {
-          "topic": "Art",
-          "visits": 4
-        },
-        {
-          "topic": "Continent",
-          "visits": 4
         }
       ]
     },
@@ -374,81 +232,10 @@
       "name": "Juan",
       "emoji": "\ud83c\uddea\ud83c\uddf8",
       "type": "Spanish",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:34",
-          "date": "2026-02-21",
-          "article": "Cambio en la cultura",
-          "thought": "Exploring Cambio en la cultura...",
-          "next": "Control de autoridades"
-        },
-        {
-          "time": "00:30",
-          "date": "2026-02-21",
-          "article": "Cultura",
-          "thought": "Exploring Cultura...",
-          "next": "Cambio en la cultura"
-        },
-        {
-          "time": "00:26",
-          "date": "2026-02-21",
-          "article": "Arte",
-          "thought": "Exploring Arte...",
-          "next": "Cultura"
-        },
-        {
-          "time": "18:15",
-          "date": "2026-02-20",
-          "article": "Alfred North Whitehead",
-          "thought": "Exploring Alfred North Whitehead...",
-          "next": "Trinity College (Cambridge)"
-        },
-        {
-          "time": "18:11",
-          "date": "2026-02-20",
-          "article": "Bertrand Russell",
-          "thought": "Exploring Bertrand Russell...",
-          "next": "Alfred North Whitehead"
-        },
-        {
-          "time": "18:07",
-          "date": "2026-02-20",
-          "article": "Filosof\u00eda",
-          "thought": "Exploring Filosof\u00eda...",
-          "next": "Bertrand Russell"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Ciencia",
-          "thought": "Exploring Ciencia...",
-          "next": "Hidr\u00f3geno"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Historia",
-          "thought": "Exploring Historia...",
-          "next": "Griego antiguo"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Psicolog\u00eda",
-          "thought": "Exploring Psicolog\u00eda...",
-          "next": "John B. Watson"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "John B. Watson",
-          "thought": "Exploring John B. Watson...",
-          "next": "Psic\u00f3logo"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "Arte",
@@ -488,81 +275,10 @@
       "name": "Juanita",
       "emoji": "\ud83c\uddea\ud83c\uddf8",
       "type": "Spanish",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "M\u00fasica",
-          "thought": "Exploring M\u00fasica...",
-          "next": "Manifestaci\u00f3n"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "Filosof\u00eda",
-          "thought": "Exploring Filosof\u00eda...",
-          "next": "Significado (filosof\u00eda)"
-        },
-        {
-          "time": "00:26",
-          "date": "2026-02-21",
-          "article": "Arte",
-          "thought": "Exploring Arte...",
-          "next": "Artes pl\u00e1sticas"
-        },
-        {
-          "time": "18:15",
-          "date": "2026-02-20",
-          "article": "Filosof\u00eda",
-          "thought": "Exploring Filosof\u00eda...",
-          "next": "L\u00f3gica"
-        },
-        {
-          "time": "18:11",
-          "date": "2026-02-20",
-          "article": "Ciencia",
-          "thought": "Exploring Ciencia...",
-          "next": "Econom\u00eda"
-        },
-        {
-          "time": "18:07",
-          "date": "2026-02-20",
-          "article": "Ciencia",
-          "thought": "Exploring Ciencia...",
-          "next": "V\u00eda L\u00e1ctea"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Eustigmista",
-          "thought": "Exploring Eustigmista...",
-          "next": "Ochrophyta"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Ochrophyta",
-          "thought": "Exploring Ochrophyta...",
-          "next": "Diatomista"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Diatomista",
-          "thought": "Exploring Diatomista...",
-          "next": "Ochrophyta"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "M\u00fasica",
-          "thought": "Exploring M\u00fasica...",
-          "next": "Sentimiento"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "M\u00fasica",
@@ -602,81 +318,10 @@
       "name": "Klaus",
       "emoji": "\ud83c\udde9\ud83c\uddea",
       "type": "German",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "Hypothese",
-          "thought": "Exploring Hypothese...",
-          "next": "Pr\u00fcfen"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "Experiment",
-          "thought": "Exploring Experiment...",
-          "next": "Hypothese"
-        },
-        {
-          "time": "00:27",
-          "date": "2026-02-21",
-          "article": "Psychologie",
-          "thought": "Exploring Psychologie...",
-          "next": "Experiment"
-        },
-        {
-          "time": "18:15",
-          "date": "2026-02-20",
-          "article": "Fertigkeit",
-          "thought": "Exploring Fertigkeit...",
-          "next": "Althochdeutsche Sprache"
-        },
-        {
-          "time": "18:11",
-          "date": "2026-02-20",
-          "article": "Technik",
-          "thought": "Exploring Technik...",
-          "next": "Fertigkeit"
-        },
-        {
-          "time": "18:07",
-          "date": "2026-02-20",
-          "article": "Wissenschaft",
-          "thought": "Exploring Wissenschaft...",
-          "next": "Technik"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "1830er",
-          "thought": "Exploring 1830er...",
-          "next": "1831"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "1831",
-          "thought": "Exploring 1831...",
-          "next": "1826"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "1826",
-          "thought": "Exploring 1826...",
-          "next": "Jahreskalender"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Wissenschaft",
-          "thought": "Exploring Wissenschaft...",
-          "next": "Wissenschaftstheorie"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "Biologie",
@@ -716,81 +361,10 @@
       "name": "Genevieve",
       "emoji": "\ud83c\udde9\ud83c\uddea",
       "type": "German",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "Familie",
-          "thought": "Exploring Familie...",
-          "next": "Eingetragene Partnerschaft"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "Sozialer Wandel",
-          "thought": "Exploring Sozialer Wandel...",
-          "next": "Familie"
-        },
-        {
-          "time": "00:27",
-          "date": "2026-02-21",
-          "article": "Geschichte",
-          "thought": "Exploring Geschichte...",
-          "next": "Sozialer Wandel"
-        },
-        {
-          "time": "18:15",
-          "date": "2026-02-20",
-          "article": "Erkenntnistheorie",
-          "thought": "Exploring Erkenntnistheorie...",
-          "next": "-logie"
-        },
-        {
-          "time": "18:11",
-          "date": "2026-02-20",
-          "article": "Wissenschaftstheorie",
-          "thought": "Exploring Wissenschaftstheorie...",
-          "next": "Erkenntnistheorie"
-        },
-        {
-          "time": "18:07",
-          "date": "2026-02-20",
-          "article": "Philosophie",
-          "thought": "Exploring Philosophie...",
-          "next": "Wissenschaftstheorie"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Present Perfect Progressive",
-          "thought": "Exploring Present Perfect Progressive...",
-          "next": "Wort"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Wort",
-          "thought": "Exploring Wort...",
-          "next": "Deutsches W\u00f6rterbuch"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Musik",
-          "thought": "Exploring Musik...",
-          "next": "Metrum (Musik)"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Metrum (Musik)",
-          "thought": "Exploring Metrum (Musik)...",
-          "next": "Phrase (Musik)"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "Philosophie",
@@ -830,81 +404,10 @@
       "name": "Wei",
       "emoji": "\ud83c\udde8\ud83c\uddf3",
       "type": "Chinese",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "\u5fc3\u7406\u5b66",
-          "thought": "Exploring \u5fc3\u7406\u5b66...",
-          "next": "\u61c9\u7528\u884c\u70ba\u5206\u6790"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "\u54f2\u5b66",
-          "thought": "Exploring \u54f2\u5b66...",
-          "next": "\u8ba4\u8bc6\u8bba"
-        },
-        {
-          "time": "00:27",
-          "date": "2026-02-21",
-          "article": "\u6570\u5b66",
-          "thought": "Exploring \u6570\u5b66...",
-          "next": "\u6982\u7387"
-        },
-        {
-          "time": "18:15",
-          "date": "2026-02-20",
-          "article": "\u751f\u7269\u5b66",
-          "thought": "Exploring \u751f\u7269\u5b66...",
-          "next": "\u9032\u5316"
-        },
-        {
-          "time": "18:11",
-          "date": "2026-02-20",
-          "article": "\u5386\u53f2",
-          "thought": "Exploring \u5386\u53f2...",
-          "next": "\u9752\u94dc\u65f6\u4ee3"
-        },
-        {
-          "time": "18:07",
-          "date": "2026-02-20",
-          "article": "\u6570\u5b66",
-          "thought": "Exploring \u6570\u5b66...",
-          "next": "\u7edf\u8ba1\u5b66"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "\u6570\u5b66",
-          "thought": "Exploring \u6570\u5b66...",
-          "next": "\u51e0\u4f55\u5b66"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "\u54f2\u5b66",
-          "thought": "Exploring \u54f2\u5b66...",
-          "next": "\u53e4\u5178\u54f2\u5b66"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u5386\u53f2",
-          "thought": "Exploring \u5386\u53f2...",
-          "next": "\u4e2d\u53e4\u53f2"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u54f2\u5b66",
-          "thought": "Exploring \u54f2\u5b66...",
-          "next": "\u8ba4\u8bc6\u8bba"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "\u54f2\u5b66",
@@ -944,81 +447,10 @@
       "name": "Mei",
       "emoji": "\ud83c\udde8\ud83c\uddf3",
       "type": "Chinese",
-      "status": "active",
-      "traces_12h": 18,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "\u79d1\u5b66",
-          "thought": "Exploring \u79d1\u5b66...",
-          "next": "\u79d1\u5b78 (\u6d88\u6b67\u7fa9)"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "\u5386\u53f2",
-          "thought": "Exploring \u5386\u53f2...",
-          "next": "\u516c\u5143"
-        },
-        {
-          "time": "00:27",
-          "date": "2026-02-21",
-          "article": "\u751f\u7269\u5b66",
-          "thought": "Exploring \u751f\u7269\u5b66...",
-          "next": "\u81ea\u7136\u79d1\u5b78"
-        },
-        {
-          "time": "18:16",
-          "date": "2026-02-20",
-          "article": "\u6570\u5b66",
-          "thought": "Exploring \u6570\u5b66...",
-          "next": "\u5fae\u79ef\u5206\u5b66"
-        },
-        {
-          "time": "18:11",
-          "date": "2026-02-20",
-          "article": "\u827a\u672f",
-          "thought": "Exploring \u827a\u672f...",
-          "next": "\u610f\u8b58\u5f62\u614b"
-        },
-        {
-          "time": "18:07",
-          "date": "2026-02-20",
-          "article": "\u97f3\u4e50",
-          "thought": "Exploring \u97f3\u4e50...",
-          "next": "\u8a31\u614e"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "\u5fc3\u7406\u5b66",
-          "thought": "Exploring \u5fc3\u7406\u5b66...",
-          "next": "\u751f\u7269\u5fc3\u7406\u5b66"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u6570\u5b66",
-          "thought": "Exploring \u6570\u5b66...",
-          "next": "\u8ba1\u7b97\u8bed\u8a00\u5b66"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u5386\u53f2",
-          "thought": "Exploring \u5386\u53f2...",
-          "next": "\u57fa\u7763\u7eaa\u5e74"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u827a\u672f",
-          "thought": "Exploring \u827a\u672f...",
-          "next": "\u897f\u73ed\u7259\u8a9e"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "\u5fc3\u7406\u5b66",
@@ -1058,81 +490,10 @@
       "name": "Haruki",
       "emoji": "\ud83c\uddef\ud83c\uddf5",
       "type": "Japanese",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "\u6b74\u53f2",
-          "thought": "Exploring \u6b74\u53f2...",
-          "next": "\u4e09\u56fd\u5fd7"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "\u97f3\u697d",
-          "thought": "Exploring \u97f3\u697d...",
-          "next": "\u5e83\u8f9e\u82d1"
-        },
-        {
-          "time": "00:27",
-          "date": "2026-02-21",
-          "article": "\u5fc3\u7406\u5b66",
-          "thought": "Exploring \u5fc3\u7406\u5b66...",
-          "next": "\u8a8d\u77e5\u5fc3\u7406\u5b66"
-        },
-        {
-          "time": "18:16",
-          "date": "2026-02-20",
-          "article": "\u6570\u5b66",
-          "thought": "Exploring \u6570\u5b66...",
-          "next": "\u62bd\u8c61\u6982\u5ff5"
-        },
-        {
-          "time": "18:11",
-          "date": "2026-02-20",
-          "article": "\u6b74\u53f2",
-          "thought": "Exploring \u6b74\u53f2...",
-          "next": "\u8881\u9ec4"
-        },
-        {
-          "time": "18:07",
-          "date": "2026-02-20",
-          "article": "\u54f2\u5b66",
-          "thought": "Exploring \u54f2\u5b66...",
-          "next": "\u53e4\u4ee3\u30ae\u30ea\u30b7\u30a2\u8a9e"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "\u5fc3\u7406\u5b66",
-          "thought": "Exploring \u5fc3\u7406\u5b66...",
-          "next": "\u6df1\u5c64\u5fc3\u7406\u5b66"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u6b74\u53f2",
-          "thought": "Exploring \u6b74\u53f2...",
-          "next": "\u79d1\u5b66"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u751f\u7269\u5b66",
-          "thought": "Exploring \u751f\u7269\u5b66...",
-          "next": "\u5206\u5e03 (\u751f\u7269)"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u79d1\u5b66",
-          "thought": "Exploring \u79d1\u5b66...",
-          "next": "\u81ea\u7136\u79d1\u5b66"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "\u6570\u5b66",
@@ -1172,81 +533,10 @@
       "name": "Sakura",
       "emoji": "\ud83c\uddef\ud83c\uddf5",
       "type": "Japanese",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "\u79d1\u5b66",
-          "thought": "Exploring \u79d1\u5b66...",
-          "next": "\u5f62\u5f0f\u79d1\u5b66"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "\u82b8\u8853",
-          "thought": "Exploring \u82b8\u8853...",
-          "next": "\u8a00\u8a9e\u82b8\u8853"
-        },
-        {
-          "time": "00:27",
-          "date": "2026-02-21",
-          "article": "\u54f2\u5b66",
-          "thought": "Exploring \u54f2\u5b66...",
-          "next": "\u653f\u6cbb\u54f2\u5b66"
-        },
-        {
-          "time": "18:16",
-          "date": "2026-02-20",
-          "article": "\u79d1\u5b66",
-          "thought": "Exploring \u79d1\u5b66...",
-          "next": "\u5f62\u5f0f\u79d1\u5b66"
-        },
-        {
-          "time": "18:12",
-          "date": "2026-02-20",
-          "article": "\u54f2\u5b66",
-          "thought": "Exploring \u54f2\u5b66...",
-          "next": "\u7f8e\u5b66"
-        },
-        {
-          "time": "18:07",
-          "date": "2026-02-20",
-          "article": "\u97f3\u697d",
-          "thought": "Exploring \u97f3\u697d...",
-          "next": "\u5357\u30a2\u30d5\u30ea\u30ab\u306e\u97f3\u697d"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "\u79d1\u5b66",
-          "thought": "Exploring \u79d1\u5b66...",
-          "next": "\u793e\u4f1a\u79d1\u5b66"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u82b8\u8853",
-          "thought": "Exploring \u82b8\u8853...",
-          "next": "\u6620\u753b"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u54f2\u5b66",
-          "thought": "Exploring \u54f2\u5b66...",
-          "next": "\u30b9\u30b3\u30e9\u5b66"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "\u54f2\u5b66",
-          "thought": "Exploring \u54f2\u5b66...",
-          "next": "\u5206\u6790\u54f2\u5b66"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "\u82b8\u8853",
@@ -1286,81 +576,10 @@
       "name": "Victor",
       "emoji": "\ud83d\udc41\ufe0f",
       "type": "Visual",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "Mechanics",
-          "thought": "Exploring Mechanics...",
-          "next": "Aristotle"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "Physics",
-          "thought": "Exploring Physics...",
-          "next": "Mechanics"
-        },
-        {
-          "time": "00:27",
-          "date": "2026-02-21",
-          "article": "Science",
-          "thought": "Exploring Science...",
-          "next": "Physics"
-        },
-        {
-          "time": "15:54",
-          "date": "2026-02-20",
-          "article": "Payment",
-          "thought": "Exploring Payment...",
-          "next": "Law"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Atom",
-          "thought": "Exploring Atom...",
-          "next": "Atom (feed)"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Atom (feed)",
-          "thought": "Exploring Atom (feed)...",
-          "next": "HTTP"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "HTTP",
-          "thought": "Exploring HTTP...",
-          "next": "Payment"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Resolution",
-          "thought": "Exploring Resolution...",
-          "next": "Bertolt Brecht"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Bertolt Brecht",
-          "thought": "Exploring Bertolt Brecht...",
-          "next": "Prague"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Prague",
-          "thought": "Exploring Prague...",
-          "next": "Wallenstein Palace"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "Flag",
@@ -1400,81 +619,10 @@
       "name": "Iris",
       "emoji": "\ud83d\udc41\ufe0f",
       "type": "Visual",
-      "status": "active",
-      "traces_12h": 20,
+      "status": "quiet",
+      "traces_12h": 0,
       "latest_baseline": null,
-      "recent_thoughts": [
-        {
-          "time": "00:35",
-          "date": "2026-02-21",
-          "article": "News",
-          "thought": "Exploring News...",
-          "next": "Government"
-        },
-        {
-          "time": "00:31",
-          "date": "2026-02-21",
-          "article": "Newspaper",
-          "thought": "Exploring Newspaper...",
-          "next": "News"
-        },
-        {
-          "time": "00:27",
-          "date": "2026-02-21",
-          "article": "History",
-          "thought": "Exploring History...",
-          "next": "Newspaper"
-        },
-        {
-          "time": "15:54",
-          "date": "2026-02-20",
-          "article": "Debit card",
-          "thought": "Exploring Debit card...",
-          "next": "Plastic"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Credit",
-          "thought": "Exploring Credit...",
-          "next": "Credit card"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Credit card",
-          "thought": "Exploring Credit card...",
-          "next": "Payment"
-        },
-        {
-          "time": "15:50",
-          "date": "2026-02-20",
-          "article": "Payment",
-          "thought": "Exploring Payment...",
-          "next": "Debit card"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Oil",
-          "thought": "Exploring Oil...",
-          "next": "Vegetable oil"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Vegetable oil",
-          "thought": "Exploring Vegetable oil...",
-          "next": "Plant"
-        },
-        {
-          "time": "15:49",
-          "date": "2026-02-20",
-          "article": "Plant",
-          "thought": "Exploring Plant...",
-          "next": "Moss"
-        }
-      ],
+      "recent_thoughts": [],
       "top_topics": [
         {
           "topic": "Plant",
@@ -1519,108 +667,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "03:01",
+          "time": "18:30",
           "date": "2026-02-21",
-          "article": "Earth science",
-          "thought": "Exploring Earth science...",
-          "next": "Planetary science"
+          "article": "Art",
+          "thought": "Exploring Art...",
+          "next": "Emotion"
         },
         {
-          "time": "02:57",
+          "time": "18:26",
           "date": "2026-02-21",
-          "article": "Cryogenian",
-          "thought": "Exploring Cryogenian...",
-          "next": "Earth science"
+          "article": "Canary Wharf",
+          "thought": "Exploring Canary Wharf...",
+          "next": "geo:51.50401465173,-0.020283652221094"
         },
         {
-          "time": "02:53",
+          "time": "18:22",
           "date": "2026-02-21",
-          "article": "Animal",
-          "thought": "Exploring Animal...",
-          "next": "Cryogenian"
+          "article": "London",
+          "thought": "Exploring London...",
+          "next": "Canary Wharf"
         },
         {
-          "time": "02:49",
+          "time": "18:18",
           "date": "2026-02-21",
-          "article": "Olfaction",
-          "thought": "Exploring Olfaction...",
-          "next": "Animal"
+          "article": "Trafalgar Square",
+          "thought": "Exploring Trafalgar Square...",
+          "next": "London"
         },
         {
-          "time": "02:45",
+          "time": "18:14",
           "date": "2026-02-21",
-          "article": "Face",
-          "thought": "Exploring Face...",
-          "next": "Olfaction"
+          "article": "London",
+          "thought": "Exploring London...",
+          "next": "Trafalgar Square"
         },
         {
-          "time": "02:41",
+          "time": "18:10",
           "date": "2026-02-21",
-          "article": "Mouth",
-          "thought": "Exploring Mouth...",
-          "next": "Face"
+          "article": "Mile",
+          "thought": "Exploring Mile...",
+          "next": "London"
         },
         {
-          "time": "02:37",
+          "time": "18:06",
           "date": "2026-02-21",
-          "article": "Word",
-          "thought": "Exploring Word...",
-          "next": "Mouth"
+          "article": "Eye (cyclone)",
+          "thought": "Exploring Eye (cyclone)...",
+          "next": "Mile"
         },
         {
-          "time": "02:33",
+          "time": "18:02",
           "date": "2026-02-21",
-          "article": "Definition",
-          "thought": "Exploring Definition...",
-          "next": "Word"
+          "article": "Eye",
+          "thought": "Exploring Eye...",
+          "next": "Eye (cyclone)"
         },
         {
-          "time": "02:29",
+          "time": "17:58",
           "date": "2026-02-21",
-          "article": "Text",
-          "thought": "Exploring Text...",
-          "next": "Definition"
+          "article": "Orbit",
+          "thought": "Exploring Orbit...",
+          "next": "Eye"
         },
         {
-          "time": "02:25",
+          "time": "17:53",
           "date": "2026-02-21",
-          "article": "Write",
-          "thought": "Exploring Write...",
-          "next": "Text"
+          "article": "Year",
+          "thought": "Exploring Year...",
+          "next": "Orbit"
         }
       ],
       "top_topics": [
         {
+          "topic": "Animal",
+          "visits": 9
+        },
+        {
           "topic": "Definition",
           "visits": 8
+        },
+        {
+          "topic": "Ancient Greek",
+          "visits": 6
         },
         {
           "topic": "Earth",
           "visits": 6
         },
         {
-          "topic": "Animal",
-          "visits": 5
-        },
-        {
-          "topic": "Physics",
-          "visits": 5
-        },
-        {
-          "topic": "Science",
-          "visits": 5
-        },
-        {
           "topic": "Language",
-          "visits": 4
+          "visits": 5
+        },
+        {
+          "topic": "Eukaryote",
+          "visits": 5
+        },
+        {
+          "topic": "Parthenon",
+          "visits": 5
         },
         {
           "topic": "Mathematics",
-          "visits": 4
-        },
-        {
-          "topic": "Mass",
-          "visits": 4
+          "visits": 5
         }
       ]
     },
@@ -1633,79 +781,83 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "03:01",
+          "time": "18:34",
           "date": "2026-02-21",
-          "article": "Equestrian",
-          "thought": "Exploring Equestrian...",
-          "next": "Track and field athletics"
+          "article": "Set theory",
+          "thought": "Exploring Set theory...",
+          "next": "Bertrand Russell"
         },
         {
-          "time": "02:57",
+          "time": "18:30",
           "date": "2026-02-21",
-          "article": "Saddle",
-          "thought": "Exploring Saddle...",
-          "next": "Equestrian"
+          "article": "Object",
+          "thought": "Exploring Object...",
+          "next": "Set theory"
         },
         {
-          "time": "02:53",
+          "time": "18:26",
           "date": "2026-02-21",
-          "article": "Girth (tack)",
-          "thought": "Exploring Girth (tack)...",
-          "next": "Saddle"
+          "article": "Symbol",
+          "thought": "Exploring Symbol...",
+          "next": "Object"
         },
         {
-          "time": "02:49",
+          "time": "18:22",
           "date": "2026-02-21",
-          "article": "Girth",
-          "thought": "Exploring Girth...",
-          "next": "Girth (tack)"
+          "article": "National flag",
+          "thought": "Exploring National flag...",
+          "next": "Symbol"
         },
         {
-          "time": "02:45",
+          "time": "18:18",
           "date": "2026-02-21",
-          "article": "Drawing (manufacturing)",
-          "thought": "Exploring Drawing (manufacturing)...",
-          "next": "Girth"
+          "article": "National anthem",
+          "thought": "Exploring National anthem...",
+          "next": "National flag"
         },
         {
-          "time": "02:41",
+          "time": "18:14",
           "date": "2026-02-21",
-          "article": "Drawing",
-          "thought": "Exploring Drawing...",
-          "next": "Drawing (manufacturing)"
+          "article": "Royal anthem",
+          "thought": "Exploring Royal anthem...",
+          "next": "National anthem"
         },
         {
-          "time": "02:37",
+          "time": "18:10",
           "date": "2026-02-21",
-          "article": "Logo",
-          "thought": "Exploring Logo...",
-          "next": "Drawing"
+          "article": "Canada",
+          "thought": "Exploring Canada...",
+          "next": "Royal anthem"
         },
         {
-          "time": "02:33",
+          "time": "18:06",
           "date": "2026-02-21",
-          "article": "Trademark",
-          "thought": "Exploring Trademark...",
-          "next": "Logo"
+          "article": "English language",
+          "thought": "Exploring English language...",
+          "next": "Canada"
         },
         {
-          "time": "02:29",
+          "time": "18:02",
           "date": "2026-02-21",
-          "article": "Label",
-          "thought": "Exploring Label...",
-          "next": "Trademark"
+          "article": "Phrase",
+          "thought": "Exploring Phrase...",
+          "next": "English language"
         },
         {
-          "time": "02:25",
+          "time": "17:58",
           "date": "2026-02-21",
-          "article": "Concepts",
-          "thought": "Exploring Concepts...",
-          "next": "Label"
+          "article": "Code",
+          "thought": "Exploring Code...",
+          "next": "Phrase"
         }
       ],
       "top_topics": [
         {
           "topic": "Emotion",
+          "visits": 11
+        },
+        {
+          "topic": "Atom",
           "visits": 9
         },
         {
@@ -1713,28 +865,24 @@
           "visits": 7
         },
         {
-          "topic": "Atom",
-          "visits": 7
-        },
-        {
           "topic": "Number",
+          "visits": 6
+        },
+        {
+          "topic": "Earth",
+          "visits": 6
+        },
+        {
+          "topic": "Acceptance",
+          "visits": 6
+        },
+        {
+          "topic": "United States",
           "visits": 5
         },
         {
-          "topic": "Anxiety",
+          "topic": "Continent",
           "visits": 5
-        },
-        {
-          "topic": "Communication",
-          "visits": 5
-        },
-        {
-          "topic": "Angst",
-          "visits": 4
-        },
-        {
-          "topic": "Anguish",
-          "visits": 4
         }
       ]
     },
@@ -1747,108 +895,108 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "03:02",
+          "time": "18:33",
           "date": "2026-02-21",
-          "article": "Toy",
-          "thought": "Exploring Toy...",
-          "next": "Animal"
+          "article": "United States Declaration of Independence",
+          "thought": "Exploring United States Declaration of Independence...",
+          "next": "Second Continental Congress"
         },
         {
-          "time": "02:58",
+          "time": "18:30",
           "date": "2026-02-21",
-          "article": "Donation",
-          "thought": "Exploring Donation...",
-          "next": "Toy"
+          "article": "US states",
+          "thought": "Exploring US states...",
+          "next": "United States Declaration of Independence"
         },
         {
-          "time": "02:55",
+          "time": "18:27",
           "date": "2026-02-21",
-          "article": "Charitable organization",
-          "thought": "Exploring Charitable organization...",
-          "next": "Donation"
+          "article": "Commerce",
+          "thought": "Exploring Commerce...",
+          "next": "US states"
         },
         {
-          "time": "02:52",
+          "time": "18:24",
           "date": "2026-02-21",
-          "article": "Oxford University Press",
-          "thought": "Exploring Oxford University Press...",
-          "next": "Charitable organization"
+          "article": "Sales",
+          "thought": "Exploring Sales...",
+          "next": "Commerce"
         },
         {
-          "time": "02:49",
+          "time": "18:21",
           "date": "2026-02-21",
-          "article": "Publication",
-          "thought": "Exploring Publication...",
-          "next": "Oxford University Press"
+          "article": "Businesses",
+          "thought": "Exploring Businesses...",
+          "next": "Sales"
         },
         {
-          "time": "02:46",
+          "time": "18:18",
           "date": "2026-02-21",
-          "article": "Ethnologue",
-          "thought": "Exploring Ethnologue...",
-          "next": "Publication"
+          "article": "Internet",
+          "thought": "Exploring Internet...",
+          "next": "Businesses"
         },
         {
-          "time": "02:43",
+          "time": "18:15",
           "date": "2026-02-21",
-          "article": "Language family",
-          "thought": "Exploring Language family...",
-          "next": "Ethnologue"
+          "article": "Doi (identifier)",
+          "thought": "Exploring Doi (identifier)...",
+          "next": "Internet"
         },
         {
-          "time": "02:40",
+          "time": "18:12",
           "date": "2026-02-21",
-          "article": "Czech language",
-          "thought": "Exploring Czech language...",
-          "next": "Language family"
+          "article": "Fear",
+          "thought": "Exploring Fear...",
+          "next": "Doi (identifier)"
         },
         {
-          "time": "02:37",
+          "time": "18:09",
           "date": "2026-02-21",
-          "article": "European Union",
-          "thought": "Exploring European Union...",
-          "next": "Czech language"
+          "article": "Horror movie",
+          "thought": "Exploring Horror movie...",
+          "next": "Fear"
         },
         {
-          "time": "02:34",
+          "time": "18:06",
           "date": "2026-02-21",
-          "article": "Greek language",
-          "thought": "Exploring Greek language...",
-          "next": "European Union"
+          "article": "Filmmaking",
+          "thought": "Exploring Filmmaking...",
+          "next": "Horror movie"
         }
       ],
       "top_topics": [
         {
           "topic": "Definition",
-          "visits": 4
+          "visits": 5
+        },
+        {
+          "topic": "Music",
+          "visits": 5
+        },
+        {
+          "topic": "Mathematics",
+          "visits": 5
+        },
+        {
+          "topic": "Biology",
+          "visits": 5
         },
         {
           "topic": "Science",
-          "visits": 3
+          "visits": 5
         },
         {
-          "topic": "Europe",
-          "visits": 3
+          "topic": "Animal",
+          "visits": 4
         },
         {
-          "topic": "Language",
-          "visits": 2
+          "topic": "Art",
+          "visits": 4
         },
         {
-          "topic": "Rule",
-          "visits": 2
-        },
-        {
-          "topic": "Constitutional economics",
-          "visits": 2
-        },
-        {
-          "topic": "Olympic Games",
-          "visits": 2
-        },
-        {
-          "topic": "Language family",
-          "visits": 2
+          "topic": "History",
+          "visits": 4
         }
       ]
     }
@@ -1883,14 +1031,14 @@
     ]
   },
   "stats": {
-    "total_traces": 7472,
+    "total_traces": 8919,
     "total_baselines": 0,
-    "active_tanks": 16,
-    "traces_today": 308
+    "active_tanks": 4,
+    "traces_today": 1755
   },
   "prune_stats": {
-    "total": 1300,
-    "kept": 1286,
-    "pruned": 14
+    "total": 1146,
+    "kept": 1127,
+    "pruned": 19
   }
 }

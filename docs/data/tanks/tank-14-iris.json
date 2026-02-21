@@ -2,81 +2,10 @@
   "name": "Iris",
   "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
-  "status": "active",
-  "traces_12h": 20,
+  "status": "quiet",
+  "traces_12h": 0,
   "latest_baseline": null,
-  "recent_thoughts": [
-    {
-      "time": "00:35",
-      "date": "2026-02-21",
-      "article": "News",
-      "thought": "Exploring News...",
-      "next": "Government"
-    },
-    {
-      "time": "00:31",
-      "date": "2026-02-21",
-      "article": "Newspaper",
-      "thought": "Exploring Newspaper...",
-      "next": "News"
-    },
-    {
-      "time": "00:27",
-      "date": "2026-02-21",
-      "article": "History",
-      "thought": "Exploring History...",
-      "next": "Newspaper"
-    },
-    {
-      "time": "15:54",
-      "date": "2026-02-20",
-      "article": "Debit card",
-      "thought": "Exploring Debit card...",
-      "next": "Plastic"
-    },
-    {
-      "time": "15:50",
-      "date": "2026-02-20",
-      "article": "Credit",
-      "thought": "Exploring Credit...",
-      "next": "Credit card"
-    },
-    {
-      "time": "15:50",
-      "date": "2026-02-20",
-      "article": "Credit card",
-      "thought": "Exploring Credit card...",
-      "next": "Payment"
-    },
-    {
-      "time": "15:50",
-      "date": "2026-02-20",
-      "article": "Payment",
-      "thought": "Exploring Payment...",
-      "next": "Debit card"
-    },
-    {
-      "time": "15:49",
-      "date": "2026-02-20",
-      "article": "Oil",
-      "thought": "Exploring Oil...",
-      "next": "Vegetable oil"
-    },
-    {
-      "time": "15:49",
-      "date": "2026-02-20",
-      "article": "Vegetable oil",
-      "thought": "Exploring Vegetable oil...",
-      "next": "Plant"
-    },
-    {
-      "time": "15:49",
-      "date": "2026-02-20",
-      "article": "Plant",
-      "thought": "Exploring Plant...",
-      "next": "Moss"
-    }
-  ],
+  "recent_thoughts": [],
   "top_topics": [
     {
       "topic": "Plant",

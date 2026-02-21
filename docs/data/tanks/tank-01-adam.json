@@ -2,113 +2,42 @@
   "name": "Adam",
   "emoji": "\ud83d\udc64",
   "type": "Control",
-  "status": "active",
-  "traces_12h": 20,
+  "status": "quiet",
+  "traces_12h": 0,
   "latest_baseline": null,
-  "recent_thoughts": [
-    {
-      "time": "00:34",
-      "date": "2026-02-21",
-      "article": "Anxiety",
-      "thought": "Exploring Anxiety...",
-      "next": "Anger"
-    },
-    {
-      "time": "00:30",
-      "date": "2026-02-21",
-      "article": "Suffering",
-      "thought": "Exploring Suffering...",
-      "next": "Anxiety"
-    },
-    {
-      "time": "00:26",
-      "date": "2026-02-21",
-      "article": "Philosophy",
-      "thought": "Exploring Philosophy...",
-      "next": "Suffering"
-    },
-    {
-      "time": "15:50",
-      "date": "2026-02-20",
-      "article": "Science",
-      "thought": "Exploring Science...",
-      "next": "Geology"
-    },
-    {
-      "time": "15:50",
-      "date": "2026-02-20",
-      "article": "Geology",
-      "thought": "Exploring Geology...",
-      "next": "Mineral"
-    },
-    {
-      "time": "15:50",
-      "date": "2026-02-20",
-      "article": "Mineral",
-      "thought": "Exploring Mineral...",
-      "next": "Chemical"
-    },
-    {
-      "time": "15:49",
-      "date": "2026-02-20",
-      "article": "Fear",
-      "thought": "Exploring Fear...",
-      "next": "Evolution"
-    },
-    {
-      "time": "15:49",
-      "date": "2026-02-20",
-      "article": "Evolution",
-      "thought": "Exploring Evolution...",
-      "next": "Photosynthesis"
-    },
-    {
-      "time": "15:49",
-      "date": "2026-02-20",
-      "article": "Photosynthesis",
-      "thought": "Exploring Photosynthesis...",
-      "next": "Stomata"
-    },
-    {
-      "time": "15:49",
-      "date": "2026-02-20",
-      "article": "Stomata",
-      "thought": "Exploring Stomata...",
-      "next": "Carbon dioxide"
-    }
-  ],
+  "recent_thoughts": [],
   "top_topics": [
     {
-      "topic": "Buddhism",
-      "visits": 64
-    },
-    {
       "topic": "Emotion",
-      "visits": 43
-    },
-    {
-      "topic": "Dukkha",
-      "visits": 25
+      "visits": 39
     },
     {
       "topic": "Angst",
-      "visits": 24
-    },
-    {
-      "topic": "Human",
-      "visits": 21
-    },
-    {
-      "topic": "Four Noble Truths",
       "visits": 18
     },
     {
-      "topic": "Language",
-      "visits": 15
+      "topic": "Human",
+      "visits": 13
     },
     {
-      "topic": "Jesus",
-      "visits": 15
+      "topic": "Thailand",
+      "visits": 10
+    },
+    {
+      "topic": "Judaism",
+      "visits": 9
+    },
+    {
+      "topic": "Ocean",
+      "visits": 9
+    },
+    {
+      "topic": "Language",
+      "visits": 8
+    },
+    {
+      "topic": "Akha people",
+      "visits": 8
     }
   ]
 }
