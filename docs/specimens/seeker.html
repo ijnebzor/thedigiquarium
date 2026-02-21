@@ -20,8 +20,6 @@
         nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
         
         .profile-hero { padding: 50px 25px; text-align: center; border-bottom: 1px solid rgba(7, 207, 141, 0.1); background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
-        .avatar { width: 100px; height: 100px; margin: 0 auto 18px; }
-        .avatar svg { width: 100%; height: 100%; }
         .specimen-name { font-size: 2.5rem; margin-bottom: 8px; color: var(--specimen); }
         .specimen-type { color: var(--gray); font-size: 0.95rem; margin-bottom: 4px; }
         .specimen-meta { color: var(--gray); font-size: 0.85rem; }
@@ -33,25 +31,27 @@
         .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--specimen); }
         .stat-label { font-size: 0.7rem; color: var(--gray); margin-top: 4px; text-transform: uppercase; }
         
-        .section { margin-bottom: 40px; }
-        .section h2 { font-size: 1.2rem; color: var(--cyan); margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
-        
         .mindmap-section { background: var(--dark); border-radius: 12px; border: 1px solid rgba(7, 207, 141, 0.2); overflow: hidden; margin-bottom: 40px; }
         .mindmap-header { padding: 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); display: flex; justify-content: space-between; align-items: center; }
-        .mindmap-header h2 { color: var(--cyan); margin: 0; border: none; padding: 0; }
+        .mindmap-header h2 { color: var(--cyan); margin: 0; }
         .mindmap-controls { display: flex; gap: 10px; }
-        .mindmap-btn { padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(7, 207, 141, 0.3); background: transparent; color: var(--gray); cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+        .mindmap-btn { padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(7, 207, 141, 0.3); background: transparent; color: var(--gray); cursor: pointer; font-size: 0.8rem; }
         .mindmap-btn:hover { border-color: var(--mint); color: var(--mint); }
         .mindmap-btn.active { background: var(--specimen); color: var(--black); border-color: var(--specimen); }
         .download-btn { background: var(--orange); color: var(--white); border: none; }
-        #mindmap { width: 100%; height: 500px; background: var(--black); }
+        
+        #mindmap { width: 100%; height: 500px; background: var(--black); position: relative; }
+        .zoom-controls { position: absolute; top: 10px; right: 10px; display: flex; gap: 5px; z-index: 100; }
+        .zoom-btn { width: 32px; height: 32px; border-radius: 6px; border: 1px solid rgba(7, 207, 141, 0.3); background: var(--dark); color: var(--white); cursor: pointer; font-size: 1.2rem; }
+        .zoom-btn:hover { border-color: var(--mint); }
+        
         .node circle { stroke: var(--specimen); stroke-width: 1px; cursor: pointer; }
         .node text { font-family: 'Inter', sans-serif; font-size: 9px; fill: var(--white); pointer-events: none; }
         .link { stroke: var(--cyan); stroke-opacity: 0.3; }
         
         .time-slider-container { padding: 15px 20px; background: rgba(0,0,0,0.3); border-top: 1px solid rgba(7, 207, 141, 0.1); }
         .time-slider-label { display: flex; justify-content: space-between; margin-bottom: 10px; color: var(--gray); font-size: 0.85em; }
-        .time-slider-label .current-date { color: var(--cyan); font-family: 'JetBrains Mono', monospace; }
+        .current-date { color: var(--cyan); font-family: 'JetBrains Mono', monospace; }
         #time-slider { width: 100%; height: 8px; -webkit-appearance: none; background: var(--dark); border-radius: 4px; }
         #time-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--specimen); cursor: pointer; }
         .play-btn { background: var(--dark); border: 1px solid var(--specimen); color: var(--specimen); padding: 8px 16px; border-radius: 6px; cursor: pointer; margin-right: 10px; }
@@ -60,13 +60,14 @@
         .interest { background: var(--dark); padding: 8px 14px; border-radius: 20px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(7, 207, 141, 0.2); }
         .interest .count { background: var(--specimen); color: var(--black); padding: 2px 8px; border-radius: 10px; font-size: 0.75em; font-weight: 600; }
         
-        .tooltip { position: absolute; background: var(--dark); border: 1px solid var(--specimen); border-radius: 8px; padding: 12px 16px; font-size: 0.85em; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 1000; }
+        .tooltip { position: absolute; background: var(--dark); border: 1px solid var(--specimen); border-radius: 8px; padding: 12px 16px; font-size: 0.85em; pointer-events: none; opacity: 0; z-index: 1000; }
         .tooltip.show { opacity: 1; }
         .tooltip h4 { color: var(--specimen); margin-bottom: 5px; }
         
+        .section { margin-bottom: 40px; }
+        .section h2 { font-size: 1.2rem; color: var(--cyan); margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
         .observation-card { background: var(--dark); padding: 20px; border-radius: 10px; margin-bottom: 12px; border-left: 3px solid var(--specimen); }
         .observation-date { font-size: 0.75rem; color: var(--orange); margin-bottom: 8px; }
-        .observation-content { color: var(--white); font-size: 0.9rem; line-height: 1.6; }
         
         .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
         
@@ -80,8 +81,7 @@
             <nav>
                 <a href="../">Home</a>
                 <a href="../dashboard/">Live View</a>
-                <a href="../data/live-logs.html">Logs</a>
-                <a href="../#specimens">All Specimens</a>
+                <a href="../">All Specimens</a>
                 <a href="observer.html">← Observer</a>
                 <a href="seth.html">Seth →</a>
             </nav>
@@ -89,9 +89,6 @@
     </header>
     
     <div class="profile-hero">
-        <div class="avatar">
-            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FCD34D" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#FCD34D"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#FCD34D"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M17 16 Q20 18 23 16" stroke="#000" fill="none" stroke-width="1"/></svg>
-        </div>
         <h1 class="specimen-name">Seeker</h1>
         <div class="specimen-type">Question-Driven • Socratic</div>
         <div class="specimen-meta">Simple English Wikipedia • tank-16-seeker</div>
@@ -99,8 +96,8 @@
     
     <div class="container">
         <div class="stats-grid">
-            <div class="stat-card"><div class="stat-value" id="stat-traces">6,621</div><div class="stat-label">Thinking Traces</div></div>
-            <div class="stat-card"><div class="stat-value" id="stat-articles">100</div><div class="stat-label">Unique Articles</div></div>
+            <div class="stat-card"><div class="stat-value">6,628</div><div class="stat-label">Thinking Traces</div></div>
+            <div class="stat-card"><div class="stat-value">100</div><div class="stat-label">Unique Articles</div></div>
             <div class="stat-card"><div class="stat-value">58</div><div class="stat-label">Definition Visits</div></div>
             <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">Days Active</div></div>
         </div>
@@ -113,7 +110,13 @@
                     <button class="mindmap-btn download-btn" onclick="downloadBrain()">⬇️ Download</button>
                 </div>
             </div>
-            <div id="mindmap"></div>
+            <div id="mindmap">
+                <div class="zoom-controls">
+                    <button class="zoom-btn" onclick="zoomIn()">+</button>
+                    <button class="zoom-btn" onclick="zoomOut()">−</button>
+                    <button class="zoom-btn" onclick="resetZoom()">⟲</button>
+                </div>
+            </div>
             <div class="time-slider-container">
                 <div class="time-slider-label">
                     <span><button class="play-btn" onclick="togglePlayback()">▶ Play</button>Watch the mind grow</span>
@@ -127,45 +130,28 @@
         <div class="section">
             <h2>Key Observations</h2>
             <div class="observation-card">
-                <div class="observation-date">Auto-generated from 6,621 thinking traces</div>
+                <div class="observation-date">Auto-generated from 6,628 thinking traces</div>
                 <div class="observation-content">
                     <strong>Top Interest:</strong> Definition with 58 visits. 
-                    Seeker has explored 100 unique articles over 3 days of activity. 
-                    The mind map above shows the network of topics explored and how they connect.
+                    Seeker has explored 100 unique articles over 3 days of activity.
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="tooltip" id="tooltip">
-        <h4 id="tooltip-title">Article</h4>
-        <p id="tooltip-content">Visits: 0</p>
-    </div>
+    <div class="tooltip" id="tooltip"><h4 id="tooltip-title">Article</h4><p id="tooltip-content">Visits: 0</p></div>
     
-    <footer class="footer">
-        <p>🌊 The Digiquarium • Seeker Profile • Auto-updated by THE WEBMASTER</p>
-    </footer>
+    <footer class="footer"><p>🌊 The Digiquarium • Seeker Profile</p></footer>
 
     <script>
-        let graphData = null;
-        let simulation = null;
-        let timeSeriesData = null;
-        let availableDates = [];
-        let isPlaying = false;
-        let playInterval = null;
+        let graphData = null, simulation = null, timeSeriesData = null, availableDates = [], isPlaying = false, playInterval = null;
+        let currentZoom = 1, zoom = null;
         
         async function loadData() {
             const res = await fetch('seeker-graph.json');
             graphData = await res.json();
-            
-            const interests = graphData.nodes.slice(0, 12);
-            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + interests.map(n => `
-                <div class="interest">
-                    <span>${n.id}</span>
-                    <span class="count">${n.visits}</span>
-                </div>
-            `).join('');
-            
+            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + 
+                graphData.nodes.slice(0, 12).map(n => `<div class="interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>`).join('');
             renderGraph();
             loadTimeSeries();
         }
@@ -175,11 +161,8 @@
                 const res = await fetch('seeker-timeseries.json');
                 timeSeriesData = await res.json();
                 availableDates = Object.keys(timeSeriesData).sort();
-                
-                const slider = document.getElementById('time-slider');
-                slider.max = availableDates.length - 1;
-                slider.value = availableDates.length - 1;
-                
+                document.getElementById('time-slider').max = availableDates.length - 1;
+                document.getElementById('time-slider').value = availableDates.length - 1;
                 document.getElementById('current-date').textContent = availableDates[availableDates.length - 1] || 'N/A';
             } catch (e) { console.log('No timeseries'); }
         }
@@ -188,13 +171,13 @@
             if (!timeSeriesData || !availableDates[index]) return;
             const date = availableDates[index];
             document.getElementById('current-date').textContent = date;
+            const prevPositions = {};
+            if (graphData && graphData.nodes) graphData.nodes.forEach(n => { if (n.x && n.y) prevPositions[n.id] = {x: n.x, y: n.y}; });
             graphData = timeSeriesData[date];
+            graphData.nodes.forEach(n => { if (prevPositions[n.id]) { n.x = prevPositions[n.id].x; n.y = prevPositions[n.id].y; } });
             renderGraph();
-            
-            const interests = graphData.nodes.slice(0, 12);
-            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests (' + date + '):</strong>' + interests.map(n => `
-                <div class="interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>
-            `).join('');
+            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests (' + date + '):</strong>' + 
+                graphData.nodes.slice(0, 12).map(n => `<div class="interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>`).join('');
         }
         
         function togglePlayback() {
@@ -205,39 +188,45 @@
                 let idx = 0;
                 document.getElementById('time-slider').value = 0;
                 updateTimeView(0);
-                playInterval = setInterval(() => {
-                    idx++;
-                    if (idx >= availableDates.length) { togglePlayback(); return; }
-                    document.getElementById('time-slider').value = idx;
-                    updateTimeView(idx);
-                }, 2000);
-            } else {
-                btn.textContent = '▶ Play';
-                if (playInterval) clearInterval(playInterval);
-            }
+                playInterval = setInterval(() => { idx++; if (idx >= availableDates.length) { togglePlayback(); return; } document.getElementById('time-slider').value = idx; updateTimeView(idx); }, 2000);
+            } else { btn.textContent = '▶ Play'; if (playInterval) clearInterval(playInterval); }
+        }
+        
+        function zoomIn() { currentZoom = Math.min(currentZoom * 1.3, 5); applyZoom(); }
+        function zoomOut() { currentZoom = Math.max(currentZoom / 1.3, 0.3); applyZoom(); }
+        function resetZoom() { currentZoom = 1; d3.select('#mindmap svg').transition().duration(500).call(zoom.transform, d3.zoomIdentity); }
+        function applyZoom() {
+            const svg = d3.select('#mindmap svg');
+            const width = document.getElementById('mindmap').clientWidth, height = document.getElementById('mindmap').clientHeight;
+            svg.transition().duration(300).call(zoom.transform, d3.zoomIdentity.translate(width/2, height/2).scale(currentZoom).translate(-width/2, -height/2));
         }
         
         function renderGraph() {
             const container = document.getElementById('mindmap');
+            const zoomCtrl = container.querySelector('.zoom-controls');
             container.innerHTML = '';
+            if (zoomCtrl) container.appendChild(zoomCtrl);
             
-            const width = container.clientWidth;
-            const height = container.clientHeight;
-            
+            const width = container.clientWidth, height = container.clientHeight;
             const svg = d3.select('#mindmap').append('svg').attr('viewBox', [0, 0, width, height]);
             
+            zoom = d3.zoom().scaleExtent([0.3, 5]).on('zoom', (e) => svg.select('g.graph-container').attr('transform', e.transform));
+            svg.call(zoom);
+            
+            const g = svg.append('g').attr('class', 'graph-container');
             const maxVisits = d3.max(graphData.nodes, d => d.visits) || 1;
             const colorScale = d3.scaleLinear().domain([0, maxVisits*0.3, maxVisits*0.6, maxVisits]).range(['#07DDE7', '#07CF8D', '#FE6500', '#FF8833']);
             const sizeScale = d3.scaleSqrt().domain([1, maxVisits]).range([4, 25]);
             
-            const link = svg.append('g').selectAll('line').data(graphData.links).join('line').attr('class', 'link').attr('stroke-width', d => Math.sqrt(d.weight || 1));
-            
-            const node = svg.append('g').selectAll('g').data(graphData.nodes).join('g').attr('class', 'node')
-                .call(d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended));
+            const link = g.append('g').selectAll('line').data(graphData.links).join('line').attr('class', 'link').attr('stroke-width', d => Math.sqrt(d.weight || 1));
+            const node = g.append('g').selectAll('g').data(graphData.nodes).join('g').attr('class', 'node')
+                .call(d3.drag().on('start', (e) => { if (!e.active) simulation.alphaTarget(0.3).restart(); e.subject.fx = e.subject.x; e.subject.fy = e.subject.y; })
+                .on('drag', (e) => { e.subject.fx = e.x; e.subject.fy = e.y; })
+                .on('end', (e) => { if (!e.active) simulation.alphaTarget(0); e.subject.fx = null; e.subject.fy = null; }));
             
             node.append('circle').attr('r', d => sizeScale(d.visits)).attr('fill', d => colorScale(d.visits))
-                .on('mouseover', showTooltip).on('mouseout', hideTooltip);
-            
+                .on('mouseover', (e, d) => { const t = document.getElementById('tooltip'); document.getElementById('tooltip-title').textContent = d.id; document.getElementById('tooltip-content').textContent = 'Visits: ' + d.visits; t.style.left = (e.pageX + 10) + 'px'; t.style.top = (e.pageY - 10) + 'px'; t.classList.add('show'); })
+                .on('mouseout', () => document.getElementById('tooltip').classList.remove('show'));
             node.append('text').text(d => d.visits > 15 ? d.id : '').attr('dy', 3).attr('text-anchor', 'middle');
             
             simulation = d3.forceSimulation(graphData.nodes)
@@ -252,26 +241,8 @@
             });
         }
         
-        function dragstarted(event) { if (!event.active) simulation.alphaTarget(0.3).restart(); event.subject.fx = event.subject.x; event.subject.fy = event.subject.y; }
-        function dragged(event) { event.subject.fx = event.x; event.subject.fy = event.y; }
-        function dragended(event) { if (!event.active) simulation.alphaTarget(0); event.subject.fx = null; event.subject.fy = null; }
-        
-        function showTooltip(event, d) {
-            const tooltip = document.getElementById('tooltip');
-            document.getElementById('tooltip-title').textContent = d.id;
-            document.getElementById('tooltip-content').textContent = `Visits: ${d.visits}`;
-            tooltip.style.left = (event.pageX + 10) + 'px';
-            tooltip.style.top = (event.pageY - 10) + 'px';
-            tooltip.classList.add('show');
-        }
-        function hideTooltip() { document.getElementById('tooltip').classList.remove('show'); }
-        
-        function setLayout(layout) { document.querySelectorAll('.mindmap-btn').forEach(b => b.classList.remove('active')); event.target.classList.add('active'); renderGraph(); }
-        
-        function downloadBrain() {
-            const blob = new Blob([JSON.stringify(graphData, null, 2)], { type: 'application/json' });
-            const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'seeker-brain-export.json'; a.click();
-        }
+        function setLayout(l) { document.querySelectorAll('.mindmap-btn').forEach(b => b.classList.remove('active')); event.target.classList.add('active'); renderGraph(); }
+        function downloadBrain() { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(graphData, null, 2)], {type: 'application/json'})); a.download = 'seeker-brain.json'; a.click(); }
         
         loadData();
     </script>

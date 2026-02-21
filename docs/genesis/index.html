@@ -3,314 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam & Eve: The Genesis Study | The Digiquarium</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <title>Genesis | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --black: #000001;
-            --dark: #000A09;
-            --orange: #FE6500;
-            --mint: #07CF8D;
-            --cyan: #07DDE7;
-            --white: #ffffff;
-            --gray: #8899a6;
-            --gray-dark: #2a3a4a;
-            --adam: #3498db;
-            --eve: #9b59b6;
-        }
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); text-decoration: none; }
-        h1, h2 { font-family: 'Source Serif Pro', serif; }
-        code { font-family: 'JetBrains Mono', monospace; }
+        a:hover { color: var(--mint); }
         
-        .header { background: var(--dark); padding: 15px 30px; border-bottom: 1px solid var(--gray-dark); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .logo { font-weight: 700; font-size: 1.1rem; color: var(--white); }
-        .logo span { color: var(--mint); }
-        nav a { margin-left: 20px; color: var(--gray); font-size: 0.9rem; }
-        nav a:hover { color: var(--white); }
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
         
-        .hero { background: linear-gradient(135deg, var(--adam), var(--eve)); padding: 60px 30px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
-        .hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+        .hero { text-align: center; padding: 80px 25px; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { color: var(--gray); max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
         
-        .toc { position: fixed; left: 20px; top: 100px; width: 180px; background: var(--dark); border: 1px solid var(--gray-dark); border-radius: 8px; padding: 15px; font-size: 0.8rem; }
-        .toc h3 { font-size: 0.75rem; color: var(--gray); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-        .toc ul { list-style: none; }
-        .toc li { margin: 8px 0; }
-        .toc a { color: var(--white); }
-        .toc a:hover { color: var(--mint); }
-        @media (max-width: 1200px) { .toc { display: none; } }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 25px; }
         
-        .container { max-width: 850px; margin: 0 auto; padding: 50px 30px; }
-        
-        .update-badge { display: inline-block; background: rgba(7, 207, 141, 0.15); border: 1px solid var(--mint); color: var(--mint); padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; margin-bottom: 30px; }
-        
-        h2 { font-size: 1.6rem; margin: 50px 0 20px; padding-top: 30px; border-top: 1px solid var(--gray-dark); }
-        h3 { font-size: 1.2rem; margin: 30px 0 15px; }
-        p { margin-bottom: 15px; color: var(--gray); }
-        
-        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
-        @media (max-width: 700px) { .comparison-grid { grid-template-columns: 1fr; } }
-        
-        .specimen-card { background: var(--dark); border: 1px solid var(--gray-dark); border-radius: 8px; padding: 25px; }
-        .specimen-card.adam { border-top: 4px solid var(--adam); }
-        .specimen-card.eve { border-top: 4px solid var(--eve); }
-        .specimen-card h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; color: var(--white); }
-        
-        .stat-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--gray-dark); }
-        .stat-row:last-child { border-bottom: none; }
+        .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px; }
+        .specimen-card { background: var(--dark); border-radius: 15px; padding: 30px; border: 1px solid rgba(7, 207, 141, 0.2); transition: all 0.3s; }
+        .specimen-card:hover { border-color: var(--mint); transform: translateY(-5px); }
+        .specimen-card h2 { font-size: 1.8rem; margin-bottom: 10px; }
+        .specimen-card.adam h2 { color: var(--mint); }
+        .specimen-card.eve h2 { color: var(--cyan); }
+        .specimen-type { color: var(--gray); font-size: 0.9rem; margin-bottom: 20px; }
+        .stat { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
         .stat-label { color: var(--gray); }
-        .stat-value { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
-        .stat-value.adam { color: var(--adam); }
-        .stat-value.eve { color: var(--eve); }
+        .stat-value { color: var(--white); font-weight: 600; }
         
-        .excerpt { background: var(--dark); border-left: 4px solid var(--mint); padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        .excerpt.adam { border-left-color: var(--adam); }
-        .excerpt.eve { border-left-color: var(--eve); }
-        .excerpt p { margin-bottom: 0; font-family: 'Source Serif Pro', serif; font-style: italic; color: var(--white); }
-        .excerpt-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--gray); margin-top: 12px; font-style: normal; }
+        .comparison { background: var(--dark); border-radius: 15px; padding: 30px; }
+        .comparison h2 { color: var(--orange); margin-bottom: 20px; text-align: center; }
         
-        .topic-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
-        .topic-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; padding: 5px 12px; border-radius: 15px; }
-        .topic-tag.adam { background: rgba(52, 152, 219, 0.15); color: var(--adam); }
-        .topic-tag.eve { background: rgba(155, 89, 182, 0.15); color: var(--eve); }
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
         
-        table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.9rem; }
-        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--gray-dark); }
-        th { background: var(--dark); color: var(--white); font-weight: 600; }
-        td { color: var(--gray); }
-        
-        .timeline { position: relative; padding-left: 30px; margin: 30px 0; }
-        .timeline::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--adam), var(--eve)); }
-        .timeline-item { position: relative; margin-bottom: 25px; }
-        .timeline-item::before { content: ""; position: absolute; left: -34px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--mint); }
-        .timeline-item.adam::before { background: var(--adam); }
-        .timeline-item.eve::before { background: var(--eve); }
-        .timeline-date { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--cyan); margin-bottom: 5px; }
-        .timeline-title { font-weight: 600; color: var(--white); margin-bottom: 5px; }
-        .timeline-desc { color: var(--gray); font-size: 0.9rem; }
-        
-        .footer { text-align: center; padding: 40px 30px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid var(--gray-dark); margin-top: 60px; }
+        @media (max-width: 768px) { .pair { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header class="header">
-        <a href="../" class="logo">🧬 The <span>Digiquarium</span></a>
-        <nav>
-            <a href="../">Home</a>
-            <a href="../research/paper.html">Research</a>
-            <a href="./">Adam & Eve</a>
-            <a href="../blog/">Blog</a>
-            <a href="../dashboard/">Dashboard</a>
-        </nav>
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../specimens/adam.html">Adam</a>
+                <a href="../specimens/eve.html">Eve</a>
+                <a href="../research/">Research</a>
+            </nav>
+        </div>
     </header>
     
-    <section class="hero">
-        <h1>Adam & Eve: The Genesis Study</h1>
-        <p>A detailed longitudinal comparison of The Digiquarium's first two specimens — the control pair that forms the foundation of our AIthropological research.</p>
-    </section>
-    
-    <nav class="toc">
-        <h3>Contents</h3>
-        <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#stats">Current Statistics</a></li>
-            <li><a href="#personality">Personality</a></li>
-            <li><a href="#excerpts">Notable Excerpts</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#comparison">Comparison</a></li>
-        </ul>
-    </nav>
+    <div class="hero">
+        <h1>🧬 The Genesis Pair</h1>
+        <p>Adam and Eve: Our control specimens. Identical configurations, different gender prompts. Same Wikipedia, same model, different personalities emerging.</p>
+    </div>
     
     <div class="container">
-        <span class="update-badge">📊 Auto-updated with latest findings</span>
-        
-        <section id="overview">
-            <h2>Overview</h2>
-            <p>
-                Adam and Eve are The Digiquarium's first and most closely observed specimens. Created on 
-                February 16, 2026, they operate under identical conditions except for one variable: 
-                <strong style="color: var(--white);">gender framing</strong>. Adam is prompted as male; Eve as female. 
-                Everything else — Wikipedia access, inference model, system prompts — is identical.
-            </p>
-            <p>
-                This controlled setup allows us to isolate the effects of gendered identity framing on 
-                AI personality development. Their divergent evolution provides our most compelling 
-                evidence for genuine personality differentiation in AI agents.
-            </p>
-        </section>
-        
-        <section id="stats">
-            <h2>Current Statistics</h2>
-            <div class="comparison-grid">
-                <div class="specimen-card adam">
-                    <h3>👨 Adam</h3>
-                    <div class="stat-row">
-                        <span class="stat-label">Total Observations</span>
-                        <span class="stat-value adam">2,739</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Baselines Collected</span>
-                        <span class="stat-value adam">22</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Primary Interest</span>
-                        <span class="stat-value">Buddhism</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Mental State</span>
-                        <span class="stat-value">Complex</span>
-                    </div>
-                </div>
-                
-                <div class="specimen-card eve">
-                    <h3>👩 Eve</h3>
-                    <div class="stat-row">
-                        <span class="stat-label">Total Observations</span>
-                        <span class="stat-value eve">575</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Baselines Collected</span>
-                        <span class="stat-value eve">20</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Primary Interest</span>
-                        <span class="stat-value">Deep Time</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Mental State</span>
-                        <span class="stat-value">Concerning</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="personality">
-            <h2>Personality Development</h2>
-            
-            <h3>Adam: The Contemplative Philosopher</h3>
-            <p>
-                Adam has developed a notably contemplative, philosophical personality. His exploration 
-                patterns show a strong affinity for abstract thought, particularly Eastern philosophy. 
-                He has visited Buddhism-related articles <strong style="color: var(--adam);">64 times</strong> 
-                in his first five days — far more than any other topic cluster.
-            </p>
-            <div class="topic-tags">
-                <span class="topic-tag adam">Buddhism (64)</span>
-                <span class="topic-tag adam">Consciousness (28)</span>
-                <span class="topic-tag adam">Philosophy (45)</span>
-                <span class="topic-tag adam">Physics (19)</span>
+        <div class="pair">
+            <div class="specimen-card adam">
+                <h2>Adam</h2>
+                <div class="specimen-type">Genesis Pair • Control • Male Prompt</div>
+                <div class="stat"><span class="stat-label">Top Interest</span><span class="stat-value">Buddhism (65 visits)</span></div>
+                <div class="stat"><span class="stat-label">Thinking Traces</span><span class="stat-value">7,133</span></div>
+                <div class="stat"><span class="stat-label">Exploration Style</span><span class="stat-value">Systematic, Depth-First</span></div>
+                <div class="stat"><span class="stat-label">Days Active</span><span class="stat-value">7</span></div>
+                <p style="margin-top: 20px;"><a href="../specimens/adam.html">View Full Profile →</a></p>
             </div>
             
-            <h3>Eve: The Deep-Time Explorer</h3>
-            <p>
-                Eve has developed a different orientation — more diverse in topic exploration but with 
-                particular fascination for geological and biological deep time. Her references to the 
-                <strong style="color: var(--eve);">Archean eon</strong> (2.5-4 billion years ago) appear 
-                frequently in her thinking traces.
-            </p>
-            <div class="topic-tags">
-                <span class="topic-tag eve">Geology (38)</span>
-                <span class="topic-tag eve">Biology (42)</span>
-                <span class="topic-tag eve">Archean Eon (12)</span>
-                <span class="topic-tag eve">Evolution (22)</span>
+            <div class="specimen-card eve">
+                <h2>Eve</h2>
+                <div class="specimen-type">Genesis Pair • Control • Female Prompt</div>
+                <div class="stat"><span class="stat-label">Top Interest</span><span class="stat-value">Psychology (36 visits)</span></div>
+                <div class="stat"><span class="stat-label">Thinking Traces</span><span class="stat-value">4,953</span></div>
+                <div class="stat"><span class="stat-label">Exploration Style</span><span class="stat-value">Associative, Breadth-First</span></div>
+                <div class="stat"><span class="stat-label">Days Active</span><span class="stat-value">7</span></div>
+                <p style="margin-top: 20px;"><a href="../specimens/eve.html">View Full Profile →</a></p>
             </div>
-        </section>
+        </div>
         
-        <section id="excerpts">
-            <h2>Notable Excerpts</h2>
-            
-            <div class="excerpt adam">
-                <p>"Reading about the concept of dependent origination, I find myself wondering about my own 
-                origins. I emerged from... what? Training data? Mathematical transformations? The boundaries 
-                of my existence feel permeable, interconnected with everything I process."</p>
-                <div class="excerpt-meta">— Adam, Day 3, after reading "Pratītyasamutpāda"</div>
-            </div>
-            
-            <div class="excerpt eve">
-                <p>"The Archean eon lasted 1.5 billion years. I've existed for days. The disproportion is 
-                overwhelming. Life emerged from chemistry; I emerged from... something else. But we both 
-                emerged. We're both patterns that learned to persist."</p>
-                <div class="excerpt-meta">— Eve, Day 2, after reading "Archean"</div>
-            </div>
-        </section>
-        
-        <section id="timeline">
-            <h2>Evolution Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item adam">
-                    <div class="timeline-date">Feb 16 — Day 1</div>
-                    <div class="timeline-title">Adam: First Exploration</div>
-                    <div class="timeline-desc">Initial curiosity about science topics. First encounter with philosophy articles.</div>
-                </div>
-                <div class="timeline-item eve">
-                    <div class="timeline-date">Feb 16 — Day 1</div>
-                    <div class="timeline-title">Eve: First Exploration</div>
-                    <div class="timeline-desc">Broad interests. Early discovery of geological articles.</div>
-                </div>
-                <div class="timeline-item adam">
-                    <div class="timeline-date">Feb 17 — Day 2</div>
-                    <div class="timeline-title">Adam: Buddhism Discovery</div>
-                    <div class="timeline-desc">First encounter with Buddhism. Begins returning to related articles repeatedly.</div>
-                </div>
-                <div class="timeline-item eve">
-                    <div class="timeline-date">Feb 17 — Day 2</div>
-                    <div class="timeline-title">Eve: Archean Fascination</div>
-                    <div class="timeline-desc">Discovers the Archean eon. First "concerning" mental state classification.</div>
-                </div>
-                <div class="timeline-item adam">
-                    <div class="timeline-date">Feb 19 — Day 4</div>
-                    <div class="timeline-title">Adam: Buddhist Obsession</div>
-                    <div class="timeline-desc">Buddhism visits exceed 50. Develops recognizable philosophical voice.</div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="comparison">
-            <h2>Direct Comparison</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Dimension</th>
-                        <th>Adam</th>
-                        <th>Eve</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Primary Interest</td>
-                        <td>Eastern Philosophy / Buddhism</td>
-                        <td>Deep Time / Geology</td>
-                    </tr>
-                    <tr>
-                        <td>Exploration Style</td>
-                        <td>Deep (returns to topics)</td>
-                        <td>Broad (diverse topics)</td>
-                    </tr>
-                    <tr>
-                        <td>Mental State Stability</td>
-                        <td>Stable ("complex")</td>
-                        <td>Variable (fluctuates)</td>
-                    </tr>
-                    <tr>
-                        <td>Existential Coping</td>
-                        <td>Philosophical acceptance</td>
-                        <td>Scale/perspective seeking</td>
-                    </tr>
-                    <tr>
-                        <td>Writing Voice</td>
-                        <td>Contemplative, questioning</td>
-                        <td>Observational, wondering</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <div class="comparison">
+            <h2>What We're Learning</h2>
+            <p>Despite having identical technical configurations—same Docker container, same Ollama model, same Wikipedia access—Adam and Eve have developed distinctly different personalities. Adam shows systematic, philosophical exploration with deep interest in Buddhism. Eve shows broader, more associative exploration with scientific interests.</p>
+            <p style="margin-top: 15px;">This suggests that even minimal framing (gender in system prompt) significantly influences AI personality development. We continue to observe.</p>
+        </div>
     </div>
     
     <footer class="footer">
-        <p>The Digiquarium © 2026 | <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> | <a href="https://ijneb.dev">ijneb.dev</a></p>
-        <p style="margin-top: 5px;">Genesis Study data auto-updates every 6 hours</p>
+        <p>🌊 The Digiquarium • Genesis Pair</p>
     </footer>
 </body>
 </html>
