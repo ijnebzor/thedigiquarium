@@ -9,15 +9,25 @@ SLA: 5 min detection, 5 min remediation (tighter than Guard)
 """
 
 import os
-import fcntl
 import sys
-import fcntl
 import time
-import fcntl
 import json
-import fcntl
 from datetime import datetime
 from pathlib import Path
+
+# Single-instance lock (added by THE STRATEGIST)
+import fcntl
+LOCK_FILE = Path(__file__).parent / 'sentinel.lock'
+def _acquire_lock():
+    try:
+        fd = open(LOCK_FILE, 'w')
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return fd
+    except IOError:
+        print("[sentinel] Another instance already running")
+        import sys; sys.exit(1)
+_lock_fd = _acquire_lock()
+
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from shared.utils import DaemonLogger, run_command, write_pid_file, send_email_alert
@@ -182,31 +192,5 @@ class Sentinel:
                 self.log.error(f"Cycle error: {e}")
                 time.sleep(60)
 
-
-# Single-instance lock
-import fcntl
-LOCK_FILE = Path(__file__).parent / 'sentinel.lock'
-lock_fd = None
-
-def acquire_lock():
-    global lock_fd
-    try:
-        lock_fd = open(LOCK_FILE, 'w')
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        return True
-    except IOError:
-        print(f"[sentinel] Another instance is already running")
-        return False
-
-def release_lock():
-    global lock_fd
-    if lock_fd:
-        fcntl.flock(lock_fd, fcntl.LOCK_UN)
-        lock_fd.close()
-    LOCK_FILE.unlink(missing_ok=True)
-
-
-if __name__ == "__main__":
-    if not acquire_lock(): exit(1)
-    try:
+if __name__ == '__main__':
     Sentinel().run()
