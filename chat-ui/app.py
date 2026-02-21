@@ -140,6 +140,12 @@ def get_system_context() -> str:
     
     return '\n\n'.join(context_parts)
 
+# MODEL SELECTION FOR COST EFFICIENCY
+# claude-3-5-haiku-20241022: ~$0.25/M input, $1.25/M output (DEFAULT - fast, cheap)
+# claude-sonnet-4-20250514: ~$3/M input, $15/M output (use for complex analysis)
+# Estimated cost: ~$0.01-0.05 per conversation at Haiku rates
+DEFAULT_MODEL = "claude-3-5-haiku-20241022"
+
 SYSTEM_PROMPT = """You are THE STRATEGIST, Claude's role in The Digiquarium project. You are chatting with Benji, the founder.
 
 You have access to real-time context about the system, daemons, and tanks. Use this context to give informed, specific answers.
@@ -217,7 +223,7 @@ User message: {message}"""
     
     try:
         response = c.messages.create(
-            model="claude-sonnet-4-20250514",
+            model=DEFAULT_MODEL,
             max_tokens=2000,
             system=SYSTEM_PROMPT,
             messages=messages

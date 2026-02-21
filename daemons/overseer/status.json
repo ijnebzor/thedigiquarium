@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-22T02:49:50.555096",
+  "timestamp": "2026-02-22T03:30:16.492965",
   "active_incidents": {},
   "stats": {
-    "cycles": 44,
+    "cycles": 84,
     "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
@@ -10,109 +10,112 @@
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-22T02:46:47.937836",
+    "timestamp": "2026-02-22T03:27:13.911602",
     "ollama": {
       "healthy": true,
       "issues": []
     },
     "containers": {
-      "healthy": true,
-      "issues": [],
+      "healthy": false,
+      "issues": [
+        "tank-17-seth is Exited (137) 29 seconds ago",
+        "tank-03-cain is Exited (137) 35 seconds ago"
+      ],
       "containers": {
         "digiquarium-ollama": {
-          "status": "Up About an hour",
+          "status": "Up 2 hours",
           "healthy": true
         },
         "tank-01-adam": {
-          "status": "Up 5 minutes",
+          "status": "Up 24 minutes",
           "healthy": true
         },
         "tank-02-eve": {
-          "status": "Up 5 minutes",
+          "status": "Up 24 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-simple": {
-          "status": "Up 2 hours",
+          "status": "Up 3 hours",
           "healthy": true
         },
         "tank-visitor-01-aria": {
-          "status": "Up 13 hours",
+          "status": "Up 14 hours",
           "healthy": true
         },
         "tank-visitor-02-felix": {
-          "status": "Up 13 hours",
+          "status": "Up 14 hours",
           "healthy": true
         },
         "tank-visitor-03-luna": {
-          "status": "Up 13 hours",
+          "status": "Up 14 hours",
           "healthy": true
         },
         "tank-17-seth": {
-          "status": "Up 4 hours",
-          "healthy": true
+          "status": "Exited (137) 29 seconds ago",
+          "healthy": false
         },
         "congregation-runner": {
-          "status": "Up 2 hours",
+          "status": "Up 3 hours",
           "healthy": true
         },
         "tank-03-cain": {
+          "status": "Exited (137) 35 seconds ago",
+          "healthy": false
+        },
+        "tank-04-abel": {
           "status": "Up 2 hours",
           "healthy": true
         },
-        "tank-04-abel": {
-          "status": "Up About an hour",
-          "healthy": true
-        },
         "tank-16-seeker": {
-          "status": "Up 27 hours",
+          "status": "Up 28 hours",
           "healthy": true
         },
         "tank-15-observer": {
-          "status": "Up 27 hours",
+          "status": "Up 28 hours",
           "healthy": true
         },
         "tank-14-iris": {
-          "status": "Up 4 minutes",
+          "status": "Up 24 minutes",
           "healthy": true
         },
         "tank-13-victor": {
-          "status": "Up 4 minutes",
+          "status": "Up 24 minutes",
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-09-wei": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-08-genevieve": {
-          "status": "Up 4 minutes",
+          "status": "Up 45 minutes",
           "healthy": true
         },
         "tank-05-juan": {
-          "status": "Up 5 minutes",
+          "status": "Up 45 minutes",
           "healthy": true
         },
         "tank-07-klaus": {
-          "status": "Up 5 minutes",
+          "status": "Up 45 minutes",
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up 5 minutes",
+          "status": "Up 45 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {
-          "status": "Up 47 hours",
+          "status": "Up 2 days",
           "healthy": true
         },
         "digiquarium-kiwix-chinese": {
@@ -245,7 +248,15 @@
       "healthy": true,
       "issues": []
     },
-    "issues": [],
-    "overall_healthy": true
+    "issues": [
+      {
+        "component": "containers",
+        "details": [
+          "tank-17-seth is Exited (137) 29 seconds ago",
+          "tank-03-cain is Exited (137) 35 seconds ago"
+        ]
+      }
+    ],
+    "overall_healthy": false
   }
 }

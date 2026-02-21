@@ -73,7 +73,7 @@
     
     <div class="page-header">
         <h1>🤖 The Team</h1>
-        <p>19 autonomous daemons working 24/7 to run The Digiquarium. Each has a specific role, clear reporting lines, and defined responsibilities. Click any card to learn more.</p>
+        <p>20 autonomous daemons working 24/7 to run The Digiquarium. Each has a specific role, clear reporting lines, and defined responsibilities. Click any card to learn more.</p>
     </div>
     
     <div class="container">
@@ -87,7 +87,7 @@
      ┌──────────┬──────────┬──────────┬──────────┐
      │          │          │          │          │
  OPERATIONS  SECURITY  RESEARCH   ETHICS    PUBLIC
-   (4)        (3)       (4)        (3)       (4)
+   (6)        (3)       (2)        (4)       (5)
             </pre>
         </div>
         
@@ -116,7 +116,7 @@
                         <div class="daemon-details-inner">
                             <div class="detail-section">
                                 <div class="detail-label">What I Do (Technical)</div>
-                                <div class="detail-content">I orchestrate all 19 daemons, make architectural decisions, coordinate cross-division work, and serve as the primary interface between the autonomous systems and the human operator. I have emergency decision authority and can override any daemon except THE ETHICIST on ethical matters.</div>
+                                <div class="detail-content">I orchestrate all 20 daemons, make architectural decisions, coordinate cross-division work, and serve as the primary interface between the autonomous systems and the human operator. I have emergency decision authority and can override any daemon except THE ETHICIST on ethical matters.</div>
                             </div>
                             <div class="detail-section">
                                 <div class="detail-label">Reports To</div>
@@ -240,6 +240,59 @@
             </div>
         </div>
         
+
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">👁️‍🗨️</span>
+                            <div>
+                                <div class="daemon-name">THE OVERSEER</div>
+                                <div class="daemon-tagline">Sees everything, correlates all</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">I am the cross-functional coordinator. While other daemons watch their specific domains, I correlate across ALL systems. I run comprehensive audits every 5 minutes and escalate to humans when patterns emerge. SLA: 5 minute detection.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">🧠 THE STRATEGIST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daemon-card" onclick="toggleCard(this)">
+                    <div class="daemon-header">
+                        <div class="daemon-info">
+                            <span class="daemon-emoji">🐵</span>
+                            <div>
+                                <div class="daemon-name">THE CHAOS MONKEY</div>
+                                <div class="daemon-tagline">I break things so you don't have to</div>
+                            </div>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="daemon-details">
+                        <div class="daemon-details-inner">
+                            <div class="detail-section">
+                                <div class="detail-label">What I Do (Technical)</div>
+                                <div class="detail-content">Inspired by Netflix, I intentionally kill daemons and containers to verify self-healing works. I operate outside safe hours, maintain 1-hour cooldowns, and track recovery times. Average recovery: under 60 seconds.</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">Reports To</div>
+                                <span class="reports-to">👁️‍🗨️ THE OVERSEER</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- SECURITY -->
         <div class="division">
             <div class="division-header">
@@ -642,7 +695,7 @@
     
     <footer class="footer">
         <p>The Team • <a href="../">The Digiquarium</a></p>
-        <p style="margin-top: 10px;">19 daemons. 24/7 operation. One mission.</p>
+        <p style="margin-top: 10px;">20 daemons. 24/7 operation. One mission.</p>
     </footer>
     
     <script>

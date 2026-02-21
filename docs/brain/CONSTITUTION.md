@@ -109,3 +109,93 @@
 ---
 
 *Last updated: 2026-02-22 02:55 AEDT*
+
+---
+
+## SECTION 7: SITE CONSISTENCY RULES (Added 2026-02-22)
+
+### 7.1 Update Propagation Requirement
+**When ANY change is made, update ALL relevant pages:**
+- Main page team section → Team page with full descriptions
+- New daemon created → Daemons page, team page, admin panel
+- New decision → Decision log, decisions page
+- New specimen data → All specimen profile cards
+- New feature → Documentation, relevant pages
+
+**THE WEBMASTER must verify cross-page consistency.**
+
+### 7.2 No Conflicting Information
+- GitHub Pages must match repo
+- All pages must show same data
+- Timestamps must be consistent
+
+---
+
+## SECTION 8: UPCOMING MILESTONES
+
+### 8.1 Tomorrow: Mac Mini Migration
+- Transfer all infrastructure to Mac Mini
+- Scale up capacity
+- Maintain all functionality
+
+### 8.2 Post-Migration: Multi-Specimen Tanks
+Research opportunities to explore:
+- Both genders in same tank
+- Same genders together
+- No gender prompts
+- Mixed languages (e.g., Spanish + German)
+- Different languages together
+- 2-specimen tanks
+- 3-specimen tanks
+- Social dynamics observation
+- Debate/congregation within tanks
+
+### 8.3 Brand Collateral Integration
+- Add "The Digiquarium Brief" to top of "New Here?" section
+- Use deck images (provided earlier in chat) as visuals
+- Adhere to brand guidelines and voice
+- Images generated with NotebookLM - explore integration
+
+---
+
+## SECTION 9: ADMIN PANEL VISION
+
+**Purpose:** Remote access to THE STRATEGIST from anywhere in the world.
+
+**Architecture:**
+- Admin panel routes requests to Anthropic API
+- Acts as portable MCP control interface
+- No laptop/Tailscale dependency needed
+- Cost-effective model selection required
+
+**Model Recommendation:** Claude 3.5 Haiku for cost efficiency
+- ~$0.25/million input tokens, $1.25/million output
+- Fast responses
+- Good for operational tasks
+- Upgrade to Sonnet for complex analysis only
+
+---
+
+---
+
+## SECTION 10: BRAND COLLATERAL (Added 2026-02-22)
+
+### NotebookLM Integration
+- Brand materials were generated with NotebookLM
+- Explore integration possibilities (API availability TBD)
+- "The Digiquarium Brief" to be added to "New Here?" section
+- Phases roadmap image available at /docs/assets/phases-roadmap.jpg
+
+### Brand Guidelines Location
+- `/marketing/brand_guidelines.json` - Full brand voice, colors, messaging
+- Key colors: Black #000001, Dark #000A09, Mint #07CF8D, Cyan #07DDE7, Orange #FE6500
+- Voice: "Academic wit meets accessibility"
+
+### Site Consistency Rule
+**THE WEBMASTER must propagate ALL changes across:**
+- Main page ↔ Team page
+- Daemons page ↔ Research pages
+- Index ↔ All specimen profiles
+- Any count (daemons, tanks, traces) must match everywhere
+
+---
