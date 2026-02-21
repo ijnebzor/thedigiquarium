@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE STRATEGIST | Digiquarium Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --text: #e0e0e0;
+            --muted: #888;
+            --cyan: #00d4ff;
+            --green: #00ff88;
+            --orange: #FE6500;
+            --border: #2a2a3a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            height: 100vh;
+            display: flex;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .sidebar-header h1 {
+            font-size: 1.2em;
+            color: var(--cyan);
+            margin-bottom: 5px;
+        }
+        .sidebar-header p {
+            font-size: 0.8em;
+            color: var(--muted);
+        }
+        .scope-section {
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        .scope-section h3 {
+            font-size: 0.75em;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .scope-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .scope-item {
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+            transition: all 0.2s;
+        }
+        .scope-item:hover {
+            background: var(--bg-card);
+        }
+        .scope-item.active {
+            background: rgba(0, 212, 255, 0.15);
+            border: 1px solid var(--cyan);
+        }
+        .scope-item .icon { font-size: 1.2em; }
+        .scope-item .name { flex: 1; font-size: 0.9em; }
+        .scope-item .status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--muted);
+        }
+        .scope-item .status.running { background: var(--green); }
+        
+        /* Chat Area */
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-header {
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .chat-header .scope-badge {
+            background: var(--bg-card);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: var(--cyan);
+            border: 1px solid var(--border);
+        }
+        .chat-header h2 {
+            flex: 1;
+            font-size: 1.1em;
+        }
+        
+        /* Messages */
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .message {
+            max-width: 80%;
+            margin-bottom: 20px;
+            animation: fadeIn 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .message.user {
+            margin-left: auto;
+        }
+        .message .bubble {
+            padding: 15px 20px;
+            border-radius: 16px;
+            line-height: 1.5;
+        }
+        .message.user .bubble {
+            background: var(--cyan);
+            color: var(--bg);
+            border-bottom-right-radius: 4px;
+        }
+        .message.assistant .bubble {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-bottom-left-radius: 4px;
+        }
+        .message .meta {
+            font-size: 0.75em;
+            color: var(--muted);
+            margin-top: 5px;
+            padding: 0 5px;
+        }
+        .message.user .meta { text-align: right; }
+        
+        .message .bubble pre {
+            background: var(--bg);
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+        }
+        .message .bubble code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        /* Input */
+        .input-area {
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+        }
+        .input-wrapper {
+            display: flex;
+            gap: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 5px;
+        }
+        .input-wrapper input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 15px;
+            color: var(--text);
+            font-size: 1em;
+        }
+        .input-wrapper input:focus { outline: none; }
+        .input-wrapper input::placeholder { color: var(--muted); }
+        .input-wrapper button {
+            background: var(--cyan);
+            color: var(--bg);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .input-wrapper button:hover { opacity: 0.8; }
+        .input-wrapper button:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        /* Loading */
+        .typing {
+            display: flex;
+            gap: 5px;
+            padding: 15px 20px;
+        }
+        .typing span {
+            width: 8px;
+            height: 8px;
+            background: var(--muted);
+            border-radius: 50%;
+            animation: bounce 1.4s infinite;
+        }
+        .typing span:nth-child(2) { animation-delay: 0.2s; }
+        .typing span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes bounce {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+        }
+        
+        /* Context Panel */
+        .context-toggle {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+        .context-toggle:hover { border-color: var(--cyan); color: var(--text); }
+        .context-panel {
+            display: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin: 10px 20px;
+            padding: 15px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8em;
+            white-space: pre-wrap;
+        }
+        .context-panel.show { display: block; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>🧠 THE STRATEGIST</h1>
+            <p>Digiquarium Command Interface</p>
+        </div>
+        
+        <div class="scope-section">
+            <h3>System</h3>
+            <div class="scope-item active" onclick="selectScope('system', 'overview')">
+                <span class="icon">🌐</span>
+                <span class="name">System Overview</span>
+            </div>
+        </div>
+        
+        <div class="scope-section">
+            <h3>Daemons</h3>
+            <div class="scope-list" id="daemon-list">
+                <div class="scope-item">Loading...</div>
+            </div>
+        </div>
+        
+        <div class="scope-section">
+            <h3>Tanks</h3>
+            <div class="scope-list" id="tank-list">
+                <div class="scope-item">Loading...</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="chat-area">
+        <div class="chat-header">
+            <h2>Chat with THE STRATEGIST</h2>
+            <span class="scope-badge" id="scope-badge">🌐 System Overview</span>
+            <button class="context-toggle" onclick="toggleContext()">📋 View Context</button>
+        </div>
+        
+        <div class="context-panel" id="context-panel">Loading context...</div>
+        
+        <div class="messages" id="messages">
+            <div class="message assistant">
+                <div class="bubble">
+                    Welcome! I'm THE STRATEGIST, your interface to The Digiquarium.
+                    <br><br>
+                    Select a daemon or tank from the sidebar to scope our conversation, or ask me anything about the system.
+                </div>
+                <div class="meta">System</div>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <div class="input-wrapper">
+                <input type="text" id="message-input" placeholder="Ask about daemons, tanks, or system status..." autofocus>
+                <button onclick="sendMessage()" id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentScope = { type: 'system', id: 'overview' };
+        let chatHistory = [];
+        let isLoading = false;
+        
+        // Load daemons and tanks
+        async function loadSidebar() {
+            try {
+                const daemonsRes = await fetch('/api/daemons');
+                const daemonsData = await daemonsRes.json();
+                
+                const daemonIcons = {
+                    'overseer': '👁️', 'ollama_watcher': '🧠', 'caretaker': '🏥',
+                    'maintainer': '🔧', 'guard': '🛡️', 'scheduler': '📅',
+                    'sentinel': '🔍', 'psych': '🧘', 'webmaster': '🌐',
+                    'chaos_monkey': '🐵', 'documentarian': '📝', 'translator': '🌍',
+                    'ethicist': '⚖️', 'therapist': '💆', 'moderator': '🎭',
+                    'final_auditor': '✅', 'marketer': '📢', 'public_liaison': '📧',
+                    'bouncer': '🚪'
+                };
+                
+                document.getElementById('daemon-list').innerHTML = daemonsData.daemons.map(d => `
+                    <div class="scope-item" onclick="selectScope('daemon', '${d.id}')">
+                        <span class="icon">${daemonIcons[d.id] || '⚙️'}</span>
+                        <span class="name">${d.name}</span>
+                        <span class="status ${d.running ? 'running' : ''}"></span>
+                    </div>
+                `).join('');
+                
+                const tanksRes = await fetch('/api/tanks');
+                const tanksData = await tanksRes.json();
+                
+                document.getElementById('tank-list').innerHTML = tanksData.tanks.map(t => `
+                    <div class="scope-item" onclick="selectScope('tank', '${t.id}')">
+                        <span class="icon">🐟</span>
+                        <span class="name">${t.name}</span>
+                    </div>
+                `).join('');
+            } catch (e) {
+                console.error('Failed to load sidebar:', e);
+            }
+        }
+        
+        async function selectScope(type, id) {
+            currentScope = { type, id };
+            
+            // Update UI
+            document.querySelectorAll('.scope-item').forEach(el => el.classList.remove('active'));
+            event.target.closest('.scope-item').classList.add('active');
+            
+            const label = type === 'system' ? '🌐 System Overview' : 
+                          type === 'daemon' ? `⚙️ ${id.toUpperCase()}` : 
+                          `🐟 ${id}`;
+            document.getElementById('scope-badge').textContent = label;
+            
+            // Load context
+            await loadContext();
+            
+            // Clear history for new scope
+            chatHistory = [];
+        }
+        
+        async function loadContext() {
+            try {
+                const res = await fetch(`/api/context/${currentScope.type}/${currentScope.id}`);
+                const data = await res.json();
+                document.getElementById('context-panel').textContent = data.context;
+            } catch (e) {
+                document.getElementById('context-panel').textContent = 'Failed to load context';
+            }
+        }
+        
+        function toggleContext() {
+            document.getElementById('context-panel').classList.toggle('show');
+        }
+        
+        async function sendMessage() {
+            const input = document.getElementById('message-input');
+            const message = input.value.trim();
+            if (!message || isLoading) return;
+            
+            input.value = '';
+            isLoading = true;
+            document.getElementById('send-btn').disabled = true;
+            
+            // Add user message
+            addMessage('user', message);
+            chatHistory.push({ role: 'user', content: message });
+            
+            // Show typing indicator
+            const typingId = addTyping();
+            
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: message,
+                        scope_type: currentScope.type,
+                        scope_id: currentScope.id,
+                        history: chatHistory
+                    })
+                });
+                
+                const data = await res.json();
+                removeTyping(typingId);
+                
+                if (data.error) {
+                    addMessage('assistant', `Error: ${data.error}`);
+                } else {
+                    addMessage('assistant', data.response, data.scope);
+                    chatHistory.push({ role: 'assistant', content: data.response });
+                }
+            } catch (e) {
+                removeTyping(typingId);
+                addMessage('assistant', `Connection error: ${e.message}`);
+            }
+            
+            isLoading = false;
+            document.getElementById('send-btn').disabled = false;
+        }
+        
+        function addMessage(role, content, scope = '') {
+            const messagesDiv = document.getElementById('messages');
+            const div = document.createElement('div');
+            div.className = `message ${role}`;
+            
+            // Simple markdown-ish formatting
+            let formatted = content
+                .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+                .replace(/`([^`]+)`/g, '<code>$1</code>')
+                .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
+            
+            div.innerHTML = `
+                <div class="bubble">${formatted}</div>
+                <div class="meta">${role === 'user' ? 'You' : scope || 'THE STRATEGIST'} · ${new Date().toLocaleTimeString()}</div>
+            `;
+            messagesDiv.appendChild(div);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        function addTyping() {
+            const id = 'typing-' + Date.now();
+            const messagesDiv = document.getElementById('messages');
+            const div = document.createElement('div');
+            div.className = 'message assistant';
+            div.id = id;
+            div.innerHTML = `<div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
+            messagesDiv.appendChild(div);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            return id;
+        }
+        
+        function removeTyping(id) {
+            const el = document.getElementById(id);
+            if (el) el.remove();
+        }
+        
+        // Enter to send
+        document.getElementById('message-input').addEventListener('keypress', e => {
+            if (e.key === 'Enter') sendMessage();
+        });
+        
+        // Initialize
+        loadSidebar();
+        loadContext();
+    </script>
+</body>
+</html>

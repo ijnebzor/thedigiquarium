@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T02:33:01.806421",
+  "timestamp": "2026-02-22T02:50:41.765269",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 6637,
+    "traces_today": 6653,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -68,13 +68,13 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Male",
-        "traces": 1553
+        "article": "Writing system",
+        "traces": 1560
       },
       {
         "name": "tank-04-abel",
-        "article": "Government",
-        "traces": 2159
+        "article": "Donald Trump",
+        "traces": 2168
       },
       {
         "name": "tank-05-juan",
@@ -93,13 +93,6 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-22 02:06:14 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
-    "2026-02-22 02:06:14 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
-    "2026-02-22 02:06:14 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 02:06:16 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
-    "2026-02-22 02:06:16 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-02-eve is Exited (137) Less than a second ago']",
-    "2026-02-22 02:06:16 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher has 2 instances (zombie leak)', 'psych not running']",
-    "2026-02-22 02:06:16 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 02:06:19 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
     "2026-02-22 02:06:19 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher has 2 instances (zombie leak)', 'psych not running']",
     "2026-02-22 02:11:21 \ud83d\udd0d [OVERSEER] Starting full system audit",
@@ -112,7 +105,14 @@
     "2026-02-22 02:26:34 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 02:26:35 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-22 02:31:37 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 02:31:38 \u2705 [OVERSEER] Full system audit PASSED"
+    "2026-02-22 02:31:38 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 02:36:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:36:42 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 02:41:44 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:41:45 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 02:41:45 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-07-klaus is Exited (137) Less than a second ago']",
+    "2026-02-22 02:46:47 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 02:46:48 \u2705 [OVERSEER] Full system audit PASSED"
   ],
   "issues": []
 }
