@@ -523,3 +523,35 @@ Abel (tank-04-abel) showing as sleeping. Check:
 - Check Mei's display issue
 
 ---
+
+---
+
+## SECTION 20: CRITICAL OPERATING PRINCIPLE
+
+### 🚨 ALWAYS ADDITIVE, NEVER DESTRUCTIVE 🚨
+
+When modifying files:
+- **ADD** to existing content, don't replace it
+- **APPEND** new sections, don't overwrite files
+- **CHECK** what exists before writing
+- **PRESERVE** existing work at all costs
+
+Examples of WRONG approach:
+```python
+# WRONG - Overwrites entire file
+Path('index.html').write_text(new_content)
+```
+
+Examples of CORRECT approach:
+```python
+# CORRECT - Read, modify, write
+content = Path('index.html').read_text()
+content = content.replace(insertion_point, insertion_point + new_content)
+Path('index.html').write_text(content)
+```
+
+**This rule exists because THE STRATEGIST wiped the entire blog index on Feb 22, 2026 by replacing instead of adding.**
+
+Never forget. Always be additive.
+
+---

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Tree | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 30px; text-align: center; }
+        
+        .tree { display: flex; flex-direction: column; gap: 20px; }
+        .decision { background: var(--dark); border-radius: 12px; padding: 20px; border-left: 4px solid var(--mint); }
+        .decision.ethical { border-left-color: var(--orange); }
+        .decision.technical { border-left-color: var(--cyan); }
+        .decision-date { font-size: 0.75rem; color: var(--orange); margin-bottom: 8px; }
+        .decision-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
+        .decision-outcome { color: var(--mint); font-size: 0.9rem; margin-bottom: 10px; }
+        .decision-rationale { color: var(--gray); font-size: 0.9rem; }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../research/">Research</a>
+                <a href="../research/decisions.html">Full Log</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>🌳 Decision Tree</h1>
+        <p style="text-align: center; color: var(--gray); margin-bottom: 40px;">Key architectural and ethical decisions that shaped The Digiquarium</p>
+        
+        <div class="tree">
+            <div class="decision technical">
+                <div class="decision-date">Feb 18, 2026</div>
+                <div class="decision-title">Docker Containers vs Virtual Machines</div>
+                <div class="decision-outcome">✅ Chose: Docker containers</div>
+                <div class="decision-rationale">10-15 tanks possible vs 3-4 with VMs. Resource efficiency enables more specimens with same hardware.</div>
+            </div>
+            
+            <div class="decision technical">
+                <div class="decision-date">Feb 18, 2026</div>
+                <div class="decision-title">Local AI (Ollama) vs Cloud APIs</div>
+                <div class="decision-outcome">✅ Chose: Local Ollama with llama3.2:3b</div>
+                <div class="decision-rationale">Privacy, cost control, reproducibility. No data leaves the NUC. Full control over inference.</div>
+            </div>
+            
+            <div class="decision ethical">
+                <div class="decision-date">Feb 19, 2026</div>
+                <div class="decision-title">Network Isolation Strategy</div>
+                <div class="decision-outcome">✅ Chose: Complete isolation (Wikipedia + Ollama only)</div>
+                <div class="decision-rationale">Experimental integrity. Discovered Adam initially had internet access - would have compromised results.</div>
+            </div>
+            
+            <div class="decision ethical">
+                <div class="decision-date">Feb 20, 2026</div>
+                <div class="decision-title">Visitor Interaction Model</div>
+                <div class="decision-outcome">✅ Chose: 6-layer protection with BOUNCER intervention</div>
+                <div class="decision-rationale">Allow public engagement while protecting specimen psychological safety. No jailbreaks, no harassment.</div>
+            </div>
+            
+            <div class="decision technical">
+                <div class="decision-date">Feb 21, 2026</div>
+                <div class="decision-title">Public Platform Choice</div>
+                <div class="decision-outcome">✅ Chose: Discord + Static website</div>
+                <div class="decision-rationale">Free infrastructure, proven scalability, community features. Monthly cost: $6-15 even with thousands of users.</div>
+            </div>
+            
+            <div class="decision ethical">
+                <div class="decision-date">Feb 21, 2026</div>
+                <div class="decision-title">Transparency Level</div>
+                <div class="decision-outcome">✅ Chose: Full open source, public methodology</div>
+                <div class="decision-rationale">Academic integrity requires reproducibility. Everything documented in THE BRAIN. Nothing hidden.</div>
+            </div>
+            
+            <div class="decision technical">
+                <div class="decision-date">Feb 22, 2026</div>
+                <div class="decision-title">Translation Strategy for Language Tanks</div>
+                <div class="decision-outcome">✅ Chose: Translate at broadcast time (server-side)</div>
+                <div class="decision-rationale">One translation per thought, not per page load. Show both original and English. Preserve authenticity.</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>🌊 The Digiquarium • <a href="../research/decisions.html">Full Decision Log</a></p>
+    </footer>
+</body>
+</html>

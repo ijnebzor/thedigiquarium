@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T05:39:01.424570",
+  "timestamp": "2026-02-22T05:47:01.537058",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -54,17 +54,17 @@
   },
   "tanks": {
     "running": 18,
-    "traces_today": 6907,
+    "traces_today": 6918,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Photograph",
-        "traces": 1207
+        "article": "Computer hardware",
+        "traces": 1210
       },
       {
         "name": "tank-02-eve",
         "article": "Myanmar",
-        "traces": 1204
+        "traces": 1207
       },
       {
         "name": "tank-03-cain",
@@ -73,13 +73,13 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "British English",
-        "traces": 2252
+        "article": "Manga",
+        "traces": 2256
       },
       {
         "name": "tank-05-juan",
-        "article": "Escherichia coli",
-        "traces": 660
+        "article": "M\u00fasica",
+        "traces": 661
       }
     ]
   },
@@ -88,16 +88,11 @@
   },
   "overseer": {
     "running": true,
-    "last_audit_healthy": true,
+    "last_audit_healthy": false,
     "active_incidents": 0,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-22 04:48:25 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 04:48:26 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 04:53:30 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 04:58:33 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 04:58:33 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-22 05:03:37 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 05:03:38 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-22 05:08:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
@@ -112,7 +107,12 @@
     "2026-02-22 05:29:09 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 05:29:11 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-22 05:34:13 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:34:15 \u2705 [OVERSEER] Full system audit PASSED"
+    "2026-02-22 05:34:15 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 05:39:17 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 05:39:19 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 05:44:21 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 05:44:24 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 05:44:24 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 3 minutes ago']"
   ],
   "issues": []
 }
