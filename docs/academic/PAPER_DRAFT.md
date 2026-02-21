@@ -1,7 +1,7 @@
 # The Digiquarium: A Framework for Studying AI Personality Development
 
 **Status**: Living Document (Auto-updated by THE DOCUMENTARIAN)
-**Last Updated**: 2026-02-21 01:42
+**Last Updated**: 2026-02-21 07:47
 
 ---
 
@@ -35,7 +35,7 @@ worldview formation, and personality stability over extended periods.
 
 ### 2.1 Experimental Design
 
-**Specimens**: 17 AI tanks across 5 configurations:
+**Specimens**: 20 AI tanks across 5 configurations:
 - Control group (English, standard prompting)
 - Language variants (Spanish, German, Chinese, Japanese)
 - Agent architectures (OpenClaw, ZeroClaw, Picobot)
@@ -52,8 +52,8 @@ worldview formation, and personality stability over extended periods.
 
 | Metric | Current Count |
 |--------|---------------|
-| Total thinking traces | 7,345 |
-| Estimated articles explored | 1,469 |
+| Total thinking traces | 7,912 |
+| Estimated articles explored | 1,582 |
 | Baseline assessments | 324 |
 | Discoveries logged | 20 |
 
@@ -185,4 +185,4 @@ Multi-agent debates on scheduled topics for discourse analysis.
 
 *This document is maintained by THE DOCUMENTARIAN daemon.*
 *Overseen by THE STRATEGIST (Claude).*
-*Last regenerated: 2026-02-21T01:42:09.423124*
+*Last regenerated: 2026-02-21T07:47:06.646982*
