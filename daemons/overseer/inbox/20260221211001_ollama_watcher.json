@@ -1,9 +1,0 @@
-{
-  "from": "ollama_watcher",
-  "timestamp": "2026-02-21T21:10:01.535588",
-  "message": "Ollama unrecoverable after 3 restart attempts. Total failures: 5. Requires human intervention.",
-  "severity": "critical",
-  "consecutive_failures": 5,
-  "restart_attempts": 3,
-  "total_failures": 5
-}

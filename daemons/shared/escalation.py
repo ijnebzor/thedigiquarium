@@ -1,36 +1,34 @@
+#!/usr/bin/env python3
 """
-Shared Escalation Utility
-=========================
-Provides standard escalation mechanism for all daemons.
-All daemons can now escalate issues to THE OVERSEER.
+Shared escalation utilities for all daemons.
+All critical daemons can escalate to THE OVERSEER.
 """
 
 import json
 from datetime import datetime
 from pathlib import Path
 
-OVERSEER_INBOX = Path('/home/ijneb/digiquarium/daemons/overseer/inbox')
+DAEMONS_DIR = Path('/home/ijneb/digiquarium/daemons')
+OVERSEER_INBOX = DAEMONS_DIR / 'overseer' / 'inbox'
 
-
-def escalate_to_overseer(daemon_name: str, message: str, severity: str = 'high', 
-                         context: dict = None):
+def escalate_to_overseer(daemon_name: str, message: str, severity: str = 'medium', details: dict = None):
     """
-    Escalate an issue to THE OVERSEER.
+    Send an escalation to THE OVERSEER.
     
     Args:
-        daemon_name: Name of the daemon raising the issue
-        message: Description of the issue
-        severity: 'critical', 'high', 'medium', 'low'
-        context: Additional context (logs, stats, etc.)
+        daemon_name: Name of the calling daemon
+        message: Human-readable description of the issue
+        severity: 'low', 'medium', 'high', or 'critical'
+        details: Optional dict with additional context
     """
     OVERSEER_INBOX.mkdir(parents=True, exist_ok=True)
     
     issue = {
         'from': daemon_name,
         'timestamp': datetime.now().isoformat(),
-        'message': message,
         'severity': severity,
-        'context': context or {}
+        'message': message,
+        'details': details or {}
     }
     
     filename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_{daemon_name}.json"
@@ -39,25 +37,26 @@ def escalate_to_overseer(daemon_name: str, message: str, severity: str = 'high',
     return filename
 
 
-def check_sla_breach(daemon_name: str, metric: str, threshold_minutes: int, 
-                     last_success_time: datetime) -> bool:
+def check_sla_breach(daemon_name: str, metric: str, threshold_minutes: int, current_value: float) -> bool:
     """
-    Check if an SLA has been breached and escalate if so.
+    Check if an SLA has been breached.
     
-    Returns True if breached.
+    Args:
+        daemon_name: Name of the checking daemon
+        metric: What is being measured (e.g., 'detection_time', 'remediation_time')
+        threshold_minutes: Maximum allowed minutes
+        current_value: Current value in minutes
+    
+    Returns:
+        True if SLA is breached (current > threshold)
     """
-    from datetime import datetime, timedelta
-    
-    now = datetime.now()
-    elapsed = (now - last_success_time).total_seconds() / 60
-    
-    if elapsed > threshold_minutes:
+    if current_value > threshold_minutes:
+        # SLA breached - escalate
         escalate_to_overseer(
             daemon_name,
-            f'SLA breach: {metric} has not succeeded in {elapsed:.0f} minutes (threshold: {threshold_minutes}min)',
+            f"SLA BREACH: {metric} is {current_value:.1f} minutes (threshold: {threshold_minutes})",
             severity='high',
-            context={'metric': metric, 'elapsed_minutes': elapsed, 'threshold_minutes': threshold_minutes}
+            details={'metric': metric, 'threshold': threshold_minutes, 'value': current_value}
         )
         return True
-    
     return False

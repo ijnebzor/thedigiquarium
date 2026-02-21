@@ -26,7 +26,7 @@ CHECK_INTERVAL = 60  # 1 minute
 
 # All managed daemons
 MANAGED_DAEMONS = [
-    'caretaker', 'guard', 'sentinel', 'scheduler', 
+    'guard', 'sentinel', 'scheduler', 
     'translator', 'documentarian', 'webmaster', 
     'ollama_watcher', 'final_auditor', 'psych'
 ]

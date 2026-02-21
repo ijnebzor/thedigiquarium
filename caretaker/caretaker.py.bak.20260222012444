@@ -20,8 +20,6 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
-import fcntl
-import signal
 
 # Configuration
 DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
@@ -399,38 +397,7 @@ def main():
             time.sleep(60)
 
 
-
-# Single instance lock
-LOCK_FILE = DIGIQUARIUM_DIR / 'caretaker' / 'caretaker.lock'
-PID_FILE = DIGIQUARIUM_DIR / 'caretaker' / 'caretaker.pid'
-
-def acquire_lock():
-    """Ensure only one caretaker runs"""
-    LOCK_FILE.parent.mkdir(parents=True, exist_ok=True)
-    global lock_fd
-    lock_fd = open(LOCK_FILE, 'w')
-    try:
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        PID_FILE.write_text(str(os.getpid()))
-        return True
-    except IOError:
-        print("ERROR: Another caretaker instance is already running")
-        return False
-
-def release_lock():
-    """Release lock on shutdown"""
-    try:
-        fcntl.flock(lock_fd, fcntl.LOCK_UN)
-        lock_fd.close()
-        PID_FILE.unlink(missing_ok=True)
-        LOCK_FILE.unlink(missing_ok=True)
-    except:
-        pass
-
-
 if __name__ == '__main__':
-    if not acquire_lock():
-        sys.exit(1)
     # If run with 'once' argument, just do one cycle
     if len(sys.argv) > 1 and sys.argv[1] == 'once':
         run_maintenance_cycle()

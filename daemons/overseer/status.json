@@ -1,0 +1,251 @@
+{
+  "timestamp": "2026-02-22T01:48:06.834072",
+  "active_incidents": {},
+  "stats": {
+    "cycles": 11,
+    "incidents_detected": 0,
+    "incidents_resolved": 0,
+    "escalations_sent": 0,
+    "auto_remediations": 0,
+    "start_time": "2026-02-22T01:37:57.509045"
+  },
+  "last_full_audit": {
+    "timestamp": "2026-02-22T01:48:05.969898",
+    "ollama": {
+      "healthy": true,
+      "issues": []
+    },
+    "containers": {
+      "healthy": true,
+      "issues": [],
+      "containers": {
+        "digiquarium-ollama": {
+          "status": "Up 2 minutes",
+          "healthy": true
+        },
+        "tank-01-adam": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-02-eve": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "digiquarium-kiwix-simple": {
+          "status": "Up About an hour",
+          "healthy": true
+        },
+        "tank-visitor-01-aria": {
+          "status": "Up 12 hours",
+          "healthy": true
+        },
+        "tank-visitor-02-felix": {
+          "status": "Up 12 hours",
+          "healthy": true
+        },
+        "tank-visitor-03-luna": {
+          "status": "Up 12 hours",
+          "healthy": true
+        },
+        "tank-17-seth": {
+          "status": "Up 3 hours",
+          "healthy": true
+        },
+        "congregation-runner": {
+          "status": "Up About an hour",
+          "healthy": true
+        },
+        "tank-03-cain": {
+          "status": "Up 53 minutes",
+          "healthy": true
+        },
+        "tank-04-abel": {
+          "status": "Up 14 minutes",
+          "healthy": true
+        },
+        "tank-16-seeker": {
+          "status": "Up 26 hours",
+          "healthy": true
+        },
+        "tank-15-observer": {
+          "status": "Up 26 hours",
+          "healthy": true
+        },
+        "tank-14-iris": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-13-victor": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-12-sakura": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-10-mei": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-09-wei": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-11-haruki": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-08-genevieve": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-05-juan": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-07-klaus": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "tank-06-juanita": {
+          "status": "Up About a minute",
+          "healthy": true
+        },
+        "digiquarium-kiwix-japanese": {
+          "status": "Up 46 hours",
+          "healthy": true
+        },
+        "digiquarium-kiwix-chinese": {
+          "status": "Up 47 hours",
+          "healthy": true
+        },
+        "digiquarium-kiwix-german": {
+          "status": "Up 47 hours",
+          "healthy": true
+        },
+        "digiquarium-kiwix-spanish": {
+          "status": "Up 2 days",
+          "healthy": true
+        },
+        "digiquarium-kiwix-maxi": {
+          "status": "Up 2 days",
+          "healthy": true
+        }
+      }
+    },
+    "daemons": {
+      "healthy": true,
+      "issues": [],
+      "daemons": {
+        "caretaker": {
+          "running": true,
+          "count": 1
+        },
+        "maintainer": {
+          "running": true,
+          "count": 1
+        },
+        "guard": {
+          "running": true,
+          "count": 1
+        },
+        "sentinel": {
+          "running": true,
+          "count": 1
+        },
+        "scheduler": {
+          "running": true,
+          "count": 1
+        },
+        "ollama_watcher": {
+          "running": true,
+          "count": 1
+        },
+        "psych": {
+          "running": true,
+          "count": 1
+        }
+      }
+    },
+    "tanks": {
+      "healthy": true,
+      "issues": [],
+      "tanks": {
+        "tank-01": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-02": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-03": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-04": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-05": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-06": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-07": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-08": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-09": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-10": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-11": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-12": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-13": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-14": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-15": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-16": {
+          "traces_today": 0,
+          "healthy": true
+        },
+        "tank-17": {
+          "traces_today": 0,
+          "healthy": true
+        }
+      }
+    },
+    "network": {
+      "healthy": true,
+      "issues": []
+    },
+    "issues": [],
+    "overall_healthy": true
+  }
+}

@@ -1,7 +1,10 @@
 {
-  "timestamp": "2026-02-22T00:29:21.890212",
-  "healthy": false,
-  "consecutive_failures": 39,
-  "restart_attempts": 3,
-  "total_failures": 39
+  "timestamp": "2026-02-22T01:48:12.454033",
+  "windows_ollama_healthy": true,
+  "proxy_container_healthy": true,
+  "end_to_end_healthy": true,
+  "overall_healthy": true,
+  "consecutive_failures": 0,
+  "restart_attempts": 0,
+  "total_failures": 14
 }
