@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-22T05:02:37.728573",
+  "timestamp": "2026-02-22T05:12:45.749220",
   "active_incidents": {},
   "stats": {
-    "cycles": 175,
+    "cycles": 185,
     "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
@@ -10,7 +10,7 @@
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-22T04:58:33.088596",
+    "timestamp": "2026-02-22T05:08:40.614477",
     "ollama": {
       "healthy": true,
       "issues": []
@@ -32,23 +32,23 @@
           "healthy": true
         },
         "digiquarium-kiwix-simple": {
-          "status": "Up 4 hours",
+          "status": "Up 5 hours",
           "healthy": true
         },
         "tank-visitor-01-aria": {
-          "status": "Up 15 hours",
+          "status": "Up 16 hours",
           "healthy": true
         },
         "tank-visitor-02-felix": {
-          "status": "Up 15 hours",
+          "status": "Up 16 hours",
           "healthy": true
         },
         "tank-visitor-03-luna": {
-          "status": "Up 15 hours",
+          "status": "Up 16 hours",
           "healthy": true
         },
         "tank-17-seth": {
-          "status": "Up 2 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "congregation-runner": {
@@ -56,11 +56,11 @@
           "healthy": true
         },
         "tank-03-cain": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-04-abel": {
-          "status": "Up 3 hours",
+          "status": "Up 4 hours",
           "healthy": true
         },
         "tank-16-seeker": {
@@ -80,19 +80,19 @@
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up 2 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up 2 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-09-wei": {
-          "status": "Up 3 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up 2 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-08-genevieve": {
@@ -100,7 +100,7 @@
           "healthy": true
         },
         "tank-05-juan": {
-          "status": "Up 51 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "tank-07-klaus": {
@@ -108,7 +108,7 @@
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up 3 minutes",
+          "status": "Up About a minute",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {

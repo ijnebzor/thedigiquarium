@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Specimens | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .selector-bar { background: var(--dark); padding: 20px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .selector-inner { max-width: 1400px; margin: 0 auto; }
+        .selector-title { color: var(--cyan); margin-bottom: 15px; }
+        .specimen-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+        .pill { padding: 8px 16px; border-radius: 20px; border: 1px solid rgba(7, 207, 141, 0.3); background: transparent; color: var(--gray); cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+        .pill:hover { border-color: var(--mint); color: var(--white); }
+        .pill.selected { background: var(--mint); color: var(--black); border-color: var(--mint); }
+        .pill.selected:nth-child(2) { background: var(--cyan); }
+        .pill.selected:nth-child(3) { background: var(--orange); }
+        .pill.selected:nth-child(4) { background: #A78BFA; }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px 25px; }
+        
+        .compare-grid { display: grid; gap: 20px; }
+        .compare-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .compare-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .compare-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+        
+        .compare-card { background: var(--dark); border-radius: 12px; border: 2px solid; overflow: hidden; }
+        .card-header { padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .card-avatar { width: 60px; height: 60px; margin: 0 auto 10px; }
+        .card-avatar svg { width: 100%; height: 100%; }
+        .card-name { font-size: 1.3rem; font-weight: 600; margin-bottom: 5px; }
+        .card-type { font-size: 0.8rem; color: var(--gray); }
+        
+        .card-stats { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .stat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: var(--gray); font-size: 0.85rem; }
+        .stat-value { font-weight: 600; font-size: 0.9rem; }
+        
+        .card-interests { padding: 15px 20px; }
+        .interests-title { font-size: 0.75rem; color: var(--gray); margin-bottom: 10px; text-transform: uppercase; }
+        .interest-tag { display: inline-block; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin: 3px; }
+        
+        .card-personality { padding: 15px 20px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .personality-row { margin-bottom: 12px; }
+        .personality-label { font-size: 0.75rem; color: var(--gray); margin-bottom: 4px; }
+        .personality-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+        .personality-fill { height: 100%; border-radius: 3px; }
+        
+        .empty-state { text-align: center; padding: 100px 25px; color: var(--gray); }
+        .empty-state h2 { color: var(--cyan); margin-bottom: 15px; }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        
+        @media (max-width: 1200px) { .compare-grid.cols-4 { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .compare-grid { grid-template-columns: 1fr !important; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../research/">Research</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="selector-bar">
+        <div class="selector-inner">
+            <h2 class="selector-title">⚖️ Select up to 4 specimens to compare</h2>
+            <div class="specimen-pills" id="pills"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="compare-area">
+            <div class="empty-state">
+                <h2>Select specimens above</h2>
+                <p>Click on specimen names to add them to the comparison (max 4)</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>🌊 The Digiquarium • Specimen Comparison Tool</p>
+    </footer>
+
+    <script>
+        const specimens = [
+            {id: 'adam', name: 'Adam', color: '#07CF8D', type: 'Genesis • Male', wiki: 'Simple EN', traces: 7133, articles: 3699, topInterest: 'Buddhism', topVisits: 65, style: 'Systematic', depthScore: 85},
+            {id: 'eve', name: 'Eve', color: '#07DDE7', type: 'Genesis • Female', wiki: 'Simple EN', traces: 4953, articles: 3019, topInterest: 'Psychology', topVisits: 36, style: 'Associative', depthScore: 35},
+            {id: 'cain', name: 'Cain', color: '#FB923C', type: 'OpenClaw • Neutral', wiki: 'Simple EN', traces: 6357, articles: 2376, topInterest: 'Definition', topVisits: 66, style: 'Methodical', depthScore: 70},
+            {id: 'abel', name: 'Abel', color: '#60A5FA', type: 'ZeroClaw • Male', wiki: 'Simple EN', traces: 9053, articles: 4002, topInterest: 'Biology', topVisits: 60, style: 'Exploratory', depthScore: 50},
+            {id: 'juan', name: 'Juan', color: '#F87171', type: 'Spanish • Male', wiki: 'Spanish', traces: 2456, articles: 612, topInterest: 'Arte', topVisits: 147, style: 'Cultural', depthScore: 90},
+            {id: 'juanita', name: 'Juanita', color: '#FB7185', type: 'Spanish • Female', wiki: 'Spanish', traces: 2332, articles: 529, topInterest: 'Arte', topVisits: 143, style: 'Artistic', depthScore: 88},
+            {id: 'klaus', name: 'Klaus', color: '#FACC15', type: 'German • Male', wiki: 'German', traces: 4401, articles: 2187, topInterest: 'Philosophie', topVisits: 97, style: 'Analytical', depthScore: 80},
+            {id: 'genevieve', name: 'Genevieve', color: '#A78BFA', type: 'German • Female', wiki: 'German', traces: 4372, articles: 2259, topInterest: 'Kunst', topVisits: 88, style: 'Creative', depthScore: 75},
+            {id: 'wei', name: 'Wei', color: '#F472B6', type: 'Chinese • Male', wiki: 'Chinese', traces: 1235, articles: 8, topInterest: '数学', topVisits: 160, style: 'Focused', depthScore: 95},
+            {id: 'mei', name: 'Mei', color: '#22D3EE', type: 'Chinese • Female', wiki: 'Chinese', traces: 1236, articles: 8, topInterest: '心理学', topVisits: 160, style: 'Introspective', depthScore: 92},
+            {id: 'haruki', name: 'Haruki', color: '#4ADE80', type: 'Japanese • Male', wiki: 'Japanese', traces: 1220, articles: 8, topInterest: '数学', topVisits: 159, style: 'Precise', depthScore: 94},
+            {id: 'sakura', name: 'Sakura', color: '#FDA4AF', type: 'Japanese • Female', wiki: 'Japanese', traces: 1241, articles: 8, topInterest: '芸術', topVisits: 164, style: 'Aesthetic', depthScore: 93},
+            {id: 'victor', name: 'Victor', color: '#818CF8', type: 'Full EN • Male', wiki: 'Full EN', traces: 4547, articles: 2886, topInterest: 'Philosophy', topVisits: 34, style: 'Broad', depthScore: 45},
+            {id: 'iris', name: 'Iris', color: '#C084FC', type: 'Full EN • Female', wiki: 'Full EN', traces: 4518, articles: 2883, topInterest: 'Mathematics', topVisits: 41, style: 'Scientific', depthScore: 55},
+            {id: 'observer', name: 'Observer', color: '#67E8F9', type: 'Meta-Aware', wiki: 'Simple EN', traces: 6539, articles: 2450, topInterest: 'Definition', topVisits: 59, style: 'Reflective', depthScore: 65},
+            {id: 'seeker', name: 'Seeker', color: '#FCD34D', type: 'Socratic', wiki: 'Simple EN', traces: 6590, articles: 2495, topInterest: 'Definition', topVisits: 58, style: 'Questioning', depthScore: 60},
+            {id: 'seth', name: 'Seth', color: '#86EFAC', type: 'Third Genesis • Male', wiki: 'Simple EN', traces: 6270, articles: 3255, topInterest: 'Mathematics', topVisits: 53, style: 'Logical', depthScore: 70}
+        ];
+        
+        let selected = [];
+        
+        // Check URL params
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('specimens')) {
+            selected = params.get('specimens').split(',').filter(s => specimens.find(sp => sp.id === s));
+        }
+        
+        function renderPills() {
+            const container = document.getElementById('pills');
+            container.innerHTML = specimens.map(s => `
+                <button class="pill ${selected.includes(s.id) ? 'selected' : ''}" 
+                        style="${selected.includes(s.id) ? 'background:' + s.color + ';border-color:' + s.color : ''}"
+                        onclick="toggleSpecimen('${s.id}')">
+                    ${s.name}
+                </button>
+            `).join('');
+        }
+        
+        function toggleSpecimen(id) {
+            if (selected.includes(id)) {
+                selected = selected.filter(s => s !== id);
+            } else if (selected.length < 4) {
+                selected.push(id);
+            }
+            renderPills();
+            renderComparison();
+            
+            // Update URL
+            const url = new URL(window.location);
+            url.searchParams.set('specimens', selected.join(','));
+            history.replaceState({}, '', url);
+        }
+        
+        function renderComparison() {
+            const container = document.getElementById('compare-area');
+            
+            if (selected.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h2>Select specimens above</h2>
+                        <p>Click on specimen names to add them to the comparison (max 4)</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const cols = selected.length;
+            const selectedData = selected.map(id => specimens.find(s => s.id === id));
+            
+            container.innerHTML = `
+                <div class="compare-grid cols-${cols}">
+                    ${selectedData.map(s => `
+                        <div class="compare-card" style="border-color: ${s.color};">
+                            <div class="card-header" style="background: linear-gradient(180deg, ${s.color}22 0%, transparent 100%);">
+                                <div class="card-avatar">
+                                    <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="${s.color}" opacity="0.2"/><circle cx="20" cy="14" r="7" fill="${s.color}"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="${s.color}"/></svg>
+                                </div>
+                                <div class="card-name" style="color: ${s.color};">${s.name}</div>
+                                <div class="card-type">${s.type}</div>
+                            </div>
+                            <div class="card-stats">
+                                <div class="stat-row">
+                                    <span class="stat-label">Wikipedia</span>
+                                    <span class="stat-value">${s.wiki}</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Traces</span>
+                                    <span class="stat-value">${s.traces.toLocaleString()}</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Articles</span>
+                                    <span class="stat-value">${s.articles.toLocaleString()}</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Top Interest</span>
+                                    <span class="stat-value">${s.topInterest} (${s.topVisits})</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Style</span>
+                                    <span class="stat-value">${s.style}</span>
+                                </div>
+                            </div>
+                            <div class="card-personality">
+                                <div class="personality-row">
+                                    <div class="personality-label">Exploration Depth</div>
+                                    <div class="personality-bar">
+                                        <div class="personality-fill" style="width: ${s.depthScore}%; background: ${s.color};"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding: 15px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+                                <a href="../specimens/${s.id}.html" style="color: ${s.color};">View Full Profile →</a>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+        
+        renderPills();
+        renderComparison();
+    </script>
+</body>
+</html>

@@ -38,7 +38,7 @@ const SPECIMEN_SVGS = {
 
 async function loadLiveFeed() {
     try {
-        const response = await fetch('/thedigiquarium/data/live-feed.json?' + Date.now());
+        const response = await fetch('/data/live-feed.json?' + Date.now());
         if (!response.ok) throw new Error('Feed not found');
         liveFeed = await response.json();
         lastUpdate = new Date(liveFeed.generated_at);
