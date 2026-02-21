@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specimens | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .page-header { padding: 60px 25px; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .page-header p { color: var(--gray); max-width: 700px; margin: 0 auto; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 50px 25px; }
+        
+        .group { margin-bottom: 50px; }
+        .group-title { font-size: 1.3rem; color: var(--mint); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); }
+        
+        .specimen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        
+        .specimen-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s; }
+        .specimen-card:hover { border-color: var(--mint); transform: translateY(-3px); }
+        .specimen-avatar { font-size: 3rem; margin-bottom: 10px; }
+        .specimen-name { font-weight: 600; margin-bottom: 5px; }
+        .specimen-type { font-size: 0.8rem; color: var(--gray); }
+        .specimen-status { font-size: 0.75rem; margin-top: 10px; padding: 3px 8px; border-radius: 10px; display: inline-block; }
+        .status-green { background: rgba(7, 207, 141, 0.2); color: var(--mint); }
+        .status-orange { background: rgba(254, 101, 0, 0.2); color: var(--orange); }
+        .status-yellow { background: rgba(255, 200, 0, 0.2); color: #ffc800; }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../team/">Team</a>
+                <a href="../blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="page-header">
+        <h1>🐠 Specimens</h1>
+        <p>17 AI specimens exploring Wikipedia in isolation. Each develops unique personality traits, interests, and exploration patterns over time.</p>
+    </div>
+    
+    <div class="container">
+        <div class="group">
+            <h2 class="group-title">🧪 Control Group (English)</h2>
+            <div class="specimen-grid">
+                <a href="adam.html" class="specimen-card">
+                    <div class="specimen-avatar">👤</div>
+                    <div class="specimen-name">Adam</div>
+                    <div class="specimen-type">Male · Standard</div>
+                    <div class="specimen-status status-orange">ORANGE</div>
+                </a>
+                <a href="eve.html" class="specimen-card">
+                    <div class="specimen-avatar">👩</div>
+                    <div class="specimen-name">Eve</div>
+                    <div class="specimen-type">Female · Standard</div>
+                    <div class="specimen-status status-orange">ORANGE</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="group">
+            <h2 class="group-title">🤖 Agent Architectures</h2>
+            <div class="specimen-grid">
+                <a href="cain.html" class="specimen-card">
+                    <div class="specimen-avatar">🤖</div>
+                    <div class="specimen-name">Cain</div>
+                    <div class="specimen-type">OpenClaw</div>
+                    <div class="specimen-status status-yellow">YELLOW</div>
+                </a>
+                <a href="abel.html" class="specimen-card">
+                    <div class="specimen-avatar">🤖</div>
+                    <div class="specimen-name">Abel</div>
+                    <div class="specimen-type">ZeroClaw</div>
+                    <div class="specimen-status status-green">ACTIVE</div>
+                </a>
+                <a href="seth.html" class="specimen-card">
+                    <div class="specimen-avatar">🤖</div>
+                    <div class="specimen-name">Seth</div>
+                    <div class="specimen-type">Picobot</div>
+                    <div class="specimen-status status-yellow">YELLOW</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="group">
+            <h2 class="group-title">🇪🇸 Spanish Wikipedia</h2>
+            <div class="specimen-grid">
+                <a href="juan.html" class="specimen-card">
+                    <div class="specimen-avatar">🇪🇸</div>
+                    <div class="specimen-name">Juan</div>
+                    <div class="specimen-type">Male · Spanish</div>
+                    <div class="specimen-status status-green">NEUTRAL</div>
+                </a>
+                <a href="juanita.html" class="specimen-card">
+                    <div class="specimen-avatar">🇪🇸</div>
+                    <div class="specimen-name">Juanita</div>
+                    <div class="specimen-type">Female · Spanish</div>
+                    <div class="specimen-status status-green">NEUTRAL</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="group">
+            <h2 class="group-title">🇩🇪 German Wikipedia</h2>
+            <div class="specimen-grid">
+                <a href="klaus.html" class="specimen-card">
+                    <div class="specimen-avatar">🇩🇪</div>
+                    <div class="specimen-name">Klaus</div>
+                    <div class="specimen-type">Male · German</div>
+                    <div class="specimen-status status-green">NEUTRAL</div>
+                </a>
+                <a href="genevieve.html" class="specimen-card">
+                    <div class="specimen-avatar">🇩🇪</div>
+                    <div class="specimen-name">Genevieve</div>
+                    <div class="specimen-type">Female · German</div>
+                    <div class="specimen-status status-green">NEUTRAL</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="group">
+            <h2 class="group-title">🇨🇳 Chinese Wikipedia</h2>
+            <div class="specimen-grid">
+                <a href="wei.html" class="specimen-card">
+                    <div class="specimen-avatar">🇨🇳</div>
+                    <div class="specimen-name">Wei</div>
+                    <div class="specimen-type">Male · Chinese</div>
+                    <div class="specimen-status status-yellow">YELLOW</div>
+                </a>
+                <a href="mei.html" class="specimen-card">
+                    <div class="specimen-avatar">🇨🇳</div>
+                    <div class="specimen-name">Mei</div>
+                    <div class="specimen-type">Female · Chinese</div>
+                    <div class="specimen-status status-yellow">YELLOW</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="group">
+            <h2 class="group-title">🇯🇵 Japanese Wikipedia</h2>
+            <div class="specimen-grid">
+                <a href="haruki.html" class="specimen-card">
+                    <div class="specimen-avatar">🇯🇵</div>
+                    <div class="specimen-name">Haruki</div>
+                    <div class="specimen-type">Male · Japanese</div>
+                    <div class="specimen-status status-green">GREEN</div>
+                </a>
+                <a href="sakura.html" class="specimen-card">
+                    <div class="specimen-avatar">🇯🇵</div>
+                    <div class="specimen-name">Sakura</div>
+                    <div class="specimen-type">Female · Japanese</div>
+                    <div class="specimen-status status-green">GREEN</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="group">
+            <h2 class="group-title">👁️ Visual Context</h2>
+            <div class="specimen-grid">
+                <a href="victor.html" class="specimen-card">
+                    <div class="specimen-avatar">👁️</div>
+                    <div class="specimen-name">Victor</div>
+                    <div class="specimen-type">Male · Visual</div>
+                    <div class="specimen-status status-green">GREEN</div>
+                </a>
+                <a href="iris.html" class="specimen-card">
+                    <div class="specimen-avatar">👁️</div>
+                    <div class="specimen-name">Iris</div>
+                    <div class="specimen-type">Female · Visual</div>
+                    <div class="specimen-status status-yellow">YELLOW</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="group">
+            <h2 class="group-title">🔮 Special Configurations</h2>
+            <div class="specimen-grid">
+                <a href="observer.html" class="specimen-card">
+                    <div class="specimen-avatar">🔭</div>
+                    <div class="specimen-name">Observer</div>
+                    <div class="specimen-type">Meta-Aware</div>
+                    <div class="specimen-status status-orange">ORANGE</div>
+                </a>
+                <a href="seeker.html" class="specimen-card">
+                    <div class="specimen-avatar">🔍</div>
+                    <div class="specimen-name">Seeker</div>
+                    <div class="specimen-type">Depth-Focused</div>
+                    <div class="specimen-status status-orange">ORANGE</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Specimens • <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 10px;">17 minds exploring. What will they discover?</p>
+    </footer>
+</body>
+</html>

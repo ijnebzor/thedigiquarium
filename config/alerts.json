@@ -1,0 +1,13 @@
+{
+  "human_operator": {
+    "name": "Benji",
+    "email": "benjiz@gmail.com",
+    "escalation_threshold_minutes": 30
+  },
+  "alert_conditions": {
+    "ollama_down": {"severity": "critical", "auto_restart": true, "email_after_failures": 3},
+    "all_tanks_silent": {"severity": "critical", "email_immediately": true},
+    "daemon_crash": {"severity": "high", "auto_restart": true, "email_after_failures": 2},
+    "sla_breach": {"severity": "high", "email_immediately": true}
+  }
+}
