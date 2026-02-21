@@ -1,0 +1,117 @@
+{
+  "timestamp": "2026-02-22T01:59:01.878796",
+  "overall_healthy": true,
+  "ollama": {
+    "windows_healthy": true,
+    "proxy_healthy": true,
+    "e2e_healthy": true,
+    "models": 12
+  },
+  "daemons": {
+    "overseer": {
+      "running": true,
+      "count": 1,
+      "healthy": true
+    },
+    "ollama_watcher": {
+      "running": true,
+      "count": 1,
+      "healthy": true
+    },
+    "caretaker": {
+      "running": true,
+      "count": 1,
+      "healthy": true
+    },
+    "maintainer": {
+      "running": true,
+      "count": 1,
+      "healthy": true
+    },
+    "guard": {
+      "running": true,
+      "count": 1,
+      "healthy": true
+    },
+    "scheduler": {
+      "running": true,
+      "count": 1,
+      "healthy": true
+    },
+    "sentinel": {
+      "running": true,
+      "count": 1,
+      "healthy": true
+    },
+    "psych": {
+      "running": true,
+      "count": 1,
+      "healthy": true
+    }
+  },
+  "containers": {
+    "total": 28
+  },
+  "tanks": {
+    "running": 20,
+    "traces_today": 6605,
+    "activity": [
+      {
+        "name": "tank-01-adam",
+        "article": "Movie",
+        "traces": 1148
+      },
+      {
+        "name": "tank-02-eve",
+        "article": "Pinniped",
+        "traces": 1145
+      },
+      {
+        "name": "tank-03-cain",
+        "article": "Flag of Greece",
+        "traces": 1539
+      },
+      {
+        "name": "tank-04-abel",
+        "article": "Physical exercise",
+        "traces": 2141
+      },
+      {
+        "name": "tank-05-juan",
+        "article": "Mundo",
+        "traces": 632
+      }
+    ]
+  },
+  "network": {
+    "isolated": true
+  },
+  "overseer": {
+    "running": true,
+    "last_audit_healthy": true,
+    "active_incidents": 0,
+    "auto_remediations": 0
+  },
+  "logs": [
+    "2026-02-22 01:37:57 \u2139\ufe0f [OVERSEER] THE OVERSEER v1.0 initialized",
+    "2026-02-22 01:37:57 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
+    "2026-02-22 01:37:57 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
+    "2026-02-22 01:37:57 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 01:37:58 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 01:37:58 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running']",
+    "2026-02-22 01:37:58 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 01:37:59 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 01:37:59 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running']",
+    "2026-02-22 01:43:02 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 01:43:03 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 01:44:03 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-02-22 01:45:04 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-02-22 01:48:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 01:48:06 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 01:53:08 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 01:53:09 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 01:58:12 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 01:58:16 \u2705 [OVERSEER] Full system audit PASSED"
+  ],
+  "issues": []
+}

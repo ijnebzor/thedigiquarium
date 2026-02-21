@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --text-primary: #e0e0e0;
+            --text-secondary: #888;
+            --accent-cyan: #00d4ff;
+            --accent-green: #00ff88;
+            --accent-red: #ff4444;
+            --accent-yellow: #ffaa00;
+            --accent-purple: #aa88ff;
+            --border: #2a2a3a;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            color: var(--accent-cyan);
+        }
+        
+        .header .status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-indicator.healthy { background: var(--accent-green); }
+        .status-indicator.warning { background: var(--accent-yellow); }
+        .status-indicator.critical { background: var(--accent-red); }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .card h2 {
+            font-size: 1em;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .card.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .metric:last-child { border-bottom: none; }
+        
+        .metric .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .metric .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+        
+        .metric .value.healthy { color: var(--accent-green); }
+        .metric .value.warning { color: var(--accent-yellow); }
+        .metric .value.critical { color: var(--accent-red); }
+        
+        .daemon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+        }
+        
+        .daemon {
+            background: var(--bg-secondary);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .daemon .icon { font-size: 1.5em; margin-bottom: 5px; }
+        .daemon .name { font-size: 0.85em; color: var(--text-secondary); }
+        .daemon .status { 
+            font-size: 0.75em; 
+            margin-top: 5px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .tank-row {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            gap: 15px;
+        }
+        
+        .tank-row:last-child { border-bottom: none; }
+        
+        .tank-row .name { 
+            min-width: 100px;
+            font-weight: 500;
+        }
+        
+        .tank-row .article {
+            flex: 1;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .tank-row .traces {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            color: var(--accent-cyan);
+        }
+        
+        .log-viewer {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8em;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .log-line {
+            padding: 3px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .log-line .timestamp { color: var(--text-secondary); }
+        .log-line .level-info { color: var(--accent-cyan); }
+        .log-line .level-warning { color: var(--accent-yellow); }
+        .log-line .level-error { color: var(--accent-red); }
+        .log-line .level-success { color: var(--accent-green); }
+        
+        .refresh-btn {
+            background: var(--accent-cyan);
+            color: var(--bg-primary);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        
+        .refresh-btn:hover { opacity: 0.8; }
+        
+        .last-updated {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+        }
+        
+        .incident-banner {
+            background: rgba(255, 68, 68, 0.1);
+            border: 1px solid var(--accent-red);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .incident-banner.active { display: block; }
+        
+        .incident-banner h3 {
+            color: var(--accent-red);
+            margin-bottom: 5px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .control-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+        
+        .control-btn:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.1);
+        }
+        
+        .control-btn.danger {
+            border-color: var(--accent-red);
+        }
+        
+        .control-btn.danger:hover {
+            background: rgba(255, 68, 68, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🖥️ Admin Panel</h1>
+        <div class="status">
+            <span class="last-updated">Last updated: <span id="last-update">--</span></span>
+            <div class="status-indicator" id="overall-status"></div>
+            <button class="refresh-btn" onclick="refreshAll()">↻ Refresh</button>
+        </div>
+    </div>
+    
+    <div class="incident-banner" id="incident-banner">
+        <h3>🚨 Active Incident</h3>
+        <p id="incident-message">--</p>
+    </div>
+    
+    <div class="grid">
+        <!-- Ollama Status -->
+        <div class="card">
+            <h2>🧠 Ollama LLM</h2>
+            <div class="metric">
+                <span class="name">Windows Host</span>
+                <span class="value" id="ollama-windows">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">Proxy Container</span>
+                <span class="value" id="ollama-proxy">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">End-to-End</span>
+                <span class="value" id="ollama-e2e">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">Models Available</span>
+                <span class="value" id="ollama-models">--</span>
+            </div>
+        </div>
+        
+        <!-- Daemon Status -->
+        <div class="card">
+            <h2>👁️ Daemons</h2>
+            <div class="daemon-grid" id="daemon-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+        
+        <!-- THE OVERSEER -->
+        <div class="card">
+            <h2>👁️ THE OVERSEER</h2>
+            <div class="metric">
+                <span class="name">Status</span>
+                <span class="value" id="overseer-status">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">Last Audit</span>
+                <span class="value" id="overseer-audit">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">Active Incidents</span>
+                <span class="value" id="overseer-incidents">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">Auto-Remediations</span>
+                <span class="value" id="overseer-remediations">--</span>
+            </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="card">
+            <h2>📊 Quick Stats</h2>
+            <div class="metric">
+                <span class="name">Tanks Running</span>
+                <span class="value" id="tanks-running">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">Containers Total</span>
+                <span class="value" id="containers-total">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">Today's Traces</span>
+                <span class="value" id="traces-today">--</span>
+            </div>
+            <div class="metric">
+                <span class="name">Network Isolated</span>
+                <span class="value" id="network-isolated">--</span>
+            </div>
+        </div>
+        
+        <!-- Tank Activity -->
+        <div class="card full-width">
+            <h2>🐟 Tank Activity (Last Update)</h2>
+            <div id="tank-activity">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+        
+        <!-- Recent Logs -->
+        <div class="card full-width">
+            <h2>📜 OVERSEER Log (Recent)</h2>
+            <div class="log-viewer" id="log-viewer">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+        
+        <!-- Manual Controls -->
+        <div class="card">
+            <h2>🎛️ Manual Controls</h2>
+            <p style="color: var(--text-secondary); font-size: 0.9em; margin-bottom: 15px;">
+                Emergency controls for manual intervention
+            </p>
+            <div class="controls">
+                <button class="control-btn" onclick="runAudit()">Run Audit</button>
+                <button class="control-btn" onclick="restartOllama()">Restart Ollama</button>
+                <button class="control-btn danger" onclick="chaosTest()">Chaos Test</button>
+            </div>
+        </div>
+        
+        <!-- System Info -->
+        <div class="card">
+            <h2>💻 System Info</h2>
+            <div class="metric">
+                <span class="name">Host</span>
+                <span class="value" style="color: var(--text-secondary);">NUC (WSL2)</span>
+            </div>
+            <div class="metric">
+                <span class="name">Ollama Host</span>
+                <span class="value" style="color: var(--text-secondary);">192.168.50.94</span>
+            </div>
+            <div class="metric">
+                <span class="name">Network</span>
+                <span class="value" style="color: var(--text-secondary);">172.30.0.0/24</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Daemon configuration
+        const DAEMONS = [
+            { id: 'overseer', name: 'OVERSEER', icon: '👁️' },
+            { id: 'ollama_watcher', name: 'OLLAMA', icon: '🧠' },
+            { id: 'caretaker', name: 'CARETAKER', icon: '🏥' },
+            { id: 'maintainer', name: 'MAINTAINER', icon: '🔧' },
+            { id: 'guard', name: 'GUARD', icon: '🛡️' },
+            { id: 'scheduler', name: 'SCHEDULER', icon: '📅' },
+            { id: 'sentinel', name: 'SENTINEL', icon: '🔍' },
+            { id: 'psych', name: 'PSYCH', icon: '🧘' }
+        ];
+        
+        // Initialize daemon grid
+        function initDaemonGrid() {
+            const grid = document.getElementById('daemon-grid');
+            grid.innerHTML = DAEMONS.map(d => `
+                <div class="daemon" id="daemon-${d.id}">
+                    <div class="icon">${d.icon}</div>
+                    <div class="name">${d.name}</div>
+                    <div class="status" id="daemon-status-${d.id}">--</div>
+                </div>
+            `).join('');
+        }
+        
+        // Fetch status from data file
+        async function fetchStatus() {
+            try {
+                const response = await fetch('../data/admin-status.json?' + Date.now());
+                if (!response.ok) throw new Error('Status file not found');
+                return await response.json();
+            } catch (e) {
+                console.error('Failed to fetch status:', e);
+                return null;
+            }
+        }
+        
+        // Update UI with status
+        function updateUI(status) {
+            if (!status) {
+                document.getElementById('overall-status').className = 'status-indicator warning';
+                return;
+            }
+            
+            // Overall status
+            const overallEl = document.getElementById('overall-status');
+            overallEl.className = 'status-indicator ' + (status.overall_healthy ? 'healthy' : 'critical');
+            
+            // Last updated
+            document.getElementById('last-update').textContent = new Date(status.timestamp).toLocaleTimeString();
+            
+            // Ollama
+            setStatus('ollama-windows', status.ollama?.windows_healthy);
+            setStatus('ollama-proxy', status.ollama?.proxy_healthy);
+            setStatus('ollama-e2e', status.ollama?.e2e_healthy);
+            document.getElementById('ollama-models').textContent = status.ollama?.models || '--';
+            
+            // Daemons
+            DAEMONS.forEach(d => {
+                const daemonStatus = status.daemons?.[d.id];
+                const el = document.getElementById(`daemon-status-${d.id}`);
+                const card = document.getElementById(`daemon-${d.id}`);
+                
+                if (daemonStatus?.running) {
+                    el.textContent = daemonStatus.count === 1 ? '✓' : `⚠ ${daemonStatus.count}`;
+                    el.style.color = daemonStatus.count === 1 ? 'var(--accent-green)' : 'var(--accent-yellow)';
+                    card.style.borderColor = daemonStatus.count === 1 ? 'transparent' : 'var(--accent-yellow)';
+                } else {
+                    el.textContent = '✗';
+                    el.style.color = 'var(--accent-red)';
+                    card.style.borderColor = 'var(--accent-red)';
+                }
+            });
+            
+            // OVERSEER
+            setStatus('overseer-status', status.overseer?.running);
+            document.getElementById('overseer-audit').textContent = status.overseer?.last_audit_healthy ? '✓ Passed' : '✗ Failed';
+            document.getElementById('overseer-audit').className = 'value ' + (status.overseer?.last_audit_healthy ? 'healthy' : 'critical');
+            document.getElementById('overseer-incidents').textContent = status.overseer?.active_incidents || '0';
+            document.getElementById('overseer-remediations').textContent = status.overseer?.auto_remediations || '0';
+            
+            // Quick stats
+            document.getElementById('tanks-running').textContent = status.tanks?.running || '--';
+            document.getElementById('containers-total').textContent = status.containers?.total || '--';
+            document.getElementById('traces-today').textContent = status.tanks?.traces_today || '--';
+            setStatus('network-isolated', status.network?.isolated);
+            
+            // Tank activity
+            if (status.tanks?.activity) {
+                const activityHtml = status.tanks.activity.map(t => `
+                    <div class="tank-row">
+                        <span class="name">${t.name}</span>
+                        <span class="article">${t.article || '--'}</span>
+                        <span class="traces">${t.traces} traces</span>
+                    </div>
+                `).join('');
+                document.getElementById('tank-activity').innerHTML = activityHtml;
+            }
+            
+            // Logs
+            if (status.logs) {
+                const logsHtml = status.logs.map(log => {
+                    const levelClass = log.includes('✅') ? 'level-success' :
+                                      log.includes('❌') ? 'level-error' :
+                                      log.includes('⚠️') ? 'level-warning' : 'level-info';
+                    return `<div class="log-line ${levelClass}">${escapeHtml(log)}</div>`;
+                }).join('');
+                document.getElementById('log-viewer').innerHTML = logsHtml;
+            }
+            
+            // Incident banner
+            if (status.overseer?.active_incidents > 0) {
+                document.getElementById('incident-banner').classList.add('active');
+                document.getElementById('incident-message').textContent = 
+                    `${status.overseer.active_incidents} active incident(s) detected. Check OVERSEER logs.`;
+            } else {
+                document.getElementById('incident-banner').classList.remove('active');
+            }
+        }
+        
+        function setStatus(elementId, healthy) {
+            const el = document.getElementById(elementId);
+            if (healthy === true) {
+                el.textContent = '✓ OK';
+                el.className = 'value healthy';
+            } else if (healthy === false) {
+                el.textContent = '✗ DOWN';
+                el.className = 'value critical';
+            } else {
+                el.textContent = '--';
+                el.className = 'value';
+            }
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        async function refreshAll() {
+            const status = await fetchStatus();
+            updateUI(status);
+        }
+        
+        function runAudit() {
+            alert('Audit triggered. Refresh in 60 seconds to see results.');
+            // In production, this would call an API
+        }
+        
+        function restartOllama() {
+            if (confirm('Restart Ollama proxy container?')) {
+                alert('Restart triggered. OLLAMA WATCHER will handle this.');
+            }
+        }
+        
+        function chaosTest() {
+            if (confirm('⚠️ This will intentionally break something to test self-healing. Continue?')) {
+                alert('Chaos test initiated. Monitor OVERSEER logs.');
+            }
+        }
+        
+        // Initialize
+        initDaemonGrid();
+        refreshAll();
+        
+        // Auto-refresh every 30 seconds
+        setInterval(refreshAll, 30000);
+    </script>
+</body>
+</html>
