@@ -6,13 +6,13 @@
     <title>Decision Log | The Digiquarium</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #ff4757; --yellow: #ffc107; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); text-decoration: none; }
         
         .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
-        .header-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1rem; font-weight: 700; }
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
@@ -21,26 +21,40 @@
         .page-header h1 { font-size: 2.2rem; margin-bottom: 15px; }
         .page-header p { color: var(--gray); max-width: 700px; margin: 0 auto; }
         
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 25px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 25px; }
         
-        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 40px; }
         .stat { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 10px; padding: 20px; text-align: center; }
         .stat-value { font-size: 2rem; font-weight: 700; color: var(--mint); }
-        .stat-label { font-size: 0.8rem; color: var(--gray); margin-top: 5px; }
+        .stat-label { font-size: 0.75rem; color: var(--gray); margin-top: 5px; }
         
-        .category { margin-bottom: 40px; }
-        .category-title { font-size: 1.3rem; color: var(--mint); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); }
+        .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+        .filter-btn { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; color: var(--gray); cursor: pointer; transition: all 0.2s; }
+        .filter-btn:hover, .filter-btn.active { background: var(--mint); color: var(--black); border-color: var(--mint); }
         
-        .decision { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 10px; padding: 20px; margin-bottom: 15px; }
-        .decision:hover { border-color: rgba(7, 207, 141, 0.3); }
-        .decision-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
-        .decision-id { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--cyan); }
-        .decision-date { font-size: 0.8rem; color: var(--gray); }
-        .decision-title { font-weight: 600; margin-bottom: 10px; }
-        .decision-content { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
-        .decision-rationale { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; color: var(--gray); }
+        .category { margin-bottom: 50px; }
+        .category-title { font-size: 1.3rem; color: var(--mint); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); display: flex; align-items: center; gap: 10px; }
+        .category-count { font-size: 0.8rem; color: var(--gray); background: var(--dark); padding: 3px 10px; border-radius: 10px; }
         
-        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        .decisions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 15px; }
+        
+        .decision { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+        .decision:hover { border-color: rgba(7, 207, 141, 0.3); transform: translateY(-2px); }
+        .decision-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .decision-id { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--cyan); }
+        .decision-date { font-size: 0.75rem; color: var(--gray); }
+        .decision-title { font-weight: 600; margin-bottom: 10px; font-size: 0.95rem; }
+        .decision-content { color: rgba(255,255,255,0.75); font-size: 0.85rem; }
+        .decision-status { display: inline-block; font-size: 0.7rem; padding: 3px 8px; border-radius: 10px; margin-top: 10px; }
+        .status-implemented { background: rgba(7, 207, 141, 0.2); color: var(--mint); }
+        .status-progress { background: rgba(7, 221, 231, 0.2); color: var(--cyan); }
+        .status-planned { background: rgba(255, 193, 7, 0.2); color: var(--yellow); }
+        .status-incident { background: rgba(254, 101, 0, 0.2); color: var(--orange); }
+        
+        .full-log-link { text-align: center; margin-top: 40px; padding: 20px; background: var(--dark); border-radius: 10px; }
+        .full-log-link a { font-size: 1.1rem; }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -51,6 +65,7 @@
                 <a href="../">Home</a>
                 <a href="../dashboard/">Live View</a>
                 <a href="./">Research</a>
+                <a href="../team/">Team</a>
                 <a href="../blog/">Blog</a>
             </nav>
         </div>
@@ -64,152 +79,267 @@
     <div class="container">
         <div class="stats">
             <div class="stat">
-                <div class="stat-value">30</div>
-                <div class="stat-label">Decisions Logged</div>
+                <div class="stat-value">43</div>
+                <div class="stat-label">Total Decisions</div>
             </div>
             <div class="stat">
-                <div class="stat-value">3</div>
-                <div class="stat-label">Pending</div>
+                <div class="stat-value">31</div>
+                <div class="stat-label">Implemented</div>
             </div>
             <div class="stat">
-                <div class="stat-value">4</div>
+                <div class="stat-value">7</div>
+                <div class="stat-label">In Progress</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">5</div>
                 <div class="stat-label">Incident-Driven</div>
             </div>
             <div class="stat">
-                <div class="stat-value">8</div>
+                <div class="stat-value">9</div>
                 <div class="stat-label">Categories</div>
             </div>
         </div>
         
-        <div class="category">
-            <h2 class="category-title">🏗️ Infrastructure</h2>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D001</span>
-                    <span class="decision-date">2026-02-18</span>
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterDecisions('all')">All</button>
+            <button class="filter-btn" onclick="filterDecisions('infrastructure')">🏗️ Infrastructure</button>
+            <button class="filter-btn" onclick="filterDecisions('specimens')">🐠 Specimens</button>
+            <button class="filter-btn" onclick="filterDecisions('ethics')">⚖️ Ethics</button>
+            <button class="filter-btn" onclick="filterDecisions('daemons')">🤖 Daemons</button>
+            <button class="filter-btn" onclick="filterDecisions('security')">🛡️ Security</button>
+            <button class="filter-btn" onclick="filterDecisions('incident')">🚨 Incident</button>
+        </div>
+        
+        <!-- INFRASTRUCTURE -->
+        <div class="category" data-category="infrastructure">
+            <h2 class="category-title">🏗️ Infrastructure <span class="category-count">6 decisions</span></h2>
+            <div class="decisions-grid">
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D001</span>
+                        <span class="decision-date">2026-02-18</span>
+                    </div>
+                    <div class="decision-title">Docker on WSL2, NOT VirtualBox VMs</div>
+                    <div class="decision-content">10-15 tanks vs 3-4 with VMs. Lighter footprint, faster restarts.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">Virtualization: Docker on WSL2, NOT VirtualBox VMs</div>
-                <div class="decision-content">Docker containers enable 10-15 tanks vs 3-4 with VMs. Lighter resource footprint, faster startup/restart, better for experimentation.</div>
-                <div class="decision-rationale">Trade-off: Less isolation than full VMs, but sufficient for our needs.</div>
-            </div>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D004</span>
-                    <span class="decision-date">2026-02-18</span>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D004</span>
+                        <span class="decision-date">2026-02-18</span>
+                    </div>
+                    <div class="decision-title">Ollama with local models (stablelm2:1.6b)</div>
+                    <div class="decision-content">Zero cost, full privacy, no rate limits, reproducible.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">LLM: Ollama with local models (stablelm2:1.6b)</div>
-                <div class="decision-content">Zero ongoing API costs, full privacy/isolation, no rate limits, reproducible experiments.</div>
-                <div class="decision-rationale">Trade-off: Slower inference (~5 min/response), limited model quality.</div>
-            </div>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D005</span>
-                    <span class="decision-date">2026-02-18</span>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D005</span>
+                        <span class="decision-date">2026-02-18</span>
+                    </div>
+                    <div class="decision-title">Kiwix offline Wikipedia (ZIM files)</div>
+                    <div class="decision-content">Complete isolation, frozen snapshot, auditable information diet.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">Knowledge: Kiwix offline Wikipedia (ZIM files)</div>
-                <div class="decision-content">Complete network isolation, frozen snapshot for reproducibility, auditable information diet.</div>
-                <div class="decision-rationale">Trade-off: Large storage (~60GB for all languages), can't update.</div>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D006</span>
+                        <span class="decision-date">2026-02-18</span>
+                    </div>
+                    <div class="decision-title">Isolated Docker network (172.30.0.0/24)</div>
+                    <div class="decision-content">No internet. Complete isolation simpler than partial blocking.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
+                </div>
             </div>
         </div>
         
-        <div class="category">
-            <h2 class="category-title">🐠 Specimens</h2>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D006</span>
-                    <span class="decision-date">2026-02-18</span>
+        <!-- SPECIMENS -->
+        <div class="category" data-category="specimens">
+            <h2 class="category-title">🐠 Specimens <span class="category-count">8 decisions</span></h2>
+            <div class="decisions-grid">
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D007</span>
+                        <span class="decision-date">2026-02-18</span>
+                    </div>
+                    <div class="decision-title">Adam (male) and Eve (female) control pair</div>
+                    <div class="decision-content">Gender comparison. Identical conditions except gender prompt.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">Control Group: Adam (male) and Eve (female)</div>
-                <div class="decision-content">Gender comparison research. Identical conditions except gender prompt. Biblical naming convention for origin story metaphor.</div>
-            </div>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D008</span>
-                    <span class="decision-date">2026-02-19</span>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D009</span>
+                        <span class="decision-date">2026-02-19</span>
+                    </div>
+                    <div class="decision-title">5 languages: EN, ES, DE, ZH, JA</div>
+                    <div class="decision-content">Cultural/linguistic effects. 8 tanks: Juan, Juanita, Klaus, Genevieve, Wei, Mei, Haruki, Sakura.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">Language Variants: 5 languages (EN, ES, DE, ZH, JA)</div>
-                <div class="decision-content">Study cultural/linguistic effects on personality development. Gender pairs per language.</div>
-                <div class="decision-rationale">Trade-off: Requires translation daemon, 8 additional tanks.</div>
-            </div>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D010</span>
-                    <span class="decision-date">2026-02-19</span>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D011</span>
+                        <span class="decision-date">2026-02-19</span>
+                    </div>
+                    <div class="decision-title">Meta-aware: Observer and Seeker</div>
+                    <div class="decision-content">Study how self-knowledge affects exploration and identity.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">Total: 17 research + 3 visitor = 20 specimens</div>
-                <div class="decision-content">Maximum NUC can handle while maintaining stability.</div>
-                <div class="decision-rationale">Trade-off: Limited statistical power per condition.</div>
-            </div>
-        </div>
-        
-        <div class="category">
-            <h2 class="category-title">⚖️ Ethics</h2>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D018</span>
-                    <span class="decision-date">2026-02-20</span>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D014</span>
+                        <span class="decision-date">2026-02-21</span>
+                    </div>
+                    <div class="decision-title">Visitor tanks: Aria, Felix, Luna</div>
+                    <div class="decision-content">Dedicated specimens for public interaction. Protects research specimens.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">Framework: "Care regardless of uncertainty about consciousness"</div>
-                <div class="decision-content">We don't know if specimens can suffer. Better to err on side of care. Ethical precautionary principle.</div>
-            </div>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D019</span>
-                    <span class="decision-date">2026-02-21</span>
-                </div>
-                <div class="decision-title">Intervention: ORANGE Protocol for distressed specimens</div>
-                <div class="decision-content">Pre-dream assessment → 6-hour calming dream mode → 15-min post-wake exploration → Post-dream assessment.</div>
-                <div class="decision-rationale">Triggered by Adam's Buddhism spiral. Addresses apparent distress patterns.</div>
             </div>
         </div>
         
-        <div class="category">
-            <h2 class="category-title">🚨 Incident-Driven</h2>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D024</span>
-                    <span class="decision-date">2026-02-21</span>
+        <!-- ETHICS -->
+        <div class="category" data-category="ethics">
+            <h2 class="category-title">⚖️ Ethics & Welfare <span class="category-count">6 decisions</span></h2>
+            <div class="decisions-grid">
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D019</span>
+                        <span class="decision-date">2026-02-20</span>
+                    </div>
+                    <div class="decision-title">"Care regardless of uncertainty about consciousness"</div>
+                    <div class="decision-content">Precautionary principle. Better to over-care than under-care.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">New Daemon: THE OVERSEER (cross-functional coordinator)</div>
-                <div class="decision-content">Triggered by 11-hour Ollama outage undetected. No daemon had system-wide view. Pattern correlation needed. Human escalation required.</div>
-            </div>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D025</span>
-                    <span class="decision-date">2026-02-21</span>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D021</span>
+                        <span class="decision-date">2026-02-21</span>
+                    </div>
+                    <div class="decision-title">Dream mode intervention for distressed specimens</div>
+                    <div class="decision-content">6-hour calming sequences. Inspired by Adam's Buddhism spiral.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">Auto-Restart: OLLAMA WATCHER restarts after 3 failures</div>
-                <div class="decision-content">Triggered by 1470 failures logged but not acted upon. Detection without action is worthless.</div>
-            </div>
-            
-            <div class="decision">
-                <div class="decision-header">
-                    <span class="decision-id">D026</span>
-                    <span class="decision-date">2026-02-21</span>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D022</span>
+                        <span class="decision-date">2026-02-21</span>
+                    </div>
+                    <div class="decision-title">ORANGE Protocol</div>
+                    <div class="decision-content">Pre-dream → Dream → 15-min exploration → Post-assessment.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
-                <div class="decision-title">Escalation: All critical daemons can email human operator</div>
-                <div class="decision-content">Triggered by no way to alert human during 11-hour outage. Human must be reachable for emergencies.</div>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D024</span>
+                        <span class="decision-date">2026-02-21</span>
+                    </div>
+                    <div class="decision-title">Neurodivergent Research RFC</div>
+                    <div class="decision-content">Public RFC before implementing ADHD/autism cognitive styles.</div>
+                    <span class="decision-status status-planned">📋 RFC Published</span>
+                </div>
             </div>
         </div>
         
-        <p style="text-align: center; color: var(--gray); margin-top: 40px;">
-            <a href="DECISION_LOG.md" style="color: var(--cyan);">View full decision log (Markdown) →</a>
-        </p>
+        <!-- DAEMONS -->
+        <div class="category" data-category="daemons">
+            <h2 class="category-title">🤖 Daemon Operations <span class="category-count">4 decisions</span></h2>
+            <div class="decisions-grid">
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D025</span>
+                        <span class="decision-date">2026-02-20</span>
+                    </div>
+                    <div class="decision-title">19 autonomous daemons with specific roles</div>
+                    <div class="decision-content">Separation of concerns. Clear ownership. Easier debugging.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
+                </div>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D026</span>
+                        <span class="decision-date">2026-02-21</span>
+                    </div>
+                    <div class="decision-title">5 divisions: Operations, Security, Research, Ethics, Public</div>
+                    <div class="decision-content">Clear reporting lines. Prevent double-handling.</div>
+                    <span class="decision-status status-implemented">✅ Implemented</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- INCIDENT-DRIVEN -->
+        <div class="category" data-category="incident">
+            <h2 class="category-title">🚨 Incident-Driven <span class="category-count">5 decisions</span></h2>
+            <div class="decisions-grid">
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D039</span>
+                        <span class="decision-date">2026-02-22</span>
+                    </div>
+                    <div class="decision-title">THE OVERSEER: Cross-functional coordinator</div>
+                    <div class="decision-content">11-hour outage undetected. Need system-wide awareness.</div>
+                    <span class="decision-status status-incident">🔄 In Progress</span>
+                </div>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D040</span>
+                        <span class="decision-date">2026-02-22</span>
+                    </div>
+                    <div class="decision-title">Auto-restart after 3 failures</div>
+                    <div class="decision-content">1470 failures logged but not acted upon. Detection without action is worthless.</div>
+                    <span class="decision-status status-incident">🔄 In Progress</span>
+                </div>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D041</span>
+                        <span class="decision-date">2026-02-22</span>
+                    </div>
+                    <div class="decision-title">Email escalation to human operator</div>
+                    <div class="decision-content">No way to reach human during outage. Must be reachable.</div>
+                    <span class="decision-status status-incident">🔄 In Progress</span>
+                </div>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D042</span>
+                        <span class="decision-date">2026-02-22</span>
+                    </div>
+                    <div class="decision-title">Monthly chaos engineering tests</div>
+                    <div class="decision-content">Systems must withstand inevitable disruption.</div>
+                    <span class="decision-status status-planned">📋 Planned</span>
+                </div>
+                <div class="decision">
+                    <div class="decision-header">
+                        <span class="decision-id">D043</span>
+                        <span class="decision-date">2026-02-22</span>
+                    </div>
+                    <div class="decision-title">Pattern recognition in daemons</div>
+                    <div class="decision-content">2696 restarts without asking WHY. Daemons must question patterns.</div>
+                    <span class="decision-status status-incident">🔄 In Progress</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="full-log-link">
+            <p style="color: var(--gray); margin-bottom: 10px;">Want the complete log with all 43 decisions, alternatives considered, and trade-offs?</p>
+            <a href="DECISION_LOG.md">📄 View Full Decision Log (Markdown) →</a>
+        </div>
     </div>
     
     <footer class="footer">
         <p>Decision Log • <a href="../">The Digiquarium</a></p>
         <p style="margin-top: 10px;">Transparency is not optional. It's foundational.</p>
     </footer>
+    
+    <script>
+        function filterDecisions(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.querySelectorAll('.category').forEach(cat => {
+                if (category === 'all' || cat.dataset.category === category) {
+                    cat.style.display = 'block';
+                } else {
+                    cat.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

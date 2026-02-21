@@ -1,194 +1,188 @@
 #!/usr/bin/env python3
 """
-THE OLLAMA WATCHER - LLM Infrastructure Monitor
-================================================
-Monitors Ollama health, manages inference queue, pauses/resumes tanks.
+THE OLLAMA WATCHER v2.0 - LLM Infrastructure Monitor (Enhanced)
+================================================================
+Monitors Ollama service health and AUTO-RESTARTS on failure.
 
-SLA: 5 min detection, 5 min remediation
-CRITICAL: All AI inference depends on this.
+Post-incident upgrade (2026-02-21):
+- Auto-restart after 3 consecutive failures
+- Escalate to OVERSEER after 3 restart attempts
+- Clear failure count on success
+
+"Detection without action is worthless." - Incident Report
 """
 
 import os
 import sys
-import time
 import json
-import requests
+import time
+import subprocess
 from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from shared.utils import DaemonLogger, run_command, write_pid_file, send_email_alert
 
 DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
-CHECK_INTERVAL = 60  # 1 minute - critical service
-OLLAMA_URL = "http://localhost:11435"
-OLLAMA_HOST_URL = "http://localhost:11434"  # Direct host
+DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
 
 class OllamaWatcher:
     def __init__(self):
-        self.log = DaemonLogger('ollama_watcher')
-        self.stats = {
-            'cycles': 0,
-            'healthy_checks': 0,
-            'unhealthy_checks': 0,
-            'tank_pauses': 0,
-            'tank_resumes': 0
-        }
-        self.ollama_healthy = False
-        self.tanks_paused = False
+        self.name = 'ollama_watcher'
+        self.log_file = DAEMONS_DIR / 'logs' / 'ollama_watcher.log'
+        self.log_file.parent.mkdir(parents=True, exist_ok=True)
+        self.status_file = DAEMONS_DIR / 'ollama_watcher' / 'status.json'
+        
+        # Failure tracking
+        self.consecutive_failures = 0
+        self.restart_attempts = 0
+        self.total_failures = 0
+        
+        # Thresholds
+        self.AUTO_RESTART_THRESHOLD = 3  # Restart after this many consecutive failures
+        self.ESCALATION_THRESHOLD = 3    # Escalate after this many restart attempts
+        
+    def log(self, level: str, message: str):
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        icons = {'INFO': 'ℹ️', 'WARNING': '⚠️', 'ERROR': '❌', 'ACTION': '🔧', 'SUCCESS': '✅'}
+        icon = icons.get(level, 'ℹ️')
+        log_entry = f"{timestamp} {icon} [OLLAMA_WATCHER] {message}\n"
+        
+        with open(self.log_file, 'a') as f:
+            f.write(log_entry)
+        print(log_entry.strip())
     
-    def check_ollama_health(self):
+    def run_command(self, cmd: list, timeout: int = 30) -> dict:
+        try:
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+            return {'success': result.returncode == 0, 'stdout': result.stdout, 'stderr': result.stderr}
+        except Exception as e:
+            return {'success': False, 'stdout': '', 'stderr': str(e)}
+    
+    def check_health(self) -> bool:
         """Check if Ollama is responding"""
-        # Try docker proxy first
-        try:
-            response = requests.get(f"{OLLAMA_URL}/api/tags", timeout=5)
-            if response.status_code == 200:
-                data = response.json()
-                models = [m['name'] for m in data.get('models', [])]
-                return True, models
-        except:
-            pass
-        
-        # Try host directly
-        try:
-            response = requests.get(f"{OLLAMA_HOST_URL}/api/tags", timeout=5)
-            if response.status_code == 200:
-                data = response.json()
-                models = [m['name'] for m in data.get('models', [])]
-                return True, models
-        except:
-            pass
-        
-        return False, []
+        result = self.run_command(['curl', '-s', '--max-time', '10', 'http://localhost:11434/api/tags'])
+        return result['success'] and result['stdout'].strip() and 'models' in result['stdout']
     
-    def test_inference(self):
-        """Test actual inference capability"""
-        try:
-            response = requests.post(
-                f"{OLLAMA_URL}/api/generate",
-                json={
-                    'model': 'llama3.2:latest',
-                    'prompt': 'Say "OK"',
-                    'stream': False,
-                    'options': {'num_predict': 5}
-                },
-                timeout=30
-            )
-            if response.status_code == 200:
-                return True, response.json().get('response', '')[:20]
-        except:
-            pass
-        return False, "Inference failed"
+    def restart_ollama(self) -> bool:
+        """Restart the Ollama container"""
+        self.log('ACTION', f'Auto-restarting Ollama (attempt {self.restart_attempts + 1})')
+        
+        result = self.run_command(['docker', 'restart', 'digiquarium-ollama'], timeout=60)
+        
+        if not result['success']:
+            self.log('ERROR', f'Docker restart command failed: {result["stderr"]}')
+            return False
+        
+        # Wait for startup
+        self.log('INFO', 'Waiting 15 seconds for Ollama startup...')
+        time.sleep(15)
+        
+        # Verify health
+        if self.check_health():
+            self.log('SUCCESS', 'Ollama restarted and healthy!')
+            return True
+        else:
+            self.log('ERROR', 'Ollama restarted but still unhealthy')
+            return False
     
-    def pause_all_tanks(self):
-        """Pause all tanks to prevent queue buildup"""
-        if self.tanks_paused:
-            return
+    def escalate_to_overseer(self, message: str):
+        """Send issue to THE OVERSEER"""
+        overseer_inbox = DAEMONS_DIR / 'overseer' / 'inbox'
+        overseer_inbox.mkdir(parents=True, exist_ok=True)
         
-        self.log.action("Pausing all tanks - Ollama unhealthy")
+        issue = {
+            'from': 'ollama_watcher',
+            'timestamp': datetime.now().isoformat(),
+            'message': message,
+            'severity': 'critical',
+            'consecutive_failures': self.consecutive_failures,
+            'restart_attempts': self.restart_attempts,
+            'total_failures': self.total_failures
+        }
         
-        code, stdout, _ = run_command("docker ps --filter 'name=tank-' --format '{{.Names}}'")
-        tanks = stdout.strip().split('\n') if stdout.strip() else []
+        filename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_ollama_watcher.json"
+        (overseer_inbox / filename).write_text(json.dumps(issue, indent=2))
         
-        for tank in tanks:
-            if tank:
-                run_command(f"docker pause {tank}")
-        
-        self.tanks_paused = True
-        self.stats['tank_pauses'] += 1
+        self.log('WARNING', f'Escalated to OVERSEER: {message}')
     
-    def resume_all_tanks(self):
-        """Resume all tanks when Ollama is healthy"""
-        if not self.tanks_paused:
-            return
-        
-        self.log.action("Resuming all tanks - Ollama healthy")
-        
-        code, stdout, _ = run_command("docker ps -a --filter 'name=tank-' --format '{{.Names}}'")
-        tanks = stdout.strip().split('\n') if stdout.strip() else []
-        
-        for tank in tanks:
-            if tank:
-                run_command(f"docker unpause {tank}")
-        
-        self.tanks_paused = False
-        self.stats['tank_resumes'] += 1
-    
-    def write_status(self):
-        """Write current Ollama status"""
-        status_file = DIGIQUARIUM_DIR / 'daemons' / 'ollama_watcher' / 'status.json'
-        
+    def update_status(self, healthy: bool):
+        """Update status file"""
         status = {
             'timestamp': datetime.now().isoformat(),
-            'ollama_healthy': self.ollama_healthy,
-            'tanks_paused': self.tanks_paused,
-            'stats': self.stats
+            'healthy': healthy,
+            'consecutive_failures': self.consecutive_failures,
+            'restart_attempts': self.restart_attempts,
+            'total_failures': self.total_failures
         }
         
-        with open(status_file, 'w') as f:
-            json.dump(status, f, indent=2)
+        self.status_file.parent.mkdir(parents=True, exist_ok=True)
+        self.status_file.write_text(json.dumps(status, indent=2))
+    
+    def run_cycle(self):
+        """Single monitoring cycle"""
+        healthy = self.check_health()
+        
+        if healthy:
+            # Success! Reset failure counters
+            if self.consecutive_failures > 0:
+                self.log('SUCCESS', f'Ollama recovered after {self.consecutive_failures} failures')
+            self.consecutive_failures = 0
+            self.restart_attempts = 0
+            self.log('INFO', 'Ollama healthy')
+        else:
+            # Failure detected
+            self.consecutive_failures += 1
+            self.total_failures += 1
+            self.log('WARNING', f'Ollama unhealthy (failure #{self.consecutive_failures}, total: {self.total_failures})')
+            
+            # Check if we should auto-restart
+            if self.consecutive_failures >= self.AUTO_RESTART_THRESHOLD:
+                if self.restart_attempts < self.ESCALATION_THRESHOLD:
+                    # Attempt restart
+                    self.restart_attempts += 1
+                    success = self.restart_ollama()
+                    
+                    if success:
+                        self.consecutive_failures = 0
+                        self.restart_attempts = 0
+                    elif self.restart_attempts >= self.ESCALATION_THRESHOLD:
+                        # Escalate to OVERSEER
+                        self.escalate_to_overseer(
+                            f'Ollama unrecoverable after {self.ESCALATION_THRESHOLD} restart attempts. '
+                            f'Total failures: {self.total_failures}. Requires human intervention.'
+                        )
+                else:
+                    # Already escalated, just log
+                    self.log('ERROR', f'Ollama still down, already escalated (failure #{self.total_failures})')
+        
+        self.update_status(healthy)
     
     def run(self):
-        print("""
-╔══════════════════════════════════════════════════════════════════════╗
-║              THE OLLAMA WATCHER - LLM Infrastructure                 ║
-╠══════════════════════════════════════════════════════════════════════╣
-║  Monitors: Ollama health, inference capability                      ║
-║  Actions: Pause/resume tanks based on Ollama status                 ║
-║  SLA: 1 min detection, 5 min remediation                            ║
-╚══════════════════════════════════════════════════════════════════════╝
-""")
-        write_pid_file('ollama_watcher')
-        self.log.info("THE OLLAMA WATCHER starting")
+        """Main daemon loop"""
+        print("╔══════════════════════════════════════════════════════════════════════╗")
+        print("║        THE OLLAMA WATCHER v2.0 - LLM Infrastructure Monitor         ║")
+        print("║        Now with AUTO-RESTART capability!                            ║")
+        print("╚══════════════════════════════════════════════════════════════════════╝")
         
-        consecutive_failures = 0
+        self.log('INFO', 'THE OLLAMA WATCHER v2.0 initialized')
+        self.log('INFO', f'Auto-restart after {self.AUTO_RESTART_THRESHOLD} failures')
+        self.log('INFO', f'Escalate after {self.ESCALATION_THRESHOLD} restart attempts')
+        
+        check_interval = 60  # 1 minute
         
         while True:
             try:
-                self.stats['cycles'] += 1
-                
-                # Check Ollama health
-                healthy, models = self.check_ollama_health()
-                
-                if healthy:
-                    self.ollama_healthy = True
-                    self.stats['healthy_checks'] += 1
-                    consecutive_failures = 0
-                    
-                    # Resume tanks if they were paused
-                    if self.tanks_paused:
-                        self.resume_all_tanks()
-                    
-                    if self.stats['cycles'] % 5 == 0:
-                        self.log.info(f"Cycle {self.stats['cycles']}: Ollama healthy, models: {models[:3]}")
-                
-                else:
-                    self.ollama_healthy = False
-                    self.stats['unhealthy_checks'] += 1
-                    consecutive_failures += 1
-                    
-                    self.log.warn(f"Ollama unhealthy (failure #{consecutive_failures})")
-                    
-                    # After 3 consecutive failures, pause tanks
-                    if consecutive_failures >= 3 and not self.tanks_paused:
-                        self.pause_all_tanks()
-                    
-                    # After 10 failures, escalate
-                    if consecutive_failures == 10:
-                        send_email_alert(
-                            "🚨 OLLAMA DOWN - Tanks Paused",
-                            f"Ollama has been unhealthy for {consecutive_failures} checks.\n"
-                            f"All tanks have been paused.\n"
-                            f"Manual intervention required.\n\n"
-                            f"Time: {datetime.now()}"
-                        )
-                
-                self.write_status()
-                time.sleep(CHECK_INTERVAL)
-                
+                self.run_cycle()
             except Exception as e:
-                self.log.error(f"Cycle error: {e}")
-                time.sleep(30)
+                self.log('ERROR', f'Monitoring cycle failed: {e}')
+            
+            time.sleep(check_interval)
+
+
+def main():
+    watcher = OllamaWatcher()
+    watcher.run()
+
 
 if __name__ == '__main__':
-    OllamaWatcher().run()
+    main()
