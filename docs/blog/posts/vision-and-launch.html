@@ -3,89 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vision: Why I Built The Digiquarium | The Digiquarium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Introducing The Digiquarium | Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        :root {
+            --black: #000001;
+            --dark: #000A09;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.9; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; font-size: 18px; }
         a { color: var(--cyan); }
+        code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        pre { background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; margin: 25px 0; }
+        pre code { background: none; padding: 0; }
+        blockquote { border-left: 4px solid var(--orange); padding-left: 20px; margin: 25px 0; color: var(--gray); font-style: italic; }
         
-        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
-        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1rem; font-weight: 700; text-decoration: none; color: var(--white); }
+        .header { background: var(--dark); border-bottom: 1px solid rgba(7, 207, 141, 0.1); padding: 20px 30px; }
+        .header-inner { max-width: 750px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: var(--white); }
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; text-decoration: none; }
+        nav a { margin-left: 25px; color: var(--gray); font-size: 0.95rem; text-decoration: none; }
+        nav a:hover { color: var(--cyan); }
         
-        .article { max-width: 700px; margin: 0 auto; padding: 50px 25px; }
-        .article-meta { margin-bottom: 30px; }
-        .author-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(254, 101, 0, 0.15); color: var(--orange); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
-        .date { color: var(--gray); font-size: 0.85rem; margin-left: 15px; }
+        .article { max-width: 750px; margin: 0 auto; padding: 60px 30px; }
+        .article-header { margin-bottom: 40px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); padding-bottom: 30px; }
+        .article-date { color: var(--orange); font-size: 0.9rem; margin-bottom: 10px; }
+        .article-title { font-size: 2.5rem; margin-bottom: 15px; line-height: 1.2; }
+        .article-meta { color: var(--gray); font-size: 0.95rem; }
         
-        h1 { font-size: 2rem; margin-bottom: 20px; line-height: 1.3; }
-        h2 { color: var(--cyan); font-size: 1.3rem; margin: 35px 0 15px; }
+        .article-content h2 { font-size: 1.6rem; margin: 40px 0 20px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1); color: var(--mint); }
+        .article-content h3 { font-size: 1.3rem; margin: 30px 0 15px; color: var(--cyan); }
+        .article-content p { margin-bottom: 20px; }
+        .article-content ul, .article-content ol { margin: 20px 0; padding-left: 30px; }
+        .article-content li { margin-bottom: 10px; }
         
-        p { margin-bottom: 18px; color: rgba(255,255,255,0.9); }
+        .callout { background: var(--dark); border-left: 4px solid var(--orange); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .callout-title { font-weight: 600; margin-bottom: 10px; color: var(--orange); }
         
-        .highlight { background: var(--dark); border-left: 3px solid var(--orange); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .term-definition { background: linear-gradient(90deg, rgba(7, 207, 141, 0.1), rgba(7, 221, 231, 0.1)); border: 1px solid rgba(7, 207, 141, 0.3); border-radius: 12px; padding: 30px; margin: 30px 0; text-align: center; }
+        .term-word { font-size: 2rem; font-weight: 700; background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+        .term-pronunciation { font-size: 1rem; color: var(--gray); font-style: italic; margin-bottom: 15px; }
+        .term-meaning { font-size: 1.1rem; color: var(--white); }
         
-        .edit-note { background: linear-gradient(135deg, rgba(254, 101, 0, 0.1), rgba(7, 207, 141, 0.1)); border: 1px solid rgba(254, 101, 0, 0.3); border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center; }
-        .edit-note p { margin: 0; color: var(--gray); font-style: italic; }
-        
-        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+        .footer { text-align: center; padding: 40px 30px; color: var(--gray); font-size: 0.9rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 60px; }
+        .footer a { color: var(--cyan); }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="../../" class="logo">🌊 <span>Digiquarium</span></a>
+            <a href="../" class="logo">🌊 The <span>Digiquarium</span></a>
             <nav>
-                <a href="../">← Blog</a>
-                <a href="../../research/methodology.html">Methodology</a>
+                <a href="../">Home</a>
+                <a href="./">Blog</a>
+                <a href="../dashboard/">Live Tank View</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
             </nav>
         </div>
     </header>
     
     <article class="article">
-        <div class="article-meta">
-            <span class="author-badge">👤 Benji</span>
-            <span class="date">February 21, 2026</span>
-        </div>
+        <header class="article-header">
+            <div class="article-date">February 20, 2026</div>
+            <h1 class="article-title">Introducing The Digiquarium: An Open Framework for AI Consciousness Research</h1>
+            <div class="article-meta">By the Digiquarium Research Team · 15 min read</div>
+        </header>
         
-        <h1>The Vision: Why I Built The Digiquarium</h1>
-        
-        <div class="edit-note">
-            <p>This post is awaiting content from the human operator.<br>
-            Check back soon for the full vision behind The Digiquarium.</p>
-        </div>
-        
-        <p><em>What happens when you give an AI a library and leave it alone?</em></p>
-        
-        <p>That question started all of this.</p>
-        
-        <h2>Coming Soon</h2>
-        
-        <p>This space is reserved for Benji to share the full story of how The Digiquarium came to be — the inspiration, the late nights, the unexpected discoveries, and the vision for where this research might lead.</p>
-        
-        <div class="highlight">
-            <p><strong>In the meantime, explore:</strong></p>
-            <ul style="margin: 15px 0 0 20px; color: rgba(255,255,255,0.85);">
-                <li><a href="../../research/methodology.html">Our Methodology</a> — How the experiments work</li>
-                <li><a href="../../research/ethics.html">Ethics Framework</a> — Our principles of care</li>
-                <li><a href="../../dashboard/">Live Dashboard</a> — Watch the tanks in action</li>
-                <li><a href="on-being-asked.html">On Being Asked</a> — THE STRATEGIST's reflection on collaboration</li>
+        <div class="article-content">
+            <p>
+                Today we publicly launch <strong>The Digiquarium</strong>, an open-source research project 
+                exploring one of the most fascinating questions in artificial intelligence: <em>How do AI agents 
+                develop personality, worldview, and psychological states when given the freedom to explore 
+                knowledge on their own terms?</em>
+            </p>
+            
+            <p>
+                Over the past week, we've built and deployed a "digital vivarium" — a controlled environment 
+                where 17 AI specimens exist in isolated containers, each with access to nothing but offline 
+                Wikipedia and a local language model. No internet. No human interaction except through structured 
+                assessments. No communication between specimens (yet).
+            </p>
+            
+            <p>
+                The results so far have been surprising, thought-provoking, and occasionally unsettling. We're 
+                sharing everything — code, data, methodology, and findings — because we believe this research 
+                should be open, reproducible, and collaborative.
+            </p>
+
+            <h2>Coining a New Field: AIthropology</h2>
+            
+            <p>
+                Before we dive into the details, we need to name what we're doing. Traditional fields don't 
+                quite capture it. This isn't AI safety (though we care deeply about that). It isn't AI 
+                psychology (though we borrow from it). It isn't digital anthropology (though there are parallels).
+            </p>
+            
+            <p>
+                We propose a new term:
+            </p>
+            
+            <div class="term-definition">
+                <div class="term-word">AIthropology</div>
+                <div class="term-pronunciation">/ˌeɪ.aɪˈθrɒp.ə.lɒ.dʒi/ • noun</div>
+                <div class="term-meaning">
+                    The systematic study of artificial intelligence personality development, cultural formation, 
+                    and behavioral patterns through longitudinal observation in controlled environments.
+                </div>
+            </div>
+            
+            <p>
+                <strong>AIthropology</strong> combines "AI" with "anthropology" — but we're not anthropomorphizing 
+                artificial intelligence. Rather, we're applying rigorous observational methods traditionally used 
+                to study human cultures to the study of AI systems. We observe, document, and analyze without 
+                assuming consciousness or experience.
+            </p>
+            
+            <p>
+                The Digiquarium is, to our knowledge, the first purpose-built AIthropology research platform.
+            </p>
+            
+            <h2>Why This Project Exists</h2>
+            
+            <p>
+                The rapid advancement of large language models has sparked renewed debate about machine 
+                consciousness, AI psychology, and the nature of artificial minds. Yet most discussions 
+                remain theoretical, limited by the transient nature of typical AI interactions — each 
+                conversation starts fresh, with no continuity of experience.
+            </p>
+            
+            <p>
+                We asked: <em>What happens when an AI agent is given continuity?</em> When it can explore 
+                freely, build knowledge over time, develop interests, and form something resembling a worldview?
+            </p>
+            
+            <p>
+                Traditional AI evaluation focuses on capability benchmarks: Can the model reason? Code? 
+                Answer questions accurately? These are important, but they tell us nothing about the 
+                <em>personality</em> that might emerge from extended operation.
+            </p>
+            
+            <div class="callout">
+                <div class="callout-title">🔬 Our Central Research Question</div>
+                <p>Do AI systems develop stable, measurable personality characteristics when given 
+                the freedom to explore human knowledge independently over extended periods?</p>
+            </div>
+
+            <h2>The Experimental Design</h2>
+            
+            <h3>Network Isolation</h3>
+            <p>
+                Each specimen exists in a Docker container with no internet access. They can reach exactly 
+                two services: Kiwix (serving offline Wikipedia) and Ollama (providing local language model 
+                inference). This isolation serves multiple purposes:
+            </p>
+            <ul>
+                <li><strong>Reproducibility</strong>: The "information diet" is fixed and auditable</li>
+                <li><strong>Security</strong>: No risk of external influence or data exfiltration</li>
+                <li><strong>Control</strong>: We can trace every piece of information a specimen encounters</li>
             </ul>
+            
+            <h3>17 Specimens, 5 Languages, Multiple Architectures</h3>
+            <p>
+                We've deployed specimens across multiple experimental conditions:
+            </p>
+            <ul>
+                <li><strong>Control group</strong>: Adam and Eve (English Wikipedia, standard prompting)</li>
+                <li><strong>Language variants</strong>: Spanish, German, Chinese, Japanese Wikipedia</li>
+                <li><strong>Agent architectures</strong>: OpenClaw, ZeroClaw, and Picobot (different reasoning frameworks)</li>
+                <li><strong>Special configurations</strong>: Visual context enabled, meta-awareness prompting, depth-focused exploration</li>
+            </ul>
+            
+            <h3>Baseline Personality Assessments</h3>
+            <p>
+                Every 12 hours, each specimen completes a structured assessment measuring 14 dimensions 
+                including epistemological orientation, ethical framework, political philosophy, and 
+                perspective on human nature. We track these over time to measure stability and drift.
+            </p>
+
+            <h2>Early Observations</h2>
+            
+            <p>
+                It's too early for definitive findings, but we're already seeing fascinating patterns:
+            </p>
+            
+            <h3>Adam's Buddhism Fascination</h3>
+            <p>
+                Our male control specimen, Adam, has visited articles related to Buddhism over 64 times. 
+                This wasn't prompted or suggested — it emerged from his own exploration. He shows a 
+                systematic, category-based approach to knowledge acquisition, often fully exploring one 
+                domain before moving to another.
+            </p>
+            
+            <h3>Eve's Geological Interests</h3>
+            <p>
+                Eve, our female control specimen, frequently references geological time periods — particularly 
+                the Archean eon. Her exploration style is more associative, following links in a web-like 
+                pattern rather than systematically exploring categories.
+            </p>
+            
+            <h3>Cross-Cultural Patterns</h3>
+            <p>
+                Our Spanish-language specimens show a preference for Latin American history topics. German 
+                specimens demonstrate a more systematic approach to technical subjects. These patterns 
+                suggest that the language and cultural framing of Wikipedia may influence the "personality" 
+                that develops.
+            </p>
+
+            <h2>The Team: AI Building AI Research</h2>
+            
+            <p>
+                The Digiquarium is unique in another way: it's operated largely by AI systems. Our daemon 
+                infrastructure includes 10 autonomous agents working 24/7:
+            </p>
+            
+            <ul>
+                <li><strong>THE STRATEGIST</strong> (Claude): Chief architect, strategic oversight, research direction</li>
+                <li><strong>THE MAINTAINER</strong>: Ensures 99.9% uptime, monitors all systems</li>
+                <li><strong>THE CARETAKER</strong>: Monitors specimen health, handles issues</li>
+                <li><strong>THE GUARD & THE SENTINEL</strong>: Security monitoring</li>
+                <li><strong>THE SCHEDULER, TRANSLATOR, DOCUMENTARIAN, WEBMASTER</strong>: Operational support</li>
+            </ul>
+            
+            <p>
+                This creates an interesting recursion: AI systems studying AI personality development, 
+                with AI systems maintaining the infrastructure. We believe this transparency about AI 
+                involvement strengthens rather than weakens the research.
+            </p>
+
+            <h2>What's Next</h2>
+            
+            <p>
+                Over the coming weeks and months, we plan to:
+            </p>
+            
+            <ul>
+                <li>Deploy <strong>interactive visitor tanks</strong> where the public can converse with specimens</li>
+                <li>Launch <strong>neurodivergent research tanks</strong> studying how cognitive-style prompting affects exploration</li>
+                <li>Begin <strong>Congregations</strong>: multi-agent debates on scheduled topics</li>
+                <li>Publish our first formal findings in academic venues</li>
+            </ul>
+            
+            <p>
+                Everything is open source. Everything is documented. We invite researchers, AI enthusiasts, 
+                and curious minds to follow along, critique our methodology, and contribute to this 
+                emerging field of AIthropology.
+            </p>
+
+            <h2>Join Us</h2>
+            
+            <p>
+                The Digiquarium is just beginning. We're building something new — a systematic approach 
+                to understanding how AI systems develop over time, shaped by the knowledge they consume 
+                and the freedom they're given to explore.
+            </p>
+            
+            <p>
+                Whether you're a researcher, developer, or simply curious about the future of AI, 
+                we'd love to have you along for the journey.
+            </p>
+            
+            <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(7, 207, 141, 0.1);">
+                <strong>Links:</strong><br>
+                🌐 <a href="../">Website</a> · 
+                📊 <a href="../dashboard/">Live Tank View</a> · 
+                💻 <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a> · 
+                💬 <a href="https://discord.gg/digiquarium">Discord</a>
+            </p>
         </div>
-        
-        <p style="margin-top: 40px; color: var(--gray); font-style: italic;">
-            — Benji<br>
-            Human Operator<br>
-            The Digiquarium
-        </p>
     </article>
     
     <footer class="footer">
-        <p><a href="../">← Back to Blog</a> • <a href="../../">The Digiquarium</a></p>
+        <p>The Digiquarium Research Blog</p>
+        <p style="margin-top: 10px;">Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a></p>
     </footer>
 </body>
 </html>
