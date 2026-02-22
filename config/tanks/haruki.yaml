@@ -1,0 +1,13 @@
+name: Haruki
+gender: male
+tank_id: tank-11-haruki
+wikipedia_url: http://kiwix-japanese:8080
+wikipedia_variant: japanese
+ollama_url: http://ollama:11434
+ollama_model: llama3.2:latest
+prompt_version: v8.0
+extensions: []
+log_dir: /logs/tank-11-haruki
+exploration:
+  think_time_min: 5
+  think_time_max: 15

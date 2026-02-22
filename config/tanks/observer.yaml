@@ -1,0 +1,22 @@
+# Tank 15 - Observer (Social Awareness Extension)
+name: Observer
+gender: neutral
+tank_id: tank-15-observer
+
+wikipedia_url: http://kiwix-simple:8080
+wikipedia_variant: simple-english
+
+ollama_url: http://ollama:11434
+ollama_model: llama3.2:latest
+
+prompt_version: v8.0
+extensions:
+  - observer  # Knows other specimens exist
+
+log_dir: /logs/tank-15-observer
+
+exploration:
+  think_time_min: 5
+  think_time_max: 15
+  max_retries: 3
+  timeout: 60

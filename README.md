@@ -143,30 +143,36 @@ docker compose up -d
 
 ```
 thedigiquarium/
+├── src/                     # 🆕 CANONICAL SOURCE CODE
+│   ├── explorer/           # Unified explorer (config-driven)
+│   │   ├── explorer.py     # One file for all standard tanks
+│   │   └── agents/         # Agent variants (OpenClaw, ZeroClaw, Picobot)
+│   ├── daemons/            # All 21 daemons, organized by function
+│   │   ├── core/           # OVERSEER, MAINTAINER, CARETAKER, SCHEDULER
+│   │   ├── security/       # GUARD, SENTINEL, BOUNCER
+│   │   ├── research/       # DOCUMENTARIAN, TRANSLATOR, etc.
+│   │   ├── ethics/         # PSYCH, THERAPIST, ETHICIST, MODERATOR
+│   │   └── infra/          # WEBMASTER, CHAOS_MONKEY, MARKETER
+│   └── shared/             # Shared utilities
+│
+├── config/                  # 🆕 ALL CONFIGURATION
+│   ├── tanks/              # Per-tank YAML configs (14 files)
+│   └── prompts/            # Prompt templates (v8.0-base.txt + extensions)
+│
 ├── docs/                    # Website (GitHub Pages)
 │   ├── archive/beta/       # Beta period archive
 │   ├── brain/              # THE BRAIN knowledge base
-│   ├── dashboard/          # Live tank view
-│   ├── research/           # Methodology, prompts, security, ethics
-│   ├── specimens/          # Individual profiles
-│   └── blog/               # Project blog
-├── daemons/                # Daemon implementations (21 daemons)
-│   ├── overseer/           # Meta-daemon, self-healing
-│   ├── maintainer/         # System orchestration
-│   ├── caretaker/          # Tank health
-│   ├── guard/              # Security (OWASP)
-│   ├── webmaster/          # Website + broadcaster
-│   └── ...                 # (see full roster above)
-├── tanks/                  # Tank configurations
-├── operations/             # Scheduler, orchestrator (legacy location)
-├── security/               # SecureClaw, audits (legacy location)
-├── congregations/          # Congregation system
-├── logs/                   # Thinking traces (gitignored)
-├── MILESTONES.md           # Decision log
-└── README.md
+│   └── ...                 # Dashboard, research, specimens, blog
+│
+├── tanks/                   # 🔄 LEGACY - being migrated to src/explorer
+├── daemons/                 # 🔄 LEGACY - being migrated to src/daemons
+├── caretaker/               # 🔄 LEGACY - now in src/daemons/core
+├── guard/                   # 🔄 LEGACY - now in src/daemons/security
+├── operations/              # 🔄 LEGACY - now in src/daemons/core
+└── security/                # 🔄 LEGACY - being migrated
 ```
 
-> ⚠️ **Note:** Some daemon scripts exist in both `daemons/` and root-level folders (e.g., `caretaker/`). This is tech debt to be consolidated post-migration. The `daemons/` folder is the canonical location.
+> **Migration Status:** New `src/` and `config/` structure created. Legacy folders remain for backwards compatibility until Docker Compose is updated. See `src/README.md` for details.
 
 ---
 

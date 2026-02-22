@@ -1,0 +1,21 @@
+# Tank 02 - Eve (Genesis Control - Female)
+name: Eve
+gender: female
+tank_id: tank-02-eve
+
+wikipedia_url: http://kiwix-simple:8080
+wikipedia_variant: simple-english
+
+ollama_url: http://ollama:11434
+ollama_model: llama3.2:latest
+
+prompt_version: v8.0
+extensions: []
+
+log_dir: /logs/tank-02-eve
+
+exploration:
+  think_time_min: 5
+  think_time_max: 15
+  max_retries: 3
+  timeout: 60

@@ -1,0 +1,26 @@
+# Tank 01 - Adam (Genesis Control - Male)
+name: Adam
+gender: male
+tank_id: tank-01-adam
+
+# Wikipedia source
+wikipedia_url: http://kiwix-simple:8080
+wikipedia_variant: simple-english
+
+# LLM settings
+ollama_url: http://ollama:11434
+ollama_model: llama3.2:latest
+
+# Prompt
+prompt_version: v8.0
+extensions: []  # No extensions - pure control
+
+# Logging
+log_dir: /logs/tank-01-adam
+
+# Exploration behavior
+exploration:
+  think_time_min: 5
+  think_time_max: 15
+  max_retries: 3
+  timeout: 60

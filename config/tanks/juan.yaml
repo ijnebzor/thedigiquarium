@@ -1,0 +1,21 @@
+# Tank 05 - Juan (Spanish Language)
+name: Juan
+gender: male
+tank_id: tank-05-juan
+
+wikipedia_url: http://kiwix-spanish:8080
+wikipedia_variant: spanish
+
+ollama_url: http://ollama:11434
+ollama_model: llama3.2:latest
+
+prompt_version: v8.0
+extensions: []
+
+log_dir: /logs/tank-05-juan
+
+exploration:
+  think_time_min: 5
+  think_time_max: 15
+  max_retries: 3
+  timeout: 60
