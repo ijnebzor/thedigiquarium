@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:10:43.657009",
+  "timestamp": "2026-02-23T04:13:01.191102",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": true,
@@ -40,8 +40,8 @@
     },
     "sentinel": {
       "running": true,
-      "count": 1,
-      "healthy": true
+      "count": 2,
+      "healthy": false
     },
     "psych": {
       "running": true,
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 19,
-    "traces_today": 4316,
+    "traces_today": 4317,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Centuries",
-        "traces": 1542
+        "article": "Year",
+        "traces": 1543
       },
       {
         "name": "tank-05-juan",
@@ -90,21 +90,9 @@
     "running": true,
     "last_audit_healthy": false,
     "active_incidents": 697,
-    "auto_remediations": 12
+    "auto_remediations": 0
   },
   "logs": [
-    "2026-02-23 03:40:07 \u26a0\ufe0f [OVERSEER]   - containers: ['digiquarium-ollama is Created']",
-    "2026-02-23 03:41:08 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 03:42:12 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 03:45:13 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 03:45:14 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 03:50:20 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 03:50:21 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-23 03:50:21 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
-    "2026-02-23 03:55:23 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 03:55:27 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 04:00:30 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 04:00:31 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
     "2026-02-23 04:00:31 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
     "2026-02-23 04:05:35 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-23 04:05:36 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
@@ -112,9 +100,22 @@
     "2026-02-23 04:10:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-23 04:10:42 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
     "2026-02-23 04:10:42 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
-    "2026-02-23 04:10:42 \u26a0\ufe0f [OVERSEER]   - daemons: ['scheduler not running']"
+    "2026-02-23 04:10:42 \u26a0\ufe0f [OVERSEER]   - daemons: ['scheduler not running']",
+    "2026-02-23 04:11:04 \u2139\ufe0f [OVERSEER] Received signal 15, shutting down gracefully",
+    "2026-02-23 04:12:01 \u2139\ufe0f [OVERSEER] THE OVERSEER v1.0 initialized",
+    "2026-02-23 04:12:01 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
+    "2026-02-23 04:12:01 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
+    "2026-02-23 04:12:01 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 04:12:04 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-02-23 04:12:04 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) 2 minutes ago']",
+    "2026-02-23 04:12:04 \u26a0\ufe0f [OVERSEER]   - daemons: ['scheduler not running']",
+    "2026-02-23 04:12:04 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 04:12:06 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-02-23 04:12:06 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) 2 minutes ago']",
+    "2026-02-23 04:12:06 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running', 'scheduler not running']"
   ],
   "issues": [
-    "scheduler unhealthy"
+    "scheduler unhealthy",
+    "sentinel unhealthy"
   ]
 }
