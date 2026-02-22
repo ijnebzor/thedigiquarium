@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:46:19.706513",
+  "timestamp": "2026-02-23T05:01:02.205563",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": true,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 26
+    "total": 28
   },
   "tanks": {
-    "running": 19,
-    "traces_today": 4947,
+    "running": 20,
+    "traces_today": 6237,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Philosophers",
-        "traces": 883
+        "article": "Biology",
+        "traces": 1114
       },
       {
         "name": "tank-02-eve",
-        "article": "Down",
-        "traces": 882
+        "article": "1790s",
+        "traces": 1109
       },
       {
         "name": "tank-03-cain",
-        "article": "Sansoen Phra Barami",
-        "traces": 871
+        "article": "Sequence",
+        "traces": 1141
       },
       {
         "name": "tank-04-abel",
-        "article": "Antarctica",
-        "traces": 1796
+        "article": "Czechia",
+        "traces": 2209
       },
       {
         "name": "tank-05-juan",
-        "article": "Alemania",
-        "traces": 515
+        "article": "Sistema de escritura",
+        "traces": 664
       }
     ]
   },
@@ -89,30 +89,30 @@
   "overseer": {
     "running": true,
     "last_audit_healthy": false,
-    "active_incidents": 698,
+    "active_incidents": 713,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-23 04:41:28 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 04:42:40 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 04:43:43 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 04:44:43 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
-    "2026-02-23 04:44:43 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223044443",
-    "2026-02-23 04:44:43 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
-    "2026-02-23 04:44:43 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
-    "2026-02-23 04:45:13 \ud83d\udce7 [OVERSEER] Escalating INC-20260223044443 to human operator",
-    "2026-02-23 04:45:13 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
-    "2026-02-23 04:45:15 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 04:46:15 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
-    "2026-02-23 04:46:15 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223044615",
-    "2026-02-23 04:46:15 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
-    "2026-02-23 04:46:15 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
-    "2026-02-23 04:46:34 \ud83d\udce7 [OVERSEER] Escalating INC-20260223044615 to human operator",
-    "2026-02-23 04:46:34 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
-    "2026-02-23 04:46:34 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
-    "2026-02-23 04:46:34 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223044634",
-    "2026-02-23 04:46:34 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
-    "2026-02-23 04:46:34 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy"
+    "2026-02-23 04:58:01 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:58:01 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223045801",
+    "2026-02-23 04:58:01 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:58:01 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
+    "2026-02-23 04:58:22 \ud83d\udce7 [OVERSEER] Escalating INC-20260223045801 to human operator",
+    "2026-02-23 04:58:22 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
+    "2026-02-23 04:58:28 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-02-23 04:59:28 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:59:28 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223045928",
+    "2026-02-23 04:59:28 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:59:28 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
+    "2026-02-23 04:59:51 \ud83d\udce7 [OVERSEER] Escalating INC-20260223045928 to human operator",
+    "2026-02-23 04:59:51 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
+    "2026-02-23 04:59:51 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:59:51 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223045951",
+    "2026-02-23 04:59:51 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:59:51 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
+    "2026-02-23 05:00:14 \ud83d\udce7 [OVERSEER] Escalating INC-20260223045951 to human operator",
+    "2026-02-23 05:00:14 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
+    "2026-02-23 05:00:20 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']"
   ],
   "issues": [
     "Ollama E2E failed"
