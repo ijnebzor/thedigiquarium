@@ -1233,7 +1233,7 @@ This is your private exploration.
 
 ---
 
-## Section 31: Official Daemon Roster (21 Total)
+## Section 31: Official Daemon Roster (17 Daemons + Partners)
 
 ### Core Operations (5)
 1. **THE OVERSEER** - Meta-daemon, monitors all daemons, self-healing

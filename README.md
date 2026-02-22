@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Tanks](https://img.shields.io/badge/Tanks-17-green.svg)]()
-[![Daemons](https://img.shields.io/badge/Daemons-21-purple.svg)]()
+[![Daemons](https://img.shields.io/badge/Daemons-17-purple.svg)]()
 [![Languages](https://img.shields.io/badge/Languages-5-orange.svg)]()
 [![Website](https://img.shields.io/badge/Website-Live-mint.svg)](https://ijnebzor.github.io/thedigiquarium)
 
@@ -56,7 +56,7 @@ Multi-specimen debates on scheduled topics. THE MODERATOR manages turn-taking, T
 
 ---
 
-## 🤖 The Team (21 Daemons)
+## 🤖 The Team (17 Daemons + 2 Partners)
 
 **Human**: [@ijneb.dev](https://ijneb.dev)  
 **AI Partner**: Claude (THE STRATEGIST)

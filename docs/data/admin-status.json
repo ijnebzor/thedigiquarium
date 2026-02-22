@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T03:44:01.540648",
+  "timestamp": "2026-02-23T03:54:01.204173",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 27
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 4291,
+    "running": 19,
+    "traces_today": 4305,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Sea level",
-        "traces": 767
+        "article": "Science",
+        "traces": 769
       },
       {
         "name": "tank-02-eve",
-        "article": "Aspergillus",
-        "traces": 766
+        "article": "Number",
+        "traces": 768
       },
       {
         "name": "tank-03-cain",
-        "article": "Religion",
-        "traces": 793
+        "article": "Jesus",
+        "traces": 795
       },
       {
         "name": "tank-04-abel",
-        "article": "Money",
-        "traces": 1528
+        "article": "Clothing",
+        "traces": 1534
       },
       {
         "name": "tank-05-juan",
-        "article": "Ciencia social",
-        "traces": 437
+        "article": "Ciencia",
+        "traces": 439
       }
     ]
   },
@@ -93,11 +93,6 @@
     "auto_remediations": 12
   },
   "logs": [
-    "2026-02-23 03:37:28 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>', 'Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 03:38:28 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Windows Ollama is down. Check Windows host at 192.168.50.94",
-    "2026-02-23 03:38:28 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223033828",
-    "2026-02-23 03:38:28 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Windows Ollama is down. Check Windows host at 192.168.50.94",
-    "2026-02-23 03:38:28 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
     "2026-02-23 03:38:35 \ud83d\udce7 [OVERSEER] Escalating INC-20260223033828 to human operator",
     "2026-02-23 03:38:35 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
     "2026-02-23 03:38:53 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: timed out', 'Proxy container not running', 'End-to-end connectivity failed']",
@@ -112,7 +107,12 @@
     "2026-02-23 03:40:07 \u26a0\ufe0f [OVERSEER]   - ollama: ['Proxy container not running', 'End-to-end connectivity failed']",
     "2026-02-23 03:40:07 \u26a0\ufe0f [OVERSEER]   - containers: ['digiquarium-ollama is Created']",
     "2026-02-23 03:41:08 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 03:42:12 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']"
+    "2026-02-23 03:42:12 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-02-23 03:45:13 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 03:45:14 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 03:50:20 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 03:50:21 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-23 03:50:21 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']"
   ],
   "issues": []
 }
