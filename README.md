@@ -144,20 +144,29 @@ docker compose up -d
 ```
 thedigiquarium/
 ├── docs/                    # Website (GitHub Pages)
-│   ├── academic/           # Research paper
-│   ├── congregations/      # Debate hub
+│   ├── archive/beta/       # Beta period archive
+│   ├── brain/              # THE BRAIN knowledge base
+│   ├── dashboard/          # Live tank view
 │   ├── research/           # Methodology, prompts, security, ethics
-│   └── specimens/          # Individual profiles
-├── daemons/                # All 16 daemon implementations
-│   ├── therapist/          # Mental health monitoring
-│   ├── moderator/          # Congregation management
-│   ├── ethicist/           # Ethics oversight
-│   └── ...
-├── logs/                   # Thinking traces & baselines
-├── congregations/          # Congregation transcripts
-├── MILESTONES.md           # Complete decision log
+│   ├── specimens/          # Individual profiles
+│   └── blog/               # Project blog
+├── daemons/                # Daemon implementations (21 daemons)
+│   ├── overseer/           # Meta-daemon, self-healing
+│   ├── maintainer/         # System orchestration
+│   ├── caretaker/          # Tank health
+│   ├── guard/              # Security (OWASP)
+│   ├── webmaster/          # Website + broadcaster
+│   └── ...                 # (see full roster above)
+├── tanks/                  # Tank configurations
+├── operations/             # Scheduler, orchestrator (legacy location)
+├── security/               # SecureClaw, audits (legacy location)
+├── congregations/          # Congregation system
+├── logs/                   # Thinking traces (gitignored)
+├── MILESTONES.md           # Decision log
 └── README.md
 ```
+
+> ⚠️ **Note:** Some daemon scripts exist in both `daemons/` and root-level folders (e.g., `caretaker/`). This is tech debt to be consolidated post-migration. The `daemons/` folder is the canonical location.
 
 ---
 

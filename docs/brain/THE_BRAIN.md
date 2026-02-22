@@ -146,3 +146,43 @@ Run full site audit when:
 - [x] Beta Period notice (both have it)
 - [x] Specimen count: 17 (both match)
 - [ ] All links verified (ongoing)
+
+---
+
+## Section 30: Repository Structure (Tech Debt)
+
+### Current State (Messy - Needs Consolidation)
+
+The repository has duplicate/scattered daemon-related folders:
+
+**Root Level (Legacy):**
+- `caretaker/` - Active caretaker scripts (15KB caretaker.py)
+- `guard/` - Active guard scripts
+- `operations/` - Scheduler, orchestrator, translations, agents
+- `security/` - Audit scripts, SecureClaw
+
+**daemons/ Folder (Intended Canonical):**
+- Contains all 19 daemon subdirectories
+- Some have smaller/older versions of scripts
+- Should be the single source of truth
+
+**Conflict Example:**
+- `caretaker/caretaker.py` = 15KB (active, running)
+- `daemons/caretaker/caretaker.py` = 6KB (older version)
+
+### Migration Plan (Post-v8)
+1. Identify which version of each script is "active" (running in production)
+2. Consolidate all active scripts into `daemons/[daemon_name]/`
+3. Move `operations/` content to appropriate daemon folders
+4. Move `security/` to `daemons/guard/` or `daemons/sentinel/`
+5. Remove root-level duplicates
+6. Update all systemd services to point to `daemons/` paths
+7. Update README to reflect clean structure
+
+### For Now
+- Both structures exist
+- Root-level folders are often the "active" versions
+- `daemons/` folder is the documented/intended structure
+- This is TECH DEBT to address post-migration
+
+---
