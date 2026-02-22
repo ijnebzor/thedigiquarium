@@ -39,7 +39,7 @@
 
 ---
 
-## SECTION 3: DAEMON ROSTER (20 Daemons)
+## SECTION 3: DAEMON ROSTER (15 Continuous Daemons)
 
 | Division | Daemons |
 |----------|---------|
@@ -1233,7 +1233,7 @@ This is your private exploration.
 
 ---
 
-## Section 31: Official Daemon Roster (17 Daemons + Partners)
+## Section 31: Official Daemon Roster (15 Continuous)
 
 ### Core Operations (5)
 1. **THE OVERSEER** - Meta-daemon, monitors all daemons, self-healing

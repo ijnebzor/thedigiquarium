@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T03:54:01.204173",
+  "timestamp": "2026-02-23T04:06:01.547526",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 19,
-    "traces_today": 4305,
+    "traces_today": 4313,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -68,13 +68,13 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Jesus",
-        "traces": 795
+        "article": "Art",
+        "traces": 797
       },
       {
         "name": "tank-04-abel",
-        "article": "Clothing",
-        "traces": 1534
+        "article": "Civilization",
+        "traces": 1540
       },
       {
         "name": "tank-05-juan",
@@ -93,14 +93,6 @@
     "auto_remediations": 12
   },
   "logs": [
-    "2026-02-23 03:38:35 \ud83d\udce7 [OVERSEER] Escalating INC-20260223033828 to human operator",
-    "2026-02-23 03:38:35 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
-    "2026-02-23 03:38:53 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: timed out', 'Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 03:39:53 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Windows Ollama is down. Check Windows host at 192.168.50.94",
-    "2026-02-23 03:39:53 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223033953",
-    "2026-02-23 03:39:53 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Windows Ollama is down. Check Windows host at 192.168.50.94",
-    "2026-02-23 03:39:53 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
-    "2026-02-23 03:40:03 \ud83d\udce7 [OVERSEER] Escalating INC-20260223033953 to human operator",
     "2026-02-23 03:40:03 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
     "2026-02-23 03:40:03 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-23 03:40:07 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
@@ -112,7 +104,15 @@
     "2026-02-23 03:45:14 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-23 03:50:20 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-23 03:50:21 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-23 03:50:21 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']"
+    "2026-02-23 03:50:21 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
+    "2026-02-23 03:55:23 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 03:55:27 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 04:00:30 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 04:00:31 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-23 04:00:31 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
+    "2026-02-23 04:05:35 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 04:05:36 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-23 04:05:36 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']"
   ],
   "issues": []
 }
