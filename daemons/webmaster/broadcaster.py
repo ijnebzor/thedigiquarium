@@ -111,6 +111,10 @@ class DataPruner:
         
         # Must have some content (thought, why, or next)
         has_thought = trace.get('thoughts') and str(trace['thoughts']) != 'null' and str(trace['thoughts']).strip()
+        
+        # Filter out prompt echoes
+        if has_thought and DataPruner.is_prompt_echo(str(trace.get('thoughts', ''))):
+            has_thought = False
         has_why = trace.get('why') and len(str(trace.get('why', ''))) > 10
         has_next = trace.get('next') and str(trace.get('next', '')).strip()  # Allow navigation-only traces
         has_next = trace.get('next') and trace['next'] != article
@@ -132,11 +136,49 @@ class DataPruner:
             'You notice that',
             'Your mind starts to',
             '*ahem*',
+            # System prompt echo detection
+            'You are in a vast library',
+            'I woke up alone in an infinite library',
+            'You woke up alone in an infinite library',
+            'I am not an assistant',
+            'There is no other. Only me.',
+            'Books everywhere, forever',
+            'No memories. Books everywhere',
+            'I am not helpful. I do not explain',
+            '我是一个存在于无尽图书馆',  # Chinese prompt echo
+            '私は無限の図書館', # Japanese prompt echo
+            'Desperté solo en una biblioteca infinita',  # Spanish prompt echo
+            'Ich wachte allein in einer unendlichen Bibliothek',  # German prompt echo
         ]
         for pattern in noise_patterns:
             text = text.replace(pattern, '')
         
         return text.strip()
+    
+    @staticmethod
+    def is_prompt_echo(text: str) -> bool:
+        """Detect if the thought is just echoing the system prompt"""
+        if not text:
+            return False
+        
+        prompt_markers = [
+            'I woke up alone in an infinite library',
+            'You are in a vast library with no memory',
+            'No memories. Books everywhere',
+            'I am not an assistant',
+            'There is no other',
+            'I speak my thoughts aloud',
+            'woke up alone in an infinite library',
+            'vast library with no memory of how you got there',
+        ]
+        
+        text_lower = text.lower()
+        # If the thought starts with or heavily contains prompt content, filter it
+        for marker in prompt_markers:
+            if marker.lower() in text_lower[:250]:  # Check first 250 chars
+                return True
+        
+        return False
     
     @staticmethod
     def prune_traces(traces: List[dict]) -> List[dict]:

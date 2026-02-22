@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T12:46:01.280533",
+  "timestamp": "2026-02-22T12:48:01.692799",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -50,11 +50,11 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 27
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 34127,
+    "running": 18,
+    "traces_today": 34128,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Brain",
-        "traces": 11314
+        "article": "Nerve",
+        "traces": 11315
       },
       {
         "name": "tank-05-juan",
@@ -93,9 +93,6 @@
     "auto_remediations": 4
   },
   "logs": [
-    "2026-02-22 12:06:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 12:06:06 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 12:11:11 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 12:11:12 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-22 12:16:14 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 12:16:17 \u2705 [OVERSEER] Full system audit PASSED",
@@ -112,7 +109,10 @@
     "2026-02-22 12:36:37 \u2705 [OVERSEER] Full system audit PASSED",
     "2026-02-22 12:41:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-22 12:41:45 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 12:41:45 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 44 seconds ago']"
+    "2026-02-22 12:41:45 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 44 seconds ago']",
+    "2026-02-22 12:46:48 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 12:46:50 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 12:46:50 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 42 seconds ago']"
   ],
   "issues": []
 }
