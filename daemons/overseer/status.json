@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T02:15:54.807635",
+  "timestamp": "2026-02-23T03:43:13.094855",
   "active_incidents": {
     "INC-20260222061505": {
       "id": "INC-20260222061505",
@@ -5904,70 +5904,442 @@
       "created": "2026-02-23T00:11:15.834680",
       "status": "open",
       "escalated_to_human": false
+    },
+    "INC-20260223025041": {
+      "id": "INC-20260223025041",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:50:39.449599",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223025123": {
+      "id": "INC-20260223025123",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:49:29.362558",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223025322": {
+      "id": "INC-20260223025322",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:52:59.649379",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223025401": {
+      "id": "INC-20260223025401",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:51:49.551555",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223025605": {
+      "id": "INC-20260223025605",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:55:21.364252",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223025645": {
+      "id": "INC-20260223025645",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:54:10.903380",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223025846": {
+      "id": "INC-20260223025846",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:57:41.493906",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223025924": {
+      "id": "INC-20260223025924",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:56:31.426076",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030124": {
+      "id": "INC-20260223030124",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:01:11.957698",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030139": {
+      "id": "INC-20260223030139",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:00:01.744922",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030151": {
+      "id": "INC-20260223030151",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T02:58:51.622259",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030312": {
+      "id": "INC-20260223030312",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:02:22.057441",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030430": {
+      "id": "INC-20260223030430",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:03:32.143844",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030548": {
+      "id": "INC-20260223030548",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:04:42.215551",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030812": {
+      "id": "INC-20260223030812",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:08:10.119803",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030826": {
+      "id": "INC-20260223030826",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:06:59.851349",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223030951": {
+      "id": "INC-20260223030951",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:09:20.270114",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223031114": {
+      "id": "INC-20260223031114",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:10:30.463395",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223031237": {
+      "id": "INC-20260223031237",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:11:40.829310",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223031355": {
+      "id": "INC-20260223031355",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:12:50.922170",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223031518": {
+      "id": "INC-20260223031518",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:15:11.489064",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223031532": {
+      "id": "INC-20260223031532",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:14:01.127290",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223031655": {
+      "id": "INC-20260223031655",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:16:21.553735",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223031816": {
+      "id": "INC-20260223031816",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:17:31.685929",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223031934": {
+      "id": "INC-20260223031934",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:18:41.740570",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223032052": {
+      "id": "INC-20260223032052",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:19:51.806513",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223032218": {
+      "id": "INC-20260223032218",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:22:14.630733",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223032304": {
+      "id": "INC-20260223032304",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:21:03.094463",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223032551": {
+      "id": "INC-20260223032551",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:24:50.246597",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223032751": {
+      "id": "INC-20260223032751",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:27:10.967533",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223032839": {
+      "id": "INC-20260223032839",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:26:00.891354",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033008": {
+      "id": "INC-20260223033008",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:29:32.784835",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033014": {
+      "id": "INC-20260223033014",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:28:22.700998",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033135": {
+      "id": "INC-20260223033135",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:30:42.880168",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033253": {
+      "id": "INC-20260223033253",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:31:52.985722",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033411": {
+      "id": "INC-20260223033411",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:33:03.091646",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033529": {
+      "id": "INC-20260223033529",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:35:23.666820",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033545": {
+      "id": "INC-20260223033545",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:34:13.381395",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033709": {
+      "id": "INC-20260223033709",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:36:33.752625",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033828": {
+      "id": "INC-20260223033828",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:37:43.909886",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260223033953": {
+      "id": "INC-20260223033953",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-23T03:38:54.160086",
+      "status": "open",
+      "escalated_to_human": false
     }
   },
   "stats": {
-    "cycles": 1237,
-    "incidents_detected": 656,
+    "cycles": 1304,
+    "incidents_detected": 697,
     "incidents_resolved": 0,
     "escalations_sent": 0,
     "auto_remediations": 12,
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-23T02:14:50.992447",
+    "timestamp": "2026-02-23T03:40:03.686449",
     "ollama": {
-      "healthy": true,
-      "issues": []
+      "healthy": false,
+      "issues": [
+        "Proxy container not running",
+        "End-to-end connectivity failed"
+      ]
     },
     "containers": {
       "healthy": false,
       "issues": [
-        "tank-03-cain is Exited (137) 3 minutes ago"
+        "digiquarium-ollama is Created"
       ],
       "containers": {
         "digiquarium-ollama": {
-          "status": "Up 2 hours",
-          "healthy": true
+          "status": "Created",
+          "healthy": false
         },
         "tank-01-adam": {
-          "status": "Up 41 minutes",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "tank-02-eve": {
-          "status": "Up 41 minutes",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-simple": {
-          "status": "Up 26 hours",
+          "status": "Up 27 hours",
           "healthy": true
         },
         "tank-visitor-01-aria": {
-          "status": "Up 13 hours",
+          "status": "Up 14 hours",
           "healthy": true
         },
         "tank-visitor-02-felix": {
-          "status": "Up 13 hours",
+          "status": "Up 14 hours",
           "healthy": true
         },
         "tank-visitor-03-luna": {
-          "status": "Up 13 hours",
+          "status": "Up 14 hours",
           "healthy": true
         },
         "tank-17-seth": {
-          "status": "Up 4 hours",
+          "status": "Up 6 hours",
           "healthy": true
         },
         "congregation-runner": {
-          "status": "Up 26 hours",
+          "status": "Up 27 hours",
           "healthy": true
         },
         "tank-03-cain": {
-          "status": "Exited (137) 3 minutes ago",
-          "healthy": false
+          "status": "Up 26 minutes",
+          "healthy": true
         },
         "tank-04-abel": {
-          "status": "Up 7 hours",
+          "status": "Up 9 hours",
           "healthy": true
         },
         "tank-16-seeker": {
@@ -5979,47 +6351,47 @@
           "healthy": true
         },
         "tank-14-iris": {
-          "status": "Up 40 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-13-victor": {
-          "status": "Up 41 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up 3 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up 3 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-09-wei": {
-          "status": "Up 3 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up 3 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-08-genevieve": {
-          "status": "Up About an hour",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "tank-05-juan": {
-          "status": "Up About an hour",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "tank-07-klaus": {
-          "status": "Up About an hour",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up About an hour",
+          "status": "Up 5 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {
-          "status": "Up 2 days",
+          "status": "Up 3 days",
           "healthy": true
         },
         "digiquarium-kiwix-chinese": {
@@ -6154,9 +6526,16 @@
     },
     "issues": [
       {
+        "component": "ollama",
+        "details": [
+          "Proxy container not running",
+          "End-to-end connectivity failed"
+        ]
+      },
+      {
         "component": "containers",
         "details": [
-          "tank-03-cain is Exited (137) 3 minutes ago"
+          "digiquarium-ollama is Created"
         ]
       }
     ],

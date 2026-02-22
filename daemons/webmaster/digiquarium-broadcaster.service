@@ -1,0 +1,14 @@
+[Unit]
+Description=Digiquarium Live Feed Broadcaster
+After=network.target docker.service
+
+[Service]
+Type=simple
+User=ijneb
+WorkingDirectory=/home/ijneb/digiquarium/daemons/webmaster
+ExecStart=/usr/bin/python3 /home/ijneb/digiquarium/daemons/webmaster/broadcaster_continuous.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
