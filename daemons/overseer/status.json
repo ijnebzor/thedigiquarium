@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:40:27.188934",
+  "timestamp": "2026-02-23T04:45:15.860516",
   "active_incidents": {
     "INC-20260222061505": {
       "id": "INC-20260222061505",
@@ -6273,11 +6273,20 @@
       "created": "2026-02-23T03:38:54.160086",
       "status": "open",
       "escalated_to_human": false
+    },
+    "INC-20260223044443": {
+      "id": "INC-20260223044443",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-23T04:44:04.616686",
+      "status": "open",
+      "escalated_to_human": false
     }
   },
   "stats": {
-    "cycles": 11,
-    "incidents_detected": 0,
+    "cycles": 15,
+    "incidents_detected": 1,
     "incidents_resolved": 0,
     "escalations_sent": 0,
     "auto_remediations": 0,

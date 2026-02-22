@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:45:01.510480",
+  "timestamp": "2026-02-23T04:46:19.706513",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": true,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 27
+    "total": 26
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 4833,
+    "running": 19,
+    "traces_today": 4947,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Plato",
-        "traces": 858
+        "article": "Philosophers",
+        "traces": 883
       },
       {
         "name": "tank-02-eve",
-        "article": "Cobalt",
-        "traces": 858
+        "article": "Down",
+        "traces": 882
       },
       {
         "name": "tank-03-cain",
-        "article": "Cainozoic",
-        "traces": 856
+        "article": "Sansoen Phra Barami",
+        "traces": 871
       },
       {
         "name": "tank-04-abel",
-        "article": "Film (disambiguation)",
-        "traces": 1759
+        "article": "Antarctica",
+        "traces": 1796
       },
       {
         "name": "tank-05-juan",
-        "article": "Biolog\u00eda",
-        "traces": 502
+        "article": "Alemania",
+        "traces": 515
       }
     ]
   },
@@ -89,30 +89,30 @@
   "overseer": {
     "running": true,
     "last_audit_healthy": false,
-    "active_incidents": 697,
+    "active_incidents": 698,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-23 04:30:13 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 04:30:14 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-23 04:30:14 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer has 2 instances (zombie leak)', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher not running']",
-    "2026-02-23 04:30:14 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 04:30:15 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-23 04:30:15 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer has 2 instances (zombie leak)', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher not running']",
-    "2026-02-23 04:35:19 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 04:35:20 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 04:38:22 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 04:39:23 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
-    "2026-02-23 04:40:23 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 04:40:27 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-23 04:40:27 \u26a0\ufe0f [OVERSEER]   - ollama: ['Proxy container not running', 'End-to-end connectivity failed']",
     "2026-02-23 04:41:28 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
     "2026-02-23 04:42:40 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
     "2026-02-23 04:43:43 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
     "2026-02-23 04:44:43 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
     "2026-02-23 04:44:43 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223044443",
     "2026-02-23 04:44:43 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
-    "2026-02-23 04:44:43 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy"
+    "2026-02-23 04:44:43 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
+    "2026-02-23 04:45:13 \ud83d\udce7 [OVERSEER] Escalating INC-20260223044443 to human operator",
+    "2026-02-23 04:45:13 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
+    "2026-02-23 04:45:15 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-02-23 04:46:15 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:46:15 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223044615",
+    "2026-02-23 04:46:15 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:46:15 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
+    "2026-02-23 04:46:34 \ud83d\udce7 [OVERSEER] Escalating INC-20260223044615 to human operator",
+    "2026-02-23 04:46:34 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
+    "2026-02-23 04:46:34 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:46:34 \ud83d\udea8 [OVERSEER] Incident created: INC-20260223044634",
+    "2026-02-23 04:46:34 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-23 04:46:34 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy"
   ],
   "issues": [
     "Ollama E2E failed"
