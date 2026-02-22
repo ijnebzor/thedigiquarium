@@ -1416,3 +1416,65 @@ config/
 **Additive before destructive** - New structure created alongside old. Nothing deleted until new paths are tested and working.
 
 ---
+
+---
+
+## Section 35: Reality Check Audit Results (Feb 23, 2026 04:00 AEDT)
+
+### Audit Scope
+Complete infrastructure audit per Reality Check Protocol (Section 25).
+
+### Findings
+
+**BEFORE AUDIT:**
+- Site claimed 21 daemons
+- Only 12 processes actually running
+- 7 daemons not started
+- 1 daemon (ARCHIVIST) doesn't exist
+- Cain tank was stopped
+
+**AFTER FIXES:**
+- Site claims 17 daemons (honest)
+- 15 continuous daemons running
+- Self-healing supervisor created
+- All tanks running
+- All claims match reality
+
+### Fixes Applied
+
+1. Started THERAPIST daemon
+2. Started CHAOS_MONKEY daemon
+3. Created daemon_supervisor.py (cron every minute)
+4. Updated daemon count: 21 → 17
+5. Added Beta notice to index.html
+6. Restarted tank-03-cain
+7. Consolidated THE BRAIN (34 → 35 sections)
+8. Created src/ and config/ structure
+
+### Current State (Verified)
+
+| Component | Count | Status |
+|-----------|-------|--------|
+| Continuous daemons | 15 | ✅ Running |
+| Event-driven daemons | 2 | ✅ On-demand |
+| Init-only daemons | 3 | ✅ Initialized |
+| Research tanks | 17 | ✅ Running |
+| Visitor tanks | 3 | ✅ Running |
+| Kiwix servers | 6 | ✅ Running |
+| Internal links | 436 | ✅ 0 broken |
+| Beta notices | 6 pages | ✅ All have |
+
+### Lessons Learned
+
+1. **Don't claim things are running without verification**
+2. **Continuous daemons ≠ event-driven daemons - be clear**
+3. **Self-healing must be in place for 99.9% uptime**
+4. **Audit before migration, not after**
+
+### Files Created
+- audits/REALITY_CHECK_20260223_0351.md
+- audits/COMPREHENSIVE_AUDIT_20260223_0423.md
+- daemons/daemon_supervisor.py
+- docs/brain/DAEMON_REALITY.md
+
+---
