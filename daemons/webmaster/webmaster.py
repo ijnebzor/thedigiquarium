@@ -19,6 +19,7 @@ import os
 import sys
 import time
 import json
+import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 import subprocess
 import fcntl
 from datetime import datetime, timedelta
@@ -48,6 +49,8 @@ RETENTION_DAYS = 7
 
 class Webmaster:
     def __init__(self):
+        self.status = StatusReporter('webmaster')
+
         self.last_push = None
         self.changes_pending = False
         PUBLIC_LOGS_DIR.mkdir(parents=True, exist_ok=True)
@@ -313,6 +316,21 @@ class Webmaster:
                 
             except Exception as e:
                 self.log('error', f'Cycle error: {e}')
+            
+            # Status update for SLA monitoring
+
+            
+            try:
+
+            
+                self.status.heartbeat()
+
+            
+            except:
+
+            
+                pass
+
             
             time.sleep(CHECK_INTERVAL)
 

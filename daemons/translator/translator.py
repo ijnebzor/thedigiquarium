@@ -23,6 +23,8 @@ LANGUAGE_TANKS = {
 
 class Translator:
     def __init__(self):
+        self.status = StatusReporter('translator')
+
         self.log = DaemonLogger('translator')
     
     def run(self):
@@ -35,6 +37,16 @@ class Translator:
         while True:
             try:
                 self.log.info(f"Monitoring {len(LANGUAGE_TANKS)} language tanks")
+                # Status update for SLA monitoring
+
+                try:
+
+                    self.status.heartbeat()
+
+                except:
+
+                    pass
+
                 time.sleep(CHECK_INTERVAL)
             except Exception as e:
                 self.log.error(f"Error: {e}")

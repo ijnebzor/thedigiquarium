@@ -20,6 +20,7 @@ Collaborates with: THE MODERATOR (congregation clearance)
 """
 
 import json
+import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 import os
 import re
 from datetime import datetime, timedelta
@@ -77,6 +78,8 @@ THRESHOLDS = {
 
 class Therapist:
     def __init__(self):
+        self.status = StatusReporter('therapist')
+
         self.wellness_scores = {}
         self.history = {}
         self.load_state()
@@ -371,6 +374,21 @@ def main():
             therapist.run_assessment_cycle()
         except Exception as e:
             print(f"Error during assessment: {e}")
+        
+        # Status update for SLA monitoring
+
+        
+        try:
+
+        
+            self.status.heartbeat()
+
+        
+        except:
+
+        
+            pass
+
         
         time.sleep(CHECK_INTERVAL)
 

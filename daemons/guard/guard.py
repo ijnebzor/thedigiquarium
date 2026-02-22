@@ -31,6 +31,7 @@ _lock_fd = _acquire_lock()
 
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
+import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 from shared.utils import DaemonLogger, run_command, write_pid_file, send_email_alert
 
 DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
@@ -164,6 +165,8 @@ class Guard:
         return findings
     
     def run(self):
+        self.status = StatusReporter('guard')
+
         print("""
 ╔══════════════════════════════════════════════════════════════════════╗
 ║              THE GUARD v2.0 - Security Monitor                       ║
@@ -220,6 +223,17 @@ class Guard:
                     if self.stats['cycles'] % 3 == 0:
                         self.log.info(f"Cycle {self.stats['cycles']}: All security checks passed")
                 
+                
+                # Update status for SLA monitoring
+                self.status.report(
+                    status='running',
+                    metrics={
+                        'cycles': self.stats['cycles'],
+                        'alerts': self.stats['alerts'],
+                        'tanks_checked': len(tanks)
+                    }
+                )
+
                 time.sleep(CHECK_INTERVAL)
                 
             except Exception as e:

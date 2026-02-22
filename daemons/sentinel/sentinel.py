@@ -12,6 +12,7 @@ import os
 import sys
 import time
 import json
+import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 from datetime import datetime
 from pathlib import Path
 
@@ -48,6 +49,8 @@ AGENT_DANGER_PATTERNS = [
 
 class Sentinel:
     def __init__(self):
+        self.status = StatusReporter('sentinel')
+
         self.log = DaemonLogger('sentinel')
         self.stats = {'cycles': 0, 'alerts': 0, 'interventions': 0}
     
@@ -185,6 +188,21 @@ class Sentinel:
                 
                 if self.stats['cycles'] % 3 == 0:
                     self.log.info(f"Cycle {self.stats['cycles']}: Agent tanks monitored, {self.stats['interventions']} interventions total")
+                
+                # Status update for SLA monitoring
+
+                
+                try:
+
+                
+                    self.status.heartbeat()
+
+                
+                except:
+
+                
+                    pass
+
                 
                 time.sleep(CHECK_INTERVAL)
                 

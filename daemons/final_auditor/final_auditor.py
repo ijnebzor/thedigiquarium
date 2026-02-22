@@ -18,6 +18,8 @@ CHECK_INTERVAL = 43200  # 12 hours
 
 class FinalAuditor:
     def __init__(self):
+        self.status = StatusReporter('final_auditor')
+
         self.log = DaemonLogger('final_auditor')
     
     def load_spec(self):
@@ -95,6 +97,16 @@ class FinalAuditor:
         
         while True:
             try:
+                # Status update for SLA monitoring
+
+                try:
+
+                    self.status.heartbeat()
+
+                except:
+
+                    pass
+
                 time.sleep(CHECK_INTERVAL)
                 
                 findings = self.audit_website()

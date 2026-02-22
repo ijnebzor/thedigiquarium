@@ -18,6 +18,7 @@ import os
 import sys
 import time
 import json
+import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -42,6 +43,8 @@ MILESTONES = {
 
 class Documentarian:
     def __init__(self):
+        self.status = StatusReporter('documentarian')
+
         self.log = DaemonLogger('documentarian')
         self.milestones_file = PAPER_DIR / 'milestones.json'
         self.paper_file = PAPER_DIR / 'PAPER_DRAFT.md'
@@ -425,6 +428,21 @@ Multi-agent debates on scheduled topics for discourse analysis.
                 if (now - last_paper_update).total_seconds() >= CHECK_INTERVAL:
                     self.generate_paper_draft()
                     last_paper_update = now
+                
+                # Status update for SLA monitoring
+
+                
+                try:
+
+                
+                    self.status.heartbeat()
+
+                
+                except:
+
+                
+                    pass
+
                 
                 time.sleep(300)  # Check every 5 minutes
                 

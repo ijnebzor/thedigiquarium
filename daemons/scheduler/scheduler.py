@@ -30,6 +30,8 @@ CHECK_INTERVAL = 1800  # 30 minutes
 
 class Scheduler:
     def __init__(self):
+        self.status = StatusReporter('scheduler')
+
         self.log = DaemonLogger('scheduler')
         self.schedule_file = DIGIQUARIUM_DIR / 'daemons' / 'scheduler' / 'schedule.json'
         self.load_schedule()
@@ -77,6 +79,16 @@ class Scheduler:
                 if self.should_run_baselines():
                     self.queue_baselines()
                 self.log.info("Schedule check complete")
+                # Status update for SLA monitoring
+
+                try:
+
+                    self.status.heartbeat()
+
+                except:
+
+                    pass
+
                 time.sleep(CHECK_INTERVAL)
             except Exception as e:
                 self.log.error(f"Error: {e}")

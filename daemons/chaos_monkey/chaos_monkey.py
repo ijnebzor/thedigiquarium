@@ -32,6 +32,8 @@ def acquire_lock():
 
 class ChaosMonkey:
     def __init__(self):
+        self.status = StatusReporter('chaos_monkey')
+
         self.last_chaos = None
         self.events_log = CHAOS_DIR / 'events.jsonl'
         self.stats_file = CHAOS_DIR / 'stats.json'
@@ -81,6 +83,16 @@ class ChaosMonkey:
                 ok, out = self.run_cmd(f"ps aux | grep '{target}.py' | grep -v grep | wc -l")
                 if ok and out.strip() == '1':
                     return True, time.time() - start
+            # Status update for SLA monitoring
+
+            try:
+
+                self.status.heartbeat()
+
+            except:
+
+                pass
+
             time.sleep(10)
         return False, timeout
     

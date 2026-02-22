@@ -21,6 +21,7 @@ import os
 import sys
 import time
 import json
+import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 import re
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -76,6 +77,8 @@ CONCERN_INDICATORS = {
 
 class Psych:
     def __init__(self):
+        self.status = StatusReporter('psych')
+
         self.log = DaemonLogger('psych')
         self.tanks = [f'tank-{i:02d}' for i in range(1, 18)]
         self.tank_names = {
@@ -270,6 +273,21 @@ class Psych:
                             f"The following specimens require psychological attention:\n\n" +
                             '\n'.join([f"- {name}: {concerns}" for name, concerns in high_priority])
                         )
+                
+                # Status update for SLA monitoring
+
+                
+                try:
+
+                
+                    self.status.heartbeat()
+
+                
+                except:
+
+                
+                    pass
+
                 
                 time.sleep(CHECK_INTERVAL)
                 
