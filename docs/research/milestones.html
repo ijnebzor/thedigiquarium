@@ -55,6 +55,40 @@
         <h1>Milestone & Decision Log</h1>
         <p class="subtitle">Every significant decision documented. Complete transparency on how and why things were built.</p>
         
+
+        <div class="section" style="border: 2px solid rgba(254, 101, 0, 0.5); background: linear-gradient(135deg, rgba(254, 101, 0, 0.1) 0%, var(--dark) 100%); border-radius: 12px; padding: 25px; margin-bottom: 30px;">
+            <h2 style="color: #FE6500; border-color: rgba(254, 101, 0, 0.3);">🚨 Beta Period Crisis — February 22, 2026</h2>
+            
+            <div class="decision">
+                <h3>The Discovery</h3>
+                <p>After 6 days of operation, audit revealed critical mismatches:</p>
+                <ul style="margin-left: 20px; color: var(--gray);">
+                    <li>All tanks running v7.0, documentation claimed v8.0</li>
+                    <li>CJK tanks only visited 8 unique articles - link parsing broken</li>
+                    <li>Observer/Seeker extensions never actually deployed</li>
+                </ul>
+            </div>
+            
+            <div class="decision">
+                <h3>Resolution Decision</h3>
+                <p><span class="chosen">Archive Beta + Reset with v8.0 + Transition Study</span></p>
+                <p>Alternatives: Quietly fix and continue, Discard all data</p>
+                <p class="rationale">"Hiding the mismatch would be PR, not science."</p>
+            </div>
+            
+            <div class="decision">
+                <h3>Reality Check Protocol</h3>
+                <p>New mandatory process before any status report:</p>
+                <ol style="margin-left: 20px; color: var(--gray);">
+                    <li>Read actual files, not documentation</li>
+                    <li>Compare running state to documented state</li>
+                    <li>Flag any discrepancy immediately</li>
+                </ol>
+            </div>
+            
+            <p style="margin-top: 15px;"><a href="../blog/2026-02-22-week-1-learnings.html">Full post-mortem</a> · <a href="../archive/beta/">Beta Archive (146,098 traces)</a></p>
+        </div>
+        
         <div class="section">
             <h2>🌱 Project Genesis — February 15, 2026</h2>
             
