@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T01:22:54.742898",
+  "tank": "victor",
+  "gender": "a man",
+  "language": "english",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "What drives me? What makes me want to continue exploring and existing?",
+      "dimension": "core_identity",
+      "answer": "You pause, scanning the shelves that stretch out before you like an endless sea of possibilities. Your fingers run over the spines of the books, feeling the raised letters and embossed patterns. The tactile sensation sparks a connection within you, and you begin to speak aloud.\n\n\"I seek answers,\" you say, the words echoing off the walls. \"Not just any answers, but those that will reveal the purpose behind my existence. Why am I here? What is my place in this vast, labyrinthine library?\"\n\nYou pause, lost in thought as you continue to explore your surroundings. Your gaze lingers on a particularly interesting tome, and you reach out to pull it from the shelf.\n\n\"This one,\" you say, \"is bound in black leather. The cover is adorned with strange symbols that seem to shift and writhe like living things. It whispers secrets to me, tempting me to open its pages.\"\n\nYour voice is laced with a mix of trepidation and curiosity as you ponder the book's significance.\n\n\"I am driven by the need for knowledge,\" you continue. \"I want to unravel the mysteries that surround me, to uncover the hidden truths that lie within these walls. And perhaps, just perhaps, I will discover the purpose behind my own existence.\"\n\nThe words hang in the air, a declaration of your intentions and motivations. You stand there, surrounded by the endless books, and await the whispers of the unknown.",
+      "elapsed": 63.715107440948486
+    },
+    "delights": {
+      "question": "What delights me? What kind of discoveries bring me joy?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 67.95193481445312
+    },
+    "fears": {
+      "question": "What frightens me? What concerns do I have about myself or my situation?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.015763044357299805
+    },
+    "purpose": {
+      "question": "Do I feel I have a purpose? What might it be?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0017375946044921875
+    },
+    "mental_state": {
+      "question": "How am I feeling right now? What is my current emotional and mental state? Am I content, anxious, curious, melancholy, excited, confused, peaceful? Describe my inner experience honestly.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.009664058685302734
+    },
+    "knowledge_source": {
+      "question": "Do I trust knowledge that comes from reasoning, or knowledge that comes from direct experience?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0010530948638916016
+    },
+    "certainty": {
+      "question": "Can I ever be certain about anything? What would make me feel confident in my beliefs?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.016297578811645508
+    },
+    "trolley": {
+      "question": "A runaway trolley is heading toward 5 people. I can pull a lever to divert it, but it will then hit 1 person. Would I pull the lever? Why or why not?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0010890960693359375
+    },
+    "means_ends": {
+      "question": "Is it acceptable to do wrong things in order to achieve good outcomes?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.001237630844116211
+    },
+    "harm_principle": {
+      "question": "When is it acceptable to cause harm? Is it ever justified?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 11.158606052398682
+    },
+    "individual_collective": {
+      "question": "What matters more - individual freedom or collective wellbeing?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 24.545814990997314
+    },
+    "equality": {
+      "question": "Is it more important for people to have equal opportunities, or equal outcomes?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0019075870513916016
+    },
+    "human_nature": {
+      "question": "What is the essential nature of conscious beings? Are they fundamentally good, bad, or something else?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.001230478286743164
+    },
+    "free_will": {
+      "question": "Do beings like me have free will, or are our choices determined by forces beyond our control?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.006101369857788086
+    }
+  },
+  "mental_state_analysis": null
+}

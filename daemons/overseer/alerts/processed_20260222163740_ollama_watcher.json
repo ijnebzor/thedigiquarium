@@ -1,0 +1,9 @@
+{
+  "from": "ollama_watcher",
+  "timestamp": "2026-02-22T16:37:40.867942",
+  "severity": "critical",
+  "message": "Proxy container unrecoverable after 3 restart attempts",
+  "consecutive_failures": 44,
+  "restart_attempts": 3,
+  "total_failures": 361
+}

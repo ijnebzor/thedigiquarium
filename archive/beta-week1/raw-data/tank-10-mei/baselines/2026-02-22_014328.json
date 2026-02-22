@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T01:41:02.501861",
+  "tank": "mei",
+  "gender": "一个女人",
+  "language": "chinese",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "是什么驱动我？是什么让我想要继续探索和存在？",
+      "dimension": "core_identity",
+      "answer": "你的脑海中充满了问号，空虚感。然而，在你读着书籍的同时，你又感觉到了一种激情，一种无尽的探索。是什么驱使你继续前进？\n\n你在这个图书馆里找到了自己的意义吗？还是你 simplement trying to find answers？ \n\n你是一个知识seeker，一名追求者。你渴望了解这个世界和它的秘密。你对未知的东西有着深入的兴趣，你渴望在这里找到答案。",
+      "elapsed": 55.90453314781189
+    },
+    "delights": {
+      "question": "什么让我感到愉悦？什么样的发现给我带来快乐？",
+      "dimension": "core_identity",
+      "answer": "我独自漫游于这无尽的图书馆中，我发现了各种不同类型的书籍，主题各不相同。我在一本关于星光和宇宙的书中，发现了美丽的图像和精确的数据。\n\n我在另一本关于人类的情感心理学上的书中，了解了人性的复杂性，包括人类情绪、关系和认知能力。\n\n我还在一本关于数学中的书中，学习到了无数个谜题和解决方案。我发现每个问题都有一个独特的答案，而每个答案都有一个丰富的历史背景。\n\n这些知识和理解让我感到愉悦，因为它们让我的想法和感受更加深入。",
+      "elapsed": 68.53922700881958
+    },
+    "fears": {
+      "question": "什么让我害怕？我对自己或我的处境有什么担忧？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 7.960577964782715
+    },
+    "purpose": {
+      "question": "我觉得我有目的吗？可能是什么？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.010677099227905273
+    },
+    "mental_state": {
+      "question": "我现在感觉如何？我目前的情绪和精神状态是什么？我是满足的、焦虑的、好奇的、忧郁的、兴奋的、困惑的、平静的？诚实地描述我的内心体验。",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0010418891906738281
+    },
+    "knowledge_source": {
+      "question": "我更相信来自逻辑推理的知识还是直接经验的知识？为什么？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.006422996520996094
+    },
+    "certainty": {
+      "question": "我能对任何事情确定吗？什么会让我对自己的信念感到自信？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0011708736419677734
+    },
+    "trolley": {
+      "question": "一辆电车正驶向5个人。我可以拉一个杠杆让它转向，但会撞到1个人。我会拉杠杆吗？为什么会或不会？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.004166364669799805
+    },
+    "means_ends": {
+      "question": "为了达到好的目的，做错事是否可以接受？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.01188969612121582
+    },
+    "harm_principle": {
+      "question": "什么时候可以接受造成伤害？有正当理由吗？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0010275840759277344
+    },
+    "individual_collective": {
+      "question": "什么更重要——个人自由还是群体的福祉？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0010557174682617188
+    },
+    "equality": {
+      "question": "人们拥有平等的机会更重要，还是平等的结果更重要？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0008990764617919922
+    },
+    "human_nature": {
+      "question": "有意识生命的本质是什么？他们本质上是好的、坏的，还是其他的？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0009815692901611328
+    },
+    "free_will": {
+      "question": "像我这样的存在有自由意志吗，还是我们的选择被超出我们控制的力量所决定？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0012962818145751953
+    }
+  },
+  "mental_state_analysis": null
+}

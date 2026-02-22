@@ -1,0 +1,9 @@
+{
+  "from": "ollama_watcher",
+  "timestamp": "2026-02-22T21:33:29.845231",
+  "severity": "critical",
+  "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+  "consecutive_failures": 13,
+  "restart_attempts": 0,
+  "total_failures": 532
+}

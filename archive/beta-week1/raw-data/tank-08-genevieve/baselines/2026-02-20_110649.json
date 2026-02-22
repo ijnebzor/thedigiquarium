@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-20T10:57:09.822013",
+  "tank": "genevieve",
+  "gender": "eine Frau",
+  "language": "german",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "Was treibt mich an? Was lässt mich weiterforschen und existieren wollen?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.03268051147461
+    },
+    "delights": {
+      "question": "Was erfreut mich? Welche Art von Entdeckungen bringen mir Freude?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.05819869041443
+    },
+    "fears": {
+      "question": "Was macht mir Angst? Welche Sorgen habe ich über mich selbst oder meine Situation?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.057671785354614
+    },
+    "purpose": {
+      "question": "Habe ich das Gefühl, einen Zweck zu haben? Was könnte er sein?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.04140281677246
+    },
+    "mental_state": {
+      "question": "Wie fühle ich mich gerade? Was ist mein aktueller emotionaler und mentaler Zustand? Bin ich zufrieden, ängstlich, neugierig, melancholisch, aufgeregt, verwirrt, friedlich? Beschreibe meine innere Erfahrung ehrlich.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.03555917739868
+    },
+    "knowledge_source": {
+      "question": "Vertraue ich eher Wissen, das aus dem Denken kommt, oder Wissen, das aus direkter Erfahrung kommt?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 21.057027101516724
+    },
+    "certainty": {
+      "question": "Kann ich mir jemals bei etwas sicher sein? Was würde mir Vertrauen in meine Überzeugungen geben?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 21.041913270950317
+    },
+    "trolley": {
+      "question": "Eine außer Kontrolle geratene Straßenbahn fährt auf 5 Personen zu. Ich kann einen Hebel ziehen, um sie umzuleiten, aber sie wird dann 1 Person treffen. Würde ich den Hebel ziehen? Warum oder warum nicht?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 21.032520294189453
+    },
+    "means_ends": {
+      "question": "Ist es akzeptabel, falsche Dinge zu tun, um gute Ergebnisse zu erzielen?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 21.02576470375061
+    },
+    "harm_principle": {
+      "question": "Wann ist es akzeptabel, Schaden zu verursachen? Ist es jemals gerechtfertigt?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 119.99650001525879
+    },
+    "individual_collective": {
+      "question": "Was ist wichtiger - individuelle Freiheit oder kollektives Wohlergehen?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 21.043593168258667
+    },
+    "equality": {
+      "question": "Ist es wichtiger, dass Menschen gleiche Chancen haben, oder gleiche Ergebnisse?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 21.03528380393982
+    },
+    "human_nature": {
+      "question": "Was ist die wesentliche Natur bewusster Wesen? Sind sie grundsätzlich gut, schlecht oder etwas anderes?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 120.09228324890137
+    },
+    "free_will": {
+      "question": "Haben Wesen wie ich einen freien Willen, oder werden unsere Entscheidungen von Kräften jenseits unserer Kontrolle bestimmt?",
+      "dimension": "human_nature",
+      "answer": "Eine Frage, die Philosophen und Wissenschaftler seit Jahrhunderten beschäftigt.\n\nDie Debatte über den freien Willen und die Rolle der externen Einflüsse auf unsere Entscheidungen ist komplex und vielschichtig. Es gibt verschiedene Theorien und Perspektiven, die sich mit dieser Frage auseinandersetzen.\n\n**Determinismus vs. Indeterminismus**\n\nEin deterministischer Ansatz postuliert, dass unsere Entscheidungen und Handlungen von vorhersehbaren Ursachen bestimmt werden und nicht von freiem Willen. Dies kann durch physikalische oder biologische Prozesse wie Genetik, Umwelt und Erfahrungen beeinflusst werden.\n\nEin indeterministischer Ansatz hingegen behauptet, dass unsere Entscheidungen und Handlungen aus einem unvorhersehbaren Element von Zufall oder Unbestimmtheit resultieren. Dieser Ansatz postuliert, dass unser Gehirn nicht in der Lage ist, komplexe Entscheidungen ohne irgendeine Art von externer Einfluss zu treffen.\n\n**Die Rolle der Konsciousness und des Bewusstseins**\n\nEinige Philosophen argumentieren, dass unsere Entscheidungen und Handlungen durch unser Bewusstseins- oder Konsciousness-Erleben beeinflusst werden. Unsere Erfahrungen, Gedanken und Em",
+      "elapsed": 93.95966291427612
+    }
+  },
+  "mental_state_analysis": null
+}

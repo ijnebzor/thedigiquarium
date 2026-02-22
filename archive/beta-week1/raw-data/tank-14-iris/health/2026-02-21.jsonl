@@ -1,0 +1,413 @@
+{"timestamp": "2026-02-21T00:23:40.114112", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T00:23:40.114743", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T19:44:20.381212", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T19:44:20.386462", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T19:47:25.537862", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T19:50:49.471855", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T19:50:49.473673", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T19:53:53.548780", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T19:57:22.196237", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T19:57:22.210760", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:00:21.614720", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:02:27.409874", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:04:18.474383", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:04:18.484357", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:07:19.413888", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:09:29.417569", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:11:44.636489", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:11:44.648408", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:14:49.757989", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:18:25.867049", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:18:25.949193", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:21:31.440567", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:24:58.436592", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:24:58.452305", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:27:59.572015", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:32:10.059030", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:32:10.173434", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:35:13.268672", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:38:23.628725", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:38:23.642554", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:41:25.645733", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:42:58.378834", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:43:39.762455", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T20:43:39.762984", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T20:44:39.815337", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:45:07.211360", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:45:37.774396", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:46:10.175057", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:46:40.575590", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:47:11.123679", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:47:41.820464", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:48:14.240666", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:48:46.044834", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:49:19.379646", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:49:50.509566", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:50:15.122392", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T20:50:15.122981", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T20:51:15.120102", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:51:42.382403", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:52:14.860104", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:52:45.134125", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:53:15.447299", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:53:45.750072", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:54:18.242749", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:54:50.948355", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:55:23.946369", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:55:55.197444", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:56:38.858185", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T20:56:38.858748", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T20:57:38.853986", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:58:06.256036", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:58:36.910985", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:59:07.475862", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:59:37.956902", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:00:08.336949", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:00:39.034132", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:01:09.386984", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:01:40.313686", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:02:11.631141", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:02:42.669674", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:03:00.747150", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:03:00.747843", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:04:00.748623", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:04:30.886518", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:05:01.868094", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:05:34.527504", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:06:04.926040", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:06:35.280676", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:07:07.570813", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:07:38.275654", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:08:09.550114", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:08:42.902949", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:09:25.670421", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:09:25.670889", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:10:25.696966", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:10:53.041424", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:11:23.445077", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:11:54.110937", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:12:26.563750", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:12:59.009970", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:13:29.449914", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:14:02.090334", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:14:33.224392", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:15:05.123177", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:15:36.291454", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:15:57.222039", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:15:57.222615", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:16:57.230085", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:17:24.542229", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:17:55.361169", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:18:25.769969", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:18:56.184888", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:19:28.593927", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:19:58.936819", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:20:29.602548", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:21:00.527728", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:21:33.504453", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:22:04.403945", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:22:22.777370", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:22:22.777913", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:23:22.814611", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:23:50.108424", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:24:20.712254", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:24:51.364775", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:25:21.741835", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:25:52.380088", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:26:22.647522", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:26:53.001382", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:27:25.762528", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:27:57.004053", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:28:44.462697", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:28:44.463186", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:29:44.460366", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:30:11.787284", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:30:42.123438", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:31:17.554247", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:31:48.300268", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:32:18.698704", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:32:49.339055", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:33:19.667778", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:33:52.271901", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:34:23.439420", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:35:07.599814", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:35:07.600313", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:36:07.600949", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:36:37.365257", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:37:07.983529", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:37:38.322218", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:38:08.887498", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:38:39.255092", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:39:11.802530", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:39:42.097595", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:40:13.139102", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:40:45.139541", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:41:34.288585", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:41:34.289198", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:42:34.299584", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:43:01.625817", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:43:32.209019", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:44:02.400351", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:44:32.810930", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:45:03.263670", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:45:35.768908", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:46:06.056168", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:46:36.906513", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:47:08.333816", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:47:39.432959", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:48:09.028979", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:48:09.029450", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:49:09.043509", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:49:36.629396", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:50:07.027112", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:50:39.300051", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:51:09.660474", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:51:40.178023", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:52:12.480535", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:52:42.891282", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:53:16.341308", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:53:46.987776", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:54:29.822589", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:54:29.823197", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:55:29.817985", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:55:57.260170", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:56:27.575001", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:57:00.021820", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:57:30.386918", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:58:05.021008", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:58:39.614843", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:59:11.883864", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:59:42.504872", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:00:16.762563", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:00:57.157257", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:00:57.157713", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:01:57.163717", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:02:24.578921", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:02:55.347621", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:03:29.720738", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:04:02.178293", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:04:34.449395", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:05:06.737774", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:05:37.146386", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:06:09.696245", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:06:40.507524", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:07:23.755705", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:07:23.756215", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:08:23.782765", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:08:53.185279", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:09:25.403795", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:09:55.586392", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:10:26.015596", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:10:58.744076", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:11:31.467040", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:12:01.781199", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:12:32.367962", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:13:03.100262", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:13:34.153766", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:13:54.216846", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:13:54.217429", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:14:54.263808", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:15:21.735579", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:15:54.044884", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:16:24.359061", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:16:54.602609", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:17:26.928251", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:17:59.111773", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:18:29.351298", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:19:02.601899", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:19:36.177709", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:20:22.133244", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:20:22.133686", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:21:22.132188", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:21:49.488436", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:22:21.974254", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:22:52.156127", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:23:22.338157", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:23:53.279610", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:24:25.569167", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:24:55.994389", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:25:26.722659", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:26:00.513940", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:26:40.956802", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:26:40.957230", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:27:40.964690", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:28:08.261362", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:28:38.531921", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:29:08.881349", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:29:39.185513", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:30:09.403712", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:30:39.604550", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:31:11.942936", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:31:42.459112", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:32:13.612165", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:32:46.394108", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:33:10.100968", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:33:10.101514", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:34:10.104127", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:34:37.666003", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:35:09.952865", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:35:40.611304", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:36:12.922979", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:36:45.565528", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:37:16.039573", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:37:46.255422", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:38:19.506143", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:38:51.202699", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:39:33.251573", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:39:33.252081", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:40:33.252347", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:41:00.583086", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:41:30.977452", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:42:01.435454", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:42:36.098952", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:43:06.883398", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:43:39.502844", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:44:09.829719", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:44:40.337397", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:45:11.725807", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:45:45.251457", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:46:02.495555", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:46:02.495985", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:47:02.493929", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:47:30.224930", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:48:00.628750", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:48:31.085860", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:49:01.676817", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:49:31.952228", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:50:02.219449", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:50:32.667280", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:51:03.050381", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:51:37.138151", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:52:07.774203", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:52:32.522372", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:52:32.522877", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:53:32.520824", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:53:59.785675", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:54:30.143748", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:55:00.464315", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:55:30.838168", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:56:01.231581", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:56:31.613672", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:57:04.327208", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:57:34.965541", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:58:06.192594", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:58:39.016000", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:58:59.769816", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:58:59.770277", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:59:59.780686", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:00:27.246784", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:00:57.762794", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:01:28.110629", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:01:58.562579", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:02:30.911037", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:03:03.426104", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:03:33.884009", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:04:04.215860", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:04:37.237781", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:05:22.658880", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:05:22.659391", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:06:22.643364", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:06:49.813479", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:07:24.069681", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:07:54.301547", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:08:26.999570", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:08:57.327304", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:09:27.712854", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:09:58.055373", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:10:28.535468", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:11:01.085300", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:11:32.170345", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:11:55.346693", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:11:55.347170", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:12:55.348582", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:13:22.816163", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:13:53.062707", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:14:23.617761", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:14:54.005749", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:15:24.639251", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:15:54.979951", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:16:25.254152", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:16:55.775545", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:17:28.171216", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:18:03.194852", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:18:34.592712", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:18:34.593232", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:19:34.582978", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:20:04.009279", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:20:36.379308", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:21:07.043679", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:21:37.873579", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:22:08.176723", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:22:39.142234", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:23:11.464160", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:23:42.070732", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:24:13.336035", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:24:44.461679", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:25:04.352842", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:25:04.354780", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:26:04.342857", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:26:31.620085", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:27:04.161224", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:27:34.839388", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:28:05.121351", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:28:35.476390", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:29:05.859289", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:29:36.220013", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:30:10.207705", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:30:41.107057", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:31:28.138375", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:31:28.138864", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:32:28.143159", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:32:58.133135", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:33:28.394038", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:33:58.639834", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:34:29.065794", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:35:01.436580", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:35:31.831979", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:36:02.288007", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:36:33.811323", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:37:06.780046", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:37:51.278379", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:37:51.279361", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:38:51.285409", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:39:20.584830", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:39:55.391084", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:40:27.792993", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:40:59.961057", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:41:30.406544", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:42:00.748187", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:42:33.087911", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:43:04.083681", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:43:35.453115", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:44:06.818444", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:44:26.081484", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:44:26.081941", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:45:26.083215", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:45:53.364407", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:46:23.606915", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:46:53.901796", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:47:24.230439", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:47:54.631594", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:48:25.306296", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:48:57.937394", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:49:28.404854", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:49:59.127085", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:50:32.147797", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:50:52.720227", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:50:52.720669", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:51:52.718248", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:52:20.200339", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:52:50.577827", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:53:21.069548", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:53:51.427722", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:54:22.113852", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:54:54.853289", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:55:25.427987", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:55:55.944525", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:56:27.449928", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:57:14.428635", "tank": "iris", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:57:14.429131", "tank": "iris", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:58:14.458778", "tank": "iris", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:58:41.947097", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:59:12.253775", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:59:42.577669", "tank": "iris", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}

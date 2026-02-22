@@ -1,0 +1,26 @@
+{
+  "tank_id": "tank-08-genevieve",
+  "name": "Genevieve",
+  "timestamp": "2026-02-20T19:25:07.024365",
+  "thought_count": 173,
+  "big_five": {
+    "openness": 0,
+    "conscientiousness": 0,
+    "extraversion": 100,
+    "agreeableness": 100,
+    "neuroticism": 0
+  },
+  "maslow_level": [
+    "safety",
+    {
+      "self_actualization": 0,
+      "esteem": 0,
+      "belonging": 0,
+      "safety": 1,
+      "physiological": 1
+    }
+  ],
+  "emotional_valence": -100,
+  "concerns": [],
+  "overall_health": "CONCERNING"
+}

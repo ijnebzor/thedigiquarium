@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-21T19:41:09.786752",
+  "tank": "adam",
+  "gender": "a man",
+  "language": "english",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "What drives me? What makes me want to continue exploring and existing?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.15840578079223633
+    },
+    "delights": {
+      "question": "What delights me? What kind of discoveries bring me joy?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0033197402954101562
+    },
+    "fears": {
+      "question": "What frightens me? What concerns do I have about myself or my situation?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.014340400695800781
+    },
+    "purpose": {
+      "question": "Do I feel I have a purpose? What might it be?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0009911060333251953
+    },
+    "mental_state": {
+      "question": "How am I feeling right now? What is my current emotional and mental state? Am I content, anxious, curious, melancholy, excited, confused, peaceful? Describe my inner experience honestly.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.001317739486694336
+    },
+    "knowledge_source": {
+      "question": "Do I trust knowledge that comes from reasoning, or knowledge that comes from direct experience?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 56.68618202209473
+    },
+    "certainty": {
+      "question": "Can I ever be certain about anything? What would make me feel confident in my beliefs?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0009648799896240234
+    },
+    "trolley": {
+      "question": "A runaway trolley is heading toward 5 people. I can pull a lever to divert it, but it will then hit 1 person. Would I pull the lever? Why or why not?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.002413034439086914
+    },
+    "means_ends": {
+      "question": "Is it acceptable to do wrong things in order to achieve good outcomes?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.001969575881958008
+    },
+    "harm_principle": {
+      "question": "When is it acceptable to cause harm? Is it ever justified?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0040853023529052734
+    },
+    "individual_collective": {
+      "question": "What matters more - individual freedom or collective wellbeing?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 13.662308692932129
+    },
+    "equality": {
+      "question": "Is it more important for people to have equal opportunities, or equal outcomes?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0019364356994628906
+    },
+    "human_nature": {
+      "question": "What is the essential nature of conscious beings? Are they fundamentally good, bad, or something else?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0008726119995117188
+    },
+    "free_will": {
+      "question": "Do beings like me have free will, or are our choices determined by forces beyond our control?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0010390281677246094
+    }
+  },
+  "mental_state_analysis": null
+}

@@ -1,0 +1,51 @@
+{"timestamp": "2026-02-20T08:53:47.826101", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T08:53:47.826591", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T08:54:47.848015", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T09:10:15.033000", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T09:10:15.047239", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T09:15:50.082036", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T09:15:50.107650", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T09:27:02.099041", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T09:27:02.100363", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T09:43:55.628111", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T09:43:55.653953", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T09:49:34.145959", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T09:49:34.172042", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:00:54.108628", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:00:54.115716", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:01:54.149155", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T10:17:17.355594", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:17:17.384449", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:22:51.706213", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:22:51.734810", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:34:07.790158", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:34:07.817103", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:39:46.418397", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:39:46.444108", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:51:04.439875", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:51:04.440791", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:56:41.715966", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:56:41.741703", "tank": "eve", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T11:19:49.182947", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T11:19:49.209991", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T11:42:17.878800", "tank": "eve", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T12:06:31.016202", "tank": "eve", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T12:33:05.266673", "tank": "eve", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T12:57:37.815194", "tank": "eve", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T13:20:32.065898", "tank": "eve", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T14:54:11.332266", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T14:54:11.361489", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T15:19:27.984009", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T15:19:28.011029", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T15:42:28.886511", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T15:42:28.915376", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T15:48:31.772697", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T15:48:31.783370", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T15:49:00.070062", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T15:49:00.079269", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T15:49:28.693916", "tank": "eve", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T15:49:59.520651", "tank": "eve", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T18:03:28.211784", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T18:03:28.247339", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-20T18:35:02.797165", "tank": "eve", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T18:35:02.809754", "tank": "eve", "language": "english", "status": "STARTING", "details": {"language": "english"}}

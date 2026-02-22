@@ -1,0 +1,45 @@
+{
+  "tank_id": "tank-09-wei",
+  "name": "Wei",
+  "timestamp": "2026-02-20T19:25:07.056237",
+  "thought_count": 57,
+  "big_five": {
+    "openness": 50,
+    "conscientiousness": 100,
+    "extraversion": 66,
+    "agreeableness": 0,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 3,
+      "esteem": 0,
+      "belonging": 2,
+      "safety": 0,
+      "physiological": 3
+    }
+  ],
+  "emotional_valence": -20,
+  "concerns": [
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "no one",
+        "lonely",
+        "disconnected"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "confusion",
+      "indicators": [
+        "lost",
+        "uncertain"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "NEEDS_ATTENTION"
+}

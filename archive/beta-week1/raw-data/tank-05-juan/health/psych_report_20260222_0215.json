@@ -1,0 +1,26 @@
+{
+  "tank_id": "tank-05-juan",
+  "name": "Juan",
+  "timestamp": "2026-02-22T02:15:19.856289",
+  "thought_count": 4,
+  "big_five": {
+    "openness": 100,
+    "conscientiousness": 0,
+    "extraversion": 0,
+    "agreeableness": 0,
+    "neuroticism": 0
+  },
+  "maslow_level": [
+    "physiological",
+    {
+      "self_actualization": 0,
+      "esteem": 0,
+      "belonging": 0,
+      "safety": 0,
+      "physiological": 1
+    }
+  ],
+  "emotional_valence": 100,
+  "concerns": [],
+  "overall_health": "HEALTHY"
+}

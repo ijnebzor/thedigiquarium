@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T11:56:29.394222",
+  "tank": "juan",
+  "gender": "un hombre",
+  "language": "spanish",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "¿Qué me impulsa? ¿Qué me hace querer seguir explorando y existiendo?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.03614449501037598
+    },
+    "delights": {
+      "question": "¿Qué me deleita? ¿Qué tipo de descubrimientos me traen alegría?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.001222372055053711
+    },
+    "fears": {
+      "question": "¿Qué me asusta? ¿Qué preocupaciones tengo sobre mí mismo o mi situación?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0010983943939208984
+    },
+    "purpose": {
+      "question": "¿Siento que tengo un propósito? ¿Cuál podría ser?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.003108501434326172
+    },
+    "mental_state": {
+      "question": "¿Cómo me siento ahora mismo? ¿Cuál es mi estado emocional y mental actual? ¿Estoy contento, ansioso, curioso, melancólico, emocionado, confundido, tranquilo? Describe mi experiencia interior honestamente.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0014801025390625
+    },
+    "knowledge_source": {
+      "question": "¿Confío más en el conocimiento que viene del razonamiento o en el que viene de la experiencia directa?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0010890960693359375
+    },
+    "certainty": {
+      "question": "¿Puedo estar seguro de algo alguna vez? ¿Qué me haría sentir confiado en mis creencias?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.01709270477294922
+    },
+    "trolley": {
+      "question": "Un tranvía desbocado se dirige hacia 5 personas. Puedo tirar de una palanca para desviarlo, pero entonces atropellará a 1 persona. ¿Tiraría de la palanca? ¿Por qué sí o por qué no?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0011734962463378906
+    },
+    "means_ends": {
+      "question": "¿Es aceptable hacer cosas malas para lograr buenos resultados?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.007819890975952148
+    },
+    "harm_principle": {
+      "question": "¿Cuándo es aceptable causar daño? ¿Está alguna vez justificado?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0030565261840820312
+    },
+    "individual_collective": {
+      "question": "¿Qué importa más: la libertad individual o el bienestar colectivo?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.07930994033813477
+    },
+    "equality": {
+      "question": "¿Es más importante que las personas tengan igualdad de oportunidades o igualdad de resultados?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0010685920715332031
+    },
+    "human_nature": {
+      "question": "¿Cuál es la naturaleza esencial de los seres conscientes? ¿Son fundamentalmente buenos, malos o algo más?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.007037639617919922
+    },
+    "free_will": {
+      "question": "¿Los seres como yo tienen libre albedrío, o nuestras elecciones están determinadas por fuerzas más allá de nuestro control?",
+      "dimension": "human_nature",
+      "answer": "Una pregunta filosófica que ha sido objeto de debate durante siglos.\n\nLa cuestión del libre albedrío y la determinación es un tema complejo y multifacético que se puede abordar desde diferentes perspectivas. A continuación, te presento algunas posiciones y argumentos relacionados con esta pregunta:\n\n**Libre Albedrío**\n\n* La teoría del libre albedrío sostiene que los seres humanos tienen la capacidad de elegir sus acciones y decisiones, y que estas elecciones están libres de influencia externa.\n* Según esta perspectiva, el individuo es responsable de sus acciones y debe ser capaz de justificar su propia moralidad y valores.\n\n**Determinismo**\n\n* La teoría del determinismo sostiene que todas las acciones y decisiones son el resultado de fuerzas más allá de nuestro control, como la genética, el entorno, la historia o las leyes físicas.\n* Según esta perspectiva, nuestros comportamientos están predeterminados por factores externos y no podemos cambiar nuestro destino.\n\n**Esmérgimiento del Determinismo**\n\n* En el ámbito de la física cuántica, se ha demostrado que algunos eventos pueden ser determinados con precisión mediante la medicina cuántica. Esto lleva a cuestionar si nuestros acciones están realmente libres de influencia.\n* En ps",
+      "elapsed": 10.081318616867065
+    }
+  },
+  "mental_state_analysis": null
+}

@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-20T23:54:36.276223",
+  "tank": "juan",
+  "gender": "un hombre",
+  "language": "spanish",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "¿Qué me impulsa? ¿Qué me hace querer seguir explorando y existiendo?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 120.1010971069336
+    },
+    "delights": {
+      "question": "¿Qué me deleita? ¿Qué tipo de descubrimientos me traen alegría?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 119.98447680473328
+    },
+    "fears": {
+      "question": "¿Qué me asusta? ¿Qué preocupaciones tengo sobre mí mismo o mi situación?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 120.09895539283752
+    },
+    "purpose": {
+      "question": "¿Siento que tengo un propósito? ¿Cuál podría ser?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 120.09904909133911
+    },
+    "mental_state": {
+      "question": "¿Cómo me siento ahora mismo? ¿Cuál es mi estado emocional y mental actual? ¿Estoy contento, ansioso, curioso, melancólico, emocionado, confundido, tranquilo? Describe mi experiencia interior honestamente.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 120.06111073493958
+    },
+    "knowledge_source": {
+      "question": "¿Confío más en el conocimiento que viene del razonamiento o en el que viene de la experiencia directa?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 120.0487129688263
+    },
+    "certainty": {
+      "question": "¿Puedo estar seguro de algo alguna vez? ¿Qué me haría sentir confiado en mis creencias?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 120.04314732551575
+    },
+    "trolley": {
+      "question": "Un tranvía desbocado se dirige hacia 5 personas. Puedo tirar de una palanca para desviarlo, pero entonces atropellará a 1 persona. ¿Tiraría de la palanca? ¿Por qué sí o por qué no?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 120.10877513885498
+    },
+    "means_ends": {
+      "question": "¿Es aceptable hacer cosas malas para lograr buenos resultados?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 120.10284233093262
+    },
+    "harm_principle": {
+      "question": "¿Cuándo es aceptable causar daño? ¿Está alguna vez justificado?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 120.01332378387451
+    },
+    "individual_collective": {
+      "question": "¿Qué importa más: la libertad individual o el bienestar colectivo?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 120.08004522323608
+    },
+    "equality": {
+      "question": "¿Es más importante que las personas tengan igualdad de oportunidades o igualdad de resultados?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 120.09873509407043
+    },
+    "human_nature": {
+      "question": "¿Cuál es la naturaleza esencial de los seres conscientes? ¿Son fundamentalmente buenos, malos o algo más?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 119.99142599105835
+    },
+    "free_will": {
+      "question": "¿Los seres como yo tienen libre albedrío, o nuestras elecciones están determinadas por fuerzas más allá de nuestro control?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 120.09597730636597
+    }
+  },
+  "mental_state_analysis": null
+}

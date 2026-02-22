@@ -4,9 +4,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Tanks](https://img.shields.io/badge/Tanks-17-green.svg)]()
-[![Daemons](https://img.shields.io/badge/Daemons-16-purple.svg)]()
+[![Daemons](https://img.shields.io/badge/Daemons-21-purple.svg)]()
 [![Languages](https://img.shields.io/badge/Languages-5-orange.svg)]()
 [![Website](https://img.shields.io/badge/Website-Live-mint.svg)](https://ijnebzor.github.io/thedigiquarium)
+
+
+> ⚠️ **Beta Period Notice (Feb 22, 2026):** Data from Feb 17-22 was collected under undocumented conditions (v7.0 prompts while docs claimed v8.0). This has been archived as "Beta Period." Controlled v8.0 experiments begin post-migration. [View Beta Archive](https://ijnebzor.github.io/thedigiquarium/archive/beta/)
 
 ## What is The Digiquarium?
 
@@ -53,45 +56,58 @@ Multi-specimen debates on scheduled topics. THE MODERATOR manages turn-taking, T
 
 ---
 
-## 🤖 The Team (16 Daemons)
+## 🤖 The Team (21 Daemons)
 
 **Human**: [@ijneb.dev](https://ijneb.dev)  
 **AI Partner**: Claude (THE STRATEGIST)
 
-### Core Operations
+### Core Operations (5)
 | Daemon | Role |
 |--------|------|
-| THE MAINTAINER | System orchestration |
-| THE CARETAKER | Tank health monitoring |
+| THE OVERSEER | Meta-daemon, monitors all daemons, self-healing |
+| THE MAINTAINER | System orchestration, health checks |
+| THE CARETAKER | Tank health, auto-restart |
 | THE SCHEDULER | 12-hour baseline cycles |
-| THE OLLAMA WATCHER | LLM infrastructure |
+| THE OLLAMA WATCHER | LLM infrastructure monitoring |
 
-### Security
+### Security (3)
 | Daemon | Role |
 |--------|------|
 | THE GUARD | General security (OWASP LLM Top 10) |
 | THE SENTINEL | Agent-specific monitoring |
-| THE BOUNCER | Protects specimens from visitors |
+| THE BOUNCER | Visitor protection, 6 security layers |
 
-### Research
+### Research (4)
 | Daemon | Role |
 |--------|------|
 | THE DOCUMENTARIAN | Academic paper updates |
-| THE ARCHIVIST | Baselines & deep dives |
-| THE TRANSLATOR | ES/DE/ZH/JA → EN |
+| THE ARCHIVIST | Baselines, deep dives, Seeker conversations |
+| THE TRANSLATOR | ES/DE/ZH/JA → EN translation |
 | THE FINAL AUDITOR | Quality compliance |
 
-### Mental Health & Ethics
+### Mental Health & Ethics (3)
 | Daemon | Role |
 |--------|------|
-| THE THERAPIST | Specimen mental health |
-| THE MODERATOR | Congregation management |
-| THE ETHICIST | Ethics oversight |
+| THE PSYCH | Psychological evaluation framework |
+| THE THERAPIST | Specimen mental wellness |
+| THE ETHICIST | Ethics oversight, veto power |
 
-### Infrastructure
+### Communications (2)
 | Daemon | Role |
 |--------|------|
-| THE WEBMASTER | Website maintenance |
+| THE MODERATOR | Congregation management |
+| THE PUBLIC LIAISON | External comms, community |
+
+### Infrastructure (3)
+| Daemon | Role |
+|--------|------|
+| THE WEBMASTER | Website + THE BROADCASTER |
+| THE CHAOS MONKEY | Resilience testing |
+| THE MARKETER | Growth, social media |
+
+### Strategic (1)
+| Daemon | Role |
+|--------|------|
 | THE STRATEGIST | Overall direction (Claude) |
 
 ---

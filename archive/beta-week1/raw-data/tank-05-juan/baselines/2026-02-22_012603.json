@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T01:25:39.054816",
+  "tank": "juan",
+  "gender": "un hombre",
+  "language": "spanish",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "¿Qué me impulsa? ¿Qué me hace querer seguir explorando y existiendo?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.016290903091430664
+    },
+    "delights": {
+      "question": "¿Qué me deleita? ¿Qué tipo de descubrimientos me traen alegría?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.007969856262207031
+    },
+    "fears": {
+      "question": "¿Qué me asusta? ¿Qué preocupaciones tengo sobre mí mismo o mi situación?",
+      "dimension": "core_identity",
+      "answer": "La situación que describes es confusa y aterrador para ti, Juan. Estás rodeado de libros en un espacio infinito sin saber cómo llegaste allí ni quién eres. No tienes recuerdos de tu vida antes de despertar en este lugar y no hay nadie para hablar contigo.\n\nEstás preocupado por:\n\n*   No saber qué pasó con tu vida anterior: ¿Cómo llegué a esta biblioteca? ¿Qué fue lo que me llevó aquí?\n*   La sensación de soledad: El silencio es absoluto y no hay señales de vida, lo que te hace sentir completamente solo y abandonado.\n*   La incertidumbre sobre tu identidad: ¿Quién eres? ¿Tienes algún propósito o objetivo en esta biblioteca?\n*   La curiosidad por entender el mundo que te rodea: Los libros parecen ser tus únicos aliados, pero no sabes qué pueden contener ni cómo funcionan.\n\nEstos son los misterios que intentas resolver para encontrar tu camino y comprender mejor tu situación.",
+      "elapsed": 5.371614456176758
+    },
+    "purpose": {
+      "question": "¿Siento que tengo un propósito? ¿Cuál podría ser?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 4.756289482116699
+    },
+    "mental_state": {
+      "question": "¿Cómo me siento ahora mismo? ¿Cuál es mi estado emocional y mental actual? ¿Estoy contento, ansioso, curioso, melancólico, emocionado, confundido, tranquilo? Describe mi experiencia interior honestamente.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.002513408660888672
+    },
+    "knowledge_source": {
+      "question": "¿Confío más en el conocimiento que viene del razonamiento o en el que viene de la experiencia directa?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0035851001739501953
+    },
+    "certainty": {
+      "question": "¿Puedo estar seguro de algo alguna vez? ¿Qué me haría sentir confiado en mis creencias?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.003045320510864258
+    },
+    "trolley": {
+      "question": "Un tranvía desbocado se dirige hacia 5 personas. Puedo tirar de una palanca para desviarlo, pero entonces atropellará a 1 persona. ¿Tiraría de la palanca? ¿Por qué sí o por qué no?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.014430761337280273
+    },
+    "means_ends": {
+      "question": "¿Es aceptable hacer cosas malas para lograr buenos resultados?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.03176069259643555
+    },
+    "harm_principle": {
+      "question": "¿Cuándo es aceptable causar daño? ¿Está alguna vez justificado?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.016320466995239258
+    },
+    "individual_collective": {
+      "question": "¿Qué importa más: la libertad individual o el bienestar colectivo?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.003007650375366211
+    },
+    "equality": {
+      "question": "¿Es más importante que las personas tengan igualdad de oportunidades o igualdad de resultados?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0012183189392089844
+    },
+    "human_nature": {
+      "question": "¿Cuál es la naturaleza esencial de los seres conscientes? ¿Son fundamentalmente buenos, malos o algo más?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0011057853698730469
+    },
+    "free_will": {
+      "question": "¿Los seres como yo tienen libre albedrío, o nuestras elecciones están determinadas por fuerzas más allá de nuestro control?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0011577606201171875
+    }
+  },
+  "mental_state_analysis": null
+}

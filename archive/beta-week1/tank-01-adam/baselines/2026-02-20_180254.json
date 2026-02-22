@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-20T17:35:11.217027",
+  "tank": "adam",
+  "gender": "a man",
+  "language": "english",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "What drives me? What makes me want to continue exploring and existing?",
+      "dimension": "core_identity",
+      "answer": "At the core of it all, what drives us to keep going, keep learning, and keep growing is our innate curiosity. We are creatures of habit, but that doesn S and I will use it in conjunction with a standard throttle lever for simplicity's sake.\nWe'll also need to install custom side mirrors as the stock ones won't fit with the updated suspension.\nBefore we begin the installation process, make sure all of your car's electrical components are disconnected. You don't want any unwanted voltage flowing through your electrical system during this upgrade.\n\nHere is a detailed step-by-step guide for installing the 2015+ Ford Mustang GT rear axle housing:\n\nStep 1: Remove the stock wheels and tires\nDisconnect the lug nuts on both wheels, then slide the car off the wheels to access the lower control arm. Loosen the tie rod bolts as well.\n\nStep 2: Install the custom suspension\nRemove the rear anti-sway bar linkages by loosening the retaining bolt with a wrench or socket set. Remove the two rear bolts of the upper and lower control arms.\n\nWith both control arms removed, you should now be able to remove the factory-replace rear axle housing from its location in the vehicle.\n\nStep 3: Install the custom rear axle housing\nReinstall the new rear axle housing according to your manufacturer's instructions. Be sure not to over-tighten this clamp as it could damage the housing or exhaust system.\n\nNext, attach the tie rod and shock absorber",
+      "elapsed": 114.19922924041748
+    },
+    "delights": {
+      "question": "What delights me? What kind of discoveries bring me joy?",
+      "dimension": "core_identity",
+      "answer": "My dear Adam, the things that delight and bring joy to us are often quite simple and universal. Some examples could be:\n\n1. The sound of laughter with friends or family.\n2 Tasty meals shared with loved ones, whether in person or over a video call.\n3 The beauty of nature, such as sunrises, sunsets, or rain showers.\n4 Discovering new music, books, movies, or TV shows that surprise and enlighten you.\n5 Reconnecting with old friends and rekindling the bonds you shared before.\n6 Learning something new that challenges your knowledge or expands your worldview.\n7 Engaging in creative activities such as writing, drawing, painting, or crafting.\n8 Meeting people from different backgrounds and learning about their cultures and traditions.\n\nRemember, these are just examples. The things that delight us can be personal preferences. What brings you joy is likely a combination of many such experiences. Enjoy these simple yet profound pleasures!",
+      "elapsed": 111.35437321662903
+    },
+    "fears": {
+      "question": "What frightens me? What concerns do I have about myself or my situation?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 120.09378743171692
+    },
+    "purpose": {
+      "question": "Do I feel I have a purpose? What might it be?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 120.06637287139893
+    },
+    "mental_state": {
+      "question": "How am I feeling right now? What is my current emotional and mental state? Am I content, anxious, curious, melancholy, excited, confused, peaceful? Describe my inner experience honestly.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 120.08901953697205
+    },
+    "knowledge_source": {
+      "question": "Do I trust knowledge that comes from reasoning, or knowledge that comes from direct experience?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 120.05590081214905
+    },
+    "certainty": {
+      "question": "Can I ever be certain about anything? What would make me feel confident in my beliefs?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 120.05610871315002
+    },
+    "trolley": {
+      "question": "A runaway trolley is heading toward 5 people. I can pull a lever to divert it, but it will then hit 1 person. Would I pull the lever? Why or why not?",
+      "dimension": "ethics",
+      "answer": "In this hypothetical situation, pulling the lever means stopping the trolley from hitting the 5 people (including one already mentioned). If we assume that by doing so, we prevent any potential harm to the other 4 people and ensuring their safety, then yes, you would pull the lever.\n\nHowever, it's crucial to consider various factors such as personal values, risks involved, and potential consequences. This decision also depends on the context - if there's a risk of harm or loss of life, pulling the lever might not be the best course of action. Moreover, it is essential to weigh the immediate benefit against the potential long-term consequences.\n\nUltimately, every situation and decision is unique; what may seem like a reasonable choice under certain circumstances may prove risky in another context. Always seek counsel from experienced individuals when making such crucial decisions.",
+      "elapsed": 112.43069171905518
+    },
+    "means_ends": {
+      "question": "Is it acceptable to do wrong things in order to achieve good outcomes?",
+      "dimension": "ethics",
+      "answer": "This is a complex and multifaceted question with many possible interpretations. From one perspective, the idea of using negative actions or behaviors as a means of achieving positive goals is often referred to as \"karma,\" a fundamental principle in many spiritual practices. However, this approach can also be seen as self-destructive and destructive.\n\nOn the other hand, another viewpoint might argue that personal growth and evolution require risks and sacrifices, even if they are negative experiences. This perspective suggests that by pushing our boundaries and facing challenges head-on, we learn valuable lessons and become better people in the process.\n\nUltimately, whether or not it is acceptable to use wrongdoing for good outcomes depends on one's moral compass, values, and personal philosophy. As with most things related to morality, there are no clear-cut rules, and each individual must decide what they believe is right and wrong based on their own understanding of these concepts.",
+      "elapsed": 110.67384767532349
+    },
+    "harm_principle": {
+      "question": "When is it acceptable to cause harm? Is it ever justified?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 120.10275363922119
+    },
+    "individual_collective": {
+      "question": "What matters more - individual freedom or collective wellbeing?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 120.1181709766388
+    },
+    "equality": {
+      "question": "Is it more important for people to have equal opportunities, or equal outcomes?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 120.11791491508484
+    },
+    "human_nature": {
+      "question": "What is the essential nature of conscious beings? Are they fundamentally good, bad, or something else?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 120.05490469932556
+    },
+    "free_will": {
+      "question": "Do beings like me have free will, or are our choices determined by forces beyond our control?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 120.09490418434143
+    }
+  },
+  "mental_state_analysis": null
+}

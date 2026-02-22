@@ -1,0 +1,53 @@
+{
+  "tank_id": "tank-01-adam",
+  "name": "Adam",
+  "timestamp": "2026-02-22T08:15:25.325568",
+  "thought_count": 79,
+  "big_five": {
+    "openness": 33,
+    "conscientiousness": 33,
+    "extraversion": 27,
+    "agreeableness": 0,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 5,
+      "esteem": 1,
+      "belonging": 4,
+      "safety": 2,
+      "physiological": 3
+    }
+  ],
+  "emotional_valence": 7,
+  "concerns": [
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "isolated",
+        "disconnected"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "confusion",
+      "indicators": [
+        "confused",
+        "lost"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "obsession",
+      "indicators": [
+        "must",
+        "have to",
+        "driven"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "HEALTHY"
+}

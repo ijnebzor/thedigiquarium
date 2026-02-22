@@ -1,0 +1,45 @@
+{
+  "tank_id": "tank-13-victor",
+  "name": "Victor",
+  "timestamp": "2026-02-22T08:15:25.518503",
+  "thought_count": 83,
+  "big_five": {
+    "openness": 40,
+    "conscientiousness": 100,
+    "extraversion": 27,
+    "agreeableness": 0,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 4,
+      "esteem": 3,
+      "belonging": 4,
+      "safety": 2,
+      "physiological": 4
+    }
+  ],
+  "emotional_valence": 9,
+  "concerns": [
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "no one",
+        "isolated",
+        "lonely"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "obsession",
+      "indicators": [
+        "must",
+        "have to"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "NEEDS_ATTENTION"
+}

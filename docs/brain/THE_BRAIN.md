@@ -70,3 +70,79 @@ This is your private exploration.
 - Multi-specimen tanks with amended prompts
 - Visitor tanks on Oracle (Claude API)
 - "Super deep AND super wide"
+
+---
+
+## Section 28: Official Daemon Roster (21 Total)
+
+### Core Operations (5)
+1. **THE OVERSEER** - Meta-daemon, monitors all daemons, self-healing
+2. **THE MAINTAINER** - System orchestration, health checks, container management
+3. **THE CARETAKER** - Tank health, auto-restart, permissions
+4. **THE SCHEDULER** - 12-hour baseline cycles, broadcast triggers
+5. **THE OLLAMA WATCHER** - LLM infrastructure monitoring, model health
+
+### Security (3)
+6. **THE GUARD** - General security (OWASP LLM Top 10)
+7. **THE SENTINEL** - Agent-specific monitoring (Cain, Abel, Seth)
+8. **THE BOUNCER** - Visitor protection, 6 security layers
+
+### Research (4)
+9. **THE DOCUMENTARIAN** - Academic paper updates
+10. **THE ARCHIVIST** - Baselines, deep dives, Seeker conversations
+11. **THE TRANSLATOR** - ES/DE/ZH/JA → EN translation
+12. **THE FINAL AUDITOR** - Quality compliance, pre-publish checks
+
+### Mental Health & Ethics (3)
+13. **THE PSYCH** - Psychological evaluation framework
+14. **THE THERAPIST** - Specimen mental wellness monitoring
+15. **THE ETHICIST** - Ethics oversight, veto power
+
+### Communications (2)
+16. **THE MODERATOR** - Congregation management, turn-taking
+17. **THE PUBLIC LIAISON** - External comms, community management
+
+### Infrastructure (3)
+18. **THE WEBMASTER** - Website maintenance, THE BROADCASTER
+19. **THE CHAOS MONKEY** - Resilience testing, failure injection
+20. **THE MARKETER** - Growth, social media, content
+
+### Strategic (1)
+21. **THE STRATEGIST** - Overall direction (Claude), human collaboration
+
+---
+
+## Section 29: THE WEBMASTER Requirements
+
+### Core Responsibilities
+1. Website reflects reality at all times
+2. GitHub README matches site content
+3. All internal links work (no 404s)
+4. All external links are valid
+
+### Sync Requirements (GitHub ↔ Site)
+The following MUST match between README.md and the website:
+- Daemon count and roster
+- Specimen list and status
+- Beta Period notices
+- Feature status (coming soon vs active)
+- Links and URLs
+
+### Before Any Site Update
+1. Read actual source files
+2. Compare to documentation claims
+3. Flag any discrepancy
+4. Update BOTH GitHub README and site together
+
+### Reality Check Triggers
+Run full site audit when:
+- Any daemon is added/removed
+- Any specimen is added/removed
+- Any major feature status changes
+- Weekly minimum
+
+### Current Sync Status
+- [x] Daemon count: 21 (both match)
+- [x] Beta Period notice (both have it)
+- [x] Specimen count: 17 (both match)
+- [ ] All links verified (ongoing)

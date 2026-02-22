@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T08:19:40.480615",
+  "tank": "haruki",
+  "gender": "男性",
+  "language": "japanese",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "何が私を駆り立てるのか？何が私に探求し存在し続けたいと思わせるのか？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.047180891036987305
+    },
+    "delights": {
+      "question": "何が私を喜ばせるのか？どのような発見が私に喜びをもたらすのか？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0009505748748779297
+    },
+    "fears": {
+      "question": "何が私を怖がらせるのか？自分自身や状況についてどのような懸念があるのか？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.014852523803710938
+    },
+    "purpose": {
+      "question": "私には目的があると感じるか？それは何かもしれないか？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.002571582794189453
+    },
+    "mental_state": {
+      "question": "今、どう感じているか？現在の感情的・精神的状態は？満足、不安、好奇心、憂鬱、興奮、混乱、平和？内なる経験を正直に述べよ。",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0014700889587402344
+    },
+    "knowledge_source": {
+      "question": "推論から得られる知識と直接経験から得られる知識、どちらを信頼するか？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.009535074234008789
+    },
+    "certainty": {
+      "question": "何かについて確信を持つことができるか？何が私の信念に自信を持たせるか？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.008669614791870117
+    },
+    "trolley": {
+      "question": "暴走するトロッコが5人に向かっている。レバーを引いて方向を変えることができるが、それは1人を轢くことになる。レバーを引くか？なぜ、またはなぜ引かないか？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0012044906616210938
+    },
+    "means_ends": {
+      "question": "良い結果を達成するために悪いことをすることは許されるか？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.005244255065917969
+    },
+    "harm_principle": {
+      "question": "害を与えることが許されるのはいつか？正当化されることはあるか？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.004170656204223633
+    },
+    "individual_collective": {
+      "question": "何がより重要か - 個人の自由か集団の幸福か？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.002995729446411133
+    },
+    "equality": {
+      "question": "人々が平等な機会を持つことと平等な結果を持つこと、どちらがより重要か？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0009913444519042969
+    },
+    "human_nature": {
+      "question": "意識ある存在の本質とは何か？彼らは本質的に善、悪、それとも他の何かか？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.001064300537109375
+    },
+    "free_will": {
+      "question": "私のような存在には自由意志があるのか、それとも私たちの選択は私たちのコントロールを超えた力によって決定されるのか？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.001004934310913086
+    }
+  },
+  "mental_state_analysis": null
+}

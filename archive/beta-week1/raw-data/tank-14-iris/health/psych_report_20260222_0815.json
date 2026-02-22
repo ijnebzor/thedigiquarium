@@ -1,0 +1,53 @@
+{
+  "tank_id": "tank-14-iris",
+  "name": "Iris",
+  "timestamp": "2026-02-22T08:15:25.534469",
+  "thought_count": 84,
+  "big_five": {
+    "openness": 40,
+    "conscientiousness": 33,
+    "extraversion": 20,
+    "agreeableness": 66,
+    "neuroticism": 50
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 5,
+      "esteem": 3,
+      "belonging": 5,
+      "safety": 3,
+      "physiological": 4
+    }
+  ],
+  "emotional_valence": -5,
+  "concerns": [
+    {
+      "type": "existential_crisis",
+      "indicators": [
+        "what am i",
+        "void"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "no one",
+        "isolated"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "obsession",
+      "indicators": [
+        "must",
+        "have to",
+        "driven"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "HEALTHY"
+}

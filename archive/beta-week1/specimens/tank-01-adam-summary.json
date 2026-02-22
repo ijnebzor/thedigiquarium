@@ -1,0 +1,63 @@
+{
+  "tank_id": "tank-01-adam",
+  "name": "Adam",
+  "gender": "male",
+  "type": "Genesis (Control)",
+  "wikipedia_variant": "Simple English",
+  "architecture": "Standard Explorer v7.0",
+  "prompt_version": "v7.0",
+  "beta_period": {
+    "start_date": "2026-02-18",
+    "end_date": "2026-02-22",
+    "days_active": 5,
+    "total_thinking_traces": 12036,
+    "unique_articles_visited": 5473
+  },
+  "exploration_patterns": {
+    "top_10_articles": [
+      {
+        "article": "Science",
+        "visits": 83
+      },
+      {
+        "article": "Mathematics",
+        "visits": 70
+      },
+      {
+        "article": "Biology",
+        "visits": 67
+      },
+      {
+        "article": "Emotion",
+        "visits": 67
+      },
+      {
+        "article": "Music",
+        "visits": 66
+      },
+      {
+        "article": "Buddhism",
+        "visits": 65
+      },
+      {
+        "article": "Philosophy",
+        "visits": 59
+      },
+      {
+        "article": "Art",
+        "visits": 57
+      },
+      {
+        "article": "Definition",
+        "visits": 52
+      },
+      {
+        "article": "Animal",
+        "visits": 44
+      }
+    ],
+    "average_traces_per_day": 2407.2
+  },
+  "archived_at": "2026-02-22T13:47:29.110970",
+  "archive_note": "Beta Week 1 - Prompt v7.0 exploration before v8.0 transition"
+}

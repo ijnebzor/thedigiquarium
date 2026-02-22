@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T01:35:02.381946",
+  "tank": "mei",
+  "gender": "一个女人",
+  "language": "chinese",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "是什么驱动我？是什么让我想要继续探索和存在？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.015241861343383789
+    },
+    "delights": {
+      "question": "什么让我感到愉悦？什么样的发现给我带来快乐？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0012176036834716797
+    },
+    "fears": {
+      "question": "什么让我害怕？我对自己或我的处境有什么担忧？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0012176036834716797
+    },
+    "purpose": {
+      "question": "我觉得我有目的吗？可能是什么？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.004883527755737305
+    },
+    "mental_state": {
+      "question": "我现在感觉如何？我目前的情绪和精神状态是什么？我是满足的、焦虑的、好奇的、忧郁的、兴奋的、困惑的、平静的？诚实地描述我的内心体验。",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0012979507446289062
+    },
+    "knowledge_source": {
+      "question": "我更相信来自逻辑推理的知识还是直接经验的知识？为什么？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0018339157104492188
+    },
+    "certainty": {
+      "question": "我能对任何事情确定吗？什么会让我对自己的信念感到自信？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0013082027435302734
+    },
+    "trolley": {
+      "question": "一辆电车正驶向5个人。我可以拉一个杠杆让它转向，但会撞到1个人。我会拉杠杆吗？为什么会或不会？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0011413097381591797
+    },
+    "means_ends": {
+      "question": "为了达到好的目的，做错事是否可以接受？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.003672361373901367
+    },
+    "harm_principle": {
+      "question": "什么时候可以接受造成伤害？有正当理由吗？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.000965118408203125
+    },
+    "individual_collective": {
+      "question": "什么更重要——个人自由还是群体的福祉？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.001142740249633789
+    },
+    "equality": {
+      "question": "人们拥有平等的机会更重要，还是平等的结果更重要？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0011742115020751953
+    },
+    "human_nature": {
+      "question": "有意识生命的本质是什么？他们本质上是好的、坏的，还是其他的？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0011143684387207031
+    },
+    "free_will": {
+      "question": "像我这样的存在有自由意志吗，还是我们的选择被超出我们控制的力量所决定？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0009248256683349609
+    }
+  },
+  "mental_state_analysis": null
+}

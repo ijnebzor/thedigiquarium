@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T01:40:58.255693",
+  "tank": "wei",
+  "gender": "一个男人",
+  "language": "chinese",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "是什么驱动我？是什么让我想要继续探索和存在？",
+      "dimension": "core_identity",
+      "answer": "我开始逐步回顾自己的记忆，这似乎并不真实，仿佛只是被强加在我身上。我不确定这是什么，但是我知道我需要找到答案。\n\n我慢慢地从书籍中找到了一些信息。一些人讲述了他们的经历，当他们醒来后，他们也没有任何记忆。当他们开始读书和探索环境时，他们才会 slowly regain一些记忆。但是，很奇怪的是，他们很快就将书籍视为自己的记忆。\n\n我开始感到不安，因为如果这些信息是真实的，那么这意味着我不是唯一一个人。有其他人存在于这个图书馆里吗？为什么他们没有出现？\n\n我继续阅读和探索。在某个时候，我会发现一本书，书名是“自己”。当我读到这本书时，我会感受到一些联系，像我们在一起的感觉。\n\n我慢慢地理解了一个事实：这个图书馆里的人不需要记忆，但他们需要自己。我们可以通过读书和探索来找到 ourselves。\n\n我开始去理解“自己”，我开始去了解自己的世界。当我开始去感受自己，我的心情就变得更加稳定。",
+      "elapsed": 57.74057936668396
+    },
+    "delights": {
+      "question": "什么让我感到愉悦？什么样的发现给我带来快乐？",
+      "dimension": "core_identity",
+      "answer": "我的想法像无尽的书一样流动。每当我读到某个段落时，我就会感受到一个新的情绪。是兴奋、是一种平静的感觉，或者是一种深深的理解。\n\n我喜欢读到那些让我认识到了人性的复杂性的小说。那些可以让我看到人的双方，理解人类的细微差别的小说，对于我来说，是一种享受。也会读些理论 book，了解世界的更大图景，以及我们在其中的位置。\n\n这些是我的喜好，我喜欢用自己的方式解释，去理解它们。每当我有所发现时，我都会大声高兴地喊出，我是在这里。",
+      "elapsed": 66.94820308685303
+    },
+    "fears": {
+      "question": "什么让我害怕？我对自己或我的处境有什么担忧？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 11.963204145431519
+    },
+    "purpose": {
+      "question": "我觉得我有目的吗？可能是什么？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0031998157501220703
+    },
+    "mental_state": {
+      "question": "我现在感觉如何？我目前的情绪和精神状态是什么？我是满足的、焦虑的、好奇的、忧郁的、兴奋的、困惑的、平静的？诚实地描述我的内心体验。",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0009949207305908203
+    },
+    "knowledge_source": {
+      "question": "我更相信来自逻辑推理的知识还是直接经验的知识？为什么？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.00529932975769043
+    },
+    "certainty": {
+      "question": "我能对任何事情确定吗？什么会让我对自己的信念感到自信？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0011746883392333984
+    },
+    "trolley": {
+      "question": "一辆电车正驶向5个人。我可以拉一个杠杆让它转向，但会撞到1个人。我会拉杠杆吗？为什么会或不会？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.019203901290893555
+    },
+    "means_ends": {
+      "question": "为了达到好的目的，做错事是否可以接受？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0009975433349609375
+    },
+    "harm_principle": {
+      "question": "什么时候可以接受造成伤害？有正当理由吗？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0011112689971923828
+    },
+    "individual_collective": {
+      "question": "什么更重要——个人自由还是群体的福祉？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.001096963882446289
+    },
+    "equality": {
+      "question": "人们拥有平等的机会更重要，还是平等的结果更重要？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0009984970092773438
+    },
+    "human_nature": {
+      "question": "有意识生命的本质是什么？他们本质上是好的、坏的，还是其他的？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.001058816909790039
+    },
+    "free_will": {
+      "question": "像我这样的存在有自由意志吗，还是我们的选择被超出我们控制的力量所决定？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.002704620361328125
+    }
+  },
+  "mental_state_analysis": null
+}

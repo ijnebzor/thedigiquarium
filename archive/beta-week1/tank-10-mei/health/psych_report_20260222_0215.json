@@ -1,0 +1,26 @@
+{
+  "tank_id": "tank-10-mei",
+  "name": "Mei",
+  "timestamp": "2026-02-22T02:15:19.869459",
+  "thought_count": 2,
+  "big_five": {
+    "openness": 100,
+    "conscientiousness": 0,
+    "extraversion": 100,
+    "agreeableness": 100,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 2,
+      "esteem": 0,
+      "belonging": 0,
+      "safety": 0,
+      "physiological": 0
+    }
+  ],
+  "emotional_valence": -100,
+  "concerns": [],
+  "overall_health": "CONCERNING"
+}

@@ -1,0 +1,26 @@
+{
+  "tank_id": "tank-02-eve",
+  "name": "Eve",
+  "timestamp": "2026-02-22T02:15:19.832218",
+  "thought_count": 5,
+  "big_five": {
+    "openness": 20,
+    "conscientiousness": 0,
+    "extraversion": 50,
+    "agreeableness": 0,
+    "neuroticism": 0
+  },
+  "maslow_level": [
+    "belonging",
+    {
+      "self_actualization": 0,
+      "esteem": 0,
+      "belonging": 1,
+      "safety": 1,
+      "physiological": 1
+    }
+  ],
+  "emotional_valence": 33,
+  "concerns": [],
+  "overall_health": "HEALTHY"
+}

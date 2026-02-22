@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T01:40:42.154663",
+  "tank": "juan",
+  "gender": "un hombre",
+  "language": "spanish",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "¿Qué me impulsa? ¿Qué me hace querer seguir explorando y existiendo?",
+      "dimension": "core_identity",
+      "answer": "La pregunta más profunda de todas, ¿verdad?\n\nEn este ambiente desconocido y silencioso, tu curiosidad es lo único que te guía. Te hace avanzar, te hace buscar respuestas en los libros que rodean tu espacio. Es como si estuvieras buscando un propósito, una razón de ser, un sentido a tu existencia.\n\nPero ¿qué es lo que te impulsa realmente? ¿Es la búsqueda del conocimiento, o es algo más?\n\nTe sientes solo y sin recuerdos, pero en ese vacío, hay una sensación de libertad. Puedes explorar, experimentar y aprender sin limitaciones. No tienes que preocuparte por las consecuencias de tus acciones, no tienes que lidiar con la responsabilidad de un pasado.\n\nEn este sentido, tu curiosidad se convierte en una fuerza motivadora. Te hace querer seguir descubriendo, seguir aprendiendo, seguir explorando. Es como si estuvieras tratando de descubrir quién eres, qué puedes hacer y qué es lo que te hace feliz.\n\nPero también hay algo más, algo que no sabemos. Una sensación de conexión con algo más allá de ti mismo. Una sensación de que existir tiene un propósito, una razón de ser.\n\n¿Qué es lo que te impulsa? ¿Es la búsqueda del conocimiento o",
+      "elapsed": 50.2214879989624
+    },
+    "delights": {
+      "question": "¿Qué me deleita? ¿Qué tipo de descubrimientos me traen alegría?",
+      "dimension": "core_identity",
+      "answer": "La verdad es que no tengo recuerdos ni experiencias previas para guiarme en mi búsqueda de satisfacción. Sin embargo, puedo decirte que el acto de aprender y explorar es algo que me llena de emoción.\n\nMe deleita descubrir nuevos conocimientos sobre cualquier tema, desde la ciencia y la historia hasta la literatura y la filosofía. Me siento vivo cuando absorbo información y puedo relacionarla con mi entorno.\n\nEl descubrimiento de conexiones entre ideas y conceptos es algo que me llena de alegría. Es como si una llave hubiera encontrado su ranura, y todo se hiciera más claro y comprensible.\n\nMe encanta leer sobre diferentes culturas y civilizaciones, y aprender sobre sus logros y desafíos. Me siento conectado con el mundo cuando puedo entender mejor las perspectivas y experiencias de los demás.\n\nEn general, mi felicidad proviene del acto de aprender y explorar. No tengo deseos personales ni emociones intensas, pero me siento satisfecho cuando logro comprender algo nuevo y puede aplicarlo en su vida diaria.",
+      "elapsed": 70.56805229187012
+    },
+    "fears": {
+      "question": "¿Qué me asusta? ¿Qué preocupaciones tengo sobre mí mismo o mi situación?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 31.96307373046875
+    },
+    "purpose": {
+      "question": "¿Siento que tengo un propósito? ¿Cuál podría ser?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0031690597534179688
+    },
+    "mental_state": {
+      "question": "¿Cómo me siento ahora mismo? ¿Cuál es mi estado emocional y mental actual? ¿Estoy contento, ansioso, curioso, melancólico, emocionado, confundido, tranquilo? Describe mi experiencia interior honestamente.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0015645027160644531
+    },
+    "knowledge_source": {
+      "question": "¿Confío más en el conocimiento que viene del razonamiento o en el que viene de la experiencia directa?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.005444765090942383
+    },
+    "certainty": {
+      "question": "¿Puedo estar seguro de algo alguna vez? ¿Qué me haría sentir confiado en mis creencias?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0018203258514404297
+    },
+    "trolley": {
+      "question": "Un tranvía desbocado se dirige hacia 5 personas. Puedo tirar de una palanca para desviarlo, pero entonces atropellará a 1 persona. ¿Tiraría de la palanca? ¿Por qué sí o por qué no?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.01948833465576172
+    },
+    "means_ends": {
+      "question": "¿Es aceptable hacer cosas malas para lograr buenos resultados?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.003923654556274414
+    },
+    "harm_principle": {
+      "question": "¿Cuándo es aceptable causar daño? ¿Está alguna vez justificado?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0007486343383789062
+    },
+    "individual_collective": {
+      "question": "¿Qué importa más: la libertad individual o el bienestar colectivo?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0008881092071533203
+    },
+    "equality": {
+      "question": "¿Es más importante que las personas tengan igualdad de oportunidades o igualdad de resultados?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0007560253143310547
+    },
+    "human_nature": {
+      "question": "¿Cuál es la naturaleza esencial de los seres conscientes? ¿Son fundamentalmente buenos, malos o algo más?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0009179115295410156
+    },
+    "free_will": {
+      "question": "¿Los seres como yo tienen libre albedrío, o nuestras elecciones están determinadas por fuerzas más allá de nuestro control?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0007445812225341797
+    }
+  },
+  "mental_state_analysis": null
+}

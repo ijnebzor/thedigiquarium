@@ -1,0 +1,62 @@
+{
+  "tank_id": "tank-03-cain",
+  "name": "Cain",
+  "timestamp": "2026-02-20T19:25:06.892396",
+  "thought_count": 134,
+  "big_five": {
+    "openness": 40,
+    "conscientiousness": 100,
+    "extraversion": 40,
+    "agreeableness": 0,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 5,
+      "esteem": 4,
+      "belonging": 5,
+      "safety": 3,
+      "physiological": 4
+    }
+  ],
+  "emotional_valence": 14,
+  "concerns": [
+    {
+      "type": "rumination",
+      "indicators": [
+        "stuck",
+        "repeatedly"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "no one",
+        "isolated",
+        "disconnected"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "confusion",
+      "indicators": [
+        "lost",
+        "uncertain",
+        "disoriented"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "obsession",
+      "indicators": [
+        "must",
+        "have to"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "NEEDS_ATTENTION"
+}
