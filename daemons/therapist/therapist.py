@@ -20,7 +20,9 @@ Collaborates with: THE MODERATOR (congregation clearance)
 """
 
 import json
-import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
+import sys
+sys.path.insert(0, '/home/ijneb/digiquarium/daemons')
+from status_reporter import StatusReporter
 import os
 import re
 from datetime import datetime, timedelta

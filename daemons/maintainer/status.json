@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-02-23T04:13:13.331907",
+  "timestamp": "2026-02-23T04:21:29.378520",
   "maintainer": "running",
   "daemons": {
     "guard": "running",
     "sentinel": "running",
-    "scheduler": "stopped",
-    "translator": "stopped",
+    "scheduler": "running",
+    "translator": "running",
     "documentarian": "running",
     "webmaster": "stopped",
     "ollama_watcher": "running",
-    "final_auditor": "stopped",
+    "final_auditor": "running",
     "psych": "running"
   },
   "stats": {
-    "cycles": 1,
+    "cycles": 9,
     "restarts": 3,
-    "escalations": 3,
+    "escalations": 11,
     "start_time": "2026-02-23T04:13:01.300048"
   },
-  "uptime_seconds": 12.031869
+  "uptime_seconds": 508.078482
 }

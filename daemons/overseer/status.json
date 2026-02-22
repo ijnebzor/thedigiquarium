@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:13:07.504529",
+  "timestamp": "2026-02-23T04:21:20.950682",
   "active_incidents": {
     "INC-20260222061505": {
       "id": "INC-20260222061505",
@@ -6276,7 +6276,7 @@
     }
   },
   "stats": {
-    "cycles": 2,
+    "cycles": 10,
     "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
@@ -6284,7 +6284,7 @@
     "start_time": "2026-02-23T04:12:01.356737"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-23T04:12:04.800482",
+    "timestamp": "2026-02-23T04:17:15.273809",
     "ollama": {
       "healthy": true,
       "issues": []
@@ -6292,19 +6292,19 @@
     "containers": {
       "healthy": false,
       "issues": [
-        "tank-03-cain is Exited (137) 2 minutes ago"
+        "tank-03-cain is Exited (137) About a minute ago"
       ],
       "containers": {
         "digiquarium-ollama": {
-          "status": "Up 29 minutes",
+          "status": "Up 34 minutes",
           "healthy": true
         },
         "tank-01-adam": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-02-eve": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-simple": {
@@ -6332,7 +6332,7 @@
           "healthy": true
         },
         "tank-03-cain": {
-          "status": "Exited (137) 2 minutes ago",
+          "status": "Exited (137) About a minute ago",
           "healthy": false
         },
         "tank-04-abel": {
@@ -6348,43 +6348,43 @@
           "healthy": true
         },
         "tank-14-iris": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-13-victor": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-09-wei": {
-          "status": "Up 4 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up 3 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-08-genevieve": {
-          "status": "Up 4 minutes",
+          "status": "Up 2 minutes",
           "healthy": true
         },
         "tank-05-juan": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-07-klaus": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up 4 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {
@@ -6412,8 +6412,9 @@
     "daemons": {
       "healthy": false,
       "issues": [
-        "maintainer not running",
-        "scheduler not running"
+        "sentinel has 2 instances (zombie leak)",
+        "scheduler has 2 instances (zombie leak)",
+        "psych has 2 instances (zombie leak)"
       ],
       "daemons": {
         "caretaker": {
@@ -6421,8 +6422,8 @@
           "count": 1
         },
         "maintainer": {
-          "running": false,
-          "count": 0
+          "running": true,
+          "count": 1
         },
         "guard": {
           "running": true,
@@ -6430,11 +6431,13 @@
         },
         "sentinel": {
           "running": true,
-          "count": 1
+          "count": 2,
+          "zombie_leak": true
         },
         "scheduler": {
-          "running": false,
-          "count": 0
+          "running": true,
+          "count": 2,
+          "zombie_leak": true
         },
         "ollama_watcher": {
           "running": true,
@@ -6442,7 +6445,8 @@
         },
         "psych": {
           "running": true,
-          "count": 1
+          "count": 2,
+          "zombie_leak": true
         }
       }
     },
@@ -6528,14 +6532,15 @@
       {
         "component": "containers",
         "details": [
-          "tank-03-cain is Exited (137) 2 minutes ago"
+          "tank-03-cain is Exited (137) About a minute ago"
         ]
       },
       {
         "component": "daemons",
         "details": [
-          "maintainer not running",
-          "scheduler not running"
+          "sentinel has 2 instances (zombie leak)",
+          "scheduler has 2 instances (zombie leak)",
+          "psych has 2 instances (zombie leak)"
         ]
       }
     ],

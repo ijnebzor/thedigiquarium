@@ -6,6 +6,9 @@ Intentionally breaks things to verify self-healing works.
 import os, sys, time, json, random, subprocess, fcntl
 from datetime import datetime
 from pathlib import Path
+import sys
+sys.path.insert(0, '/home/ijneb/digiquarium/daemons')
+from status_reporter import StatusReporter
 
 DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
 CHAOS_DIR = DIGIQUARIUM_DIR / 'daemons' / 'chaos_monkey'

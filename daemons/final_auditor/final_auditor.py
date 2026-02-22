@@ -128,6 +128,7 @@ class FinalAuditor:
 
 # Single-instance lock
 import fcntl
+import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 LOCK_FILE = Path(__file__).parent / 'final_auditor.lock'
 lock_fd = None
 

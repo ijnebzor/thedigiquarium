@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:13:17.979959",
+  "timestamp": "2026-02-23T04:21:02.032530",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": true,
@@ -34,8 +34,8 @@
       "healthy": true
     },
     "scheduler": {
-      "running": false,
-      "count": 0,
+      "running": true,
+      "count": 2,
       "healthy": false
     },
     "sentinel": {
@@ -53,8 +53,8 @@
     "total": 27
   },
   "tanks": {
-    "running": 19,
-    "traces_today": 4317,
+    "running": 18,
+    "traces_today": 4321,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Year",
-        "traces": 1543
+        "article": "House of Tudor",
+        "traces": 1547
       },
       {
         "name": "tank-05-juan",
@@ -93,11 +93,6 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-23 04:00:31 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
-    "2026-02-23 04:05:35 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 04:05:36 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-23 04:05:36 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
-    "2026-02-23 04:10:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-23 04:10:42 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
     "2026-02-23 04:10:42 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
     "2026-02-23 04:10:42 \u26a0\ufe0f [OVERSEER]   - daemons: ['scheduler not running']",
@@ -112,7 +107,12 @@
     "2026-02-23 04:12:04 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-23 04:12:06 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
     "2026-02-23 04:12:06 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) 2 minutes ago']",
-    "2026-02-23 04:12:06 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running', 'scheduler not running']"
+    "2026-02-23 04:12:06 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer not running', 'scheduler not running']",
+    "2026-02-23 04:17:15 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 04:17:16 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-02-23 04:17:16 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
+    "2026-02-23 04:17:16 \u26a0\ufe0f [OVERSEER]   - daemons: ['sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 2 instances (zombie leak)']",
+    "2026-02-23 04:20:19 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['End-to-end connectivity failed']"
   ],
   "issues": [
     "scheduler unhealthy",
