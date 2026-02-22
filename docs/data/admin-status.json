@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T05:58:01.945711",
+  "timestamp": "2026-02-22T12:31:01.406899",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 27
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 6938,
+    "running": 19,
+    "traces_today": 34115,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Computer display",
-        "traces": 1214
+        "article": "World",
+        "traces": 6043
       },
       {
         "name": "tank-02-eve",
-        "article": "Mathematics",
-        "traces": 1212
+        "article": "Emotion",
+        "traces": 6034
       },
       {
         "name": "tank-03-cain",
-        "article": "Mathematics",
-        "traces": 1584
+        "article": "Body of water",
+        "traces": 7575
       },
       {
         "name": "tank-04-abel",
-        "article": "Knowledge",
-        "traces": 2262
+        "article": "Gag reflex",
+        "traces": 11307
       },
       {
         "name": "tank-05-juan",
-        "article": "Arte",
-        "traces": 666
+        "article": "Idioma griego",
+        "traces": 3156
       }
     ]
   },
@@ -89,30 +89,30 @@
   "overseer": {
     "running": true,
     "last_audit_healthy": false,
-    "active_incidents": 0,
-    "auto_remediations": 0
+    "active_incidents": 313,
+    "auto_remediations": 4
   },
   "logs": [
-    "2026-02-22 05:18:49 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:19:02 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 05:19:02 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']",
-    "2026-02-22 05:24:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:24:06 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 05:29:09 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:29:11 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 05:34:13 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:34:15 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 05:39:17 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:39:19 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 05:44:21 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:44:24 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 05:44:24 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 3 minutes ago']",
-    "2026-02-22 05:49:26 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:49:27 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 05:49:27 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 3 minutes ago', 'tank-03-cain is Exited (137) 3 minutes ago']",
-    "2026-02-22 05:54:29 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 05:54:31 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 05:54:31 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 3 minutes ago', 'tank-03-cain is Exited (137) 3 minutes ago']"
+    "2026-02-22 11:55:31 \u26a0\ufe0f [OVERSEER]   - containers: ['digiquarium-ollama is Created']",
+    "2026-02-22 11:56:31 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-22 11:56:31 \ud83d\udea8 [OVERSEER] Incident created: INC-20260222115631",
+    "2026-02-22 11:56:31 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
+    "2026-02-22 11:56:31 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
+    "2026-02-22 11:56:56 \u2705 [OVERSEER] Ollama proxy remediation successful",
+    "2026-02-22 12:00:59 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 12:01:00 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 12:06:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 12:06:06 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 12:11:11 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 12:11:12 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 12:16:14 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 12:16:17 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-22 12:21:19 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 12:21:20 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 12:21:20 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 49 seconds ago']",
+    "2026-02-22 12:26:24 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 12:26:26 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 12:26:26 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 47 seconds ago']"
   ],
   "issues": []
 }

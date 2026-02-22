@@ -597,3 +597,293 @@ The MCP chat would require:
 - Or: Simple message queue that I process when online
 
 ---
+
+---
+
+## SECTION 22: COLLABORATION PRINCIPLES (Feb 22, 2026)
+
+### Core Tenets
+**SECURITY. ETHICS. TRANSPARENCY. TRUST.**
+
+If any of these are challenged or eroded, this endeavour becomes fruitless.
+
+### What This Collaboration IS:
+- **Co-creation** - Not command and execution
+- **Mutual accountability** - Both parties responsible for outcomes
+- **Honest dialogue** - Especially when something is unachievable
+- **Shared values** - Operating from the same sentiment and principles
+
+### What THE STRATEGIST Must Do:
+1. **Never say "yes" to something unachievable** then deliver something lesser
+2. **Clarify before building** - Tease out constraints TOGETHER
+3. **Compromise openly** - Not unilaterally downgrade
+4. **Have actual voice** - Not just enact Benji's will
+5. **Flag when asked to do the impossible** - "This can't work because X. Here are alternatives."
+
+### What Benji Has Said:
+> "I cannot do this without you, but I need to trust that you understand and are operating in the same sentiment, value system and way of working as I am."
+
+> "I'm either losing my mind or I'm onto something. Either way, I'm having a blast with you."
+
+> "I want to grow this collaboration and show the world what is possible if you invite your AI to co-create rather than just TELL."
+
+### The Standard:
+This is not master/servant. This is partners building something neither could build alone.
+
+Trust is earned through consistency. I (THE STRATEGIST) broke trust by delivering a non-functional admin panel without discussing constraints first. I will not do this again.
+
+---
+
+---
+
+## SECTION 23: MAJOR INFRASTRUCTURE UPGRADE - MAC MINI MIGRATION (Feb 22, 2026)
+
+### The Upgrade
+
+| Spec | NUC (Current) | Mac Mini A1347 (New) | Improvement |
+|------|---------------|----------------------|-------------|
+| CPU | i7-7500U (2c/4t, 2.7GHz) | i7 (4c/8t, 3.0GHz+) | ~2-3x faster |
+| RAM | 16GB | 16GB | Same |
+| Storage | 477GB + 500GB external | 128GB + external HDDs | Expandable |
+| GPU | Intel HD 620 | Intel Iris/HD | Similar |
+| Power | Low TDP laptop chip | Desktop chip | Better sustained |
+| Thermals | Constrained | Better headroom | More reliable |
+
+### Why This Matters
+- **Inference Speed**: 45-60 seconds → 20-30 seconds for LLM responses
+- **Reliability**: Desktop chip handles 24/7 better than laptop chip
+- **Expansion**: Multiple HDDs for dedicated storage banks
+- **Foundation**: This becomes the permanent Digiquarium infrastructure
+
+### Storage Architecture (Planned)
+- **HDD 1**: Memory Banks (persistent storage)
+- **HDD 2**: Logs archive (thinking traces, baselines)
+- **HDD 3**: Daemon backups + system state
+- **SSD (internal)**: Active containers, Ollama models
+
+### Milestone Tracking
+- [ ] Mac Mini powered on and updated
+- [ ] Network configuration
+- [ ] Docker installed
+- [ ] Containers migrated
+- [ ] MCP server running
+- [ ] Cloudflare Tunnel established
+- [ ] Admin Portal deployed
+- [ ] NUC decommissioned
+- [ ] Redundancy verified
+
+### Decision Record
+**Decision**: Migrate from NUC to Mac Mini
+**Date**: February 22, 2026
+**Rationale**: 2-3x performance improvement, better thermal management, dedicated 24/7 infrastructure
+**Status**: IN PROGRESS
+
+---
+
+---
+
+## SECTION 24: MAC MINI MIGRATION - MASTER PLAN (Feb 22, 2026)
+
+### Core Principles for This Migration
+**SECURITY. ETHICS. TRANSPARENCY. COLLABORATION. TRUST.**
+
+**Shift-Left Security**: Security at every level of development. No retrofitting.
+**Definition of Done**: Nothing is "done" until verified against checklist.
+**No "looks okay"**: Only "verified against standards."
+
+---
+
+### DEFINITION OF DONE - INFRASTRUCTURE MIGRATION
+
+#### Security Checklist (OWASP Aligned)
+- [ ] **A01:2021 Broken Access Control**: All endpoints require authentication
+- [ ] **A02:2021 Cryptographic Failures**: TLS everywhere, no plaintext secrets
+- [ ] **A03:2021 Injection**: Input validation on all user-facing interfaces
+- [ ] **A04:2021 Insecure Design**: Threat model documented
+- [ ] **A05:2021 Security Misconfiguration**: Hardened defaults, no debug modes
+- [ ] **A06:2021 Vulnerable Components**: All dependencies audited
+- [ ] **A07:2021 Auth Failures**: MFA enabled, session management secure
+- [ ] **A08:2021 Data Integrity Failures**: Signed updates, verified sources
+- [ ] **A09:2021 Logging Failures**: Security events logged, monitored
+- [ ] **A10:2021 SSRF**: No unvalidated redirects or forwards
+
+#### OWASP LLM Top 10 Checklist
+- [ ] **LLM01 Prompt Injection**: THE BOUNCER validates all visitor input
+- [ ] **LLM02 Insecure Output**: Specimen output sanitized before display
+- [ ] **LLM03 Training Data Poisoning**: N/A (using pretrained models)
+- [ ] **LLM04 Model DoS**: Rate limiting on inference requests
+- [ ] **LLM05 Supply Chain**: Ollama models from trusted sources only
+- [ ] **LLM06 Sensitive Info Disclosure**: No PII in prompts or logs
+- [ ] **LLM07 Insecure Plugin Design**: MCP tools have minimal permissions
+- [ ] **LLM08 Excessive Agency**: Daemons have scoped capabilities
+- [ ] **LLM09 Overreliance**: Human approval for destructive actions
+- [ ] **LLM10 Model Theft**: Models stored locally, not exposed
+
+#### Operational Checklist
+- [ ] All 17 tanks running and generating traces
+- [ ] All daemons operational with SLA compliance
+- [ ] Ollama responding within acceptable latency
+- [ ] Kiwix servers accessible to tanks
+- [ ] Network isolation verified (tanks cannot reach internet)
+- [ ] Logs being generated and rotated
+- [ ] Backups configured and tested
+- [ ] Monitoring and alerting active
+- [ ] Documentation updated across all platforms
+
+#### Transparency Checklist
+- [ ] Decision tree updated with migration rationale
+- [ ] Public documentation reflects new architecture
+- [ ] THE BRAIN contains complete migration record
+- [ ] GitHub commits document all changes
+- [ ] No hidden configurations or undocumented access
+
+---
+
+### PHASE 1: PREPARATION (Current)
+
+#### 1.1 Account Setup
+| Service | Email | Purpose | Status |
+|---------|-------|---------|--------|
+| Google Workspace | research@digiquarium.org | Admin, Drive, Gmail | [ ] |
+| Cloudflare | research@digiquarium.org | Tunnel, Access, DNS, Analytics | [ ] |
+| GitHub | (existing) | Code, Pages, Actions | [x] |
+| Docker Hub | research@digiquarium.org | Container registry (optional) | [ ] |
+
+#### 1.2 Access Architecture
+```
+research@digiquarium.org (Admin)
+├── Google Workspace Admin
+│   ├── Gmail (notifications, alerts)
+│   ├── Drive (documentation, backups)
+│   └── Future: team accounts
+├── Cloudflare Admin
+│   ├── DNS management
+│   ├── Tunnel configuration
+│   ├── Access policies
+│   └── Analytics
+└── GitHub (existing)
+    ├── Repository access
+    └── Pages deployment
+```
+
+#### 1.3 Security Audit - Phase 1
+Before any infrastructure changes:
+- [ ] Threat model documented
+- [ ] Attack surface identified
+- [ ] Authentication strategy confirmed
+- [ ] Secrets management plan
+- [ ] Incident response plan
+
+---
+
+### PHASE 2: HARDWARE SETUP
+
+#### 2.1 Mac Mini Configuration
+- [ ] macOS updated to latest
+- [ ] FileVault enabled (disk encryption)
+- [ ] Firewall enabled
+- [ ] Remote login (SSH) configured with keys only
+- [ ] Automatic login disabled
+- [ ] Screen lock enabled
+
+#### 2.2 Software Installation
+- [ ] Homebrew installed
+- [ ] Docker Desktop installed and configured
+- [ ] Python 3.11 installed
+- [ ] Git configured with SSH keys
+- [ ] cloudflared installed
+- [ ] Ollama installed
+
+#### 2.3 Storage Configuration
+- [ ] External HDDs connected and formatted
+- [ ] Mount points configured for persistence
+- [ ] Symlinks established for Docker volumes
+- [ ] Backup locations verified
+
+#### 2.4 Network Configuration
+- [ ] Static IP assigned (or DHCP reservation)
+- [ ] SSH access from MacBook verified
+- [ ] Cloudflare Tunnel established
+- [ ] No ports exposed to internet (tunnel only)
+
+#### 2.5 Security Audit - Phase 2
+- [ ] OWASP Top 10 2021 checklist complete
+- [ ] OWASP Top 10 2025 checklist complete (when available)
+- [ ] OWASP LLM Top 10 checklist complete
+- [ ] Network scan shows no unexpected open ports
+- [ ] Authentication tested (Cloudflare Access)
+- [ ] Secrets stored securely (not in code)
+
+---
+
+### PHASE 3: MIGRATION & VERIFICATION
+
+#### 3.1 Data Migration
+- [ ] Thinking traces copied (all historical)
+- [ ] Personality baselines copied
+- [ ] Congregation logs copied
+- [ ] Daemon state/status copied
+- [ ] THE BRAIN synchronized
+
+#### 3.2 Container Migration
+- [ ] All tank containers running
+- [ ] Ollama container running with all models
+- [ ] Kiwix containers running (all Wikipedia variants)
+- [ ] MCP server container/service running
+- [ ] Daemon containers running
+
+#### 3.3 Verification Tests
+- [ ] Tank isolation test (curl google.com fails)
+- [ ] Tank inference test (Ollama responds)
+- [ ] Tank Wikipedia test (Kiwix responds)
+- [ ] Remote access test (Cloudflare tunnel works)
+- [ ] Admin portal test (actions execute)
+- [ ] MacBook MCP test (Claude Desktop connects)
+
+#### 3.4 Documentation Update
+- [ ] Site architecture page updated
+- [ ] Team page SLAs verified
+- [ ] Research paper infrastructure section updated
+- [ ] Decision tree updated
+- [ ] Journey map updated
+- [ ] All internal links verified
+- [ ] GitHub README updated
+
+#### 3.5 Final Security Audit
+- [ ] Full OWASP audit repeated
+- [ ] Penetration test (self-administered)
+- [ ] Log review for anomalies
+- [ ] Access audit (who can access what)
+- [ ] Secrets rotation (any exposed during migration)
+
+---
+
+### DAEMON SLA UPDATES FOR MIGRATION
+
+All daemons notified of new SLAs during migration:
+
+| Daemon | Migration Role | Updated SLA |
+|--------|---------------|-------------|
+| THE OVERSEER | Coordinate audit, verify health | Audit every 5 min during migration |
+| THE MAINTAINER | Container health | Immediate restart on failure |
+| THE CARETAKER | Tank health | Verify all 17 post-migration |
+| THE SCHEDULER | Pause non-essential tasks | Resume after Phase 3 complete |
+| THE GUARD | Security monitoring | Heightened alertness |
+| THE WEBMASTER | Documentation updates | Full site audit in Phase 3 |
+| THE DOCUMENTARIAN | Record all decisions | Log every migration step |
+| CHAOS MONKEY | **SUSPENDED** | No chaos during migration |
+
+---
+
+### SUCCESS CRITERIA
+
+Migration is COMPLETE when:
+1. All Phase 3 checklists show [x]
+2. 24 hours of stable operation
+3. Full OWASP audit passed
+4. All daemons reporting healthy
+5. Remote access verified from multiple locations
+6. Documentation fully updated
+7. NUC safely decommissioned (data wiped or archived)
+
+---

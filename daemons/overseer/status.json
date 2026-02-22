@@ -1,16 +1,2834 @@
 {
-  "timestamp": "2026-02-22T05:57:32.899495",
-  "active_incidents": {},
+  "timestamp": "2026-02-22T12:30:30.487805",
+  "active_incidents": {
+    "INC-20260222061505": {
+      "id": "INC-20260222061505",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:14:14.056036",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222061704": {
+      "id": "INC-20260222061704",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:15:24.195960",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222061747": {
+      "id": "INC-20260222061747",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:16:34.744426",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222061950": {
+      "id": "INC-20260222061950",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:18:55.075294",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062028": {
+      "id": "INC-20260222062028",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:17:44.963852",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062227": {
+      "id": "INC-20260222062227",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:20:05.213557",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062306": {
+      "id": "INC-20260222062306",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:21:15.309567",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062319": {
+      "id": "INC-20260222062319",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:22:25.412105",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062443": {
+      "id": "INC-20260222062443",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:23:35.725084",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062603": {
+      "id": "INC-20260222062603",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:24:45.976664",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062612": {
+      "id": "INC-20260222062612",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:25:56.092799",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062734": {
+      "id": "INC-20260222062734",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:27:06.189935",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222062851": {
+      "id": "INC-20260222062851",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:28:16.280839",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222063016": {
+      "id": "INC-20260222063016",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:29:27.354159",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222063134": {
+      "id": "INC-20260222063134",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:30:37.491360",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222063356": {
+      "id": "INC-20260222063356",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:32:57.152494",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222063513": {
+      "id": "INC-20260222063513",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:34:07.356608",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222063633": {
+      "id": "INC-20260222063633",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:36:28.030367",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222063644": {
+      "id": "INC-20260222063644",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:35:17.559598",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222063803": {
+      "id": "INC-20260222063803",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:37:38.100923",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222063924": {
+      "id": "INC-20260222063924",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:38:48.357875",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222064043": {
+      "id": "INC-20260222064043",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:39:58.444820",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222064200": {
+      "id": "INC-20260222064200",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:41:08.824185",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222064326": {
+      "id": "INC-20260222064326",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:42:19.775336",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222064443": {
+      "id": "INC-20260222064443",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:44:40.131609",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222064450": {
+      "id": "INC-20260222064450",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:43:30.018182",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222064610": {
+      "id": "INC-20260222064610",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:45:50.284606",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222064728": {
+      "id": "INC-20260222064728",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:47:00.428109",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222064844": {
+      "id": "INC-20260222064844",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:48:10.538127",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222065108": {
+      "id": "INC-20260222065108",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:50:33.990205",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222065227": {
+      "id": "INC-20260222065227",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:51:44.097004",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222065346": {
+      "id": "INC-20260222065346",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:52:54.188365",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222065503": {
+      "id": "INC-20260222065503",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:54:04.290046",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222065629": {
+      "id": "INC-20260222065629",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:55:15.197862",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222065638": {
+      "id": "INC-20260222065638",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:56:25.336239",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222065757": {
+      "id": "INC-20260222065757",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:57:35.449423",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222065913": {
+      "id": "INC-20260222065913",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:58:45.549658",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222070034": {
+      "id": "INC-20260222070034",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T06:59:55.639367",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222070152": {
+      "id": "INC-20260222070152",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:01:05.726038",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222070315": {
+      "id": "INC-20260222070315",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:02:16.034152",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222070434": {
+      "id": "INC-20260222070434",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:03:26.164693",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222070550": {
+      "id": "INC-20260222070550",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:05:46.381787",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222070557": {
+      "id": "INC-20260222070557",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:04:36.282385",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222070818": {
+      "id": "INC-20260222070818",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:08:04.349833",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222070942": {
+      "id": "INC-20260222070942",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:09:14.771759",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222071101": {
+      "id": "INC-20260222071101",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:10:24.867051",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222071220": {
+      "id": "INC-20260222071220",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:11:34.995631",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222071342": {
+      "id": "INC-20260222071342",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:12:45.211318",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222071501": {
+      "id": "INC-20260222071501",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:13:55.412197",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222071626": {
+      "id": "INC-20260222071626",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:15:06.106457",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222071633": {
+      "id": "INC-20260222071633",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:16:17.020087",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222071751": {
+      "id": "INC-20260222071751",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:17:27.110321",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222071910": {
+      "id": "INC-20260222071910",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:18:37.235210",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222072029": {
+      "id": "INC-20260222072029",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:19:47.329530",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222072146": {
+      "id": "INC-20260222072146",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:20:57.444288",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222072308": {
+      "id": "INC-20260222072308",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T07:23:08.369874",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222072316": {
+      "id": "INC-20260222072316",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:22:08.041854",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222072426": {
+      "id": "INC-20260222072426",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:24:18.516836",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222072544": {
+      "id": "INC-20260222072544",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:25:28.646085",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222072702": {
+      "id": "INC-20260222072702",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:26:38.734497",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222072823": {
+      "id": "INC-20260222072823",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:27:48.924431",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073029": {
+      "id": "INC-20260222073029",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:28:59.063364",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073108": {
+      "id": "INC-20260222073108",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:30:09.139233",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073308": {
+      "id": "INC-20260222073308",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:32:29.383422",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073347": {
+      "id": "INC-20260222073347",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:31:19.283917",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073551": {
+      "id": "INC-20260222073551",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:33:39.490738",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073629": {
+      "id": "INC-20260222073629",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:34:49.911025",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073831": {
+      "id": "INC-20260222073831",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:37:10.167855",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073910": {
+      "id": "INC-20260222073910",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:36:00.044355",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222073941": {
+      "id": "INC-20260222073941",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:38:20.287837",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074102": {
+      "id": "INC-20260222074102",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:40:40.703450",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074143": {
+      "id": "INC-20260222074143",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:39:30.532338",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074344": {
+      "id": "INC-20260222074344",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:41:50.935087",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074422": {
+      "id": "INC-20260222074422",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:43:01.049971",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074622": {
+      "id": "INC-20260222074622",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:45:21.293591",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074634": {
+      "id": "INC-20260222074634",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:44:11.177744",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074757": {
+      "id": "INC-20260222074757",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:46:31.570187",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074805": {
+      "id": "INC-20260222074805",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:47:41.692641",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222074926": {
+      "id": "INC-20260222074926",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:48:51.770864",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075044": {
+      "id": "INC-20260222075044",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:50:01.874296",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075201": {
+      "id": "INC-20260222075201",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:51:11.980748",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075319": {
+      "id": "INC-20260222075319",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:52:22.222022",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075442": {
+      "id": "INC-20260222075442",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:53:32.328581",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075600": {
+      "id": "INC-20260222075600",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:54:42.505235",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075608": {
+      "id": "INC-20260222075608",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:55:52.619270",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075718": {
+      "id": "INC-20260222075718",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T07:56:52.777264",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075835": {
+      "id": "INC-20260222075835",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:58:02.940977",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222075955": {
+      "id": "INC-20260222075955",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T07:59:13.456939",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222080117": {
+      "id": "INC-20260222080117",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:00:23.699209",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222080225": {
+      "id": "INC-20260222080225",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:01:24.035652",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222080343": {
+      "id": "INC-20260222080343",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:02:34.162668",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222080500": {
+      "id": "INC-20260222080500",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:03:44.266510",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222080506": {
+      "id": "INC-20260222080506",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:04:54.364526",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222080628": {
+      "id": "INC-20260222080628",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:06:05.018566",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222080751": {
+      "id": "INC-20260222080751",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:07:15.142046",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222080910": {
+      "id": "INC-20260222080910",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:08:25.272287",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081019": {
+      "id": "INC-20260222081019",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:09:25.444017",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081136": {
+      "id": "INC-20260222081136",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:10:35.581145",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081254": {
+      "id": "INC-20260222081254",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:11:45.756709",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081418": {
+      "id": "INC-20260222081418",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:12:56.418082",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081423": {
+      "id": "INC-20260222081423",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:14:06.519448",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081544": {
+      "id": "INC-20260222081544",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:15:16.685045",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081701": {
+      "id": "INC-20260222081701",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:16:26.918945",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081816": {
+      "id": "INC-20260222081816",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:17:37.086810",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222081935": {
+      "id": "INC-20260222081935",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:18:47.342158",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222082057": {
+      "id": "INC-20260222082057",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:19:57.426941",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222082215": {
+      "id": "INC-20260222082215",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:21:07.548647",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222082331": {
+      "id": "INC-20260222082331",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:23:27.749410",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222082339": {
+      "id": "INC-20260222082339",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:22:17.682926",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222082457": {
+      "id": "INC-20260222082457",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:24:37.816276",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222082621": {
+      "id": "INC-20260222082621",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:25:48.104582",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222082740": {
+      "id": "INC-20260222082740",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:26:58.274446",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222082851": {
+      "id": "INC-20260222082851",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:27:58.525398",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083011": {
+      "id": "INC-20260222083011",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:29:08.852226",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083129": {
+      "id": "INC-20260222083129",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:30:19.105054",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083140": {
+      "id": "INC-20260222083140",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:31:29.453423",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083305": {
+      "id": "INC-20260222083305",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:32:39.835786",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083426": {
+      "id": "INC-20260222083426",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:33:49.966495",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083546": {
+      "id": "INC-20260222083546",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:35:00.297101",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083704": {
+      "id": "INC-20260222083704",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:36:10.370108",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083823": {
+      "id": "INC-20260222083823",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:37:20.745212",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083945": {
+      "id": "INC-20260222083945",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:38:31.370648",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222083954": {
+      "id": "INC-20260222083954",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:39:41.420596",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084114": {
+      "id": "INC-20260222084114",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:40:51.609065",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084234": {
+      "id": "INC-20260222084234",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:42:01.894200",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084351": {
+      "id": "INC-20260222084351",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T08:43:11.966644",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084459": {
+      "id": "INC-20260222084459",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:44:12.138003",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084616": {
+      "id": "INC-20260222084616",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:46:13.259269",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084623": {
+      "id": "INC-20260222084623",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:45:12.931958",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084732": {
+      "id": "INC-20260222084732",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:47:13.416152",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084844": {
+      "id": "INC-20260222084844",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:48:13.674512",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222084953": {
+      "id": "INC-20260222084953",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:49:13.801879",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085103": {
+      "id": "INC-20260222085103",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:50:13.893857",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085212": {
+      "id": "INC-20260222085212",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:51:14.453258",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085322": {
+      "id": "INC-20260222085322",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:52:14.985640",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085333": {
+      "id": "INC-20260222085333",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:53:15.143505",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085446": {
+      "id": "INC-20260222085446",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:54:15.251816",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085555": {
+      "id": "INC-20260222085555",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:55:15.365440",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085703": {
+      "id": "INC-20260222085703",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:56:15.502154",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085813": {
+      "id": "INC-20260222085813",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:57:15.617892",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085927": {
+      "id": "INC-20260222085927",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:59:16.645557",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222085934": {
+      "id": "INC-20260222085934",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T08:58:16.380135",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090044": {
+      "id": "INC-20260222090044",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:00:16.775093",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090152": {
+      "id": "INC-20260222090152",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:01:17.126288",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090258": {
+      "id": "INC-20260222090258",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:02:17.204218",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090409": {
+      "id": "INC-20260222090409",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:03:17.391747",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090523": {
+      "id": "INC-20260222090523",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:04:18.138981",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090534": {
+      "id": "INC-20260222090534",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:05:18.706823",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090651": {
+      "id": "INC-20260222090651",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:06:18.859916",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090756": {
+      "id": "INC-20260222090756",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:07:19.171735",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222090908": {
+      "id": "INC-20260222090908",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:08:19.356302",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091016": {
+      "id": "INC-20260222091016",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:09:19.751120",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091127": {
+      "id": "INC-20260222091127",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:10:20.224694",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091136": {
+      "id": "INC-20260222091136",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:11:20.540875",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091251": {
+      "id": "INC-20260222091251",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:12:21.103989",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091400": {
+      "id": "INC-20260222091400",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:13:21.227910",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091511": {
+      "id": "INC-20260222091511",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:14:21.345407",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091626": {
+      "id": "INC-20260222091626",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:16:22.159288",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091632": {
+      "id": "INC-20260222091632",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:15:22.038501",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091742": {
+      "id": "INC-20260222091742",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:17:22.305363",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222091857": {
+      "id": "INC-20260222091857",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:18:22.746719",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092008": {
+      "id": "INC-20260222092008",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:19:22.954584",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092116": {
+      "id": "INC-20260222092116",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:20:23.124437",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092226": {
+      "id": "INC-20260222092226",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:21:23.321823",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092233": {
+      "id": "INC-20260222092233",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:22:23.547721",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092344": {
+      "id": "INC-20260222092344",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:23:23.653158",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092458": {
+      "id": "INC-20260222092458",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:24:24.406477",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092614": {
+      "id": "INC-20260222092614",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:25:24.890577",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092723": {
+      "id": "INC-20260222092723",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:26:25.024334",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092832": {
+      "id": "INC-20260222092832",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:28:25.465300",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092839": {
+      "id": "INC-20260222092839",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:27:25.235095",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222092949": {
+      "id": "INC-20260222092949",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:29:25.665770",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093059": {
+      "id": "INC-20260222093059",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:30:25.772934",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093219": {
+      "id": "INC-20260222093219",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:31:26.873835",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093329": {
+      "id": "INC-20260222093329",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:33:27.610158",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093336": {
+      "id": "INC-20260222093336",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:32:27.423589",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093445": {
+      "id": "INC-20260222093445",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:34:27.752021",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093553": {
+      "id": "INC-20260222093553",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:35:27.922191",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093703": {
+      "id": "INC-20260222093703",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:36:28.118583",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093817": {
+      "id": "INC-20260222093817",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:37:29.176557",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093930": {
+      "id": "INC-20260222093930",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:38:29.669701",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222093937": {
+      "id": "INC-20260222093937",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:39:29.815743",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094047": {
+      "id": "INC-20260222094047",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:40:29.876378",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094155": {
+      "id": "INC-20260222094155",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:41:29.945579",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094307": {
+      "id": "INC-20260222094307",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:42:30.054216",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094416": {
+      "id": "INC-20260222094416",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:43:30.159671",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094529": {
+      "id": "INC-20260222094529",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:44:30.339833",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094638": {
+      "id": "INC-20260222094638",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:45:30.771508",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094647": {
+      "id": "INC-20260222094647",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:46:30.907049",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094759": {
+      "id": "INC-20260222094759",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:47:31.100089",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222094913": {
+      "id": "INC-20260222094913",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:48:31.217523",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095021": {
+      "id": "INC-20260222095021",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:49:31.349343",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095132": {
+      "id": "INC-20260222095132",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:51:32.328805",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095143": {
+      "id": "INC-20260222095143",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:50:31.794364",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095255": {
+      "id": "INC-20260222095255",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:52:32.576030",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095408": {
+      "id": "INC-20260222095408",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:53:32.685084",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095521": {
+      "id": "INC-20260222095521",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:54:32.808205",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095628": {
+      "id": "INC-20260222095628",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:55:33.444697",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095736": {
+      "id": "INC-20260222095736",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:56:33.676276",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095747": {
+      "id": "INC-20260222095747",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:57:33.850603",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222095901": {
+      "id": "INC-20260222095901",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:58:34.176017",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100012": {
+      "id": "INC-20260222100012",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T09:59:34.375516",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100122": {
+      "id": "INC-20260222100122",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:00:34.468514",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100230": {
+      "id": "INC-20260222100230",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:01:35.596353",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100340": {
+      "id": "INC-20260222100340",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:02:36.023783",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100353": {
+      "id": "INC-20260222100353",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:03:36.333657",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100510": {
+      "id": "INC-20260222100510",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:04:36.849664",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100622": {
+      "id": "INC-20260222100622",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:05:37.021759",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100731": {
+      "id": "INC-20260222100731",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:06:37.153461",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100841": {
+      "id": "INC-20260222100841",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:08:38.001409",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100848": {
+      "id": "INC-20260222100848",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:07:37.828553",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222100958": {
+      "id": "INC-20260222100958",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:09:38.405535",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101110": {
+      "id": "INC-20260222101110",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:10:39.014238",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101223": {
+      "id": "INC-20260222101223",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:11:39.545943",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101332": {
+      "id": "INC-20260222101332",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:12:39.691094",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101441": {
+      "id": "INC-20260222101441",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:13:40.125001",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101451": {
+      "id": "INC-20260222101451",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:14:40.516593",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101604": {
+      "id": "INC-20260222101604",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:15:40.684775",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101714": {
+      "id": "INC-20260222101714",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:16:40.849718",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101830": {
+      "id": "INC-20260222101830",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:17:40.977608",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222101940": {
+      "id": "INC-20260222101940",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:18:41.175570",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102051": {
+      "id": "INC-20260222102051",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:19:41.345148",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102059": {
+      "id": "INC-20260222102059",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:20:41.534051",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102210": {
+      "id": "INC-20260222102210",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:21:41.742780",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102330": {
+      "id": "INC-20260222102330",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:22:51.872636",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102453": {
+      "id": "INC-20260222102453",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:24:02.271092",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102614": {
+      "id": "INC-20260222102614",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:25:12.391962",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102734": {
+      "id": "INC-20260222102734",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:27:33.208208",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102741": {
+      "id": "INC-20260222102741",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:26:23.137754",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222102901": {
+      "id": "INC-20260222102901",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:28:43.370516",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103021": {
+      "id": "INC-20260222103021",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:29:53.520118",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103144": {
+      "id": "INC-20260222103144",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:31:04.445787",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103306": {
+      "id": "INC-20260222103306",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:32:14.534988",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103426": {
+      "id": "INC-20260222103426",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:33:24.602987",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103544": {
+      "id": "INC-20260222103544",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:34:34.752054",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103701": {
+      "id": "INC-20260222103701",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:35:44.855283",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103714": {
+      "id": "INC-20260222103714",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:36:55.230960",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103919": {
+      "id": "INC-20260222103919",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:38:05.986429",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222103937": {
+      "id": "INC-20260222103937",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:39:16.136685",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222104058": {
+      "id": "INC-20260222104058",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:40:26.256629",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222104258": {
+      "id": "INC-20260222104258",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:42:46.541945",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222104339": {
+      "id": "INC-20260222104339",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:41:36.386575",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222104501": {
+      "id": "INC-20260222104501",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:43:57.543272",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222104619": {
+      "id": "INC-20260222104619",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:46:17.782662",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222104626": {
+      "id": "INC-20260222104626",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:45:07.742425",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222104746": {
+      "id": "INC-20260222104746",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:47:27.846284",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222104907": {
+      "id": "INC-20260222104907",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:48:37.908713",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105027": {
+      "id": "INC-20260222105027",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:49:48.839702",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105151": {
+      "id": "INC-20260222105151",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:50:59.022218",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105309": {
+      "id": "INC-20260222105309",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T10:52:09.241479",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105316": {
+      "id": "INC-20260222105316",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:53:09.341915",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105426": {
+      "id": "INC-20260222105426",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:54:09.461958",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105537": {
+      "id": "INC-20260222105537",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:55:09.579638",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105644": {
+      "id": "INC-20260222105644",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:56:10.040017",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105800": {
+      "id": "INC-20260222105800",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:57:10.591509",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105912": {
+      "id": "INC-20260222105912",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:59:11.240727",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222105919": {
+      "id": "INC-20260222105919",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T10:58:10.920376",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110030": {
+      "id": "INC-20260222110030",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:00:11.716204",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110140": {
+      "id": "INC-20260222110140",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:01:12.042729",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110248": {
+      "id": "INC-20260222110248",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:02:12.319636",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110404": {
+      "id": "INC-20260222110404",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:03:13.127547",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110517": {
+      "id": "INC-20260222110517",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:05:14.088277",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110527": {
+      "id": "INC-20260222110527",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:04:13.923866",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110639": {
+      "id": "INC-20260222110639",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:06:14.281998",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110749": {
+      "id": "INC-20260222110749",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:07:14.385020",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222110859": {
+      "id": "INC-20260222110859",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:08:14.488510",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111011": {
+      "id": "INC-20260222111011",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:09:14.675456",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111124": {
+      "id": "INC-20260222111124",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:11:15.787441",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111130": {
+      "id": "INC-20260222111130",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:10:15.574229",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111241": {
+      "id": "INC-20260222111241",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:12:15.946633",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111351": {
+      "id": "INC-20260222111351",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:13:16.031039",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111502": {
+      "id": "INC-20260222111502",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:14:16.528344",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111611": {
+      "id": "INC-20260222111611",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:15:16.698979",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111723": {
+      "id": "INC-20260222111723",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:17:18.067749",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111734": {
+      "id": "INC-20260222111734",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:16:17.424498",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111845": {
+      "id": "INC-20260222111845",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:18:18.156973",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222111956": {
+      "id": "INC-20260222111956",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:19:18.266858",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112108": {
+      "id": "INC-20260222112108",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:20:18.514007",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112216": {
+      "id": "INC-20260222112216",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:21:18.705257",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112324": {
+      "id": "INC-20260222112324",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:23:19.110589",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112334": {
+      "id": "INC-20260222112334",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:22:19.011217",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112446": {
+      "id": "INC-20260222112446",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:24:19.338194",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112602": {
+      "id": "INC-20260222112602",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:25:19.516802",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112713": {
+      "id": "INC-20260222112713",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:26:19.648850",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112822": {
+      "id": "INC-20260222112822",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:28:20.399120",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112828": {
+      "id": "INC-20260222112828",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:27:20.253243",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222112937": {
+      "id": "INC-20260222112937",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:29:20.960025",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113052": {
+      "id": "INC-20260222113052",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:30:21.410048",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113204": {
+      "id": "INC-20260222113204",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:31:21.644340",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113314": {
+      "id": "INC-20260222113314",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:32:21.752884",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113424": {
+      "id": "INC-20260222113424",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:33:22.264417",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113433": {
+      "id": "INC-20260222113433",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:34:22.464872",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113543": {
+      "id": "INC-20260222113543",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:35:22.567922",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113653": {
+      "id": "INC-20260222113653",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:36:23.458099",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113812": {
+      "id": "INC-20260222113812",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:37:23.985070",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222113920": {
+      "id": "INC-20260222113920",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:38:24.108274",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114029": {
+      "id": "INC-20260222114029",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:40:24.740175",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114033": {
+      "id": "INC-20260222114033",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:39:24.538949",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114144": {
+      "id": "INC-20260222114144",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:41:24.862972",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114253": {
+      "id": "INC-20260222114253",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:42:25.002818",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114409": {
+      "id": "INC-20260222114409",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:43:25.470213",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114521": {
+      "id": "INC-20260222114521",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:44:25.764661",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114629": {
+      "id": "INC-20260222114629",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:46:26.497358",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114636": {
+      "id": "INC-20260222114636",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:45:26.307945",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114750": {
+      "id": "INC-20260222114750",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T11:47:36.658855",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222114908": {
+      "id": "INC-20260222114908",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T11:48:46.754787",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222115031": {
+      "id": "INC-20260222115031",
+      "source": "ollama_watcher",
+      "message": "Windows Ollama is down. Check Windows host at 192.168.50.94",
+      "severity": "critical",
+      "created": "2026-02-22T11:49:57.143479",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222115143": {
+      "id": "INC-20260222115143",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:50:57.516472",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222115251": {
+      "id": "INC-20260222115251",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:51:57.709833",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222115400": {
+      "id": "INC-20260222115400",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:53:58.377713",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222115409": {
+      "id": "INC-20260222115409",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:52:58.154002",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222115521": {
+      "id": "INC-20260222115521",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:54:58.591169",
+      "status": "open",
+      "escalated_to_human": false
+    },
+    "INC-20260222115631": {
+      "id": "INC-20260222115631",
+      "source": "ollama_watcher",
+      "message": "Proxy container unrecoverable after 3 restart attempts",
+      "severity": "critical",
+      "created": "2026-02-22T11:55:58.896897",
+      "status": "open",
+      "escalated_to_human": false
+    }
+  },
   "stats": {
-    "cycles": 229,
-    "incidents_detected": 0,
+    "cycles": 535,
+    "incidents_detected": 313,
     "incidents_resolved": 0,
     "escalations_sent": 0,
-    "auto_remediations": 0,
+    "auto_remediations": 4,
     "start_time": "2026-02-22T02:06:14.149535"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-22T05:54:29.705088",
+    "timestamp": "2026-02-22T12:26:24.608016",
     "ollama": {
       "healthy": true,
       "issues": []
@@ -18,100 +2836,99 @@
     "containers": {
       "healthy": false,
       "issues": [
-        "tank-17-seth is Exited (137) 3 minutes ago",
-        "tank-03-cain is Exited (137) 3 minutes ago"
+        "tank-17-seth is Exited (137) 47 seconds ago"
       ],
       "containers": {
         "digiquarium-ollama": {
-          "status": "Up 4 hours",
+          "status": "Up 29 minutes",
           "healthy": true
         },
         "tank-01-adam": {
-          "status": "Up 3 hours",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-02-eve": {
-          "status": "Up 3 hours",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-simple": {
-          "status": "Up 5 hours",
+          "status": "Up 12 hours",
           "healthy": true
         },
         "tank-visitor-01-aria": {
-          "status": "Up 16 hours",
+          "status": "Up 23 hours",
           "healthy": true
         },
         "tank-visitor-02-felix": {
-          "status": "Up 16 hours",
+          "status": "Up 23 hours",
           "healthy": true
         },
         "tank-visitor-03-luna": {
-          "status": "Up 16 hours",
+          "status": "Up 23 hours",
           "healthy": true
         },
         "tank-17-seth": {
-          "status": "Exited (137) 3 minutes ago",
+          "status": "Exited (137) 47 seconds ago",
           "healthy": false
         },
         "congregation-runner": {
-          "status": "Up 5 hours",
+          "status": "Up 12 hours",
           "healthy": true
         },
         "tank-03-cain": {
-          "status": "Exited (137) 3 minutes ago",
-          "healthy": false
+          "status": "Up 5 hours",
+          "healthy": true
         },
         "tank-04-abel": {
-          "status": "Up 4 hours",
+          "status": "Up 11 hours",
           "healthy": true
         },
         "tank-16-seeker": {
-          "status": "Up 30 hours",
+          "status": "Up 37 hours",
           "healthy": true
         },
         "tank-15-observer": {
-          "status": "Up 30 hours",
+          "status": "Up 37 hours",
           "healthy": true
         },
         "tank-14-iris": {
-          "status": "Up 3 hours",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-13-victor": {
-          "status": "Up 3 hours",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-12-sakura": {
-          "status": "Up 36 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-10-mei": {
-          "status": "Up 36 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-09-wei": {
-          "status": "Up 36 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-11-haruki": {
-          "status": "Up 36 minutes",
+          "status": "Up 3 minutes",
           "healthy": true
         },
         "tank-08-genevieve": {
-          "status": "Up 3 hours",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-05-juan": {
-          "status": "Up 31 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-07-klaus": {
-          "status": "Up 3 hours",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up 30 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {
@@ -252,8 +3069,7 @@
       {
         "component": "containers",
         "details": [
-          "tank-17-seth is Exited (137) 3 minutes ago",
-          "tank-03-cain is Exited (137) 3 minutes ago"
+          "tank-17-seth is Exited (137) 47 seconds ago"
         ]
       }
     ],
