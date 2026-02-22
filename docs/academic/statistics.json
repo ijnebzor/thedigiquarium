@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T12:25:20.957921",
+  "timestamp": "2026-02-22T13:25:21.389071",
   "tanks": {
     "tank-12-sakura": {
       "thinking_traces": 2417,
@@ -12,13 +12,13 @@
       "discoveries": 2
     },
     "tank-07-klaus": {
-      "thinking_traces": 8797,
-      "baselines": 129,
+      "thinking_traces": 8799,
+      "baselines": 130,
       "discoveries": 2
     },
     "tank-01-adam": {
-      "thinking_traces": 12026,
-      "baselines": 142,
+      "thinking_traces": 12028,
+      "baselines": 143,
       "discoveries": 4
     },
     "tank-visitor-03-luna": {
@@ -32,12 +32,12 @@
       "discoveries": 0
     },
     "tank-02-eve": {
-      "thinking_traces": 9840,
-      "baselines": 142,
+      "thinking_traces": 9842,
+      "baselines": 143,
       "discoveries": 3
     },
     "tank-03-cain": {
-      "thinking_traces": 12357,
+      "thinking_traces": 12375,
       "baselines": 2,
       "discoveries": 2
     },
@@ -57,42 +57,42 @@
       "discoveries": 2
     },
     "tank-14-iris": {
-      "thinking_traces": 9426,
-      "baselines": 136,
+      "thinking_traces": 9428,
+      "baselines": 137,
       "discoveries": 2
     },
     "tank-04-abel": {
-      "thinking_traces": 18171,
+      "thinking_traces": 18201,
       "baselines": 3,
       "discoveries": 2
     },
     "tank-08-genevieve": {
-      "thinking_traces": 8700,
-      "baselines": 131,
+      "thinking_traces": 8702,
+      "baselines": 132,
       "discoveries": 2
     },
     "tank-15-observer": {
-      "thinking_traces": 12695,
+      "thinking_traces": 12713,
       "baselines": 7,
       "discoveries": 2
     },
     "tank-17-seth": {
-      "thinking_traces": 12282,
+      "thinking_traces": 12287,
       "baselines": 2,
       "discoveries": 2
     },
     "tank-13-victor": {
-      "thinking_traces": 9448,
-      "baselines": 137,
+      "thinking_traces": 9450,
+      "baselines": 138,
       "discoveries": 2
     },
     "tank-05-juan": {
-      "thinking_traces": 4970,
-      "baselines": 136,
+      "thinking_traces": 4972,
+      "baselines": 137,
       "discoveries": 2
     },
     "tank-16-seeker": {
-      "thinking_traces": 12745,
+      "thinking_traces": 12763,
       "baselines": 7,
       "discoveries": 2
     },
@@ -103,9 +103,9 @@
     }
   },
   "totals": {
-    "total_articles": 29180,
-    "total_thinking_traces": 145904,
-    "total_baselines": 1661,
+    "total_articles": 29201,
+    "total_thinking_traces": 146007,
+    "total_baselines": 1668,
     "total_discoveries": 37
   },
   "by_language": {},

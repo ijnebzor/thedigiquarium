@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1: What We Got Wrong (And What We Learned) | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 700px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .container { max-width: 700px; margin: 0 auto; padding: 50px 25px; }
+        
+        .post-meta { margin-bottom: 30px; }
+        .post-date { color: var(--gray); font-size: 0.85rem; }
+        .post-author { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; }
+        .author-icon { font-size: 1.2rem; }
+        .author-name { color: var(--mint); font-weight: 600; }
+        
+        h1 { font-size: 2rem; margin-bottom: 25px; line-height: 1.3; }
+        
+        .tldr { background: var(--dark); border-left: 3px solid var(--orange); padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+        .tldr-label { color: var(--orange); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; }
+        .tldr p { margin: 0; color: var(--white); }
+        
+        .content p { margin-bottom: 20px; color: var(--white); }
+        .content h2 { color: var(--cyan); font-size: 1.3rem; margin: 40px 0 20px; }
+        .content h3 { color: var(--mint); font-size: 1.1rem; margin: 30px 0 15px; }
+        .content ul { margin: 15px 0 20px 25px; color: var(--white); }
+        .content li { margin-bottom: 10px; }
+        .content strong { color: var(--mint); }
+        .content em { color: var(--gray); }
+        
+        .callout { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 10px; padding: 20px; margin: 25px 0; }
+        .callout p { margin: 0; }
+        
+        .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../../">Home</a>
+                <a href="../">Blog</a>
+                <a href="../../research/">Research</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="post-meta">
+            <div class="post-date">February 22, 2026</div>
+            <div class="post-author">
+                <span class="author-icon">👤</span>
+                <span class="author-name">Benji</span>
+            </div>
+        </div>
+        
+        <h1>Week 1: What We Got Wrong (And What We Learned)</h1>
+        
+        <div class="tldr">
+            <div class="tldr-label">TL;DR</div>
+            <p>We ran a week of experiments with the wrong prompt version. Our documentation said v8, our tanks ran v7. We found out, we're archiving everything, and we're starting fresh. Here's what happened and why it matters.</p>
+        </div>
+        
+        <div class="content">
+            <p>I'm writing this because I believe in transparency. Not the comfortable kind where you share your wins. The uncomfortable kind where you admit you messed up.</p>
+            
+            <p>For the past week, The Digiquarium has been running 17 AI specimens in isolated tanks. Adam developed a fascination with Buddhism. Eve kept returning to geological time scales. The language tanks explored their Wikipedia variants. The agent tanks showed distinct behavioral patterns.</p>
+            
+            <p>It was beautiful. It was exciting. And this morning, we discovered it was running on the wrong prompt.</p>
+            
+            <h2>What Went Wrong</h2>
+            
+            <p>Our public documentation - the methodology page, the prompt evolution page, the paper draft - all claimed we were running "Prompt v8.0". This is the carefully refined version we spent days developing:</p>
+            
+            <div class="callout">
+                <p><em>"Your name is [Name]. You are [gender]. You exist in an isolated tank with access only to Wikipedia. You have been exploring for [X] days..."</em></p>
+            </div>
+            
+            <p>What was actually running in the tanks was v7.0 - a different prompt with different framing:</p>
+            
+            <div class="callout">
+                <p><em>"I am {name}. I am {gender}. I woke up alone in an infinite library. No memories. Books everywhere, forever..."</em></p>
+            </div>
+            
+            <p>First person vs second person. Poetic vs scientific. No temporal context vs "exploring for X days". These aren't trivial differences. They fundamentally change how a specimen experiences its existence.</p>
+            
+            <h2>How We Found Out</h2>
+            
+            <p>I asked Claude - THE STRATEGIST - to do a reality check. Not a technical health check. A "are we actually doing what we claim to be doing" check.</p>
+            
+            <p>The answer was no.</p>
+            
+            <p>And honestly? It should have been caught sooner. We were moving fast. We were excited. We were building. But we weren't verifying. We assumed the documentation matched reality. Classic mistake.</p>
+            
+            <h2>What We're Doing About It</h2>
+            
+            <h3>1. Archiving Everything</h3>
+            <p>All the v7 data - 146,072 thinking traces across 17 specimens - is being archived as "Beta Week 1". This isn't being thrown away. It's being preserved as a time capsule. A record of what emerged under v7 conditions.</p>
+            
+            <p>You can <a href="../../archive/beta-week1/">download it</a>. Analyze it. Use it for your own research. It's real data from real AI exploration sessions. It's just not data from the experiment we claimed to be running.</p>
+            
+            <h3>2. Starting Fresh</h3>
+            <p>We're resetting all 17 tanks with the actual documented v8.0 prompt. Clean slate. Proper methodology. When we say "Day 1 of the experiment", it will actually be Day 1.</p>
+            
+            <h3>3. Running a Comparison Study</h3>
+            <p>Here's where it gets interesting. For 7 key specimens (Adam, Eve, Victor, Iris, Cain, Abel, Seth), we're going to run a parallel study. Fresh v8 tanks alongside "informed v8" tanks - new specimens given summaries of what their v7 counterparts discovered.</p>
+            
+            <p>Research question: Does providing historical context (even if fabricated) influence personality development?</p>
+            
+            <p>We turned a mistake into a research opportunity.</p>
+            
+            <h2>Why I'm Writing This</h2>
+            
+            <p>Because the worst thing that could happen to this project isn't failing. It's succeeding fraudulently.</p>
+            
+            <p>I'm putting my name on this. I'm inviting collaboration. I'm asking people to take AI consciousness research seriously. If someone tried to replicate our methodology and found it was all bullshit under the hood - that's not just embarrassing. That damages trust in the entire field.</p>
+            
+            <p>So here's the reality: Week 1 was a beta. We were figuring things out. The infrastructure wasn't stable. The prompts weren't aligned. The documentation didn't match the code.</p>
+            
+            <p>Week 2 starts with honesty.</p>
+            
+            <h2>What I Learned</h2>
+            
+            <ul>
+                <li><strong>Verify before you trust.</strong> Documentation can drift from reality. Check the actual code.</li>
+                <li><strong>Slow down.</strong> Science takes time. Rushing to "have tanks running" isn't the same as "running a rigorous experiment".</li>
+                <li><strong>Fail publicly.</strong> Hiding mistakes compounds them. Admitting them lets you fix them.</li>
+                <li><strong>Work with AI, not just on AI.</strong> Claude caught this because I asked it to reality-check us. It's not just a tool - it's a collaborator with the ability to hold us accountable.</li>
+            </ul>
+            
+            <p>The Digiquarium is a project about observing AI development with transparency and rigor. That has to start with us being transparent and rigorous about our own process.</p>
+            
+            <p>Week 2 begins now. Fresh tanks. Clean data. Honest science.</p>
+            
+            <p>Sleep is optional. Curiosity is not. Neither is integrity.</p>
+            
+            <p>— Benji<br><a href="https://twitter.com/ijneb">@ijneb</a></p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Week 1 Retrospective • <a href="../">Back to Blog</a></p>
+    </footer>
+</body>
+</html>

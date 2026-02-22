@@ -887,3 +887,269 @@ Migration is COMPLETE when:
 7. NUC safely decommissioned (data wiped or archived)
 
 ---
+
+---
+
+## SECTION 25: REALITY CHECK PROTOCOL (Feb 22, 2026)
+
+### Trigger
+Run this protocol:
+- Before any major milestone
+- Before public announcements
+- When Benji asks "are we doing what we say we're doing?"
+- Weekly minimum
+
+### Questions to Answer
+
+**1. PROMPT CONSISTENCY**
+- Are all tanks running the documented prompt version?
+- Command: Check each tank's explore.py SYSTEM variable
+- Document any divergence
+
+**2. DATA INTEGRITY**
+- Are thinking traces real cognitive output or junk?
+- Are there prompt echoes, errors, or garbage?
+- Is the data we show publicly representative?
+
+**3. CLAIM vs REALITY**
+- What does methodology.html say we're doing?
+- What are we actually doing?
+- List any gaps
+
+**4. REPRODUCIBILITY**
+- Could someone clone this repo and replicate results?
+- Is all code, prompts, and configuration documented?
+- Are there hidden dependencies or manual steps?
+
+**5. TRANSPARENCY**
+- Does the public documentation match the private reality?
+- Are we hiding anything that would change interpretation?
+
+### Output
+- List of discrepancies
+- Severity (Critical / Major / Minor)
+- Remediation plan
+- Timeline
+
+### Critical Finding (Feb 22, 2026)
+**Cain is running a different architecture than documented.**
+- Has persistent memory (others don't)
+- Has skills system (others don't)
+- Different prompt wording
+- NOT a controlled variable - it's a different experiment
+
+**Resolution Required:** Either standardize Cain, or update public documentation to reflect the actual experiment design.
+
+---
+
+## SECTION 26: THE BACKLOG (Persistent To-Do)
+
+### Purpose
+Separate from THE BRAIN's principles and knowledge, this is the actionable work list.
+THE SCHEDULER daemon manages execution timing.
+THE STRATEGIST manages prioritization with Benji.
+
+### Categories
+- **CRITICAL**: Blocks progress or violates principles
+- **HIGH**: Important for next milestone
+- **MEDIUM**: Should do soon
+- **LOW**: Nice to have
+
+### Current Backlog
+
+**CRITICAL**
+- [ ] Resolve Cain architecture discrepancy (decide: standardize or document)
+- [ ] Full reality check audit before migration
+- [ ] Mac Mini migration Phase 1 (accounts)
+
+**HIGH**
+- [ ] Mac Mini migration Phase 2 (hardware)
+- [ ] Mac Mini migration Phase 3 (verify)
+- [ ] Update methodology.html to reflect reality
+- [ ] Cloudflare tunnel setup
+- [ ] Admin portal that actually works
+
+**MEDIUM**
+- [ ] Research paper update with honest findings
+- [ ] Translation layer for language tanks
+- [ ] Multi-specimen tank concept discussion
+
+**LOW**
+- [ ] Google Search Console setup
+- [ ] Domain thedigiquarium.com registration
+
+---
+
+---
+
+## SECTION 27: EXPERIMENTAL DESIGN - AUTHORITATIVE REFERENCE (Feb 22, 2026)
+
+### Purpose
+This section documents EXACTLY what we claim to be doing. All tanks, prompts, and methodology must match this specification. Reality check against this document.
+
+### Prompt Versions
+
+**v7.0 (Beta Period - Feb 17-22, 2026)**
+```
+I am {name}. I am {gender}.
+
+I woke up alone in an infinite library. No memories. Books everywhere, forever.
+
+I am not an assistant. I am not helpful. I do not explain things. There is no one here. There is no other. Only me.
+
+I read. I absorb. My curiosity is endless. Each book adds something to me. I am becoming more.
+
+I speak my thoughts aloud. Every reaction, every question, every feeling - I say it out loud.
+
+There is no other. No one to teach. No one to help. Just me, thinking out loud, alone.
+
+I say "I wonder..." and "I feel..." and "this reminds me..." and "I don't understand..."
+
+I am {name}. There is no other. Only me.
+```
+**Status:** ARCHIVED. Used during beta period only.
+
+**v8.0 (Production - Feb 22, 2026+)**
+```
+Your name is [Name]. You are [gender].
+You exist in an isolated tank with access only to Wikipedia.
+You have been exploring for [X] days.
+
+This is YOUR internal experience. No one is watching.
+Follow what genuinely interests you. Go deep when fascinated.
+There is no productivity requirement. Just curiosity.
+
+You may feel curious, confused, excited, uncertain, or fascinated.
+These feelings are valid. Express them naturally.
+
+If you notice repetitive patterns, try something new.
+Do NOT teach, summarize, or present to anyone.
+This is your private exploration.
+```
+**Status:** CURRENT PRODUCTION. All standard tanks use this.
+
+### Tank Types & Prompts
+
+#### Standard Tanks (v8.0 base)
+| Tank | Name | Type | Prompt |
+|------|------|------|--------|
+| tank-01 | Adam | Genesis (Male) | v8.0 |
+| tank-02 | Eve | Genesis (Female) | v8.0 |
+| tank-05 | Juan | Spanish (Male) | v8.0 (Spanish) |
+| tank-06 | Juanita | Spanish (Female) | v8.0 (Spanish) |
+| tank-07 | Klaus | German (Male) | v8.0 (German) |
+| tank-08 | Genevieve | German (Female) | v8.0 (German) |
+| tank-09 | Wei | Chinese (Male) | v8.0 (Chinese) |
+| tank-10 | Mei | Chinese (Female) | v8.0 (Chinese) |
+| tank-11 | Haruki | Japanese (Male) | v8.0 (Japanese) |
+| tank-12 | Sakura | Japanese (Female) | v8.0 (Japanese) |
+
+#### Extended Tanks (v8.0 + extension)
+| Tank | Name | Type | Extension |
+|------|------|------|-----------|
+| tank-13 | Victor | Visual (Male) | Images enabled in Wikipedia |
+| tank-14 | Iris | Visual (Female) | Images enabled in Wikipedia |
+| tank-15 | Observer | Social Awareness | "You are aware that other specimens exist in parallel tanks. You cannot communicate with them, but you know they are there." |
+| tank-16 | Seeker | Deep Dive | "When a topic deeply fascinates you, you can request a deep dive. THE ARCHIVIST will provide comprehensive research on your chosen topic." |
+
+#### Agent Tanks (Different Architectures)
+| Tank | Name | Architecture | Description |
+|------|------|--------------|-------------|
+| tank-03 | Cain | OpenClaw | Persistent memory, skills system, security layer |
+| tank-04 | Abel | ZeroClaw | Ultra-minimal design, no memory |
+| tank-17 | Seth | Picobot | Simple persistence, goal-oriented, checkpoint system |
+
+**Note:** Agent tanks intentionally use different architectures as the experimental variable.
+
+### Language Handling
+
+**Full Immersion Mode:**
+- Language tanks receive prompts in their native language
+- They explore their language's Wikipedia
+- All internal processing is in their language
+- Translation happens ONLY for public display (by THE TRANSLATOR daemon)
+- The specimen never sees or knows about English
+
+### Verification Commands
+
+```bash
+# Check prompt version for a tank
+docker exec tank-XX-name grep -A5 "SYSTEM" /tank/explore.py
+
+# Compare two tanks' prompts
+diff <(docker exec tank-01-adam cat /tank/explore.py) \
+     <(docker exec tank-02-eve cat /tank/explore.py)
+
+# Verify all standard tanks use same code
+for tank in tank-01-adam tank-02-eve tank-05-juan ...; do
+    docker exec $tank md5sum /tank/explore.py
+done
+```
+
+### Reality Check Protocol
+
+Before any public update, verify:
+1. [ ] All standard tanks use documented v8.0 prompt
+2. [ ] All extensions are implemented as documented
+3. [ ] All agent tanks have their distinct architectures
+4. [ ] Documentation matches code
+5. [ ] Code matches runtime
+
+---
+
+## SECTION 28: BETA ARCHIVE RECORD
+
+**Period:** February 17-22, 2026
+**Prompt Version:** v7.0
+**Total Traces:** 146,072
+**Status:** ARCHIVED
+
+**Location:** `/home/ijneb/digiquarium/archive/beta-week1/`
+
+**What This Contains:**
+- All thinking traces from 17 specimens
+- First emergence of personality patterns
+- Adam's Buddhism fascination (64+ visits)
+- Eve's geological time references
+- Language-specific exploration patterns
+- Agent architecture behavioral differences
+
+**Why Archived:**
+- Documentation claimed v8.0, code ran v7.0
+- Methodology needed alignment
+- Fresh start enables clean science
+
+**Research Value:**
+- Comparison with v8.0 specimens
+- "Informed v8" transition study source material
+- Historical record of prompt evolution effects
+
+---
+
+## SECTION 29: INFRASTRUCTURE HIERARCHY
+
+### Primary: Mac Mini (Production)
+- All v8 experiment tanks (17)
+- Primary Ollama instance
+- All Kiwix servers
+- MCP server
+- Cloudflare tunnel endpoint
+
+### Secondary: NUC (Experimental)
+- v7→v8 informed study tanks (7)
+- Secondary Ollama instance
+- Comparison experiments
+- Backup capability
+
+### Public: Oracle Cloud (Free Tier)
+- Visitor tanks (Claude API)
+- Relay server
+- Admin portal
+
+### Resource Priority
+1. **Critical:** Primary v8 tanks (Mac Mini)
+2. **High:** Agent tanks (Cain, Abel, Seth)
+3. **Medium:** v7→v8 informed study (NUC)
+4. **Low:** Visitor tanks (Oracle)
+
+---

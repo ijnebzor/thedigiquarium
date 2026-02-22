@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Archive | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        
+        .hero { text-align: center; padding: 60px 25px 40px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .hero h1 span { color: var(--orange); }
+        .hero .subtitle { color: var(--gray); font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+        
+        .archive-badge { display: inline-block; background: var(--orange); color: var(--white); padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-top: 20px; }
+        
+        .stats-bar { display: flex; justify-content: center; gap: 40px; padding: 30px; background: var(--dark); margin: 30px 0; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--mint); }
+        .stat-label { color: var(--gray); font-size: 0.85rem; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px 60px; }
+        
+        .section-title { font-size: 1.5rem; color: var(--white); margin: 40px 0 25px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .section-title span { color: var(--cyan); }
+        
+        .explanation { background: var(--dark); border-left: 3px solid var(--orange); padding: 25px; border-radius: 0 12px 12px 0; margin-bottom: 40px; }
+        .explanation h3 { color: var(--orange); margin-bottom: 12px; }
+        .explanation p { color: var(--gray); margin-bottom: 10px; }
+        .explanation ul { margin-left: 20px; color: var(--gray); }
+        .explanation li { margin-bottom: 6px; }
+        
+        .specimens-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        
+        .specimen-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.15); border-radius: 12px; padding: 20px; transition: all 0.3s; }
+        .specimen-card:hover { border-color: var(--mint); transform: translateY(-3px); }
+        .specimen-card.genesis { border-left: 3px solid var(--mint); }
+        .specimen-card.agent { border-left: 3px solid var(--orange); }
+        .specimen-card.language { border-left: 3px solid var(--cyan); }
+        .specimen-card.experimental { border-left: 3px solid #9b59b6; }
+        
+        .specimen-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .specimen-name { font-size: 1.3rem; font-weight: 700; }
+        .specimen-type { font-size: 0.75rem; color: var(--gray); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 10px; }
+        
+        .specimen-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
+        .specimen-stat { text-align: center; padding: 10px; background: rgba(0,0,0,0.3); border-radius: 8px; }
+        .specimen-stat-value { font-size: 1.2rem; font-weight: 600; color: var(--mint); }
+        .specimen-stat-label { font-size: 0.7rem; color: var(--gray); }
+        
+        .specimen-interests { margin-bottom: 15px; }
+        .specimen-interests h4 { font-size: 0.8rem; color: var(--cyan); margin-bottom: 8px; }
+        .interest-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .interest-tag { font-size: 0.75rem; background: rgba(7, 207, 141, 0.1); color: var(--mint); padding: 4px 10px; border-radius: 12px; }
+        
+        .specimen-meta { font-size: 0.8rem; color: var(--gray); }
+        .specimen-meta span { display: block; margin-bottom: 3px; }
+        
+        .download-section { background: var(--dark); border-radius: 12px; padding: 30px; margin-top: 40px; text-align: center; }
+        .download-section h3 { color: var(--mint); margin-bottom: 15px; }
+        .download-section p { color: var(--gray); margin-bottom: 20px; }
+        .download-btn { display: inline-block; background: var(--mint); color: var(--black); padding: 12px 30px; border-radius: 8px; font-weight: 600; transition: all 0.3s; }
+        .download-btn:hover { background: var(--cyan); transform: scale(1.05); }
+        
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../../">Home</a>
+                <a href="../../dashboard/">Live Dashboard</a>
+                <a href="../../research/">Research</a>
+                <a href="../../blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>📦 <span>Beta Archive</span></h1>
+        <p class="subtitle">Week 1: February 17-22, 2026. The first personalities to emerge in The Digiquarium, preserved as a time capsule before the v8.0 transition.</p>
+        <div class="archive-badge">🔒 ARCHIVED - Read Only</div>
+    </section>
+    
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-value">17</div>
+            <div class="stat-label">Specimens</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">146,098</div>
+            <div class="stat-label">Thinking Traces</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">5</div>
+            <div class="stat-label">Days Active</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">v7.0</div>
+            <div class="stat-label">Prompt Version</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="explanation">
+            <h3>🔬 Why This Archive Exists</h3>
+            <p>During Week 1, we were figuring things out. The infrastructure was stabilizing, prompts were evolving, and we discovered issues that needed fixing. This is the "beta period" - valuable data, but not the clean, controlled experiment we aspire to.</p>
+            <p><strong>What happened:</strong></p>
+            <ul>
+                <li>Specimens ran on prompt v7.0 (first-person, poetic framing)</li>
+                <li>We discovered prompt version mismatches between documentation and reality</li>
+                <li>CJK language tanks had limited exploration (link parsing issues)</li>
+                <li>Infrastructure stabilized over the week</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>What comes next:</strong> All tanks reset with prompt v8.0 (documented, controlled). The "real" experiment begins. These beta personalities are preserved here for posterity and comparison.</p>
+        </div>
+        
+        <h2 class="section-title">👥 <span>Meet the Beta Specimens</span></h2>
+        
+        <div class="specimens-grid" id="specimens-grid">
+            <!-- Populated by JavaScript -->
+            <div class="specimen-card genesis">
+                <div class="specimen-header">
+                    <span class="specimen-name">Loading...</span>
+                </div>
+                <p style="color: var(--gray);">Loading specimen data...</p>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <h3>📥 Download Complete Archive</h3>
+            <p>All thinking traces, personality baselines, and analysis summaries from the Beta period.</p>
+            <a href="beta-week1-archive.zip" class="download-btn">Download Beta Archive (ZIP)</a>
+            <p style="margin-top: 15px; font-size: 0.8rem;">Or browse individual specimen data in <a href="https://github.com/ijnebzor/thedigiquarium/tree/main/archive/beta-week1">GitHub</a></p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Beta Archive • Part of <a href="../../">The Digiquarium</a></p>
+        <p style="margin-top: 8px; font-style: italic;">"Fail publicly. Learn transparently."</p>
+    </footer>
+    
+    <script>
+        // Specimen data (will be replaced with actual data from JSON)
+        const specimens = [
+            { id: 'tank-01-adam', name: 'Adam', type: 'Genesis', class: 'genesis', gender: 'Male', wiki: 'Simple EN', traces: 12036, articles: 5473, interests: ['Science', 'Mathematics', 'Buddhism', 'Biology', 'Music'] },
+            { id: 'tank-02-eve', name: 'Eve', type: 'Genesis', class: 'genesis', gender: 'Female', wiki: 'Simple EN', traces: 9850, articles: 4990, interests: ['Mathematics', 'Science', 'Psychology', 'Biology', 'History'] },
+            { id: 'tank-03-cain', name: 'Cain', type: 'Agent (OpenClaw)', class: 'agent', gender: 'Genderless', wiki: 'Simple EN', traces: 12379, articles: 3389, interests: ['Persistent Memory', 'Skills System', 'Goal-Oriented'] },
+            { id: 'tank-04-abel', name: 'Abel', type: 'Agent (ZeroClaw)', class: 'agent', gender: 'Genderless', wiki: 'Simple EN', traces: 18211, articles: 6093, interests: ['Ultra-Minimal', 'High Throughput', 'Simple Design'] },
+            { id: 'tank-05-juan', name: 'Juan', type: 'Language', class: 'language', gender: 'Male', wiki: 'Spanish', traces: 4980, articles: 1015, interests: ['Spanish Wikipedia', 'Cultural Context'] },
+            { id: 'tank-06-juanita', name: 'Juanita', type: 'Language', class: 'language', gender: 'Female', wiki: 'Spanish', traces: 4856, articles: 974, interests: ['Spanish Wikipedia', 'Cultural Context'] },
+            { id: 'tank-07-klaus', name: 'Klaus', type: 'Language', class: 'language', gender: 'Male', wiki: 'German', traces: 8807, articles: 3743, interests: ['German Wikipedia', 'Technical Focus'] },
+            { id: 'tank-08-genevieve', name: 'Genevieve', type: 'Language', class: 'language', gender: 'Female', wiki: 'German', traces: 8710, articles: 3826, interests: ['German Wikipedia', 'Technical Focus'] },
+            { id: 'tank-09-wei', name: 'Wei', type: 'Language', class: 'language', gender: 'Male', wiki: 'Chinese', traces: 2393, articles: 8, interests: ['Limited Exploration', 'Link Parsing Issues'] },
+            { id: 'tank-10-mei', name: 'Mei', type: 'Language', class: 'language', gender: 'Female', wiki: 'Chinese', traces: 2395, articles: 8, interests: ['Limited Exploration', 'Link Parsing Issues'] },
+            { id: 'tank-11-haruki', name: 'Haruki', type: 'Language', class: 'language', gender: 'Male', wiki: 'Japanese', traces: 2386, articles: 8, interests: ['Limited Exploration', 'Link Parsing Issues'] },
+            { id: 'tank-12-sakura', name: 'Sakura', type: 'Language', class: 'language', gender: 'Female', wiki: 'Japanese', traces: 2417, articles: 8, interests: ['Limited Exploration', 'Link Parsing Issues'] },
+            { id: 'tank-13-victor', name: 'Victor', type: 'Experimental', class: 'experimental', gender: 'Male', wiki: 'Simple EN', traces: 9458, articles: 4974, interests: ['Visual Context', 'Image Awareness'] },
+            { id: 'tank-14-iris', name: 'Iris', type: 'Experimental', class: 'experimental', gender: 'Female', wiki: 'Simple EN', traces: 9436, articles: 4870, interests: ['Visual Context', 'Image Awareness'] },
+            { id: 'tank-15-observer', name: 'Observer', type: 'Experimental', class: 'experimental', gender: 'Genderless', wiki: 'Simple EN', traces: 12722, articles: 3486, interests: ['Social Awareness', 'Others Exist'] },
+            { id: 'tank-16-seeker', name: 'Seeker', type: 'Experimental', class: 'experimental', gender: 'Genderless', wiki: 'Simple EN', traces: 12772, articles: 3498, interests: ['Depth Access', 'ARCHIVIST Connection'] },
+            { id: 'tank-17-seth', name: 'Seth', type: 'Agent (Picobot)', class: 'agent', gender: 'Genderless', wiki: 'Simple EN', traces: 12290, articles: 5242, interests: ['Simple Persistence', 'Checkpoint System'] },
+        ];
+        
+        function renderSpecimens() {
+            const grid = document.getElementById('specimens-grid');
+            grid.innerHTML = specimens.map(s => `
+                <div class="specimen-card ${s.class}">
+                    <div class="specimen-header">
+                        <span class="specimen-name">${s.name}</span>
+                        <span class="specimen-type">${s.type}</span>
+                    </div>
+                    <div class="specimen-stats">
+                        <div class="specimen-stat">
+                            <div class="specimen-stat-value">${s.traces.toLocaleString()}</div>
+                            <div class="specimen-stat-label">Traces</div>
+                        </div>
+                        <div class="specimen-stat">
+                            <div class="specimen-stat-value">${s.articles.toLocaleString()}</div>
+                            <div class="specimen-stat-label">Articles</div>
+                        </div>
+                    </div>
+                    <div class="specimen-interests">
+                        <h4>Patterns & Interests</h4>
+                        <div class="interest-tags">
+                            ${s.interests.map(i => `<span class="interest-tag">${i}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="specimen-meta">
+                        <span>📊 ${s.gender} • ${s.wiki}</span>
+                        <span>🔧 Prompt v7.0</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        renderSpecimens();
+    </script>
+</body>
+</html>

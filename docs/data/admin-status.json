@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-22T12:48:01.692799",
+  "timestamp": "2026-02-22T14:03:01.506726",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 27
+    "total": 28
   },
   "tanks": {
-    "running": 18,
-    "traces_today": 34128,
+    "running": 20,
+    "traces_today": 34227,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "World",
-        "traces": 6043
+        "article": "Vibration",
+        "traces": 6060
       },
       {
         "name": "tank-02-eve",
-        "article": "Emotion",
-        "traces": 6034
+        "article": "Sea",
+        "traces": 6051
       },
       {
         "name": "tank-03-cain",
-        "article": "Matter",
-        "traces": 7580
+        "article": "Literature",
+        "traces": 7597
       },
       {
         "name": "tank-04-abel",
-        "article": "Nerve",
-        "traces": 11315
+        "article": "Photographer",
+        "traces": 11352
       },
       {
         "name": "tank-05-juan",
-        "article": "Idioma griego",
-        "traces": 3156
+        "article": "Arte",
+        "traces": 3167
       }
     ]
   },
@@ -93,26 +93,26 @@
     "auto_remediations": 4
   },
   "logs": [
-    "2026-02-22 12:11:12 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 12:16:14 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 12:16:17 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 12:21:19 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 12:21:20 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 12:21:20 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 49 seconds ago']",
-    "2026-02-22 12:26:24 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 12:26:26 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 12:26:26 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 47 seconds ago']",
-    "2026-02-22 12:31:30 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 12:31:31 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 12:31:31 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 44 seconds ago']",
-    "2026-02-22 12:36:36 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 12:36:37 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-22 12:41:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 12:41:45 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 12:41:45 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 44 seconds ago']",
-    "2026-02-22 12:46:48 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-22 12:46:50 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-22 12:46:50 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 42 seconds ago']"
+    "2026-02-22 13:27:33 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 26 seconds ago']",
+    "2026-02-22 13:32:36 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 13:32:37 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 13:32:37 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 21 seconds ago', 'tank-03-cain is Exited (137) 27 seconds ago']",
+    "2026-02-22 13:37:39 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "1 issues",
+    "2026-02-22 13:37:40 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 17 seconds ago', 'tank-03-cain is Exited (137) 22 seconds ago']",
+    "2026-02-22 13:42:44 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 13:42:45 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 13:42:45 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 12 seconds ago', 'tank-03-cain is Exited (137) 18 seconds ago']",
+    "2026-02-22 13:47:47 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 13:47:48 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 13:47:48 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 6 seconds ago', 'tank-03-cain is Exited (137) 11 seconds ago']",
+    "2026-02-22 13:52:51 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 13:52:56 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 13:52:56 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-17-seth is Exited (137) 2 seconds ago', 'tank-03-cain is Exited (137) 10 seconds ago']",
+    "2026-02-22 13:57:58 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-22 13:57:59 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-22 13:57:59 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) 2 seconds ago']",
+    "2026-02-22 14:03:03 \ud83d\udd0d [OVERSEER] Starting full system audit"
   ],
   "issues": []
 }
