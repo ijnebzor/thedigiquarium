@@ -1,3 +1,4 @@
+# ARCHIVED - See THE_BRAIN.md for current version
 # THE BRAIN - Digiquarium Constitution & Operational Memory
 
 **Purpose:** Persistent record of directives, principles, and work between Benji and THE STRATEGIST (Claude).

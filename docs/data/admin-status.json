@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T01:27:01.556339",
+  "timestamp": "2026-02-23T02:15:01.562423",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": true,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 27
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 1175,
+    "running": 19,
+    "traces_today": 1240,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Extinct in the wild",
-        "traces": 198
+        "article": "Intelligence",
+        "traces": 205
       },
       {
         "name": "tank-02-eve",
-        "article": "U.S. state",
-        "traces": 197
+        "article": "Concept",
+        "traces": 204
       },
       {
         "name": "tank-03-cain",
-        "article": "Definition",
-        "traces": 268
+        "article": "Earth",
+        "traces": 281
       },
       {
         "name": "tank-04-abel",
-        "article": "The United States of America (disambiguation)",
-        "traces": 403
+        "article": "Heuristic",
+        "traces": 427
       },
       {
         "name": "tank-05-juan",
-        "article": "Observatorio Paranal",
-        "traces": 109
+        "article": "Matem\u00e1ticas",
+        "traces": 123
       }
     ]
   },
@@ -88,31 +88,31 @@
   },
   "overseer": {
     "running": true,
-    "last_audit_healthy": true,
+    "last_audit_healthy": false,
     "active_incidents": 656,
     "auto_remediations": 12
   },
   "logs": [
-    "2026-02-23 00:38:27 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 00:38:30 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 00:43:35 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 00:43:35 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 00:48:38 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 00:48:42 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 00:53:44 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 00:53:45 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 00:58:49 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 00:58:50 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 01:03:55 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 01:03:56 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 01:09:00 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 01:09:01 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 01:14:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 01:14:06 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 01:19:09 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 01:19:10 \u2705 [OVERSEER] Full system audit PASSED",
-    "2026-02-23 01:24:11 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-02-23 01:24:14 \u2705 [OVERSEER] Full system audit PASSED"
+    "2026-02-23 01:34:20 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 01:34:21 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 01:39:24 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 01:39:25 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 01:44:28 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 01:44:29 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 01:49:31 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 01:49:32 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 01:54:34 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 01:54:38 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 01:59:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 01:59:41 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 02:04:42 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 02:04:44 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 02:09:47 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 02:09:48 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-23 02:09:48 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) 3 minutes ago']",
+    "2026-02-23 02:14:50 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 02:14:54 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-02-23 02:14:54 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) 3 minutes ago']"
   ],
   "issues": []
 }
