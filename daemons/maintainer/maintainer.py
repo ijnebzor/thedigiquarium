@@ -41,9 +41,22 @@ CHECK_INTERVAL = 60  # 1 minute
 
 # All managed daemons
 MANAGED_DAEMONS = [
-    'guard', 'sentinel', 'scheduler', 
-    'translator', 'documentarian', 'webmaster', 
-    'ollama_watcher', 'final_auditor', 'psych'
+    # Core
+    'overseer',
+    'ollama_watcher',
+    'guard',
+    'sentinel',
+    'scheduler',
+    # Research
+    'translator',
+    'documentarian',
+    'final_auditor',
+    # Ethics
+    'psych',
+    'therapist',
+    # Infra
+    'webmaster',
+    'chaos_monkey',
 ]
 
 class Maintainer:
