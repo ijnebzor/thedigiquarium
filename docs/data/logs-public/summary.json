@@ -1,15 +1,16 @@
 {
-  "last_updated": "2026-02-23T03:17:18.256488",
+  "last_updated": "2026-02-23T04:10:24.741129",
   "tanks_processed": 17,
-  "entries_published": 5175,
-  "entries_pruned": 214122,
+  "entries_published": 5217,
+  "entries_pruned": 218699,
   "prune_criteria": [
     "null thoughts (LLM not responding)",
     "empty thoughts",
     "timeout entries",
     "error entries",
     "missing article",
-    "malformed JSON"
+    "malformed JSON",
+    "too short (<50 chars)"
   ],
   "retention": "7 days of logs"
 }
