@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:10:42.403516",
+  "timestamp": "2026-02-23T04:13:07.504529",
   "active_incidents": {
     "INC-20260222061505": {
       "id": "INC-20260222061505",
@@ -6276,15 +6276,15 @@
     }
   },
   "stats": {
-    "cycles": 1331,
-    "incidents_detected": 697,
+    "cycles": 2,
+    "incidents_detected": 0,
     "incidents_resolved": 0,
     "escalations_sent": 0,
-    "auto_remediations": 12,
-    "start_time": "2026-02-22T02:06:14.149535"
+    "auto_remediations": 0,
+    "start_time": "2026-02-23T04:12:01.356737"
   },
   "last_full_audit": {
-    "timestamp": "2026-02-23T04:10:40.873013",
+    "timestamp": "2026-02-23T04:12:04.800482",
     "ollama": {
       "healthy": true,
       "issues": []
@@ -6292,19 +6292,19 @@
     "containers": {
       "healthy": false,
       "issues": [
-        "tank-03-cain is Exited (137) About a minute ago"
+        "tank-03-cain is Exited (137) 2 minutes ago"
       ],
       "containers": {
         "digiquarium-ollama": {
-          "status": "Up 28 minutes",
+          "status": "Up 29 minutes",
           "healthy": true
         },
         "tank-01-adam": {
-          "status": "Up 3 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-02-eve": {
-          "status": "Up 3 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-simple": {
@@ -6332,7 +6332,7 @@
           "healthy": true
         },
         "tank-03-cain": {
-          "status": "Exited (137) About a minute ago",
+          "status": "Exited (137) 2 minutes ago",
           "healthy": false
         },
         "tank-04-abel": {
@@ -6348,43 +6348,43 @@
           "healthy": true
         },
         "tank-14-iris": {
-          "status": "Up About a minute",
-          "healthy": true
-        },
-        "tank-13-victor": {
-          "status": "Up 2 minutes",
-          "healthy": true
-        },
-        "tank-12-sakura": {
-          "status": "Up 2 minutes",
-          "healthy": true
-        },
-        "tank-10-mei": {
-          "status": "Up 2 minutes",
-          "healthy": true
-        },
-        "tank-09-wei": {
-          "status": "Up 2 minutes",
-          "healthy": true
-        },
-        "tank-11-haruki": {
-          "status": "Up 2 minutes",
-          "healthy": true
-        },
-        "tank-08-genevieve": {
-          "status": "Up 2 minutes",
-          "healthy": true
-        },
-        "tank-05-juan": {
           "status": "Up 3 minutes",
           "healthy": true
         },
+        "tank-13-victor": {
+          "status": "Up 3 minutes",
+          "healthy": true
+        },
+        "tank-12-sakura": {
+          "status": "Up 3 minutes",
+          "healthy": true
+        },
+        "tank-10-mei": {
+          "status": "Up 3 minutes",
+          "healthy": true
+        },
+        "tank-09-wei": {
+          "status": "Up 4 minutes",
+          "healthy": true
+        },
+        "tank-11-haruki": {
+          "status": "Up 3 minutes",
+          "healthy": true
+        },
+        "tank-08-genevieve": {
+          "status": "Up 4 minutes",
+          "healthy": true
+        },
+        "tank-05-juan": {
+          "status": "Up 4 minutes",
+          "healthy": true
+        },
         "tank-07-klaus": {
-          "status": "Up 2 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "tank-06-juanita": {
-          "status": "Up 2 minutes",
+          "status": "Up 4 minutes",
           "healthy": true
         },
         "digiquarium-kiwix-japanese": {
@@ -6412,6 +6412,7 @@
     "daemons": {
       "healthy": false,
       "issues": [
+        "maintainer not running",
         "scheduler not running"
       ],
       "daemons": {
@@ -6420,8 +6421,8 @@
           "count": 1
         },
         "maintainer": {
-          "running": true,
-          "count": 1
+          "running": false,
+          "count": 0
         },
         "guard": {
           "running": true,
@@ -6527,12 +6528,13 @@
       {
         "component": "containers",
         "details": [
-          "tank-03-cain is Exited (137) About a minute ago"
+          "tank-03-cain is Exited (137) 2 minutes ago"
         ]
       },
       {
         "component": "daemons",
         "details": [
+          "maintainer not running",
           "scheduler not running"
         ]
       }

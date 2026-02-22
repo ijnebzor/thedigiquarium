@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:13:01.191102",
+  "timestamp": "2026-02-23T04:13:17.979959",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": true,
@@ -45,8 +45,8 @@
     },
     "psych": {
       "running": true,
-      "count": 1,
-      "healthy": true
+      "count": 2,
+      "healthy": false
     }
   },
   "containers": {
@@ -116,6 +116,7 @@
   ],
   "issues": [
     "scheduler unhealthy",
-    "sentinel unhealthy"
+    "sentinel unhealthy",
+    "psych unhealthy"
   ]
 }
