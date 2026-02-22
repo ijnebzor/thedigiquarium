@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-02-23T04:30:43.605133",
-  "overall_healthy": true,
+  "timestamp": "2026-02-23T04:40:02.055076",
+  "overall_healthy": false,
   "ollama": {
     "windows_healthy": true,
-    "proxy_healthy": true,
-    "e2e_healthy": true,
+    "proxy_healthy": false,
+    "e2e_healthy": false,
     "models": 12
   },
   "daemons": {
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 27
+    "total": 26
   },
   "tanks": {
-    "running": 19,
-    "traces_today": 4327,
+    "running": 20,
+    "traces_today": 4445,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Science",
-        "traces": 769
+        "article": "Writing system",
+        "traces": 782
       },
       {
         "name": "tank-02-eve",
-        "article": "Number",
-        "traces": 768
+        "article": "Process",
+        "traces": 782
       },
       {
         "name": "tank-03-cain",
-        "article": "Psychology",
-        "traces": 799
+        "article": "2002",
+        "traces": 814
       },
       {
         "name": "tank-04-abel",
-        "article": "Austria-Hungary",
-        "traces": 1552
+        "article": "Human",
+        "traces": 1616
       },
       {
         "name": "tank-05-juan",
-        "article": "Ciencia",
-        "traces": 439
+        "article": "Fungi",
+        "traces": 451
       }
     ]
   },
@@ -88,15 +88,11 @@
   },
   "overseer": {
     "running": true,
-    "last_audit_healthy": false,
+    "last_audit_healthy": true,
     "active_incidents": 697,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-02-23 04:17:16 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
-    "2026-02-23 04:17:16 \u26a0\ufe0f [OVERSEER]   - daemons: ['sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 2 instances (zombie leak)']",
-    "2026-02-23 04:20:19 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['End-to-end connectivity failed']",
-    "2026-02-23 04:22:20 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-23 04:22:21 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
     "2026-02-23 04:22:21 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Exited (137) About a minute ago']",
     "2026-02-23 04:22:21 \u26a0\ufe0f [OVERSEER]   - daemons: ['sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 2 instances (zombie leak)']",
@@ -112,7 +108,13 @@
     "2026-02-23 04:30:14 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer has 2 instances (zombie leak)', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher not running']",
     "2026-02-23 04:30:14 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-02-23 04:30:15 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-02-23 04:30:15 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer has 2 instances (zombie leak)', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher not running']"
+    "2026-02-23 04:30:15 \u26a0\ufe0f [OVERSEER]   - daemons: ['maintainer has 2 instances (zombie leak)', 'guard not running', 'sentinel not running', 'scheduler not running', 'ollama_watcher not running']",
+    "2026-02-23 04:35:19 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-02-23 04:35:20 \u2705 [OVERSEER] Full system audit PASSED",
+    "2026-02-23 04:38:22 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-02-23 04:39:23 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Proxy container not running', 'End-to-end connectivity failed']"
   ],
-  "issues": []
+  "issues": [
+    "Ollama E2E failed"
+  ]
 }

@@ -301,7 +301,8 @@ class Webmaster:
                 self.prune_and_publish_logs()
                 
                 # 2. Run broadcaster for live feed
-                self.run_broadcaster()
+                # NOTE: Disabled - broadcaster_continuous.py handles this now
+                # self.run_broadcaster()
                 
                 # 3. Update admin status
                 self.update_admin_status()

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-23T04:30:31.856759",
+  "timestamp": "2026-02-23T04:39:49.923009",
   "maintainer": "running",
   "daemons": {
     "overseer": "running",
@@ -16,10 +16,10 @@
     "chaos_monkey": "running"
   },
   "stats": {
-    "cycles": 1,
+    "cycles": 10,
     "restarts": 8,
-    "escalations": 1,
+    "escalations": 10,
     "start_time": "2026-02-23T04:30:13.785029"
   },
-  "uptime_seconds": 18.071739
+  "uptime_seconds": 576.137984
 }
