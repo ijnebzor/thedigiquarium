@@ -570,9 +570,9 @@ def get_file_hash(filepath: Path) -> str:
 
 CRITICAL_FILES = [
     'docker-compose.yml',
-    'tanks/adam/explore.py',
-    'tanks/language/explore.py',
-    'caretaker/caretaker.py',
+    'src/explorer/baseline.py',
+    'src/explorer/explorer.py',
+    'src/daemons/core/caretaker.py',
 ]
 
 def check_file_integrity() -> List[dict]:

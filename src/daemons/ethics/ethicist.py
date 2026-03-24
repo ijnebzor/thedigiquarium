@@ -24,7 +24,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-ETHICIST_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "daemons/ethicist"
+ETHICIST_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "src/daemons/ethics"
 
 
 # Core ethical principles for The Digiquarium

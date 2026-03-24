@@ -7,7 +7,7 @@ services:
     image: python:3.11-slim
     container_name: tank-visitor-01-aria
     volumes:
-      - ./tanks/visitor:/app
+      - ./src/explorer:/app
       - ./logs/tank-visitor-01-aria:/logs
     environment:
       - SPECIMEN_NAME=Aria
@@ -25,7 +25,7 @@ services:
     image: python:3.11-slim
     container_name: tank-visitor-02-felix
     volumes:
-      - ./tanks/visitor:/app
+      - ./src/explorer:/app
       - ./logs/tank-visitor-02-felix:/logs
     environment:
       - SPECIMEN_NAME=Felix
@@ -43,7 +43,7 @@ services:
     image: python:3.11-slim
     container_name: tank-visitor-03-luna
     volumes:
-      - ./tanks/visitor:/app
+      - ./src/explorer:/app
       - ./logs/tank-visitor-03-luna:/logs
     environment:
       - SPECIMEN_NAME=Luna

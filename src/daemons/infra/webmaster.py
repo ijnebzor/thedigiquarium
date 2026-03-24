@@ -25,7 +25,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # Single-instance lock
-DAEMON_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons/webmaster'))
+DAEMON_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'src/daemons/infra'))
 LOCK_FILE = DAEMON_DIR / 'webmaster.lock'
 
 def acquire_lock():

@@ -35,7 +35,7 @@ from enum import Enum
 import secrets
 
 # Configuration
-BOUNCER_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "daemons/bouncer"
+BOUNCER_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "src/daemons/security"
 LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs"
 VISITOR_LOGS_DIR = LOGS_DIR / "visitor_sessions"
 

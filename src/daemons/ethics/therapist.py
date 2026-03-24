@@ -28,7 +28,7 @@ import time
 
 # Configuration
 LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs"
-THERAPIST_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "daemons/therapist"
+THERAPIST_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "src/daemons/ethics"
 CHECK_INTERVAL = 300  # 5 minutes
 
 # Distress indicators (weighted)
