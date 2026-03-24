@@ -3,7 +3,7 @@
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PID_FILE="$SCRIPT_DIR/broadcaster.pid"
-LOG_FILE="/home/ijneb/digiquarium/logs/broadcaster.log"
+LOG_FILE="${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/logs/broadcaster.log"
 
 # Check if already running
 if [ -f "$PID_FILE" ]; then

@@ -1,3 +1,4 @@
+import os
 """SecureClaw Security Module for Digiquarium Agent Tanks"""
 
 from pathlib import Path

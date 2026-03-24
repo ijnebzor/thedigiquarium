@@ -1105,7 +1105,7 @@ Before any public update, verify:
 **Total Traces:** 146,072
 **Status:** ARCHIVED
 
-**Location:** `/home/ijneb/digiquarium/archive/beta-week1/`
+**Location:** `$DIGIQUARIUM_HOME/archive/beta-week1/`
 
 **What This Contains:**
 - All thinking traces from 17 specimens

@@ -35,22 +35,22 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sdf       1007G   61G  896G   7% /
 
 Digiquarium directory:
-58G	/home/ijneb/digiquarium
-912K	/home/ijneb/digiquarium/archives/
-12K	/home/ijneb/digiquarium/audits/
-60K	/home/ijneb/digiquarium/caretaker/
-12K	/home/ijneb/digiquarium/configs/
-32K	/home/ijneb/digiquarium/congregations/
-1.3M	/home/ijneb/digiquarium/docs/
-80K	/home/ijneb/digiquarium/guard/
-51G	/home/ijneb/digiquarium/kiwix-data/
-95M	/home/ijneb/digiquarium/logs/
-52M	/home/ijneb/digiquarium/mcp-server/
-8.0K	/home/ijneb/digiquarium/memory_banks/
-6.9G	/home/ijneb/digiquarium/ollama-data/
-11M	/home/ijneb/digiquarium/operations/
-4.0K	/home/ijneb/digiquarium/relay/
-4.0K	/home/ijneb/digiquarium/screenshots/
+58G	$DIGIQUARIUM_HOME
+912K	$DIGIQUARIUM_HOME/archives/
+12K	$DIGIQUARIUM_HOME/audits/
+60K	$DIGIQUARIUM_HOME/caretaker/
+12K	$DIGIQUARIUM_HOME/configs/
+32K	$DIGIQUARIUM_HOME/congregations/
+1.3M	$DIGIQUARIUM_HOME/docs/
+80K	$DIGIQUARIUM_HOME/guard/
+51G	$DIGIQUARIUM_HOME/kiwix-data/
+95M	$DIGIQUARIUM_HOME/logs/
+52M	$DIGIQUARIUM_HOME/mcp-server/
+8.0K	$DIGIQUARIUM_HOME/memory_banks/
+6.9G	$DIGIQUARIUM_HOME/ollama-data/
+11M	$DIGIQUARIUM_HOME/operations/
+4.0K	$DIGIQUARIUM_HOME/relay/
+4.0K	$DIGIQUARIUM_HOME/screenshots/
 ```
 ## Current Daemons
 ```

@@ -90,17 +90,17 @@ if ! ssh -o ConnectTimeout=5 "$NUC_USER@$NUC_IP" "echo 'SSH OK'" &> /dev/null; t
 fi
 
 echo "Transferring Wikipedia ZIM files (this may take a while)..."
-rsync -avz --progress "$NUC_USER@$NUC_IP:/home/ijneb/digiquarium/kiwix-data/*.zim" "$INSTALL_DIR/kiwix-data/"
+rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/kiwix-data/*.zim" "$INSTALL_DIR/kiwix-data/"
 
 echo "Transferring tank logs and baselines..."
-rsync -avz --progress "$NUC_USER@$NUC_IP:/home/ijneb/digiquarium/logs/" "$INSTALL_DIR/logs/"
+rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/logs/" "$INSTALL_DIR/logs/"
 
 echo "Transferring tank code..."
-rsync -avz --progress "$NUC_USER@$NUC_IP:/home/ijneb/digiquarium/tanks/" "$INSTALL_DIR/tanks/"
+rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/tanks/" "$INSTALL_DIR/tanks/"
 
 echo "Transferring docker-compose and configs..."
-rsync -avz --progress "$NUC_USER@$NUC_IP:/home/ijneb/digiquarium/docker-compose.yml" "$INSTALL_DIR/"
-rsync -avz --progress "$NUC_USER@$NUC_IP:/home/ijneb/digiquarium/docs/" "$INSTALL_DIR/docs/"
+rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/docker-compose.yml" "$INSTALL_DIR/"
+rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/docs/" "$INSTALL_DIR/docs/"
 
 echo "✅ Data transfer complete"
 

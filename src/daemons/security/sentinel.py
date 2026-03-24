@@ -32,7 +32,7 @@ _lock_fd = _acquire_lock()
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from shared.utils import DaemonLogger, run_command, write_pid_file, send_email_alert
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 CHECK_INTERVAL = 300  # 5 minutes
 
 # Agent tanks - higher risk, tighter monitoring

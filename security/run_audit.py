@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """Run SecureClaw security audit on agent tanks"""
 
 import sys
@@ -12,18 +13,18 @@ from secureclaw.plugin import SecureClawAudit
 
 TANKS = {
     'cain': {
-        'code': Path('/home/ijneb/digiquarium/tanks/cain/explore.py'),
-        'logs': Path('/home/ijneb/digiquarium/logs/tank-03-cain'),
+        'code': Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'tanks/cain/explore.py')),
+        'logs': Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/tank-03-cain')),
         'type': 'openclaw'
     },
     'abel': {
-        'code': Path('/home/ijneb/digiquarium/tanks/abel/explore.py'),
-        'logs': Path('/home/ijneb/digiquarium/logs/tank-04-abel'),
+        'code': Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'tanks/abel/explore.py')),
+        'logs': Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/tank-04-abel')),
         'type': 'zeroclaw'
     },
     'seth': {
-        'code': Path('/home/ijneb/digiquarium/tanks/seth/explore.py'),
-        'logs': Path('/home/ijneb/digiquarium/logs/tank-17-seth'),
+        'code': Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'tanks/seth/explore.py')),
+        'logs': Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/tank-17-seth')),
         'type': 'picobot'
     }
 }
@@ -126,7 +127,7 @@ def run_all_audits():
             print(f"  {tank_name}: ❌ TOO MANY ISSUES ({results['failed']}) - FIX FIRST")
     
     # Save combined report
-    combined_path = Path('/home/ijneb/digiquarium/security/audit_results.json')
+    combined_path = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'security/audit_results.json'))
     with open(combined_path, 'w') as f:
         json.dump({
             'timestamp': datetime.now().isoformat(),

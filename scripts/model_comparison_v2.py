@@ -15,7 +15,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
 OLLAMA_URL = os.getenv('OLLAMA_URL', 'http://192.168.50.94:11434')
-OUTPUT_DIR = Path('/home/ijneb/digiquarium/logs/model_comparison')
+OUTPUT_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/model_comparison'))
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Models to test

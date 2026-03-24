@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Digiquarium Model Comparison v4.0 - FULL RERUN
 The Archivist Baseline v8 (with introspection markers)
@@ -10,8 +11,8 @@ import urllib.request
 from datetime import datetime
 from pathlib import Path
 
-OLLAMA_URL = 'http://192.168.50.94:11434'
-OUTPUT_DIR = Path('/home/ijneb/digiquarium/logs/model_comparison')
+OLLAMA_URL = f'http://{os.environ.get("OLLAMA_HOST", "192.168.50.94")}:{os.environ.get("OLLAMA_PORT", "11434")}'
+OUTPUT_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/model_comparison'))
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # All models - skip the massive ones that timeout

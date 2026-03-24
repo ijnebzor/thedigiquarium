@@ -13,7 +13,7 @@ import time
 from pathlib import Path
 from datetime import datetime
 
-DAEMONS_DIR = Path('/home/ijneb/digiquarium/daemons')
+DAEMONS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 LOG_FILE = DAEMONS_DIR / 'supervisor.log'
 
 # Continuous daemons that MUST be running
@@ -34,9 +34,10 @@ CONTINUOUS_DAEMONS = [
 ]
 
 # Special cases
+home = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
 SPECIAL_DAEMONS = {
-    'caretaker': '/home/ijneb/digiquarium/caretaker/caretaker.py',
-    'broadcaster': '/home/ijneb/digiquarium/daemons/webmaster/broadcaster_continuous.py',
+    'caretaker': os.path.join(home, 'caretaker/caretaker.py'),
+    'broadcaster': os.path.join(home, 'daemons', 'webmaster/broadcaster_continuous.py'),
 }
 
 def log(msg):

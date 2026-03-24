@@ -21,7 +21,7 @@ Collaborates with: THE MODERATOR (congregation clearance)
 
 import json
 import sys
-sys.path.insert(0, '/home/ijneb/digiquarium/daemons')
+sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 from status_reporter import StatusReporter
 import os
 import re
@@ -30,8 +30,8 @@ from pathlib import Path
 import time
 
 # Configuration
-LOGS_DIR = Path("/home/ijneb/digiquarium/logs")
-THERAPIST_DIR = Path("/home/ijneb/digiquarium/daemons/therapist")
+LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs"
+THERAPIST_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "daemons/therapist"
 CHECK_INTERVAL = 300  # 5 minutes
 
 # Distress indicators (weighted)

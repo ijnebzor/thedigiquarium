@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ijneb/digiquarium
+cd ${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}
 LOG_FILE="logs/guard/guard_daemon.log"
 
 echo "$(date): Starting The Guard security daemon" >> "$LOG_FILE"

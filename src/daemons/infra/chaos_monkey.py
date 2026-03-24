@@ -7,7 +7,7 @@ import os, sys, time, json, random, subprocess, fcntl
 from datetime import datetime
 from pathlib import Path
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 CHAOS_DIR = DIGIQUARIUM_DIR / 'daemons' / 'chaos_monkey'
 KILL_FILE = CHAOS_DIR / 'DISABLE_CHAOS'
 LOCK_FILE = CHAOS_DIR / 'chaos_monkey.lock'

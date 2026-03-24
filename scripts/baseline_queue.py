@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Digiquarium Model Baseline Queue v1.0
 Spawns each model as a tank, runs baseline, saves results, moves to next.
@@ -12,10 +13,10 @@ from datetime import datetime
 from pathlib import Path
 
 # Mac Ollama endpoint
-OLLAMA_URL = 'http://192.168.50.94:11434'
+OLLAMA_URL = f'http://{os.environ.get("OLLAMA_HOST", "192.168.50.94")}:{os.environ.get("OLLAMA_PORT", "11434")}'
 
 # Output directory
-OUTPUT_DIR = Path('/home/ijneb/digiquarium/logs/model_comparison/v8_run')
+OUTPUT_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/model_comparison/v8_run'))
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Models to test (ordered by size)

@@ -18,7 +18,7 @@ from pathlib import Path
 from flask import Flask, render_template, request, jsonify, Response
 import anthropic
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
 

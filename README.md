@@ -143,36 +143,42 @@ docker compose up -d
 
 ```
 thedigiquarium/
-├── src/                     # 🆕 CANONICAL SOURCE CODE
-│   ├── explorer/           # Unified explorer (config-driven)
-│   │   ├── explorer.py     # One file for all standard tanks
-│   │   └── agents/         # Agent variants (OpenClaw, ZeroClaw, Picobot)
-│   ├── daemons/            # All 21 daemons, organized by function
-│   │   ├── core/           # OVERSEER, MAINTAINER, CARETAKER, SCHEDULER
-│   │   ├── security/       # GUARD, SENTINEL, BOUNCER
-│   │   ├── research/       # DOCUMENTARIAN, TRANSLATOR, etc.
+├── src/                     # CANONICAL SOURCE CODE (v2.0)
+│   ├── explorer/           # Unified explorer framework
+│   │   ├── explorer.py     # Standard tank implementation
+│   │   ├── baseline.py     # 14-question personality assessment
+│   │   ├── agents/         # Agent variants (config-driven)
+│   │   │   ├── openclaw.py # Persistent memory, skills, reflection
+│   │   │   ├── zeroclaw.py # Ultra-minimal, stateless
+│   │   │   └── picobot.py  # Checkpoint persistence, recovery
+│   │   ├── start.sh        # Standard tank startup script
+│   │   └── start_agent.sh  # Agent tank startup script
+│   ├── daemons/            # All 15 daemons, organized by function
+│   │   ├── core/           # OVERSEER, SCHEDULER, MAINTAINER, CARETAKER, OLLAMA_WATCHER
+│   │   ├── security/       # GUARD, SENTINEL, BOUNCER, SECURECLAW
+│   │   ├── research/       # DOCUMENTARIAN, TRANSLATOR, ARCHIVIST, PAPER_GENERATOR
 │   │   ├── ethics/         # PSYCH, THERAPIST, ETHICIST, MODERATOR
-│   │   └── infra/          # WEBMASTER, CHAOS_MONKEY, MARKETER
-│   └── shared/             # Shared utilities
+│   │   ├── infra/          # WEBMASTER, CHAOS_MONKEY, MARKETER
+│   │   └── shared/         # Shared utilities (daemon_base, escalation, utils)
+│   └── shared/             # Framework utilities
 │
-├── config/                  # 🆕 ALL CONFIGURATION
-│   ├── tanks/              # Per-tank YAML configs (14 files)
-│   └── prompts/            # Prompt templates (v8.0-base.txt + extensions)
+├── config/                  # UNIFIED CONFIGURATION
+│   ├── tanks/              # Per-tank YAML configs (17 files)
+│   └── prompts/            # Prompt templates and extensions
+│
+├── archive/legacy/          # LEGACY ARCHIVE
+│   ├── tanks/              # Original tank implementations
+│   └── daemons/            # Original daemon implementations
 │
 ├── docs/                    # Website (GitHub Pages)
 │   ├── archive/beta/       # Beta period archive
 │   ├── brain/              # THE BRAIN knowledge base
 │   └── ...                 # Dashboard, research, specimens, blog
 │
-├── tanks/                   # 🔄 LEGACY - being migrated to src/explorer
-├── daemons/                 # 🔄 LEGACY - being migrated to src/daemons
-├── caretaker/               # 🔄 LEGACY - now in src/daemons/core
-├── guard/                   # 🔄 LEGACY - now in src/daemons/security
-├── operations/              # 🔄 LEGACY - now in src/daemons/core
-└── security/                # 🔄 LEGACY - being migrated
+└── [other directories]      # Website, operations, protocols, etc.
 ```
 
-> **Migration Status:** New `src/` and `config/` structure created. Legacy folders remain for backwards compatibility until Docker Compose is updated. See `src/README.md` for details.
+> **Migration Complete (v2.0):** New production `src/` and `config/` structure is live. Docker Compose updated. All 17 tanks use unified explorer with config-driven behavior. Legacy code archived for reference.
 
 ---
 

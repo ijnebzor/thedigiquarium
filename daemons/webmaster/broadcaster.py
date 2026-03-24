@@ -24,7 +24,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 DOCS_DIR = DIGIQUARIUM_DIR / 'docs'
 DATA_DIR = DOCS_DIR / 'data'

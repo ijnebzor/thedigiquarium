@@ -5,7 +5,7 @@
 
 set -e
 
-KIWIX_DIR="/home/ijneb/digiquarium/kiwix-data"
+KIWIX_DIR="${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/kiwix-data"
 cd "$KIWIX_DIR"
 
 echo "=============================================="

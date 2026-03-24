@@ -22,7 +22,7 @@ from datetime import datetime
 from pathlib import Path
 import subprocess
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 WEBSITE_DIR = DIGIQUARIUM_DIR / 'website'
 PUBLIC_DIR = WEBSITE_DIR / 'public'

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 SITE UPDATER - Keeps the website in sync with live data
 =========================================================
@@ -15,7 +16,7 @@ from datetime import datetime
 from pathlib import Path
 import time
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 WEBSITE_DIR = DIGIQUARIUM_DIR / 'website'
 DOCS_DIR = DIGIQUARIUM_DIR / 'docs'
 

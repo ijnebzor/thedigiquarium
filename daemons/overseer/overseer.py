@@ -33,7 +33,7 @@ from email.mime.multipart import MIMEMultipart
 from collections import defaultdict
 import urllib.request
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 
@@ -205,10 +205,13 @@ class TheOverseer:
     def check_ollama_health(self) -> dict:
         """Check Ollama at all levels"""
         result = {'healthy': True, 'issues': []}
-        
+
         # Windows host
         try:
-            req = urllib.request.Request("http://192.168.50.94:11434/api/tags")
+            ollama_host = os.environ.get('OLLAMA_HOST', '192.168.50.94')
+            ollama_port = os.environ.get('OLLAMA_PORT', '11434')
+            url = f'http://{ollama_host}:{ollama_port}/api/tags'
+            req = urllib.request.Request(url)
             with urllib.request.urlopen(req, timeout=10) as r:
                 data = json.loads(r.read())
                 if 'models' not in data or len(data['models']) == 0:

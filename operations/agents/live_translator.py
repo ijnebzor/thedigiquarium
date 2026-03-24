@@ -20,7 +20,7 @@ from pathlib import Path
 from collections import deque
 import re
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 STREAMS_DIR = DIGIQUARIUM_DIR / 'website' / 'streams'
 
@@ -68,9 +68,10 @@ def translate_text(text: str, source_lang: str) -> str:
     prompt = f"Translate this {source_lang} text to English. Output ONLY the translation, nothing else:\n\n{text}"
     
     try:
+        local_port = os.environ.get('OLLAMA_LOCAL_PORT', '11435')
         cmd = [
             'curl', '-s', '--max-time', '30',
-            'http://localhost:11435/api/generate',
+            f'http://localhost:{local_port}/api/generate',
             '-d', json.dumps({
                 'model': 'llama3.2:latest',
                 'prompt': prompt,

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Shared escalation utilities for all daemons.
 All critical daemons can escalate to THE OVERSEER.
@@ -8,7 +9,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-DAEMONS_DIR = Path('/home/ijneb/digiquarium/daemons')
+DAEMONS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 OVERSEER_INBOX = DAEMONS_DIR / 'overseer' / 'inbox'
 
 def escalate_to_overseer(daemon_name: str, message: str, severity: str = 'medium', details: dict = None):

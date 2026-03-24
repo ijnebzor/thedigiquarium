@@ -36,7 +36,7 @@ _lock_fd = _acquire_lock()
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from shared.utils import DaemonLogger, run_command, send_email_alert, write_pid_file, read_pid_file, is_daemon_running, SLA_CONFIG
 
-DAEMONS_DIR = Path('/home/ijneb/digiquarium/daemons')
+DAEMONS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 CHECK_INTERVAL = 60  # 1 minute
 
 # All managed daemons
@@ -56,7 +56,9 @@ class Maintainer:
             'escalations': 0,
             'start_time': datetime.now().isoformat()
         }
-        
+        # Track restart failures per daemon
+        self.restart_failure_counts = {daemon: 0 for daemon in MANAGED_DAEMONS}
+
         # Handle signals
         signal.signal(signal.SIGTERM, self.shutdown)
         signal.signal(signal.SIGINT, self.shutdown)
@@ -71,29 +73,102 @@ class Maintainer:
         if not daemon_script.exists():
             self.log.error(f"Daemon script not found: {daemon_script}", name)
             return False
-        
+
         self.log.action(f"Starting daemon", name)
-        
+
+        # Clean up stale lock and PID files
+        lock_file = DAEMONS_DIR / name / f'{name}.lock'
+        pid_file = DAEMONS_DIR / name / f'{name}.pid'
+        if lock_file.exists():
+            try:
+                lock_file.unlink()
+                self.log.action(f"Cleaned up stale lock file", name)
+            except:
+                pass
+        if pid_file.exists():
+            try:
+                pid_file.unlink()
+                self.log.action(f"Cleaned up stale PID file", name)
+            except:
+                pass
+
         # Start in background
         log_file = DAEMONS_DIR / 'logs' / f'{name}.log'
         cmd = f"nohup python3 {daemon_script} >> {log_file} 2>&1 &"
         code, _, stderr = run_command(cmd)
-        
+
         time.sleep(2)
-        
+
         if is_daemon_running(name):
             self.log.success(f"Daemon started successfully", name)
             self.stats['restarts'] += 1
+            self.restart_failure_counts[name] = 0  # Reset failure count on success
             return True
         else:
             self.log.error(f"Failed to start daemon: {stderr}", name)
+            self.restart_failure_counts[name] += 1
             return False
     
+    def check_daemon_heartbeat(self, name) -> bool:
+        """
+        Check if daemon has a fresh heartbeat file.
+        Returns True if heartbeat exists and is recent (< 5 minutes old).
+        Only applicable to daemons that write heartbeat files.
+        """
+        # Currently only ollama_watcher writes heartbeat files
+        if name != 'ollama_watcher':
+            return True  # Skip heartbeat check for other daemons
+
+        heartbeat_file = Path('/tmp/ollama_watcher_heartbeat')
+        if not heartbeat_file.exists():
+            self.log.warn(f"Heartbeat file missing", name)
+            return False
+
+        try:
+            data = json.loads(heartbeat_file.read_text())
+            timestamp = datetime.fromisoformat(data['timestamp'])
+            age_seconds = (datetime.now() - timestamp).total_seconds()
+
+            if age_seconds > 300:  # 5 minutes
+                self.log.warn(f"Heartbeat stale: {age_seconds}s old", name)
+                return False
+
+            return True
+        except Exception as e:
+            self.log.warn(f"Failed to read heartbeat: {e}", name)
+            return False
+
+    def kill_zombie_daemon(self, name):
+        """Kill a zombie/stuck daemon process by PID."""
+        pid_file = DAEMONS_DIR / name / f'{name}.pid'
+        if not pid_file.exists():
+            return False
+
+        try:
+            pid = int(pid_file.read_text().strip())
+            # Check if process exists
+            result = subprocess.run(['ps', '-p', str(pid)], capture_output=True)
+            if result.returncode == 0:
+                # Process exists, kill it
+                self.log.action(f"Force-killing zombie process (PID {pid})", name)
+                subprocess.run(['kill', '-9', str(pid)], capture_output=True)
+                time.sleep(1)
+                return True
+        except:
+            pass
+        return False
+
     def check_daemon(self, name):
         """Check if daemon is running and healthy"""
-        if is_daemon_running(name):
-            return True
-        return False
+        if not is_daemon_running(name):
+            return False
+
+        # Additional heartbeat check for daemons that support it
+        if not self.check_daemon_heartbeat(name):
+            self.log.warn(f"Daemon running but heartbeat is stale", name)
+            return False
+
+        return True
     
     def check_all_daemons(self):
         """Check all managed daemons"""
@@ -110,15 +185,25 @@ class Maintainer:
         return status, issues
     
     def remediate(self, daemon_name):
-        """Attempt to fix a daemon issue"""
+        """Attempt to fix a daemon issue with failure tracking and escalation."""
         self.log.warn(f"Daemon not running, attempting restart", daemon_name)
-        
+
+        # Check if daemon is a zombie process and kill it first
+        self.kill_zombie_daemon(daemon_name)
+
         # Try to start it
         if self.start_daemon(daemon_name):
             return True
-        
-        # If failed, escalate
-        self.escalate(daemon_name, "Failed to restart after multiple attempts")
+
+        # Track consecutive restart failures
+        self.restart_failure_counts[daemon_name] += 1
+        failures = self.restart_failure_counts[daemon_name]
+
+        # Escalate after 3 consecutive failures
+        if failures >= 3:
+            self.escalate(daemon_name, f"Failed to restart after {failures} consecutive attempts")
+            return False
+
         return False
     
     def escalate(self, daemon_name, reason):

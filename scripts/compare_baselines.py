@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 from datetime import datetime
 
-LOGS_DIR = Path("/home/ijneb/digiquarium/logs")
+LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs"
 
 def get_latest_baseline(tank_dir):
     """Get most recent baseline file"""

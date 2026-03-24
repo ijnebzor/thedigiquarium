@@ -356,7 +356,7 @@ nmap -Pn YOUR_PUBLIC_IP
 
 ```bash
 # Create migration archive
-cd /home/ijneb/digiquarium
+cd $DIGIQUARIUM_HOME
 
 # Archive all logs
 tar -czvf ~/digiquarium_logs_backup.tar.gz logs/

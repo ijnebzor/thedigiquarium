@@ -24,7 +24,7 @@ import fcntl
 import signal
 
 # Configuration
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 CARETAKER_LOG = LOGS_DIR / 'caretaker'
 CHECK_INTERVAL = 300  # 5 minutes

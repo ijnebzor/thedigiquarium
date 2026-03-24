@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 THE MARKETER v1.0 - Brand, Social & Growth
 ==========================================
@@ -34,7 +35,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 
 class Marketer:
     def __init__(self):

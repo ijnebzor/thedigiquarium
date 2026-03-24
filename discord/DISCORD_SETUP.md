@@ -91,14 +91,14 @@
 2. Create categories and channels per structure above
 3. Create roles with colors
 4. Create webhooks for #alerts, #tank-activity, #security-alerts
-5. Save webhook URLs to /home/ijneb/digiquarium/discord/webhooks.json
+5. Save webhook URLs to $DIGIQUARIUM_HOME/discord/webhooks.json
 6. Update SecureClaw config with webhook URL
 
 ---
 
 ## Webhook Configuration File
 
-Create `/home/ijneb/digiquarium/discord/webhooks.json`:
+Create `$DIGIQUARIUM_HOME/discord/webhooks.json`:
 
 ```json
 {

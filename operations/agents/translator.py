@@ -17,7 +17,7 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 TRANSLATIONS_DIR = DIGIQUARIUM_DIR / 'operations' / 'translations'
 
@@ -40,8 +40,10 @@ def log_event(message: str):
 def translate_via_ollama(text: str, source_lang: str) -> str:
     """Translate text to English using Ollama"""
     prompt = f"Translate this {source_lang} text to English. Only output the translation, nothing else:\n\n{text}"
-    
-    cmd = f'''curl -s http://localhost:11435/api/generate -d '{{"model": "llama3.2:latest", "prompt": "{prompt.replace('"', '\\"').replace("'", "")}", "stream": false}}' '''
+
+    sanitized_prompt = prompt.replace('"', '\\"').replace("'", "")
+    local_port = os.environ.get('OLLAMA_LOCAL_PORT', '11435')
+    cmd = f'''curl -s http://localhost:{local_port}/api/generate -d '{{"model": "llama3.2:latest", "prompt": "{sanitized_prompt}", "stream": false}}' '''
     
     try:
         result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=60)

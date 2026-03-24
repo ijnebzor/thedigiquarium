@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Queue baselines for all tanks without overloading Ollama
 Runs one baseline at a time, then starts exploration
@@ -91,14 +92,15 @@ def main():
     time.sleep(5)
     
     # Process each tank
+    home = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
     for i, (tank, profile) in enumerate(TANKS, 1):
         log(f"\n[{i}/{len(TANKS)}] Processing {tank}...")
-        
+
         # Start the tank
         if profile:
-            cmd = f"cd /home/ijneb/digiquarium && docker compose --profile {profile} up -d {tank}"
+            cmd = f"cd {home} && docker compose --profile {profile} up -d {tank}"
         else:
-            cmd = f"cd /home/ijneb/digiquarium && docker compose up -d {tank}"
+            cmd = f"cd {home} && docker compose up -d {tank}"
         
         if not run(cmd):
             log(f"❌ Failed to start {tank}")

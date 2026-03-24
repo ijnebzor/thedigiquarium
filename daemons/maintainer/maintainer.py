@@ -36,7 +36,7 @@ _lock_fd = _acquire_lock()
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from shared.utils import DaemonLogger, run_command, send_email_alert, write_pid_file, read_pid_file, is_daemon_running, SLA_CONFIG
 
-DAEMONS_DIR = Path('/home/ijneb/digiquarium/daemons')
+DAEMONS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 CHECK_INTERVAL = 60  # 1 minute
 
 # All managed daemons

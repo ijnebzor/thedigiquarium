@@ -12,7 +12,7 @@ import signal
 from pathlib import Path
 from datetime import datetime
 
-DAEMONS_DIR = Path('/home/ijneb/digiquarium/daemons')
+DAEMONS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 
 
 class DaemonBase:

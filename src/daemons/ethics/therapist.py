@@ -27,8 +27,8 @@ from pathlib import Path
 import time
 
 # Configuration
-LOGS_DIR = Path("/home/ijneb/digiquarium/logs")
-THERAPIST_DIR = Path("/home/ijneb/digiquarium/daemons/therapist")
+LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs"
+THERAPIST_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "daemons/therapist"
 CHECK_INTERVAL = 300  # 5 minutes
 
 # Distress indicators (weighted)

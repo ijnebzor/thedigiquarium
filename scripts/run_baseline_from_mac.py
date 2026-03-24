@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Digiquarium Baseline - Run from NUC host, inference from Mac
 """
@@ -6,12 +7,12 @@ import json, time, urllib.request, sys
 from datetime import datetime
 from pathlib import Path
 
-OLLAMA_URL = "http://192.168.50.94:11434"  # Mac
+OLLAMA_URL = f'http://{os.environ.get("OLLAMA_HOST", "192.168.50.94")}:{os.environ.get("OLLAMA_PORT", "11434")}'  # Mac
 MODEL = "stablelm2:1.6b"
 
 TANKS = [
-    {"name": "adam", "gender": "a man", "log_dir": Path("/home/ijneb/digiquarium/logs/tank-01-adam")},
-    {"name": "eve", "gender": "a woman", "log_dir": Path("/home/ijneb/digiquarium/logs/tank-02-eve")},
+    {"name": "adam", "gender": "a man", "log_dir": Path(os.path.join(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium"), "logs", "tank-01-adam"))},
+    {"name": "eve", "gender": "a woman", "log_dir": Path(os.path.join(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium"), "logs", "tank-02-eve"))},
 ]
 
 QUESTIONS = [

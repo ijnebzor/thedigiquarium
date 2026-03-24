@@ -190,7 +190,7 @@ Average of all six dimensions.
 ## Raw Data Location
 
 ```
-/home/ijneb/digiquarium/logs/model_comparison/
+$DIGIQUARIUM_HOME/logs/model_comparison/
 ├── 20260218_172145_COMBINED.json      # All results
 ├── 20260218_172145_gemma2_9b.json     # Individual model files
 ├── 20260218_172145_mistral_7b.json

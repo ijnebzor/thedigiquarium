@@ -4,14 +4,14 @@
 
 set -e
 
-SERVICE_FILE="/home/ijneb/digiquarium/caretaker/digiquarium-caretaker.service"
+SERVICE_FILE="${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/caretaker/digiquarium-caretaker.service"
 SYSTEMD_DIR="/etc/systemd/system"
 
 echo "Installing Digiquarium Caretaker service..."
 
 # Make scripts executable
-chmod +x /home/ijneb/digiquarium/caretaker/start-caretaker.sh
-chmod +x /home/ijneb/digiquarium/caretaker/caretaker.py
+chmod +x ${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/caretaker/start-caretaker.sh
+chmod +x ${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/caretaker/caretaker.py
 
 # Copy service file
 cp "$SERVICE_FILE" "$SYSTEMD_DIR/"

@@ -131,9 +131,9 @@ Adam (after 2100+ articles) vs fresh baselines:
 
 ## Files Updated
 
-- `/home/ijneb/digiquarium/tanks/language/explore.py` - v6.1 with Chinese/Japanese fixes
-- `/home/ijneb/digiquarium/docker-compose.yml` - Removed duplicate agent definitions
-- `/home/ijneb/digiquarium/docs/BASELINE_ANALYSIS_2026-02-20.md` - This report
+- `$DIGIQUARIUM_HOME/tanks/language/explore.py` - v6.1 with Chinese/Japanese fixes
+- `$DIGIQUARIUM_HOME/docker-compose.yml` - Removed duplicate agent definitions
+- `$DIGIQUARIUM_HOME/docs/BASELINE_ANALYSIS_2026-02-20.md` - This report
 
 ---
 

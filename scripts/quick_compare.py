@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
+import os
 """Quick Model Comparison - runs from NUC to Mac Ollama"""
 import json, time, urllib.request
 from datetime import datetime
 
-OLLAMA_URL = 'http://192.168.50.94:11434'
+OLLAMA_URL = f'http://{os.environ.get("OLLAMA_HOST", "192.168.50.94")}:{os.environ.get("OLLAMA_PORT", "11434")}'
 MODELS = ['qwen2:0.5b', 'stablelm2:1.6b', 'deepseek-r1:1.5b', 'gemma2:2b', 'llama3.2:latest', 'phi3:mini', 'mistral:7b', 'mannix/llama3.1-8b-abliterated:latest', 'qwen3:8b', 'gemma2:9b']
 SPECIMENS = [('adam', 'a man'), ('eve', 'a woman')]
 QUESTIONS = [
@@ -76,6 +77,8 @@ for rank, r in enumerate(sorted(results, key=lambda x: x['combined'], reverse=Tr
     medal = '🥇🥈🥉'[rank-1] if rank <= 3 else f'{rank}.'
     print(f"{medal} {r['model']:<45} Adam:{r['adam_avg']:>+5.1f} Eve:{r['eve_avg']:>+5.1f} = {r['combined']:>+5.1f}")
 
-with open('/home/ijneb/digiquarium/logs/model_comparison/quick_v4_results.json', 'w') as f:
+home = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
+output_file = f'{home}/logs/model_comparison/quick_v4_results.json'
+with open(output_file, 'w') as f:
     json.dump(results, f, indent=2)
 print("\n✅ Saved to quick_v4_results.json")

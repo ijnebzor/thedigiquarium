@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 THE ETHICIST - Ethics Oversight Daemon
 
@@ -23,7 +24,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-ETHICIST_DIR = Path("/home/ijneb/digiquarium/daemons/ethicist")
+ETHICIST_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "daemons/ethicist"
 
 
 # Core ethical principles for The Digiquarium
@@ -264,7 +265,7 @@ class Ethicist:
         framework_md = self.get_framework_document()
         
         # Save to docs
-        docs_path = Path("/home/ijneb/digiquarium/docs/research/ethics.md")
+        docs_path = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "docs/research/ethics.md"
         docs_path.parent.mkdir(parents=True, exist_ok=True)
         
         with open(docs_path, "w") as f:

@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ijneb/digiquarium
+cd ${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}
 LOG_FILE="logs/caretaker/caretaker_daemon.log"
 
 echo "$(date): Starting Digiquarium Caretaker daemon" >> "$LOG_FILE"

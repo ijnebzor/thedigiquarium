@@ -14,7 +14,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import List
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 ARCHIVES_DIR = DIGIQUARIUM_DIR / 'congregations' / 'archives'
 STREAMS_DIR = DIGIQUARIUM_DIR / 'website' / 'streams'
 ARCHIVES_DIR.mkdir(parents=True, exist_ok=True)

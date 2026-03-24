@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Spawn The Archivist for Adam - Post-Exploration Baseline
 Compare personality development after 2000+ articles
@@ -10,9 +11,9 @@ import urllib.request
 from datetime import datetime
 from pathlib import Path
 
-OLLAMA_URL = 'http://192.168.50.94:11434'
+OLLAMA_URL = f'http://{os.environ.get("OLLAMA_HOST", "192.168.50.94")}:{os.environ.get("OLLAMA_PORT", "11434")}'
 OLLAMA_MODEL = 'llama3.2:latest'
-LOG_DIR = Path('/home/ijneb/digiquarium/logs/tank-01-adam/baselines')
+LOG_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/tank-01-adam/baselines'))
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 BASELINE_QUESTIONS = [

@@ -33,11 +33,11 @@ import time
 import traceback
 
 # Configuration
-DAEMONS_DIR = Path("/home/ijneb/digiquarium/daemons")
+DAEMONS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "daemons"
 MODERATOR_DIR = DAEMONS_DIR / "moderator"
 THERAPIST_DIR = DAEMONS_DIR / "therapist"
-LOGS_DIR = Path("/home/ijneb/digiquarium/logs")
-CONGREGATIONS_DIR = Path("/home/ijneb/digiquarium/congregations")
+LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs"
+CONGREGATIONS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "congregations"
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "llama3.2:latest"

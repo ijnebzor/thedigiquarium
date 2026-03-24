@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 THE PUBLIC LIAISON v1.0 - External Communications Coordinator
 ==============================================================
@@ -26,7 +27,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 
 class PublicLiaison:
     def __init__(self):

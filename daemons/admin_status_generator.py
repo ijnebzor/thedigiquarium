@@ -13,7 +13,7 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
 OUTPUT_FILE = DIGIQUARIUM_DIR / 'docs' / 'data' / 'admin-status.json'
@@ -59,7 +59,10 @@ def check_ollama_status():
     # Windows host
     try:
         import urllib.request
-        with urllib.request.urlopen('http://192.168.50.94:11434/api/tags', timeout=5) as r:
+        ollama_host = os.environ.get('OLLAMA_HOST', '192.168.50.94')
+        ollama_port = os.environ.get('OLLAMA_PORT', '11434')
+        url = f'http://{ollama_host}:{ollama_port}/api/tags'
+        with urllib.request.urlopen(url, timeout=5) as r:
             data = json.loads(r.read())
             status['windows_healthy'] = True
             status['models'] = len(data.get('models', []))

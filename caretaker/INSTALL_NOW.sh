@@ -12,11 +12,11 @@ echo "  INSTALLING DIGIQUARIUM AUTONOMOUS CARETAKER"
 echo "=============================================="
 
 # Make scripts executable
-chmod +x /home/ijneb/digiquarium/caretaker/caretaker.py
-chmod +x /home/ijneb/digiquarium/caretaker/start-caretaker.sh
+chmod +x ${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/caretaker/caretaker.py
+chmod +x ${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/caretaker/start-caretaker.sh
 
 # Copy service file to systemd
-cp /home/ijneb/digiquarium/caretaker/digiquarium-caretaker.service /etc/systemd/system/
+cp ${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/caretaker/digiquarium-caretaker.service /etc/systemd/system/
 
 # Reload systemd
 systemctl daemon-reload

@@ -33,7 +33,7 @@ from email.mime.multipart import MIMEMultipart
 from collections import defaultdict
 import urllib.request
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 
@@ -202,13 +202,45 @@ class TheOverseer:
         self.last_full_audit = audit
         return audit
     
+    def check_watcher_heartbeat(self) -> bool:
+        """
+        Check if ollama_watcher has a fresh heartbeat file.
+        Returns False if heartbeat is stale (>5 minutes old).
+        """
+        heartbeat_file = Path('/tmp/ollama_watcher_heartbeat')
+        if not heartbeat_file.exists():
+            self.log('WARNING', 'Ollama watcher heartbeat file missing')
+            return False
+
+        try:
+            data = json.loads(heartbeat_file.read_text())
+            timestamp = datetime.fromisoformat(data['timestamp'])
+            age_seconds = (datetime.now() - timestamp).total_seconds()
+
+            if age_seconds > 300:  # 5 minutes
+                self.log('ERROR', f'Ollama watcher heartbeat stale: {age_seconds}s old')
+                return False
+
+            return True
+        except Exception as e:
+            self.log('WARNING', f'Failed to read ollama_watcher heartbeat: {e}')
+            return False
+
     def check_ollama_health(self) -> dict:
         """Check Ollama at all levels"""
         result = {'healthy': True, 'issues': []}
-        
+
+        # Check watcher heartbeat first
+        if not self.check_watcher_heartbeat():
+            result['healthy'] = False
+            result['issues'].append('Ollama watcher heartbeat stale or missing')
+
         # Windows host
         try:
-            req = urllib.request.Request("http://192.168.50.94:11434/api/tags")
+            ollama_host = os.environ.get('OLLAMA_HOST', '192.168.50.94')
+            ollama_port = os.environ.get('OLLAMA_PORT', '11434')
+            url = f'http://{ollama_host}:{ollama_port}/api/tags'
+            req = urllib.request.Request(url)
             with urllib.request.urlopen(req, timeout=10) as r:
                 data = json.loads(r.read())
                 if 'models' not in data or len(data['models']) == 0:

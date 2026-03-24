@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from shared.utils import DaemonLogger, run_command, write_pid_file, send_email_alert
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 DOCS_DIR = DIGIQUARIUM_DIR / 'docs'
 SPEC_FILE = DIGIQUARIUM_DIR / 'WEBSITE_SPEC.md'
 CHECK_INTERVAL = 43200  # 12 hours

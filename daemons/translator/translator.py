@@ -8,10 +8,13 @@ SLA: 30 min
 import os, sys, time, json
 from datetime import datetime
 from pathlib import Path
+import fcntl
 sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 from shared.utils import DaemonLogger, run_command, write_pid_file
+from status_reporter import StatusReporter
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 CHECK_INTERVAL = 1800
 
 LANGUAGE_TANKS = {
@@ -54,8 +57,6 @@ class Translator:
 
 
 # Single-instance lock
-import fcntl
-import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 LOCK_FILE = Path(__file__).parent / 'translator.lock'
 lock_fd = None
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Test Wikipedia access and link parsing for all languages
 Run before starting tanks to ensure everything works

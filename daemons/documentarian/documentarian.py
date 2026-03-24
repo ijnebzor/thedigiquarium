@@ -18,14 +18,14 @@ import os
 import sys
 import time
 import json
-import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
+import sys; sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons')); from status_reporter import StatusReporter
 from datetime import datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from shared.utils import DaemonLogger, run_command, write_pid_file, send_email_alert
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 PAPER_DIR = DIGIQUARIUM_DIR / 'docs' / 'academic'
 CHECK_INTERVAL = 21600  # 6 hours

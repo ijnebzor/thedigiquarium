@@ -8,10 +8,13 @@ SLA: 12 hours
 import os, sys, time, json, re
 from datetime import datetime
 from pathlib import Path
+import fcntl
 sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 from shared.utils import DaemonLogger, run_command, write_pid_file, send_email_alert
+from status_reporter import StatusReporter
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 DOCS_DIR = DIGIQUARIUM_DIR / 'docs'
 SPEC_FILE = DIGIQUARIUM_DIR / 'WEBSITE_SPEC.md'
 CHECK_INTERVAL = 43200  # 12 hours
@@ -127,8 +130,6 @@ class FinalAuditor:
 
 
 # Single-instance lock
-import fcntl
-import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
 LOCK_FILE = Path(__file__).parent / 'final_auditor.lock'
 lock_fd = None
 

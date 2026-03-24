@@ -23,7 +23,7 @@ from pathlib import Path
 from collections import defaultdict
 import re
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 DOCS_DIR = DIGIQUARIUM_DIR / 'docs'
 ACADEMIC_DIR = DOCS_DIR / 'academic'

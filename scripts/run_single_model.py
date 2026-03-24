@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Digiquarium Baseline Queue - Incremental Runner
 Runs one model at a time, saves results, prints progress.
@@ -8,8 +9,8 @@ import json, time, urllib.request, sys
 from datetime import datetime
 from pathlib import Path
 
-OLLAMA_URL = 'http://192.168.50.94:11434'
-OUTPUT_DIR = Path('/home/ijneb/digiquarium/logs/model_comparison/v8_run')
+OLLAMA_URL = f'http://{os.environ.get("OLLAMA_HOST", "192.168.50.94")}:{os.environ.get("OLLAMA_PORT", "11434")}'
+OUTPUT_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/model_comparison/v8_run'))
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 MODELS = [

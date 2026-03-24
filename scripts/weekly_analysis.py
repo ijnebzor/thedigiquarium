@@ -11,8 +11,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from collections import defaultdict
 
-LOGS_DIR = Path('/home/ijneb/digiquarium/logs')
-DOCS_DIR = Path('/home/ijneb/digiquarium/docs')
+LOGS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs'))
+DOCS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'docs'))
 
 # All tank definitions
 TANKS = {

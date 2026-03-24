@@ -39,12 +39,17 @@ id_rsa
 *.tmp
 *.temp
 
-# Archives (too large)
+# Archives
+archive/legacy/
 archives/
 
 # Backups
 *.backup
 *.bak
+
+# Runtime
+*.lock
+heartbeat_*
 
 # Model files
 *.gguf

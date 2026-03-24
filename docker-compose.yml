@@ -88,7 +88,7 @@ services:
   ollama:
     image: alpine/socat
     container_name: digiquarium-ollama
-    command: TCP-LISTEN:11434,fork,reuseaddr TCP:192.168.50.94:11434
+    command: TCP-LISTEN:11434,fork,reuseaddr TCP:${OLLAMA_HOST:-192.168.50.94}:${OLLAMA_PORT:-11434}
     restart: unless-stopped
     networks:
       isolated-net:
@@ -113,7 +113,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/adam:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-01-adam:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -146,7 +147,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/adam:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-02-eve:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -180,9 +182,10 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/cain:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-03-cain:/logs
-    command: ["bash", "/tank/start.sh"]
+    command: ["bash", "/tank/start_agent.sh"]
     depends_on:
       - kiwix-simple
       - ollama
@@ -215,9 +218,10 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/abel:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-04-abel:/logs
-    command: ["bash", "/tank/start.sh"]
+    command: ["bash", "/tank/start_agent.sh"]
     depends_on:
       - kiwix-simple
       - ollama
@@ -250,7 +254,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/language:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-05-juan:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -285,7 +290,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/language:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-06-juanita:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -320,7 +326,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/language:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-07-klaus:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -355,7 +362,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/language:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-08-genevieve:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -390,7 +398,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/language:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-09-wei:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -425,7 +434,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/language:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-10-mei:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -460,7 +470,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/language:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-11-haruki:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -495,7 +506,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/language:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-12-sakura:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -530,7 +542,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/visual:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-13-victor:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -565,7 +578,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/visual:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-14-iris:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -600,7 +614,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/observer:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-15-observer:/logs
       - ./logs:/all_logs:ro
     command: ["bash", "/tank/start.sh"]
@@ -637,7 +652,8 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/seeker:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-16-seeker:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -674,9 +690,10 @@ services:
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
-      - ./tanks/seth:/tank:ro
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
       - ./logs/tank-17-seth:/logs
-    command: ["bash", "/tank/start.sh"]
+    command: ["bash", "/tank/start_agent.sh"]
     depends_on:
       - kiwix-simple
       - ollama

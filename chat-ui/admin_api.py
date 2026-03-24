@@ -15,7 +15,7 @@ from pathlib import Path
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
 
@@ -46,7 +46,7 @@ def execute_action(action):
     
     if action == 'audit':
         # Run system audit via OVERSEER
-        result = run_cmd('python3 /home/ijneb/digiquarium/daemons/admin_status_generator.py')
+        result = run_cmd(f'python3 {os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")}/daemons/admin_status_generator.py')
         return jsonify({
             'action': 'audit',
             'timestamp': timestamp,
@@ -58,7 +58,7 @@ def execute_action(action):
         # Run log pruning via WEBMASTER
         result = run_cmd('''python3 -c "
 import sys
-sys.path.insert(0, '/home/ijneb/digiquarium/daemons')
+sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 from webmaster.webmaster import Webmaster
 w = Webmaster()
 tanks, kept, pruned = w.prune_and_publish_logs()
@@ -73,10 +73,10 @@ print(f'Pruned {pruned} entries, kept {kept} from {tanks} tanks')
     
     elif action == 'push_github':
         # Git add, commit, push
-        result = run_cmd('''cd /home/ijneb/digiquarium && \
+        result = run_cmd(f'cd {os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")} && \
             git add -A && \
             git commit -m "🤖 Auto-commit: Admin panel push $(date +%Y-%m-%d_%H:%M)" && \
-            git push''')
+            git push')
         return jsonify({
             'action': 'push_github',
             'timestamp': timestamp,
@@ -122,7 +122,7 @@ print(f'Pruned {pruned} entries, kept {kept} from {tanks} tanks')
         # Manually trigger a chaos event
         result = run_cmd('''python3 -c "
 import sys
-sys.path.insert(0, '/home/ijneb/digiquarium/daemons')
+sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 from chaos_monkey.chaos_monkey import ChaosMonkey
 m = ChaosMonkey()
 m.execute_chaos()
@@ -138,12 +138,13 @@ m.execute_chaos()
         daemon = request.json.get('daemon')
         if not daemon:
             return jsonify({'error': 'No daemon specified'}), 400
-        
+
         # Kill and restart daemon
+        home = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
         result = run_cmd(f'''pkill -9 -f "{daemon}.py" 2>/dev/null; \
             sleep 2; \
-            nohup python3 /home/ijneb/digiquarium/daemons/{daemon}/{daemon}.py \
-            >> /home/ijneb/digiquarium/daemons/logs/{daemon}.log 2>&1 &''')
+            nohup python3 {home}/daemons/{daemon}/{daemon}.py \
+            >> {home}/daemons/logs/{daemon}.log 2>&1 &''')
         return jsonify({
             'action': 'restart_daemon',
             'daemon': daemon,

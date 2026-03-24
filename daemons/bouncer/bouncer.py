@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 THE BOUNCER - Visitor Tank Protection System
 
@@ -34,8 +35,8 @@ from enum import Enum
 import secrets
 
 # Configuration
-BOUNCER_DIR = Path("/home/ijneb/digiquarium/daemons/bouncer")
-LOGS_DIR = Path("/home/ijneb/digiquarium/logs")
+BOUNCER_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "daemons/bouncer"
+LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs"
 VISITOR_LOGS_DIR = LOGS_DIR / "visitor_sessions"
 
 # Access Control

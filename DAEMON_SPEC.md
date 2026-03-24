@@ -138,7 +138,7 @@ Issue Detected → Daemon Self-Heal → THE MAINTAINER → Owner (Email)
 ## File Locations
 
 ```
-/home/ijneb/digiquarium/daemons/
+$DIGIQUARIUM_HOME/daemons/
 ├── maintainer/
 │   ├── maintainer.py
 │   └── status.json

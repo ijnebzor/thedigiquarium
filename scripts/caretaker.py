@@ -15,12 +15,12 @@ from collections import defaultdict
 CHECK_INTERVAL = 60  # Check every minute
 LOOP_THRESHOLD = 50  # More than 50 loop escapes in 10 minutes = problem
 SILENCE_THRESHOLD = 300  # 5 minutes without output = problem
-ESCALATION_FILE = Path('/home/ijneb/digiquarium/logs/caretaker/escalations.json')
-STATUS_FILE = Path('/home/ijneb/digiquarium/logs/caretaker/status.json')
-LOG_FILE = Path('/home/ijneb/digiquarium/logs/caretaker/caretaker.log')
+ESCALATION_FILE = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/caretaker/escalations.json'))
+STATUS_FILE = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/caretaker/status.json'))
+LOG_FILE = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/caretaker/caretaker.log'))
 
 # Ensure directories exist
-Path('/home/ijneb/digiquarium/logs/caretaker').mkdir(parents=True, exist_ok=True)
+Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'logs/caretaker')).mkdir(parents=True, exist_ok=True)
 
 # All tanks to monitor
 TANKS = [
@@ -180,11 +180,11 @@ def restart_tank(tank_name):
 def recreate_tank(tank_name):
     """Recreate a tank from docker-compose"""
     log(f"Recreating {tank_name}...", 'ACTION')
-    
+
     # Stop and remove
     run_command(f"docker stop {tank_name}")
     run_command(f"docker rm {tank_name}")
-    
+
     # Determine profile
     if 'cain' in tank_name or 'abel' in tank_name or 'seth' in tank_name:
         profile = 'agents'
@@ -196,12 +196,13 @@ def recreate_tank(tank_name):
         profile = 'special'
     else:
         profile = ''
-    
+
     # Recreate
+    home = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
     if profile:
-        cmd = f"cd /home/ijneb/digiquarium && docker compose --profile {profile} up -d {tank_name}"
+        cmd = f"cd {home} && docker compose --profile {profile} up -d {tank_name}"
     else:
-        cmd = f"cd /home/ijneb/digiquarium && docker compose up -d {tank_name}"
+        cmd = f"cd {home} && docker compose up -d {tank_name}"
     
     run_command(cmd)
     time.sleep(10)

@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 DAEMON_LOGS_DIR = DAEMONS_DIR / 'logs'

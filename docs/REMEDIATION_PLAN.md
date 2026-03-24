@@ -110,7 +110,7 @@ def check_daemon_health(daemon):
 # Every daemon gets:
 def escalate_to_overseer(self, message):
     """Send issue to THE OVERSEER for cross-functional handling"""
-    overseer_queue = Path('/home/ijneb/digiquarium/daemons/overseer/inbox')
+    overseer_queue = Path('$DIGIQUARIUM_HOME/daemons/overseer/inbox')
     overseer_queue.mkdir(exist_ok=True)
     issue = {
         'from': self.name,

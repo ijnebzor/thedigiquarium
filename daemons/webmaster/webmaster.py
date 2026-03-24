@@ -19,14 +19,14 @@ import os
 import sys
 import time
 import json
-import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
+import sys; sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons')); from status_reporter import StatusReporter
 import subprocess
 import fcntl
 from datetime import datetime, timedelta
 from pathlib import Path
 
 # Single-instance lock
-DAEMON_DIR = Path('/home/ijneb/digiquarium/daemons/webmaster')
+DAEMON_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons/webmaster'))
 LOCK_FILE = DAEMON_DIR / 'webmaster.lock'
 
 def acquire_lock():
@@ -38,7 +38,7 @@ def acquire_lock():
         print("[WEBMASTER] Another instance already running")
         sys.exit(1)
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 DOCS_DIR = DIGIQUARIUM_DIR / 'docs'
 PUBLIC_LOGS_DIR = DOCS_DIR / 'data' / 'logs-public'
@@ -272,7 +272,7 @@ class Webmaster:
         try:
             import subprocess
             result = subprocess.run(
-                ['python3', '/home/ijneb/digiquarium/daemons/webmaster/broadcaster.py'],
+                ['python3', os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons', 'webmaster/broadcaster.py')],
                 capture_output=True, text=True, timeout=120
             )
             if result.returncode == 0:

@@ -1,0 +1,30 @@
+[Unit]
+Description=Digiquarium Ollama Watcher v4.0
+After=network.target docker.service
+Wants=docker.service
+
+[Service]
+Type=simple
+User=ijneb
+Environment=DIGIQUARIUM_HOME=/home/ijneb/digiquarium
+Environment=OLLAMA_HOST=192.168.50.94
+Environment=OLLAMA_PORT=11434
+ExecStart=/usr/bin/python3 /home/ijneb/digiquarium/daemons/ollama_watcher/ollama_watcher.py
+Restart=always
+RestartSec=10
+WatchdogSec=600
+
+# Memory limits
+MemoryMax=256M
+MemoryHigh=192M
+
+# Security hardening
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ijneb/digiquarium/daemons
+ReadWritePaths=/tmp
+NoNewPrivileges=true
+PrivateTmp=false
+
+[Install]
+WantedBy=multi-user.target

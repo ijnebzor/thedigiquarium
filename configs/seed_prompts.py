@@ -1,3 +1,4 @@
+import os
 # Digiquarium Specimen Seed Prompts
 # Universal foundation with per-specimen variables
 

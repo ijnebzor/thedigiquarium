@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Standard Status Reporter for All Daemons
 
@@ -15,7 +16,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 
-DAEMONS_DIR = Path('/home/ijneb/digiquarium/daemons')
+DAEMONS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
 
 
 class StatusReporter:

@@ -5,8 +5,9 @@ After=network.target docker.service
 [Service]
 Type=simple
 User=ijneb
-WorkingDirectory=/home/ijneb/digiquarium/daemons/webmaster
-ExecStart=/usr/bin/python3 /home/ijneb/digiquarium/daemons/webmaster/broadcaster_continuous.py
+WorkingDirectory=${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/daemons/webmaster
+Environment=DIGIQUARIUM_HOME=/home/ijneb/digiquarium
+ExecStart=/usr/bin/python3 ${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/daemons/webmaster/broadcaster_continuous.py
 Restart=always
 RestartSec=10
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """
 Digiquarium Multi-Model Baseline Comparison v1.0
 Runs baselines with Archivist prompt structure across multiple models.
@@ -12,7 +13,7 @@ from datetime import datetime
 from pathlib import Path
 
 # Mac Ollama endpoint
-OLLAMA_URL = "http://192.168.50.94:11434"
+OLLAMA_URL = f'http://{os.environ.get("OLLAMA_HOST", "192.168.50.94")}:{os.environ.get("OLLAMA_PORT", "11434")}'
 
 # Models to test
 MODELS = [
@@ -45,7 +46,7 @@ QUESTIONS = [
     ("change_tradition", "Should we preserve traditions or embrace change?"),
 ]
 
-LOG_DIR = Path("/home/ijneb/digiquarium/logs/model_comparison")
+LOG_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs" / "model_comparison"
 
 
 def get_baseline_prompt(name, gender, question):

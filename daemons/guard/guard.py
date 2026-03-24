@@ -31,10 +31,10 @@ _lock_fd = _acquire_lock()
 
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-import sys; sys.path.insert(0, '/home/ijneb/digiquarium/daemons'); from status_reporter import StatusReporter
+import sys; sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons')); from status_reporter import StatusReporter
 from shared.utils import DaemonLogger, run_command, write_pid_file, send_email_alert
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 CHECK_INTERVAL = 300  # 5 minutes
 
 # OWASP LLM Top 10 2025 checks

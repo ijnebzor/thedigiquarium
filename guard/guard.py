@@ -25,7 +25,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 
 # Configuration
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 GUARD_LOG = LOGS_DIR / 'guard'
 CHECK_INTERVAL = 300  # 5 minutes

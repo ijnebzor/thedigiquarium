@@ -10,7 +10,7 @@ echo "║           🖥️  DIGIQUARIUM - Mac Mini Migration 🖥️           
 echo "╚══════════════════════════════════════════════════════════════════════╝"
 echo ""
 
-DIGIQUARIUM_DIR="${DIGIQUARIUM_DIR:-/home/ijneb/digiquarium}"
+DIGIQUARIUM_DIR="${DIGIQUARIUM_DIR:-${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}}"
 EXPORT_DIR="${EXPORT_DIR:-/tmp/digiquarium-export}"
 
 mkdir -p "$EXPORT_DIR"

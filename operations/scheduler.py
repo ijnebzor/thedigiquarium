@@ -25,7 +25,7 @@ from typing import Dict, List, Optional
 import threading
 import queue
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
 OPS_DIR = DIGIQUARIUM_DIR / 'operations'
 CALENDAR_DIR = OPS_DIR / 'calendar'
@@ -165,8 +165,9 @@ def run_command(cmd: str, timeout: int = 300) -> tuple:
 def wait_for_ollama():
     """Wait for Ollama to be available"""
     log_event('SCHEDULER', 'Waiting for Ollama availability...')
+    local_port = os.environ.get('OLLAMA_LOCAL_PORT', '11435')
     for _ in range(30):
-        code, stdout, _ = run_command('curl -s http://localhost:11435/api/tags', timeout=5)
+        code, stdout, _ = run_command(f'curl -s http://localhost:{local_port}/api/tags', timeout=5)
         if code == 0:
             return True
         time.sleep(2)

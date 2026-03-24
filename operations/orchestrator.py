@@ -22,9 +22,11 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List
 
-DIGIQUARIUM_DIR = Path('/home/ijneb/digiquarium')
+DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 OPS_DIR = DIGIQUARIUM_DIR / 'operations'
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
+DOCS_DIR = DIGIQUARIUM_DIR / 'docs'
+WEBSITE_DIR = DIGIQUARIUM_DIR / 'website'
 
 # Agent definitions
 AGENTS = {
@@ -54,10 +56,34 @@ AGENTS = {
     },
     'translator': {
         'name': 'The Translator',
-        'script': OPS_DIR / 'agents' / 'translator.py',
+        'script': OPS_DIR / 'agents' / 'live_translator.py',
         'pid_file': OPS_DIR / 'agents' / 'translator.pid',
         'log_file': OPS_DIR / 'translations' / 'translator.log',
         'description': 'Language content processing',
+        'critical': False
+    },
+    'documentarian': {
+        'name': 'The Documentarian',
+        'script': OPS_DIR / 'agents' / 'documentarian.py',
+        'pid_file': OPS_DIR / 'agents' / 'documentarian.pid',
+        'log_file': DOCS_DIR / 'academic' / 'documentarian.log',
+        'description': 'Academic documentation and paper maintenance',
+        'critical': False
+    },
+    'webmaster': {
+        'name': 'The Webmaster',
+        'script': OPS_DIR / 'agents' / 'webmaster.py',
+        'pid_file': OPS_DIR / 'agents' / 'webmaster.pid',
+        'log_file': WEBSITE_DIR / 'webmaster.log',
+        'description': 'Website and open-source infrastructure',
+        'critical': False
+    },
+    'site_updater': {
+        'name': 'The Site Updater',
+        'script': OPS_DIR / 'agents' / 'site_updater.py',
+        'pid_file': OPS_DIR / 'agents' / 'site_updater.pid',
+        'log_file': WEBSITE_DIR / 'site_updater.log',
+        'description': 'Website content generation and updates',
         'critical': False
     }
 }
@@ -297,22 +323,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Add new agents to the AGENTS dictionary
-AGENTS['documentarian'] = {
-    'name': 'The Documentarian',
-    'script': OPS_DIR / 'agents' / 'documentarian.py',
-    'pid_file': OPS_DIR / 'agents' / 'documentarian.pid',
-    'log_file': DOCS_DIR / 'academic' / 'documentarian.log',
-    'description': 'Academic documentation and paper maintenance',
-    'critical': False
-}
-
-AGENTS['webmaster'] = {
-    'name': 'The Webmaster',
-    'script': OPS_DIR / 'agents' / 'webmaster.py',
-    'pid_file': OPS_DIR / 'agents' / 'webmaster.pid',
-    'log_file': WEBSITE_DIR / 'webmaster.log',
-    'description': 'Website and open-source infrastructure',
-    'critical': False
-}
