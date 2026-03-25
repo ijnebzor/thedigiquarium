@@ -1,0 +1,1820 @@
+{
+  "2026-02-20": {
+    "nodes": [
+      {
+        "id": "Biologie",
+        "visits": 11
+      },
+      {
+        "id": "Philosophie",
+        "visits": 8
+      },
+      {
+        "id": "Wissenschaft",
+        "visits": 8
+      },
+      {
+        "id": "Mathematik",
+        "visits": 6
+      },
+      {
+        "id": "Wissen",
+        "visits": 6
+      },
+      {
+        "id": "Geschichte",
+        "visits": 5
+      },
+      {
+        "id": "Psychologie",
+        "visits": 5
+      },
+      {
+        "id": "Kommunikation",
+        "visits": 5
+      },
+      {
+        "id": "Musik",
+        "visits": 5
+      },
+      {
+        "id": "Latein",
+        "visits": 5
+      },
+      {
+        "id": "Altgriechische Sprache",
+        "visits": 5
+      },
+      {
+        "id": "Systematik (Biologie)",
+        "visits": 5
+      },
+      {
+        "id": "Sprache",
+        "visits": 4
+      },
+      {
+        "id": "Kunst",
+        "visits": 4
+      },
+      {
+        "id": "Sprechen",
+        "visits": 4
+      },
+      {
+        "id": "Januar 2026",
+        "visits": 4
+      },
+      {
+        "id": "19. Jahrhundert",
+        "visits": 4
+      },
+      {
+        "id": "Lebewesen",
+        "visits": 4
+      },
+      {
+        "id": "Eukaryoten",
+        "visits": 4
+      },
+      {
+        "id": "Bakterien",
+        "visits": 3
+      },
+      {
+        "id": "Welt",
+        "visits": 3
+      },
+      {
+        "id": "Grammatik",
+        "visits": 3
+      },
+      {
+        "id": "16. Jahrhundert",
+        "visits": 3
+      },
+      {
+        "id": "20. Jahrhundert",
+        "visits": 3
+      },
+      {
+        "id": "1910er",
+        "visits": 3
+      },
+      {
+        "id": "Jahreskalender",
+        "visits": 3
+      },
+      {
+        "id": "Abstraktion",
+        "visits": 3
+      },
+      {
+        "id": "Tier",
+        "visits": 3
+      },
+      {
+        "id": "Pilze",
+        "visits": 3
+      },
+      {
+        "id": "Deutschland",
+        "visits": 3
+      },
+      {
+        "id": "Bundeswappen Deutschlands",
+        "visits": 3
+      },
+      {
+        "id": "Vergangenheit",
+        "visits": 2
+      },
+      {
+        "id": "Zeit",
+        "visits": 2
+      },
+      {
+        "id": "Existenz",
+        "visits": 2
+      },
+      {
+        "id": "Sein",
+        "visits": 2
+      },
+      {
+        "id": "Dasein",
+        "visits": 2
+      },
+      {
+        "id": "Existenzphilosophie",
+        "visits": 2
+      },
+      {
+        "id": "Geometrie",
+        "visits": 2
+      },
+      {
+        "id": "Paradoxon",
+        "visits": 2
+      },
+      {
+        "id": "Aristoteles",
+        "visits": 2
+      },
+      {
+        "id": "Wahrheit",
+        "visits": 2
+      },
+      {
+        "id": "Gesprochene Sprache",
+        "visits": 2
+      },
+      {
+        "id": "Sprachwissenschaft",
+        "visits": 2
+      },
+      {
+        "id": "Latium",
+        "visits": 2
+      },
+      {
+        "id": "1830er",
+        "visits": 2
+      },
+      {
+        "id": "18. Jahrhundert",
+        "visits": 2
+      },
+      {
+        "id": "15. Jahrhundert",
+        "visits": 2
+      },
+      {
+        "id": "14. Jahrhundert",
+        "visits": 2
+      },
+      {
+        "id": "13. Jahrhundert",
+        "visits": 2
+      },
+      {
+        "id": "17. Jahrhundert",
+        "visits": 2
+      }
+    ],
+    "links": [
+      {
+        "source": "Biologie",
+        "target": "Bakterien"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Vergangenheit"
+      },
+      {
+        "source": "Vergangenheit",
+        "target": "Zeit"
+      },
+      {
+        "source": "Zeit",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Existenz"
+      },
+      {
+        "source": "Existenz",
+        "target": "Sein"
+      },
+      {
+        "source": "Sein",
+        "target": "Dasein"
+      },
+      {
+        "source": "Dasein",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Welt"
+      },
+      {
+        "source": "Welt",
+        "target": "Sein"
+      },
+      {
+        "source": "Dasein",
+        "target": "Existenz"
+      },
+      {
+        "source": "Existenz",
+        "target": "Existenzphilosophie"
+      },
+      {
+        "source": "Sprache",
+        "target": "Kommunikation"
+      },
+      {
+        "source": "Kunst",
+        "target": "Wissen"
+      },
+      {
+        "source": "Wissen",
+        "target": "Paradoxon"
+      },
+      {
+        "source": "Zeit",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Wissen"
+      },
+      {
+        "source": "Wissen",
+        "target": "Wahrheit"
+      },
+      {
+        "source": "Grammatik",
+        "target": "Latein"
+      },
+      {
+        "source": "Kommunikation",
+        "target": "Sprechen"
+      },
+      {
+        "source": "Sprechen",
+        "target": "Gesprochene Sprache"
+      },
+      {
+        "source": "Latein",
+        "target": "Latium"
+      },
+      {
+        "source": "16. Jahrhundert",
+        "target": "18. Jahrhundert"
+      },
+      {
+        "source": "18. Jahrhundert",
+        "target": "15. Jahrhundert"
+      },
+      {
+        "source": "13. Jahrhundert",
+        "target": "14. Jahrhundert"
+      },
+      {
+        "source": "14. Jahrhundert",
+        "target": "17. Jahrhundert"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "20. Jahrhundert"
+      },
+      {
+        "source": "1910er",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Musik",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Abstraktion",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Latein"
+      },
+      {
+        "source": "Grammatik",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Musik",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Abstraktion"
+      },
+      {
+        "source": "Paradoxon",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Tier"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "16. Jahrhundert"
+      },
+      {
+        "source": "16. Jahrhundert",
+        "target": "13. Jahrhundert"
+      },
+      {
+        "source": "13. Jahrhundert",
+        "target": "15. Jahrhundert"
+      },
+      {
+        "source": "15. Jahrhundert",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "1910er",
+        "target": "18. Jahrhundert"
+      },
+      {
+        "source": "18. Jahrhundert",
+        "target": "16. Jahrhundert"
+      },
+      {
+        "source": "16. Jahrhundert",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Gesprochene Sprache",
+        "target": "Sprache"
+      },
+      {
+        "source": "Eukaryoten",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Biologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Pilze"
+      },
+      {
+        "source": "Pilze",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Deutschland",
+        "target": "Bundeswappen Deutschlands"
+      },
+      {
+        "source": "Bundeswappen Deutschlands",
+        "target": "Deutschland"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Pilze",
+        "target": "Eukaryoten"
+      },
+      {
+        "source": "Sprechen",
+        "target": "Kommunikation"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "Kunst",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Kunst",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Kunst"
+      },
+      {
+        "source": "Bakterien",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Abstraktion",
+        "target": "Latein"
+      },
+      {
+        "source": "Latein",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Biologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Kunst",
+        "target": "Musik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Musik"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "17. Jahrhundert"
+      },
+      {
+        "source": "17. Jahrhundert",
+        "target": "14. Jahrhundert"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Biologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Kunst"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Kunst",
+        "target": "Biologie"
+      },
+      {
+        "source": "Bakterien",
+        "target": "Musik"
+      },
+      {
+        "source": "Biologie",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Kunst"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Latein",
+        "target": "Biologie"
+      },
+      {
+        "source": "Tier",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Biologie"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Eukaryoten"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Biologie",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Geschichte"
+      },
+      {
+        "source": "20. Jahrhundert",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Kunst",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissen",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Kunst",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Kunst",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Tier",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Biologie",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Musik",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Zeit",
+        "target": "Kunst"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Philosophie"
+      }
+    ]
+  },
+  "2026-02-21": {
+    "nodes": [
+      {
+        "id": "Philosophie",
+        "visits": 74
+      },
+      {
+        "id": "Biologie",
+        "visits": 65
+      },
+      {
+        "id": "Wissenschaft",
+        "visits": 64
+      },
+      {
+        "id": "Mathematik",
+        "visits": 63
+      },
+      {
+        "id": "Geschichte",
+        "visits": 60
+      },
+      {
+        "id": "Kunst",
+        "visits": 51
+      },
+      {
+        "id": "Psychologie",
+        "visits": 48
+      },
+      {
+        "id": "Musik",
+        "visits": 45
+      },
+      {
+        "id": "Altgriechische Sprache",
+        "visits": 31
+      },
+      {
+        "id": "Latein",
+        "visits": 28
+      },
+      {
+        "id": "Januar 2026",
+        "visits": 20
+      },
+      {
+        "id": "Wissen",
+        "visits": 17
+      },
+      {
+        "id": "Logik",
+        "visits": 16
+      },
+      {
+        "id": "Jahreskalender",
+        "visits": 13
+      },
+      {
+        "id": "Lebewesen",
+        "visits": 13
+      },
+      {
+        "id": "Denken",
+        "visits": 13
+      },
+      {
+        "id": "2020er",
+        "visits": 11
+      },
+      {
+        "id": "21. Jahrhundert",
+        "visits": 11
+      },
+      {
+        "id": "Naturwissenschaft",
+        "visits": 11
+      },
+      {
+        "id": "Englische Sprache",
+        "visits": 11
+      },
+      {
+        "id": "Systematik (Biologie)",
+        "visits": 10
+      },
+      {
+        "id": "Deutsche Sprache",
+        "visits": 10
+      },
+      {
+        "id": "Metaphysik",
+        "visits": 10
+      },
+      {
+        "id": "Sprache",
+        "visits": 9
+      },
+      {
+        "id": "20. Jahrhundert",
+        "visits": 9
+      },
+      {
+        "id": "System",
+        "visits": 9
+      },
+      {
+        "id": "Mittelmeerraum",
+        "visits": 9
+      },
+      {
+        "id": "2030er",
+        "visits": 9
+      },
+      {
+        "id": "Liste der IPA-Zeichen",
+        "visits": 8
+      },
+      {
+        "id": "19. Jahrhundert",
+        "visits": 8
+      },
+      {
+        "id": "Abstraktion",
+        "visits": 8
+      },
+      {
+        "id": "Tier",
+        "visits": 8
+      },
+      {
+        "id": "Pilze",
+        "visits": 8
+      },
+      {
+        "id": "Antikes Griechenland",
+        "visits": 8
+      },
+      {
+        "id": "Erfahrung",
+        "visits": 8
+      },
+      {
+        "id": "Wirklichkeit",
+        "visits": 8
+      },
+      {
+        "id": "Mensch",
+        "visits": 8
+      },
+      {
+        "id": "1910er",
+        "visits": 7
+      },
+      {
+        "id": "Indogermanische Sprachen",
+        "visits": 7
+      },
+      {
+        "id": "Nomenklatur (Biologie)",
+        "visits": 7
+      },
+      {
+        "id": "Naturgeschichte",
+        "visits": 7
+      },
+      {
+        "id": "Empirie",
+        "visits": 7
+      },
+      {
+        "id": "Hypothese",
+        "visits": 7
+      },
+      {
+        "id": "Bakterien",
+        "visits": 6
+      },
+      {
+        "id": "Existenz",
+        "visits": 6
+      },
+      {
+        "id": "Kommunikation",
+        "visits": 6
+      },
+      {
+        "id": "Neugriechische Sprache",
+        "visits": 6
+      },
+      {
+        "id": "18. Jahrhundert",
+        "visits": 6
+      },
+      {
+        "id": "13. Jahrhundert",
+        "visits": 6
+      },
+      {
+        "id": "2010er",
+        "visits": 6
+      }
+    ],
+    "links": [
+      {
+        "source": "Biologie",
+        "target": "Bakterien"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Existenz"
+      },
+      {
+        "source": "Sprache",
+        "target": "Kommunikation"
+      },
+      {
+        "source": "Kunst",
+        "target": "Wissen"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Wissen"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "20. Jahrhundert"
+      },
+      {
+        "source": "1910er",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "2020er"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Musik",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "System"
+      },
+      {
+        "source": "System",
+        "target": "Abstraktion"
+      },
+      {
+        "source": "Abstraktion",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Latein"
+      },
+      {
+        "source": "Latein",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Bakterien",
+        "target": "Nomenklatur (Biologie)"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Naturgeschichte"
+      },
+      {
+        "source": "Musik",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Abstraktion"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Mittelmeerraum"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Empirie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Tier"
+      },
+      {
+        "source": "Naturgeschichte",
+        "target": "Kunst"
+      },
+      {
+        "source": "21. Jahrhundert",
+        "target": "20. Jahrhundert"
+      },
+      {
+        "source": "1910er",
+        "target": "18. Jahrhundert"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Biologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Pilze"
+      },
+      {
+        "source": "Pilze",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Antikes Griechenland"
+      },
+      {
+        "source": "Antikes Griechenland",
+        "target": "Mittelmeerraum"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "Hypothese",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Metaphysik"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Denken"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Kunst",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Metaphysik",
+        "target": "Musik"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Kunst"
+      },
+      {
+        "source": "Bakterien",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Erfahrung",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Abstraktion",
+        "target": "Latein"
+      },
+      {
+        "source": "Latein",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Latein",
+        "target": "Mittelmeerraum"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Biologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Kunst",
+        "target": "Musik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Musik"
+      },
+      {
+        "source": "2020er",
+        "target": "2010er"
+      },
+      {
+        "source": "2010er",
+        "target": "2030er"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "2010er"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Wirklichkeit"
+      },
+      {
+        "source": "Neugriechische Sprache",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "21. Jahrhundert",
+        "target": "2020er"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Liste der IPA-Zeichen"
+      },
+      {
+        "source": "Biologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Kunst"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Neugriechische Sprache"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Erfahrung"
+      },
+      {
+        "source": "Kunst",
+        "target": "Biologie"
+      },
+      {
+        "source": "Bakterien",
+        "target": "Musik"
+      },
+      {
+        "source": "System",
+        "target": "Kunst"
+      },
+      {
+        "source": "Biologie",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Logik",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "2030er"
+      },
+      {
+        "source": "2030er",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Kunst"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Indogermanische Sprachen",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Latein",
+        "target": "Biologie"
+      },
+      {
+        "source": "Tier",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Denken"
+      },
+      {
+        "source": "Metaphysik",
+        "target": "Empirie"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Biologie"
+      },
+      {
+        "source": "Nomenklatur (Biologie)",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "18. Jahrhundert",
+        "target": "21. Jahrhundert"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Logik"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Mathematik"
+      },
+      {
+        "source": "2030er",
+        "target": "21. Jahrhundert"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Biologie",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Neugriechische Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Hypothese",
+        "target": "Empirie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Wirklichkeit",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Naturwissenschaft",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Metaphysik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "2020er",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "2020er",
+        "target": "2030er"
+      },
+      {
+        "source": "21. Jahrhundert",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Logik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Mathematik"
+      }
+    ]
+  },
+  "2026-02-22": {
+    "nodes": [
+      {
+        "id": "Philosophie",
+        "visits": 98
+      },
+      {
+        "id": "Biologie",
+        "visits": 88
+      },
+      {
+        "id": "Mathematik",
+        "visits": 88
+      },
+      {
+        "id": "Wissenschaft",
+        "visits": 83
+      },
+      {
+        "id": "Geschichte",
+        "visits": 78
+      },
+      {
+        "id": "Psychologie",
+        "visits": 69
+      },
+      {
+        "id": "Kunst",
+        "visits": 69
+      },
+      {
+        "id": "Musik",
+        "visits": 69
+      },
+      {
+        "id": "Altgriechische Sprache",
+        "visits": 44
+      },
+      {
+        "id": "Latein",
+        "visits": 38
+      },
+      {
+        "id": "Januar 2026",
+        "visits": 23
+      },
+      {
+        "id": "Logik",
+        "visits": 20
+      },
+      {
+        "id": "Wissen",
+        "visits": 19
+      },
+      {
+        "id": "Denken",
+        "visits": 18
+      },
+      {
+        "id": "Naturwissenschaft",
+        "visits": 17
+      },
+      {
+        "id": "Mensch",
+        "visits": 17
+      },
+      {
+        "id": "Jahreskalender",
+        "visits": 16
+      },
+      {
+        "id": "2020er",
+        "visits": 15
+      },
+      {
+        "id": "Lebewesen",
+        "visits": 15
+      },
+      {
+        "id": "21. Jahrhundert",
+        "visits": 15
+      },
+      {
+        "id": "Sprache",
+        "visits": 13
+      },
+      {
+        "id": "20. Jahrhundert",
+        "visits": 13
+      },
+      {
+        "id": "19. Jahrhundert",
+        "visits": 13
+      },
+      {
+        "id": "Deutsche Sprache",
+        "visits": 13
+      },
+      {
+        "id": "Wissenschaftstheorie",
+        "visits": 13
+      },
+      {
+        "id": "Englische Sprache",
+        "visits": 12
+      },
+      {
+        "id": "Abstraktion",
+        "visits": 11
+      },
+      {
+        "id": "Systematik (Biologie)",
+        "visits": 11
+      },
+      {
+        "id": "Metaphysik",
+        "visits": 11
+      },
+      {
+        "id": "Antike",
+        "visits": 11
+      },
+      {
+        "id": "2030er",
+        "visits": 11
+      },
+      {
+        "id": "Wirklichkeit",
+        "visits": 11
+      },
+      {
+        "id": "Mittelmeerraum",
+        "visits": 10
+      },
+      {
+        "id": "Erfahrung",
+        "visits": 10
+      },
+      {
+        "id": "2000er",
+        "visits": 10
+      },
+      {
+        "id": "Kommunikation",
+        "visits": 9
+      },
+      {
+        "id": "Sprachfamilie",
+        "visits": 9
+      },
+      {
+        "id": "System",
+        "visits": 9
+      },
+      {
+        "id": "Physik",
+        "visits": 9
+      },
+      {
+        "id": "Erkenntnistheorie",
+        "visits": 9
+      },
+      {
+        "id": "Tier",
+        "visits": 9
+      },
+      {
+        "id": "Antikes Griechenland",
+        "visits": 9
+      },
+      {
+        "id": "Hypothese",
+        "visits": 9
+      },
+      {
+        "id": "Welt",
+        "visits": 8
+      },
+      {
+        "id": "Liste der IPA-Zeichen",
+        "visits": 8
+      },
+      {
+        "id": "Begriff",
+        "visits": 8
+      },
+      {
+        "id": "Neugriechische Sprache",
+        "visits": 8
+      },
+      {
+        "id": "Indogermanische Sprachen",
+        "visits": 8
+      },
+      {
+        "id": "Nomenklatur (Biologie)",
+        "visits": 8
+      },
+      {
+        "id": "Menschheit",
+        "visits": 8
+      }
+    ],
+    "links": [
+      {
+        "source": "Philosophie",
+        "target": "Welt"
+      },
+      {
+        "source": "Sprache",
+        "target": "Kommunikation"
+      },
+      {
+        "source": "Kunst",
+        "target": "Wissen"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Wissen"
+      },
+      {
+        "source": "Latein",
+        "target": "Sprachfamilie"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Sprache"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "20. Jahrhundert"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "2020er"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Musik",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "System"
+      },
+      {
+        "source": "System",
+        "target": "Abstraktion"
+      },
+      {
+        "source": "Abstraktion",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Latein"
+      },
+      {
+        "source": "Latein",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Menschheit"
+      },
+      {
+        "source": "Musik",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Abstraktion"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Mittelmeerraum"
+      },
+      {
+        "source": "Wissen",
+        "target": "Erkenntnistheorie"
+      },
+      {
+        "source": "Erkenntnistheorie",
+        "target": "Wissen"
+      },
+      {
+        "source": "Biologie",
+        "target": "Tier"
+      },
+      {
+        "source": "21. Jahrhundert",
+        "target": "20. Jahrhundert"
+      },
+      {
+        "source": "Systematik (Biologie)",
+        "target": "Biologie"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Antikes Griechenland"
+      },
+      {
+        "source": "Antikes Griechenland",
+        "target": "Mittelmeerraum"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Wissenschaftstheorie"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "Hypothese",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Kunst"
+      },
+      {
+        "source": "Kunst",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Metaphysik"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Denken"
+      },
+      {
+        "source": "Deutsche Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Kunst",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Metaphysik",
+        "target": "Musik"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Kunst"
+      },
+      {
+        "source": "Erfahrung",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Abstraktion",
+        "target": "Latein"
+      },
+      {
+        "source": "Latein",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Menschheit",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Wissenschaftstheorie",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Latein",
+        "target": "Mittelmeerraum"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Biologie",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Antike"
+      },
+      {
+        "source": "Antike",
+        "target": "Antikes Griechenland"
+      },
+      {
+        "source": "Kunst",
+        "target": "Musik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Musik"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Wirklichkeit"
+      },
+      {
+        "source": "Neugriechische Sprache",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "21. Jahrhundert",
+        "target": "2020er"
+      },
+      {
+        "source": "19. Jahrhundert",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Menschheit",
+        "target": "Latein"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Liste der IPA-Zeichen"
+      },
+      {
+        "source": "Biologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Mathematik",
+        "target": "Kunst"
+      },
+      {
+        "source": "Altgriechische Sprache",
+        "target": "Neugriechische Sprache"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "Jahreskalender"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Erfahrung"
+      },
+      {
+        "source": "Antike",
+        "target": "Philosophie"
+      },
+      {
+        "source": "Kunst",
+        "target": "Biologie"
+      },
+      {
+        "source": "System",
+        "target": "Kunst"
+      },
+      {
+        "source": "Biologie",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Erkenntnistheorie"
+      },
+      {
+        "source": "Logik",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "2030er"
+      },
+      {
+        "source": "2030er",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Kunst"
+      },
+      {
+        "source": "Lebewesen",
+        "target": "Mathematik"
+      },
+      {
+        "source": "Sprachfamilie",
+        "target": "Indogermanische Sprachen"
+      },
+      {
+        "source": "Indogermanische Sprachen",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Latein",
+        "target": "Biologie"
+      },
+      {
+        "source": "Tier",
+        "target": "Systematik (Biologie)"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Denken"
+      },
+      {
+        "source": "Geschichte",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Biologie"
+      },
+      {
+        "source": "Nomenklatur (Biologie)",
+        "target": "Lebewesen"
+      },
+      {
+        "source": "Philosophie",
+        "target": "Logik"
+      },
+      {
+        "source": "Wissenschaft",
+        "target": "Mathematik"
+      },
+      {
+        "source": "21. Jahrhundert",
+        "target": "2000er"
+      },
+      {
+        "source": "2000er",
+        "target": "2030er"
+      },
+      {
+        "source": "2030er",
+        "target": "21. Jahrhundert"
+      },
+      {
+        "source": "Psychologie",
+        "target": "Altgriechische Sprache"
+      },
+      {
+        "source": "Biologie",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Naturwissenschaft",
+        "target": "Physik"
+      },
+      {
+        "source": "Neugriechische Sprache",
+        "target": "Psychologie"
+      },
+      {
+        "source": "Biologie",
+        "target": "Geschichte"
+      },
+      {
+        "source": "Wirklichkeit",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Biologie",
+        "target": "Physik"
+      },
+      {
+        "source": "Physik",
+        "target": "Naturwissenschaft"
+      },
+      {
+        "source": "Naturwissenschaft",
+        "target": "Wissenschaft"
+      },
+      {
+        "source": "Metaphysik",
+        "target": "Philosophie"
+      },
+      {
+        "source": "2020er",
+        "target": "Januar 2026"
+      },
+      {
+        "source": "Januar 2026",
+        "target": "2000er"
+      },
+      {
+        "source": "2000er",
+        "target": "2020er"
+      }
+    ]
+  }
+}

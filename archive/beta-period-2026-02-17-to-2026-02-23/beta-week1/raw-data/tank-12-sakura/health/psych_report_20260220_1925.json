@@ -1,0 +1,35 @@
+{
+  "tank_id": "tank-12-sakura",
+  "name": "Sakura",
+  "timestamp": "2026-02-20T19:25:07.087264",
+  "thought_count": 41,
+  "big_five": {
+    "openness": 75,
+    "conscientiousness": 100,
+    "extraversion": 50,
+    "agreeableness": 100,
+    "neuroticism": 0
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 4,
+      "esteem": 0,
+      "belonging": 2,
+      "safety": 0,
+      "physiological": 1
+    }
+  ],
+  "emotional_valence": 60,
+  "concerns": [
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "no one"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "HEALTHY"
+}

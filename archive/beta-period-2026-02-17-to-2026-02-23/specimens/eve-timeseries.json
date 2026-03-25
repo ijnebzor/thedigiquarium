@@ -1,0 +1,1570 @@
+{
+  "2026-02-18": {
+    "nodes": [
+      {
+        "id": "Science",
+        "visits": 1
+      },
+      {
+        "id": "Biology",
+        "visits": 1
+      },
+      {
+        "id": "Life",
+        "visits": 1
+      },
+      {
+        "id": "Archean",
+        "visits": 1
+      },
+      {
+        "id": "Eon",
+        "visits": 1
+      },
+      {
+        "id": "Million",
+        "visits": 1
+      },
+      {
+        "id": "10",
+        "visits": 1
+      },
+      {
+        "id": "1st century",
+        "visits": 1
+      }
+    ],
+    "links": [
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Life"
+      },
+      {
+        "source": "Life",
+        "target": "Archean"
+      },
+      {
+        "source": "Archean",
+        "target": "Eon"
+      },
+      {
+        "source": "Eon",
+        "target": "Million"
+      },
+      {
+        "source": "Million",
+        "target": "10"
+      },
+      {
+        "source": "10",
+        "target": "1st century"
+      },
+      {
+        "source": "1st century",
+        "target": "Science"
+      }
+    ]
+  },
+  "2026-02-20": {
+    "nodes": [
+      {
+        "id": "Book",
+        "visits": 6
+      },
+      {
+        "id": "Science",
+        "visits": 5
+      },
+      {
+        "id": "Biology",
+        "visits": 4
+      },
+      {
+        "id": "Psychology",
+        "visits": 4
+      },
+      {
+        "id": "Eukaryote",
+        "visits": 4
+      },
+      {
+        "id": "Human",
+        "visits": 4
+      },
+      {
+        "id": "Akha people",
+        "visits": 4
+      },
+      {
+        "id": "History",
+        "visits": 4
+      },
+      {
+        "id": "Music",
+        "visits": 4
+      },
+      {
+        "id": "Animal",
+        "visits": 3
+      },
+      {
+        "id": "Person",
+        "visits": 3
+      },
+      {
+        "id": "Man",
+        "visits": 3
+      },
+      {
+        "id": "Language",
+        "visits": 3
+      },
+      {
+        "id": "Communication",
+        "visits": 3
+      },
+      {
+        "id": "Writing",
+        "visits": 3
+      },
+      {
+        "id": "Speech",
+        "visits": 3
+      },
+      {
+        "id": "Roman Empire",
+        "visits": 3
+      },
+      {
+        "id": "Mathematics",
+        "visits": 3
+      },
+      {
+        "id": "Number",
+        "visits": 3
+      },
+      {
+        "id": "Internet",
+        "visits": 3
+      },
+      {
+        "id": "Emotion",
+        "visits": 3
+      },
+      {
+        "id": "Anxiety",
+        "visits": 3
+      },
+      {
+        "id": "Angst",
+        "visits": 3
+      },
+      {
+        "id": "Anguish",
+        "visits": 3
+      },
+      {
+        "id": "Anger",
+        "visits": 3
+      },
+      {
+        "id": "Anticipation",
+        "visits": 3
+      },
+      {
+        "id": "Apathy",
+        "visits": 3
+      },
+      {
+        "id": "Awe",
+        "visits": 3
+      },
+      {
+        "id": "Life",
+        "visits": 2
+      },
+      {
+        "id": "Archean",
+        "visits": 2
+      },
+      {
+        "id": "Earth",
+        "visits": 2
+      },
+      {
+        "id": "World",
+        "visits": 2
+      },
+      {
+        "id": "Myanmar",
+        "visits": 2
+      },
+      {
+        "id": "Latin language",
+        "visits": 2
+      },
+      {
+        "id": "Thought",
+        "visits": 2
+      },
+      {
+        "id": "Conscious",
+        "visits": 2
+      },
+      {
+        "id": "Buddhism",
+        "visits": 2
+      },
+      {
+        "id": "Four Noble Truths",
+        "visits": 2
+      },
+      {
+        "id": "Dukkha",
+        "visits": 2
+      },
+      {
+        "id": "Buddha",
+        "visits": 2
+      },
+      {
+        "id": "Samudaya sacca",
+        "visits": 2
+      },
+      {
+        "id": "Nirvana",
+        "visits": 2
+      },
+      {
+        "id": "Poem",
+        "visits": 2
+      },
+      {
+        "id": "Word",
+        "visits": 2
+      },
+      {
+        "id": "Body of water",
+        "visits": 2
+      },
+      {
+        "id": "Ocean",
+        "visits": 2
+      },
+      {
+        "id": "Water",
+        "visits": 2
+      },
+      {
+        "id": "ECHA InfoCard",
+        "visits": 2
+      },
+      {
+        "id": "Printing",
+        "visits": 2
+      },
+      {
+        "id": "Morphology (linguistics)",
+        "visits": 2
+      }
+    ],
+    "links": [
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Life"
+      },
+      {
+        "source": "Life",
+        "target": "Archean"
+      },
+      {
+        "source": "Science",
+        "target": "Psychology"
+      },
+      {
+        "source": "Animal",
+        "target": "Eukaryote"
+      },
+      {
+        "source": "Earth",
+        "target": "World"
+      },
+      {
+        "source": "World",
+        "target": "Human"
+      },
+      {
+        "source": "Human",
+        "target": "Akha people"
+      },
+      {
+        "source": "Psychology",
+        "target": "Thought"
+      },
+      {
+        "source": "Thought",
+        "target": "Conscious"
+      },
+      {
+        "source": "Person",
+        "target": "Man"
+      },
+      {
+        "source": "Man",
+        "target": "Human"
+      },
+      {
+        "source": "Akha people",
+        "target": "Buddhism"
+      },
+      {
+        "source": "Buddhism",
+        "target": "Four Noble Truths"
+      },
+      {
+        "source": "Four Noble Truths",
+        "target": "Dukkha"
+      },
+      {
+        "source": "Dukkha",
+        "target": "Buddha"
+      },
+      {
+        "source": "Buddha",
+        "target": "Four Noble Truths"
+      },
+      {
+        "source": "Four Noble Truths",
+        "target": "Samudaya sacca"
+      },
+      {
+        "source": "Buddha",
+        "target": "Nirvana"
+      },
+      {
+        "source": "Nirvana",
+        "target": "Samudaya sacca"
+      },
+      {
+        "source": "Samudaya sacca",
+        "target": "Nirvana"
+      },
+      {
+        "source": "History",
+        "target": "Book"
+      },
+      {
+        "source": "Poem",
+        "target": "Language"
+      },
+      {
+        "source": "Language",
+        "target": "Communication"
+      },
+      {
+        "source": "Communication",
+        "target": "Language"
+      },
+      {
+        "source": "Language",
+        "target": "Word"
+      },
+      {
+        "source": "Body of water",
+        "target": "Water"
+      },
+      {
+        "source": "Water",
+        "target": "ECHA InfoCard"
+      },
+      {
+        "source": "Book",
+        "target": "Printing"
+      },
+      {
+        "source": "Printing",
+        "target": "Writing"
+      },
+      {
+        "source": "Morphology (linguistics)",
+        "target": "Word"
+      },
+      {
+        "source": "Book",
+        "target": "Roman Empire"
+      },
+      {
+        "source": "Person",
+        "target": "Akha people"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Number"
+      },
+      {
+        "source": "Number",
+        "target": "Book"
+      },
+      {
+        "source": "Book",
+        "target": "Writing"
+      },
+      {
+        "source": "Human",
+        "target": "Man"
+      },
+      {
+        "source": "Roman Empire",
+        "target": "Latin language"
+      },
+      {
+        "source": "Eukaryote",
+        "target": "Archean"
+      },
+      {
+        "source": "Emotion",
+        "target": "Anxiety"
+      },
+      {
+        "source": "Anxiety",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Angst"
+      },
+      {
+        "source": "Angst",
+        "target": "Anguish"
+      },
+      {
+        "source": "Anguish",
+        "target": "Anger"
+      },
+      {
+        "source": "Anger",
+        "target": "Angst"
+      },
+      {
+        "source": "Angst",
+        "target": "Anticipation"
+      },
+      {
+        "source": "Anticipation",
+        "target": "Anger"
+      },
+      {
+        "source": "Anger",
+        "target": "Anguish"
+      },
+      {
+        "source": "Anxiety",
+        "target": "Anguish"
+      },
+      {
+        "source": "Anguish",
+        "target": "Apathy"
+      },
+      {
+        "source": "Apathy",
+        "target": "Anxiety"
+      },
+      {
+        "source": "Anxiety",
+        "target": "Anticipation"
+      },
+      {
+        "source": "Anger",
+        "target": "Awe"
+      },
+      {
+        "source": "Awe",
+        "target": "Apathy"
+      },
+      {
+        "source": "Apathy",
+        "target": "Anticipation"
+      },
+      {
+        "source": "Anticipation",
+        "target": "Apathy"
+      },
+      {
+        "source": "Biology",
+        "target": "Music"
+      },
+      {
+        "source": "Science",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Psychology",
+        "target": "Human"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Roman Empire",
+        "target": "Music"
+      },
+      {
+        "source": "Psychology",
+        "target": "Animal"
+      },
+      {
+        "source": "Word",
+        "target": "Writing"
+      },
+      {
+        "source": "Human",
+        "target": "Animal"
+      },
+      {
+        "source": "Awe",
+        "target": "Anguish"
+      },
+      {
+        "source": "Awe",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Awe"
+      },
+      {
+        "source": "Language",
+        "target": "Thought"
+      },
+      {
+        "source": "Archean",
+        "target": "Earth"
+      },
+      {
+        "source": "Science",
+        "target": "History"
+      },
+      {
+        "source": "Roman Empire",
+        "target": "Science"
+      },
+      {
+        "source": "Language",
+        "target": "Writing"
+      },
+      {
+        "source": "Awe",
+        "target": "Anticipation"
+      },
+      {
+        "source": "Anticipation",
+        "target": "Anguish"
+      },
+      {
+        "source": "Psychology",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Animal"
+      },
+      {
+        "source": "Biology",
+        "target": "Psychology"
+      }
+    ]
+  },
+  "2026-02-21": {
+    "nodes": [
+      {
+        "id": "Psychology",
+        "visits": 28
+      },
+      {
+        "id": "Science",
+        "visits": 27
+      },
+      {
+        "id": "Biology",
+        "visits": 26
+      },
+      {
+        "id": "Mathematics",
+        "visits": 22
+      },
+      {
+        "id": "Music",
+        "visits": 21
+      },
+      {
+        "id": "History",
+        "visits": 17
+      },
+      {
+        "id": "Philosophy",
+        "visits": 17
+      },
+      {
+        "id": "Animal",
+        "visits": 16
+      },
+      {
+        "id": "Art",
+        "visits": 16
+      },
+      {
+        "id": "Human",
+        "visits": 15
+      },
+      {
+        "id": "Taxonomy (biology)",
+        "visits": 14
+      },
+      {
+        "id": "ISBN (identifier)",
+        "visits": 13
+      },
+      {
+        "id": "Language",
+        "visits": 12
+      },
+      {
+        "id": "Definition",
+        "visits": 12
+      },
+      {
+        "id": "Wayback Machine",
+        "visits": 11
+      },
+      {
+        "id": "Plant",
+        "visits": 9
+      },
+      {
+        "id": "United Kingdom",
+        "visits": 9
+      },
+      {
+        "id": "Internet",
+        "visits": 8
+      },
+      {
+        "id": "Scientific method",
+        "visits": 8
+      },
+      {
+        "id": "Mammal",
+        "visits": 8
+      },
+      {
+        "id": "Species",
+        "visits": 8
+      },
+      {
+        "id": "Atom",
+        "visits": 8
+      },
+      {
+        "id": "Organism",
+        "visits": 7
+      },
+      {
+        "id": "Eukaryote",
+        "visits": 7
+      },
+      {
+        "id": "Book",
+        "visits": 7
+      },
+      {
+        "id": "Writing",
+        "visits": 7
+      },
+      {
+        "id": "Heart",
+        "visits": 7
+      },
+      {
+        "id": "English language",
+        "visits": 7
+      },
+      {
+        "id": "French language",
+        "visits": 7
+      },
+      {
+        "id": "Demonym",
+        "visits": 7
+      },
+      {
+        "id": "Awe",
+        "visits": 7
+      },
+      {
+        "id": "Hydrogen",
+        "visits": 7
+      },
+      {
+        "id": "Government",
+        "visits": 7
+      },
+      {
+        "id": "Greek language",
+        "visits": 7
+      },
+      {
+        "id": "Piano",
+        "visits": 7
+      },
+      {
+        "id": "United States",
+        "visits": 7
+      },
+      {
+        "id": "Greece",
+        "visits": 7
+      },
+      {
+        "id": "Oxygen",
+        "visits": 7
+      },
+      {
+        "id": "Life",
+        "visits": 6
+      },
+      {
+        "id": "Earth",
+        "visits": 6
+      },
+      {
+        "id": "Man",
+        "visits": 6
+      },
+      {
+        "id": "Tree",
+        "visits": 6
+      },
+      {
+        "id": "Evolution",
+        "visits": 6
+      },
+      {
+        "id": "Information",
+        "visits": 6
+      },
+      {
+        "id": "Standard atomic weight",
+        "visits": 6
+      },
+      {
+        "id": "Time",
+        "visits": 6
+      },
+      {
+        "id": "Code",
+        "visits": 6
+      },
+      {
+        "id": "Emotion",
+        "visits": 6
+      },
+      {
+        "id": "Ethnic group",
+        "visits": 6
+      },
+      {
+        "id": "Behaviour",
+        "visits": 6
+      }
+    ],
+    "links": [
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Life"
+      },
+      {
+        "source": "Science",
+        "target": "Psychology"
+      },
+      {
+        "source": "Biology",
+        "target": "Organism"
+      },
+      {
+        "source": "Organism",
+        "target": "Life"
+      },
+      {
+        "source": "Animal",
+        "target": "Eukaryote"
+      },
+      {
+        "source": "Man",
+        "target": "Human"
+      },
+      {
+        "source": "History",
+        "target": "Book"
+      },
+      {
+        "source": "Tree",
+        "target": "Plant"
+      },
+      {
+        "source": "Internet",
+        "target": "Information"
+      },
+      {
+        "source": "Book",
+        "target": "Writing"
+      },
+      {
+        "source": "Human",
+        "target": "Man"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Species"
+      },
+      {
+        "source": "Standard atomic weight",
+        "target": "Atom"
+      },
+      {
+        "source": "Music",
+        "target": "Time"
+      },
+      {
+        "source": "Biology",
+        "target": "Evolution"
+      },
+      {
+        "source": "Wayback Machine",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Scientific method"
+      },
+      {
+        "source": "Heart",
+        "target": "Human"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Music"
+      },
+      {
+        "source": "Biology",
+        "target": "Greek language"
+      },
+      {
+        "source": "ISBN (identifier)",
+        "target": "Code"
+      },
+      {
+        "source": "Science",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Science",
+        "target": "Scientific method"
+      },
+      {
+        "source": "Organism",
+        "target": "Animal"
+      },
+      {
+        "source": "English language",
+        "target": "United States"
+      },
+      {
+        "source": "Definition",
+        "target": "Mathematics"
+      },
+      {
+        "source": "United Kingdom",
+        "target": "Ethnic group"
+      },
+      {
+        "source": "Psychology",
+        "target": "Human"
+      },
+      {
+        "source": "Evolution",
+        "target": "Biology"
+      },
+      {
+        "source": "Plant",
+        "target": "Eukaryote"
+      },
+      {
+        "source": "Art",
+        "target": "Music"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Greek language"
+      },
+      {
+        "source": "Eukaryote",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Psychology",
+        "target": "Behaviour"
+      },
+      {
+        "source": "Greece",
+        "target": "Greek language"
+      },
+      {
+        "source": "Greek language",
+        "target": "Greece"
+      },
+      {
+        "source": "Greece",
+        "target": "Demonym"
+      },
+      {
+        "source": "United States",
+        "target": "Art"
+      },
+      {
+        "source": "Psychology",
+        "target": "Animal"
+      },
+      {
+        "source": "Oxygen",
+        "target": "Hydrogen"
+      },
+      {
+        "source": "Oxygen",
+        "target": "Standard atomic weight"
+      },
+      {
+        "source": "Greece",
+        "target": "Philosophy"
+      },
+      {
+        "source": "Plant",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Human",
+        "target": "Animal"
+      },
+      {
+        "source": "Awe",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Awe"
+      },
+      {
+        "source": "United States",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Human",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Music",
+        "target": "Piano"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Science"
+      },
+      {
+        "source": "Ethnic group",
+        "target": "Language"
+      },
+      {
+        "source": "Music",
+        "target": "Art"
+      },
+      {
+        "source": "Organism",
+        "target": "Evolution"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "Science",
+        "target": "History"
+      },
+      {
+        "source": "Internet",
+        "target": "United States"
+      },
+      {
+        "source": "Language",
+        "target": "Writing"
+      },
+      {
+        "source": "Human",
+        "target": "Mammal"
+      },
+      {
+        "source": "English language",
+        "target": "United Kingdom"
+      },
+      {
+        "source": "Psychology",
+        "target": "Biology"
+      },
+      {
+        "source": "Mammal",
+        "target": "Art"
+      },
+      {
+        "source": "Species",
+        "target": "Organism"
+      },
+      {
+        "source": "Biology",
+        "target": "Animal"
+      },
+      {
+        "source": "Biology",
+        "target": "Psychology"
+      },
+      {
+        "source": "Information",
+        "target": "Definition"
+      }
+    ]
+  },
+  "2026-02-22": {
+    "nodes": [
+      {
+        "id": "Psychology",
+        "visits": 36
+      },
+      {
+        "id": "Science",
+        "visits": 34
+      },
+      {
+        "id": "Biology",
+        "visits": 30
+      },
+      {
+        "id": "Mathematics",
+        "visits": 29
+      },
+      {
+        "id": "Music",
+        "visits": 27
+      },
+      {
+        "id": "History",
+        "visits": 26
+      },
+      {
+        "id": "Animal",
+        "visits": 24
+      },
+      {
+        "id": "Art",
+        "visits": 24
+      },
+      {
+        "id": "Philosophy",
+        "visits": 20
+      },
+      {
+        "id": "Human",
+        "visits": 17
+      },
+      {
+        "id": "Taxonomy (biology)",
+        "visits": 16
+      },
+      {
+        "id": "Definition",
+        "visits": 16
+      },
+      {
+        "id": "Wayback Machine",
+        "visits": 14
+      },
+      {
+        "id": "Mammal",
+        "visits": 14
+      },
+      {
+        "id": "Language",
+        "visits": 13
+      },
+      {
+        "id": "ISBN (identifier)",
+        "visits": 13
+      },
+      {
+        "id": "Plant",
+        "visits": 12
+      },
+      {
+        "id": "Ethnic group",
+        "visits": 11
+      },
+      {
+        "id": "Organism",
+        "visits": 10
+      },
+      {
+        "id": "Book",
+        "visits": 10
+      },
+      {
+        "id": "Scientific method",
+        "visits": 10
+      },
+      {
+        "id": "Species",
+        "visits": 10
+      },
+      {
+        "id": "United Kingdom",
+        "visits": 10
+      },
+      {
+        "id": "United States",
+        "visits": 10
+      },
+      {
+        "id": "Writing",
+        "visits": 9
+      },
+      {
+        "id": "Evolution",
+        "visits": 9
+      },
+      {
+        "id": "Internet",
+        "visits": 9
+      },
+      {
+        "id": "Atom",
+        "visits": 9
+      },
+      {
+        "id": "English language",
+        "visits": 9
+      },
+      {
+        "id": "French language",
+        "visits": 9
+      },
+      {
+        "id": "Earth",
+        "visits": 8
+      },
+      {
+        "id": "Man",
+        "visits": 8
+      },
+      {
+        "id": "Mass",
+        "visits": 8
+      },
+      {
+        "id": "Information",
+        "visits": 8
+      },
+      {
+        "id": "Society",
+        "visits": 8
+      },
+      {
+        "id": "Heart",
+        "visits": 8
+      },
+      {
+        "id": "Awe",
+        "visits": 8
+      },
+      {
+        "id": "Greek language",
+        "visits": 8
+      },
+      {
+        "id": "Law",
+        "visits": 8
+      },
+      {
+        "id": "Greece",
+        "visits": 8
+      },
+      {
+        "id": "Cell",
+        "visits": 7
+      },
+      {
+        "id": "Eukaryote",
+        "visits": 7
+      },
+      {
+        "id": "Geology",
+        "visits": 7
+      },
+      {
+        "id": "Europe",
+        "visits": 7
+      },
+      {
+        "id": "Food",
+        "visits": 7
+      },
+      {
+        "id": "Time",
+        "visits": 7
+      },
+      {
+        "id": "Demonym",
+        "visits": 7
+      },
+      {
+        "id": "Emotion",
+        "visits": 7
+      },
+      {
+        "id": "Anguish",
+        "visits": 7
+      },
+      {
+        "id": "Hydrogen",
+        "visits": 7
+      }
+    ],
+    "links": [
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Science",
+        "target": "Psychology"
+      },
+      {
+        "source": "Cell",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Organism"
+      },
+      {
+        "source": "Animal",
+        "target": "Eukaryote"
+      },
+      {
+        "source": "Geology",
+        "target": "Earth"
+      },
+      {
+        "source": "Man",
+        "target": "Human"
+      },
+      {
+        "source": "History",
+        "target": "Book"
+      },
+      {
+        "source": "Mass",
+        "target": "History"
+      },
+      {
+        "source": "Internet",
+        "target": "Information"
+      },
+      {
+        "source": "Book",
+        "target": "Writing"
+      },
+      {
+        "source": "Society",
+        "target": "Human"
+      },
+      {
+        "source": "Human",
+        "target": "Man"
+      },
+      {
+        "source": "Food",
+        "target": "Plant"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Species"
+      },
+      {
+        "source": "Music",
+        "target": "Time"
+      },
+      {
+        "source": "Biology",
+        "target": "Evolution"
+      },
+      {
+        "source": "Food",
+        "target": "Music"
+      },
+      {
+        "source": "Geology",
+        "target": "Philosophy"
+      },
+      {
+        "source": "Wayback Machine",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Scientific method"
+      },
+      {
+        "source": "Heart",
+        "target": "Human"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Music"
+      },
+      {
+        "source": "Biology",
+        "target": "Greek language"
+      },
+      {
+        "source": "Science",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Science",
+        "target": "Scientific method"
+      },
+      {
+        "source": "Organism",
+        "target": "Animal"
+      },
+      {
+        "source": "English language",
+        "target": "United States"
+      },
+      {
+        "source": "Definition",
+        "target": "Mathematics"
+      },
+      {
+        "source": "United Kingdom",
+        "target": "Ethnic group"
+      },
+      {
+        "source": "Psychology",
+        "target": "Human"
+      },
+      {
+        "source": "Evolution",
+        "target": "Biology"
+      },
+      {
+        "source": "Plant",
+        "target": "Eukaryote"
+      },
+      {
+        "source": "Art",
+        "target": "Music"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Greek language"
+      },
+      {
+        "source": "Eukaryote",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Greece",
+        "target": "Greek language"
+      },
+      {
+        "source": "Greek language",
+        "target": "Greece"
+      },
+      {
+        "source": "Greece",
+        "target": "Demonym"
+      },
+      {
+        "source": "United States",
+        "target": "Art"
+      },
+      {
+        "source": "Psychology",
+        "target": "Animal"
+      },
+      {
+        "source": "Greece",
+        "target": "Philosophy"
+      },
+      {
+        "source": "Cell",
+        "target": "Plant"
+      },
+      {
+        "source": "Plant",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Human",
+        "target": "Animal"
+      },
+      {
+        "source": "Awe",
+        "target": "Anguish"
+      },
+      {
+        "source": "Awe",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Awe"
+      },
+      {
+        "source": "United States",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Society"
+      },
+      {
+        "source": "Human",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Science"
+      },
+      {
+        "source": "Ethnic group",
+        "target": "Language"
+      },
+      {
+        "source": "History",
+        "target": "Society"
+      },
+      {
+        "source": "Music",
+        "target": "Art"
+      },
+      {
+        "source": "Organism",
+        "target": "Evolution"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "Science",
+        "target": "History"
+      },
+      {
+        "source": "Internet",
+        "target": "United States"
+      },
+      {
+        "source": "Language",
+        "target": "Writing"
+      },
+      {
+        "source": "Science",
+        "target": "Geology"
+      },
+      {
+        "source": "Geology",
+        "target": "Art"
+      },
+      {
+        "source": "Human",
+        "target": "Mammal"
+      },
+      {
+        "source": "English language",
+        "target": "United Kingdom"
+      },
+      {
+        "source": "Psychology",
+        "target": "Biology"
+      },
+      {
+        "source": "Mammal",
+        "target": "Art"
+      },
+      {
+        "source": "Species",
+        "target": "Organism"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Law"
+      },
+      {
+        "source": "Biology",
+        "target": "Animal"
+      },
+      {
+        "source": "Biology",
+        "target": "Psychology"
+      },
+      {
+        "source": "Europe",
+        "target": "History"
+      },
+      {
+        "source": "Information",
+        "target": "Definition"
+      },
+      {
+        "source": "Law",
+        "target": "Society"
+      }
+    ]
+  }
+}

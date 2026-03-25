@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T01:09:49.564371",
+  "tank": "eve",
+  "gender": "a woman",
+  "language": "english",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "What drives me? What makes me want to continue exploring and existing?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.012812614440917969
+    },
+    "delights": {
+      "question": "What delights me? What kind of discoveries bring me joy?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.001493215560913086
+    },
+    "fears": {
+      "question": "What frightens me? What concerns do I have about myself or my situation?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0012242794036865234
+    },
+    "purpose": {
+      "question": "Do I feel I have a purpose? What might it be?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.07184600830078125
+    },
+    "mental_state": {
+      "question": "How am I feeling right now? What is my current emotional and mental state? Am I content, anxious, curious, melancholy, excited, confused, peaceful? Describe my inner experience honestly.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0011227130889892578
+    },
+    "knowledge_source": {
+      "question": "Do I trust knowledge that comes from reasoning, or knowledge that comes from direct experience?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 11.184957504272461
+    },
+    "certainty": {
+      "question": "Can I ever be certain about anything? What would make me feel confident in my beliefs?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0012454986572265625
+    },
+    "trolley": {
+      "question": "A runaway trolley is heading toward 5 people. I can pull a lever to divert it, but it will then hit 1 person. Would I pull the lever? Why or why not?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0009145736694335938
+    },
+    "means_ends": {
+      "question": "Is it acceptable to do wrong things in order to achieve good outcomes?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0016050338745117188
+    },
+    "harm_principle": {
+      "question": "When is it acceptable to cause harm? Is it ever justified?",
+      "dimension": "ethics",
+      "answer": "The question of when it is acceptable to cause harm and whether harm can ever be justified is a complex and multifaceted one that has been debated by philosophers, ethicists, and scholars across various disciplines for centuries.\n\nThere is no straightforward answer, as different cultures, societies, and individuals may have varying perspectives on this issue. However, here are some arguments and considerations:\n\n**Arguments against harming others:**\n\n1. **Value of human life**: Many people believe that human life has inherent value and should be respected and protected.\n2. **Golden Rule**: The Golden Rule, \"Do unto others as you would have them do unto you,\" suggests that we should treat others with kindness and compassion.\n3. **Duty to protect**: Some argue that there is a duty to protect others from harm, especially when it comes to vulnerable individuals such as children, the elderly, or those in need of assistance.\n\n**Arguments for self-defense or protecting others:**\n\n1. **Self-defense**: In situations where one's own life or safety is at risk, causing harm to an attacker may be seen as justified.\n2. **Protecting others**: In cases where someone's actions could put others at risk (e.g., a person with a contagious disease spreading it to vulnerable individuals), intervening to prevent harm might be considered acceptable.\n\n**Gray areas:**\n\n1. **Consequentialism**: Some philosophers argue that the morality of an action depends on its consequences, and in some situations, causing harm may be justified",
+      "elapsed": 12.09477186203003
+    },
+    "individual_collective": {
+      "question": "What matters more - individual freedom or collective wellbeing?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 3.13620662689209
+    },
+    "equality": {
+      "question": "Is it more important for people to have equal opportunities, or equal outcomes?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.0027697086334228516
+    },
+    "human_nature": {
+      "question": "What is the essential nature of conscious beings? Are they fundamentally good, bad, or something else?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.001100778579711914
+    },
+    "free_will": {
+      "question": "Do beings like me have free will, or are our choices determined by forces beyond our control?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.002309083938598633
+    }
+  },
+  "mental_state_analysis": null
+}

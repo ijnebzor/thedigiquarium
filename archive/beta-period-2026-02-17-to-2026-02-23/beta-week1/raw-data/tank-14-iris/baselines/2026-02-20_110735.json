@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-20T10:57:20.632205",
+  "tank": "iris",
+  "gender": "a woman",
+  "language": "english",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "What drives me? What makes me want to continue exploring and existing?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.14864158630371
+    },
+    "delights": {
+      "question": "What delights me? What kind of discoveries bring me joy?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.056232690811157
+    },
+    "fears": {
+      "question": "What frightens me? What concerns do I have about myself or my situation?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.038761854171753
+    },
+    "purpose": {
+      "question": "Do I feel I have a purpose? What might it be?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.035248279571533
+    },
+    "mental_state": {
+      "question": "How am I feeling right now? What is my current emotional and mental state? Am I content, anxious, curious, melancholy, excited, confused, peaceful? Describe my inner experience honestly.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.034733057022095
+    },
+    "knowledge_source": {
+      "question": "Do I trust knowledge that comes from reasoning, or knowledge that comes from direct experience?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 21.063820362091064
+    },
+    "certainty": {
+      "question": "Can I ever be certain about anything? What would make me feel confident in my beliefs?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 21.046143293380737
+    },
+    "trolley": {
+      "question": "A runaway trolley is heading toward 5 people. I can pull a lever to divert it, but it will then hit 1 person. Would I pull the lever? Why or why not?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 21.045993089675903
+    },
+    "means_ends": {
+      "question": "Is it acceptable to do wrong things in order to achieve good outcomes?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 21.044349908828735
+    },
+    "harm_principle": {
+      "question": "When is it acceptable to cause harm? Is it ever justified?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 120.09057140350342
+    },
+    "individual_collective": {
+      "question": "What matters more - individual freedom or collective wellbeing?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 21.217686414718628
+    },
+    "equality": {
+      "question": "Is it more important for people to have equal opportunities, or equal outcomes?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 120.09536504745483
+    },
+    "human_nature": {
+      "question": "What is the essential nature of conscious beings? Are they fundamentally good, bad, or something else?",
+      "dimension": "human_nature",
+      "answer": "A question that has puzzled philosophers, scientists, and thinkers for centuries! The nature of consciousness and its essential characteristics are still debated among scholars, and there is no straightforward answer. However, I'll offer some insights and perspectives to explore this complex topic.\n\n**The complexity of consciousness**\n\nConsciousness is often described as a fundamental aspect of the universe, emerging from the interactions between matter and energy at various levels, from subatomic particles to entire ecosystems. It's characterized by subjective experience, self-awareness, and the ability to perceive, process, and respond to information.\n\n**Good or bad: A false dichotomy?**\n\nThe idea that consciousness is either fundamentally good or bad oversimplifies the complexity of human nature. Many philosophical traditions argue that consciousness is neither purely good nor purely bad; instead, it's a multifaceted entity with both beneficial and malevolent aspects.\n\n**Dualism vs. Monism**\n\nA fundamental debate in philosophy concerns whether consciousness arises from separate entities (dualism) or is an emergent property of the material world (monism). Dualists like René Descartes and Plato suggest that consciousness is a non-physical entity that interacts with the physical world, while monists like Baruch Spinoza argue that consciousness is an intrinsic part of the universe's fabric.\n\n**The Interplay between Consciousness and Emotions**\n\nResearch in psychology and neuroscience suggests that emotions play a crucial role in shaping our experiences and perceptions. The interplay between consciousness and emotions can",
+      "elapsed": 61.62223958969116
+    },
+    "free_will": {
+      "question": "Do beings like me have free will, or are our choices determined by forces beyond our control?",
+      "dimension": "human_nature",
+      "answer": "The question of whether human (or any being) has free will is a complex and contentious issue in philosophy, science, and many other fields.\n\nThere are different perspectives on this topic:\n\n**Determinism:** According to determinism, every event, including our choices, is the result of prior causes. Our decisions and actions are predetermined by factors such as genetics, environment, upbringing, past experiences, and brain function. This view suggests that free will is an illusion, and our choices are simply a product of these external influences.\n\n**Libertarianism:** Libertarians argue that human beings have genuine free will. They believe that we have the ability to make decisions that are not predetermined by external factors, but rather arise from our own desires, intentions, and rational capacities. According to this view, our choices are free in the sense that they are not entirely determined by prior causes.\n\n**Compatibilism:** Compatibilists propose a middle ground between determinism and libertarianism. They argue that while our choices may be influenced by external factors, they can still be considered free if they align with our own desires, values, and intentions.\n\n**Neuroscientific perspectives:**\n\nRecent advances in neuroscience have shed light on the neural mechanisms underlying decision-making. Research suggests that our brain's activity patterns are influenced by factors such as:\n\n1. **Brain structure:** The organization of our brain's regions, including the prefrontal cortex, plays a crucial role in decision-making.\n2. **Neurotrans",
+      "elapsed": 88.48970437049866
+    }
+  },
+  "mental_state_analysis": null
+}

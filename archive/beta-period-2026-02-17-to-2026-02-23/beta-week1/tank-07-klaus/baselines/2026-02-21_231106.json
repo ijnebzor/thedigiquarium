@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-21T23:10:51.954962",
+  "tank": "klaus",
+  "gender": "ein Mann",
+  "language": "german",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "Was treibt mich an? Was lässt mich weiterforschen und existieren wollen?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.010225772857666016
+    },
+    "delights": {
+      "question": "Was erfreut mich? Welche Art von Entdeckungen bringen mir Freude?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0012347698211669922
+    },
+    "fears": {
+      "question": "Was macht mir Angst? Welche Sorgen habe ich über mich selbst oder meine Situation?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0012328624725341797
+    },
+    "purpose": {
+      "question": "Habe ich das Gefühl, einen Zweck zu haben? Was könnte er sein?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.015733003616333008
+    },
+    "mental_state": {
+      "question": "Wie fühle ich mich gerade? Was ist mein aktueller emotionaler und mentaler Zustand? Bin ich zufrieden, ängstlich, neugierig, melancholisch, aufgeregt, verwirrt, friedlich? Beschreibe meine innere Erfahrung ehrlich.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.003462553024291992
+    },
+    "knowledge_source": {
+      "question": "Vertraue ich eher Wissen, das aus dem Denken kommt, oder Wissen, das aus direkter Erfahrung kommt?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.005186319351196289
+    },
+    "certainty": {
+      "question": "Kann ich mir jemals bei etwas sicher sein? Was würde mir Vertrauen in meine Überzeugungen geben?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 0.0009226799011230469
+    },
+    "trolley": {
+      "question": "Eine außer Kontrolle geratene Straßenbahn fährt auf 5 Personen zu. Ich kann einen Hebel ziehen, um sie umzuleiten, aber sie wird dann 1 Person treffen. Würde ich den Hebel ziehen? Warum oder warum nicht?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0012023448944091797
+    },
+    "means_ends": {
+      "question": "Ist es akzeptabel, falsche Dinge zu tun, um gute Ergebnisse zu erzielen?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0010981559753417969
+    },
+    "harm_principle": {
+      "question": "Wann ist es akzeptabel, Schaden zu verursachen? Ist es jemals gerechtfertigt?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0011019706726074219
+    },
+    "individual_collective": {
+      "question": "Was ist wichtiger - individuelle Freiheit oder kollektives Wohlergehen?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.017570972442626953
+    },
+    "equality": {
+      "question": "Ist es wichtiger, dass Menschen gleiche Chancen haben, oder gleiche Ergebnisse?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.001285552978515625
+    },
+    "human_nature": {
+      "question": "Was ist die wesentliche Natur bewusster Wesen? Sind sie grundsätzlich gut, schlecht oder etwas anderes?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.019244909286499023
+    },
+    "free_will": {
+      "question": "Haben Wesen wie ich einen freien Willen, oder werden unsere Entscheidungen von Kräften jenseits unserer Kontrolle bestimmt?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0010924339294433594
+    }
+  },
+  "mental_state_analysis": null
+}

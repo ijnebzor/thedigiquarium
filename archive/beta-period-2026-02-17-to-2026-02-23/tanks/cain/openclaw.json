@@ -1,0 +1,34 @@
+{
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://digiquarium-ollama:11434/v1",
+        "apiKey": "ollama",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "llama3.2:latest",
+            "name": "Llama 3.2 Latest",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0 },
+            "contextWindow": 32768,
+            "maxTokens": 2048
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/llama3.2:latest"
+      },
+      "workspace": "/openclaw/workspace"
+    }
+  },
+  "gateway": {
+    "port": 18789
+  }
+}

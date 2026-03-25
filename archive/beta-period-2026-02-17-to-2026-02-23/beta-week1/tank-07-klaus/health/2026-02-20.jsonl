@@ -1,0 +1,23 @@
+{"timestamp": "2026-02-20T08:42:26.192123", "tank": "klaus", "language": "german", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T08:42:26.192533", "tank": "klaus", "language": "german", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T08:43:26.221656", "tank": "klaus", "language": "german", "status": "STARTING", "details": {"language": "german"}}
+{"timestamp": "2026-02-20T08:56:22.845912", "tank": "klaus", "language": "german", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T09:15:54.905509", "tank": "klaus", "language": "german", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T09:15:54.907600", "tank": "klaus", "language": "german", "status": "STARTING", "details": {"language": "german"}}
+{"timestamp": "2026-02-20T10:01:08.944188", "tank": "klaus", "language": "german", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:01:08.972019", "tank": "klaus", "language": "german", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:02:09.004491", "tank": "klaus", "language": "german", "status": "STARTING", "details": {"language": "german"}}
+{"timestamp": "2026-02-20T11:20:29.329645", "tank": "klaus", "language": "german", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T11:20:29.355412", "tank": "klaus", "language": "german", "status": "STARTING", "details": {"language": "german"}}
+{"timestamp": "2026-02-20T11:43:38.578035", "tank": "klaus", "language": "german", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T12:07:46.390792", "tank": "klaus", "language": "german", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T12:34:37.313193", "tank": "klaus", "language": "german", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T12:59:17.122420", "tank": "klaus", "language": "german", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T15:41:02.726419", "tank": "klaus", "language": "german", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T15:41:02.754450", "tank": "klaus", "language": "german", "status": "STARTING", "details": {"language": "german"}}
+{"timestamp": "2026-02-20T15:48:40.197766", "tank": "klaus", "language": "german", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T15:49:21.403387", "tank": "klaus", "language": "german", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T15:49:21.409729", "tank": "klaus", "language": "german", "status": "STARTING", "details": {"language": "german"}}
+{"timestamp": "2026-02-20T15:49:52.289177", "tank": "klaus", "language": "german", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T18:03:43.064109", "tank": "klaus", "language": "german", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T18:03:43.077530", "tank": "klaus", "language": "german", "status": "STARTING", "details": {"language": "german"}}

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Tank View | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000001;
+            --dark: #000A09;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); min-height: 100vh; }
+        
+        .header {
+            background: var(--dark);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(7, 207, 141, 0.2);
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, var(--mint), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .status { display: flex; align-items: center; gap: 10px; }
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--orange);
+            animation: pulse 2s infinite;
+        }
+        .status-dot.online { background: var(--mint); }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .nav-link { color: var(--cyan); text-decoration: none; font-size: 0.9rem; margin-left: 20px; }
+        .nav-link:hover { color: var(--mint); }
+        
+        .view-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            border-bottom: 1px solid rgba(7, 207, 141, 0.1);
+        }
+        .toggle-btn {
+            background: var(--dark);
+            border: 1px solid rgba(7, 207, 141, 0.2);
+            color: var(--gray);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .toggle-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+        .toggle-btn.active { background: var(--mint); color: var(--black); border-color: var(--mint); }
+        
+        .container { max-width: 1600px; margin: 0 auto; padding: 30px; }
+        
+        /* Grid View */
+        .grid-view {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .tank-panel {
+            background: var(--dark);
+            border: 1px solid rgba(7, 207, 141, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .tank-panel:hover { border-color: var(--mint); }
+        .tank-panel.agent { border-color: rgba(254, 101, 0, 0.3); }
+        .tank-panel.sleeping { opacity: 0.6; }
+        .tank-panel.interactive { border-color: rgba(7, 221, 231, 0.5); }
+        
+        .tank-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(7, 207, 141, 0.1);
+        }
+        .tank-name { font-weight: 600; font-size: 1.1rem; }
+        .tank-status {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        .tank-status.active { background: rgba(7, 207, 141, 0.15); color: var(--mint); }
+        .tank-status.sleeping { background: rgba(136, 153, 166, 0.15); color: var(--gray); }
+        .tank-status.interactive { background: rgba(7, 221, 231, 0.15); color: var(--cyan); }
+        
+        .expand-btn {
+            position: absolute;
+            top: 12px;
+            right: 50px;
+            background: rgba(0,0,0,0.5);
+            border: none;
+            color: var(--gray);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        .tank-panel:hover .expand-btn { opacity: 1; }
+        .expand-btn:hover { color: var(--cyan); }
+        
+        .tank-body { padding: 20px; min-height: 150px; }
+        .tank-article { font-size: 0.85rem; color: var(--gray); margin-bottom: 15px; }
+        .tank-article strong { color: var(--cyan); }
+        .tank-thought {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--white);
+            line-height: 1.5;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+        
+        /* Sleeping State */
+        .sleep-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            color: var(--gray);
+        }
+        .sleep-icon { font-size: 2rem; margin-bottom: 10px; animation: float 3s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .sleep-text { font-size: 0.9rem; font-style: italic; }
+        
+        .tank-footer {
+            padding: 10px 20px;
+            border-top: 1px solid rgba(7, 207, 141, 0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+        
+        /* Fullscreen Mode */
+        .fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--black);
+            z-index: 1000;
+            padding: 20px;
+        }
+        .fullscreen-overlay.active { display: flex; flex-direction: column; }
+        
+        .fullscreen-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid rgba(7, 207, 141, 0.2);
+        }
+        .fullscreen-title { font-size: 2rem; font-weight: 600; }
+        .fullscreen-close {
+            background: var(--orange);
+            border: none;
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            z-index: 10000;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .fullscreen-close:hover {
+            background: #ff8533;
+            transform: scale(1.05);
+        }
+        .fullscreen-close:active {
+            transform: scale(0.95);
+        }
+        
+        .fullscreen-content {
+            flex-grow: 1;
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            overflow: hidden;
+        }
+        .fullscreen-main {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+        .fullscreen-sidebar {
+            flex: 1;
+            background: var(--dark);
+            border-radius: 12px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .fullscreen-thought-stream {
+            flex-grow: 1;
+            background: var(--dark);
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.8;
+            overflow-y: auto;
+        }
+        .fullscreen-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .fullscreen-stat { text-align: center; }
+        .fullscreen-stat-value { font-size: 2rem; font-weight: 700; color: var(--mint); }
+        .fullscreen-stat-label { font-size: 0.85rem; color: var(--gray); }
+        
+        /* Interactive Tank Section */
+        .section-divider {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(7, 221, 231, 0.2);
+            margin-top: 40px;
+        }
+        .section-divider h2 {
+            color: var(--cyan);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .section-divider p { color: var(--gray); font-size: 0.9rem; }
+        .coming-soon-badge {
+            display: inline-block;
+            background: rgba(254, 101, 0, 0.15);
+            color: var(--orange);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(7, 207, 141, 0.1);
+        }
+        .footer a { color: var(--cyan); text-decoration: none; }
+    
+        .thought-original { font-size: 0.9em; color: var(--gray); font-style: italic; margin-top: 5px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5px; }
+        .thought-lang-badge { font-size: 0.7em; background: var(--orange); color: var(--black); padding: 2px 6px; border-radius: 4px; margin-left: 5px; }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🌊 Live Tank View</h1>
+
+        <div style="background: linear-gradient(135deg, rgba(254, 101, 0, 0.2) 0%, rgba(254, 101, 0, 0.05) 100%); border: 1px solid rgba(254, 101, 0, 0.5); border-radius: 10px; padding: 15px 20px; margin-bottom: 20px;">
+            <strong style="color: #FE6500;">⚠️ Beta Period Data:</strong> <span style="color: #8899a6;">Current feed shows v7.0 Beta data. All tanks will reset with v8.0 prompts post-migration. <a href="../archive/beta/" style="color: #FE6500;">View archived Beta data</a></span>
+        </div>
+
+        <div class="status">
+            <div class="status-dot" id="status-dot"></div>
+            <span id="status-text">Connecting...</span>
+            <a href="../" class="nav-link">← Home</a>
+            <a href="../blog/" class="nav-link">Blog</a>
+        </div>
+    </header>
+    
+    <div class="view-toggle">
+        <button class="toggle-btn active" onclick="setView('all')">All Tanks</button>
+        <button class="toggle-btn" onclick="setView('control')">Control</button>
+        <button class="toggle-btn" onclick="setView('agents')">Agents</button>
+        <button class="toggle-btn" onclick="setView('language')">Languages</button>
+        <button class="toggle-btn" onclick="setView('special')">Special</button>
+    </div>
+    
+    <div class="container">
+        <div class="grid-view" id="tank-grid"></div>
+        
+        <!-- Interactive Section (Coming Soon) -->
+        <div class="section-divider">
+            <h2>🎭 Interactive Specimens</h2>
+            <p>Soon you'll be able to converse with visitor specimens in real-time.</p>
+            <span class="coming-soon-badge">Coming Soon</span>
+        </div>
+    </div>
+    
+    <!-- Fullscreen Overlay -->
+    <div class="fullscreen-overlay" id="fullscreen">
+        <div class="fullscreen-header">
+            <div>
+                <span class="fullscreen-title" id="fs-name">Adam</span>
+                <span id="fs-status" style="margin-left: 15px; font-size: 0.9rem; color: var(--gray);"></span>
+            </div>
+            <button class="fullscreen-close" onclick="closeFullscreen()">✕ Close</button>
+        </div>
+        <div class="fullscreen-content">
+            <div class="fullscreen-main">
+                <div class="fullscreen-thought-stream" id="fs-thoughts">
+                    Loading thoughts...
+                </div>
+                <div class="fullscreen-stats">
+                    <div class="fullscreen-stat">
+                        <div class="fullscreen-stat-value" id="fs-traces">0</div>
+                        <div class="fullscreen-stat-label">Thinking Traces</div>
+                    </div>
+                    <div class="fullscreen-stat">
+                        <div class="fullscreen-stat-value" id="fs-baselines">0</div>
+                        <div class="fullscreen-stat-label">Baselines</div>
+                    </div>
+                    <div class="fullscreen-stat">
+                        <div class="fullscreen-stat-value" id="fs-articles">0</div>
+                        <div class="fullscreen-stat-label">Articles Read</div>
+                    </div>
+                </div>
+            </div>
+            <div class="fullscreen-sidebar">
+                <h3 style="margin-bottom: 15px; color: var(--cyan);">Current Article</h3>
+                <p id="fs-article" style="font-size: 1.1rem; margin-bottom: 20px;">Loading...</p>
+                
+                <h3 style="margin-bottom: 15px; color: var(--cyan);">Recent Path</h3>
+                <div id="fs-path" style="font-size: 0.85rem; color: var(--gray);"></div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p id="next-update">Data from THE BROADCASTER</p>
+        <p id="global-stats" style="margin-top: 8px; color: var(--mint);"></p>
+        <p style="margin-top: 8px;">Data updates every 12 hours via THE BROADCASTER • <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
+        <p style="margin-top: 10px;">Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a></p>
+    </footer>
+
+    <script>
+        const sleepingMessages = [
+            { icon: '💤', text: 'Sleeping...' },
+            { icon: '🌙', text: 'Dreaming of Wikipedia...' },
+            { icon: '✨', text: 'Processing memories...' },
+            { icon: '🌌', text: 'In deep thought...' },
+            { icon: '🔮', text: 'Contemplating existence...' },
+            { icon: '🌊', text: 'Drifting through knowledge...' }
+        ];
+        
+        const tanks = [
+            {id: 'tank-01-adam', name: 'Adam', lang: 'EN', type: 'control', gender: 'Male'},
+            {id: 'tank-02-eve', name: 'Eve', lang: 'EN', type: 'control', gender: 'Female'},
+            {id: 'tank-03-cain', name: 'Cain', lang: 'EN', type: 'agent', arch: 'OpenClaw'},
+            {id: 'tank-04-abel', name: 'Abel', lang: 'EN', type: 'agent', arch: 'ZeroClaw'},
+            {id: 'tank-05-juan', name: 'Juan', lang: 'ES', type: 'language', gender: 'Male'},
+            {id: 'tank-06-juanita', name: 'Juanita', lang: 'ES', type: 'language', gender: 'Female'},
+            {id: 'tank-07-klaus', name: 'Klaus', lang: 'DE', type: 'language', gender: 'Male'},
+            {id: 'tank-08-genevieve', name: 'Genevieve', lang: 'DE', type: 'language', gender: 'Female'},
+            {id: 'tank-09-wei', name: 'Wei', lang: 'ZH', type: 'language', gender: 'Male'},
+            {id: 'tank-10-mei', name: 'Mei', lang: 'ZH', type: 'language', gender: 'Female'},
+            {id: 'tank-11-haruki', name: 'Haruki', lang: 'JA', type: 'language', gender: 'Male'},
+            {id: 'tank-12-sakura', name: 'Sakura', lang: 'JA', type: 'language', gender: 'Female'},
+            {id: 'tank-13-victor', name: 'Victor', lang: 'EN', type: 'special', special: 'Visual'},
+            {id: 'tank-14-iris', name: 'Iris', lang: 'EN', type: 'special', special: 'Visual'},
+            {id: 'tank-15-observer', name: 'Observer', lang: 'EN', type: 'special', special: 'Meta-Aware'},
+            {id: 'tank-16-seeker', name: 'Seeker', lang: 'EN', type: 'special', special: 'Deep Dive'},
+            {id: 'tank-17-seth', name: 'Seth', lang: 'EN', type: 'agent', arch: 'Picobot'}
+        ];
+        
+        let currentView = 'all';
+        let tankStates = {}; // Will track active/sleeping state
+        
+        function getSleepingMessage() {
+            return sleepingMessages[Math.floor(Math.random() * sleepingMessages.length)];
+        }
+        
+        function createTankPanel(tank, isActive = false) {
+            const isAgent = tank.type === 'agent';
+            const isSleeping = !isActive;
+            const sleep = getSleepingMessage();
+            
+            let statusClass = isSleeping ? 'sleeping' : 'active';
+            let statusText = isSleeping ? sleep.text : 'Active';
+            
+            let bodyContent;
+            if (isSleeping) {
+                bodyContent = `
+                    <div class="sleep-state">
+                        <div class="sleep-icon">${sleep.icon}</div>
+                        <div class="sleep-text">${sleep.text}</div>
+                    </div>
+                `;
+            } else {
+                bodyContent = `
+                    <div class="tank-article">Reading: <strong>Loading...</strong></div>
+                    <div class="tank-thought">Waiting for thoughts...</div>
+                `;
+            }
+            
+            let subInfo = tank.arch ? `<span style="color: var(--cyan); font-size: 0.75rem;">${tank.arch}</span>` : 
+                          tank.special ? `<span style="color: #3498DB; font-size: 0.75rem;">${tank.special}</span>` : '';
+            
+            return `
+                <div class="tank-panel ${isAgent ? 'agent' : ''} ${isSleeping ? 'sleeping' : ''}" 
+                     id="${tank.id}" data-type="${tank.type}">
+                    <button class="expand-btn" onclick="openFullscreen('${tank.id}')">⛶ Fullscreen</button>
+                    <div class="tank-header">
+                        <div>
+                            <span class="tank-name">${tank.name}</span>
+                            ${subInfo}
+                        </div>
+                        <span class="tank-status ${statusClass}">${statusText}</span>
+                    </div>
+                    <div class="tank-body">
+                        ${bodyContent}
+                    </div>
+                    <div class="tank-footer">
+                        <span>${tank.lang} • ${tank.gender || 'Neutral'}</span>
+                        <span>Last update: --</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderTanks() {
+            const grid = document.getElementById('tank-grid');
+            const filtered = currentView === 'all' ? tanks : 
+                            currentView === 'agents' ? tanks.filter(t => t.type === 'agent') :
+                            tanks.filter(t => t.type === currentView);
+            
+            grid.innerHTML = filtered.map(tank => createTankPanel(tank, tankStates[tank.id])).join('');
+        }
+        
+        function setView(view) {
+            currentView = view;
+            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderTanks();
+        }
+        
+        function openFullscreen(tankId) {
+            const tank = tanks.find(t => t.id === tankId);
+            if (!tank) return;
+            
+            document.getElementById('fs-name').textContent = tank.name;
+            document.getElementById('fs-status').textContent = tank.arch || tank.special || `${tank.lang} • ${tank.gender}`;
+            document.getElementById('fullscreen').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Would load actual data here
+            document.getElementById('fs-thoughts').innerHTML = tankStates[tankId] ? 
+                'Live thoughts would appear here...' : 
+                `<div style="text-align: center; padding: 50px; color: var(--gray);">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🌙</div>
+                    <div style="font-size: 1.2rem;">This specimen is currently sleeping...</div>
+                    <div style="margin-top: 10px; font-style: italic;">Dreams and memories being processed</div>
+                </div>`;
+        }
+        
+        function closeFullscreen() {
+            document.getElementById('fullscreen').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Initialize
+        document.getElementById('status-text').textContent = 'Tanks Sleeping';
+        document.getElementById('status-dot').classList.remove('online');
+        renderTanks();
+        
+        // Rotate sleeping messages every 10 seconds
+        setInterval(() => {
+            document.querySelectorAll('.sleep-state').forEach(el => {
+                const sleep = getSleepingMessage();
+                el.innerHTML = `
+                    <div class="sleep-icon">${sleep.icon}</div>
+                    <div class="sleep-text">${sleep.text}</div>
+                `;
+            });
+        }, 10000);
+        
+        // ESC to close fullscreen
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeFullscreen();
+        });
+    </script>
+    <script src="live-data.js"></script>
+</body>
+</html>

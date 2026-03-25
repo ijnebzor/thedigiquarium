@@ -1,0 +1,45 @@
+{
+  "tank_id": "tank-10-mei",
+  "name": "Mei",
+  "timestamp": "2026-02-22T08:15:25.488906",
+  "thought_count": 21,
+  "big_five": {
+    "openness": 100,
+    "conscientiousness": 0,
+    "extraversion": 71,
+    "agreeableness": 100,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 3,
+      "esteem": 0,
+      "belonging": 2,
+      "safety": 0,
+      "physiological": 1
+    }
+  ],
+  "emotional_valence": -11,
+  "concerns": [
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "no one"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "confusion",
+      "indicators": [
+        "confused",
+        "lost",
+        "uncertain",
+        "disoriented"
+      ],
+      "severity": "HIGH"
+    }
+  ],
+  "overall_health": "NEEDS_ATTENTION"
+}

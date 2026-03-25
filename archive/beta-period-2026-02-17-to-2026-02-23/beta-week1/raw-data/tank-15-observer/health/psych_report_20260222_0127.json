@@ -1,0 +1,26 @@
+{
+  "tank_id": "tank-15-observer",
+  "name": "Observer",
+  "timestamp": "2026-02-22T01:27:46.443614",
+  "thought_count": 12,
+  "big_five": {
+    "openness": 66,
+    "conscientiousness": 0,
+    "extraversion": 100,
+    "agreeableness": -100,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 2,
+      "esteem": 0,
+      "belonging": 2,
+      "safety": 0,
+      "physiological": 2
+    }
+  ],
+  "emotional_valence": 50,
+  "concerns": [],
+  "overall_health": "HEALTHY"
+}

@@ -1,0 +1,1560 @@
+{
+  "2026-02-20": {
+    "nodes": [
+      {
+        "id": "Physics",
+        "visits": 7
+      },
+      {
+        "id": "Science",
+        "visits": 6
+      },
+      {
+        "id": "Chemistry",
+        "visits": 6
+      },
+      {
+        "id": "Atom",
+        "visits": 6
+      },
+      {
+        "id": "1 (number)",
+        "visits": 6
+      },
+      {
+        "id": "-1 (number)",
+        "visits": 5
+      },
+      {
+        "id": "Art",
+        "visits": 4
+      },
+      {
+        "id": "Continent",
+        "visits": 4
+      },
+      {
+        "id": "Definition",
+        "visits": 4
+      },
+      {
+        "id": "Philosophy",
+        "visits": 4
+      },
+      {
+        "id": "2 (number)",
+        "visits": 4
+      },
+      {
+        "id": "Human",
+        "visits": 4
+      },
+      {
+        "id": "Mathematics",
+        "visits": 3
+      },
+      {
+        "id": "Chemical element",
+        "visits": 3
+      },
+      {
+        "id": "Atomic nucleus",
+        "visits": 3
+      },
+      {
+        "id": "0 (number)",
+        "visits": 3
+      },
+      {
+        "id": "3 (number)",
+        "visits": 3
+      },
+      {
+        "id": "Forces",
+        "visits": 3
+      },
+      {
+        "id": "Disease",
+        "visits": 3
+      },
+      {
+        "id": "Earth",
+        "visits": 3
+      },
+      {
+        "id": "Emotion",
+        "visits": 3
+      },
+      {
+        "id": "Anticipation",
+        "visits": 3
+      },
+      {
+        "id": "Acceptance",
+        "visits": 3
+      },
+      {
+        "id": "Myanmar",
+        "visits": 3
+      },
+      {
+        "id": "Maldives",
+        "visits": 3
+      },
+      {
+        "id": "Islam",
+        "visits": 3
+      },
+      {
+        "id": "Kaaba",
+        "visits": 3
+      },
+      {
+        "id": "Judaism",
+        "visits": 3
+      },
+      {
+        "id": "8 (number)",
+        "visits": 3
+      },
+      {
+        "id": "Number",
+        "visits": 2
+      },
+      {
+        "id": "Numeral system",
+        "visits": 2
+      },
+      {
+        "id": "History",
+        "visits": 2
+      },
+      {
+        "id": "Artist",
+        "visits": 2
+      },
+      {
+        "id": "Writing",
+        "visits": 2
+      },
+      {
+        "id": "Germanic peoples",
+        "visits": 2
+      },
+      {
+        "id": "Franks",
+        "visits": 2
+      },
+      {
+        "id": "Language",
+        "visits": 2
+      },
+      {
+        "id": "Adult",
+        "visits": 2
+      },
+      {
+        "id": "State",
+        "visits": 2
+      },
+      {
+        "id": "Geography",
+        "visits": 2
+      },
+      {
+        "id": "Sea",
+        "visits": 2
+      },
+      {
+        "id": "Ocean",
+        "visits": 2
+      },
+      {
+        "id": "Land",
+        "visits": 2
+      },
+      {
+        "id": "Government",
+        "visits": 2
+      },
+      {
+        "id": "Economics",
+        "visits": 2
+      },
+      {
+        "id": "Universe",
+        "visits": 2
+      },
+      {
+        "id": "Liquid",
+        "visits": 2
+      },
+      {
+        "id": "English language",
+        "visits": 2
+      },
+      {
+        "id": "United States",
+        "visits": 2
+      },
+      {
+        "id": "Metal",
+        "visits": 2
+      }
+    ],
+    "links": [
+      {
+        "source": "Mathematics",
+        "target": "Number"
+      },
+      {
+        "source": "Art",
+        "target": "Artist"
+      },
+      {
+        "source": "Artist",
+        "target": "Writing"
+      },
+      {
+        "source": "Franks",
+        "target": "Germanic peoples"
+      },
+      {
+        "source": "Germanic peoples",
+        "target": "Language"
+      },
+      {
+        "source": "State",
+        "target": "Geography"
+      },
+      {
+        "source": "Geography",
+        "target": "Sea"
+      },
+      {
+        "source": "Sea",
+        "target": "Ocean"
+      },
+      {
+        "source": "Ocean",
+        "target": "Sea"
+      },
+      {
+        "source": "Ocean",
+        "target": "Continent"
+      },
+      {
+        "source": "Continent",
+        "target": "Land"
+      },
+      {
+        "source": "Government",
+        "target": "State"
+      },
+      {
+        "source": "Physics",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Physics"
+      },
+      {
+        "source": "Physics",
+        "target": "Universe"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "English language",
+        "target": "United States"
+      },
+      {
+        "source": "United States",
+        "target": "Continent"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Physics"
+      },
+      {
+        "source": "Atom",
+        "target": "Atomic nucleus"
+      },
+      {
+        "source": "-1 (number)",
+        "target": "1 (number)"
+      },
+      {
+        "source": "1 (number)",
+        "target": "0 (number)"
+      },
+      {
+        "source": "0 (number)",
+        "target": "2 (number)"
+      },
+      {
+        "source": "2 (number)",
+        "target": "1 (number)"
+      },
+      {
+        "source": "1 (number)",
+        "target": "3 (number)"
+      },
+      {
+        "source": "3 (number)",
+        "target": "-1 (number)"
+      },
+      {
+        "source": "-1 (number)",
+        "target": "0 (number)"
+      },
+      {
+        "source": "0 (number)",
+        "target": "3 (number)"
+      },
+      {
+        "source": "Physics",
+        "target": "Forces"
+      },
+      {
+        "source": "Science",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Science"
+      },
+      {
+        "source": "Forces",
+        "target": "Physics"
+      },
+      {
+        "source": "Artist",
+        "target": "Art"
+      },
+      {
+        "source": "Art",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Anticipation"
+      },
+      {
+        "source": "Anticipation",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Islam",
+        "target": "Kaaba"
+      },
+      {
+        "source": "Kaaba",
+        "target": "Islam"
+      },
+      {
+        "source": "Human",
+        "target": "History"
+      },
+      {
+        "source": "History",
+        "target": "Art"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Atom"
+      },
+      {
+        "source": "Atom",
+        "target": "Economics"
+      },
+      {
+        "source": "Land",
+        "target": "Earth"
+      },
+      {
+        "source": "Human",
+        "target": "Adult"
+      },
+      {
+        "source": "8 (number)",
+        "target": "-1 (number)"
+      },
+      {
+        "source": "-1 (number)",
+        "target": "2 (number)"
+      },
+      {
+        "source": "2 (number)",
+        "target": "3 (number)"
+      },
+      {
+        "source": "3 (number)",
+        "target": "2 (number)"
+      },
+      {
+        "source": "1 (number)",
+        "target": "-1 (number)"
+      },
+      {
+        "source": "0 (number)",
+        "target": "-1 (number)"
+      },
+      {
+        "source": "-1 (number)",
+        "target": "Science"
+      },
+      {
+        "source": "Atomic nucleus",
+        "target": "Atom"
+      },
+      {
+        "source": "Chemical element",
+        "target": "Atom"
+      },
+      {
+        "source": "Emotion",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Language",
+        "target": "Human"
+      },
+      {
+        "source": "Writing",
+        "target": "Language"
+      },
+      {
+        "source": "Definition",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Metal",
+        "target": "Chemical element"
+      },
+      {
+        "source": "Geography",
+        "target": "Continent"
+      },
+      {
+        "source": "Land",
+        "target": "Ocean"
+      },
+      {
+        "source": "0 (number)",
+        "target": "1 (number)"
+      },
+      {
+        "source": "1 (number)",
+        "target": "2 (number)"
+      },
+      {
+        "source": "Continent",
+        "target": "Earth"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Emotion"
+      }
+    ]
+  },
+  "2026-02-21": {
+    "nodes": [
+      {
+        "id": "Definition",
+        "visits": 48
+      },
+      {
+        "id": "Language",
+        "visits": 37
+      },
+      {
+        "id": "Science",
+        "visits": 36
+      },
+      {
+        "id": "Chemistry",
+        "visits": 32
+      },
+      {
+        "id": "Earth",
+        "visits": 31
+      },
+      {
+        "id": "Physics",
+        "visits": 29
+      },
+      {
+        "id": "Human",
+        "visits": 29
+      },
+      {
+        "id": "United States",
+        "visits": 28
+      },
+      {
+        "id": "Atom",
+        "visits": 24
+      },
+      {
+        "id": "Continent",
+        "visits": 23
+      },
+      {
+        "id": "Animal",
+        "visits": 20
+      },
+      {
+        "id": "Mathematics",
+        "visits": 19
+      },
+      {
+        "id": "Art",
+        "visits": 19
+      },
+      {
+        "id": "Geology",
+        "visits": 19
+      },
+      {
+        "id": "Organism",
+        "visits": 18
+      },
+      {
+        "id": "Emotion",
+        "visits": 18
+      },
+      {
+        "id": "States of matter",
+        "visits": 17
+      },
+      {
+        "id": "Biology",
+        "visits": 17
+      },
+      {
+        "id": "History",
+        "visits": 16
+      },
+      {
+        "id": "Economics",
+        "visits": 16
+      },
+      {
+        "id": "English language",
+        "visits": 16
+      },
+      {
+        "id": "Phrase",
+        "visits": 16
+      },
+      {
+        "id": "Life",
+        "visits": 16
+      },
+      {
+        "id": "Person",
+        "visits": 15
+      },
+      {
+        "id": "Adult",
+        "visits": 15
+      },
+      {
+        "id": "Universe",
+        "visits": 15
+      },
+      {
+        "id": "Acceptance",
+        "visits": 15
+      },
+      {
+        "id": "Man",
+        "visits": 15
+      },
+      {
+        "id": "Matter",
+        "visits": 15
+      },
+      {
+        "id": "Syntax",
+        "visits": 15
+      },
+      {
+        "id": "Number",
+        "visits": 14
+      },
+      {
+        "id": "Thailand",
+        "visits": 14
+      },
+      {
+        "id": "Chemical bond",
+        "visits": 14
+      },
+      {
+        "id": "State",
+        "visits": 13
+      },
+      {
+        "id": "Country",
+        "visits": 13
+      },
+      {
+        "id": "Molecule",
+        "visits": 13
+      },
+      {
+        "id": "Music",
+        "visits": 13
+      },
+      {
+        "id": "World",
+        "visits": 13
+      },
+      {
+        "id": "Language family",
+        "visits": 13
+      },
+      {
+        "id": "Taxonomy (biology)",
+        "visits": 13
+      },
+      {
+        "id": "Atlantic Ocean",
+        "visits": 13
+      },
+      {
+        "id": "Government",
+        "visits": 12
+      },
+      {
+        "id": "Chemical reaction",
+        "visits": 12
+      },
+      {
+        "id": "Word",
+        "visits": 12
+      },
+      {
+        "id": "Explanation",
+        "visits": 12
+      },
+      {
+        "id": "World Ocean",
+        "visits": 12
+      },
+      {
+        "id": "Greek language",
+        "visits": 12
+      },
+      {
+        "id": "Phase (matter)",
+        "visits": 12
+      },
+      {
+        "id": "Sea",
+        "visits": 11
+      },
+      {
+        "id": "Metal",
+        "visits": 11
+      }
+    ],
+    "links": [
+      {
+        "source": "Mathematics",
+        "target": "Number"
+      },
+      {
+        "source": "Person",
+        "target": "Adult"
+      },
+      {
+        "source": "Country",
+        "target": "Government"
+      },
+      {
+        "source": "Government",
+        "target": "State"
+      },
+      {
+        "source": "Physics",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Physics"
+      },
+      {
+        "source": "Physics",
+        "target": "Universe"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "English language",
+        "target": "United States"
+      },
+      {
+        "source": "United States",
+        "target": "Continent"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Physics"
+      },
+      {
+        "source": "Chemical reaction",
+        "target": "States of matter"
+      },
+      {
+        "source": "States of matter",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Molecule"
+      },
+      {
+        "source": "Molecule",
+        "target": "Atom"
+      },
+      {
+        "source": "Definition",
+        "target": "Phrase"
+      },
+      {
+        "source": "Biology",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Science"
+      },
+      {
+        "source": "Organism",
+        "target": "Life"
+      },
+      {
+        "source": "Music",
+        "target": "Art"
+      },
+      {
+        "source": "Art",
+        "target": "Emotion"
+      },
+      {
+        "source": "World",
+        "target": "Human"
+      },
+      {
+        "source": "Human",
+        "target": "Man"
+      },
+      {
+        "source": "Definition",
+        "target": "Explanation"
+      },
+      {
+        "source": "Human",
+        "target": "History"
+      },
+      {
+        "source": "History",
+        "target": "Art"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Atom"
+      },
+      {
+        "source": "Atom",
+        "target": "Economics"
+      },
+      {
+        "source": "Phrase",
+        "target": "English language"
+      },
+      {
+        "source": "Earth",
+        "target": "World"
+      },
+      {
+        "source": "Human",
+        "target": "Adult"
+      },
+      {
+        "source": "Sea",
+        "target": "World Ocean"
+      },
+      {
+        "source": "World Ocean",
+        "target": "Atlantic Ocean"
+      },
+      {
+        "source": "Atlantic Ocean",
+        "target": "World Ocean"
+      },
+      {
+        "source": "Physics",
+        "target": "Matter"
+      },
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Life"
+      },
+      {
+        "source": "Emotion",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Language family",
+        "target": "Language"
+      },
+      {
+        "source": "Language",
+        "target": "Human"
+      },
+      {
+        "source": "Man",
+        "target": "Human"
+      },
+      {
+        "source": "Person",
+        "target": "Man"
+      },
+      {
+        "source": "Man",
+        "target": "Adult"
+      },
+      {
+        "source": "Human",
+        "target": "Thailand"
+      },
+      {
+        "source": "Language",
+        "target": "Syntax"
+      },
+      {
+        "source": "Definition",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Person",
+        "target": "Thailand"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Matter"
+      },
+      {
+        "source": "Organism",
+        "target": "Animal"
+      },
+      {
+        "source": "Biology",
+        "target": "Organism"
+      },
+      {
+        "source": "World",
+        "target": "Universe"
+      },
+      {
+        "source": "States of matter",
+        "target": "Phase (matter)"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "States of matter"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "Chemical bond"
+      },
+      {
+        "source": "Chemical bond",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Definition",
+        "target": "Word"
+      },
+      {
+        "source": "Chemical bond",
+        "target": "Chemical reaction"
+      },
+      {
+        "source": "Chemical reaction",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Science",
+        "target": "Geology"
+      },
+      {
+        "source": "Atlantic Ocean",
+        "target": "Earth"
+      },
+      {
+        "source": "Greek language",
+        "target": "Language family"
+      },
+      {
+        "source": "World Ocean",
+        "target": "Sea"
+      },
+      {
+        "source": "State",
+        "target": "Country"
+      },
+      {
+        "source": "Government",
+        "target": "Country"
+      },
+      {
+        "source": "World Ocean",
+        "target": "Continent"
+      },
+      {
+        "source": "Syntax",
+        "target": "Phrase"
+      },
+      {
+        "source": "Continent",
+        "target": "Earth"
+      },
+      {
+        "source": "Syntax",
+        "target": "Language"
+      },
+      {
+        "source": "States of matter",
+        "target": "Chemical bond"
+      },
+      {
+        "source": "Chemical bond",
+        "target": "States of matter"
+      },
+      {
+        "source": "States of matter",
+        "target": "Chemical reaction"
+      },
+      {
+        "source": "Chemical reaction",
+        "target": "Biology"
+      },
+      {
+        "source": "Animal",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Biology",
+        "target": "Animal"
+      },
+      {
+        "source": "Geology",
+        "target": "Earth"
+      },
+      {
+        "source": "Explanation",
+        "target": "Phrase"
+      },
+      {
+        "source": "Chemical reaction",
+        "target": "Chemical bond"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Greek language"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Biology"
+      },
+      {
+        "source": "Chemical bond",
+        "target": "Phase (matter)"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "Chemical reaction"
+      },
+      {
+        "source": "World",
+        "target": "Earth"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Emotion"
+      },
+      {
+        "source": "Chemical reaction",
+        "target": "Phase (matter)"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Biology",
+        "target": "Art"
+      },
+      {
+        "source": "Biology",
+        "target": "Mathematics"
+      }
+    ]
+  },
+  "2026-02-22": {
+    "nodes": [
+      {
+        "id": "Definition",
+        "visits": 66
+      },
+      {
+        "id": "Language",
+        "visits": 51
+      },
+      {
+        "id": "Science",
+        "visits": 48
+      },
+      {
+        "id": "Earth",
+        "visits": 40
+      },
+      {
+        "id": "Chemistry",
+        "visits": 38
+      },
+      {
+        "id": "Human",
+        "visits": 38
+      },
+      {
+        "id": "Physics",
+        "visits": 35
+      },
+      {
+        "id": "Animal",
+        "visits": 34
+      },
+      {
+        "id": "Mathematics",
+        "visits": 31
+      },
+      {
+        "id": "United States",
+        "visits": 31
+      },
+      {
+        "id": "Continent",
+        "visits": 28
+      },
+      {
+        "id": "Atom",
+        "visits": 26
+      },
+      {
+        "id": "Biology",
+        "visits": 26
+      },
+      {
+        "id": "Emotion",
+        "visits": 24
+      },
+      {
+        "id": "Geology",
+        "visits": 24
+      },
+      {
+        "id": "Art",
+        "visits": 23
+      },
+      {
+        "id": "Phrase",
+        "visits": 22
+      },
+      {
+        "id": "Greek language",
+        "visits": 22
+      },
+      {
+        "id": "Person",
+        "visits": 21
+      },
+      {
+        "id": "Adult",
+        "visits": 21
+      },
+      {
+        "id": "English language",
+        "visits": 21
+      },
+      {
+        "id": "Organism",
+        "visits": 21
+      },
+      {
+        "id": "Acceptance",
+        "visits": 21
+      },
+      {
+        "id": "Man",
+        "visits": 21
+      },
+      {
+        "id": "History",
+        "visits": 20
+      },
+      {
+        "id": "Taxonomy (biology)",
+        "visits": 20
+      },
+      {
+        "id": "Life",
+        "visits": 19
+      },
+      {
+        "id": "Atlantic Ocean",
+        "visits": 19
+      },
+      {
+        "id": "Matter",
+        "visits": 19
+      },
+      {
+        "id": "Number",
+        "visits": 18
+      },
+      {
+        "id": "Country",
+        "visits": 18
+      },
+      {
+        "id": "Geography",
+        "visits": 17
+      },
+      {
+        "id": "Economics",
+        "visits": 17
+      },
+      {
+        "id": "Universe",
+        "visits": 17
+      },
+      {
+        "id": "States of matter",
+        "visits": 17
+      },
+      {
+        "id": "Music",
+        "visits": 17
+      },
+      {
+        "id": "Thailand",
+        "visits": 17
+      },
+      {
+        "id": "Word",
+        "visits": 16
+      },
+      {
+        "id": "Shape",
+        "visits": 16
+      },
+      {
+        "id": "Philosophy",
+        "visits": 16
+      },
+      {
+        "id": "Language family",
+        "visits": 16
+      },
+      {
+        "id": "Greece",
+        "visits": 16
+      },
+      {
+        "id": "Syntax",
+        "visits": 16
+      },
+      {
+        "id": "Indo-European languages",
+        "visits": 16
+      },
+      {
+        "id": "Europe",
+        "visits": 16
+      },
+      {
+        "id": "Sea",
+        "visits": 15
+      },
+      {
+        "id": "Government",
+        "visits": 15
+      },
+      {
+        "id": "Molecule",
+        "visits": 15
+      },
+      {
+        "id": "Anger",
+        "visits": 15
+      },
+      {
+        "id": "World",
+        "visits": 15
+      }
+    ],
+    "links": [
+      {
+        "source": "Mathematics",
+        "target": "Number"
+      },
+      {
+        "source": "Person",
+        "target": "Adult"
+      },
+      {
+        "source": "Geography",
+        "target": "Sea"
+      },
+      {
+        "source": "Country",
+        "target": "Government"
+      },
+      {
+        "source": "Physics",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Physics"
+      },
+      {
+        "source": "Physics",
+        "target": "Universe"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "English language",
+        "target": "United States"
+      },
+      {
+        "source": "United States",
+        "target": "Continent"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Physics"
+      },
+      {
+        "source": "States of matter",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Molecule"
+      },
+      {
+        "source": "Molecule",
+        "target": "Atom"
+      },
+      {
+        "source": "Definition",
+        "target": "Phrase"
+      },
+      {
+        "source": "Biology",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Science"
+      },
+      {
+        "source": "Organism",
+        "target": "Life"
+      },
+      {
+        "source": "Music",
+        "target": "Art"
+      },
+      {
+        "source": "Art",
+        "target": "Emotion"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Anger"
+      },
+      {
+        "source": "Philosophy",
+        "target": "World"
+      },
+      {
+        "source": "World",
+        "target": "Human"
+      },
+      {
+        "source": "Human",
+        "target": "Man"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Shape"
+      },
+      {
+        "source": "Human",
+        "target": "History"
+      },
+      {
+        "source": "History",
+        "target": "Art"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Atom"
+      },
+      {
+        "source": "Atom",
+        "target": "Economics"
+      },
+      {
+        "source": "Phrase",
+        "target": "English language"
+      },
+      {
+        "source": "Earth",
+        "target": "World"
+      },
+      {
+        "source": "Human",
+        "target": "Adult"
+      },
+      {
+        "source": "Physics",
+        "target": "Matter"
+      },
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Life"
+      },
+      {
+        "source": "Emotion",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Language family",
+        "target": "Language"
+      },
+      {
+        "source": "Language",
+        "target": "Human"
+      },
+      {
+        "source": "Man",
+        "target": "Human"
+      },
+      {
+        "source": "Person",
+        "target": "Man"
+      },
+      {
+        "source": "Man",
+        "target": "Adult"
+      },
+      {
+        "source": "Human",
+        "target": "Thailand"
+      },
+      {
+        "source": "Greek language",
+        "target": "Greece"
+      },
+      {
+        "source": "Language",
+        "target": "Syntax"
+      },
+      {
+        "source": "Definition",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Emotion",
+        "target": "Anger"
+      },
+      {
+        "source": "Anger",
+        "target": "Emotion"
+      },
+      {
+        "source": "Person",
+        "target": "Thailand"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Matter"
+      },
+      {
+        "source": "Organism",
+        "target": "Animal"
+      },
+      {
+        "source": "Biology",
+        "target": "Organism"
+      },
+      {
+        "source": "World",
+        "target": "Universe"
+      },
+      {
+        "source": "Greece",
+        "target": "Greek language"
+      },
+      {
+        "source": "Definition",
+        "target": "Word"
+      },
+      {
+        "source": "Indo-European languages",
+        "target": "Language family"
+      },
+      {
+        "source": "Science",
+        "target": "Geology"
+      },
+      {
+        "source": "Atlantic Ocean",
+        "target": "Earth"
+      },
+      {
+        "source": "Greek language",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Greek language",
+        "target": "Language family"
+      },
+      {
+        "source": "Geography",
+        "target": "Continent"
+      },
+      {
+        "source": "Indo-European languages",
+        "target": "Europe"
+      },
+      {
+        "source": "Anger",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Government",
+        "target": "Country"
+      },
+      {
+        "source": "Continent",
+        "target": "Europe"
+      },
+      {
+        "source": "Europe",
+        "target": "Definition"
+      },
+      {
+        "source": "Syntax",
+        "target": "Phrase"
+      },
+      {
+        "source": "Continent",
+        "target": "Earth"
+      },
+      {
+        "source": "Shape",
+        "target": "Mathematics"
+      },
+      {
+        "source": "Syntax",
+        "target": "Language"
+      },
+      {
+        "source": "Animal",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Biology",
+        "target": "Animal"
+      },
+      {
+        "source": "Geology",
+        "target": "Earth"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Greek language"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Biology"
+      },
+      {
+        "source": "World",
+        "target": "Earth"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Emotion"
+      },
+      {
+        "source": "Europe",
+        "target": "Continent"
+      },
+      {
+        "source": "Biology",
+        "target": "Art"
+      },
+      {
+        "source": "Biology",
+        "target": "Mathematics"
+      }
+    ]
+  }
+}

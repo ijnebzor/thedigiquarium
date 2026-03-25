@@ -1,0 +1,52 @@
+{
+  "tank_id": "tank-16-seeker",
+  "name": "Seeker",
+  "timestamp": "2026-02-22T08:15:25.580262",
+  "thought_count": 125,
+  "big_five": {
+    "openness": 27,
+    "conscientiousness": 100,
+    "extraversion": 55,
+    "agreeableness": 33,
+    "neuroticism": 33
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 5,
+      "esteem": 3,
+      "belonging": 4,
+      "safety": 2,
+      "physiological": 5
+    }
+  ],
+  "emotional_valence": 9,
+  "concerns": [
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "disconnected"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "confusion",
+      "indicators": [
+        "lost",
+        "uncertain"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "obsession",
+      "indicators": [
+        "must",
+        "have to",
+        "driven"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "HEALTHY"
+}

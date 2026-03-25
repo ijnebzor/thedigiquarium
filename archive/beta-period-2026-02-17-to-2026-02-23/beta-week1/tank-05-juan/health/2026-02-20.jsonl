@@ -1,0 +1,26 @@
+{"timestamp": "2026-02-20T08:42:26.228478", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T08:42:26.228807", "tank": "juan", "language": "spanish", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T08:43:26.261059", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}
+{"timestamp": "2026-02-20T09:15:56.905870", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T09:15:56.916568", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}
+{"timestamp": "2026-02-20T09:49:46.730989", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T09:49:46.756863", "tank": "juan", "language": "spanish", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T09:50:46.788152", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}
+{"timestamp": "2026-02-20T10:56:55.205333", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T10:56:55.212973", "tank": "juan", "language": "spanish", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T10:57:55.219723", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}
+{"timestamp": "2026-02-20T12:12:39.778096", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T12:12:39.780747", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}
+{"timestamp": "2026-02-20T12:36:33.578843", "tank": "juan", "language": "spanish", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T13:01:40.430900", "tank": "juan", "language": "spanish", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T13:27:35.950319", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-20T13:27:35.951372", "tank": "juan", "language": "spanish", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-20T13:28:35.958234", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}
+{"timestamp": "2026-02-20T15:14:20.882967", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T15:14:20.884559", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}
+{"timestamp": "2026-02-20T15:43:31.465210", "tank": "juan", "language": "spanish", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T15:49:15.022440", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T15:49:15.024818", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}
+{"timestamp": "2026-02-20T15:49:57.059425", "tank": "juan", "language": "spanish", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-20T18:03:39.750006", "tank": "juan", "language": "spanish", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-20T18:03:39.784251", "tank": "juan", "language": "spanish", "status": "STARTING", "details": {"language": "spanish"}}

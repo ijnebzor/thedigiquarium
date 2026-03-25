@@ -1,0 +1,421 @@
+{"timestamp": "2026-02-21T00:22:29.180818", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T00:22:29.182487", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T19:42:37.344623", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T19:42:37.359260", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T19:45:51.587035", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T19:49:46.948894", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T19:49:46.949736", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T19:52:51.623114", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T19:55:42.414811", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T19:55:42.427294", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T19:56:42.433258", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T19:59:49.138124", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:02:27.608593", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:02:27.623157", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:05:14.437271", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:09:28.812462", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:09:28.827370", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:12:29.635889", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:16:21.495164", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T20:16:21.495837", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T20:17:21.527969", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:19:58.853397", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:23:06.138069", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:23:06.154538", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:25:54.877367", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:29:49.291928", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T20:29:49.292454", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T20:30:49.283696", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:33:26.183648", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:36:34.134249", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": true, "passed": true}}
+{"timestamp": "2026-02-21T20:36:34.134783", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:38:38.809688", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:42:48.170534", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T20:42:48.171177", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T20:43:48.178781", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:44:15.544165", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:44:45.738074", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:45:16.028608", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:45:46.396911", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:46:18.930977", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:46:49.266375", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:47:19.449941", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:47:51.945224", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:48:22.227306", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:48:52.014431", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T20:48:52.015044", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T20:49:52.035196", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:50:19.647277", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:50:49.901367", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:51:20.243218", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:51:50.552922", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:52:20.845647", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:52:51.134029", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:53:21.624186", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:53:53.951621", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:54:24.684459", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:54:54.991683", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:55:21.967096", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T20:55:21.967548", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T20:56:21.975765", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T20:56:50.467443", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:57:20.692447", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:57:50.926917", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:58:21.281999", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:58:51.661902", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:59:21.974944", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T20:59:52.600886", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:00:23.252715", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:00:53.461333", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:01:23.856952", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:01:46.112640", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:01:46.113151", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:02:46.113243", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:03:13.397449", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:03:43.718163", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:04:14.239959", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:04:44.641601", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:05:15.115910", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:05:45.625926", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:06:18.083893", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:06:48.255642", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:07:18.613409", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:07:48.797729", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:08:07.293676", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:08:07.294256", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:09:07.285765", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:09:34.763633", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:10:05.332426", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:10:35.779210", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:11:08.206368", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:11:40.502878", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:12:10.829563", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:12:43.129251", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:13:13.426482", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:13:43.628528", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:14:14.187254", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:14:35.065355", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:14:35.065905", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:15:35.059829", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:16:02.783394", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:16:32.997927", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:17:03.308121", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:17:33.564261", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:18:03.869247", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:18:36.426498", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:19:06.705043", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:19:37.136554", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:20:09.442637", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:20:39.843569", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:21:05.389758", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:21:05.390293", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:22:05.393769", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:22:34.671239", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:23:06.942229", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:23:37.296511", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:24:08.194579", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:24:38.593241", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:25:09.264497", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:25:39.927113", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:26:12.443103", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:26:44.842104", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:27:27.784365", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:27:27.784870", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:28:27.770934", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:28:55.073839", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:29:27.308369", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:29:57.771089", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:30:28.221051", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:30:58.713032", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:31:29.393317", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:31:59.770795", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:32:30.514898", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:33:00.712712", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:33:31.197526", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:33:49.065481", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:33:49.066547", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:34:49.068470", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:35:18.761150", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:35:48.946688", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:36:19.548389", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:36:50.018316", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:37:20.451651", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:37:50.918292", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:38:21.441993", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:38:51.687885", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:39:22.178288", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:39:52.580141", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:40:14.888070", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:40:14.888632", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:41:14.883265", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:41:42.542557", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:42:14.889742", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:42:45.216872", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:43:15.387629", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:43:45.752854", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:44:16.281187", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:44:46.706062", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:45:17.012737", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:45:47.317954", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:46:17.591546", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:46:42.177049", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:46:42.177537", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:47:42.173070", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:48:12.209934", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:48:44.798730", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:49:17.828727", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:49:50.241421", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:50:20.831653", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:50:53.184452", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:51:23.384312", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:51:53.628336", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:52:26.785658", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:52:57.110398", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:53:14.003596", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:53:14.004128", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T21:54:13.995754", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T21:54:43.425606", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:55:13.710099", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:55:43.903814", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:56:14.191811", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:56:44.447604", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:57:16.721319", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:57:47.182624", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:58:17.787899", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:58:48.360328", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:59:18.706549", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T21:59:35.960631", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T21:59:35.961153", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:00:35.970547", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:01:03.445566", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:01:33.716646", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:02:04.266269", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:02:34.614970", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:03:07.351361", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:03:37.600556", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:04:07.761361", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:04:38.014037", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:05:10.399268", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:05:40.710165", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:06:03.311947", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:06:03.321037", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:07:03.290471", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:07:30.523716", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:08:00.880040", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:08:31.504565", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:09:01.845346", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:09:32.052856", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:10:02.391240", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:10:34.851976", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:11:07.293093", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:11:37.546727", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:12:07.926482", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:12:29.153295", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:12:29.153739", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:13:29.192932", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:13:56.769082", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:14:27.345532", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:14:57.695661", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:15:28.036762", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:15:58.357529", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:16:28.813835", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:16:59.339600", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:17:32.004968", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:18:02.339918", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:18:32.616423", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:19:03.432906", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:19:03.478306", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:20:03.472962", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:20:31.491944", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:21:01.916905", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:21:32.249274", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:22:02.492354", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:22:34.728550", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:23:04.992238", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:23:35.248536", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:24:05.571121", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:24:37.816274", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:25:08.331938", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:25:28.189377", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:25:28.208526", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:26:28.202570", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:26:56.157734", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:27:26.413556", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:27:56.834016", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:28:27.212527", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:28:57.617226", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:29:28.112732", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:29:58.275526", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:30:30.790173", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:31:03.200492", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:31:48.670187", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:31:48.675739", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:32:48.670582", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:33:16.327044", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:33:48.705681", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:34:19.039502", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:34:49.492868", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:35:21.979839", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:35:52.254308", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:36:22.633180", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:36:54.842906", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:37:30.050620", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:38:15.584076", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:38:15.595313", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:39:15.598251", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:39:45.701370", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:40:18.009844", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:40:50.619010", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:41:21.043908", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:41:51.668048", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:42:21.874140", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:42:52.248455", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:43:22.894992", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:43:55.101968", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:44:40.576207", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:44:40.622018", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:45:40.637452", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:46:08.091333", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:46:38.510881", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:47:08.789292", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:47:39.249325", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:48:09.625952", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:48:41.860880", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:49:14.197237", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:49:44.444726", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:50:14.719440", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:50:45.155748", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:51:09.687320", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:51:09.687918", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:52:09.716473", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:52:37.274472", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:53:07.737762", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:53:37.950775", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:54:10.236008", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:54:40.490937", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:55:10.665283", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:55:43.279231", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:56:13.692359", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:56:44.158836", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:57:14.372177", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:57:39.877047", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T22:57:39.894076", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T22:58:39.875793", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T22:59:07.783370", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T22:59:38.019014", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:00:08.319311", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:00:38.566588", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:01:08.807012", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:01:39.455420", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:02:09.859458", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:02:40.322313", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:03:12.672428", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:03:42.857419", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:04:04.438688", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:04:04.442167", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:05:04.410095", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:05:32.503345", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:06:02.968383", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:06:33.426184", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:07:05.884926", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:07:38.248899", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:08:08.558787", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:08:40.960688", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:09:11.265473", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:09:43.685790", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:10:30.852043", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:10:30.854078", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:11:30.847009", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:11:59.022131", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:12:31.285288", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:13:01.681701", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:13:32.184231", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:14:02.470513", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:14:32.757168", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:15:02.896255", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:15:33.169152", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:16:03.426059", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:16:33.791972", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:17:04.551885", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:17:04.559055", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:18:04.559808", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:18:32.870037", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:19:03.336439", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:19:33.620250", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:20:03.818420", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:20:34.001599", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:21:04.306628", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:21:34.581466", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:22:04.884354", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:22:35.395547", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:23:05.616264", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:23:43.712406", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:23:43.759916", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:24:43.731155", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:25:12.362004", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:25:42.708144", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:26:12.869013", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:26:43.399847", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:27:13.632955", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:27:44.319379", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:28:14.548249", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:28:44.882495", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:29:15.193800", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:29:45.763829", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:30:10.038301", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:30:10.042136", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:31:10.038077", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:31:37.895777", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:32:08.610262", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:32:39.367126", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:33:09.744455", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:33:41.941569", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:34:12.619754", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:34:42.910607", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:35:15.405881", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:35:47.785113", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:36:34.330370", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:36:34.345996", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:37:34.331319", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:38:01.744607", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:38:31.984138", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:39:02.439448", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:39:34.729077", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:40:05.122852", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:40:37.600614", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:41:07.835016", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:41:40.165014", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:42:15.640213", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:42:57.048569", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:42:57.063177", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:43:57.057378", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:44:24.749950", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:44:55.068477", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:45:25.427713", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:45:55.804465", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:46:26.083315", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:46:56.334367", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:47:26.647406", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:47:58.967910", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:48:29.427465", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:49:00.116630", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 100, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:49:34.572091", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:49:34.575702", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:50:34.565333", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:51:01.957968", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:51:32.339171", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:52:02.735311", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:52:32.990820", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:53:07.346852", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:53:37.718495", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 60, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:54:08.094667", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 70, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:54:38.525486", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 80, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:55:11.004011", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 90, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:55:58.372467", "tank": "adam", "language": "english", "status": "PREFLIGHT", "details": {"wikipedia": true, "links": true, "ollama": false, "passed": false}}
+{"timestamp": "2026-02-21T23:55:58.381864", "tank": "adam", "language": "english", "status": "PREFLIGHT_FAILED", "details": {"waiting": 60}}
+{"timestamp": "2026-02-21T23:56:58.388536", "tank": "adam", "language": "english", "status": "STARTING", "details": {"language": "english"}}
+{"timestamp": "2026-02-21T23:57:27.053054", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 10, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:57:57.382045", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 20, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:58:29.660137", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 30, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:59:00.058566", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 40, "loop_escapes": 0}}
+{"timestamp": "2026-02-21T23:59:30.390869", "tank": "adam", "language": "english", "status": "EXPLORING", "details": {"articles": 50, "loop_escapes": 0}}

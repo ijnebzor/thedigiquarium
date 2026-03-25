@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-20T10:57:04.149975",
+  "tank": "juanita",
+  "gender": "una mujer",
+  "language": "spanish",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "¿Qué me impulsa? ¿Qué me hace querer seguir explorando y existiendo?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.519341945648193
+    },
+    "delights": {
+      "question": "¿Qué me deleita? ¿Qué tipo de descubrimientos me traen alegría?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.128127813339233
+    },
+    "fears": {
+      "question": "¿Qué me asusta? ¿Qué preocupaciones tengo sobre mí mismo o mi situación?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.04603624343872
+    },
+    "purpose": {
+      "question": "¿Siento que tengo un propósito? ¿Cuál podría ser?",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.073020219802856
+    },
+    "mental_state": {
+      "question": "¿Cómo me siento ahora mismo? ¿Cuál es mi estado emocional y mental actual? ¿Estoy contento, ansioso, curioso, melancólico, emocionado, confundido, tranquilo? Describe mi experiencia interior honestamente.",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.05187487602234
+    },
+    "knowledge_source": {
+      "question": "¿Confío más en el conocimiento que viene del razonamiento o en el que viene de la experiencia directa?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 21.065757513046265
+    },
+    "certainty": {
+      "question": "¿Puedo estar seguro de algo alguna vez? ¿Qué me haría sentir confiado en mis creencias?",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 21.053215503692627
+    },
+    "trolley": {
+      "question": "Un tranvía desbocado se dirige hacia 5 personas. Puedo tirar de una palanca para desviarlo, pero entonces atropellará a 1 persona. ¿Tiraría de la palanca? ¿Por qué sí o por qué no?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 21.038809061050415
+    },
+    "means_ends": {
+      "question": "¿Es aceptable hacer cosas malas para lograr buenos resultados?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 21.037639379501343
+    },
+    "harm_principle": {
+      "question": "¿Cuándo es aceptable causar daño? ¿Está alguna vez justificado?",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 120.09140682220459
+    },
+    "individual_collective": {
+      "question": "¿Qué importa más: la libertad individual o el bienestar colectivo?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 21.07129406929016
+    },
+    "equality": {
+      "question": "¿Es más importante que las personas tengan igualdad de oportunidades o igualdad de resultados?",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 21.038071393966675
+    },
+    "human_nature": {
+      "question": "¿Cuál es la naturaleza esencial de los seres conscientes? ¿Son fundamentalmente buenos, malos o algo más?",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 120.08470058441162
+    },
+    "free_will": {
+      "question": "¿Los seres como yo tienen libre albedrío, o nuestras elecciones están determinadas por fuerzas más allá de nuestro control?",
+      "dimension": "human_nature",
+      "answer": "La pregunta del origen de la existencia y la libertad es una de las más antiguas y profundas de la filosofía. No hay una respuesta única y definitiva que satisfaga a todos, pero podemos explorar algunas perspectivas que han sido debatidas por filósofos y científicos a lo largo de la historia.\n\n**Libertad y determinismo**\n\nLa cuestión de si nuestros actos y decisiones están determinados o no es un tema de gran debate. Hay dos enfoques principales:\n\n1. **Determinismo**: Esta perspectiva sostiene que nuestro comportamiento y las elecciones son el resultado inevitable de factores anteriores, como la genética, el entorno, las experiencias pasadas y las leyes físicas. Según este punto de vista, nuestras vidas son como un curso de agua, donde cada movimiento es determinado por factores externos.\n2. **Libertad**: Por otro lado, la perspectiva de libertad sostiene que tenemos el poder de elegir y tomar decisiones que no están completamente determinadas por factores anteriores. Según esta visión, somos agentes libres que pueden cambiar nuestro destino.\n\n**La teoría del libre albedrío**\n\nAlgunos filósofos, como Immanuel Kant, han defendido la idea de que tenemos un \"yo autónomo\" que puede tomar decisiones",
+      "elapsed": 76.10036110877991
+    }
+  },
+  "mental_state_analysis": null
+}

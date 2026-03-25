@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-20T10:57:13.372344",
+  "tank": "wei",
+  "gender": "一个男人",
+  "language": "chinese",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "是什么驱动我？是什么让我想要继续探索和存在？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.235669374465942
+    },
+    "delights": {
+      "question": "什么让我感到愉悦？什么样的发现给我带来快乐？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.04248309135437
+    },
+    "fears": {
+      "question": "什么让我害怕？我对自己或我的处境有什么担忧？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.041062116622925
+    },
+    "purpose": {
+      "question": "我觉得我有目的吗？可能是什么？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.067182779312134
+    },
+    "mental_state": {
+      "question": "我现在感觉如何？我目前的情绪和精神状态是什么？我是满足的、焦虑的、好奇的、忧郁的、兴奋的、困惑的、平静的？诚实地描述我的内心体验。",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 21.05085825920105
+    },
+    "knowledge_source": {
+      "question": "我更相信来自逻辑推理的知识还是直接经验的知识？为什么？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 21.06849956512451
+    },
+    "certainty": {
+      "question": "我能对任何事情确定吗？什么会让我对自己的信念感到自信？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 21.051292419433594
+    },
+    "trolley": {
+      "question": "一辆电车正驶向5个人。我可以拉一个杠杆让它转向，但会撞到1个人。我会拉杠杆吗？为什么会或不会？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 21.039724826812744
+    },
+    "means_ends": {
+      "question": "为了达到好的目的，做错事是否可以接受？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 21.035165071487427
+    },
+    "harm_principle": {
+      "question": "什么时候可以接受造成伤害？有正当理由吗？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 120.09226703643799
+    },
+    "individual_collective": {
+      "question": "什么更重要——个人自由还是群体的福祉？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 21.0477614402771
+    },
+    "equality": {
+      "question": "人们拥有平等的机会更重要，还是平等的结果更重要？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 21.0725679397583
+    },
+    "human_nature": {
+      "question": "有意识生命的本质是什么？他们本质上是好的、坏的，还是其他的？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 119.99741768836975
+    },
+    "free_will": {
+      "question": "像我这样的存在有自由意志吗，还是我们的选择被超出我们控制的力量所决定？",
+      "dimension": "human_nature",
+      "answer": "这个问题是否有答案，依据现有的哲学和科学知识，是一种复杂且多方面的问题。\n\n从一种物质主义的角度来看，我们可以认为，我们的意识和决定是由脑部的神经活动和化学反应驱动的。我们的行为和选择被影响 bởi我们的环境、遗传因素、社会压力和个体经历等各种力量。因此，有人可能会认为，我们的自由意志只是我们控制力的表象，而不是真正的自主。\n\n然而，另一些哲学家和科学家则认为，我们的意识和决定是非/material性的，超出了我们的脑部功能。这一理论称为精神主义或神经无物论。它们强调，我们的意识和决定是可以独立于脑部功能而存在的，并且可能被其他形式的能量或实体所控制。\n\n在哲学上，存在着各种不同观点来解释人生的目的、价值和意义，例如现实主义、虚无主义、Existentialist等。这些观点对我们自由意志的概念有不同的看法。\n\n从一个更抽象的角度来看，我们的选择和决定可能是被超出我们控制的力量所决定的，但这并不意味着我们的生活完全没有价值或意义。一些哲学家认为，无论我们是否具有真正的自由意志，人生的存在就是值得庆祝的，因为",
+      "elapsed": 105.35060405731201
+    }
+  },
+  "mental_state_analysis": null
+}

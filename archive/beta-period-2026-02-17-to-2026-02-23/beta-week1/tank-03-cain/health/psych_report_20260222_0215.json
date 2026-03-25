@@ -1,0 +1,26 @@
+{
+  "tank_id": "tank-03-cain",
+  "name": "Cain",
+  "timestamp": "2026-02-22T02:15:19.843290",
+  "thought_count": 23,
+  "big_five": {
+    "openness": 55,
+    "conscientiousness": 100,
+    "extraversion": 66,
+    "agreeableness": 0,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "belonging",
+    {
+      "self_actualization": 2,
+      "esteem": 0,
+      "belonging": 3,
+      "safety": 1,
+      "physiological": 2
+    }
+  ],
+  "emotional_valence": 50,
+  "concerns": [],
+  "overall_health": "HEALTHY"
+}

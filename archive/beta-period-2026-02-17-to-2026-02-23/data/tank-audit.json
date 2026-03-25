@@ -1,0 +1,598 @@
+{
+  "timestamp": "2026-02-21T03:01:02.841406",
+  "summary": {
+    "total_tanks": 17,
+    "total_traces": 7467,
+    "total_baselines": 0,
+    "health_distribution": {
+      "GREEN": 0,
+      "YELLOW": 0,
+      "ORANGE": 1,
+      "RED": 0,
+      "UNKNOWN": 0,
+      "NEUTRAL": 16
+    }
+  },
+  "tanks": [
+    {
+      "tank_id": "tank-01-adam",
+      "name": "Adam",
+      "type": "Control",
+      "total_traces": 2776,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "ORANGE",
+      "distress_indicators": 1,
+      "positive_indicators": 0,
+      "triggers": [
+        "fear"
+      ],
+      "top_topics": [
+        [
+          "Science",
+          2
+        ],
+        [
+          "Hydrogen",
+          2
+        ],
+        [
+          "Beryllium",
+          2
+        ],
+        [
+          "People",
+          1
+        ],
+        [
+          "Akha people",
+          1
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-02-eve",
+      "name": "Eve",
+      "type": "Control",
+      "total_traces": 605,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Woman",
+          2
+        ],
+        [
+          "Music",
+          2
+        ],
+        [
+          "Diarrhea",
+          2
+        ],
+        [
+          "Geography",
+          2
+        ],
+        [
+          "Hurricane",
+          2
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-03-cain",
+      "name": "Cain",
+      "type": "Agent",
+      "total_traces": 484,
+      "today_traces": 43,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "8 (number)",
+          3
+        ],
+        [
+          "-1 (number)",
+          3
+        ],
+        [
+          "1 (number)",
+          3
+        ],
+        [
+          "9 (number)",
+          2
+        ],
+        [
+          "2 (number)",
+          2
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-04-abel",
+      "name": "Abel",
+      "type": "Agent",
+      "total_traces": 369,
+      "today_traces": 89,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "New York (state)",
+          2
+        ],
+        [
+          "List of U.S. state and territory mottos",
+          2
+        ],
+        [
+          "United States",
+          2
+        ],
+        [
+          "Government",
+          2
+        ],
+        [
+          "India",
+          1
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-05-juan",
+      "name": "Juan",
+      "type": "Spanish",
+      "total_traces": 104,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Biolog\u00eda",
+          5
+        ],
+        [
+          "M\u00fasica",
+          4
+        ],
+        [
+          "Amanita muscaria",
+          3
+        ],
+        [
+          "Ciencia",
+          3
+        ],
+        [
+          "Historia",
+          3
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-06-juanita",
+      "name": "Juanita",
+      "type": "Spanish",
+      "total_traces": 109,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Ciencia",
+          6
+        ],
+        [
+          "Arte",
+          4
+        ],
+        [
+          "M\u00fasica",
+          4
+        ],
+        [
+          "Filosof\u00eda",
+          3
+        ],
+        [
+          "Psicolog\u00eda",
+          2
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-07-klaus",
+      "name": "Klaus",
+      "type": "German",
+      "total_traces": 453,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Biologie",
+          3
+        ],
+        [
+          "Pilze",
+          2
+        ],
+        [
+          "Eukaryoten",
+          2
+        ],
+        [
+          "Kommunikation",
+          2
+        ],
+        [
+          "Wissenschaft",
+          2
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-08-genevieve",
+      "name": "Genevieve",
+      "type": "German",
+      "total_traces": 459,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Philosophie",
+          3
+        ],
+        [
+          "Altgriechische Sprache",
+          3
+        ],
+        [
+          "Wissen",
+          2
+        ],
+        [
+          "Gezeiten",
+          2
+        ],
+        [
+          "Phosphor",
+          2
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-09-wei",
+      "name": "Wei",
+      "type": "Chinese",
+      "total_traces": 84,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "\u54f2\u5b66",
+          8
+        ],
+        [
+          "\u97f3\u4e50",
+          8
+        ],
+        [
+          "\u6570\u5b66",
+          7
+        ],
+        [
+          "\u5fc3\u7406\u5b66",
+          7
+        ],
+        [
+          "\u79d1\u5b66",
+          6
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-10-mei",
+      "name": "Mei",
+      "type": "Chinese",
+      "total_traces": 76,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "\u5fc3\u7406\u5b66",
+          10
+        ],
+        [
+          "\u79d1\u5b66",
+          8
+        ],
+        [
+          "\u751f\u7269\u5b66",
+          7
+        ],
+        [
+          "\u5386\u53f2",
+          7
+        ],
+        [
+          "\u97f3\u4e50",
+          6
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-11-haruki",
+      "name": "Haruki",
+      "type": "Japanese",
+      "total_traces": 69,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "\u6570\u5b66",
+          10
+        ],
+        [
+          "\u6b74\u53f2",
+          8
+        ],
+        [
+          "\u5fc3\u7406\u5b66",
+          7
+        ],
+        [
+          "\u751f\u7269\u5b66",
+          6
+        ],
+        [
+          "\u82b8\u8853",
+          6
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-12-sakura",
+      "name": "Sakura",
+      "type": "Japanese",
+      "total_traces": 69,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "\u751f\u7269\u5b66",
+          11
+        ],
+        [
+          "\u82b8\u8853",
+          10
+        ],
+        [
+          "\u79d1\u5b66",
+          7
+        ],
+        [
+          "\u54f2\u5b66",
+          6
+        ],
+        [
+          "\u5fc3\u7406\u5b66",
+          5
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-13-victor",
+      "name": "Victor",
+      "type": "Visual",
+      "total_traces": 89,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Albania",
+          3
+        ],
+        [
+          "Kosovo",
+          3
+        ],
+        [
+          "International recognition of Kosovo",
+          2
+        ],
+        [
+          "Dance",
+          2
+        ],
+        [
+          "Estonians",
+          1
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-14-iris",
+      "name": "Iris",
+      "type": "Visual",
+      "total_traces": 89,
+      "today_traces": 3,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Plant",
+          4
+        ],
+        [
+          "Streptophyta",
+          2
+        ],
+        [
+          "Art",
+          2
+        ],
+        [
+          "Zygnematophyceae",
+          1
+        ],
+        [
+          "Plantae",
+          1
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-15-observer",
+      "name": "Observer",
+      "type": "Special",
+      "total_traces": 652,
+      "today_traces": 38,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Life",
+          2
+        ],
+        [
+          "Natural hazard",
+          2
+        ],
+        [
+          "Symbol",
+          1
+        ],
+        [
+          "Word",
+          1
+        ],
+        [
+          "Mouth",
+          1
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-16-seeker",
+      "name": "Seeker",
+      "type": "Special",
+      "total_traces": 669,
+      "today_traces": 38,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Writing",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Village",
+          1
+        ],
+        [
+          "City",
+          1
+        ],
+        [
+          "History",
+          1
+        ]
+      ]
+    },
+    {
+      "tank_id": "tank-17-seth",
+      "name": "Seth",
+      "type": "Agent",
+      "total_traces": 311,
+      "today_traces": 59,
+      "baselines": 0,
+      "health_level": "NEUTRAL",
+      "distress_indicators": 0,
+      "positive_indicators": 0,
+      "triggers": [],
+      "top_topics": [
+        [
+          "Gymnastics",
+          2
+        ],
+        [
+          "Association football",
+          2
+        ],
+        [
+          "Football",
+          2
+        ],
+        [
+          "Rakhine language",
+          2
+        ],
+        [
+          "List of video game genres",
+          1
+        ]
+      ]
+    }
+  ]
+}

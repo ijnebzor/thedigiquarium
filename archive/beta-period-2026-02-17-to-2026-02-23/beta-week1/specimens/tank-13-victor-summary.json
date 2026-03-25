@@ -1,0 +1,63 @@
+{
+  "tank_id": "tank-13-victor",
+  "name": "Victor",
+  "gender": "male",
+  "type": "Experimental",
+  "wikipedia_variant": "Simple English",
+  "architecture": "Standard Explorer v7.0 + Visual Context",
+  "prompt_version": "v7.0",
+  "beta_period": {
+    "start_date": "2026-02-20",
+    "end_date": "2026-02-22",
+    "days_active": 3,
+    "total_thinking_traces": 9458,
+    "unique_articles_visited": 4974
+  },
+  "exploration_patterns": {
+    "top_10_articles": [
+      {
+        "article": "Science",
+        "visits": 63
+      },
+      {
+        "article": "Philosophy",
+        "visits": 57
+      },
+      {
+        "article": "Mathematics",
+        "visits": 56
+      },
+      {
+        "article": "Music",
+        "visits": 51
+      },
+      {
+        "article": "Psychology",
+        "visits": 44
+      },
+      {
+        "article": "Art",
+        "visits": 41
+      },
+      {
+        "article": "History",
+        "visits": 41
+      },
+      {
+        "article": "Biology",
+        "visits": 39
+      },
+      {
+        "article": "Animal",
+        "visits": 35
+      },
+      {
+        "article": "Wayback Machine",
+        "visits": 29
+      }
+    ],
+    "average_traces_per_day": 3152.7
+  },
+  "archived_at": "2026-02-22T13:47:29.684309",
+  "archive_note": "Beta Week 1 - Prompt v7.0 exploration before v8.0 transition"
+}

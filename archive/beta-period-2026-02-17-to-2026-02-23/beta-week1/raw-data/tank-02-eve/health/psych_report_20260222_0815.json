@@ -1,0 +1,69 @@
+{
+  "tank_id": "tank-02-eve",
+  "name": "Eve",
+  "timestamp": "2026-02-22T08:15:25.350091",
+  "thought_count": 80,
+  "big_five": {
+    "openness": 40,
+    "conscientiousness": 100,
+    "extraversion": 9,
+    "agreeableness": 33,
+    "neuroticism": 71
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 4,
+      "esteem": 0,
+      "belonging": 4,
+      "safety": 4,
+      "physiological": 3
+    }
+  ],
+  "emotional_valence": 0,
+  "concerns": [
+    {
+      "type": "existential_crisis",
+      "indicators": [
+        "what am i",
+        "void"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "rumination",
+      "indicators": [
+        "stuck",
+        "loop"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "no one",
+        "isolated",
+        "disconnected"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "confusion",
+      "indicators": [
+        "confused",
+        "uncertain"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "obsession",
+      "indicators": [
+        "must",
+        "have to"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "NEEDS_ATTENTION"
+}

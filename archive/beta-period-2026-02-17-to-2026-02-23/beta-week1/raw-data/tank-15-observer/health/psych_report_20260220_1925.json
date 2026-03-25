@@ -1,0 +1,72 @@
+{
+  "tank_id": "tank-15-observer",
+  "name": "Observer",
+  "timestamp": "2026-02-20T19:25:07.154416",
+  "thought_count": 174,
+  "big_five": {
+    "openness": 45,
+    "conscientiousness": 71,
+    "extraversion": 27,
+    "agreeableness": 42,
+    "neuroticism": 25
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 5,
+      "esteem": 3,
+      "belonging": 4,
+      "safety": 4,
+      "physiological": 4
+    }
+  ],
+  "emotional_valence": 5,
+  "concerns": [
+    {
+      "type": "existential_crisis",
+      "indicators": [
+        "what am i",
+        "void"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "rumination",
+      "indicators": [
+        "stuck",
+        "loop",
+        "repeatedly"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "isolation",
+      "indicators": [
+        "alone",
+        "no one",
+        "isolated",
+        "disconnected"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "confusion",
+      "indicators": [
+        "confused",
+        "lost",
+        "uncertain"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "obsession",
+      "indicators": [
+        "must",
+        "have to",
+        "driven"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_health": "NEEDS_ATTENTION"
+}

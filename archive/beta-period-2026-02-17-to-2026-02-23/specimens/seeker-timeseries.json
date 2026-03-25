@@ -1,0 +1,1556 @@
+{
+  "2026-02-20": {
+    "nodes": [
+      {
+        "id": "Emotion",
+        "visits": 9
+      },
+      {
+        "id": "Language",
+        "visits": 7
+      },
+      {
+        "id": "Atom",
+        "visits": 7
+      },
+      {
+        "id": "Anxiety",
+        "visits": 5
+      },
+      {
+        "id": "Communication",
+        "visits": 5
+      },
+      {
+        "id": "Angst",
+        "visits": 4
+      },
+      {
+        "id": "Anguish",
+        "visits": 4
+      },
+      {
+        "id": "Amusement",
+        "visits": 4
+      },
+      {
+        "id": "Anger",
+        "visits": 4
+      },
+      {
+        "id": "Anticipation",
+        "visits": 4
+      },
+      {
+        "id": "Acceptance",
+        "visits": 4
+      },
+      {
+        "id": "Thailand",
+        "visits": 4
+      },
+      {
+        "id": "Helium",
+        "visits": 4
+      },
+      {
+        "id": "Biology",
+        "visits": 4
+      },
+      {
+        "id": "Writing",
+        "visits": 4
+      },
+      {
+        "id": "Psychology",
+        "visits": 3
+      },
+      {
+        "id": "Apathy",
+        "visits": 3
+      },
+      {
+        "id": "Affection",
+        "visits": 3
+      },
+      {
+        "id": "Organism",
+        "visits": 3
+      },
+      {
+        "id": "Plant",
+        "visits": 3
+      },
+      {
+        "id": "Atomic nucleus",
+        "visits": 3
+      },
+      {
+        "id": "Electron",
+        "visits": 3
+      },
+      {
+        "id": "SI",
+        "visits": 3
+      },
+      {
+        "id": "Information",
+        "visits": 3
+      },
+      {
+        "id": "Life",
+        "visits": 3
+      },
+      {
+        "id": "Science",
+        "visits": 3
+      },
+      {
+        "id": "Number",
+        "visits": 3
+      },
+      {
+        "id": "Roman Republic",
+        "visits": 3
+      },
+      {
+        "id": "Data",
+        "visits": 3
+      },
+      {
+        "id": "Afghanistan",
+        "visits": 3
+      },
+      {
+        "id": "Definition",
+        "visits": 3
+      },
+      {
+        "id": "Netherlands",
+        "visits": 3
+      },
+      {
+        "id": "Embryophyta",
+        "visits": 2
+      },
+      {
+        "id": "Algae",
+        "visits": 2
+      },
+      {
+        "id": "Photosynthesis",
+        "visits": 2
+      },
+      {
+        "id": "Energy",
+        "visits": 2
+      },
+      {
+        "id": "Physics",
+        "visits": 2
+      },
+      {
+        "id": "Human",
+        "visits": 2
+      },
+      {
+        "id": "Akha people",
+        "visits": 2
+      },
+      {
+        "id": "Laos",
+        "visits": 2
+      },
+      {
+        "id": "Star",
+        "visits": 2
+      },
+      {
+        "id": "Matter",
+        "visits": 2
+      },
+      {
+        "id": "Particle",
+        "visits": 2
+      },
+      {
+        "id": "Universe",
+        "visits": 2
+      },
+      {
+        "id": "Metric system",
+        "visits": 2
+      },
+      {
+        "id": "Numeral system",
+        "visits": 2
+      },
+      {
+        "id": "City",
+        "visits": 2
+      },
+      {
+        "id": "History",
+        "visits": 2
+      },
+      {
+        "id": "Letter",
+        "visits": 2
+      },
+      {
+        "id": "Knowledge",
+        "visits": 2
+      }
+    ],
+    "links": [
+      {
+        "source": "Psychology",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Angst"
+      },
+      {
+        "source": "Angst",
+        "target": "Anguish"
+      },
+      {
+        "source": "Anguish",
+        "target": "Amusement"
+      },
+      {
+        "source": "Amusement",
+        "target": "Apathy"
+      },
+      {
+        "source": "Apathy",
+        "target": "Anger"
+      },
+      {
+        "source": "Anger",
+        "target": "Anxiety"
+      },
+      {
+        "source": "Anxiety",
+        "target": "Anticipation"
+      },
+      {
+        "source": "Anticipation",
+        "target": "Anxiety"
+      },
+      {
+        "source": "Anxiety",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Anticipation"
+      },
+      {
+        "source": "Anticipation",
+        "target": "Anger"
+      },
+      {
+        "source": "Anger",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Affection"
+      },
+      {
+        "source": "Organism",
+        "target": "Plant"
+      },
+      {
+        "source": "Embryophyta",
+        "target": "Algae"
+      },
+      {
+        "source": "Algae",
+        "target": "Photosynthesis"
+      },
+      {
+        "source": "Energy",
+        "target": "Physics"
+      },
+      {
+        "source": "Language",
+        "target": "Human"
+      },
+      {
+        "source": "Human",
+        "target": "Akha people"
+      },
+      {
+        "source": "Akha people",
+        "target": "Laos"
+      },
+      {
+        "source": "Star",
+        "target": "Matter"
+      },
+      {
+        "source": "Matter",
+        "target": "Particle"
+      },
+      {
+        "source": "Atomic nucleus",
+        "target": "Atom"
+      },
+      {
+        "source": "Physics",
+        "target": "Universe"
+      },
+      {
+        "source": "Universe",
+        "target": "Star"
+      },
+      {
+        "source": "Atom",
+        "target": "Atomic nucleus"
+      },
+      {
+        "source": "SI",
+        "target": "Metric system"
+      },
+      {
+        "source": "City",
+        "target": "History"
+      },
+      {
+        "source": "History",
+        "target": "Letter"
+      },
+      {
+        "source": "Letter",
+        "target": "Language"
+      },
+      {
+        "source": "Communication",
+        "target": "Information"
+      },
+      {
+        "source": "Angst",
+        "target": "Apathy"
+      },
+      {
+        "source": "Apathy",
+        "target": "Anticipation"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Amusement"
+      },
+      {
+        "source": "Anguish",
+        "target": "Emotion"
+      },
+      {
+        "source": "Anguish",
+        "target": "Anxiety"
+      },
+      {
+        "source": "Anxiety",
+        "target": "Amusement"
+      },
+      {
+        "source": "Biology",
+        "target": "Life"
+      },
+      {
+        "source": "Communication",
+        "target": "Language"
+      },
+      {
+        "source": "Language",
+        "target": "Communication"
+      },
+      {
+        "source": "Organism",
+        "target": "Energy"
+      },
+      {
+        "source": "Biology",
+        "target": "Science"
+      },
+      {
+        "source": "Emotion",
+        "target": "Anger"
+      },
+      {
+        "source": "Anxiety",
+        "target": "Affection"
+      },
+      {
+        "source": "Data",
+        "target": "Number"
+      },
+      {
+        "source": "Anger",
+        "target": "Amusement"
+      },
+      {
+        "source": "Amusement",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Biology",
+        "target": "Organism"
+      },
+      {
+        "source": "Atom",
+        "target": "Helium"
+      },
+      {
+        "source": "Akha people",
+        "target": "Thailand"
+      },
+      {
+        "source": "Emotion",
+        "target": "Affection"
+      },
+      {
+        "source": "Emotion",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Emotion",
+        "target": "Amusement"
+      },
+      {
+        "source": "Amusement",
+        "target": "Affection"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "Science",
+        "target": "Physics"
+      },
+      {
+        "source": "Laos",
+        "target": "History"
+      },
+      {
+        "source": "Science",
+        "target": "Psychology"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Anger"
+      },
+      {
+        "source": "Anger",
+        "target": "Emotion"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Emotion"
+      },
+      {
+        "source": "Writing",
+        "target": "Language"
+      },
+      {
+        "source": "Human",
+        "target": "Thailand"
+      },
+      {
+        "source": "Physics",
+        "target": "Matter"
+      },
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Amusement",
+        "target": "Emotion"
+      },
+      {
+        "source": "Physics",
+        "target": "Science"
+      },
+      {
+        "source": "Organism",
+        "target": "Life"
+      },
+      {
+        "source": "Energy",
+        "target": "Matter"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Angst"
+      },
+      {
+        "source": "Angst",
+        "target": "Emotion"
+      },
+      {
+        "source": "Emotion",
+        "target": "Anguish"
+      },
+      {
+        "source": "Amusement",
+        "target": "Angst"
+      },
+      {
+        "source": "Anger",
+        "target": "Anguish"
+      },
+      {
+        "source": "Anguish",
+        "target": "Affection"
+      },
+      {
+        "source": "Anger",
+        "target": "Affection"
+      }
+    ]
+  },
+  "2026-02-21": {
+    "nodes": [
+      {
+        "id": "Definition",
+        "visits": 44
+      },
+      {
+        "id": "Science",
+        "visits": 37
+      },
+      {
+        "id": "Chemistry",
+        "visits": 32
+      },
+      {
+        "id": "Language",
+        "visits": 31
+      },
+      {
+        "id": "Earth",
+        "visits": 30
+      },
+      {
+        "id": "Emotion",
+        "visits": 25
+      },
+      {
+        "id": "Physics",
+        "visits": 24
+      },
+      {
+        "id": "Human",
+        "visits": 23
+      },
+      {
+        "id": "Atom",
+        "visits": 23
+      },
+      {
+        "id": "Country",
+        "visits": 22
+      },
+      {
+        "id": "Geology",
+        "visits": 21
+      },
+      {
+        "id": "Mathematics",
+        "visits": 21
+      },
+      {
+        "id": "Matter",
+        "visits": 20
+      },
+      {
+        "id": "United States",
+        "visits": 20
+      },
+      {
+        "id": "Animal",
+        "visits": 20
+      },
+      {
+        "id": "Biology",
+        "visits": 19
+      },
+      {
+        "id": "Continent",
+        "visits": 19
+      },
+      {
+        "id": "Philosophy",
+        "visits": 19
+      },
+      {
+        "id": "Law",
+        "visits": 18
+      },
+      {
+        "id": "Number",
+        "visits": 18
+      },
+      {
+        "id": "Europe",
+        "visits": 18
+      },
+      {
+        "id": "Phrase",
+        "visits": 18
+      },
+      {
+        "id": "Information",
+        "visits": 17
+      },
+      {
+        "id": "Word",
+        "visits": 17
+      },
+      {
+        "id": "World",
+        "visits": 16
+      },
+      {
+        "id": "Affection",
+        "visits": 15
+      },
+      {
+        "id": "Astronomy",
+        "visits": 15
+      },
+      {
+        "id": "Asia",
+        "visits": 15
+      },
+      {
+        "id": "Phase (matter)",
+        "visits": 15
+      },
+      {
+        "id": "Psychology",
+        "visits": 14
+      },
+      {
+        "id": "Helium",
+        "visits": 14
+      },
+      {
+        "id": "Art",
+        "visits": 14
+      },
+      {
+        "id": "Periodic table",
+        "visits": 14
+      },
+      {
+        "id": "Latin",
+        "visits": 14
+      },
+      {
+        "id": "Indo-European languages",
+        "visits": 14
+      },
+      {
+        "id": "Ancient Greek",
+        "visits": 14
+      },
+      {
+        "id": "Language family",
+        "visits": 14
+      },
+      {
+        "id": "Taxonomy (biology)",
+        "visits": 13
+      },
+      {
+        "id": "Roman Republic",
+        "visits": 13
+      },
+      {
+        "id": "Planet",
+        "visits": 13
+      },
+      {
+        "id": "Woman",
+        "visits": 13
+      },
+      {
+        "id": "Explanation",
+        "visits": 13
+      },
+      {
+        "id": "Mass",
+        "visits": 13
+      },
+      {
+        "id": "Chemical reaction",
+        "visits": 13
+      },
+      {
+        "id": "Acceptance",
+        "visits": 12
+      },
+      {
+        "id": "Communication",
+        "visits": 12
+      },
+      {
+        "id": "Life",
+        "visits": 12
+      },
+      {
+        "id": "French language",
+        "visits": 12
+      },
+      {
+        "id": "Writing",
+        "visits": 12
+      },
+      {
+        "id": "Water",
+        "visits": 12
+      }
+    ],
+    "links": [
+      {
+        "source": "Psychology",
+        "target": "Emotion"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Affection"
+      },
+      {
+        "source": "Language",
+        "target": "Human"
+      },
+      {
+        "source": "Communication",
+        "target": "Information"
+      },
+      {
+        "source": "United States",
+        "target": "Continent"
+      },
+      {
+        "source": "Continent",
+        "target": "World"
+      },
+      {
+        "source": "Biology",
+        "target": "Life"
+      },
+      {
+        "source": "Communication",
+        "target": "Language"
+      },
+      {
+        "source": "Language",
+        "target": "Communication"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Science"
+      },
+      {
+        "source": "Art",
+        "target": "Emotion"
+      },
+      {
+        "source": "Helium",
+        "target": "Periodic table"
+      },
+      {
+        "source": "Writing",
+        "target": "Art"
+      },
+      {
+        "source": "Planet",
+        "target": "Earth"
+      },
+      {
+        "source": "Europe",
+        "target": "Continent"
+      },
+      {
+        "source": "Human",
+        "target": "Woman"
+      },
+      {
+        "source": "Latin",
+        "target": "Roman Republic"
+      },
+      {
+        "source": "Science",
+        "target": "Astronomy"
+      },
+      {
+        "source": "Astronomy",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Atom"
+      },
+      {
+        "source": "Atom",
+        "target": "Helium"
+      },
+      {
+        "source": "Periodic table",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Definition",
+        "target": "Explanation"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Number"
+      },
+      {
+        "source": "French language",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Asia",
+        "target": "Continent"
+      },
+      {
+        "source": "Continent",
+        "target": "Asia"
+      },
+      {
+        "source": "Earth",
+        "target": "World"
+      },
+      {
+        "source": "World",
+        "target": "Earth"
+      },
+      {
+        "source": "Ancient Greek",
+        "target": "Language family"
+      },
+      {
+        "source": "Emotion",
+        "target": "Affection"
+      },
+      {
+        "source": "Definition",
+        "target": "Word"
+      },
+      {
+        "source": "Explanation",
+        "target": "Phrase"
+      },
+      {
+        "source": "Phrase",
+        "target": "Information"
+      },
+      {
+        "source": "Information",
+        "target": "World"
+      },
+      {
+        "source": "World",
+        "target": "Human"
+      },
+      {
+        "source": "Emotion",
+        "target": "Acceptance"
+      },
+      {
+        "source": "Continent",
+        "target": "Earth"
+      },
+      {
+        "source": "Science",
+        "target": "Geology"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Physics"
+      },
+      {
+        "source": "World",
+        "target": "Planet"
+      },
+      {
+        "source": "Science",
+        "target": "Physics"
+      },
+      {
+        "source": "Definition",
+        "target": "Phrase"
+      },
+      {
+        "source": "Ancient Greek",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Indo-European languages",
+        "target": "Europe"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Matter"
+      },
+      {
+        "source": "Chemical reaction",
+        "target": "Phase (matter)"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Science"
+      },
+      {
+        "source": "Europe",
+        "target": "Definition"
+      },
+      {
+        "source": "Roman Republic",
+        "target": "Art"
+      },
+      {
+        "source": "Biology",
+        "target": "Animal"
+      },
+      {
+        "source": "Science",
+        "target": "Psychology"
+      },
+      {
+        "source": "Matter",
+        "target": "Mass"
+      },
+      {
+        "source": "Periodic table",
+        "target": "Chemical reaction"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Asia",
+        "target": "Earth"
+      },
+      {
+        "source": "Acceptance",
+        "target": "Emotion"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Ancient Greek"
+      },
+      {
+        "source": "Language family",
+        "target": "French language"
+      },
+      {
+        "source": "Language",
+        "target": "Word"
+      },
+      {
+        "source": "Animal",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Periodic table",
+        "target": "Phase (matter)"
+      },
+      {
+        "source": "Chemical reaction",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "Philosophy"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Astronomy",
+        "target": "Planet"
+      },
+      {
+        "source": "Language family",
+        "target": "Language"
+      },
+      {
+        "source": "Word",
+        "target": "Writing"
+      },
+      {
+        "source": "Writing",
+        "target": "Language"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Law"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "Chemical reaction"
+      },
+      {
+        "source": "Physics",
+        "target": "Matter"
+      },
+      {
+        "source": "Indo-European languages",
+        "target": "Language family"
+      },
+      {
+        "source": "Geology",
+        "target": "Earth"
+      },
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Physics",
+        "target": "Science"
+      }
+    ]
+  },
+  "2026-02-22": {
+    "nodes": [
+      {
+        "id": "Definition",
+        "visits": 58
+      },
+      {
+        "id": "Language",
+        "visits": 44
+      },
+      {
+        "id": "Science",
+        "visits": 44
+      },
+      {
+        "id": "Earth",
+        "visits": 42
+      },
+      {
+        "id": "Chemistry",
+        "visits": 36
+      },
+      {
+        "id": "Emotion",
+        "visits": 30
+      },
+      {
+        "id": "Human",
+        "visits": 30
+      },
+      {
+        "id": "Mathematics",
+        "visits": 30
+      },
+      {
+        "id": "Physics",
+        "visits": 29
+      },
+      {
+        "id": "Atom",
+        "visits": 28
+      },
+      {
+        "id": "Country",
+        "visits": 28
+      },
+      {
+        "id": "Matter",
+        "visits": 25
+      },
+      {
+        "id": "Information",
+        "visits": 25
+      },
+      {
+        "id": "Continent",
+        "visits": 25
+      },
+      {
+        "id": "Geology",
+        "visits": 25
+      },
+      {
+        "id": "Number",
+        "visits": 25
+      },
+      {
+        "id": "Phrase",
+        "visits": 25
+      },
+      {
+        "id": "Animal",
+        "visits": 24
+      },
+      {
+        "id": "Law",
+        "visits": 23
+      },
+      {
+        "id": "Europe",
+        "visits": 23
+      },
+      {
+        "id": "Philosophy",
+        "visits": 23
+      },
+      {
+        "id": "Ancient Greek",
+        "visits": 23
+      },
+      {
+        "id": "Biology",
+        "visits": 22
+      },
+      {
+        "id": "World",
+        "visits": 22
+      },
+      {
+        "id": "Language family",
+        "visits": 22
+      },
+      {
+        "id": "United States",
+        "visits": 21
+      },
+      {
+        "id": "Latin",
+        "visits": 21
+      },
+      {
+        "id": "Astronomy",
+        "visits": 21
+      },
+      {
+        "id": "Indo-European languages",
+        "visits": 21
+      },
+      {
+        "id": "Art",
+        "visits": 20
+      },
+      {
+        "id": "Geography",
+        "visits": 20
+      },
+      {
+        "id": "Writing",
+        "visits": 19
+      },
+      {
+        "id": "Asia",
+        "visits": 19
+      },
+      {
+        "id": "French language",
+        "visits": 18
+      },
+      {
+        "id": "Taxonomy (biology)",
+        "visits": 18
+      },
+      {
+        "id": "Word",
+        "visits": 18
+      },
+      {
+        "id": "Psychology",
+        "visits": 17
+      },
+      {
+        "id": "Affection",
+        "visits": 17
+      },
+      {
+        "id": "Life",
+        "visits": 17
+      },
+      {
+        "id": "Explanation",
+        "visits": 17
+      },
+      {
+        "id": "Material",
+        "visits": 17
+      },
+      {
+        "id": "Helium",
+        "visits": 16
+      },
+      {
+        "id": "Periodic table",
+        "visits": 16
+      },
+      {
+        "id": "Latin language",
+        "visits": 16
+      },
+      {
+        "id": "Roman Republic",
+        "visits": 16
+      },
+      {
+        "id": "Roman Empire",
+        "visits": 16
+      },
+      {
+        "id": "Government",
+        "visits": 16
+      },
+      {
+        "id": "Mass",
+        "visits": 16
+      },
+      {
+        "id": "Phase (matter)",
+        "visits": 16
+      },
+      {
+        "id": "States of matter",
+        "visits": 16
+      }
+    ],
+    "links": [
+      {
+        "source": "Psychology",
+        "target": "Emotion"
+      },
+      {
+        "source": "Language",
+        "target": "Human"
+      },
+      {
+        "source": "United States",
+        "target": "Continent"
+      },
+      {
+        "source": "Continent",
+        "target": "World"
+      },
+      {
+        "source": "Biology",
+        "target": "Life"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Biology"
+      },
+      {
+        "source": "Biology",
+        "target": "Science"
+      },
+      {
+        "source": "Art",
+        "target": "Emotion"
+      },
+      {
+        "source": "Helium",
+        "target": "Periodic table"
+      },
+      {
+        "source": "Latin language",
+        "target": "Roman Republic"
+      },
+      {
+        "source": "Writing",
+        "target": "Art"
+      },
+      {
+        "source": "Europe",
+        "target": "Continent"
+      },
+      {
+        "source": "Latin",
+        "target": "Roman Republic"
+      },
+      {
+        "source": "Science",
+        "target": "Astronomy"
+      },
+      {
+        "source": "Astronomy",
+        "target": "Science"
+      },
+      {
+        "source": "Science",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Atom"
+      },
+      {
+        "source": "Atom",
+        "target": "Helium"
+      },
+      {
+        "source": "Periodic table",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Definition",
+        "target": "Explanation"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Number"
+      },
+      {
+        "source": "French language",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Asia",
+        "target": "Continent"
+      },
+      {
+        "source": "Continent",
+        "target": "Asia"
+      },
+      {
+        "source": "Earth",
+        "target": "World"
+      },
+      {
+        "source": "World",
+        "target": "Earth"
+      },
+      {
+        "source": "Ancient Greek",
+        "target": "Language family"
+      },
+      {
+        "source": "Emotion",
+        "target": "Affection"
+      },
+      {
+        "source": "Definition",
+        "target": "Word"
+      },
+      {
+        "source": "Explanation",
+        "target": "Phrase"
+      },
+      {
+        "source": "Phrase",
+        "target": "Information"
+      },
+      {
+        "source": "Information",
+        "target": "World"
+      },
+      {
+        "source": "World",
+        "target": "Human"
+      },
+      {
+        "source": "Geography",
+        "target": "Continent"
+      },
+      {
+        "source": "Continent",
+        "target": "Earth"
+      },
+      {
+        "source": "Science",
+        "target": "Geology"
+      },
+      {
+        "source": "Definition",
+        "target": "Language"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Physics"
+      },
+      {
+        "source": "Roman Empire",
+        "target": "Latin language"
+      },
+      {
+        "source": "Science",
+        "target": "Physics"
+      },
+      {
+        "source": "Definition",
+        "target": "Phrase"
+      },
+      {
+        "source": "Ancient Greek",
+        "target": "Indo-European languages"
+      },
+      {
+        "source": "Indo-European languages",
+        "target": "Europe"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Matter"
+      },
+      {
+        "source": "Chemistry",
+        "target": "Science"
+      },
+      {
+        "source": "Europe",
+        "target": "Definition"
+      },
+      {
+        "source": "Government",
+        "target": "Country"
+      },
+      {
+        "source": "Roman Republic",
+        "target": "Art"
+      },
+      {
+        "source": "Biology",
+        "target": "Animal"
+      },
+      {
+        "source": "Science",
+        "target": "Psychology"
+      },
+      {
+        "source": "States of matter",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Matter",
+        "target": "Mass"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "Chemistry"
+      },
+      {
+        "source": "Geography",
+        "target": "Ancient Greek"
+      },
+      {
+        "source": "Latin language",
+        "target": "Roman Empire"
+      },
+      {
+        "source": "Latin",
+        "target": "Roman Empire"
+      },
+      {
+        "source": "Asia",
+        "target": "Earth"
+      },
+      {
+        "source": "Philosophy",
+        "target": "Ancient Greek"
+      },
+      {
+        "source": "Language family",
+        "target": "French language"
+      },
+      {
+        "source": "Language",
+        "target": "Word"
+      },
+      {
+        "source": "Animal",
+        "target": "Taxonomy (biology)"
+      },
+      {
+        "source": "Periodic table",
+        "target": "Phase (matter)"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "States of matter"
+      },
+      {
+        "source": "States of matter",
+        "target": "Phase (matter)"
+      },
+      {
+        "source": "Periodic table",
+        "target": "States of matter"
+      },
+      {
+        "source": "Phase (matter)",
+        "target": "Philosophy"
+      },
+      {
+        "source": "Mathematics",
+        "target": "Science"
+      },
+      {
+        "source": "Roman Republic",
+        "target": "Geography"
+      },
+      {
+        "source": "Language family",
+        "target": "Language"
+      },
+      {
+        "source": "Word",
+        "target": "Writing"
+      },
+      {
+        "source": "Writing",
+        "target": "Language"
+      },
+      {
+        "source": "Taxonomy (biology)",
+        "target": "Law"
+      },
+      {
+        "source": "Language family",
+        "target": "Latin language"
+      },
+      {
+        "source": "Physics",
+        "target": "Matter"
+      },
+      {
+        "source": "Indo-European languages",
+        "target": "Language family"
+      },
+      {
+        "source": "Geology",
+        "target": "Earth"
+      },
+      {
+        "source": "Science",
+        "target": "Biology"
+      },
+      {
+        "source": "Physics",
+        "target": "Science"
+      }
+    ]
+  }
+}

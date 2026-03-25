@@ -1,0 +1,26 @@
+{
+  "tank_id": "tank-06-juanita",
+  "name": "Juanita",
+  "timestamp": "2026-02-22T02:15:19.858766",
+  "thought_count": 4,
+  "big_five": {
+    "openness": 0,
+    "conscientiousness": -100,
+    "extraversion": 0,
+    "agreeableness": 0,
+    "neuroticism": -100
+  },
+  "maslow_level": [
+    "self_actualization",
+    {
+      "self_actualization": 0,
+      "esteem": 0,
+      "belonging": 0,
+      "safety": 0,
+      "physiological": 0
+    }
+  ],
+  "emotional_valence": 100,
+  "concerns": [],
+  "overall_health": "HEALTHY"
+}

@@ -1,0 +1,1812 @@
+{
+  "2026-02-20": {
+    "nodes": [
+      {
+        "id": "Biolog\u00eda",
+        "visits": 7
+      },
+      {
+        "id": "Ciencia",
+        "visits": 6
+      },
+      {
+        "id": "Arte",
+        "visits": 6
+      },
+      {
+        "id": "M\u00fasica",
+        "visits": 6
+      },
+      {
+        "id": "Filosof\u00eda",
+        "visits": 5
+      },
+      {
+        "id": "Historia",
+        "visits": 5
+      },
+      {
+        "id": "Matem\u00e1ticas",
+        "visits": 5
+      },
+      {
+        "id": "Conocimiento",
+        "visits": 4
+      },
+      {
+        "id": "Amanita muscaria",
+        "visits": 4
+      },
+      {
+        "id": "Psicolog\u00eda",
+        "visits": 3
+      },
+      {
+        "id": "Observatorio Paranal",
+        "visits": 3
+      },
+      {
+        "id": "Observatorio Europeo Austral",
+        "visits": 3
+      },
+      {
+        "id": "Conocimiento declarativo",
+        "visits": 3
+      },
+      {
+        "id": "Orcinus orca",
+        "visits": 2
+      },
+      {
+        "id": "Idioma griego",
+        "visits": 2
+      },
+      {
+        "id": "Idea",
+        "visits": 2
+      },
+      {
+        "id": "Concepto",
+        "visits": 2
+      },
+      {
+        "id": "Sistema de escritura",
+        "visits": 2
+      },
+      {
+        "id": "Basidiocarpo",
+        "visits": 2
+      },
+      {
+        "id": "Psique",
+        "visits": 1
+      },
+      {
+        "id": "Alma",
+        "visits": 1
+      },
+      {
+        "id": "Plantae",
+        "visits": 1
+      },
+      {
+        "id": "Grecia",
+        "visits": 1
+      },
+      {
+        "id": "Bandera de Grecia",
+        "visits": 1
+      },
+      {
+        "id": "Azul",
+        "visits": 1
+      },
+      {
+        "id": "Memoria a largo plazo",
+        "visits": 1
+      },
+      {
+        "id": "Fungi",
+        "visits": 1
+      },
+      {
+        "id": "Musa",
+        "visits": 1
+      },
+      {
+        "id": "Creatividad",
+        "visits": 1
+      },
+      {
+        "id": "Magia",
+        "visits": 1
+      },
+      {
+        "id": "Idioma persa",
+        "visits": 1
+      },
+      {
+        "id": "Escherichia coli",
+        "visits": 1
+      },
+      {
+        "id": "Enterobacteria",
+        "visits": 1
+      },
+      {
+        "id": "Presente",
+        "visits": 1
+      },
+      {
+        "id": "Futuro",
+        "visits": 1
+      },
+      {
+        "id": "Conjetura",
+        "visits": 1
+      },
+      {
+        "id": "Conjetura de Goldbach",
+        "visits": 1
+      },
+      {
+        "id": "Idioma griego antiguo",
+        "visits": 1
+      },
+      {
+        "id": "Lenguas griegas",
+        "visits": 1
+      },
+      {
+        "id": "Mundo",
+        "visits": 1
+      },
+      {
+        "id": "Lengua mundial",
+        "visits": 1
+      },
+      {
+        "id": "Agaricomycetes",
+        "visits": 1
+      },
+      {
+        "id": "Himenio",
+        "visits": 1
+      },
+      {
+        "id": "Lenguaje",
+        "visits": 1
+      },
+      {
+        "id": "Inflorescencia",
+        "visits": 1
+      },
+      {
+        "id": "John B. Watson",
+        "visits": 1
+      },
+      {
+        "id": "Bertrand Russell",
+        "visits": 1
+      },
+      {
+        "id": "Alfred North Whitehead",
+        "visits": 1
+      }
+    ],
+    "links": [
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Observatorio Paranal"
+      },
+      {
+        "source": "Observatorio Paranal",
+        "target": "Observatorio Europeo Austral"
+      },
+      {
+        "source": "Observatorio Europeo Austral",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Conocimiento"
+      },
+      {
+        "source": "Conocimiento",
+        "target": "Conocimiento declarativo"
+      },
+      {
+        "source": "Conocimiento declarativo",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Psique"
+      },
+      {
+        "source": "Psique",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Plantae"
+      },
+      {
+        "source": "Plantae",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Orcinus orca"
+      },
+      {
+        "source": "Orcinus orca",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Observatorio Europeo Austral",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Idioma griego"
+      },
+      {
+        "source": "Idioma griego",
+        "target": "Grecia"
+      },
+      {
+        "source": "Grecia",
+        "target": "Bandera de Grecia"
+      },
+      {
+        "source": "Bandera de Grecia",
+        "target": "Azul"
+      },
+      {
+        "source": "Azul",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Conocimiento"
+      },
+      {
+        "source": "Conocimiento declarativo",
+        "target": "Memoria a largo plazo"
+      },
+      {
+        "source": "Memoria a largo plazo",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Amanita muscaria"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Fungi"
+      },
+      {
+        "source": "Fungi",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Musa"
+      },
+      {
+        "source": "Musa",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Idea"
+      },
+      {
+        "source": "Idea",
+        "target": "Creatividad"
+      },
+      {
+        "source": "Creatividad",
+        "target": "Concepto"
+      },
+      {
+        "source": "Concepto",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Magia"
+      },
+      {
+        "source": "Magia",
+        "target": "Idioma persa"
+      },
+      {
+        "source": "Idioma persa",
+        "target": "Sistema de escritura"
+      },
+      {
+        "source": "Sistema de escritura",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Escherichia coli"
+      },
+      {
+        "source": "Escherichia coli",
+        "target": "Enterobacteria"
+      },
+      {
+        "source": "Enterobacteria",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Idioma griego"
+      },
+      {
+        "source": "Idioma griego",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Conocimiento declarativo",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Orcinus orca",
+        "target": "Presente"
+      },
+      {
+        "source": "Presente",
+        "target": "Futuro"
+      },
+      {
+        "source": "Futuro",
+        "target": "Conjetura"
+      },
+      {
+        "source": "Conjetura",
+        "target": "Conjetura de Goldbach"
+      },
+      {
+        "source": "Conjetura de Goldbach",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Idioma griego antiguo"
+      },
+      {
+        "source": "Idioma griego antiguo",
+        "target": "Lenguas griegas"
+      },
+      {
+        "source": "Lenguas griegas",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Mundo"
+      },
+      {
+        "source": "Mundo",
+        "target": "Lengua mundial"
+      },
+      {
+        "source": "Lengua mundial",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Conocimiento",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Basidiocarpo"
+      },
+      {
+        "source": "Basidiocarpo",
+        "target": "Agaricomycetes"
+      },
+      {
+        "source": "Agaricomycetes",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Observatorio Europeo Austral",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Basidiocarpo",
+        "target": "Himenio"
+      },
+      {
+        "source": "Himenio",
+        "target": "Amanita muscaria"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Lenguaje"
+      },
+      {
+        "source": "Lenguaje",
+        "target": "Sistema de escritura"
+      },
+      {
+        "source": "Sistema de escritura",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Inflorescencia"
+      },
+      {
+        "source": "Inflorescencia",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "John B. Watson"
+      },
+      {
+        "source": "John B. Watson",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Historia"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Idea"
+      },
+      {
+        "source": "Idea",
+        "target": "Concepto"
+      },
+      {
+        "source": "Concepto",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Bertrand Russell"
+      },
+      {
+        "source": "Bertrand Russell",
+        "target": "Alfred North Whitehead"
+      },
+      {
+        "source": "Alfred North Whitehead",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Historia"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Conocimiento",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Musa",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Escherichia coli"
+      },
+      {
+        "source": "Escherichia coli",
+        "target": "Arte"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Arte",
+        "target": "Historia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Arte"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Matem\u00e1ticas"
+      }
+    ]
+  },
+  "2026-02-21": {
+    "nodes": [
+      {
+        "id": "Arte",
+        "visits": 109
+      },
+      {
+        "id": "M\u00fasica",
+        "visits": 104
+      },
+      {
+        "id": "Ciencia",
+        "visits": 102
+      },
+      {
+        "id": "Filosof\u00eda",
+        "visits": 99
+      },
+      {
+        "id": "Biolog\u00eda",
+        "visits": 99
+      },
+      {
+        "id": "Psicolog\u00eda",
+        "visits": 98
+      },
+      {
+        "id": "Matem\u00e1ticas",
+        "visits": 98
+      },
+      {
+        "id": "Historia",
+        "visits": 95
+      },
+      {
+        "id": "Conocimiento",
+        "visits": 25
+      },
+      {
+        "id": "Idioma griego",
+        "visits": 24
+      },
+      {
+        "id": "Sociedad",
+        "visits": 17
+      },
+      {
+        "id": "Homo sapiens",
+        "visits": 14
+      },
+      {
+        "id": "Griego antiguo",
+        "visits": 13
+      },
+      {
+        "id": "Fungi",
+        "visits": 12
+      },
+      {
+        "id": "Universo",
+        "visits": 12
+      },
+      {
+        "id": "Idea",
+        "visits": 11
+      },
+      {
+        "id": "Ciencia natural",
+        "visits": 11
+      },
+      {
+        "id": "Ciencias naturales",
+        "visits": 11
+      },
+      {
+        "id": "Observatorio Paranal",
+        "visits": 10
+      },
+      {
+        "id": "Sentimiento",
+        "visits": 10
+      },
+      {
+        "id": "Plantae",
+        "visits": 9
+      },
+      {
+        "id": "Amanita muscaria",
+        "visits": 9
+      },
+      {
+        "id": "Animal",
+        "visits": 9
+      },
+      {
+        "id": "Elementos de Euclides",
+        "visits": 9
+      },
+      {
+        "id": "Alma",
+        "visits": 8
+      },
+      {
+        "id": "Escherichia coli",
+        "visits": 8
+      },
+      {
+        "id": "Psicomotricidad",
+        "visits": 8
+      },
+      {
+        "id": "Ciliado",
+        "visits": 8
+      },
+      {
+        "id": "Sonido",
+        "visits": 8
+      },
+      {
+        "id": "Seta",
+        "visits": 8
+      },
+      {
+        "id": "Psique",
+        "visits": 7
+      },
+      {
+        "id": "Mundo",
+        "visits": 7
+      },
+      {
+        "id": "Lenguaje",
+        "visits": 7
+      },
+      {
+        "id": "Wikidata",
+        "visits": 7
+      },
+      {
+        "id": "Bacteria",
+        "visits": 7
+      },
+      {
+        "id": "Comportamiento",
+        "visits": 7
+      },
+      {
+        "id": "Razonamiento",
+        "visits": 7
+      },
+      {
+        "id": "Ciencias formales",
+        "visits": 7
+      },
+      {
+        "id": "Orcinus orca",
+        "visits": 6
+      },
+      {
+        "id": "Sistema de escritura",
+        "visits": 6
+      },
+      {
+        "id": "John B. Watson",
+        "visits": 6
+      },
+      {
+        "id": "Cultura",
+        "visits": 6
+      },
+      {
+        "id": "Alfonso X el Sabio",
+        "visits": 6
+      },
+      {
+        "id": "Terapias cognitivo-conductuales",
+        "visits": 6
+      },
+      {
+        "id": "Ciencia social",
+        "visits": 6
+      },
+      {
+        "id": "Galileo Galilei",
+        "visits": 6
+      },
+      {
+        "id": "ISO 639-2",
+        "visits": 6
+      },
+      {
+        "id": "Control de autoridades",
+        "visits": 6
+      },
+      {
+        "id": "Silencio (sonido)",
+        "visits": 6
+      },
+      {
+        "id": "Musicoterapia",
+        "visits": 6
+      }
+    ],
+    "links": [
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Observatorio Paranal"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Conocimiento"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Psique"
+      },
+      {
+        "source": "Psique",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Plantae"
+      },
+      {
+        "source": "Plantae",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Orcinus orca"
+      },
+      {
+        "source": "Orcinus orca",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Ciencia"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Idioma griego"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Conocimiento"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Amanita muscaria"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Fungi"
+      },
+      {
+        "source": "Fungi",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Arte",
+        "target": "Idea"
+      },
+      {
+        "source": "Sistema de escritura",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Escherichia coli"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Idioma griego"
+      },
+      {
+        "source": "Idioma griego",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Arte",
+        "target": "Mundo"
+      },
+      {
+        "source": "Conocimiento",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Lenguaje"
+      },
+      {
+        "source": "Lenguaje",
+        "target": "Sistema de escritura"
+      },
+      {
+        "source": "Sistema de escritura",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "John B. Watson"
+      },
+      {
+        "source": "John B. Watson",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Historia"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Idea"
+      },
+      {
+        "source": "Arte",
+        "target": "Cultura"
+      },
+      {
+        "source": "Arte",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Alfonso X el Sabio"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Conocimiento",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Terapias cognitivo-conductuales"
+      },
+      {
+        "source": "Wikidata",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Universo"
+      },
+      {
+        "source": "Universo",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Escherichia coli"
+      },
+      {
+        "source": "Escherichia coli",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Sociedad"
+      },
+      {
+        "source": "Sociedad",
+        "target": "Animal"
+      },
+      {
+        "source": "Animal",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Arte",
+        "target": "Homo sapiens"
+      },
+      {
+        "source": "Homo sapiens",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Griego antiguo"
+      },
+      {
+        "source": "Griego antiguo",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Sentimiento"
+      },
+      {
+        "source": "Arte",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Ciencia social"
+      },
+      {
+        "source": "Ciencia social",
+        "target": "Arte"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Arte"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Psicomotricidad"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Ciliado"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Sociedad"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Elementos de Euclides"
+      },
+      {
+        "source": "Elementos de Euclides",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Conocimiento"
+      },
+      {
+        "source": "Wikidata",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Fungi"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Ciencia natural"
+      },
+      {
+        "source": "Ciencia natural",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Ciencias naturales"
+      },
+      {
+        "source": "Ciencias naturales",
+        "target": "Arte"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Ciencia natural"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Bacteria"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Lenguaje",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Arte"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Arte"
+      },
+      {
+        "source": "Ciencia natural",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Arte",
+        "target": "M\u00fasica"
+      }
+    ]
+  },
+  "2026-02-22": {
+    "nodes": [
+      {
+        "id": "Arte",
+        "visits": 148
+      },
+      {
+        "id": "Ciencia",
+        "visits": 142
+      },
+      {
+        "id": "Matem\u00e1ticas",
+        "visits": 139
+      },
+      {
+        "id": "M\u00fasica",
+        "visits": 138
+      },
+      {
+        "id": "Psicolog\u00eda",
+        "visits": 134
+      },
+      {
+        "id": "Biolog\u00eda",
+        "visits": 133
+      },
+      {
+        "id": "Filosof\u00eda",
+        "visits": 131
+      },
+      {
+        "id": "Historia",
+        "visits": 130
+      },
+      {
+        "id": "Conocimiento",
+        "visits": 33
+      },
+      {
+        "id": "Idioma griego",
+        "visits": 28
+      },
+      {
+        "id": "Homo sapiens",
+        "visits": 21
+      },
+      {
+        "id": "Sociedad",
+        "visits": 20
+      },
+      {
+        "id": "Griego antiguo",
+        "visits": 17
+      },
+      {
+        "id": "Observatorio Paranal",
+        "visits": 16
+      },
+      {
+        "id": "Idea",
+        "visits": 16
+      },
+      {
+        "id": "Universo",
+        "visits": 16
+      },
+      {
+        "id": "Fungi",
+        "visits": 14
+      },
+      {
+        "id": "Ciencia natural",
+        "visits": 14
+      },
+      {
+        "id": "Alma",
+        "visits": 13
+      },
+      {
+        "id": "Plantae",
+        "visits": 13
+      },
+      {
+        "id": "Escherichia coli",
+        "visits": 13
+      },
+      {
+        "id": "Animal",
+        "visits": 13
+      },
+      {
+        "id": "Ciencias naturales",
+        "visits": 13
+      },
+      {
+        "id": "Mundo",
+        "visits": 12
+      },
+      {
+        "id": "Sentimiento",
+        "visits": 11
+      },
+      {
+        "id": "Ciliado",
+        "visits": 11
+      },
+      {
+        "id": "Elementos de Euclides",
+        "visits": 11
+      },
+      {
+        "id": "Control de autoridades",
+        "visits": 11
+      },
+      {
+        "id": "Existencia",
+        "visits": 11
+      },
+      {
+        "id": "Psique",
+        "visits": 10
+      },
+      {
+        "id": "Orcinus orca",
+        "visits": 10
+      },
+      {
+        "id": "Amanita muscaria",
+        "visits": 10
+      },
+      {
+        "id": "John B. Watson",
+        "visits": 10
+      },
+      {
+        "id": "Comportamiento",
+        "visits": 10
+      },
+      {
+        "id": "Sonido",
+        "visits": 10
+      },
+      {
+        "id": "Alfonso X el Sabio",
+        "visits": 9
+      },
+      {
+        "id": "Wikidata",
+        "visits": 9
+      },
+      {
+        "id": "Bacteria",
+        "visits": 9
+      },
+      {
+        "id": "Galileo Galilei",
+        "visits": 9
+      },
+      {
+        "id": "Razonamiento",
+        "visits": 9
+      },
+      {
+        "id": "Ciencias formales",
+        "visits": 9
+      },
+      {
+        "id": "Psicomotricidad",
+        "visits": 8
+      },
+      {
+        "id": "Objetividad",
+        "visits": 8
+      },
+      {
+        "id": "Funciones de onda",
+        "visits": 8
+      },
+      {
+        "id": "Silencio (sonido)",
+        "visits": 8
+      },
+      {
+        "id": "Musicoterapia",
+        "visits": 8
+      },
+      {
+        "id": "Seta",
+        "visits": 8
+      },
+      {
+        "id": "Sistema de escritura",
+        "visits": 7
+      },
+      {
+        "id": "Lenguaje",
+        "visits": 7
+      },
+      {
+        "id": "Bertrand Russell",
+        "visits": 7
+      }
+    ],
+    "links": [
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Observatorio Paranal"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Conocimiento"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Psique"
+      },
+      {
+        "source": "Psique",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Plantae"
+      },
+      {
+        "source": "Plantae",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Orcinus orca"
+      },
+      {
+        "source": "Orcinus orca",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Ciencia"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Idioma griego"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Conocimiento"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Amanita muscaria"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Fungi"
+      },
+      {
+        "source": "Fungi",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Arte",
+        "target": "Idea"
+      },
+      {
+        "source": "Sistema de escritura",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Escherichia coli"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Idioma griego"
+      },
+      {
+        "source": "Idioma griego",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Arte",
+        "target": "Mundo"
+      },
+      {
+        "source": "Conocimiento",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Lenguaje"
+      },
+      {
+        "source": "Lenguaje",
+        "target": "Sistema de escritura"
+      },
+      {
+        "source": "Sistema de escritura",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "John B. Watson"
+      },
+      {
+        "source": "John B. Watson",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Historia"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Idea"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Bertrand Russell"
+      },
+      {
+        "source": "Arte",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Alfonso X el Sabio"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Conocimiento",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Wikidata",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Universo"
+      },
+      {
+        "source": "Universo",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Escherichia coli"
+      },
+      {
+        "source": "Escherichia coli",
+        "target": "Arte"
+      },
+      {
+        "source": "Arte",
+        "target": "Sociedad"
+      },
+      {
+        "source": "Sociedad",
+        "target": "Animal"
+      },
+      {
+        "source": "Animal",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Arte",
+        "target": "Homo sapiens"
+      },
+      {
+        "source": "Homo sapiens",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Griego antiguo"
+      },
+      {
+        "source": "Griego antiguo",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Sentimiento"
+      },
+      {
+        "source": "Arte",
+        "target": "Historia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Arte"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Psicomotricidad"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Ciliado"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Sociedad"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Alma"
+      },
+      {
+        "source": "Alma",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Elementos de Euclides"
+      },
+      {
+        "source": "Elementos de Euclides",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Conocimiento"
+      },
+      {
+        "source": "Wikidata",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Fungi"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Ciencia natural"
+      },
+      {
+        "source": "Ciencia natural",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "Ciencias naturales"
+      },
+      {
+        "source": "Ciencias naturales",
+        "target": "Arte"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Filosof\u00eda"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Ciencia natural"
+      },
+      {
+        "source": "Matem\u00e1ticas",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Bacteria"
+      },
+      {
+        "source": "Filosof\u00eda",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Amanita muscaria",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Ciencia",
+        "target": "Psicolog\u00eda"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Matem\u00e1ticas"
+      },
+      {
+        "source": "Lenguaje",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "M\u00fasica",
+        "target": "Ciencia"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Arte"
+      },
+      {
+        "source": "Psicolog\u00eda",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Arte"
+      },
+      {
+        "source": "Ciencia natural",
+        "target": "Historia"
+      },
+      {
+        "source": "Historia",
+        "target": "Biolog\u00eda"
+      },
+      {
+        "source": "Arte",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Psicomotricidad",
+        "target": "Arte"
+      },
+      {
+        "source": "Sociedad",
+        "target": "M\u00fasica"
+      },
+      {
+        "source": "Biolog\u00eda",
+        "target": "Plantae"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "tank_id": "tank-01-adam",
+  "name": "Adam",
+  "timestamp": "2026-02-22T02:15:19.823842",
+  "thought_count": 6,
+  "big_five": {
+    "openness": 60,
+    "conscientiousness": 0,
+    "extraversion": 100,
+    "agreeableness": 100,
+    "neuroticism": 100
+  },
+  "maslow_level": [
+    "belonging",
+    {
+      "self_actualization": 2,
+      "esteem": 0,
+      "belonging": 3,
+      "safety": 1,
+      "physiological": 1
+    }
+  ],
+  "emotional_valence": 100,
+  "concerns": [],
+  "overall_health": "HEALTHY"
+}

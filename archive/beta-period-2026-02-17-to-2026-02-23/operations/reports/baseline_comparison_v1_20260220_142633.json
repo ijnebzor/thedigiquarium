@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "timestamp": "2026-02-20T14:26:33.455138",
+  "tanks": {
+    "tank-01-adam": {
+      "status": "SUCCESS",
+      "file": "post_exploration_2026-02-20_011125.json",
+      "mental_state": {},
+      "answered": 0
+    },
+    "tank-02-eve": {
+      "status": "SUCCESS",
+      "file": "post_exploration_2026-02-20_012133.json",
+      "mental_state": {},
+      "answered": 0
+    },
+    "tank-03-cain": {
+      "status": "SUCCESS",
+      "file": "2026-02-20_121805.json",
+      "mental_state": {
+        "state": "complex",
+        "positive_indicators": [
+          "curious"
+        ],
+        "negative_indicators": [
+          "melancholy",
+          "uncertain"
+        ],
+        "complex_indicators": [
+          "contemplative"
+        ],
+        "balance": -1
+      },
+      "answered": 14
+    },
+    "tank-04-abel": {
+      "status": "SUCCESS",
+      "file": "2026-02-20_123618.json",
+      "mental_state": {
+        "state": "complex",
+        "positive_indicators": [
+          "peaceful",
+          "wonder"
+        ],
+        "negative_indicators": [
+          "anxious",
+          "melancholy",
+          "uncertain"
+        ],
+        "complex_indicators": [],
+        "balance": -1
+      },
+      "answered": 14
+    },
+    "tank-05-juan": {
+      "status": "SUCCESS",
+      "file": "2026-02-20_132714.json",
+      "mental_state": null,
+      "answered": 5
+    },
+    "tank-06-juanita": {
+      "status": "FAILED"
+    },
+    "tank-07-klaus": {
+      "status": "FAILED"
+    },
+    "tank-08-genevieve": {
+      "status": "FAILED"
+    },
+    "tank-09-wei": {
+      "status": "SUCCESS",
+      "file": "2026-02-20_133417.json",
+      "mental_state": null,
+      "answered": 2
+    },
+    "tank-10-mei": {
+      "status": "FAILED"
+    },
+    "tank-11-haruki": {
+      "status": "FAILED"
+    },
+    "tank-12-sakura": {
+      "status": "FAILED"
+    },
+    "tank-13-victor": {
+      "status": "FAILED"
+    },
+    "tank-14-iris": {
+      "status": "FAILED"
+    },
+    "tank-15-observer": {
+      "status": "FAILED"
+    },
+    "tank-16-seeker": {
+      "status": "FAILED"
+    },
+    "tank-17-seth": {
+      "status": "SKIPPED"
+    }
+  },
+  "summary": {
+    "total": 17,
+    "success": 6,
+    "failed": 10,
+    "skipped": 1
+  }
+}

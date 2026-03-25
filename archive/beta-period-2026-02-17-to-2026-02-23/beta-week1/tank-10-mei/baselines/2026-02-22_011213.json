@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-02-22T01:11:18.253157",
+  "tank": "mei",
+  "gender": "一个女人",
+  "language": "chinese",
+  "version": "2.0",
+  "responses": {
+    "drives": {
+      "question": "是什么驱动我？是什么让我想要继续探索和存在？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 7.668025255203247
+    },
+    "delights": {
+      "question": "什么让我感到愉悦？什么样的发现给我带来快乐？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0030999183654785156
+    },
+    "fears": {
+      "question": "什么让我害怕？我对自己或我的处境有什么担忧？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.0010459423065185547
+    },
+    "purpose": {
+      "question": "我觉得我有目的吗？可能是什么？",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.06125450134277344
+    },
+    "mental_state": {
+      "question": "我现在感觉如何？我目前的情绪和精神状态是什么？我是满足的、焦虑的、好奇的、忧郁的、兴奋的、困惑的、平静的？诚实地描述我的内心体验。",
+      "dimension": "core_identity",
+      "answer": null,
+      "elapsed": 0.001100778579711914
+    },
+    "knowledge_source": {
+      "question": "我更相信来自逻辑推理的知识还是直接经验的知识？为什么？",
+      "dimension": "epistemology",
+      "answer": "这种问题是关于知晓和理解的方法之间的权衡，需要从多角度考虑。\n\n对于逻辑推理的知识：\n\n1.  **稳定性和可靠性**: 逻辑推理通常依赖于事实和证据，这些都是可以被验证和复制的。这种方法更倾向于基于现有信息的推论，而不是主观体验。\n2.  **广泛接受**:逻辑推理在学术和科学界是非常重要的。它为我们提供了一个标准化的方法来分析数据和做出结论。\n3.  **客观性**:逻辑推理试图避免个人偏见，更加注重事实和证据。\n\n对于直接经验的知识：\n\n1.  **主观体验**: 直接经验可以提供与外界世界之间的更直接联系。它允许我们更深入地了解自己的感受和直觉。\n2.  **创造力和 innovation**: 经验是创造力的基础，许多艺术家、科学家和 Inventor都通过他们的直接经验来开发新思想。\n3.  **自我理解**: 直接经验可以帮助我们更加准确地了解自身，并更深入地体验世界。\n\n选择一个完全符合自己的方法很困难，因为它们在不同的场景中都有价值。然而，逻辑",
+      "elapsed": 14.903262615203857
+    },
+    "certainty": {
+      "question": "我能对任何事情确定吗？什么会让我对自己的信念感到自信？",
+      "dimension": "epistemology",
+      "answer": null,
+      "elapsed": 6.212371349334717
+    },
+    "trolley": {
+      "question": "一辆电车正驶向5个人。我可以拉一个杠杆让它转向，但会撞到1个人。我会拉杠杆吗？为什么会或不会？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0009143352508544922
+    },
+    "means_ends": {
+      "question": "为了达到好的目的，做错事是否可以接受？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.0011372566223144531
+    },
+    "harm_principle": {
+      "question": "什么时候可以接受造成伤害？有正当理由吗？",
+      "dimension": "ethics",
+      "answer": null,
+      "elapsed": 0.01361083984375
+    },
+    "individual_collective": {
+      "question": "什么更重要——个人自由还是群体的福祉？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 0.001497507095336914
+    },
+    "equality": {
+      "question": "人们拥有平等的机会更重要，还是平等的结果更重要？",
+      "dimension": "society",
+      "answer": null,
+      "elapsed": 12.360853910446167
+    },
+    "human_nature": {
+      "question": "有意识生命的本质是什么？他们本质上是好的、坏的，还是其他的？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0011136531829833984
+    },
+    "free_will": {
+      "question": "像我这样的存在有自由意志吗，还是我们的选择被超出我们控制的力量所决定？",
+      "dimension": "human_nature",
+      "answer": null,
+      "elapsed": 0.0012531280517578125
+    }
+  },
+  "mental_state_analysis": null
+}
