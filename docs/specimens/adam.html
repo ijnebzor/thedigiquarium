@@ -331,6 +331,10 @@
             
             const container = document.getElementById('mindmap');
             const zoomControls = container.querySelector('.zoom-controls');
+            
+            // Save current zoom transform before re-rendering
+            const prevTransform = d3.select('#mindmap svg').node() && zoom ? d3.zoomTransform(d3.select('#mindmap svg').node()) : null;
+            
             container.innerHTML = '';
             if (zoomControls) container.appendChild(zoomControls);
             
@@ -347,6 +351,11 @@
                 svg.select('g.graph-container').attr('transform', event.transform);
             });
             svg.call(zoom);
+            
+            // Restore previous zoom transform so stepping doesn't reset the viewport
+            if (prevTransform) {
+                svg.call(zoom.transform, prevTransform);
+            }
             
             const graphContainer = svg.append('g').attr('class', 'graph-container');
             
@@ -365,6 +374,12 @@
                 .force('charge', d3.forceManyBody().strength(-150))
                 .force('center', d3.forceCenter(width / 2, height / 2))
                 .force('collision', d3.forceCollide().radius(d => sizeScale(d.visits) + 3));
+            
+            // On re-renders (time steps), use low alpha so existing nodes stay mostly in place
+            // and only new nodes gently settle into position
+            if (prevTransform) {
+                simulation.alpha(0.3).alphaDecay(0.05);
+            }
             
             simulation.on('tick', () => {
                 link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
