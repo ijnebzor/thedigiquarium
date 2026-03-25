@@ -50,6 +50,11 @@ archives/
 *.gguf
 *.bin
 
+# Build
+target/
+
 # Public logs are allowed (pruned clean data)
 !docs/data/logs-public/
 .anthropic_key
+.jj/
+.meridian/worksites/
