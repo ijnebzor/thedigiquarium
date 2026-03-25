@@ -1,16 +1,10 @@
 {
-  "last_updated": "2026-02-23T05:01:46.401388",
-  "tanks_processed": 17,
-  "entries_published": 5253,
-  "entries_pruned": 223843,
-  "prune_criteria": [
-    "null thoughts (LLM not responding)",
-    "empty thoughts",
-    "timeout entries",
-    "error entries",
-    "missing article",
-    "malformed JSON",
-    "too short (<50 chars)"
-  ],
-  "retention": "7 days of logs"
+  "generated_at": "2026-03-25T00:00:00.000000",
+  "total_tanks": 17,
+  "total_logs": 0,
+  "date_range": {
+    "start": null,
+    "end": null
+  },
+  "status": "ready"
 }
