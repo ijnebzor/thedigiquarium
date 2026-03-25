@@ -1,0 +1,23 @@
+[package]
+name = "specimen-loop"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "specimen-loop"
+path = "src/main.rs"
+
+[dependencies]
+aquarium-core.workspace = true
+inference-local.workspace = true
+knowledge.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+chrono.workspace = true
+
+[dev-dependencies]
+tempfile = "3"

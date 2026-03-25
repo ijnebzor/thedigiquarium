@@ -1,0 +1,18 @@
+[package]
+name = "inference-local"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+aquarium-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+candle-core.workspace = true
+candle-nn.workspace = true
+candle-transformers.workspace = true
+hf-hub.workspace = true
+tokenizers.workspace = true
+reqwest.workspace = true
