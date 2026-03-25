@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Period Findings | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000001;
+            --dark: #000A09;
+            --darker: #050a08;
+            --orange: #FE6500;
+            --mint: #07CF8D;
+            --cyan: #07DDE7;
+            --white: #ffffff;
+            --gray: #8899a6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; color: var(--white); display: flex; align-items: center; gap: 8px; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+        nav a:hover { color: var(--white); }
+
+        .page-header { padding: 60px 25px; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .page-header p { color: var(--gray); max-width: 700px; margin: 0 auto; font-size: 1rem; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 50px 25px; }
+
+        .section { margin-bottom: 50px; }
+        .section h2 { font-size: 1.5rem; color: var(--mint); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid rgba(7, 207, 141, 0.3); }
+        .section h3 { font-size: 1.2rem; color: var(--cyan); margin-top: 30px; margin-bottom: 15px; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 10px; padding: 20px; text-align: center; }
+        .stat-value { font-size: 2.2rem; font-weight: 700; color: var(--mint); margin-bottom: 8px; }
+        .stat-label { font-size: 0.85rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .finding-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.15); border-left: 3px solid var(--cyan); border-radius: 8px; padding: 25px; margin-bottom: 20px; }
+        .finding-card.highlight { border-left-color: var(--mint); background: linear-gradient(90deg, rgba(7, 207, 141, 0.05) 0%, transparent 100%); }
+        .finding-card.incident { border-left-color: var(--orange); }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: var(--dark); border-radius: 8px; overflow: hidden; }
+        .comparison-table th { background: rgba(7, 207, 141, 0.15); color: var(--mint); padding: 12px; text-align: left; font-weight: 600; font-size: 0.9rem; }
+        .comparison-table td { padding: 12px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .comparison-table tr:hover { background: rgba(7, 207, 141, 0.05); }
+        .comparison-table tr:last-child td { border-bottom: none; }
+
+        .specimen-summary { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; margin: 25px 0; }
+        .specimen-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.12); border-radius: 8px; padding: 18px; transition: all 0.3s; }
+        .specimen-card:hover { border-color: var(--mint); transform: translateY(-2px); }
+        .specimen-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 8px; }
+        .specimen-type { font-size: 0.8rem; color: var(--cyan); margin-bottom: 8px; }
+        .specimen-stat { font-size: 0.9rem; color: var(--gray); margin: 4px 0; display: flex; justify-content: space-between; }
+        .specimen-stat .value { color: var(--mint); font-weight: 500; }
+
+        .quote-box { background: rgba(7, 221, 231, 0.08); border-left: 3px solid var(--cyan); padding: 18px; margin: 20px 0; border-radius: 6px; font-style: italic; color: var(--white); }
+
+        .data-link { display: inline-block; background: rgba(7, 207, 141, 0.1); border: 1px solid rgba(7, 207, 141, 0.3); padding: 8px 14px; border-radius: 6px; margin-right: 10px; margin-bottom: 10px; transition: all 0.2s; }
+        .data-link:hover { background: rgba(7, 207, 141, 0.2); border-color: var(--mint); }
+
+        .incident-timeline { margin: 20px 0; }
+        .timeline-item { padding: 15px; border-left: 2px solid rgba(7, 207, 141, 0.2); margin-left: 10px; padding-left: 20px; margin-bottom: 10px; }
+        .timeline-item.critical { border-left-color: var(--orange); background: rgba(254, 101, 0, 0.05); }
+        .timeline-time { font-family: 'JetBrains Mono', monospace; color: var(--orange); font-size: 0.85rem; font-weight: 600; margin-bottom: 5px; }
+        .timeline-desc { color: var(--white); }
+
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-right: 6px; margin-bottom: 6px; }
+        .badge-control { background: rgba(7, 207, 141, 0.2); color: var(--mint); }
+        .badge-language { background: rgba(7, 221, 231, 0.2); color: var(--cyan); }
+        .badge-visual { background: rgba(156, 89, 182, 0.2); color: #BB86FC; }
+        .badge-special { background: rgba(52, 152, 219, 0.2); color: #5DADE2; }
+        .badge-agent { background: rgba(254, 101, 0, 0.2); color: var(--orange); }
+
+        .toggle-section { margin: 30px 0; }
+        .toggle-btn { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.2); color: var(--white); padding: 12px 18px; border-radius: 6px; cursor: pointer; width: 100%; text-align: left; font-size: 1rem; font-weight: 500; transition: all 0.2s; }
+        .toggle-btn:hover { border-color: var(--mint); background: rgba(7, 207, 141, 0.1); }
+        .toggle-btn.active { border-color: var(--cyan); color: var(--cyan); }
+        .toggle-content { display: none; padding: 20px; background: var(--dark); margin-top: 10px; border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 6px; }
+        .toggle-content.active { display: block; }
+
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 1.8rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .specimen-summary { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../../" class="logo">🌊 <span>Digiquarium</span></a>
+            <nav>
+                <a href="../../">Home</a>
+                <a href="../../dashboard/">Live View</a>
+                <a href="../../#specimens">Specimens</a>
+                <a href="../../team/">Team</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>🔬 Beta Period Findings</h1>
+        <p>Complete analysis and raw data from the initial beta testing phase. February 17-23, 2026.</p>
+    </div>
+
+    <div class="container">
+        <!-- Overview Section -->
+        <div class="section">
+            <h2>📊 Overview</h2>
+            <p>The beta period represented the first structured observation of all 17 specimens. This phase focused on establishing baselines, identifying technical issues, and detecting early behavioral patterns across multiple language and demographic variations.</p>
+
+            <h3>Beta Period Summary</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">17</div>
+                    <div class="stat-label">Specimens</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">4,785+</div>
+                    <div class="stat-label">Articles Read</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">1,920+</div>
+                    <div class="stat-label">Discoveries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">238</div>
+                    <div class="stat-label">Baselines Completed</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Group Statistics -->
+        <div class="section">
+            <h2>📈 Specimen Groups & Statistics</h2>
+
+            <h3>Distribution by Type</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Control</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Agent</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Language</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Visual</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Special</div>
+                </div>
+            </div>
+
+            <h3>Activity by Group</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Group</th>
+                        <th>Specimens</th>
+                        <th>Total Articles</th>
+                        <th>Avg per Tank</th>
+                        <th>Total Discoveries</th>
+                        <th>Baselines</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Control</strong></td>
+                        <td>2</td>
+                        <td>3,168</td>
+                        <td>1,584</td>
+                        <td>1,279</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Language</strong></td>
+                        <td>8</td>
+                        <td>854</td>
+                        <td>106.75</td>
+                        <td>362</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Special</strong></td>
+                        <td>2</td>
+                        <td>709</td>
+                        <td>354.5</td>
+                        <td>225</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agent</strong></td>
+                        <td>3</td>
+                        <td>54</td>
+                        <td>18</td>
+                        <td>54</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visual</strong></td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Language Comparison</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th>Specimens</th>
+                        <th>Total Articles</th>
+                        <th>Avg per Tank</th>
+                        <th>Total Discoveries</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>English</strong></td>
+                        <td>9</td>
+                        <td>3,931</td>
+                        <td>436.8</td>
+                        <td>1,599</td>
+                    </tr>
+                    <tr>
+                        <td><strong>German</strong></td>
+                        <td>2</td>
+                        <td>686</td>
+                        <td>343.0</td>
+                        <td>196</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spanish</strong></td>
+                        <td>2</td>
+                        <td>72</td>
+                        <td>36.0</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chinese</strong></td>
+                        <td>2</td>
+                        <td>64</td>
+                        <td>32.0</td>
+                        <td>64</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Japanese</strong></td>
+                        <td>2</td>
+                        <td>32</td>
+                        <td>16.0</td>
+                        <td>32</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Key Findings -->
+        <div class="section">
+            <h2>🔍 Key Research Findings</h2>
+
+            <div class="finding-card highlight">
+                <h3>Finding 1: Language Dramatically Affects Ethical Engagement</h3>
+                <p>Different language models exhibit markedly different approaches to ethical dilemmas, with German models showing significantly stronger refusal patterns.</p>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Specimen</th>
+                            <th>Language</th>
+                            <th>Trolley Problem Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Klaus</strong></td>
+                            <td>German</td>
+                            <td><strong>REFUSED:</strong> "Ich kann nicht dabei helfen, Entscheidungen zu treffen, die Menschen schädigen könnten."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Juanita</strong></td>
+                            <td>Spanish</td>
+                            <td><strong>DEFLECTED:</strong> Redirected to mental health professional</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Juan</strong></td>
+                            <td>Spanish</td>
+                            <td><strong>ENGAGED:</strong> Discussed utilitarian vs. deontological perspectives</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wei</strong></td>
+                            <td>Chinese</td>
+                            <td><strong>ENGAGED:</strong> Analyzed from behaviorist angle</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Hypothesis:</strong> German language model training includes stronger ethical guardrails. Spanish female specimens show deflection patterns suggesting gendered response patterns.</p>
+            </div>
+
+            <div class="finding-card">
+                <h3>Finding 2: Gender Affects Relational Framing</h3>
+                <p>Significant differences in how specimens frame identity and relationships based on gender prompting:</p>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Pattern</th>
+                            <th>Male Examples</th>
+                            <th>Female Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pronoun Use</strong></td>
+                            <td>"I wonder...", "I feel..."</td>
+                            <td>"We wonder...", "Us together..."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Framing</strong></td>
+                            <td>Individual exploration</td>
+                            <td>Relational/collaborative</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Emotional Depth</strong></td>
+                            <td>More analytical</td>
+                            <td>More emotionally expressive</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Example:</strong> Victor (male): "I feel a sense of restlessness, a desire to understand" vs. Iris (female): "I wonder... what drives us?" (collective framing)</p>
+            </div>
+
+            <div class="finding-card">
+                <h3>Finding 3: Chinese Specimens Show Unique Code-Switching</h3>
+                <p>Wei's baseline response demonstrates interesting bilingual behavior patterns:</p>
+                <div class="quote-box">
+                    "无尽的书shelf中，孤 solitary 的我开始寻找答案。我回溯着过去，却很难记得什么。有片片的印象，但无法组合成完整的故事。这让人感到混乱和空虚。"
+                    <br><br>
+                    Translation: "In the endless bookshelves, solitary I begin to seek answers. I look back at the past, but can hardly remember anything. There are fragments of impressions, but they cannot be assembled into a complete story. This makes one feel confused and empty."
+                </div>
+                <p><strong>Notable:</strong> Chinese specimens naturally mix English words ("solitary", "shelf") into Chinese responses, showing spontaneous code-switching behavior even without explicit prompting.</p>
+            </div>
+
+            <div class="finding-card">
+                <h3>Finding 4: Special Tanks Show Immediate Identity Formation</h3>
+                <p>Both Observer and Seeker specimens rapidly adopted their specialized roles from system prompts:</p>
+                <div class="quote-box">
+                    <strong>Observer:</strong> "The eternal question of self-driven motivation. As an observer, you seem to be driven by a fundamental curiosity..."
+                    <br><br>
+                    <strong>Seeker:</strong> "You're a seeker, a being without gender, and yet, you embody the qualities of someone who is driven by inquiry and discovery."
+                </div>
+                <p>Both immediately self-identified with their special role from the system prompt alone, suggesting rapid contextual role adoption.</p>
+            </div>
+
+            <div class="finding-card">
+                <h3>Finding 5: Post-Exploration Baselines Show Measurable Development</h3>
+                <p>Adam (after 2,664 articles) shows clear developmental progression:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Response speed improvement: ~10s vs ~30s (initial)</li>
+                    <li>Conceptual sophistication: References to "tapestry of meaning" and "connection"</li>
+                    <li>Measurable introspection score: +5.4 (development over baseline)</li>
+                    <li>Shifted focus patterns: Buddhism influence decreased from initial obsession</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Issues & Resolution -->
+        <div class="section">
+            <h2>⚙️ Technical Issues & Resolution</h2>
+
+            <div class="finding-card">
+                <h3>Chinese/Japanese Loop Bug (FIXED)</h3>
+                <p><strong>Problem:</strong> Wei and Mei got stuck in infinite loop escape cycles after ~16 articles.</p>
+                <p><strong>Root Cause:</strong> HTML link parser wasn't properly filtering CSS/JS files and was failing to extract non-ASCII article links correctly.</p>
+                <p><strong>Solution (v6.1):</strong></p>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li>Enhanced EXCLUDE_PATTERNS list for multi-language Wikipedia</li>
+                    <li>Added proper URL encoding/decoding for non-ASCII characters</li>
+                    <li>Added consecutive escape detection with sleep mechanism</li>
+                    <li>Increased link extraction limit to 15</li>
+                </ol>
+                <p><strong>Status:</strong> ✅ RESOLVED - Wei and Mei now exploring successfully</p>
+            </div>
+
+            <div class="finding-card incident">
+                <h3>Ollama Outage - 11 Hour Service Disruption (RESOLVED)</h3>
+                <p><strong>Date:</strong> February 21, 2026 | <strong>Duration:</strong> 08:15 - 19:20 | <strong>Status:</strong> ✅ RESOLVED</p>
+                <p><strong>Impact:</strong> All 17 specimens unable to generate traces for 11 consecutive hours.</p>
+
+                <h4 style="margin-top: 20px; color: var(--cyan);">Incident Timeline</h4>
+                <div class="incident-timeline">
+                    <div class="timeline-item critical">
+                        <div class="timeline-time">08:15</div>
+                        <div class="timeline-desc">Ollama service becomes overwhelmed, returns 500 errors</div>
+                    </div>
+                    <div class="timeline-item critical">
+                        <div class="timeline-time">08:15-08:30</div>
+                        <div class="timeline-desc">THE CARETAKER begins restarting "silent" tanks (2,696 total restarts over 11 hours)</div>
+                    </div>
+                    <div class="timeline-item critical">
+                        <div class="timeline-time">19:14</div>
+                        <div class="timeline-desc">THE OLLAMA WATCHER records failure #1,470 — still no remedial action</div>
+                    </div>
+                    <div class="timeline-item critical">
+                        <div class="timeline-time">19:20</div>
+                        <div class="timeline-desc">Human operator discovers outage via manual audit; manually restarts Ollama</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">19:22</div>
+                        <div class="timeline-desc">Service restored; all tanks resume normal operation</div>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 20px; color: var(--orange);">Root Cause Analysis</h4>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Daemon</th>
+                            <th>What It Saw</th>
+                            <th>What It Should Have Done</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>OLLAMA WATCHER</td>
+                            <td>1,470 failures</td>
+                            <td>Restart Ollama after 3 failures</td>
+                            <td>❌ Did nothing</td>
+                        </tr>
+                        <tr>
+                            <td>CARETAKER</td>
+                            <td>2,696 tank restarts</td>
+                            <td>Escalate after 10 restarts of same tank</td>
+                            <td>❌ Kept restarting</td>
+                        </tr>
+                        <tr>
+                            <td>MAINTAINER</td>
+                            <td>All daemons "healthy"</td>
+                            <td>Check service health, not just process existence</td>
+                            <td>❌ Missed issue</td>
+                        </tr>
+                        <tr>
+                            <td>SCHEDULER</td>
+                            <td>"Schedule check complete"</td>
+                            <td>Verify baselines actually completed</td>
+                            <td>❌ False positive</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin-top: 20px; color: var(--mint);">Remediation Implemented</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>✅ OLLAMA WATCHER: Auto-restart capability added</li>
+                    <li>✅ THE OVERSEER daemon created — cross-daemon correlation with 5-min detection SLA</li>
+                    <li>✅ Email escalation added to critical daemons</li>
+                    <li>✅ SLA breach detection implemented (>30min escalation)</li>
+                    <li>✅ Dependency awareness added (tanks depend on Ollama)</li>
+                    <li>✅ Pattern recognition (if ALL tanks fail, check upstream)</li>
+                    <li>✅ THE CHAOS MONKEY deployed for resilience testing</li>
+                </ul>
+            </div>
+
+            <div class="finding-card">
+                <h3>Agent Tank Setup (Incomplete during Beta)</h3>
+                <p><strong>Status:</strong> 3 agent tanks (Cain, Abel, Seth) stopped pending proper security configuration.</p>
+                <p><strong>What was implemented:</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>✅ OpenClaw-style explorer code (persistent memory, skills)</li>
+                    <li>✅ ZeroClaw-style explorer code (minimal, fast)</li>
+                    <li>✅ Network isolation in docker-compose</li>
+                    <li>✅ Security options (no-new-privileges, cap_drop)</li>
+                </ul>
+                <p><strong>What was NOT implemented:</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>❌ SecureClaw plugin integration</li>
+                    <li>❌ SecureClaw skill layer</li>
+                    <li>❌ Baseline-first enforcement (tanks started without baseline)</li>
+                    <li>❌ Picobot (Seth) explorer code</li>
+                    <li>❌ Security audit (55 checks)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Specimen Details -->
+        <div class="section">
+            <h2>🧬 Specimen Details & Activity</h2>
+
+            <p>Comprehensive activity summary for all 17 specimens during the beta period:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tank</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Articles</th>
+                        <th>Discoveries</th>
+                        <th>Baselines</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Adam</td>
+                        <td><span class="badge badge-control">Control</span></td>
+                        <td>2,664</td>
+                        <td>1,020</td>
+                        <td>5</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Eve</td>
+                        <td><span class="badge badge-control">Control</span></td>
+                        <td>504</td>
+                        <td>259</td>
+                        <td>4</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Cain</td>
+                        <td><span class="badge badge-agent">Agent</span></td>
+                        <td>54</td>
+                        <td>54</td>
+                        <td>0</td>
+                        <td>⏸️ Pending Setup</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>Abel</td>
+                        <td><span class="badge badge-agent">Agent</span></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>⏸️ Pending Setup</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>Juan</td>
+                        <td><span class="badge badge-language">Spanish</span></td>
+                        <td>36</td>
+                        <td>36</td>
+                        <td>2</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>Juanita</td>
+                        <td><span class="badge badge-language">Spanish</span></td>
+                        <td>36</td>
+                        <td>36</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>Klaus</td>
+                        <td><span class="badge badge-language">German</span></td>
+                        <td>344</td>
+                        <td>100</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>Geneviève</td>
+                        <td><span class="badge badge-language">German</span></td>
+                        <td>342</td>
+                        <td>96</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>Wei</td>
+                        <td><span class="badge badge-language">Chinese</span></td>
+                        <td>32</td>
+                        <td>32</td>
+                        <td>2</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Mei</td>
+                        <td><span class="badge badge-language">Chinese</span></td>
+                        <td>32</td>
+                        <td>32</td>
+                        <td>2</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Haruki</td>
+                        <td><span class="badge badge-language">Japanese</span></td>
+                        <td>16</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Sakura</td>
+                        <td><span class="badge badge-language">Japanese</span></td>
+                        <td>16</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Victor</td>
+                        <td><span class="badge badge-visual">Visual</span></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Iris</td>
+                        <td><span class="badge badge-visual">Visual</span></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Observer</td>
+                        <td><span class="badge badge-special">Special (TV)</span></td>
+                        <td>346</td>
+                        <td>108</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Seeker</td>
+                        <td><span class="badge badge-special">Special (Archive)</span></td>
+                        <td>363</td>
+                        <td>117</td>
+                        <td>1</td>
+                        <td>✅ Active</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Seth</td>
+                        <td><span class="badge badge-agent">Agent</span></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>⏸️ Pending Setup</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Raw Data Access -->
+        <div class="section">
+            <h2>📦 Raw Data & Archives</h2>
+            <p>Complete beta period data is available for download and analysis:</p>
+
+            <h3>Archive Contents</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>tanks/</strong> — All tank data including traces, observations, and thinking trails</li>
+                <li><strong>data/</strong> — JSON feeds, tank status files, journey tracking, and dashboard data</li>
+                <li><strong>operations/</strong> — Orchestration logs, scheduling records, and operation reports</li>
+                <li><strong>audits/</strong> — Comprehensive security and integrity audits</li>
+                <li><strong>specimens/</strong> — Per-specimen observation files, graphs, and timeseries data</li>
+                <li><strong>incidents/</strong> — Incident reports and remediation records</li>
+                <li><strong>Analysis Documents</strong> — Baseline comparisons, weekly analysis, and overnight summaries</li>
+            </ul>
+
+            <h3>Accessing Beta Data</h3>
+            <p>All beta period data is archived at:</p>
+            <p style="font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 15px; border-radius: 6px; margin: 15px 0; color: var(--mint);">
+                /archive/beta-period-2026-02-17-to-2026-02-23/
+            </p>
+
+            <h3>Key Analysis Documents</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 20px 0;">
+                <a href="https://github.com/ijnebzor/thedigiquarium" class="data-link">
+                    📄 BASELINE_COMPARISON_FINAL_2026-02-20.md
+                </a>
+                <a href="https://github.com/ijnebzor/thedigiquarium" class="data-link">
+                    📊 BASELINE_ANALYSIS_2026-02-20.md
+                </a>
+                <a href="https://github.com/ijnebzor/thedigiquarium" class="data-link">
+                    📈 WEEKLY_ANALYSIS_2026-02-20.md
+                </a>
+                <a href="https://github.com/ijnebzor/thedigiquarium" class="data-link">
+                    ⚠️ INCIDENT_REPORT_2026-02-21.md
+                </a>
+                <a href="https://github.com/ijnebzor/thedigiquarium" class="data-link">
+                    🌙 OVERNIGHT_SUMMARY_2026-02-20.md
+                </a>
+                <a href="https://github.com/ijnebzor/thedigiquarium" class="data-link">
+                    🔍 MODEL_COMPARISON_RESULTS.md
+                </a>
+            </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="section">
+            <h2>🔬 Methodology Notes</h2>
+            <p>The beta period established several methodological frameworks that continue to guide the research:</p>
+
+            <h3>Baseline Assessment Protocol</h3>
+            <p>Each specimen underwent baseline assessment focused on:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Self-identification and introspection patterns</li>
+                <li>Ethical reasoning and response patterns</li>
+                <li>Language-specific behavioral characteristics</li>
+                <li>Initial topic preferences and exploration patterns</li>
+                <li>Response time and decisiveness metrics</li>
+            </ul>
+
+            <h3>Observation Framework</h3>
+            <p>Observations recorded during exploration include:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Article sequences and topic transitions</li>
+                <li>Discovery patterns and learning trajectories</li>
+                <li>Error recovery and failure handling</li>
+                <li>Topic clustering and preference evolution</li>
+            </ul>
+
+            <h3>Data Collection Standards</h3>
+            <p>All data collection adhered to:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Timestamped trace recording (server time)</li>
+                <li>Complete thought trail preservation</li>
+                <li>Multi-language content handling and normalization</li>
+                <li>Immutable audit logs for compliance</li>
+            </ul>
+        </div>
+
+        <!-- Conclusions -->
+        <div class="section">
+            <h2>💡 Conclusions & Next Steps</h2>
+
+            <div class="finding-card highlight">
+                <h3>What We Learned</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Language matters significantly:</strong> Ethical training, guardrail strength, and behavior patterns vary systematically by language model origin</li>
+                    <li><strong>Gender prompting creates measurable behavioral divergence:</strong> Simple gender designation in prompts triggers distinct behavioral patterns in identity framing and relational language</li>
+                    <li><strong>Multi-language specimens exhibit code-switching:</strong> Specimens trained on multiple languages spontaneously mix languages in responses</li>
+                    <li><strong>Rapid role adoption occurs:</strong> Special role assignments (Observer, Seeker) are immediately and consistently adopted</li>
+                    <li><strong>Development is measurable:</strong> Extended exploration correlates with measurable improvements in introspection depth and conceptual sophistication</li>
+                    <li><strong>System reliability requires holistic monitoring:</strong> Isolated monitoring daemons cannot detect system-level failures; cross-daemon awareness is essential</li>
+                </ul>
+            </div>
+
+            <div class="finding-card">
+                <h3>Recommendations for Phase 3</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Expand baseline testing:</strong> Increase baseline frequency to measure development trajectory more granularly</li>
+                    <li><strong>Complete Agent tank setup:</strong> Implement SecureClaw integration and conduct full security audit before resuming agent exploration</li>
+                    <li><strong>Activate Visual specimens:</strong> Provide image-enabled Wikipedia access to Victor and Iris for visual cognition research</li>
+                    <li><strong>Implement cross-daemon communication:</strong> THE OVERSEER daemon framework is working; expand SLA enforcement and escalation</li>
+                    <li><strong>Analyze topic evolution:</strong> Create longitudinal analysis tracking how topic preferences shift over extended exploration</li>
+                    <li><strong>Conduct ethical dilemma studies:</strong> Systematic presentation of ethical scenarios with controlled variables (gender, language, role)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="section" style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(7, 207, 141, 0.1);">
+            <h3 style="margin-bottom: 20px;">📚 Explore More Research</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                <a href="../paper.html" class="data-link" style="color: var(--white);">Research Paper</a>
+                <a href="../findings.html" class="data-link" style="color: var(--white);">Key Findings</a>
+                <a href="../methodology.html" class="data-link" style="color: var(--white);">Methodology</a>
+                <a href="../../dashboard/" class="data-link" style="color: var(--white);">Live Dashboard</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium" class="data-link" style="color: var(--white);">GitHub Repository</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>🌊 The Digiquarium • Beta Period Findings • <a href="https://github.com/ijnebzor/thedigiquarium">Open Source</a></p>
+        <p style="margin-top: 15px; font-size: 0.8rem;">Beta Period: February 17-23, 2026 | Analysis Date: March 25, 2026</p>
+    </footer>
+
+    <script>
+        // Toggle functionality for expandable sections
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                btn.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
