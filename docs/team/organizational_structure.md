@@ -1,15 +1,16 @@
 # THE DIGIQUARIUM - Organizational Structure v2.0
 *Last updated: 2026-02-21*
 
-## 5 Divisions, 19 Daemons
+## 5 Divisions, 21 Daemons
 
-### OPERATIONS (4)
+### OPERATIONS (5)
 | Daemon | Role | Reports To |
 |--------|------|------------|
 | THE MAINTAINER | Infrastructure uptime | STRATEGIST |
 | THE CARETAKER | Tank health | MAINTAINER |
 | THE SCHEDULER | Timing/cycles | MAINTAINER |
 | THE OLLAMA WATCHER | LLM infrastructure | MAINTAINER |
+| THE CHAOS MONKEY | Resilience testing | MAINTAINER |
 
 ### SECURITY (3)
 | Daemon | Role | Reports To |
@@ -26,11 +27,12 @@
 | THE TRANSLATOR | Multi-language | DOCUMENTARIAN |
 | THE FINAL AUDITOR | Quality/compliance | STRATEGIST |
 
-### ETHICS & WELLNESS (3)
+### ETHICS & WELLNESS (4)
 | Daemon | Role | Reports To |
 |--------|------|------------|
 | THE ETHICIST | Ethics oversight | STRATEGIST (veto power) |
 | THE THERAPIST | Mental health | ETHICIST |
+| THE PSYCH | Psychological profiling | ETHICIST |
 | THE MODERATOR | Congregations | THERAPIST |
 
 ### PUBLIC ENGAGEMENT (4)

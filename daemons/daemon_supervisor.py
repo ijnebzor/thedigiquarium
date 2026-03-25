@@ -25,8 +25,10 @@ CONTINUOUS_DAEMONS = [
     'sentinel',
     'scheduler',
     'webmaster',
+    'broadcaster',
     'translator',
     'documentarian',
+    'archivist',
     'final_auditor',
     'psych',
     'therapist',
@@ -37,7 +39,6 @@ CONTINUOUS_DAEMONS = [
 home = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
 SPECIAL_DAEMONS = {
     'caretaker': os.path.join(home, 'caretaker/caretaker.py'),
-    'broadcaster': os.path.join(home, 'daemons', 'webmaster/broadcaster_continuous.py'),
 }
 
 def log(msg):
