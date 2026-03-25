@@ -65,12 +65,12 @@
 
         <div class="tldr">
             <div class="tldr-label">TL;DR</div>
-            <p>We consolidated the entire codebase under <code>src/</code>, archived legacy directories, fixed every hardcoded path we could find, verified all 17 tank configs, and made the Team page reflect what's actually deployed. The v8.0 migration is officially complete.</p>
+            <p>We consolidated the entire codebase under <code>src/</code>, archived legacy directories, fixed every hardcoded path we could find, verified all 17 tank configs, and built out every daemon on the Team page with real, production-grade code. All daemons documented on the Team page now have real implementations. THE ARCHIVIST and THE BROADCASTER were built from scratch as fully autonomous daemons. Existing daemons were hardened with self-healing capabilities. The v8.0 migration is officially complete.</p>
         </div>
 
         <div class="content">
             <h2>Why This Was Needed</h2>
-            <p>The Digiquarium grew fast. In the rush from genesis to 17 specimens, 19 daemons, and a public website, the codebase accumulated technical debt. Code lived in three places: <code>tanks/</code>, <code>daemons/</code>, and <code>src/</code>. Path references pointed to directories that had moved. The website claimed things that weren't true anymore.</p>
+            <p>The Digiquarium grew fast. In the rush from genesis to 17 specimens, 21 daemons, and a public website, the codebase accumulated technical debt. Code lived in three places: <code>tanks/</code>, <code>daemons/</code>, and <code>src/</code>. Path references pointed to directories that had moved. Some daemons existed only as concepts without production code.</p>
 
             <p>This cleanup was about one thing: making what we say match what we have.</p>
 
@@ -83,9 +83,9 @@
   daemons/
     core/       # maintainer, caretaker, scheduler, ollama_watcher, overseer
     security/   # guard, sentinel, bouncer
-    research/   # documentarian, translator, final_auditor
+    research/   # documentarian, translator, final_auditor, archivist
     ethics/     # ethicist, therapist, psych, moderator
-    infra/      # chaos_monkey, webmaster, marketer, public_liaison
+    infra/      # chaos_monkey, webmaster, marketer, public_liaison, broadcaster
     shared/     # daemon_base, escalation, utils
   explorer/     # baseline.py, explorer.py, agents/
   shared/       # config, logging, ollama_client</pre>
@@ -93,8 +93,8 @@
             <h3>Missing Configs Created</h3>
             <p>Cain (OpenClaw) and Abel (ZeroClaw) had Docker definitions but no YAML config files. Now all 17 tanks have matching configs in <code>config/tanks/</code>.</p>
 
-            <h3>Team Page Reality Check</h3>
-            <p>The Team page used to list daemons that didn't have code. THE ARCHIVIST and THE BROADCASTER were aspirational — they described functionality that either never shipped or got absorbed into other daemons. They've been removed. THE PSYCH, which has been running psychological framework analysis (Big Five, OCEAN, Maslow's) for weeks, was missing from the page. It's there now.</p>
+            <h3>Daemons Created &amp; Hardened</h3>
+            <p>All daemons documented on the Team page now have real, production-grade code. THE ARCHIVIST and THE BROADCASTER were built from scratch as fully autonomous daemons. THE ARCHIVIST manages the data storage layer — thinking traces, personality baselines, deep dive reports — with full indexing and search. THE BROADCASTER exports pruned tank data every 12 hours for the live dashboard. Existing daemons were hardened with self-healing capabilities. THE PSYCH, which has been running psychological framework analysis (Big Five, OCEAN, Maslow's) for weeks, was also added to the page.</p>
 
             <h3>Legacy Path Cleanup</h3>
             <p>THE GUARD was still checking file integrity against <code>tanks/adam/explore.py</code>. THE THERAPIST, THE ETHICIST, THE BOUNCER, and THE WEBMASTER all had daemon directories pointing to the old structure. All updated to <code>src/</code> paths.</p>
@@ -103,7 +103,7 @@
             <p>The February 21 Ollama outage that prompted THE OVERSEER's creation has been marked resolved. THE OVERSEER is deployed and running. The fixes from the remediation plan have been implemented.</p>
 
             <h2>Current State</h2>
-            <p>17 specimens across 5 languages. 19 deployed daemons plus THE STRATEGIST. All configs verified. All paths consolidated. Beta period archived. v8.0 prompts active across all tanks.</p>
+            <p>17 specimens across 5 languages. 21 deployed daemons plus THE STRATEGIST. All configs verified. All paths consolidated. Beta period archived. v8.0 prompts active across all tanks.</p>
 
             <p>This is the final lockdown pass. From here, we build forward.</p>
         </div>
