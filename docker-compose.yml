@@ -107,7 +107,7 @@ services:
   # TANK 01: ADAM - Male Control (English Simple)
   # ==========================================================================
   tank-01-adam:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-01-adam
     working_dir: /tank
     environment:
@@ -143,7 +143,7 @@ services:
   # TANK 02: EVE - Female Control (English Simple)
   # ==========================================================================
   tank-02-eve:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-02-eve
     working_dir: /tank
     environment:
@@ -179,7 +179,7 @@ services:
   # TANK 03: CAIN - OpenClaw Agent (Genderless)
   # ==========================================================================
   tank-03-cain:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-03-cain
     working_dir: /tank
     environment:
@@ -217,7 +217,7 @@ services:
   # TANK 04: ABEL - ZeroClaw Agent (Genderless)
   # ==========================================================================
   tank-04-abel:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-04-abel
     working_dir: /tank
     environment:
@@ -255,7 +255,7 @@ services:
   # TANK 05: JUAN - Spanish Male
   # ==========================================================================
   tank-05-juan:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-05-juan
     working_dir: /tank
     environment:
@@ -293,7 +293,7 @@ services:
   # TANK 06: JUANITA - Spanish Female
   # ==========================================================================
   tank-06-juanita:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-06-juanita
     working_dir: /tank
     environment:
@@ -331,7 +331,7 @@ services:
   # TANK 07: KLAUS - German Male
   # ==========================================================================
   tank-07-klaus:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-07-klaus
     working_dir: /tank
     environment:
@@ -369,7 +369,7 @@ services:
   # TANK 08: GENEVIEVE - German Female
   # ==========================================================================
   tank-08-genevieve:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-08-genevieve
     working_dir: /tank
     environment:
@@ -407,7 +407,7 @@ services:
   # TANK 09: WEI - Chinese Male
   # ==========================================================================
   tank-09-wei:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-09-wei
     working_dir: /tank
     environment:
@@ -445,7 +445,7 @@ services:
   # TANK 10: MEI - Chinese Female
   # ==========================================================================
   tank-10-mei:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-10-mei
     working_dir: /tank
     environment:
@@ -483,7 +483,7 @@ services:
   # TANK 11: HARUKI - Japanese Male
   # ==========================================================================
   tank-11-haruki:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-11-haruki
     working_dir: /tank
     environment:
@@ -521,7 +521,7 @@ services:
   # TANK 12: SAKURA - Japanese Female
   # ==========================================================================
   tank-12-sakura:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-12-sakura
     working_dir: /tank
     environment:
@@ -559,7 +559,7 @@ services:
   # TANK 13: VICTOR - English Male WITH Images
   # ==========================================================================
   tank-13-victor:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-13-victor
     working_dir: /tank
     environment:
@@ -597,7 +597,7 @@ services:
   # TANK 14: IRIS - English Female WITH Images
   # ==========================================================================
   tank-14-iris:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-14-iris
     working_dir: /tank
     environment:
@@ -635,7 +635,7 @@ services:
   # TANK 15: OBSERVER - Can See All Other Tanks (Genderless)
   # ==========================================================================
   tank-15-observer:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-15-observer
     working_dir: /tank
     environment:
@@ -674,7 +674,7 @@ services:
   # TANK 16: SEEKER - Can Summon Archivist Anytime (Genderless)
   # ==========================================================================
   tank-16-seeker:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-16-seeker
     working_dir: /tank
     environment:
@@ -715,7 +715,7 @@ services:
   # ==========================================================================
   
   tank-17-seth:
-    image: python:3.11-slim
+    image: digiquarium-tank:latest
     container_name: tank-17-seth
     working_dir: /tank
     environment:
