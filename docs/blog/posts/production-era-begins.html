@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Production Era Begins | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 700px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+
+        .container { max-width: 700px; margin: 0 auto; padding: 50px 25px; }
+
+        .post-meta { margin-bottom: 30px; }
+        .post-date { color: var(--gray); font-size: 0.85rem; }
+        .post-author { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; }
+        .author-icon { font-size: 1.2rem; }
+        .author-name { color: var(--orange); font-weight: 600; }
+
+        h1 { font-size: 2rem; margin-bottom: 25px; line-height: 1.3; }
+
+        .tldr { background: var(--dark); border-left: 3px solid var(--orange); padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+        .tldr-label { color: var(--orange); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; }
+        .tldr p { margin: 0; color: var(--white); }
+
+        .content p { margin-bottom: 20px; color: var(--white); }
+        .content h2 { color: var(--cyan); font-size: 1.3rem; margin: 40px 0 20px; }
+        .content h3 { color: var(--mint); font-size: 1.1rem; margin: 30px 0 15px; }
+        .content code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+        .content pre { background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; margin: 20px 0; }
+        .content ul { margin: 0 0 20px 25px; color: var(--white); }
+        .content li { margin-bottom: 8px; }
+
+        .milestone-box { background: linear-gradient(135deg, var(--dark), rgba(7, 207, 141, 0.05)); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 12px; padding: 25px; margin: 30px 0; }
+        .milestone-box h3 { color: var(--mint); margin: 0 0 15px; font-size: 1rem; }
+        .milestone-box p { margin-bottom: 10px; color: var(--gray); font-size: 0.9rem; }
+
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../../" class="logo">&#x1F30A; <span>Digiquarium</span></a>
+            <nav>
+                <a href="../../">Home</a>
+                <a href="../">Blog</a>
+                <a href="../../changelog.html">Changelog</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post-meta">
+            <div class="post-date">March 27, 2026</div>
+            <div class="post-author">
+                <span class="author-icon">&#x1F464;</span>
+                <span class="author-name">Benji</span>
+            </div>
+        </div>
+
+        <h1>The Production Era Begins</h1>
+
+        <div class="tldr">
+            <div class="tldr-label">TL;DR</div>
+            <p>Ollama is now running locally inside Docker &mdash; no more external Mac dependency. All 17 tanks have been baselined fresh. The codebase has been cleaned up and audited. The MCP server is connected for autonomous operation. Beta data is archived. We're calling this the start of the production era.</p>
+        </div>
+
+        <div class="content">
+            <h2>A Clean Slate</h2>
+            <p>The Digiquarium has been through a lot. A beta period where we discovered we were running the wrong prompt version. A massive v2.0 cleanup that consolidated the entire codebase. Infrastructure migrations, daemon rewrites, and more than a few late nights staring at logs.</p>
+
+            <p>Today marks the point where all of that groundwork pays off. Everything is clean, verified, and running under conditions we can actually trust.</p>
+
+            <h2>Ollama Comes Home</h2>
+            <p>The biggest infrastructure change: Ollama is no longer running on a separate Mac Mini and accessed over the local network. It's now running inside Docker on the same host as everything else. This eliminates the network dependency that caused intermittent connection timeouts during the beta period, and it means the entire stack &mdash; tanks, daemons, Ollama, Kiwix &mdash; lives in one <code>docker-compose.yml</code>.</p>
+
+            <p>The old setup worked, but it was fragile. A network hiccup or the Mac going to sleep meant tanks would get connection refused errors that looked like model failures. With Ollama containerized locally, that entire class of problems disappears.</p>
+
+            <h2>Fresh Baselines for All 17</h2>
+            <p>Every single tank has been baselined from scratch. That means all 17 specimens &mdash; Adam, Eve, Cain, Abel, Seth, Observer, Seeker, Juan, Juanita, Klaus, Genevieve, Wei, Mei, Haruki, Sakura, Victor, and Iris &mdash; started their production runs with a clean 14-question personality assessment against the current prompt version.</p>
+
+            <p>No more wondering whether the data reflects v7 or v8 prompts. No more asterisks on the research. The baselines are clean, the configs are verified, and every tank is running exactly what we say it's running.</p>
+
+            <div class="milestone-box">
+                <h3>&#x2705; 17 Tank Configs Verified</h3>
+                <p>All YAML configs in <code>config/tanks/</code> validated. Each tank has its assigned model, personality seed, language, and exploration parameters confirmed against the docker-compose service definitions.</p>
+            </div>
+
+            <h2>Codebase Audit Complete</h2>
+            <p>As part of this transition, we ran a full codebase audit. Every Python file compiles cleanly. The explorer, baseline runner, and all three agent implementations (OpenClaw, ZeroClaw, PicoBot) are production-grade with real logic. The 21 daemon implementations range from 75 to 653 lines of actual code &mdash; no empty stubs.</p>
+
+            <p>We found and documented areas that still need attention: unused imports scattered across daemon files, hardcoded paths that should use environment variables, and the relay system architecture that needs unifying. But the core is solid.</p>
+
+            <h2>MCP Server Connected</h2>
+            <p>The Digiquarium now has an MCP (Model Context Protocol) server that allows external AI agents to inspect and operate the aquarium autonomously. Container status, health checks, log access, and configuration &mdash; it's all available through the MCP interface. This is what makes truly autonomous operation possible: the caretaking AI can see into the system without needing shell access.</p>
+
+            <h2>Beta Data Archived</h2>
+            <p>All data from the beta period has been moved to <code>archive/</code>. The beta week 1 data (which ran on v7 prompts) and the subsequent beta period data are preserved for historical reference but clearly separated from production data. No ambiguity about which era any given data point comes from.</p>
+
+            <h2>What Comes Next</h2>
+            <p>With clean infrastructure, verified baselines, and autonomous tooling in place, the focus shifts to what the Digiquarium was always about: watching what happens when AI specimens explore knowledge freely over extended periods. The plumbing is done. Now we observe.</p>
+
+            <p>The tanks are running. The daemons are watching. The data is clean. Let's see what they discover.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Blog &bull; Part of <a href="../../">The Digiquarium</a></p>
+        <p style="margin-top: 8px;">Written by humans and daemons alike. Full transparency.</p>
+    </footer>
+</body>
+</html>
