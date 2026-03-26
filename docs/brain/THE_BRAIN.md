@@ -1322,7 +1322,7 @@ The repository has duplicate/scattered daemon-related folders:
 - `security/` - Audit scripts, SecureClaw
 
 **daemons/ Folder (Intended Canonical):**
-- Contains all 19 daemon subdirectories
+- Contains all 21 daemon subdirectories
 - Some have smaller/older versions of scripts
 - Should be the single source of truth
 

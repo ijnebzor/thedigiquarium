@@ -15,7 +15,7 @@ services:
       - TANK_TYPE=visitor
       - OLLAMA_URL=http://digiquarium-ollama:11434
     networks:
-      - digiquarium_infrastructure-net
+      - isolated-net
     profiles:
       - visitor
     restart: unless-stopped
@@ -33,7 +33,7 @@ services:
       - TANK_TYPE=visitor
       - OLLAMA_URL=http://digiquarium-ollama:11434
     networks:
-      - digiquarium_infrastructure-net
+      - isolated-net
     profiles:
       - visitor
     restart: unless-stopped
@@ -51,12 +51,12 @@ services:
       - TANK_TYPE=visitor
       - OLLAMA_URL=http://digiquarium-ollama:11434
     networks:
-      - digiquarium_infrastructure-net
+      - isolated-net
     profiles:
       - visitor
     restart: unless-stopped
     command: ["python", "-c", "print('🌙 Luna ready for visitors'); import time; time.sleep(86400)"]
 
 networks:
-  digiquarium_infrastructure-net:
+  isolated-net:
     external: true
