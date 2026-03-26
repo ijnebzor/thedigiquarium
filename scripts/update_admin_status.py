@@ -21,6 +21,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ADMIN_STATUS = REPO_ROOT / "docs" / "data" / "admin-status.json"
 ADMIN_DIR_STATUS = REPO_ROOT / "docs" / "admin" / "status.json"
+DAEMONS_DIR = REPO_ROOT / "daemons"
 
 
 def run(cmd, timeout=30):
@@ -34,8 +35,19 @@ def run(cmd, timeout=30):
         return None
 
 
+def pid_is_alive(pid):
+    """Check if a PID is actually alive by probing /proc/PID."""
+    try:
+        pid = int(pid)
+        if pid <= 0:
+            return False
+        return os.path.isdir(f"/proc/{pid}")
+    except (ValueError, TypeError):
+        return False
+
+
 def get_containers():
-    """Get all Docker containers with their status."""
+    """Get all Docker containers with their status via docker ps."""
     raw = run('docker ps -a --format "{{.Names}}|{{.Status}}|{{.State}}"')
     if not raw:
         return []
@@ -90,32 +102,56 @@ def get_tank_activity(containers):
 
 
 def get_daemon_status(containers):
-    """Check which daemons are running."""
-    daemon_names = [
-        "overseer", "ollama_watcher", "caretaker", "maintainer",
-        "guard", "scheduler", "sentinel", "psych", "bouncer",
-        "chaos_monkey", "therapist", "archivist", "final_auditor",
-        "documentarian", "ethicist", "moderator", "broadcaster",
-        "translator", "webmaster", "marketer", "public_liaison",
-    ]
+    """Check which daemons are running by verifying PID files and /proc.
 
+    For each daemon directory under daemons/, look for a PID file
+    ({name}.pid), read the PID, and verify the process is actually
+    alive by checking /proc/{pid}. Also cross-reference with Docker
+    containers. This avoids false positives from stale PID files or
+    unreliable pgrep matches.
+    """
     daemons = {}
-    for name in daemon_names:
-        # Check if there's a running process for this daemon
-        ps_check = run(f'pgrep -f "{name}" | wc -l')
-        count = int(ps_check) if ps_check and ps_check.isdigit() else 0
 
-        # Also check docker containers
+    # Scan daemons directory for subdirectories
+    if not DAEMONS_DIR.is_dir():
+        return daemons
+
+    skip_dirs = {"__pycache__", "logs", "shared"}
+
+    for entry in sorted(DAEMONS_DIR.iterdir()):
+        if not entry.is_dir() or entry.name in skip_dirs:
+            continue
+
+        name = entry.name
+        pid_file = entry / f"{name}.pid"
+        running = False
+        pid_value = None
+
+        # Check PID file and verify process is alive
+        if pid_file.exists():
+            try:
+                pid_value = pid_file.read_text().strip()
+                if pid_is_alive(pid_value):
+                    running = True
+                else:
+                    # Stale PID file — process is dead
+                    running = False
+            except (OSError, IOError):
+                running = False
+
+        # Also check Docker containers for this daemon name
         container_match = [
             c for c in containers
             if name in c["name"] and c["running"]
         ]
+        if container_match:
+            running = True
 
-        running = count > 0 or len(container_match) > 0
         daemons[name] = {
             "running": running,
-            "count": max(count, len(container_match)),
-            "healthy": running,  # Simple health = running
+            "pid": int(pid_value) if pid_value and pid_value.isdigit() else None,
+            "pid_verified": running,
+            "healthy": running,
         }
 
     return daemons
@@ -186,9 +222,18 @@ def get_system_logs():
 
 
 def get_overseer_status():
-    """Get overseer-specific metrics."""
+    """Get overseer-specific metrics by checking its PID file."""
+    pid_file = DAEMONS_DIR / "overseer" / "overseer.pid"
+    running = False
+    if pid_file.exists():
+        try:
+            pid = pid_file.read_text().strip()
+            running = pid_is_alive(pid)
+        except (OSError, IOError):
+            pass
+
     return {
-        "running": run('pgrep -f overseer') is not None,
+        "running": running,
         "last_audit_healthy": True,
         "active_incidents": 0,
         "auto_remediations": 0,
@@ -216,11 +261,20 @@ def build_status():
         and tanks_running > 0
     )
 
+    # Count running vs dead daemons for summary
+    daemons_running = sum(1 for d in daemons.values() if d["running"])
+    daemons_dead = sum(1 for d in daemons.values() if not d["running"])
+
     status = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "overall_healthy": overall_healthy,
         "ollama": ollama,
         "daemons": daemons,
+        "daemons_summary": {
+            "total": len(daemons),
+            "running": daemons_running,
+            "dead": daemons_dead,
+        },
         "containers": {
             "total": len(containers),
             "running": sum(1 for c in containers if c["running"]),
@@ -255,7 +309,9 @@ def main():
     print(f"  Containers: {status['containers']['total']} "
           f"({status['containers']['running']} running)")
     print(f"  Tanks running: {status['tanks']['running']}")
-    print(f"  Daemons: {sum(1 for d in status['daemons'].values() if d['running'])} active")
+    dsum = status['daemons_summary']
+    print(f"  Daemons: {dsum['running']}/{dsum['total']} alive, "
+          f"{dsum['dead']} dead")
     print(f"  Ollama models: {status['ollama']['models']}")
     print("Done.")
 

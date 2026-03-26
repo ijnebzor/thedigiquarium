@@ -782,9 +782,32 @@ Me siento curioso por saber más sobre la ciudad de Copenhague...</pre></div>
         }
 
         function updateInterests() {
-            if (!graphData || !graphData.nodes) return;
-            const sorted = graphData.nodes.slice().sort((a, b) => b.visits - a.visits);
-            const interests = sorted.slice(0, 12);
+            if (!timeSeriesData || !availableDates.length) {
+                if (!graphData || !graphData.nodes) return;
+                const sorted = graphData.nodes.slice().sort((a, b) => b.visits - a.visits);
+                const interests = sorted.slice(0, 12);
+                document.getElementById('brain-interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + interests.map(n => `
+                    <div class="brain-interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>
+                `).join('');
+                return;
+            }
+            // Cumulative: merge all nodes from step 0 up to current slider position
+            const slider = document.getElementById('time-slider');
+            const currentIdx = parseInt(slider.value, 10);
+            const merged = {};
+            for (let i = 0; i <= currentIdx && i < availableDates.length; i++) {
+                const stepData = timeSeriesData[availableDates[i]];
+                if (stepData && stepData.nodes) {
+                    stepData.nodes.forEach(n => {
+                        if (!merged[n.id] || n.visits > merged[n.id]) {
+                            merged[n.id] = n.visits;
+                        }
+                    });
+                }
+            }
+            const cumulative = Object.entries(merged).map(([id, visits]) => ({id, visits}));
+            cumulative.sort((a, b) => b.visits - a.visits);
+            const interests = cumulative.slice(0, 12);
             document.getElementById('brain-interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + interests.map(n => `
                 <div class="brain-interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>
             `).join('');
