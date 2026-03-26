@@ -7,6 +7,42 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "04:06",
+      "date": "2026-03-27",
+      "article": "Rock (geology)",
+      "thought": "Exploring Rock (geology)...",
+      "next": "Lithosphere",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "04:03",
+      "date": "2026-03-27",
+      "article": "Geology",
+      "thought": "Exploring Geology...",
+      "next": "Rock (geology)",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "04:00",
+      "date": "2026-03-27",
+      "article": "Quaternary",
+      "thought": "Exploring Quaternary...",
+      "next": "Geology",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "03:57",
+      "date": "2026-03-27",
+      "article": "Holocene",
+      "thought": "Exploring Holocene...",
+      "next": "Quaternary",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
       "time": "03:53",
       "date": "2026-03-27",
       "article": "Animal",
@@ -59,42 +95,6 @@
       "next": "Insect",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "03:23",
-      "date": "2026-03-27",
-      "article": "Insect",
-      "thought": "Exploring Insect...",
-      "next": "Mole cricket",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "03:20",
-      "date": "2026-03-27",
-      "article": "Ultraviolet",
-      "thought": "Exploring Ultraviolet...",
-      "next": "Insect",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "03:17",
-      "date": "2026-03-27",
-      "article": "Ionizing radiation",
-      "thought": "Exploring Ionizing radiation...",
-      "next": "Ultraviolet",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "03:14",
-      "date": "2026-03-27",
-      "article": "Ultraviolet light",
-      "thought": "Exploring Ultraviolet light...",
-      "next": "Ionizing radiation",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
@@ -105,6 +105,10 @@
     {
       "topic": "Philosophy",
       "visits": 5
+    },
+    {
+      "topic": "Holocene",
+      "visits": 4
     },
     {
       "topic": "Science",
@@ -124,10 +128,6 @@
     },
     {
       "topic": "Music",
-      "visits": 3
-    },
-    {
-      "topic": "Art",
       "visits": 3
     }
   ]

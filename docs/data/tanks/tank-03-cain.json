@@ -7,6 +7,24 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "04:07",
+      "date": "2026-03-27",
+      "article": "Artist",
+      "thought": "Exploring Artist...",
+      "next": "Acting",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "04:03",
+      "date": "2026-03-27",
+      "article": "Art",
+      "thought": "Exploring Art...",
+      "next": "Artist",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
       "time": "02:12",
       "date": "2026-03-27",
       "article": "Australasia",
@@ -77,24 +95,6 @@
       "next": "Earth",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "02:11",
-      "date": "2026-03-27",
-      "article": "Earth",
-      "thought": "Exploring Earth...",
-      "next": "The Blue Marble",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "02:11",
-      "date": "2026-03-27",
-      "article": "The Blue Marble",
-      "thought": "Exploring The Blue Marble...",
-      "next": "Apollo 17",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
@@ -115,11 +115,11 @@
       "visits": 16
     },
     {
-      "topic": "Animal",
-      "visits": 16
+      "topic": "Matter",
+      "visits": 15
     },
     {
-      "topic": "Matter",
+      "topic": "Animal",
       "visits": 15
     },
     {
@@ -127,8 +127,8 @@
       "visits": 14
     },
     {
-      "topic": "Biology",
-      "visits": 14
+      "topic": "Ancient Greek",
+      "visits": 13
     }
   ]
 }
