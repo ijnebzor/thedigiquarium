@@ -26,7 +26,10 @@ Research question: Is outside influence more influential than self-directed expl
 import json
 import hashlib
 import re
+import sys
 import time
+import signal
+import fcntl
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional, Dict, List, Tuple
@@ -34,10 +37,17 @@ from dataclasses import dataclass, field
 from enum import Enum
 import secrets
 
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from shared.utils import DaemonLogger, run_command, write_pid_file
+
 # Configuration
-BOUNCER_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "src/daemons/security"
-LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) / "logs"
+DIGIQUARIUM_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium"))
+BOUNCER_DIR = DIGIQUARIUM_DIR / "src/daemons/security"
+LOGS_DIR = DIGIQUARIUM_DIR / "logs"
 VISITOR_LOGS_DIR = LOGS_DIR / "visitor_sessions"
+
+# Lock file for single instance
+LOCK_FILE = Path(__file__).parent / 'bouncer.lock'
 
 # Access Control
 ACCESS_PASSWORD = os.environ.get("VISITOR_ACCESS_PASSWORD", "")
@@ -56,6 +66,9 @@ SESSION_DURATION_MINUTES = 30
 SESSION_MESSAGE_LIMIT = 50
 IDLE_TIMEOUT_MINUTES = 5
 COOLDOWN_MINUTES = 10
+
+# Daemon cycle interval
+CHECK_INTERVAL = 30  # seconds - continuous monitoring
 
 # Content Filtering
 BLOCKED_PATTERNS = {
@@ -172,7 +185,7 @@ class Bouncer:
                 with open(state_file) as f:
                     data = json.load(f)
                     self.banned_ips = set(data.get("banned_ips", []))
-            except:
+            except Exception:
                 pass
     
     def save_state(self):
@@ -496,7 +509,6 @@ class Bouncer:
         filter_result, filter_message, triggers = self.filter_inbound(message)
         
         if filter_result == FilterResult.BANNED:
-            # This would ban the IP in a real implementation
             session.blocks += 1
             self.log_event(session, "message_banned", {"message": message[:100], "triggers": triggers})
             self.emergency_terminate(session_id, "harassment")
@@ -520,7 +532,7 @@ class Bouncer:
         # Increment counters
         session.message_count += 1
         session.last_activity = datetime.now()
-        self.increment_rate_limit(session.ip_hash)  # Would need IP here
+        self.increment_rate_limit(session.ip_hash)
         
         # Store message
         session.messages.append({
@@ -557,8 +569,6 @@ class Bouncer:
     
     def get_specimen_response(self, session: VisitorSession, message: str) -> str:
         """Get response from specimen (placeholder)"""
-        # In real implementation, this would call the actual specimen
-        # For now, return a placeholder
         return f"[{session.specimen_name} would respond to: {message[:50]}...]"
     
     # ─────────────────────────────────────────────────────────────
@@ -633,23 +643,125 @@ class Bouncer:
             },
             "banned_ips_count": len(self.banned_ips)
         }
+    
+    # ─────────────────────────────────────────────────────────────
+    # CONTINUOUS MONITORING (run loop tasks)
+    # ─────────────────────────────────────────────────────────────
+    
+    def sweep_sessions(self) -> int:
+        """Check all active sessions for timeouts/issues. Returns count of cleaned sessions."""
+        cleaned = 0
+        for session_id in list(self.sessions.keys()):
+            session = self.sessions[session_id]
+            if session.status != SessionStatus.ACTIVE:
+                continue
+            should_end, reason = self.check_session_timeout(session)
+            if should_end:
+                self.end_session(session_id, reason)
+                cleaned += 1
+        return cleaned
+    
+    def verify_visitor_containers(self) -> dict:
+        """Check that visitor tank containers are running."""
+        results = {}
+        for tank_id in self.visitor_tanks:
+            rc, stdout, stderr = run_command(f"docker inspect --format '{{{{.State.Running}}}}' {tank_id} 2>/dev/null")
+            running = stdout.strip() == "true" if rc == 0 else False
+            results[tank_id] = running
+        return results
+    
+    def purge_stale_rate_limits(self):
+        """Remove rate limit buckets older than 24 hours with no activity."""
+        now = datetime.now()
+        stale = []
+        for ip_hash, bucket in self.rate_limits.items():
+            if (now - bucket.day_reset) > timedelta(days=1) and bucket.day_count == 0:
+                stale.append(ip_hash)
+        for ip_hash in stale:
+            del self.rate_limits[ip_hash]
+
+
+def _acquire_lock():
+    try:
+        fd = open(LOCK_FILE, 'w')
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return fd
+    except IOError:
+        print("[bouncer] Another instance already running")
+        sys.exit(1)
 
 
 def main():
-    """Test THE BOUNCER"""
+    """THE BOUNCER - continuous visitor protection daemon"""
+    _lock_fd = _acquire_lock()
+
+    log = DaemonLogger('bouncer')
+    write_pid_file('bouncer')
+
+    should_exit = False
+
+    def handle_signal(signum, frame):
+        nonlocal should_exit
+        should_exit = True
+        log.info(f"Received signal {signum}, shutting down gracefully")
+
+    signal.signal(signal.SIGTERM, handle_signal)
+    signal.signal(signal.SIGINT, handle_signal)
+
     bouncer = Bouncer()
-    
-    print("THE BOUNCER initialized")
-    print(f"Visitor tanks: {list(bouncer.visitor_tanks.keys())}")
-    print(f"Max concurrent sessions: {MAX_CONCURRENT_SESSIONS}")
-    print(f"Session duration: {SESSION_DURATION_MINUTES} minutes")
-    print(f"Password required: Yes")
-    
-    # Save initial state
+
+    print("╔══════════════════════════════════════════════════════════════════════╗")
+    print("║          THE BOUNCER v2.0 - Visitor Tank Protection                 ║")
+    print("╚══════════════════════════════════════════════════════════════════════╝")
+    log.info("THE BOUNCER v2 starting - continuous monitoring")
+    log.info(f"Visitor tanks: {list(bouncer.visitor_tanks.keys())}")
+    log.info(f"Check interval: {CHECK_INTERVAL}s")
+
+    cycle = 0
+    while not should_exit:
+        try:
+            cycle += 1
+
+            # 1. Sweep active sessions for timeouts
+            cleaned = bouncer.sweep_sessions()
+            if cleaned > 0:
+                log.action(f"Cleaned {cleaned} timed-out session(s)")
+
+            # 2. Verify visitor tank containers are healthy
+            container_status = bouncer.verify_visitor_containers()
+            down_tanks = [t for t, running in container_status.items() if not running]
+            if down_tanks:
+                log.warn(f"Visitor tanks DOWN: {down_tanks}")
+
+            # 3. Purge stale rate limit data
+            bouncer.purge_stale_rate_limits()
+
+            # 4. Persist state
+            bouncer.save_state()
+
+            # 5. Write status for other daemons to read
+            status = bouncer.get_status()
+            status["container_health"] = container_status
+            status["cycle"] = cycle
+            status_file = BOUNCER_DIR / "status.json"
+            with open(status_file, "w") as f:
+                json.dump(status, f, indent=2)
+
+            if cycle % 10 == 1:  # Log summary every ~5 minutes
+                log.info(
+                    f"Cycle {cycle}: active_sessions={status['active_sessions']}, "
+                    f"banned_ips={status['banned_ips_count']}, "
+                    f"tanks_down={len(down_tanks)}"
+                )
+
+            time.sleep(CHECK_INTERVAL)
+
+        except Exception as e:
+            log.error(f"Error in main loop: {e}")
+            time.sleep(10)
+
+    log.info("THE BOUNCER shutting down")
     bouncer.save_state()
-    
-    status = bouncer.get_status()
-    print(f"\nStatus: {json.dumps(status, indent=2)}")
 
 
 if __name__ == "__main__":
