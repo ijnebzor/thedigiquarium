@@ -38,12 +38,23 @@
         .type-added { background: rgba(7, 207, 141, 0.2); color: var(--mint); }
         .type-changed { background: rgba(7, 221, 231, 0.2); color: var(--cyan); }
         .type-fixed { background: rgba(254, 101, 0, 0.2); color: var(--orange); }
+    
+        /* Mobile hamburger nav */
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
+        @media (max-width: 768px) {
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
+            nav.open { display: flex; }
+            nav a { margin: 8px 0; margin-left: 0; }
+            .hamburger { display: block; }
+            .header, .header-inner { position: relative; }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <a href="./" class="logo">🧬 The <span>Digiquarium</span></a>
-        <nav>
+        <button class="hamburger" aria-label="Menu">☰</button>
+                <nav>
             <a href="./">Home</a>
             <a href="research/paper.html">Research</a>
             <a href="blog/">Blog</a>
@@ -154,5 +165,6 @@
             </ul>
         </div>
     </div>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>

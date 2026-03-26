@@ -110,14 +110,18 @@ function updateAllTanks() {
 
 function updateStats() {
     if (!liveFeed || !liveFeed.stats) return;
-    
+
     const statsEl = document.getElementById('global-stats');
     if (statsEl) {
+        const stats = liveFeed.stats;
         const pruneInfo = liveFeed.prune_stats ? ` (${liveFeed.prune_stats.pruned} junk entries pruned)` : '';
+        const totalTraces = stats.total_traces != null ? stats.total_traces.toLocaleString() : '—';
+        const totalBaselines = stats.total_baselines != null ? stats.total_baselines : '—';
+        const activeTanks = stats.active_tanks != null ? stats.active_tanks : '—';
         statsEl.innerHTML = `
-            <span>📊 ${liveFeed.stats.total_traces.toLocaleString()} traces${pruneInfo}</span>
-            <span>🧬 ${liveFeed.stats.total_baselines} baselines</span>
-            <span>🐟 ${liveFeed.stats.active_tanks}/17 active</span>
+            <span>📊 ${totalTraces} traces${pruneInfo}</span>
+            <span>🧬 ${totalBaselines} baselines</span>
+            <span>🐟 ${activeTanks}/17 active</span>
         `;
     }
 }
