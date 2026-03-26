@@ -4,7 +4,8 @@
 cd /tank
 
 echo "Installing dependencies..."
-pip install -q requests pyyaml beautifulsoup4 2>/dev/null
+pip install --quiet requests pyyaml beautifulsoup4 2>&1 | tail -1
+echo "Dependencies installed."
 
 echo "Starting $TANK_NAME..."
 echo "Baseline will be run by THE SCHEDULER on the 12-hour cycle."
