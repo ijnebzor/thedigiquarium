@@ -83,12 +83,20 @@ services:
     profiles: ["languages"]
 
   # ==========================================================================
-  # OLLAMA PROXY
+  # ==========================================================================
+  # OLLAMA (LOCAL)
   # ==========================================================================
   ollama:
-    image: alpine/socat
+    image: ollama/ollama:latest
     container_name: digiquarium-ollama
-    command: TCP-LISTEN:11434,fork,reuseaddr TCP:${OLLAMA_HOST:-192.168.50.94}:${OLLAMA_PORT:-11434}
+    volumes:
+      - ./ollama-data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
     restart: unless-stopped
     networks:
       isolated-net:
@@ -118,8 +126,10 @@ services:
       - ./logs/tank-01-adam:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-simple
-      - ollama
+      kiwix-simple:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -152,8 +162,10 @@ services:
       - ./logs/tank-02-eve:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-simple
-      - ollama
+      kiwix-simple:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -187,8 +199,10 @@ services:
       - ./logs/tank-03-cain:/logs
     command: ["bash", "/tank/start_agent.sh"]
     depends_on:
-      - kiwix-simple
-      - ollama
+      kiwix-simple:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -223,8 +237,10 @@ services:
       - ./logs/tank-04-abel:/logs
     command: ["bash", "/tank/start_agent.sh"]
     depends_on:
-      - kiwix-simple
-      - ollama
+      kiwix-simple:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -259,8 +275,10 @@ services:
       - ./logs/tank-05-juan:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-spanish
-      - ollama
+      kiwix-spanish:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -295,8 +313,10 @@ services:
       - ./logs/tank-06-juanita:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-spanish
-      - ollama
+      kiwix-spanish:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -331,8 +351,10 @@ services:
       - ./logs/tank-07-klaus:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-german
-      - ollama
+      kiwix-german:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -367,8 +389,10 @@ services:
       - ./logs/tank-08-genevieve:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-german
-      - ollama
+      kiwix-german:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -403,8 +427,10 @@ services:
       - ./logs/tank-09-wei:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-chinese
-      - ollama
+      kiwix-chinese:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -439,8 +465,10 @@ services:
       - ./logs/tank-10-mei:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-chinese
-      - ollama
+      kiwix-chinese:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -475,8 +503,10 @@ services:
       - ./logs/tank-11-haruki:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-japanese
-      - ollama
+      kiwix-japanese:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -511,8 +541,10 @@ services:
       - ./logs/tank-12-sakura:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-japanese
-      - ollama
+      kiwix-japanese:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -547,8 +579,10 @@ services:
       - ./logs/tank-13-victor:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-maxi
-      - ollama
+      kiwix-maxi:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -583,8 +617,10 @@ services:
       - ./logs/tank-14-iris:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-maxi
-      - ollama
+      kiwix-maxi:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -620,8 +656,10 @@ services:
       - ./logs:/all_logs:ro
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-simple
-      - ollama
+      kiwix-simple:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -657,8 +695,10 @@ services:
       - ./logs/tank-16-seeker:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
-      - kiwix-simple
-      - ollama
+      kiwix-simple:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
@@ -695,8 +735,10 @@ services:
       - ./logs/tank-17-seth:/logs
     command: ["bash", "/tank/start_agent.sh"]
     depends_on:
-      - kiwix-simple
-      - ollama
+      kiwix-simple:
+        condition: service_started
+      ollama:
+        condition: service_healthy
     networks:
       - isolated-net
     dns: []
