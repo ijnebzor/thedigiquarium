@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T04:09:23.902078",
+  "generated_at": "2026-03-27T10:14:37.883184",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
@@ -11,10 +11,10 @@
     "description": "Null thoughts, timeouts, and junk data removed for clean display",
     "full_logs_contact": "research@digiquarium.org"
   },
-  "next_update": "2026-03-27 16:09",
+  "next_update": "2026-03-27 22:14",
   "period": {
-    "start": "2026-03-26 16:09",
-    "end": "2026-03-27 04:09",
+    "start": "2026-03-26 22:14",
+    "end": "2026-03-27 10:14",
     "hours": 12
   },
   "tanks": {
@@ -28,35 +28,35 @@
       "recent_thoughts": [],
       "top_topics": [
         {
-          "topic": "Biology",
-          "visits": 7
-        },
-        {
           "topic": "Psychology",
           "visits": 6
-        },
-        {
-          "topic": "History",
-          "visits": 5
         },
         {
           "topic": "Music",
           "visits": 5
         },
         {
-          "topic": "Philosophy",
+          "topic": "Biology",
           "visits": 5
         },
         {
-          "topic": "Science",
+          "topic": "History",
           "visits": 4
         },
         {
-          "topic": "Mathematics",
-          "visits": 2
+          "topic": "Science",
+          "visits": 3
+        },
+        {
+          "topic": "Philosophy",
+          "visits": 3
         },
         {
           "topic": "Oxygen",
+          "visits": 2
+        },
+        {
+          "topic": "Plant",
           "visits": 2
         }
       ]
@@ -72,22 +72,14 @@
       "top_topics": [
         {
           "topic": "Mathematics",
-          "visits": 8
-        },
-        {
-          "topic": "Art",
           "visits": 6
         },
         {
+          "topic": "Art",
+          "visits": 4
+        },
+        {
           "topic": "Science",
-          "visits": 4
-        },
-        {
-          "topic": "Music",
-          "visits": 4
-        },
-        {
-          "topic": "Pattern",
           "visits": 3
         },
         {
@@ -95,12 +87,20 @@
           "visits": 3
         },
         {
-          "topic": "Biology",
+          "topic": "Music",
           "visits": 3
         },
         {
           "topic": "History",
           "visits": 3
+        },
+        {
+          "topic": "Pattern",
+          "visits": 2
+        },
+        {
+          "topic": "Biology",
+          "visits": 2
         }
       ]
     },
@@ -113,128 +113,128 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "04:07",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Artist",
-          "thought": "Exploring Artist...",
-          "next": "Acting",
+          "article": "Animal",
+          "thought": "Exploring Animal...",
+          "next": "Cryogenian",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "04:03",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Art",
-          "thought": "Exploring Art...",
-          "next": "Artist",
+          "article": "Cryogenian",
+          "thought": "Exploring Cryogenian...",
+          "next": "Earth science",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "02:12",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Australasia",
-          "thought": "Exploring Australasia...",
-          "next": "Gondwana",
+          "article": "Earth science",
+          "thought": "Exploring Earth science...",
+          "next": "Geology",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "02:11",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Stone Age",
-          "thought": "Exploring Stone Age...",
-          "next": "Stone tool",
+          "article": "Geology",
+          "thought": "Exploring Geology...",
+          "next": "Geometry",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "02:11",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Stone tool",
-          "thought": "Exploring Stone tool...",
-          "next": "Human",
+          "article": "Geometry",
+          "thought": "Exploring Geometry...",
+          "next": "English language",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "02:11",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Human",
-          "thought": "Exploring Human...",
-          "next": "Woman",
+          "article": "English language",
+          "thought": "Exploring English language...",
+          "next": "United States",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "02:11",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Woman",
-          "thought": "Exploring Woman...",
-          "next": "Female",
+          "article": "United States",
+          "thought": "Exploring United States...",
+          "next": "Americas",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "02:11",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Female",
-          "thought": "Exploring Female...",
-          "next": "Sex#Humans",
+          "article": "Americas",
+          "thought": "Exploring Americas...",
+          "next": "Western Hemisphere",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "02:11",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Geography",
-          "thought": "Exploring Geography...",
-          "next": "Continent",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "02:11",
-          "date": "2026-03-27",
-          "article": "Continent",
-          "thought": "Exploring Continent...",
+          "article": "Western Hemisphere",
+          "thought": "Exploring Western Hemisphere...",
           "next": "Earth",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "10:14",
+          "date": "2026-03-27",
+          "article": "Earth",
+          "thought": "Exploring Earth...",
+          "next": "The Blue Marble",
           "thought_en": null,
           "language": "en"
         }
       ],
       "top_topics": [
         {
-          "topic": "Definition",
-          "visits": 24
-        },
-        {
           "topic": "Earth",
-          "visits": 19
+          "visits": 39
         },
         {
-          "topic": "Taxonomy (biology)",
-          "visits": 17
+          "topic": "Definition",
+          "visits": 36
         },
         {
           "topic": "Chemistry",
-          "visits": 16
+          "visits": 32
         },
         {
-          "topic": "Matter",
-          "visits": 15
-        },
-        {
-          "topic": "Animal",
-          "visits": 15
+          "topic": "Language",
+          "visits": 31
         },
         {
           "topic": "Science",
-          "visits": 14
+          "visits": 29
         },
         {
-          "topic": "Ancient Greek",
-          "visits": 13
+          "topic": "Human",
+          "visits": 28
+        },
+        {
+          "topic": "Physics",
+          "visits": 28
+        },
+        {
+          "topic": "Taxonomy (biology)",
+          "visits": 28
         }
       ]
     },
@@ -247,92 +247,92 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "04:09",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Constitutional law",
-          "thought": "Exploring Constitutional law...",
-          "next": "Rights",
+          "article": "Non-metal",
+          "thought": "Exploring Non-metal...",
+          "next": "Oxygen",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "04:07",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Jurisdiction",
-          "thought": "Exploring Jurisdiction...",
-          "next": "Constitutional law",
+          "article": "Oxygen",
+          "thought": "Exploring Oxygen...",
+          "next": "Beryllium",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "04:04",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Law enforcement agency",
-          "thought": "Exploring Law enforcement agency...",
-          "next": "Jurisdiction",
+          "article": "Beryllium",
+          "thought": "Exploring Beryllium...",
+          "next": "Lithium",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "04:02",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Customs",
-          "thought": "Exploring Customs...",
-          "next": "Law enforcement agency",
+          "article": "Lithium",
+          "thought": "Exploring Lithium...",
+          "next": "Boron",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "04:00",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Sociology",
-          "thought": "Exploring Sociology...",
-          "next": "Customs",
+          "article": "Boron",
+          "thought": "Exploring Boron...",
+          "next": "Nitrogen",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:58",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Science",
-          "thought": "Exploring Science...",
-          "next": "Sociology",
+          "article": "Nitrogen",
+          "thought": "Exploring Nitrogen...",
+          "next": "Allotropy",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:56",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Mathematics",
-          "thought": "Exploring Mathematics...",
-          "next": "Science",
+          "article": "Allotropy",
+          "thought": "Exploring Allotropy...",
+          "next": "State of matter",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:53",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Sound",
-          "thought": "Exploring Sound...",
-          "next": "Water",
+          "article": "State of matter",
+          "thought": "Exploring State of matter...",
+          "next": "Chemistry",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:51",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Music",
-          "thought": "Exploring Music...",
-          "next": "Sound",
+          "article": "Chemistry",
+          "thought": "Exploring Chemistry...",
+          "next": "Molecule",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:47",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Classical conditioning",
-          "thought": "Exploring Classical conditioning...",
-          "next": "Operant conditioning",
+          "article": "Molecule",
+          "thought": "Exploring Molecule...",
+          "next": "Atom",
           "thought_en": null,
           "language": "en"
         }
@@ -340,35 +340,35 @@
       "top_topics": [
         {
           "topic": "Animal",
-          "visits": 26
-        },
-        {
-          "topic": "Science",
-          "visits": 21
-        },
-        {
-          "topic": "Mathematics",
-          "visits": 21
+          "visits": 43
         },
         {
           "topic": "Taxonomy (biology)",
-          "visits": 20
-        },
-        {
-          "topic": "Philosophy",
-          "visits": 17
+          "visits": 43
         },
         {
           "topic": "Biology",
-          "visits": 17
+          "visits": 42
         },
         {
-          "topic": "Earth",
-          "visits": 15
+          "topic": "Mathematics",
+          "visits": 41
         },
         {
-          "topic": "Music",
-          "visits": 14
+          "topic": "Science",
+          "visits": 39
+        },
+        {
+          "topic": "Definition",
+          "visits": 32
+        },
+        {
+          "topic": "Psychology",
+          "visits": 29
+        },
+        {
+          "topic": "History",
+          "visits": 27
         }
       ]
     },
@@ -383,35 +383,35 @@
       "top_topics": [
         {
           "topic": "Psicolog\u00eda",
-          "visits": 13
-        },
-        {
-          "topic": "Biolog\u00eda",
           "visits": 12
         },
         {
-          "topic": "Ciencia",
+          "topic": "Biolog\u00eda",
           "visits": 11
         },
         {
-          "topic": "Historia",
+          "topic": "Ciencia",
           "visits": 10
         },
         {
-          "topic": "Arte",
-          "visits": 10
+          "topic": "Historia",
+          "visits": 9
         },
         {
           "topic": "Filosof\u00eda",
           "visits": 9
         },
         {
-          "topic": "M\u00fasica",
-          "visits": 7
-        },
-        {
           "topic": "Matem\u00e1ticas",
           "visits": 6
+        },
+        {
+          "topic": "M\u00fasica",
+          "visits": 5
+        },
+        {
+          "topic": "Arte",
+          "visits": 5
         }
       ]
     },
@@ -425,36 +425,36 @@
       "recent_thoughts": [],
       "top_topics": [
         {
-          "topic": "Historia",
-          "visits": 14
-        },
-        {
-          "topic": "Ciencia",
-          "visits": 13
-        },
-        {
           "topic": "M\u00fasica",
           "visits": 11
         },
         {
           "topic": "Matem\u00e1ticas",
-          "visits": 11
-        },
-        {
-          "topic": "Psicolog\u00eda",
           "visits": 10
         },
         {
-          "topic": "Filosof\u00eda",
+          "topic": "Historia",
           "visits": 9
         },
         {
-          "topic": "Arte",
+          "topic": "Filosof\u00eda",
+          "visits": 8
+        },
+        {
+          "topic": "Ciencia",
           "visits": 8
         },
         {
           "topic": "Biolog\u00eda",
           "visits": 7
+        },
+        {
+          "topic": "Arte",
+          "visits": 7
+        },
+        {
+          "topic": "Psicolog\u00eda",
+          "visits": 5
         }
       ]
     },
@@ -468,35 +468,35 @@
       "recent_thoughts": [],
       "top_topics": [
         {
-          "topic": "Psychologie",
-          "visits": 10
-        },
-        {
           "topic": "Musik",
           "visits": 9
         },
         {
+          "topic": "Psychologie",
+          "visits": 8
+        },
+        {
           "topic": "Wissenschaft",
-          "visits": 9
-        },
-        {
-          "topic": "Philosophie",
-          "visits": 6
-        },
-        {
-          "topic": "Mathematik",
-          "visits": 5
+          "visits": 7
         },
         {
           "topic": "Altgriechische Sprache",
           "visits": 3
         },
         {
-          "topic": "Geschichte",
+          "topic": "Philosophie",
           "visits": 3
         },
         {
           "topic": "Kunst",
+          "visits": 3
+        },
+        {
+          "topic": "Mathematik",
+          "visits": 3
+        },
+        {
+          "topic": "Biologie",
           "visits": 3
         }
       ]
@@ -512,35 +512,35 @@
       "top_topics": [
         {
           "topic": "Wissenschaft",
-          "visits": 11
+          "visits": 9
         },
         {
           "topic": "Biologie",
-          "visits": 10
-        },
-        {
-          "topic": "Philosophie",
           "visits": 7
         },
         {
-          "topic": "Mathematik",
+          "topic": "Philosophie",
           "visits": 6
         },
         {
-          "topic": "Musik",
-          "visits": 4
+          "topic": "Mathematik",
+          "visits": 5
         },
         {
           "topic": "Altgriechische Sprache",
           "visits": 4
         },
         {
-          "topic": "Lebewesen",
+          "topic": "Musik",
           "visits": 3
         },
         {
-          "topic": "Psychologie",
-          "visits": 3
+          "topic": "Eigenschaft",
+          "visits": 2
+        },
+        {
+          "topic": "Lebewesen",
+          "visits": 2
         }
       ]
     },
@@ -555,35 +555,35 @@
       "top_topics": [
         {
           "topic": "\u751f\u7269\u5b66",
-          "visits": 22
-        },
-        {
-          "topic": "\u827a\u672f",
-          "visits": 21
-        },
-        {
-          "topic": "\u5fc3\u7406\u5b66",
-          "visits": 19
-        },
-        {
-          "topic": "\u79d1\u5b66",
           "visits": 18
         },
         {
           "topic": "\u6570\u5b66",
-          "visits": 18
+          "visits": 16
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 16
+        },
+        {
+          "topic": "\u827a\u672f",
+          "visits": 15
         },
         {
           "topic": "\u97f3\u4e50",
-          "visits": 17
+          "visits": 14
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 13
         },
         {
           "topic": "\u54f2\u5b66",
-          "visits": 13
+          "visits": 10
         },
         {
           "topic": "\u5386\u53f2",
-          "visits": 13
+          "visits": 9
         }
       ]
     },
@@ -598,35 +598,35 @@
       "top_topics": [
         {
           "topic": "\u54f2\u5b66",
-          "visits": 22
-        },
-        {
-          "topic": "\u6570\u5b66",
-          "visits": 21
-        },
-        {
-          "topic": "\u827a\u672f",
-          "visits": 21
+          "visits": 17
         },
         {
           "topic": "\u97f3\u4e50",
-          "visits": 19
+          "visits": 16
         },
         {
-          "topic": "\u751f\u7269\u5b66",
-          "visits": 18
+          "topic": "\u827a\u672f",
+          "visits": 16
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 15
         },
         {
           "topic": "\u5386\u53f2",
           "visits": 15
         },
         {
-          "topic": "\u5fc3\u7406\u5b66",
+          "topic": "\u751f\u7269\u5b66",
           "visits": 13
         },
         {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 11
+        },
+        {
           "topic": "\u79d1\u5b66",
-          "visits": 12
+          "visits": 8
         }
       ]
     },
@@ -641,35 +641,35 @@
       "top_topics": [
         {
           "topic": "\u97f3\u697d",
-          "visits": 22
-        },
-        {
-          "topic": "\u6b74\u53f2",
-          "visits": 22
-        },
-        {
-          "topic": "\u82b8\u8853",
-          "visits": 21
+          "visits": 17
         },
         {
           "topic": "\u751f\u7269\u5b66",
-          "visits": 20
+          "visits": 17
+        },
+        {
+          "topic": "\u82b8\u8853",
+          "visits": 17
+        },
+        {
+          "topic": "\u6b74\u53f2",
+          "visits": 16
         },
         {
           "topic": "\u54f2\u5b66",
-          "visits": 18
+          "visits": 14
         },
         {
           "topic": "\u79d1\u5b66",
-          "visits": 15
+          "visits": 11
         },
         {
           "topic": "\u6570\u5b66",
-          "visits": 12
+          "visits": 10
         },
         {
           "topic": "\u5fc3\u7406\u5b66",
-          "visits": 11
+          "visits": 9
         }
       ]
     },
@@ -683,36 +683,36 @@
       "recent_thoughts": [],
       "top_topics": [
         {
-          "topic": "\u5fc3\u7406\u5b66",
-          "visits": 22
-        },
-        {
           "topic": "\u97f3\u697d",
-          "visits": 22
-        },
-        {
-          "topic": "\u82b8\u8853",
-          "visits": 20
-        },
-        {
-          "topic": "\u6570\u5b66",
           "visits": 18
         },
         {
-          "topic": "\u54f2\u5b66",
+          "topic": "\u5fc3\u7406\u5b66",
           "visits": 17
         },
         {
-          "topic": "\u6b74\u53f2",
-          "visits": 15
+          "topic": "\u82b8\u8853",
+          "visits": 17
         },
         {
-          "topic": "\u751f\u7269\u5b66",
+          "topic": "\u54f2\u5b66",
+          "visits": 16
+        },
+        {
+          "topic": "\u6570\u5b66",
           "visits": 14
         },
         {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 12
+        },
+        {
+          "topic": "\u6b74\u53f2",
+          "visits": 11
+        },
+        {
           "topic": "\u79d1\u5b66",
-          "visits": 13
+          "visits": 6
         }
       ]
     },
@@ -726,19 +726,15 @@
       "recent_thoughts": [],
       "top_topics": [
         {
-          "topic": "Art",
-          "visits": 7
-        },
-        {
           "topic": "Mathematics",
-          "visits": 6
-        },
-        {
-          "topic": "Biology",
           "visits": 5
         },
         {
-          "topic": "Science",
+          "topic": "Art",
+          "visits": 4
+        },
+        {
+          "topic": "Biology",
           "visits": 4
         },
         {
@@ -746,15 +742,19 @@
           "visits": 3
         },
         {
-          "topic": "Philosophy",
-          "visits": 3
-        },
-        {
           "topic": "Stomach",
           "visits": 2
         },
         {
+          "topic": "Philosophy",
+          "visits": 2
+        },
+        {
           "topic": "Metaphysics",
+          "visits": 2
+        },
+        {
+          "topic": "Bacteria",
           "visits": 2
         }
       ]
@@ -770,35 +770,35 @@
       "top_topics": [
         {
           "topic": "Philosophy",
-          "visits": 6
-        },
-        {
-          "topic": "History",
           "visits": 5
-        },
-        {
-          "topic": "Psychology",
-          "visits": 4
-        },
-        {
-          "topic": "Art",
-          "visits": 4
         },
         {
           "topic": "Biology",
           "visits": 4
         },
         {
-          "topic": "Mathematics",
+          "topic": "History",
           "visits": 4
         },
         {
-          "topic": "Science",
+          "topic": "Psychology",
           "visits": 3
         },
         {
-          "topic": "Music",
+          "topic": "Art",
           "visits": 3
+        },
+        {
+          "topic": "Mathematics",
+          "visits": 3
+        },
+        {
+          "topic": "Physiology",
+          "visits": 2
+        },
+        {
+          "topic": "The arts",
+          "visits": 2
         }
       ]
     },
@@ -823,14 +823,6 @@
       "top_topics": [
         {
           "topic": "Earth",
-          "visits": 17
-        },
-        {
-          "topic": "Animal",
-          "visits": 15
-        },
-        {
-          "topic": "Atom",
           "visits": 14
         },
         {
@@ -838,20 +830,28 @@
           "visits": 14
         },
         {
-          "topic": "Electricity",
-          "visits": 14
-        },
-        {
-          "topic": "Definition",
-          "visits": 14
-        },
-        {
-          "topic": "Plant",
-          "visits": 13
+          "topic": "Animal",
+          "visits": 12
         },
         {
           "topic": "Language",
-          "visits": 13
+          "visits": 11
+        },
+        {
+          "topic": "Electricity",
+          "visits": 11
+        },
+        {
+          "topic": "Definition",
+          "visits": 11
+        },
+        {
+          "topic": "Biology",
+          "visits": 10
+        },
+        {
+          "topic": "Science",
+          "visits": 10
         }
       ]
     },
@@ -864,128 +864,128 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "04:06",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Rock (geology)",
-          "thought": "Exploring Rock (geology)...",
-          "next": "Lithosphere",
+          "article": "Write",
+          "thought": "Exploring Write...",
+          "next": "Read",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "04:03",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Geology",
-          "thought": "Exploring Geology...",
-          "next": "Rock (geology)",
+          "article": "Read",
+          "thought": "Exploring Read...",
+          "next": "Reading",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "04:00",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Quaternary",
-          "thought": "Exploring Quaternary...",
-          "next": "Geology",
+          "article": "Reading",
+          "thought": "Exploring Reading...",
+          "next": "Hypothesis",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:57",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Holocene",
-          "thought": "Exploring Holocene...",
-          "next": "Quaternary",
+          "article": "Hypothesis",
+          "thought": "Exploring Hypothesis...",
+          "next": "Window",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:53",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Animal",
-          "thought": "Exploring Animal...",
-          "next": "Holocene",
+          "article": "Window",
+          "thought": "Exploring Window...",
+          "next": "Car",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:46",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Psychology",
-          "thought": "Exploring Psychology...",
-          "next": "Animal",
+          "article": "Car",
+          "thought": "Exploring Car...",
+          "next": "Lorry",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:35",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Pycnogonida",
-          "thought": "Exploring Pycnogonida...",
-          "next": "Caribbean Sea",
+          "article": "Lorry",
+          "thought": "Exploring Lorry...",
+          "next": "British English",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:32",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Arthropod",
-          "thought": "Exploring Arthropod...",
-          "next": "Pycnogonida",
+          "article": "British English",
+          "thought": "Exploring British English...",
+          "next": "British people",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:29",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Insect",
-          "thought": "Exploring Insect...",
-          "next": "Arthropod",
+          "article": "British people",
+          "thought": "Exploring British people...",
+          "next": "Bretons",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "03:26",
+          "time": "10:14",
           "date": "2026-03-27",
-          "article": "Mole cricket",
-          "thought": "Exploring Mole cricket...",
-          "next": "Insect",
+          "article": "Bretons",
+          "thought": "Exploring Bretons...",
+          "next": "Cornish language",
           "thought_en": null,
           "language": "en"
         }
       ],
       "top_topics": [
         {
+          "topic": "Animal",
+          "visits": 24
+        },
+        {
           "topic": "Definition",
-          "visits": 6
-        },
-        {
-          "topic": "Philosophy",
-          "visits": 5
-        },
-        {
-          "topic": "Holocene",
-          "visits": 4
+          "visits": 23
         },
         {
           "topic": "Science",
-          "visits": 4
+          "visits": 19
         },
         {
           "topic": "Biology",
-          "visits": 4
+          "visits": 19
         },
         {
-          "topic": "Lithium",
-          "visits": 4
+          "topic": "Mathematics",
+          "visits": 16
         },
         {
-          "topic": "Latin",
-          "visits": 4
+          "topic": "Europe",
+          "visits": 16
         },
         {
-          "topic": "Music",
-          "visits": 3
+          "topic": "Helium",
+          "visits": 14
+        },
+        {
+          "topic": "Philosophy",
+          "visits": 12
         }
       ]
     }
@@ -1020,14 +1020,14 @@
     ]
   },
   "stats": {
-    "total_traces": 1177604,
+    "total_traces": 1186975,
     "total_baselines": 0,
     "active_tanks": 3,
-    "traces_today": 235
+    "traces_today": 9606
   },
   "prune_stats": {
-    "total": 2576,
-    "kept": 2550,
-    "pruned": 26
+    "total": 19361,
+    "kept": 19060,
+    "pruned": 301
   }
 }

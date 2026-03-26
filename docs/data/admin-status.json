@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-03-27T04:09:01.728186",
+  "timestamp": "2026-03-27T10:14:01.650148",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
-    "proxy_healthy": true,
-    "e2e_healthy": true,
+    "proxy_healthy": false,
+    "e2e_healthy": false,
     "models": 0
   },
   "daemons": {
@@ -20,8 +20,8 @@
     },
     "caretaker": {
       "running": true,
-      "count": 2,
-      "healthy": false
+      "count": 1,
+      "healthy": true
     },
     "maintainer": {
       "running": true,
@@ -50,11 +50,11 @@
     }
   },
   "containers": {
-    "total": 24
+    "total": 23
   },
   "tanks": {
     "running": 17,
-    "traces_today": 173,
+    "traces_today": 6817,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -68,13 +68,13 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Artist",
-        "traces": 53
+        "article": "Earth science",
+        "traces": 2731
       },
       {
         "name": "tank-04-abel",
-        "article": "Constitutional law",
-        "traces": 120
+        "article": "Lithium",
+        "traces": 4086
       },
       {
         "name": "tank-05-juan",
@@ -93,28 +93,28 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-27 03:57:13 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)']",
-    "2026-03-27 03:58:16 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']",
-    "2026-03-27 03:59:21 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-27 04:00:27 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-27 04:01:27 \u274c [OVERSEER] Ollama watcher heartbeat stale: 318.280763s old",
-    "2026-03-27 04:01:31 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-27 04:02:31 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-27 04:02:35 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
-    "2026-03-27 04:02:35 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-27 04:02:35 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)']",
-    "2026-03-27 04:03:40 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-27 04:04:43 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']",
-    "2026-03-27 04:05:49 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-27 04:06:53 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-27 04:07:53 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-27 04:07:53 \u274c [OVERSEER] Ollama watcher heartbeat stale: 348.22227s old",
-    "2026-03-27 04:07:58 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
-    "2026-03-27 04:07:58 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-27 04:07:58 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'ollama_watcher not running']",
-    "2026-03-27 04:09:03 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']"
+    "2026-03-27 10:02:19 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-03-27 10:02:19 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:03:23 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:04:27 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:05:32 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:06:35 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:07:35 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-27 10:07:35 \u274c [OVERSEER] Ollama watcher heartbeat stale: 327.576374s old",
+    "2026-03-27 10:07:40 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-03-27 10:07:40 \u26a0\ufe0f [OVERSEER]   - daemons: ['ollama_watcher not running']",
+    "2026-03-27 10:08:44 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:09:49 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:10:52 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:11:57 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:12:57 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-27 10:13:04 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-03-27 10:13:04 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']",
+    "2026-03-27 10:13:04 \u26a0\ufe0f [OVERSEER]   - daemons: ['ollama_watcher not running']",
+    "2026-03-27 10:14:05 \u274c [OVERSEER] Ollama watcher heartbeat stale: 360.584387s old",
+    "2026-03-27 10:14:08 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'Proxy container not running', 'End-to-end connectivity failed']"
   ],
   "issues": [
-    "caretaker unhealthy"
+    "Ollama E2E failed"
   ]
 }
