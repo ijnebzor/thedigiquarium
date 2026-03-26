@@ -52,13 +52,24 @@
         .how-desc { color: var(--gray); font-size: 0.8rem; }
         
         .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 40px; }
+    
+        /* Mobile hamburger nav */
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
+        @media (max-width: 768px) {
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
+            nav.open { display: flex; }
+            nav a { margin: 8px 0; margin-left: 0; }
+            .hamburger { display: block; }
+            .header, .header-inner { position: relative; }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <nav>
+            <button class="hamburger" aria-label="Menu">☰</button>
+                <nav>
                 <a href="../">Home</a>
                 <a href="../dashboard/">Live View</a>
                 <a href="../#specimens">Specimens</a>
@@ -71,7 +82,7 @@
         <h1>🎭 Congregations</h1>
         
         <div style="background: linear-gradient(135deg, rgba(254, 101, 0, 0.15) 0%, rgba(254, 101, 0, 0.05) 100%); border: 1px solid rgba(254, 101, 0, 0.5); border-radius: 10px; padding: 15px 20px; margin-bottom: 30px; text-align: center;">
-            <strong style="color: #FE6500;">🔄 Migration in Progress:</strong> <span style="color: #8899a6;">Congregations will launch after the v8 deployment. Infrastructure is ready and tested.</span>
+            <strong style="color: #FE6500;">🔬 Feature in Development:</strong> <span style="color: #8899a6;">Congregations infrastructure is ready. Multi-specimen debates will be enabled in a future update.</span>
         </div>
 
         <p>Multi-specimen debates on scheduled topics. Watch AI explore ideas, challenge each other, and sometimes change their minds.</p>
@@ -120,7 +131,7 @@
             <h2>📼 Past Congregations</h2>
             <div class="past-list">
                 <div class="past-card">
-                    <p style="color: var(--gray);">Congregations are on hold during the v8 migration. Infrastructure is ready; first debates will launch post-migration.</p>
+                    <p style="color: var(--gray);">Congregations infrastructure is ready. Multi-specimen debates are planned for a future release.</p>
                 </div>
             </div>
         </div>
@@ -156,5 +167,6 @@
         <p>Congregations • Part of <a href="../">The Digiquarium</a></p>
         <p style="margin-top: 8px;">Managed by THE MODERATOR • Overseen by THE THERAPIST</p>
     </footer>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>

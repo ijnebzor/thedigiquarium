@@ -4,6 +4,16 @@ DAEMON SUPERVISOR - Ensures all continuous daemons stay running.
 Run via cron every minute.
 
 This is the self-healing mechanism.
+
+MIGRATION NOTE (Issue #3):
+This supervisor now uses the canonical daemon code from src/daemons/ instead of legacy daemons/.
+The daemons/ directory contains thin compatibility wrappers that import from src/daemons/.
+Daemon structure:
+  - core/: overseer, maintainer, ollama_watcher, scheduler, caretaker
+  - security/: guard, sentinel, bouncer
+  - research/: documentarian, translator, archivist, final_auditor
+  - ethics/: psych, therapist, ethicist, moderator
+  - infra/: webmaster, broadcaster, chaos_monkey, marketer, public_liaison
 """
 
 import os
@@ -13,8 +23,39 @@ import time
 from pathlib import Path
 from datetime import datetime
 
-DAEMONS_DIR = Path(os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
+DIGIQUARIUM_HOME = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
+DAEMONS_DIR = Path(os.path.join(DIGIQUARIUM_HOME, 'daemons'))
 LOG_FILE = DAEMONS_DIR / 'supervisor.log'
+
+# Mapping of daemon names to their subdirectories in src/daemons/
+DAEMON_SUBDIR_MAP = {
+    # core/
+    'overseer': 'core',
+    'maintainer': 'core',
+    'ollama_watcher': 'core',
+    'scheduler': 'core',
+    'caretaker': 'core',
+    # security/
+    'guard': 'security',
+    'sentinel': 'security',
+    'bouncer': 'security',
+    # research/
+    'documentarian': 'research',
+    'translator': 'research',
+    'archivist': 'research',
+    'final_auditor': 'research',
+    # ethics/
+    'psych': 'ethics',
+    'therapist': 'ethics',
+    'ethicist': 'ethics',
+    'moderator': 'ethics',
+    # infra/
+    'webmaster': 'infra',
+    'broadcaster': 'infra',
+    'chaos_monkey': 'infra',
+    'marketer': 'infra',
+    'public_liaison': 'infra',
+}
 
 # Continuous daemons that MUST be running
 CONTINUOUS_DAEMONS = [
@@ -24,6 +65,7 @@ CONTINUOUS_DAEMONS = [
     'guard',
     'sentinel',
     'scheduler',
+    'bouncer',
     'webmaster',
     'broadcaster',
     'translator',
@@ -32,13 +74,17 @@ CONTINUOUS_DAEMONS = [
     'final_auditor',
     'psych',
     'therapist',
+    'ethicist',
+    'moderator',
     'chaos_monkey',
+    'marketer',
+    'public_liaison',
 ]
 
 # Special cases
-home = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
+home = DIGIQUARIUM_HOME
 SPECIAL_DAEMONS = {
-    'caretaker': os.path.join(home, 'caretaker/caretaker.py'),
+    'caretaker': os.path.join(home, 'daemons/caretaker/caretaker.py'),
 }
 
 def log(msg):
@@ -85,40 +131,40 @@ def start_daemon(name, script_path):
 
 def main():
     log("=== DAEMON SUPERVISOR CHECK ===")
-    
+
     restarted = 0
-    
-    # Check standard daemons
+
+    # Check continuous daemons (using compatibility wrappers in daemons/)
     for name in CONTINUOUS_DAEMONS:
         script = DAEMONS_DIR / name / f'{name}.py'
-        
+
         if not script.exists():
             log(f"WARNING: {name} script not found at {script}")
             continue
-        
+
         if not is_running(name):
             log(f"{name} is not running - restarting...")
             if start_daemon(name, script):
                 restarted += 1
-    
+
     # Check special daemons
     for name, path in SPECIAL_DAEMONS.items():
         script = Path(path)
-        
+
         if not script.exists():
             log(f"WARNING: {name} script not found at {script}")
             continue
-        
+
         if not is_running(name):
             log(f"{name} is not running - restarting...")
             if start_daemon(name, script):
                 restarted += 1
-    
+
     if restarted > 0:
         log(f"Restarted {restarted} daemon(s)")
     else:
         log("All daemons running")
-    
+
     log("=== CHECK COMPLETE ===")
 
 if __name__ == '__main__':

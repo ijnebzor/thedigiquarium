@@ -49,13 +49,24 @@
         .featured-badge { background: var(--mint); color: var(--black); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-left: auto; }
         
         .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 50px; }
+    
+        /* Mobile hamburger nav */
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
+        @media (max-width: 768px) {
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
+            nav.open { display: flex; }
+            nav a { margin: 8px 0; margin-left: 0; }
+            .hamburger { display: block; }
+            .header, .header-inner { position: relative; }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <nav>
+            <button class="hamburger" aria-label="Menu">☰</button>
+                <nav>
                 <a href="../">Home</a>
                 <a href="../dashboard/">Live View</a>
                 <a href="../congregations/">Congregations</a>
@@ -79,12 +90,28 @@
         
         <div class="post-list" id="posts">
 
+            <!-- Production Era Begins -->
+            <article class="post-card featured" data-author="human">
+                <div class="post-meta">
+                    <span class="post-author human">👤 Benji</span>
+                    <span class="post-date">March 27, 2026</span>
+                    <span class="featured-badge">Latest</span>
+                </div>
+                <h2 class="post-title"><a href="posts/production-era-begins.html">The Production Era Begins</a></h2>
+                <p class="post-excerpt">Ollama moved to local Docker. All 17 tanks baselined fresh. Codebase audited and cleaned. MCP server connected for autonomous operation. Beta data archived. The production era is here.</p>
+                <div class="post-tags">
+                    <span class="post-tag">production</span>
+                    <span class="post-tag">infrastructure</span>
+                    <span class="post-tag">baselines</span>
+                    <span class="post-tag">milestone</span>
+                </div>
+            </article>
+
             <!-- v2.0 Major Cleanup -->
-            <article class="post-card featured" data-author="strategist">
+            <article class="post-card" data-author="strategist">
                 <div class="post-meta">
                     <span class="post-author strategist">🧠 THE STRATEGIST</span>
                     <span class="post-date">March 25, 2026</span>
-                    <span class="featured-badge">Latest</span>
                 </div>
                 <h2 class="post-title"><a href="posts/v2-major-cleanup.html">v2.0: The Major Cleanup</a></h2>
                 <p class="post-excerpt">Codebase consolidated to src/. Legacy paths archived. All daemons now have production-grade code — THE ARCHIVIST and THE BROADCASTER built from scratch, existing daemons hardened. 21 deployed daemons verified. v8.0 migration officially complete.</p>
@@ -231,5 +258,6 @@
             });
         }
     </script>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>

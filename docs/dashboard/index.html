@@ -278,14 +278,24 @@
         .thought-original { font-size: 0.9em; color: var(--gray); font-style: italic; margin-top: 5px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5px; }
         .thought-lang-badge { font-size: 0.7em; background: var(--orange); color: var(--black); padding: 2px 6px; border-radius: 4px; margin-left: 5px; }
 
+        @media (max-width: 768px) {
+            .grid-view { grid-template-columns: 1fr; }
+            .container { padding: 15px; }
+            .header { flex-wrap: wrap; gap: 10px; padding: 15px; }
+            .header h1 { font-size: 1.2rem; }
+            .view-toggle { flex-wrap: wrap; }
+            .fullscreen-content { flex-direction: column; }
+            .fullscreen-stats { flex-wrap: wrap; gap: 15px; }
+        }
+
     </style>
 </head>
 <body>
     <header class="header">
         <h1>🌊 Live Tank View</h1>
 
-        <div style="background: linear-gradient(135deg, rgba(254, 101, 0, 0.2) 0%, rgba(254, 101, 0, 0.05) 100%); border: 1px solid rgba(254, 101, 0, 0.5); border-radius: 10px; padding: 15px 20px; margin-bottom: 20px;">
-            <strong style="color: #FE6500;">⚠️ Beta Period Data:</strong> <span style="color: #8899a6;">Current feed shows v7.0 Beta data. All tanks will reset with v8.0 prompts post-migration. <a href="../archive/beta/" style="color: #FE6500;">View archived Beta data</a></span>
+        <div style="background: linear-gradient(135deg, rgba(7, 207, 141, 0.15) 0%, rgba(7, 221, 231, 0.05) 100%); border: 1px solid rgba(7, 207, 141, 0.4); border-radius: 10px; padding: 15px 20px; margin-bottom: 20px;">
+            <strong style="color: #07CF8D;">✅ Production</strong> <span style="color: #8899a6;">Live feed running v8.0 prompts. <a href="../archive/beta/" style="color: #07CF8D;">View archived Beta data</a></span>
         </div>
 
         <div class="status">
@@ -307,11 +317,11 @@
     <div class="container">
         <div class="grid-view" id="tank-grid"></div>
         
-        <!-- Interactive Section (Coming Soon) -->
+        <!-- Interactive Section (Planned Feature) -->
         <div class="section-divider">
             <h2>🎭 Interactive Specimens</h2>
             <p>Soon you'll be able to converse with visitor specimens in real-time.</p>
-            <span class="coming-soon-badge">Coming Soon</span>
+            <span class="coming-soon-badge">Planned Feature</span>
         </div>
     </div>
     
@@ -357,7 +367,7 @@
     <footer class="footer">
         <p id="next-update">Data from THE BROADCASTER</p>
         <p id="global-stats" style="margin-top: 8px; color: var(--mint);"></p>
-        <p style="margin-top: 8px;">Data updates every 12 hours via THE BROADCASTER • <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
+        <p style="margin-top: 8px;">Live stream polls every 5s • Broadcaster baseline every 12h • <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
         <p style="margin-top: 10px;">Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a></p>
     </footer>
 

@@ -89,13 +89,24 @@
         .footer { text-align: center; padding: 35px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
         
         @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .personality-grid { grid-template-columns: 1fr; } }
+    
+        /* Mobile hamburger nav */
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
+        @media (max-width: 768px) {
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
+            nav.open { display: flex; }
+            nav a { margin: 8px 0; margin-left: 0; }
+            .hamburger { display: block; }
+            .header, .header-inner { position: relative; }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <nav>
+            <button class="hamburger" aria-label="Menu">☰</button>
+                <nav>
                 <a href="../">Home</a>
                 <a href="../dashboard/">Live View</a>
                 <a href="../research/">Research</a>
@@ -229,58 +240,62 @@
         let playInterval = null;
         let currentZoom = 1;
         let zoom = null;
-        
+        let isFirstRender = true;
+
+        // Persistent D3 selections — created once, reused across renders
+        let svgSel = null;
+        let graphContainer = null;
+        let linkGroup = null;
+        let nodeGroup = null;
+
         async function loadData() {
             try {
                 const res = await fetch('abel-graph.json');
                 graphData = await res.json();
-                
-                const interests = graphData.nodes.slice(0, 12);
-                document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + interests.map(n => `
-                    <div class="interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>
-                `).join('');
-                
+
+                updateInterests();
                 renderGraph();
                 loadTimeSeries();
             } catch (e) { console.log('No graph data yet'); }
         }
-        
+
         async function loadTimeSeries() {
             try {
                 const res = await fetch('abel-timeseries.json');
                 timeSeriesData = await res.json();
                 availableDates = Object.keys(timeSeriesData).sort();
-                
+
                 const slider = document.getElementById('time-slider');
                 slider.max = Math.max(0, availableDates.length - 1);
                 slider.value = Math.max(0, availableDates.length - 1);
-                
+
                 document.getElementById('current-date').textContent = availableDates[availableDates.length - 1] || 'N/A';
             } catch (e) { console.log('No timeseries'); }
         }
-        
+
         function updateTimeView(index) {
             if (!timeSeriesData || !availableDates[index]) return;
             const date = availableDates[index];
             document.getElementById('current-date').textContent = date;
-            
+
             const prevPositions = {};
             if (graphData && graphData.nodes) {
                 graphData.nodes.forEach(n => {
-                    if (n.x && n.y) prevPositions[n.id] = {x: n.x, y: n.y};
+                    if (n.x !== undefined && n.y !== undefined) prevPositions[n.id] = {x: n.x, y: n.y};
                 });
             }
-            
+
             graphData = timeSeriesData[date];
             if (graphData && graphData.nodes) {
                 graphData.nodes.forEach(n => {
                     if (prevPositions[n.id]) { n.x = prevPositions[n.id].x; n.y = prevPositions[n.id].y; }
                 });
             }
-            
+
             renderGraph();
+            updateInterests();
         }
-        
+
         function togglePlayback() {
             isPlaying = !isPlaying;
             const btn = document.querySelector('.play-btn');
@@ -300,87 +315,112 @@
                 if (playInterval) clearInterval(playInterval);
             }
         }
-        
+
         function zoomIn() { currentZoom = Math.min(currentZoom * 1.3, 5); applyZoom(); }
         function zoomOut() { currentZoom = Math.max(currentZoom / 1.3, 0.3); applyZoom(); }
         function resetZoom() {
             currentZoom = 1;
-            const svg = d3.select('#mindmap svg');
-            if (zoom) svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+            if (svgSel && zoom) svgSel.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
         }
         function applyZoom() {
-            const svg = d3.select('#mindmap svg');
+            if (!svgSel || !zoom) return;
             const width = document.getElementById('mindmap').clientWidth;
             const height = document.getElementById('mindmap').clientHeight;
             const transform = d3.zoomIdentity.translate(width/2, height/2).scale(currentZoom).translate(-width/2, -height/2);
-            if (zoom) svg.transition().duration(300).call(zoom.transform, transform);
+            svgSel.transition().duration(300).call(zoom.transform, transform);
         }
-        
-        function renderGraph() {
-            if (!graphData || !graphData.nodes) return;
-            
+
+        function initSvg() {
             const container = document.getElementById('mindmap');
-            const zoomControls = container.querySelector('.zoom-controls');
-            
-            // Save current zoom transform before re-rendering
-            const prevTransform = d3.select('#mindmap svg').node() && zoom ? d3.zoomTransform(d3.select('#mindmap svg').node()) : null;
-            
-            container.innerHTML = '';
-            if (zoomControls) container.appendChild(zoomControls);
-            
             const width = container.clientWidth;
             const height = container.clientHeight;
-            
-            const svg = d3.select('#mindmap').append('svg').attr('viewBox', [0, 0, width, height]);
-            
+
+            svgSel = d3.select('#mindmap').append('svg').attr('viewBox', [0, 0, width, height]);
+
+            zoom = d3.zoom().scaleExtent([0.3, 5]).on('zoom', (event) => {
+                graphContainer.attr('transform', event.transform);
+            });
+            svgSel.call(zoom);
+
+            graphContainer = svgSel.append('g').attr('class', 'graph-container');
+            linkGroup = graphContainer.append('g').attr('class', 'links');
+            nodeGroup = graphContainer.append('g').attr('class', 'nodes');
+        }
+
+        function updateInterests() {
+            if (!graphData || !graphData.nodes) return;
+            const sorted = graphData.nodes.slice().sort((a, b) => b.visits - a.visits);
+            const interests = sorted.slice(0, 12);
+            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + interests.map(n => `
+                <div class="interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>
+            `).join('');
+        }
+
+        function renderGraph() {
+            if (!graphData || !graphData.nodes) return;
+
+            // Create the persistent SVG structure once
+            if (!svgSel) initSvg();
+
+            const container = document.getElementById('mindmap');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
             const maxVisits = d3.max(graphData.nodes, d => d.visits) || 1;
             const colorScale = d3.scaleLinear().domain([0, maxVisits*0.3, maxVisits*0.6, maxVisits]).range(['#07DDE7', '#07CF8D', '#FE6500', '#FF8833']);
             const sizeScale = d3.scaleSqrt().domain([1, maxVisits]).range([4, 25]);
-            
-            zoom = d3.zoom().scaleExtent([0.3, 5]).on('zoom', (event) => {
-                svg.select('g.graph-container').attr('transform', event.transform);
-            });
-            svg.call(zoom);
-            
-            // Restore previous zoom transform so stepping doesn't reset the viewport
-            if (prevTransform) {
-                svg.call(zoom.transform, prevTransform);
-            }
-            
-            const graphContainer = svg.append('g').attr('class', 'graph-container');
-            
-            const link = graphContainer.append('g').selectAll('line').data(graphData.links || []).join('line').attr('class', 'link').attr('stroke-width', d => Math.sqrt(d.weight || 1));
-            
-            const node = graphContainer.append('g').selectAll('g').data(graphData.nodes).join('g').attr('class', 'node')
+
+            // --- D3 data join for links (enter/update/exit) ---
+            const link = linkGroup.selectAll('line')
+                .data(graphData.links || [], d => d.source.id ? (d.source.id + '-' + d.target.id) : (d.source + '-' + d.target));
+            link.exit().remove();
+            const linkEnter = link.enter().append('line').attr('class', 'link');
+            const linkMerge = linkEnter.merge(link).attr('stroke-width', d => Math.sqrt(d.weight || 1));
+
+            // --- D3 data join for nodes (enter/update/exit) ---
+            const node = nodeGroup.selectAll('g.node')
+                .data(graphData.nodes, d => d.id);
+            node.exit().remove();
+            const nodeEnter = node.enter().append('g').attr('class', 'node')
                 .call(d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended));
-            
-            node.append('circle').attr('r', d => sizeScale(d.visits)).attr('fill', d => colorScale(d.visits))
+            nodeEnter.append('circle')
                 .on('mouseover', showTooltip).on('mouseout', hideTooltip);
-            
-            node.append('text').text(d => d.visits > 10 ? d.id : '').attr('dy', 3).attr('text-anchor', 'middle');
-            
+            nodeEnter.append('text').attr('dy', 3).attr('text-anchor', 'middle');
+            const nodeMerge = nodeEnter.merge(node);
+
+            // Update visual attributes on both new and existing nodes
+            nodeMerge.select('circle')
+                .attr('r', d => sizeScale(d.visits))
+                .attr('fill', d => colorScale(d.visits));
+            nodeMerge.select('text')
+                .text(d => d.visits > 10 ? d.id : '');
+
+            // --- Simulation ---
+            if (simulation) simulation.stop();
+
             simulation = d3.forceSimulation(graphData.nodes)
                 .force('link', d3.forceLink(graphData.links || []).id(d => d.id).distance(60))
                 .force('charge', d3.forceManyBody().strength(-150))
                 .force('center', d3.forceCenter(width / 2, height / 2))
                 .force('collision', d3.forceCollide().radius(d => sizeScale(d.visits) + 3));
-            
-            // On re-renders (time steps), use low alpha so existing nodes stay mostly in place
-            // and only new nodes gently settle into position
-            if (prevTransform) {
-                simulation.alpha(0.3).alphaDecay(0.05);
+
+            if (!isFirstRender) {
+                // On step changes: very low alpha so existing nodes barely move,
+                // only new nodes gently settle in. Zoom transform is untouched.
+                simulation.alpha(0.05).alphaDecay(0.02);
             }
-            
+            isFirstRender = false;
+
             simulation.on('tick', () => {
-                link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-                node.attr('transform', d => `translate(${d.x},${d.y})`);
+                linkMerge.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+                nodeMerge.attr('transform', d => `translate(${d.x},${d.y})`);
             });
         }
-        
+
         function dragstarted(event) { if (!event.active) simulation.alphaTarget(0.3).restart(); event.subject.fx = event.subject.x; event.subject.fy = event.subject.y; }
         function dragged(event) { event.subject.fx = event.x; event.subject.fy = event.y; }
         function dragended(event) { if (!event.active) simulation.alphaTarget(0); event.subject.fx = null; event.subject.fy = null; }
-        
+
         function showTooltip(event, d) {
             const tooltip = document.getElementById('tooltip');
             document.getElementById('tooltip-title').textContent = d.id;
@@ -390,8 +430,9 @@
             tooltip.classList.add('show');
         }
         function hideTooltip() { document.getElementById('tooltip').classList.remove('show'); }
-        
+
         loadData();
     </script>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>

@@ -25,7 +25,7 @@ def get_digiquarium_home() -> str:
 
 def get_ollama_host() -> str:
     """Get OLLAMA_HOST from environment or use default."""
-    return os.environ.get('OLLAMA_HOST', '192.168.50.94')
+    return os.environ.get('OLLAMA_HOST', 'digiquarium-ollama')
 
 def get_ollama_port() -> int:
     """Get OLLAMA_PORT from environment or use default."""

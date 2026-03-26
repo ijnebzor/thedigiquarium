@@ -1,75 +1,15 @@
 #!/usr/bin/env python3
-"""
-THE TRANSLATOR v2.0 - Language Processing
-==========================================
-Real-time translation of non-English tank thoughts.
-SLA: 30 min
-"""
-import os, sys, time, json
-from datetime import datetime
+"""Legacy compatibility wrapper - imports from src/daemons/"""
+import sys
+import os
 from pathlib import Path
-import fcntl
-sys.path.insert(0, str(Path(__file__).parent.parent))
-sys.path.insert(0, os.path.join(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'), 'daemons'))
-from shared.utils import DaemonLogger, run_command, write_pid_file
-from status_reporter import StatusReporter
 
-DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
-CHECK_INTERVAL = 1800
+# Add src/daemons to path
+src_daemons = Path(__file__).parent.parent.parent / 'src' / 'daemons'
+sys.path.insert(0, str(src_daemons))
 
-LANGUAGE_TANKS = {
-    'tank-05-juan': 'Spanish', 'tank-06-juanita': 'Spanish',
-    'tank-07-klaus': 'German', 'tank-08-genevieve': 'German',
-    'tank-09-wei': 'Chinese', 'tank-10-mei': 'Chinese',
-    'tank-11-haruki': 'Japanese', 'tank-12-sakura': 'Japanese',
-}
+# Import from the canonical location
+from research.translator import *
 
-class Translator:
-    def __init__(self):
-        self.status = StatusReporter('translator')
-
-        self.log = DaemonLogger('translator')
-    
-    def run(self):
-        print("╔══════════════════════════════════════════════════════════════════════╗")
-        print("║              THE TRANSLATOR v2.0 - Language Processing              ║")
-        print("╚══════════════════════════════════════════════════════════════════════╝")
-        write_pid_file('translator')
-        self.log.info("THE TRANSLATOR v2 starting")
-        
-        while True:
-            try:
-                self.log.info(f"Monitoring {len(LANGUAGE_TANKS)} language tanks")
-                # Status update for SLA monitoring
-
-                try:
-
-                    self.status.heartbeat()
-
-                except:
-
-                    pass
-
-                time.sleep(CHECK_INTERVAL)
-            except Exception as e:
-                self.log.error(f"Error: {e}")
-                time.sleep(300)
-
-
-# Single-instance lock
-LOCK_FILE = Path(__file__).parent / 'translator.lock'
-lock_fd = None
-
-def acquire_lock():
-    global lock_fd
-    try:
-        lock_fd = open(LOCK_FILE, 'w')
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        return True
-    except IOError:
-        print(f"[translator] Another instance is already running")
-        return False
-
-
-if __name__ == "__main__":
-    Translator().run()
+if __name__ == '__main__':
+    main()

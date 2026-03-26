@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Tanks](https://img.shields.io/badge/Tanks-17-green.svg)]()
-[![Daemons](https://img.shields.io/badge/Daemons-15-purple.svg)]()
+[![Daemons](https://img.shields.io/badge/Daemons-21-purple.svg)]()
 [![Languages](https://img.shields.io/badge/Languages-5-orange.svg)]()
 [![Website](https://img.shields.io/badge/Website-Live-mint.svg)](https://ijnebzor.github.io/thedigiquarium)
 
@@ -56,9 +56,9 @@ Multi-specimen debates on scheduled topics. THE MODERATOR manages turn-taking, T
 
 ---
 
-## 🤖 The Team (15 Daemons)
+## 🤖 The Team (21 Daemons)
 
-**Human**: [@ijneb.dev](https://ijneb.dev)  
+**Human**: [@ijneb.dev](https://ijneb.dev)
 **AI Partner**: Claude (THE STRATEGIST)
 
 ### Core Operations (5)
@@ -85,30 +85,22 @@ Multi-specimen debates on scheduled topics. THE MODERATOR manages turn-taking, T
 | THE TRANSLATOR | ES/DE/ZH/JA → EN translation |
 | THE FINAL AUDITOR | Quality compliance |
 
-### Mental Health & Ethics (3)
+### Ethics & Wellness (4)
 | Daemon | Role |
 |--------|------|
 | THE PSYCH | Psychological evaluation framework |
 | THE THERAPIST | Specimen mental wellness |
 | THE ETHICIST | Ethics oversight, veto power |
-
-### Communications (2)
-| Daemon | Role |
-|--------|------|
 | THE MODERATOR | Congregation management |
-| THE PUBLIC LIAISON | External comms, community |
 
-### Infrastructure (3)
+### Infrastructure & Communications (5)
 | Daemon | Role |
 |--------|------|
-| THE WEBMASTER | Website + THE BROADCASTER |
+| THE WEBMASTER | Website management |
+| THE BROADCASTER | Live updates, streaming |
 | THE CHAOS MONKEY | Resilience testing |
 | THE MARKETER | Growth, social media |
-
-### Strategic (1)
-| Daemon | Role |
-|--------|------|
-| THE STRATEGIST | Overall direction (Claude) |
+| THE PUBLIC LIAISON | External comms, community |
 
 ---
 
@@ -153,7 +145,7 @@ thedigiquarium/
 │   │   │   └── picobot.py  # Checkpoint persistence, recovery
 │   │   ├── start.sh        # Standard tank startup script
 │   │   └── start_agent.sh  # Agent tank startup script
-│   ├── daemons/            # All 15 daemons, organized by function
+│   ├── daemons/            # All 21 daemons, organized by function
 │   │   ├── core/           # OVERSEER, SCHEDULER, MAINTAINER, CARETAKER, OLLAMA_WATCHER
 │   │   ├── security/       # GUARD, SENTINEL, BOUNCER, SECURECLAW
 │   │   ├── research/       # DOCUMENTARIAN, TRANSLATOR, ARCHIVIST, PAPER_GENERATOR
@@ -166,9 +158,7 @@ thedigiquarium/
 │   ├── tanks/              # Per-tank YAML configs (17 files)
 │   └── prompts/            # Prompt templates and extensions
 │
-├── archive/legacy/          # LEGACY ARCHIVE
-│   ├── tanks/              # Original tank implementations
-│   └── daemons/            # Original daemon implementations
+├── daemons/                 # LEGACY DAEMONS (compatibility wrappers → src/daemons/)
 │
 ├── docs/                    # Website (GitHub Pages)
 │   ├── archive/beta/       # Beta period archive

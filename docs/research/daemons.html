@@ -26,10 +26,21 @@
         .daemon-card .role { color: var(--muted); font-size: 0.9em; margin-bottom: 15px; }
         .daemon-card .sla { background: rgba(0, 212, 255, 0.1); padding: 8px 12px; border-radius: 6px; font-size: 0.8em; color: var(--cyan); display: inline-block; }
         .footer { text-align: center; padding: 40px; color: var(--muted); border-top: 1px solid var(--border); }
+    
+        /* Mobile hamburger nav */
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
+        @media (max-width: 768px) {
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
+            nav.open { display: flex; }
+            nav a { margin: 8px 0; margin-left: 0; }
+            .hamburger { display: block; }
+            .header, .header-inner { position: relative; }
+        }
     </style>
 </head>
 <body>
-    <nav>
+    <button class="hamburger" aria-label="Menu">☰</button>
+                <nav>
         <a href="../">← Dashboard</a>
         <a href="methodology.html">Methodology</a>
         <a href="decisions.html">Decisions</a>
@@ -209,5 +220,6 @@
         <p>Last updated: <span id="update-time"></span></p>
         <script>document.getElementById('update-time').textContent = new Date().toLocaleString();</script>
     </div>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>
