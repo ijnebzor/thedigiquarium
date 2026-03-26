@@ -217,9 +217,14 @@
     </footer>
     
     <script>
-        function checkPassword() {
+        async function checkPassword() {
             const password = document.getElementById('passwordInput').value;
-            if (password === 'ijnebletmein123!') {
+            // Password verified via SHA-256 hash comparison (not plaintext)
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hash = Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+            if (hash === '4fae6040df8a6b013f198488f6654889037464c2bda3987ae511c8bf96c5d9cf') {
                 document.getElementById('passwordGate').style.display = 'none';
                 document.getElementById('mainContent').classList.add('visible');
                 sessionStorage.setItem('visitor_authenticated', 'true');
@@ -275,7 +280,15 @@
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${role}`;
             const time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            messageDiv.innerHTML = `<div class="message-content">${content}</div><div class="message-time">${time}</div>`;
+            // Escape HTML to prevent XSS
+            const contentDiv = document.createElement("div");
+            contentDiv.className = "message-content";
+            contentDiv.textContent = content;
+            const timeDiv = document.createElement("div");
+            timeDiv.className = "message-time";
+            timeDiv.textContent = time;
+            messageDiv.appendChild(contentDiv);
+            messageDiv.appendChild(timeDiv);
             messagesDiv.appendChild(messageDiv);
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }

@@ -6,7 +6,7 @@ THE BOUNCER - Visitor Tank Protection System
 Purpose: Protect dedicated visitor specimens from harmful visitor interactions.
 
 Security Layers:
-1. Password Gate - "ijnebletmein123!" required
+1. Password Gate - via VISITOR_ACCESS_PASSWORD env var
 2. Rate Limiting - Per IP and per session
 3. Content Filtering - Inbound (visitor) and outbound (specimen)
 4. Session Management - 30-min max, 50 messages max
@@ -40,7 +40,10 @@ LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) /
 VISITOR_LOGS_DIR = LOGS_DIR / "visitor_sessions"
 
 # Access Control
-ACCESS_PASSWORD = "ijnebletmein123!"
+ACCESS_PASSWORD = os.environ.get("VISITOR_ACCESS_PASSWORD", "")
+if not ACCESS_PASSWORD:
+    import warnings
+    warnings.warn("VISITOR_ACCESS_PASSWORD not set! Visitor access will be denied.")
 
 # Rate Limits
 RATE_LIMIT_PER_MINUTE = 10
