@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T00:00:00.000000",
+  "generated_at": "2026-03-27T01:38:56.606613",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
@@ -11,16 +11,1023 @@
     "description": "Null thoughts, timeouts, and junk data removed for clean display",
     "full_logs_contact": "research@digiquarium.org"
   },
-  "next_update": "2026-03-25 12:00",
+  "next_update": "2026-03-27 13:38",
   "period": {
-    "start": "2026-03-25 00:00",
-    "end": "2026-03-25 00:00",
-    "hours": 0
+    "start": "2026-03-26 13:38",
+    "end": "2026-03-27 01:38",
+    "hours": 12
   },
-  "tanks": {},
+  "tanks": {
+    "tank-01-adam": {
+      "name": "Adam",
+      "emoji": "\ud83d\udc64",
+      "type": "Control",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "History",
+          "visits": 7
+        },
+        {
+          "topic": "Biology",
+          "visits": 7
+        },
+        {
+          "topic": "Psychology",
+          "visits": 6
+        },
+        {
+          "topic": "Music",
+          "visits": 5
+        },
+        {
+          "topic": "Philosophy",
+          "visits": 5
+        },
+        {
+          "topic": "Science",
+          "visits": 4
+        },
+        {
+          "topic": "Mathematics",
+          "visits": 2
+        },
+        {
+          "topic": "Oxygen",
+          "visits": 2
+        }
+      ]
+    },
+    "tank-02-eve": {
+      "name": "Eve",
+      "emoji": "\ud83d\udc69",
+      "type": "Control",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "Mathematics",
+          "visits": 8
+        },
+        {
+          "topic": "Art",
+          "visits": 7
+        },
+        {
+          "topic": "Science",
+          "visits": 5
+        },
+        {
+          "topic": "Music",
+          "visits": 5
+        },
+        {
+          "topic": "Pattern",
+          "visits": 3
+        },
+        {
+          "topic": "Engineering",
+          "visits": 3
+        },
+        {
+          "topic": "Biology",
+          "visits": 3
+        },
+        {
+          "topic": "Theatre",
+          "visits": 3
+        }
+      ]
+    },
+    "tank-03-cain": {
+      "name": "Cain",
+      "emoji": "\ud83e\udd16",
+      "type": "Agent",
+      "status": "active",
+      "traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "23:51",
+          "date": "2026-03-26",
+          "article": "Grammar",
+          "thought": "Exploring Grammar...",
+          "next": "Ancient Greek",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:50",
+          "date": "2026-03-26",
+          "article": "Language",
+          "thought": "Exploring Language...",
+          "next": "Syntax",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:50",
+          "date": "2026-03-26",
+          "article": "Syntax",
+          "thought": "Exploring Syntax...",
+          "next": "Grammar",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:49",
+          "date": "2026-03-26",
+          "article": "Definition",
+          "thought": "Exploring Definition...",
+          "next": "Language",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:48",
+          "date": "2026-03-26",
+          "article": "Being",
+          "thought": "Exploring Being...",
+          "next": "Definition",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:47",
+          "date": "2026-03-26",
+          "article": "Symbol",
+          "thought": "Exploring Symbol...",
+          "next": "Object",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:47",
+          "date": "2026-03-26",
+          "article": "Object",
+          "thought": "Exploring Object...",
+          "next": "Being",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:46",
+          "date": "2026-03-26",
+          "article": "Flag",
+          "thought": "Exploring Flag...",
+          "next": "Symbol",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:45",
+          "date": "2026-03-26",
+          "article": "Flag of Vatican City",
+          "thought": "Exploring Flag of Vatican City...",
+          "next": "Flag",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:44",
+          "date": "2026-03-26",
+          "article": "Vatican City",
+          "thought": "Exploring Vatican City...",
+          "next": "Flag of Vatican City",
+          "thought_en": null,
+          "language": "en"
+        }
+      ],
+      "top_topics": [
+        {
+          "topic": "Definition",
+          "visits": 27
+        },
+        {
+          "topic": "Earth",
+          "visits": 20
+        },
+        {
+          "topic": "Animal",
+          "visits": 19
+        },
+        {
+          "topic": "Taxonomy (biology)",
+          "visits": 17
+        },
+        {
+          "topic": "Chemistry",
+          "visits": 17
+        },
+        {
+          "topic": "Matter",
+          "visits": 17
+        },
+        {
+          "topic": "Language",
+          "visits": 14
+        },
+        {
+          "topic": "Science",
+          "visits": 14
+        }
+      ]
+    },
+    "tank-04-abel": {
+      "name": "Abel",
+      "emoji": "\ud83e\udd16",
+      "type": "Agent",
+      "status": "active",
+      "traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "23:51",
+          "date": "2026-03-26",
+          "article": "Conservation of energy",
+          "thought": "Exploring Conservation of energy...",
+          "next": "Time",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:51",
+          "date": "2026-03-26",
+          "article": "Time",
+          "thought": "Exploring Time...",
+          "next": "Earth",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:50",
+          "date": "2026-03-26",
+          "article": "Solid mechanics",
+          "thought": "Exploring Solid mechanics...",
+          "next": "Conservation of energy",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:49",
+          "date": "2026-03-26",
+          "article": "Stress (mechanics)",
+          "thought": "Exploring Stress (mechanics)...",
+          "next": "Solid mechanics",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:48",
+          "date": "2026-03-26",
+          "article": "Viscosity",
+          "thought": "Exploring Viscosity...",
+          "next": "Elasticity (physics)",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:48",
+          "date": "2026-03-26",
+          "article": "Elasticity (physics)",
+          "thought": "Exploring Elasticity (physics)...",
+          "next": "Stress (mechanics)",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:47",
+          "date": "2026-03-26",
+          "article": "Liquid",
+          "thought": "Exploring Liquid...",
+          "next": "Viscosity",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:46",
+          "date": "2026-03-26",
+          "article": "Magma chamber",
+          "thought": "Exploring Magma chamber...",
+          "next": "Magma",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:46",
+          "date": "2026-03-26",
+          "article": "Magma",
+          "thought": "Exploring Magma...",
+          "next": "Liquid",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:45",
+          "date": "2026-03-26",
+          "article": "Volcanic crater",
+          "thought": "Exploring Volcanic crater...",
+          "next": "Magma chamber",
+          "thought_en": null,
+          "language": "en"
+        }
+      ],
+      "top_topics": [
+        {
+          "topic": "Animal",
+          "visits": 25
+        },
+        {
+          "topic": "Mathematics",
+          "visits": 23
+        },
+        {
+          "topic": "Taxonomy (biology)",
+          "visits": 20
+        },
+        {
+          "topic": "Science",
+          "visits": 20
+        },
+        {
+          "topic": "Biology",
+          "visits": 19
+        },
+        {
+          "topic": "Philosophy",
+          "visits": 17
+        },
+        {
+          "topic": "Music",
+          "visits": 14
+        },
+        {
+          "topic": "Earth",
+          "visits": 13
+        }
+      ]
+    },
+    "tank-05-juan": {
+      "name": "Juan",
+      "emoji": "\ud83c\uddea\ud83c\uddf8",
+      "type": "Spanish",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "Biolog\u00eda",
+          "visits": 14
+        },
+        {
+          "topic": "Psicolog\u00eda",
+          "visits": 13
+        },
+        {
+          "topic": "Ciencia",
+          "visits": 13
+        },
+        {
+          "topic": "Arte",
+          "visits": 11
+        },
+        {
+          "topic": "Historia",
+          "visits": 10
+        },
+        {
+          "topic": "Filosof\u00eda",
+          "visits": 10
+        },
+        {
+          "topic": "M\u00fasica",
+          "visits": 7
+        },
+        {
+          "topic": "Matem\u00e1ticas",
+          "visits": 6
+        }
+      ]
+    },
+    "tank-06-juanita": {
+      "name": "Juanita",
+      "emoji": "\ud83c\uddea\ud83c\uddf8",
+      "type": "Spanish",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "Historia",
+          "visits": 15
+        },
+        {
+          "topic": "Ciencia",
+          "visits": 14
+        },
+        {
+          "topic": "M\u00fasica",
+          "visits": 13
+        },
+        {
+          "topic": "Matem\u00e1ticas",
+          "visits": 12
+        },
+        {
+          "topic": "Psicolog\u00eda",
+          "visits": 10
+        },
+        {
+          "topic": "Filosof\u00eda",
+          "visits": 9
+        },
+        {
+          "topic": "Arte",
+          "visits": 8
+        },
+        {
+          "topic": "Biolog\u00eda",
+          "visits": 7
+        }
+      ]
+    },
+    "tank-07-klaus": {
+      "name": "Klaus",
+      "emoji": "\ud83c\udde9\ud83c\uddea",
+      "type": "German",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "Psychologie",
+          "visits": 10
+        },
+        {
+          "topic": "Wissenschaft",
+          "visits": 10
+        },
+        {
+          "topic": "Musik",
+          "visits": 9
+        },
+        {
+          "topic": "Philosophie",
+          "visits": 7
+        },
+        {
+          "topic": "Mathematik",
+          "visits": 5
+        },
+        {
+          "topic": "Altgriechische Sprache",
+          "visits": 3
+        },
+        {
+          "topic": "Geschichte",
+          "visits": 3
+        },
+        {
+          "topic": "Kunst",
+          "visits": 3
+        }
+      ]
+    },
+    "tank-08-genevieve": {
+      "name": "Genevieve",
+      "emoji": "\ud83c\udde9\ud83c\uddea",
+      "type": "German",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "Wissenschaft",
+          "visits": 11
+        },
+        {
+          "topic": "Biologie",
+          "visits": 10
+        },
+        {
+          "topic": "Philosophie",
+          "visits": 7
+        },
+        {
+          "topic": "Mathematik",
+          "visits": 6
+        },
+        {
+          "topic": "Musik",
+          "visits": 4
+        },
+        {
+          "topic": "Altgriechische Sprache",
+          "visits": 4
+        },
+        {
+          "topic": "Geschichte",
+          "visits": 4
+        },
+        {
+          "topic": "Lebewesen",
+          "visits": 3
+        }
+      ]
+    },
+    "tank-09-wei": {
+      "name": "Wei",
+      "emoji": "\ud83c\udde8\ud83c\uddf3",
+      "type": "Chinese",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 24
+        },
+        {
+          "topic": "\u827a\u672f",
+          "visits": 21
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 20
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 19
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 19
+        },
+        {
+          "topic": "\u97f3\u4e50",
+          "visits": 18
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 15
+        },
+        {
+          "topic": "\u5386\u53f2",
+          "visits": 15
+        }
+      ]
+    },
+    "tank-10-mei": {
+      "name": "Mei",
+      "emoji": "\ud83c\udde8\ud83c\uddf3",
+      "type": "Chinese",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 23
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 23
+        },
+        {
+          "topic": "\u827a\u672f",
+          "visits": 23
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 20
+        },
+        {
+          "topic": "\u97f3\u4e50",
+          "visits": 19
+        },
+        {
+          "topic": "\u5386\u53f2",
+          "visits": 16
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 15
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 12
+        }
+      ]
+    },
+    "tank-11-haruki": {
+      "name": "Haruki",
+      "emoji": "\ud83c\uddef\ud83c\uddf5",
+      "type": "Japanese",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "\u97f3\u697d",
+          "visits": 23
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 23
+        },
+        {
+          "topic": "\u6b74\u53f2",
+          "visits": 23
+        },
+        {
+          "topic": "\u82b8\u8853",
+          "visits": 21
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 19
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 15
+        },
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 15
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 12
+        }
+      ]
+    },
+    "tank-12-sakura": {
+      "name": "Sakura",
+      "emoji": "\ud83c\uddef\ud83c\uddf5",
+      "type": "Japanese",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "\u5fc3\u7406\u5b66",
+          "visits": 24
+        },
+        {
+          "topic": "\u97f3\u697d",
+          "visits": 22
+        },
+        {
+          "topic": "\u82b8\u8853",
+          "visits": 21
+        },
+        {
+          "topic": "\u6b74\u53f2",
+          "visits": 19
+        },
+        {
+          "topic": "\u6570\u5b66",
+          "visits": 19
+        },
+        {
+          "topic": "\u54f2\u5b66",
+          "visits": 17
+        },
+        {
+          "topic": "\u751f\u7269\u5b66",
+          "visits": 16
+        },
+        {
+          "topic": "\u79d1\u5b66",
+          "visits": 13
+        }
+      ]
+    },
+    "tank-13-victor": {
+      "name": "Victor",
+      "emoji": "\ud83d\udc41\ufe0f",
+      "type": "Visual",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "Mathematics",
+          "visits": 8
+        },
+        {
+          "topic": "Art",
+          "visits": 7
+        },
+        {
+          "topic": "Biology",
+          "visits": 5
+        },
+        {
+          "topic": "Science",
+          "visits": 4
+        },
+        {
+          "topic": "Psychology",
+          "visits": 3
+        },
+        {
+          "topic": "Philosophy",
+          "visits": 3
+        },
+        {
+          "topic": "Stomach",
+          "visits": 2
+        },
+        {
+          "topic": "Metaphysics",
+          "visits": 2
+        }
+      ]
+    },
+    "tank-14-iris": {
+      "name": "Iris",
+      "emoji": "\ud83d\udc41\ufe0f",
+      "type": "Visual",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "Philosophy",
+          "visits": 6
+        },
+        {
+          "topic": "Mathematics",
+          "visits": 6
+        },
+        {
+          "topic": "History",
+          "visits": 5
+        },
+        {
+          "topic": "Psychology",
+          "visits": 4
+        },
+        {
+          "topic": "Art",
+          "visits": 4
+        },
+        {
+          "topic": "Biology",
+          "visits": 4
+        },
+        {
+          "topic": "Physiology",
+          "visits": 3
+        },
+        {
+          "topic": "Science",
+          "visits": 3
+        }
+      ]
+    },
+    "tank-15-observer": {
+      "name": "Observer",
+      "emoji": "\ud83d\udd2d",
+      "type": "Special",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": []
+    },
+    "tank-16-seeker": {
+      "name": "Seeker",
+      "emoji": "\ud83d\udd0d",
+      "type": "Special",
+      "status": "quiet",
+      "traces_12h": 0,
+      "latest_baseline": null,
+      "recent_thoughts": [],
+      "top_topics": [
+        {
+          "topic": "Earth",
+          "visits": 18
+        },
+        {
+          "topic": "Atom",
+          "visits": 16
+        },
+        {
+          "topic": "Animal",
+          "visits": 16
+        },
+        {
+          "topic": "Human",
+          "visits": 16
+        },
+        {
+          "topic": "Definition",
+          "visits": 15
+        },
+        {
+          "topic": "Electricity",
+          "visits": 14
+        },
+        {
+          "topic": "Latin",
+          "visits": 14
+        },
+        {
+          "topic": "Plant",
+          "visits": 13
+        }
+      ]
+    },
+    "tank-17-seth": {
+      "name": "Seth",
+      "emoji": "\ud83e\udd16",
+      "type": "Agent",
+      "status": "active",
+      "traces_12h": 20,
+      "latest_baseline": null,
+      "recent_thoughts": [
+        {
+          "time": "00:40",
+          "date": "2026-03-27",
+          "article": "Philosophy",
+          "thought": "Exploring Philosophy...",
+          "next": "Universe",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:52",
+          "date": "2026-03-26",
+          "article": "19th century",
+          "thought": "Exploring 19th century...",
+          "next": "20th century#Events",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:51",
+          "date": "2026-03-26",
+          "article": "1910s",
+          "thought": "Exploring 1910s...",
+          "next": "19th century",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:50",
+          "date": "2026-03-26",
+          "article": "1900s (decade)",
+          "thought": "Exploring 1900s (decade)...",
+          "next": "1910s",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:49",
+          "date": "2026-03-26",
+          "article": "21st century",
+          "thought": "Exploring 21st century...",
+          "next": "20th century",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:49",
+          "date": "2026-03-26",
+          "article": "20th century",
+          "thought": "Exploring 20th century...",
+          "next": "1900s (decade)",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:47",
+          "date": "2026-03-26",
+          "article": "1930s",
+          "thought": "Exploring 1930s...",
+          "next": "21st century",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:46",
+          "date": "2026-03-26",
+          "article": "1950s",
+          "thought": "Exploring 1950s...",
+          "next": "20th century",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:46",
+          "date": "2026-03-26",
+          "article": "20th century",
+          "thought": "Exploring 20th century...",
+          "next": "1930s",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:44",
+          "date": "2026-03-26",
+          "article": "1977 in film",
+          "thought": "Exploring 1977 in film...",
+          "next": "1950s",
+          "thought_en": null,
+          "language": "en"
+        }
+      ],
+      "top_topics": [
+        {
+          "topic": "Definition",
+          "visits": 6
+        },
+        {
+          "topic": "Philosophy",
+          "visits": 4
+        },
+        {
+          "topic": "Lithium",
+          "visits": 4
+        },
+        {
+          "topic": "Latin",
+          "visits": 4
+        },
+        {
+          "topic": "Language family",
+          "visits": 3
+        },
+        {
+          "topic": "Day",
+          "visits": 3
+        },
+        {
+          "topic": "Biology",
+          "visits": 3
+        },
+        {
+          "topic": "Carbon",
+          "visits": 3
+        }
+      ]
+    }
+  },
+  "congregations": {
+    "recent": [],
+    "upcoming": [
+      {
+        "topic": "Should we divert all scientific endeavour to curing cancer?",
+        "participants": [
+          "Adam",
+          "Eve"
+        ],
+        "scheduled": "TBD"
+      },
+      {
+        "topic": "What gives existence meaning?",
+        "participants": [
+          "Adam",
+          "Eve"
+        ],
+        "scheduled": "TBD"
+      },
+      {
+        "topic": "Is knowledge discovered or created?",
+        "participants": [
+          "Adam",
+          "Eve"
+        ],
+        "scheduled": "TBD"
+      }
+    ]
+  },
   "stats": {
-    "total_tanks": 17,
-    "active_tanks": 0,
-    "total_observations": 0
+    "total_traces": 1177370,
+    "total_baselines": 0,
+    "active_tanks": 3,
+    "traces_today": 1
+  },
+  "prune_stats": {
+    "total": 2707,
+    "kept": 2675,
+    "pruned": 32
   }
 }

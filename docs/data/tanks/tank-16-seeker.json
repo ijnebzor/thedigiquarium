@@ -1,10 +1,43 @@
 {
   "name": "Seeker",
-  "emoji": "🔍",
+  "emoji": "\ud83d\udd0d",
   "type": "Special",
-  "status": "inactive",
+  "status": "quiet",
   "traces_12h": 0,
   "latest_baseline": null,
   "recent_thoughts": [],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Earth",
+      "visits": 18
+    },
+    {
+      "topic": "Atom",
+      "visits": 16
+    },
+    {
+      "topic": "Animal",
+      "visits": 16
+    },
+    {
+      "topic": "Human",
+      "visits": 16
+    },
+    {
+      "topic": "Definition",
+      "visits": 15
+    },
+    {
+      "topic": "Electricity",
+      "visits": 14
+    },
+    {
+      "topic": "Latin",
+      "visits": 14
+    },
+    {
+      "topic": "Plant",
+      "visits": 13
+    }
+  ]
 }

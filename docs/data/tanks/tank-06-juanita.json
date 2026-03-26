@@ -1,10 +1,43 @@
 {
   "name": "Juanita",
-  "emoji": "🇪🇸",
+  "emoji": "\ud83c\uddea\ud83c\uddf8",
   "type": "Spanish",
-  "status": "inactive",
+  "status": "quiet",
   "traces_12h": 0,
   "latest_baseline": null,
   "recent_thoughts": [],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Historia",
+      "visits": 15
+    },
+    {
+      "topic": "Ciencia",
+      "visits": 14
+    },
+    {
+      "topic": "M\u00fasica",
+      "visits": 13
+    },
+    {
+      "topic": "Matem\u00e1ticas",
+      "visits": 12
+    },
+    {
+      "topic": "Psicolog\u00eda",
+      "visits": 10
+    },
+    {
+      "topic": "Filosof\u00eda",
+      "visits": 9
+    },
+    {
+      "topic": "Arte",
+      "visits": 8
+    },
+    {
+      "topic": "Biolog\u00eda",
+      "visits": 7
+    }
+  ]
 }

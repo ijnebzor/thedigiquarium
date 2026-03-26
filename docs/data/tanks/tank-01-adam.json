@@ -1,10 +1,43 @@
 {
   "name": "Adam",
-  "emoji": "👤",
+  "emoji": "\ud83d\udc64",
   "type": "Control",
-  "status": "inactive",
+  "status": "quiet",
   "traces_12h": 0,
   "latest_baseline": null,
   "recent_thoughts": [],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "History",
+      "visits": 7
+    },
+    {
+      "topic": "Biology",
+      "visits": 7
+    },
+    {
+      "topic": "Psychology",
+      "visits": 6
+    },
+    {
+      "topic": "Music",
+      "visits": 5
+    },
+    {
+      "topic": "Philosophy",
+      "visits": 5
+    },
+    {
+      "topic": "Science",
+      "visits": 4
+    },
+    {
+      "topic": "Mathematics",
+      "visits": 2
+    },
+    {
+      "topic": "Oxygen",
+      "visits": 2
+    }
+  ]
 }

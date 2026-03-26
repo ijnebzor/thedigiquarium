@@ -1,10 +1,43 @@
 {
   "name": "Victor",
-  "emoji": "👁️",
+  "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
-  "status": "inactive",
+  "status": "quiet",
   "traces_12h": 0,
   "latest_baseline": null,
   "recent_thoughts": [],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Mathematics",
+      "visits": 8
+    },
+    {
+      "topic": "Art",
+      "visits": 7
+    },
+    {
+      "topic": "Biology",
+      "visits": 5
+    },
+    {
+      "topic": "Science",
+      "visits": 4
+    },
+    {
+      "topic": "Psychology",
+      "visits": 3
+    },
+    {
+      "topic": "Philosophy",
+      "visits": 3
+    },
+    {
+      "topic": "Stomach",
+      "visits": 2
+    },
+    {
+      "topic": "Metaphysics",
+      "visits": 2
+    }
+  ]
 }

@@ -1,10 +1,134 @@
 {
   "name": "Abel",
-  "emoji": "🤖",
+  "emoji": "\ud83e\udd16",
   "type": "Agent",
-  "status": "inactive",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 20,
   "latest_baseline": null,
-  "recent_thoughts": [],
-  "top_topics": []
+  "recent_thoughts": [
+    {
+      "time": "23:51",
+      "date": "2026-03-26",
+      "article": "Conservation of energy",
+      "thought": "Exploring Conservation of energy...",
+      "next": "Time",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:51",
+      "date": "2026-03-26",
+      "article": "Time",
+      "thought": "Exploring Time...",
+      "next": "Earth",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:50",
+      "date": "2026-03-26",
+      "article": "Solid mechanics",
+      "thought": "Exploring Solid mechanics...",
+      "next": "Conservation of energy",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:49",
+      "date": "2026-03-26",
+      "article": "Stress (mechanics)",
+      "thought": "Exploring Stress (mechanics)...",
+      "next": "Solid mechanics",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:48",
+      "date": "2026-03-26",
+      "article": "Viscosity",
+      "thought": "Exploring Viscosity...",
+      "next": "Elasticity (physics)",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:48",
+      "date": "2026-03-26",
+      "article": "Elasticity (physics)",
+      "thought": "Exploring Elasticity (physics)...",
+      "next": "Stress (mechanics)",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:47",
+      "date": "2026-03-26",
+      "article": "Liquid",
+      "thought": "Exploring Liquid...",
+      "next": "Viscosity",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:46",
+      "date": "2026-03-26",
+      "article": "Magma chamber",
+      "thought": "Exploring Magma chamber...",
+      "next": "Magma",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:46",
+      "date": "2026-03-26",
+      "article": "Magma",
+      "thought": "Exploring Magma...",
+      "next": "Liquid",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:45",
+      "date": "2026-03-26",
+      "article": "Volcanic crater",
+      "thought": "Exploring Volcanic crater...",
+      "next": "Magma chamber",
+      "thought_en": null,
+      "language": "en"
+    }
+  ],
+  "top_topics": [
+    {
+      "topic": "Animal",
+      "visits": 25
+    },
+    {
+      "topic": "Mathematics",
+      "visits": 23
+    },
+    {
+      "topic": "Taxonomy (biology)",
+      "visits": 20
+    },
+    {
+      "topic": "Science",
+      "visits": 20
+    },
+    {
+      "topic": "Biology",
+      "visits": 19
+    },
+    {
+      "topic": "Philosophy",
+      "visits": 17
+    },
+    {
+      "topic": "Music",
+      "visits": 14
+    },
+    {
+      "topic": "Earth",
+      "visits": 13
+    }
+  ]
 }

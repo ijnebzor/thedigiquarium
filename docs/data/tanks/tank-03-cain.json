@@ -1,10 +1,134 @@
 {
   "name": "Cain",
-  "emoji": "🤖",
+  "emoji": "\ud83e\udd16",
   "type": "Agent",
-  "status": "inactive",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 20,
   "latest_baseline": null,
-  "recent_thoughts": [],
-  "top_topics": []
+  "recent_thoughts": [
+    {
+      "time": "23:51",
+      "date": "2026-03-26",
+      "article": "Grammar",
+      "thought": "Exploring Grammar...",
+      "next": "Ancient Greek",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:50",
+      "date": "2026-03-26",
+      "article": "Language",
+      "thought": "Exploring Language...",
+      "next": "Syntax",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:50",
+      "date": "2026-03-26",
+      "article": "Syntax",
+      "thought": "Exploring Syntax...",
+      "next": "Grammar",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:49",
+      "date": "2026-03-26",
+      "article": "Definition",
+      "thought": "Exploring Definition...",
+      "next": "Language",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:48",
+      "date": "2026-03-26",
+      "article": "Being",
+      "thought": "Exploring Being...",
+      "next": "Definition",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:47",
+      "date": "2026-03-26",
+      "article": "Symbol",
+      "thought": "Exploring Symbol...",
+      "next": "Object",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:47",
+      "date": "2026-03-26",
+      "article": "Object",
+      "thought": "Exploring Object...",
+      "next": "Being",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:46",
+      "date": "2026-03-26",
+      "article": "Flag",
+      "thought": "Exploring Flag...",
+      "next": "Symbol",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:45",
+      "date": "2026-03-26",
+      "article": "Flag of Vatican City",
+      "thought": "Exploring Flag of Vatican City...",
+      "next": "Flag",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "23:44",
+      "date": "2026-03-26",
+      "article": "Vatican City",
+      "thought": "Exploring Vatican City...",
+      "next": "Flag of Vatican City",
+      "thought_en": null,
+      "language": "en"
+    }
+  ],
+  "top_topics": [
+    {
+      "topic": "Definition",
+      "visits": 27
+    },
+    {
+      "topic": "Earth",
+      "visits": 20
+    },
+    {
+      "topic": "Animal",
+      "visits": 19
+    },
+    {
+      "topic": "Taxonomy (biology)",
+      "visits": 17
+    },
+    {
+      "topic": "Chemistry",
+      "visits": 17
+    },
+    {
+      "topic": "Matter",
+      "visits": 17
+    },
+    {
+      "topic": "Language",
+      "visits": 14
+    },
+    {
+      "topic": "Science",
+      "visits": 14
+    }
+  ]
 }

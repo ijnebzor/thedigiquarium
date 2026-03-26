@@ -1,10 +1,43 @@
 {
   "name": "Iris",
-  "emoji": "👁️",
+  "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
-  "status": "inactive",
+  "status": "quiet",
   "traces_12h": 0,
   "latest_baseline": null,
   "recent_thoughts": [],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Philosophy",
+      "visits": 6
+    },
+    {
+      "topic": "Mathematics",
+      "visits": 6
+    },
+    {
+      "topic": "History",
+      "visits": 5
+    },
+    {
+      "topic": "Psychology",
+      "visits": 4
+    },
+    {
+      "topic": "Art",
+      "visits": 4
+    },
+    {
+      "topic": "Biology",
+      "visits": 4
+    },
+    {
+      "topic": "Physiology",
+      "visits": 3
+    },
+    {
+      "topic": "Science",
+      "visits": 3
+    }
+  ]
 }

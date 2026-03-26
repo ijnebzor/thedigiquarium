@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-02-23T05:01:47.228400",
-  "next_update": "2026-02-23 17:01",
+  "generated_at": "2026-03-27T01:38:56.606613",
+  "next_update": "2026-03-27 13:38",
   "stats": {
-    "total_traces": 229211,
+    "total_traces": 1177370,
     "total_baselines": 0,
-    "active_tanks": 17,
-    "traces_today": 16988
+    "active_tanks": 3,
+    "traces_today": 1
   },
   "prune_stats": {
-    "total": 97395,
-    "kept": 96516,
-    "pruned": 879
+    "total": 2707,
+    "kept": 2675,
+    "pruned": 32
   }
 }

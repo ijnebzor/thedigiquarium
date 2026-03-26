@@ -1,10 +1,43 @@
 {
   "name": "Eve",
-  "emoji": "👩",
+  "emoji": "\ud83d\udc69",
   "type": "Control",
-  "status": "inactive",
+  "status": "quiet",
   "traces_12h": 0,
   "latest_baseline": null,
   "recent_thoughts": [],
-  "top_topics": []
+  "top_topics": [
+    {
+      "topic": "Mathematics",
+      "visits": 8
+    },
+    {
+      "topic": "Art",
+      "visits": 7
+    },
+    {
+      "topic": "Science",
+      "visits": 5
+    },
+    {
+      "topic": "Music",
+      "visits": 5
+    },
+    {
+      "topic": "Pattern",
+      "visits": 3
+    },
+    {
+      "topic": "Engineering",
+      "visits": 3
+    },
+    {
+      "topic": "Biology",
+      "visits": 3
+    },
+    {
+      "topic": "Theatre",
+      "visits": 3
+    }
+  ]
 }
