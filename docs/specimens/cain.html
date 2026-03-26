@@ -253,11 +253,7 @@
                 const res = await fetch('cain-graph.json');
                 graphData = await res.json();
 
-                const interests = graphData.nodes.slice(0, 12);
-                document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + interests.map(n => `
-                    <div class="interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>
-                `).join('');
-
+                updateInterests();
                 renderGraph();
                 loadTimeSeries();
             } catch (e) { console.log('No graph data yet'); }
@@ -297,6 +293,7 @@
             }
 
             renderGraph();
+            updateInterests();
         }
 
         function togglePlayback() {
@@ -348,6 +345,15 @@
             graphContainer = svgSel.append('g').attr('class', 'graph-container');
             linkGroup = graphContainer.append('g').attr('class', 'links');
             nodeGroup = graphContainer.append('g').attr('class', 'nodes');
+        }
+
+        function updateInterests() {
+            if (!graphData || !graphData.nodes) return;
+            const sorted = graphData.nodes.slice().sort((a, b) => b.visits - a.visits);
+            const interests = sorted.slice(0, 12);
+            document.getElementById('interests').innerHTML = '<strong style="color: var(--cyan); margin-right: 10px;">Top Interests:</strong>' + interests.map(n => `
+                <div class="interest"><span>${n.id}</span><span class="count">${n.visits}</span></div>
+            `).join('');
         }
 
         function renderGraph() {
