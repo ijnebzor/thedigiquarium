@@ -2,18 +2,15 @@
 """
 Digiquarium MCP Server - Claude's Autonomous Caretaker Interface
 """
-import asyncio
 import json
 import os
 import subprocess
-import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 from enum import Enum
 
 from mcp.server.fastmcp import FastMCP
-from pydantic import BaseModel, Field, ConfigDict
 
 # Configuration
 DIGIQUARIUM_DIR = Path(os.environ.get("DIGIQUARIUM_DIR", os.path.expanduser("~/digiquarium")))

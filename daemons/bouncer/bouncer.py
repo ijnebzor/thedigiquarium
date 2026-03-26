@@ -40,7 +40,7 @@ LOGS_DIR = Path(os.environ.get("DIGIQUARIUM_HOME", "/home/ijneb/digiquarium")) /
 VISITOR_LOGS_DIR = LOGS_DIR / "visitor_sessions"
 
 # Access Control
-ACCESS_PASSWORD = "ijnebletmein123!"
+ACCESS_PASSWORD = os.environ.get('BOUNCER_ACCESS_PASSWORD', 'changeme')
 
 # Rate Limits
 RATE_LIMIT_PER_MINUTE = 10

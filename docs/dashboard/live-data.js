@@ -176,20 +176,96 @@ function openFullscreenWithData(tankId) {
     }
 }
 
+// ============ LIVE STREAM POLLING ============
+// Poll the real-time unified.json written by the live translator every 5s
+
+let liveStreamData = null;
+
+async function loadLiveStream() {
+    try {
+        const response = await fetch('../streams/unified.json?' + Date.now());
+        if (!response.ok) throw new Error('Live stream not found');
+        liveStreamData = await response.json();
+        console.log('[LIVE-STREAM] Unified stream loaded, tanks:', Object.keys(liveStreamData.tanks || {}).length);
+        return true;
+    } catch (error) {
+        console.warn('[LIVE-STREAM] Stream unavailable:', error.message);
+        return false;
+    }
+}
+
+function applyLiveStreamData() {
+    if (!liveStreamData || !liveStreamData.tanks) return;
+
+    Object.entries(liveStreamData.tanks).forEach(([tankId, data]) => {
+        const panel = document.getElementById(tankId);
+        if (!panel) return;
+
+        const latest = Array.isArray(data.latest) && data.latest.length > 0 ? data.latest[0] : null;
+        if (!latest) return;
+
+        // Mark tank as active
+        tankStates[tankId] = true;
+        panel.classList.remove('sleeping');
+
+        const statusEl = panel.querySelector('.tank-status');
+        if (statusEl) {
+            statusEl.className = 'tank-status active';
+            statusEl.textContent = 'Live';
+        }
+
+        const bodyEl = panel.querySelector('.tank-body');
+        if (bodyEl) {
+            const thought = latest.thoughts || latest.original_thoughts || 'Exploring...';
+            const article = latest.article || 'Unknown';
+            const langBadge = latest.language && latest.language !== 'English'
+                ? `<span class="thought-lang-badge">${latest.language}</span>` : '';
+            bodyEl.innerHTML = `
+                <div class="tank-article">Reading: <strong>${article}</strong>${langBadge}</div>
+                <div class="tank-thought">${thought}</div>
+            `;
+        }
+
+        const footer = panel.querySelector('.tank-footer');
+        if (footer && latest.timestamp) {
+            const ts = new Date(latest.timestamp);
+            footer.innerHTML = `<span>Live</span><span>Last: ${ts.toLocaleTimeString()}</span>`;
+        }
+    });
+
+    // Update status dot to show live connection
+    const dot = document.getElementById('status-dot');
+    const txt = document.getElementById('status-text');
+    if (dot) dot.classList.add('online');
+    if (txt) txt.textContent = 'Live Stream Active';
+}
+
+async function pollLiveStream() {
+    const ok = await loadLiveStream();
+    if (ok) applyLiveStreamData();
+}
+
+// ============ INIT ============
+
 document.addEventListener('DOMContentLoaded', async () => {
+    // Load static broadcaster feed first (fallback / baseline)
     const loaded = await loadLiveFeed();
-    
+
     if (loaded) {
-        console.log('[LIVE] Updating tanks with real data');
+        console.log('[LIVE] Updating tanks with broadcaster data');
         updateAllTanks();
         updateStats();
         updateNextRefresh();
         window.originalOpenFullscreen = window.openFullscreen;
         window.openFullscreen = openFullscreenWithData;
     }
-    
+
     if (typeof renderTanks === 'function') {
         renderTanks();
         if (loaded) setTimeout(updateAllTanks, 100);
     }
+
+    // Start live stream polling (overwrites stale broadcaster data with real-time)
+    await pollLiveStream();
+    setInterval(pollLiveStream, 5000);
 });
