@@ -131,7 +131,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.1
     dns: []
     cap_drop:
       - ALL
@@ -167,7 +168,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.2
     dns: []
     cap_drop:
       - ALL
@@ -204,7 +206,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.3
     dns: []
     cap_drop:
       - ALL
@@ -242,7 +245,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.4
     dns: []
     cap_drop:
       - ALL
@@ -280,7 +284,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.5
     dns: []
     cap_drop:
       - ALL
@@ -318,7 +323,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.6
     dns: []
     cap_drop:
       - ALL
@@ -356,7 +362,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.7
     dns: []
     cap_drop:
       - ALL
@@ -394,7 +401,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.8
     dns: []
     cap_drop:
       - ALL
@@ -432,7 +440,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.9
     dns: []
     cap_drop:
       - ALL
@@ -470,7 +479,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.10
     dns: []
     cap_drop:
       - ALL
@@ -508,7 +518,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.11
     dns: []
     cap_drop:
       - ALL
@@ -546,7 +557,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.12
     dns: []
     cap_drop:
       - ALL
@@ -584,7 +596,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.13
     dns: []
     cap_drop:
       - ALL
@@ -622,7 +635,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.14
     dns: []
     cap_drop:
       - ALL
@@ -661,7 +675,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.15
     dns: []
     cap_drop:
       - ALL
@@ -700,7 +715,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.16
     dns: []
     cap_drop:
       - ALL
@@ -740,7 +756,8 @@ services:
       ollama:
         condition: service_healthy
     networks:
-      - isolated-net
+      isolated-net:
+        ipv4_address: 172.30.1.17
     dns: []
     cap_drop:
       - ALL
