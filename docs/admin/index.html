@@ -1,523 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel | The Digiquarium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-card: #1a1a24;
-            --text-primary: #e0e0e0;
-            --text-secondary: #888;
-            --accent-cyan: #00d4ff;
-            --accent-green: #00ff88;
-            --accent-red: #ff4444;
-            --accent-yellow: #ffaa00;
-            --accent-purple: #aa88ff;
-            --accent-orange: #FE6500;
-            --border: #2a2a3a;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; }
-        
-        /* Auth Gate */
-        .auth-gate { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-primary); display: flex; align-items: center; justify-content: center; z-index: 9999; }
-        .auth-gate.hidden { display: none; }
-        .auth-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; max-width: 400px; width: 90%; text-align: center; }
-        .auth-box h1 { color: var(--accent-cyan); margin-bottom: 10px; }
-        .auth-box .subtitle { color: var(--text-secondary); margin-bottom: 30px; font-size: 0.9em; }
-        .auth-box input { width: 100%; padding: 15px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); font-size: 1em; margin-bottom: 15px; }
-        .auth-box input:focus { outline: none; border-color: var(--accent-cyan); }
-        .auth-box button { width: 100%; padding: 15px; border: none; border-radius: 8px; background: var(--accent-cyan); color: var(--bg-primary); font-size: 1em; font-weight: 600; cursor: pointer; }
-        .auth-box button:hover { opacity: 0.8; }
-        .auth-error { color: var(--accent-red); margin-top: 15px; font-size: 0.9em; display: none; }
-        .auth-error.show { display: block; }
-        .security-note { margin-top: 20px; padding: 15px; background: rgba(255, 68, 68, 0.1); border: 1px solid rgba(255, 68, 68, 0.3); border-radius: 8px; font-size: 0.8em; color: var(--text-secondary); }
-        .cloudflare-note { margin-top: 15px; padding: 10px; background: rgba(254, 101, 0, 0.1); border: 1px solid var(--accent-orange); border-radius: 6px; font-size: 0.75em; }
-        
-        /* Dashboard */
-        .dashboard { display: none; }
-        .dashboard.visible { display: block; }
-        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: var(--bg-secondary); border-bottom: 1px solid var(--border); }
-        .header h1 { font-size: 1.5em; color: var(--accent-cyan); }
-        .header-controls { display: flex; align-items: center; gap: 15px; }
-        .status-indicator { width: 12px; height: 12px; border-radius: 50%; animation: pulse 2s infinite; }
-        .status-indicator.healthy { background: var(--accent-green); }
-        .status-indicator.warning { background: var(--accent-yellow); }
-        .status-indicator.critical { background: var(--accent-red); }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        
-        /* Tabs */
-        .tabs { display: flex; background: var(--bg-secondary); border-bottom: 1px solid var(--border); padding: 0 30px; }
-        .tab { padding: 15px 25px; cursor: pointer; color: var(--text-secondary); border-bottom: 2px solid transparent; transition: all 0.2s; }
-        .tab:hover { color: var(--text-primary); }
-        .tab.active { color: var(--accent-cyan); border-bottom-color: var(--accent-cyan); }
-        
-        /* Tab Content */
-        .tab-content { display: none; padding: 30px; }
-        .tab-content.active { display: block; }
-        
-        /* Cards */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
-        .card h2 { font-size: 1em; color: var(--text-secondary); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        .card.full-width { grid-column: 1 / -1; }
-        .metric { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
-        .metric:last-child { border-bottom: none; }
-        .metric .value { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
-        .metric .value.healthy { color: var(--accent-green); }
-        .metric .value.critical { color: var(--accent-red); }
-        
-        /* Daemon Grid */
-        .daemon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
-        .daemon { background: var(--bg-secondary); padding: 15px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.2s; border: 2px solid transparent; }
-        .daemon:hover { border-color: var(--accent-cyan); }
-        .daemon.selected { border-color: var(--accent-cyan); background: rgba(0, 212, 255, 0.1); }
-        .daemon .icon { font-size: 1.8em; margin-bottom: 8px; }
-        .daemon .name { font-size: 0.8em; color: var(--text-secondary); }
-        .daemon .status { font-size: 0.75em; margin-top: 5px; font-family: 'JetBrains Mono', monospace; }
-        
-        /* Message Interface */
-        .message-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-        .message-header { background: var(--bg-secondary); padding: 15px 20px; border-bottom: 1px solid var(--border); }
-        .message-header h3 { color: var(--accent-cyan); }
-        .message-log { height: 300px; overflow-y: auto; padding: 15px; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
-        .message-log .msg { padding: 8px 12px; margin-bottom: 8px; border-radius: 8px; }
-        .message-log .msg.sent { background: rgba(0, 212, 255, 0.1); margin-left: 20%; }
-        .message-log .msg.received { background: var(--bg-secondary); margin-right: 20%; }
-        .message-input { display: flex; gap: 10px; padding: 15px; border-top: 1px solid var(--border); }
-        .message-input input { flex: 1; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); }
-        .message-input button { padding: 12px 24px; border: none; border-radius: 8px; background: var(--accent-cyan); color: var(--bg-primary); font-weight: 600; cursor: pointer; }
-        
-        /* Activity Feed */
-        .activity-feed { max-height: 400px; overflow-y: auto; }
-        .activity-item { padding: 12px; border-bottom: 1px solid var(--border); display: flex; gap: 15px; align-items: flex-start; }
-        .activity-item:last-child { border-bottom: none; }
-        .activity-time { font-size: 0.75em; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; min-width: 80px; }
-        .activity-content { flex: 1; }
-        .activity-daemon { font-weight: 600; color: var(--accent-cyan); }
-        
-        /* Tank Grid */
-        .tank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .tank-card { background: var(--bg-secondary); border-radius: 10px; padding: 15px; }
-        .tank-card .name { font-weight: 600; margin-bottom: 8px; }
-        .tank-card .article { color: var(--text-secondary); font-size: 0.85em; margin-bottom: 5px; }
-        .tank-card .stats { font-size: 0.8em; color: var(--accent-cyan); }
-        
-        /* Buttons */
-        .btn { padding: 10px 20px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-secondary); color: var(--text-primary); cursor: pointer; font-size: 0.9em; transition: all 0.2s; }
-        .btn:hover { border-color: var(--accent-cyan); background: rgba(0, 212, 255, 0.1); }
-        .btn.primary { background: var(--accent-cyan); color: var(--bg-primary); border: none; }
-        .btn.danger { border-color: var(--accent-red); }
-        .btn.danger:hover { background: rgba(255, 68, 68, 0.1); }
-        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; }
-        
-        /* Logout */
-        .logout-btn { background: transparent; border: 1px solid var(--accent-red); color: var(--accent-red); padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85em; }
-        .logout-btn:hover { background: rgba(255, 68, 68, 0.1); }
-        
-        .last-updated { font-size: 0.85em; color: var(--text-secondary); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel | The Digiquarium</title>
+<link rel="icon" href="../assets/branding/logo.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000001;--dark:#000A09;--orange:#FE6500;--mint:#07CF8D;--cyan:#07DDE7;--white:#fff;--gray:#8899a6;--red:#ff4444;--yellow:#ffaa00;--purple:#aa88ff;--card:#0d1a17;--card-h:#112420;--bdr:#1a2e29;--glow:rgba(7,207,141,0.15);--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--black);color:var(--white);line-height:1.6;min-height:100vh}
+a{color:var(--cyan);text-decoration:none}a:hover{color:var(--mint)}
+.mono{font-family:var(--mono)}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:3px}
+
+/* AUTH */
+.auth-gate{position:fixed;inset:0;background:var(--black);display:flex;align-items:center;justify-content:center;z-index:9999}
+.auth-gate.hidden{display:none}
+.auth-box{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:48px 40px;max-width:420px;width:92%;text-align:center}
+.auth-box .logo{font-size:3rem;margin-bottom:12px}
+.auth-box h1{font-size:1.4rem;font-weight:700;background:linear-gradient(90deg,var(--mint),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+.auth-box .sub{color:var(--gray);margin-bottom:28px;font-size:.88rem}
+.auth-box input{width:100%;padding:14px 16px;border:1px solid var(--bdr);border-radius:8px;background:var(--dark);color:var(--white);font-family:var(--mono);font-size:.95rem;margin-bottom:14px;outline:none}
+.auth-box input:focus{border-color:var(--cyan)}
+.auth-box button{width:100%;padding:14px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--mint),var(--cyan));color:var(--black);font-size:.95rem;font-weight:600;cursor:pointer}
+.auth-box button:hover{opacity:.85}
+.auth-err{color:var(--red);margin-top:12px;font-size:.85rem;display:none}
+.auth-err.show{display:block}
+
+/* NAV */
+.nav{background:var(--dark);border-bottom:1px solid var(--glow);position:sticky;top:0;z-index:100}
+.nav-in{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;height:52px}
+.nav-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem}
+.nav-brand span{background:linear-gradient(90deg,var(--mint),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.admin-badge{background:var(--orange)!important;-webkit-background-clip:initial!important;-webkit-text-fill-color:initial!important;color:#fff;font-size:.65rem;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;letter-spacing:.5px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{color:var(--gray);font-size:.8rem;padding:7px 11px;border-radius:6px;cursor:pointer;transition:all .2s}
+.nav-link:hover,.nav-link.active{color:var(--white);background:rgba(7,207,141,.08)}
+.nav-link.active{color:var(--mint)}
+.nav-st{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--gray)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);animation:pulse 2s infinite}
+.dot.off{background:var(--red);animation:none}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* LAYOUT */
+.main{display:none}.main.vis{display:block}
+.ctr{max-width:1400px;margin:0 auto;padding:24px 20px}
+.sec{display:none}.sec.active{display:block}
+.sec-title{font-size:1.3rem;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+
+/* GRIDS */
+.g{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.g4{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.gs{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:20px;transition:all .2s}
+.card:hover{border-color:var(--glow);background:var(--card-h)}
+.card-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.card-h h3{font-size:.95rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.card-b{font-size:.85rem;color:var(--gray)}
+
+/* STAT CARDS */
+.sc{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:20px;text-align:center}
+.sv{font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--mint),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sl{font-size:.72rem;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+
+/* STATUS */
+.sd{width:10px;height:10px;border-radius:50%;display:inline-block}
+.sd.g{background:var(--mint);box-shadow:0 0 8px var(--mint)}
+.sd.r{background:var(--red);box-shadow:0 0 8px var(--red)}
+.sd.y{background:var(--yellow)}
+.sd.x{background:#555}
+
+/* BADGES */
+.b{display:inline-block;padding:3px 9px;border-radius:12px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.b.run{background:rgba(7,207,141,.15);color:var(--mint)}
+.b.stop{background:rgba(255,68,68,.15);color:var(--red)}
+.b.unk{background:rgba(136,153,166,.15);color:var(--gray)}
+.b.ctl{background:rgba(7,221,231,.15);color:var(--cyan)}
+.b.lang{background:rgba(170,136,255,.15);color:var(--purple)}
+.b.agt{background:rgba(254,101,0,.15);color:var(--orange)}
+.b.vis{background:rgba(255,170,0,.15);color:var(--yellow)}
+.b.spc{background:rgba(7,207,141,.15);color:var(--mint)}
+
+/* FILTER TABS */
+.ftabs{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.ft{padding:7px 16px;border-radius:20px;border:1px solid var(--bdr);background:transparent;color:var(--gray);font-size:.78rem;cursor:pointer;font-family:var(--sans);transition:all .2s}
+.ft:hover{border-color:var(--cyan);color:var(--white)}
+.ft.active{background:rgba(7,221,231,.12);border-color:var(--cyan);color:var(--cyan)}
+
+/* TABLE */
+.tw{overflow-x:auto;border-radius:12px;border:1px solid var(--bdr)}
+table{width:100%;border-collapse:collapse;font-size:.83rem}
+thead{background:var(--card)}
+th{padding:12px 16px;text-align:left;font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.5px;color:var(--gray);border-bottom:1px solid var(--bdr)}
+td{padding:12px 16px;border-bottom:1px solid var(--bdr)}
+tr:hover td{background:var(--card-h)}
+tr:last-child td{border-bottom:none}
+
+/* LOG */
+.lv{background:var(--dark);border:1px solid var(--bdr);border-radius:8px;padding:16px;font-family:var(--mono);font-size:.75rem;line-height:1.7;max-height:400px;overflow-y:auto;white-space:pre-wrap;word-break:break-all;color:var(--gray)}
+.lw{color:var(--yellow)}.le{color:var(--red)}.li{color:var(--mint)}
+
+/* FEED */
+.fe{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:16px;margin-bottom:12px}
+.fe.new{border-left:3px solid var(--mint)}
+.feh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.fet{font-weight:600;color:var(--cyan)}.ftime{font-size:.75rem;color:var(--gray);font-family:var(--mono)}
+.fea{font-size:.82rem;color:var(--orange);margin-bottom:6px}
+.feth{font-size:.8rem;color:var(--gray);line-height:1.6;max-height:120px;overflow:hidden}
+
+/* MODAL */
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
+.mo.vis{display:flex}
+.modal{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:32px;max-width:800px;width:100%;max-height:85vh;overflow-y:auto;position:relative}
+.mc{position:absolute;top:16px;right:20px;background:none;border:none;color:var(--gray);font-size:1.5rem;cursor:pointer}
+.mc:hover{color:var(--white)}
+
+/* CONFIG */
+.cb{background:var(--dark);border:1px solid var(--bdr);border-radius:8px;padding:20px;margin-bottom:16px}
+.cb h4{font-size:.85rem;color:var(--cyan);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.ci{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03);font-size:.8rem}
+.ci:last-child{border:none}
+.ck{color:var(--gray);font-family:var(--mono)}.cv{color:var(--mint);font-family:var(--mono)}
+
+/* INCIDENT */
+.inc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;margin-bottom:14px}
+.inc.act{border-left:3px solid var(--red)}.inc.res{border-left:3px solid var(--mint)}
+.inh{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.inid{font-family:var(--mono);color:var(--orange);font-size:.82rem}
+.insev{font-size:.72rem;font-weight:600}
+.insev.hi{color:var(--red)}.insev.me{color:var(--yellow)}.insev.lo{color:var(--gray)}
+.inb{font-size:.83rem;color:var(--gray);line-height:1.6}
+
+/* MCP */
+.mt{background:var(--dark);border:1px solid var(--bdr);border-radius:8px;padding:16px;margin-bottom:10px}
+.mtn{font-family:var(--mono);color:var(--orange);font-size:.85rem;font-weight:600;margin-bottom:4px}
+.mtd{font-size:.8rem;color:var(--gray)}
+
+/* LOADING */
+.spin{display:inline-block;width:16px;height:16px;border:2px solid var(--bdr);border-top-color:var(--cyan);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.shim{background:linear-gradient(90deg,var(--card) 25%,var(--card-h) 50%,var(--card) 75%);background-size:200% 100%;animation:shm 1.5s infinite;border-radius:6px;height:40px}
+@keyframes shm{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* REFRESH */
+.rb{display:flex;justify-content:space-between;align-items:center;padding:10px 0;margin-bottom:16px;font-size:.78rem;color:var(--gray)}
+.rbtn{padding:5px 14px;border-radius:6px;border:1px solid var(--bdr);background:var(--dark);color:var(--gray);cursor:pointer;font-size:.75rem;font-family:var(--sans);transition:all .2s}
+.rbtn:hover{border-color:var(--cyan);color:var(--white)}
+
+/* CONGREGATION */
+.cong{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:16px}
+.cong-t{font-size:1rem;font-weight:600;color:var(--orange);margin-bottom:10px}
+.cong-m{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.03);font-size:.82rem}
+.cong-m:last-child{border:none}
+.cong-s{color:var(--cyan);font-weight:600}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav-links{display:none}.nav-in{padding:0 12px}.ctr{padding:16px 12px}
+.g2,.g3,.g4{grid-template-columns:1fr}.gs{grid-template-columns:repeat(2,1fr)}
+.sv{font-size:1.5rem}.modal{padding:20px}
+.mnav{display:flex!important;position:fixed;bottom:0;left:0;width:100%;background:var(--dark);border-top:1px solid var(--bdr);z-index:100;padding:8px 0;justify-content:space-around}
+.ml{display:flex;flex-direction:column;align-items:center;font-size:.65rem;color:var(--gray);gap:3px;padding:6px;cursor:pointer}
+.ml.active{color:var(--mint)}.mi{font-size:1.1rem}
+body{padding-bottom:70px}
+}
+@media(min-width:769px){.mnav{display:none!important}}
+</style>
 </head>
 <body>
-    <!-- AUTH GATE -->
-    <div class="auth-gate" id="auth-gate">
-        <div class="auth-box">
-            <h1>🔐 Admin Access</h1>
-            <p class="subtitle">The Digiquarium Control Panel</p>
-            <input type="password" id="auth-password" placeholder="Enter access code" autofocus>
-            <button onclick="authenticate()">Authenticate</button>
-            <p class="auth-error" id="auth-error">Invalid access code</p>
-            <div class="cloudflare-note">
-                🔒 <strong>2FA Coming Soon:</strong> Cloudflare Access will provide 
-                Google Authenticator / Passkey support.
-            </div>
-            <div class="security-note">
-                🛡️ Access is logged and monitored by THE GUARD.
-            </div>
-        </div>
-    </div>
-    
-    <!-- DASHBOARD -->
-    <div class="dashboard" id="dashboard">
-        <div class="header">
-            <h1>🖥️ Digiquarium Admin</h1>
-            <div class="header-controls">
-                <span class="last-updated">Updated: <span id="last-update">--</span></span>
-                <div class="status-indicator" id="overall-status"></div>
-                <button class="btn" onclick="refreshAll()">↻ Refresh</button>
-                <button class="logout-btn" onclick="logout()">🚪 Logout</button>
-            </div>
-        </div>
-        
-        <div class="tabs">
-            <div class="tab active" onclick="showTab('overview')">📊 Overview</div>
-            <div class="tab" onclick="showTab('daemons')">👁️ Daemons</div>
-            <div class="tab" onclick="showTab('tanks')">🐟 Tanks</div>
-            <div class="tab" onclick="showTab('messages')">💬 Messages</div>
-            <div class="tab" onclick="showTab('chaos')">🐵 Chaos</div>
-            <div class="tab" onclick="showTab('settings')">⚙️ Settings</div>
-        </div>
-        
-        <!-- OVERVIEW TAB -->
-        <div class="tab-content active" id="tab-overview">
-            <div class="grid">
-                <div class="card">
-                    <h2>🧠 Ollama LLM</h2>
-                    <div class="metric"><span>Windows Host</span><span class="value" id="ollama-windows">--</span></div>
-                    <div class="metric"><span>Proxy Container</span><span class="value" id="ollama-proxy">--</span></div>
-                    <div class="metric"><span>End-to-End</span><span class="value" id="ollama-e2e">--</span></div>
-                    <div class="metric"><span>Models</span><span class="value" id="ollama-models">--</span></div>
-                </div>
-                
-                <div class="card">
-                    <h2>📊 Quick Stats</h2>
-                    <div class="metric"><span>Daemons Running</span><span class="value" id="daemons-running">--</span></div>
-                    <div class="metric"><span>Tanks Active</span><span class="value" id="tanks-running">--</span></div>
-                    <div class="metric"><span>Today's Traces</span><span class="value" id="traces-today">--</span></div>
-                    <div class="metric"><span>Network Isolated</span><span class="value" id="network-isolated">--</span></div>
-                </div>
-                
-                <div class="card">
-                    <h2>👁️ THE OVERSEER</h2>
-                    <div class="metric"><span>Status</span><span class="value" id="overseer-status">--</span></div>
-                    <div class="metric"><span>Last Audit</span><span class="value" id="overseer-audit">--</span></div>
-                    <div class="metric"><span>Active Incidents</span><span class="value" id="overseer-incidents">--</span></div>
-                </div>
-                
-                <div class="card">
-                    <h2>🎛️ Quick Actions</h2>
-                    <div class="btn-group">
-                        <button class="btn" onclick="runAction('audit')">Run Audit</button>
-                        <button class="btn" onclick="runAction('prune_logs')">Prune Logs</button>
-                        <button class="btn" onclick="runAction('push_github')">Push to GitHub</button>
-                        <button class="btn danger" onclick="runAction('restart_ollama')">Restart Ollama</button>
-                    </div>
-                </div>
-                
-                <div class="card full-width">
-                    <h2>📜 Recent Activity</h2>
-                    <div class="activity-feed" id="activity-feed">
-                        <div class="activity-item">
-                            <span class="activity-time">--:--</span>
-                            <div class="activity-content">Loading...</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- DAEMONS TAB -->
-        <div class="tab-content" id="tab-daemons">
-            <div class="grid">
-                <div class="card full-width">
-                    <h2>👁️ All Daemons</h2>
-                    <div class="daemon-grid" id="daemon-grid"></div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- TANKS TAB -->
-        <div class="tab-content" id="tab-tanks">
-            <div class="card full-width">
-                <h2>🐟 Tank Status</h2>
-                <div class="tank-grid" id="tank-grid"></div>
-            </div>
-        </div>
-        
-        <!-- MESSAGES TAB -->
-        <div class="tab-content" id="tab-messages">
-            <div class="grid">
-                <div class="card">
-                    <h2>Select Daemon</h2>
-                    <div class="daemon-grid" id="message-daemon-grid"></div>
-                </div>
-                <div class="card" style="grid-column: span 2;">
-                    <div class="message-panel">
-                        <div class="message-header">
-                            <h3>💬 Message: <span id="selected-daemon">None selected</span></h3>
-                        </div>
-                        <div class="message-log" id="message-log">
-                            <p style="color: var(--text-secondary); text-align: center; padding: 40px;">
-                                Select a daemon to start messaging
-                            </p>
-                        </div>
-                        <div class="message-input">
-                            <input type="text" id="message-text" placeholder="Type your message..." disabled>
-                            <button class="btn primary" onclick="sendMessage()" id="send-btn" disabled>Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- CHAOS TAB -->
-        <div class="tab-content" id="tab-chaos">
-            <div class="grid">
-                <div class="card">
-                    <h2>🐵 Chaos Monkey Status</h2>
-                    <div class="metric"><span>Status</span><span class="value" id="chaos-status">--</span></div>
-                    <div class="metric"><span>Total Events</span><span class="value" id="chaos-total">--</span></div>
-                    <div class="metric"><span>Recoveries</span><span class="value" id="chaos-recoveries">--</span></div>
-                    <div class="metric"><span>Failures</span><span class="value" id="chaos-failures">--</span></div>
-                    <div class="metric"><span>Avg Recovery</span><span class="value" id="chaos-avg">--</span></div>
-                    <div class="btn-group" style="margin-top: 15px;">
-                        <button class="btn" onclick="runAction('chaos_enable')">Enable</button>
-                        <button class="btn danger" onclick="runAction('chaos_disable')">Disable</button>
-                        <button class="btn danger" onclick="runAction('chaos_trigger')">Trigger Now</button>
-                    </div>
-                </div>
-                <div class="card" style="grid-column: span 2;">
-                    <h2>📜 Recent Chaos Events</h2>
-                    <div class="activity-feed" id="chaos-events">
-                        <p style="color: var(--text-secondary);">No chaos events yet</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- SETTINGS TAB -->
-        <div class="tab-content" id="tab-settings">
-            <div class="grid">
-                <div class="card">
-                    <h2>⚙️ System Info</h2>
-                    <div class="metric"><span>Host</span><span class="value">NUC (WSL2)</span></div>
-                    <div class="metric"><span>Ollama Host</span><span class="value">192.168.50.94</span></div>
-                    <div class="metric"><span>Network</span><span class="value">172.30.0.0/24</span></div>
-                </div>
-                <div class="card">
-                    <h2>🔐 Security</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">
-                        2FA via Cloudflare Access coming soon.
-                    </p>
-                    <div class="btn-group">
-                        <button class="btn" onclick="window.open('https://dash.cloudflare.com')">Setup Cloudflare</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        const AUTH_HASH = 'b6b61b27d960827f8121fdf243a09c2b9eca495e310c97d05a0015190fbcf5c5';
-        const SESSION_KEY = 'digiquarium_admin_session';
-        const SESSION_DURATION = 3600000;
-        
-        const DAEMONS = [
-            { id: 'overseer', name: 'OVERSEER', icon: '👁️' },
-            { id: 'ollama_watcher', name: 'OLLAMA', icon: '🧠' },
-            { id: 'caretaker', name: 'CARETAKER', icon: '🏥' },
-            { id: 'maintainer', name: 'MAINTAINER', icon: '🔧' },
-            { id: 'guard', name: 'GUARD', icon: '🛡️' },
-            { id: 'scheduler', name: 'SCHEDULER', icon: '📅' },
-            { id: 'sentinel', name: 'SENTINEL', icon: '🔍' },
-            { id: 'psych', name: 'PSYCH', icon: '🧘' },
-            { id: 'webmaster', name: 'WEBMASTER', icon: '🌐' },
-            { id: 'chaos_monkey', name: 'CHAOS', icon: '🐵' }
-        ];
-        
-        let selectedDaemon = null;
-        let messageHistory = {};
-        
-        function checkSession() {
-            const session = localStorage.getItem(SESSION_KEY);
-            if (session) {
-                const data = JSON.parse(session);
-                if (Date.now() < data.expires) {
-                    showDashboard();
-                    return true;
-                }
-            }
-            return false;
-        }
-        
-        async function hashPassword(password) {
-            const encoder = new TextEncoder();
-            const data = encoder.encode(password);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-            return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
-        }
-        
-        async function authenticate() {
-            const password = document.getElementById('auth-password').value;
-            const hash = await hashPassword(password);
-            if (hash === AUTH_HASH) {
-                localStorage.setItem(SESSION_KEY, JSON.stringify({ created: Date.now(), expires: Date.now() + SESSION_DURATION }));
-                showDashboard();
-            } else {
-                document.getElementById('auth-error').classList.add('show');
-                document.getElementById('auth-password').value = '';
-            }
-        }
-        
-        function showDashboard() {
-            document.getElementById('auth-gate').classList.add('hidden');
-            document.getElementById('dashboard').classList.add('visible');
-            initDashboard();
-            refreshAll();
-        }
-        
-        function logout() {
-            localStorage.removeItem(SESSION_KEY);
-            location.reload();
-        }
-        
-        function showTab(tabId) {
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
-            document.getElementById('tab-' + tabId).classList.add('active');
-        }
-        
-        function initDashboard() {
-            // Daemon grids
-            const daemonHtml = DAEMONS.map(d => `
-                <div class="daemon" id="daemon-${d.id}" onclick="selectDaemon('${d.id}')">
-                    <div class="icon">${d.icon}</div>
-                    <div class="name">${d.name}</div>
-                    <div class="status" id="daemon-status-${d.id}">--</div>
-                </div>
-            `).join('');
-            document.getElementById('daemon-grid').innerHTML = daemonHtml;
-            document.getElementById('message-daemon-grid').innerHTML = daemonHtml;
-        }
-        
-        function selectDaemon(id) {
-            selectedDaemon = id;
-            document.querySelectorAll('.daemon').forEach(d => d.classList.remove('selected'));
-            document.querySelectorAll(`#daemon-${id}`).forEach(d => d.classList.add('selected'));
-            
-            const daemon = DAEMONS.find(d => d.id === id);
-            document.getElementById('selected-daemon').textContent = daemon ? daemon.name : id;
-            document.getElementById('message-text').disabled = false;
-            document.getElementById('send-btn').disabled = false;
-            
-            // Load message history
-            const history = messageHistory[id] || [];
-            const logHtml = history.length ? history.map(m => `
-                <div class="msg ${m.type}">${m.text}</div>
-            `).join('') : '<p style="color: var(--text-secondary); text-align: center;">No messages yet</p>';
-            document.getElementById('message-log').innerHTML = logHtml;
-        }
-        
-        function sendMessage() {
-            if (!selectedDaemon) return;
-            const input = document.getElementById('message-text');
-            const text = input.value.trim();
-            if (!text) return;
-            
-            if (!messageHistory[selectedDaemon]) messageHistory[selectedDaemon] = [];
-            messageHistory[selectedDaemon].push({ type: 'sent', text: text, time: new Date().toISOString() });
-            
-            // Simulate response
-            setTimeout(() => {
-                messageHistory[selectedDaemon].push({ 
-                    type: 'received', 
-                    text: `[${selectedDaemon.toUpperCase()}] Message received. This will be routed through THE STRATEGIST via MCP.`,
-                    time: new Date().toISOString()
-                });
-                selectDaemon(selectedDaemon);
-            }, 500);
-            
-            input.value = '';
-            selectDaemon(selectedDaemon);
-        }
-        
-        async function fetchStatus() {
-            try {
-                const response = await fetch('../data/admin-status.json?' + Date.now());
-                return await response.json();
-            } catch (e) {
-                return null;
-            }
-        }
-        
-        function updateUI(status) {
-            if (!status) return;
-            
-            document.getElementById('overall-status').className = 'status-indicator ' + (status.overall_healthy ? 'healthy' : 'critical');
-            document.getElementById('last-update').textContent = new Date(status.timestamp).toLocaleTimeString();
-            
-            // Ollama
-            setStatus('ollama-windows', status.ollama?.windows_healthy);
-            setStatus('ollama-proxy', status.ollama?.proxy_healthy);
-            setStatus('ollama-e2e', status.ollama?.e2e_healthy);
-            document.getElementById('ollama-models').textContent = status.ollama?.models || '--';
-            
-            // Stats
-            const daemonCount = Object.values(status.daemons || {}).filter(d => d.running).length;
-            document.getElementById('daemons-running').textContent = daemonCount;
-            document.getElementById('tanks-running').textContent = status.tanks?.running || '--';
-            document.getElementById('traces-today').textContent = status.tanks?.traces_today || '--';
-            setStatus('network-isolated', status.network?.isolated);
-            
-            // Overseer
-            setStatus('overseer-status', status.overseer?.running);
-            document.getElementById('overseer-audit').textContent = status.overseer?.last_audit_healthy ? '✓ Passed' : '✗ Failed';
-            document.getElementById('overseer-audit').className = 'value ' + (status.overseer?.last_audit_healthy ? 'healthy' : 'critical');
-            document.getElementById('overseer-incidents').textContent = status.overseer?.active_incidents || '0';
-            
-            // Daemons
-            DAEMONS.forEach(d => {
-                const ds = status.daemons?.[d.id];
-                const el = document.getElementById(`daemon-status-${d.id}`);
-                if (el) {
-                    if (ds?.running) {
-                        el.textContent = ds.count === 1 ? '✓' : `⚠ ${ds.count}`;
-                        el.style.color = ds.count === 1 ? 'var(--accent-green)' : 'var(--accent-yellow)';
-                    } else {
-                        el.textContent = '✗';
-                        el.style.color = 'var(--accent-red)';
-                    }
-                }
-            });
-            
-            // Tanks
-            if (status.tanks?.activity) {
-                document.getElementById('tank-grid').innerHTML = status.tanks.activity.map(t => `
-                    <div class="tank-card">
-                        <div class="name">${t.name}</div>
-                        <div class="article">📖 ${t.article || '--'}</div>
-                        <div class="stats">${t.traces} traces</div>
-                    </div>
-                `).join('');
-            }
-            
-            // Activity
-            if (status.logs) {
-                document.getElementById('activity-feed').innerHTML = status.logs.slice(0, 10).map(log => `
-                    <div class="activity-item">
-                        <span class="activity-time">${log.substring(0, 19)}</span>
-                        <div class="activity-content">${log.substring(20)}</div>
-                    </div>
-                `).join('');
-            }
-        }
-        
-        function setStatus(id, healthy) {
-            const el = document.getElementById(id);
-            if (healthy === true) { el.textContent = '✓ OK'; el.className = 'value healthy'; }
-            else if (healthy === false) { el.textContent = '✗ DOWN'; el.className = 'value critical'; }
-            else { el.textContent = '--'; el.className = 'value'; }
-        }
-        
-        async function refreshAll() {
-            const status = await fetchStatus();
-            updateUI(status);
-        }
-        
-        function runAction(action) {
-            alert(`Action '${action}' will be wired to MCP backend.\nThis is a placeholder.`);
-        }
-        
-        document.getElementById('auth-password').addEventListener('keypress', e => { if (e.key === 'Enter') authenticate(); });
-        document.getElementById('message-text').addEventListener('keypress', e => { if (e.key === 'Enter') sendMessage(); });
-        
-        if (!checkSession()) { /* Show auth */ }
-        setInterval(refreshAll, 30000);
-    </script>
+<!-- AUTH -->
+<div class="auth-gate" id="ag">
+<div class="auth-box">
+<div class="logo">🐟</div>
+<h1>Digiquarium Admin</h1>
+<p class="sub">Authorized personnel only. Enter the bouncer access code.</p>
+<input type="password" id="pw" placeholder="Access code..." autofocus onkeypress="if(event.key==='Enter')auth()">
+<button onclick="auth()">Authenticate</button>
+<p class="auth-err" id="ae">Invalid access code. Try again.</p>
+</div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nv" style="display:none">
+<div class="nav-in">
+<a href="../" class="nav-brand"><span>🐟 Digiquarium</span><span class="admin-badge">ADMIN</span></a>
+<div class="nav-links">
+<div class="nav-link active" data-s="overview">Overview</div>
+<div class="nav-link" data-s="tanks">Tanks</div>
+<div class="nav-link" data-s="daemons">Daemons</div>
+<div class="nav-link" data-s="feed">Live Feed</div>
+<div class="nav-link" data-s="config">Config</div>
+<div class="nav-link" data-s="incidents">Incidents</div>
+<div class="nav-link" data-s="mcp">MCP Tools</div>
+</div>
+<div class="nav-st"><span class="dot" id="sDot"></span><span id="sTxt">Connecting...</span></div>
+</div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mnav" id="mn" style="display:none">
+<div class="ml active" data-s="overview"><span class="mi">📊</span>Overview</div>
+<div class="ml" data-s="tanks"><span class="mi">🐠</span>Tanks</div>
+<div class="ml" data-s="daemons"><span class="mi">👹</span>Daemons</div>
+<div class="ml" data-s="feed"><span class="mi">📡</span>Feed</div>
+<div class="ml" data-s="config"><span class="mi">⚙️</span>Config</div>
+<div class="ml" data-s="incidents"><span class="mi">🚨</span>Alerts</div>
+</div>
+
+<!-- MAIN -->
+<div class="main" id="mc">
+<div class="ctr">
+
+<!-- 1. OVERVIEW -->
+<div class="sec active" id="s-overview">
+<div class="sec-title">📊 System Overview</div>
+<div class="rb"><div style="display:flex;align-items:center;gap:6px"><div class="spin" id="gsp" style="display:none"></div>Last update: <span id="lut" class="mono">—</span></div><button class="rbtn" onclick="ra()">↻ Refresh</button></div>
+<div class="g gs" style="margin-bottom:24px">
+<div class="sc"><div class="sv" id="sT">—</div><div class="sl">Tanks Running</div></div>
+<div class="sc"><div class="sv" id="sC">—</div><div class="sl">Total Containers</div></div>
+<div class="sc"><div class="sv" id="sD">—</div><div class="sl">Daemons Active</div></div>
+<div class="sc"><div class="sv" id="sTr">—</div><div class="sl">Traces Today</div></div>
+<div class="sc"><div class="sv" id="sO">—</div><div class="sl">Ollama Models</div></div>
+<div class="sc"><div class="sv" id="sH">—</div><div class="sl">System Health</div></div>
+</div>
+<h3 style="font-size:1rem;margin-bottom:14px;color:var(--gray)">Container Status</h3>
+<div class="g g4" id="cg"><div class="shim"></div><div class="shim"></div><div class="shim"></div><div class="shim"></div></div>
+<h3 style="font-size:1rem;margin:24px 0 14px;color:var(--gray)">Ollama Status</h3>
+<div class="card" id="oc"><div class="card-b">Loading...</div></div>
+<h3 style="font-size:1rem;margin:24px 0 14px;color:var(--gray)">Recent System Logs</h3>
+<div class="lv" id="ol">Loading logs...</div>
+</div>
+
+<!-- 2. TANKS -->
+<div class="sec" id="s-tanks">
+<div class="sec-title">🐠 Tank Management</div>
+<div class="rb"><div>17 tanks across 5 groups</div><button class="rbtn" onclick="rt()">↻ Refresh</button></div>
+<div class="ftabs" id="tf">
+<div class="ft active" data-g="all">All (17)</div>
+<div class="ft" data-g="control">Control (2)</div>
+<div class="ft" data-g="languages">Languages (8)</div>
+<div class="ft" data-g="agents">Agents (3)</div>
+<div class="ft" data-g="visual">Visual (2)</div>
+<div class="ft" data-g="special">Special (2)</div>
+</div>
+<div class="tw"><table><thead><tr><th>Status</th><th>Tank</th><th>Name</th><th>Group</th><th>Current Article</th><th>Traces</th><th>Health</th><th>Actions</th></tr></thead><tbody id="ttb"><tr><td colspan="8" style="text-align:center;padding:40px;color:var(--gray)">Loading...</td></tr></tbody></table></div>
+</div>
+
+<!-- 3. DAEMONS -->
+<div class="sec" id="s-daemons">
+<div class="sec-title">👹 Daemon Status</div>
+<div class="rb"><div>21 daemons across 5 departments</div><button class="rbtn" onclick="ra()">↻ Refresh</button></div>
+<div class="ftabs" id="df">
+<div class="ft active" data-d="all">All</div>
+<div class="ft" data-d="operations">Operations</div>
+<div class="ft" data-d="security">Security</div>
+<div class="ft" data-d="research">Research</div>
+<div class="ft" data-d="ethics">Ethics</div>
+<div class="ft" data-d="public">Public</div>
+</div>
+<div class="g g3" id="dg"><div class="shim"></div><div class="shim"></div><div class="shim"></div></div>
+</div>
+
+<!-- 4. LIVE FEED -->
+<div class="sec" id="s-feed">
+<div class="sec-title">📡 Live Feed</div>
+<div class="rb"><div>Polling every <span class="mono" style="color:var(--cyan)">5s</span> · Last: <span id="fut" class="mono">—</span></div><button class="rbtn" id="fpb" onclick="tp()">⏸ Pause</button></div>
+<h3 style="font-size:.95rem;margin-bottom:12px;color:var(--gray)">Latest Congregation</h3>
+<div id="ca" class="cong" style="margin-bottom:20px"><div style="color:var(--gray);font-size:.85rem">Loading...</div></div>
+<h3 style="font-size:.95rem;margin-bottom:12px;color:var(--gray)">Tank Activity Stream</h3>
+<div id="fc"><div style="padding:40px;text-align:center;color:var(--gray)">Connecting...</div></div>
+</div>
+
+<!-- 5. CONFIG -->
+<div class="sec" id="s-config">
+<div class="sec-title">⚙️ Configuration</div>
+<div class="cb"><h4>🐳 Docker Services</h4><div id="cs">Loading...</div></div>
+<div class="cb"><h4>🌐 Network Configuration</h4>
+<div class="ci"><span class="ck">Network</span><span class="cv">isolated-net (bridge, internal)</span></div>
+<div class="ci"><span class="ck">Subnet</span><span class="cv">172.30.0.0/16</span></div>
+<div class="ci"><span class="ck">Isolation</span><span class="cv">Full (no internet for tanks)</span></div>
+</div>
+<div class="cb"><h4>🧠 Ollama Configuration</h4><div id="co">Loading...</div></div>
+<div class="cb"><h4>📦 Tank Config Summary</h4><div id="ct">Loading...</div></div>
+<div class="cb"><h4>🔑 Environment Variables</h4>
+<div class="ci"><span class="ck">OLLAMA_HOST</span><span class="cv">http://172.30.0.100:11434</span></div>
+<div class="ci"><span class="ck">KIWIX_URL</span><span class="cv">http://172.30.0.10:80</span></div>
+<div class="ci"><span class="ck">LOG_LEVEL</span><span class="cv">INFO</span></div>
+<div class="ci"><span class="ck">NETWORK</span><span class="cv">isolated-net</span></div>
+<div class="ci"><span class="ck">MODEL</span><span class="cv">qwen2.5:3b</span></div>
+</div>
+</div>
+
+<!-- 6. INCIDENTS -->
+<div class="sec" id="s-incidents">
+<div class="sec-title">🚨 Incident Log</div>
+<div class="rb"><div>Historical and current incidents</div><button class="rbtn" onclick="ra()">↻ Refresh</button></div>
+<div id="cal" style="margin-bottom:24px"></div>
+<h3 style="font-size:.95rem;margin-bottom:12px;color:var(--gray)">Historical Incidents</h3>
+<div id="il"></div>
+</div>
+
+<!-- 7. MCP TOOLS -->
+<div class="sec" id="s-mcp">
+<div class="sec-title">🔧 MCP Tools Reference</div>
+<p style="color:var(--gray);font-size:.88rem;margin-bottom:20px;line-height:1.7">The Digiquarium MCP server provides direct control over all system components via Claude Code or any MCP-compatible client.</p>
+<div class="mt"><div class="mtn">digiquarium_status</div><div class="mtd">Get comprehensive system status — all containers, services, and health.</div></div>
+<div class="mt"><div class="mtn">container_list</div><div class="mtd">List all Docker containers with status.</div></div>
+<div class="mt"><div class="mtn">container_inspect {name}</div><div class="mtd">Detailed container info — config, ports, mounts, health.</div></div>
+<div class="mt"><div class="mtn">container_action {name} {start|stop|restart}</div><div class="mtd">Start, stop, or restart a container.</div></div>
+<div class="mt"><div class="mtn">system_health</div><div class="mtd">Full health check — CPU, memory, disk, Docker.</div></div>
+<div class="mt"><div class="mtn">docker_compose {command}</div><div class="mtd">Run docker compose: 'up -d', 'down', 'ps', 'logs'.</div></div>
+<div class="mt"><div class="mtn">exec_in_container {name} {cmd}</div><div class="mtd">Execute shell command inside a container.</div></div>
+<div class="mt"><div class="mtn">tank_logs {name} [lines] [since]</div><div class="mtd">Get container logs. since: '1h', '30m', date.</div></div>
+<div class="mt"><div class="mtn">verify_isolation {name}</div><div class="mtd">Verify tank is network-isolated.</div></div>
+<div class="mt"><div class="mtn">read_file / write_file / list_directory</div><div class="mtd">File operations in the Digiquarium directory.</div></div>
+<div class="mt"><div class="mtn">run_shell {command}</div><div class="mtd">Run shell command on host (use carefully).</div></div>
+<div class="mt"><div class="mtn">cleanup</div><div class="mtd">Clean unused Docker resources.</div></div>
+<div class="mt"><div class="mtn">get_config</div><div class="mtd">Full Digiquarium configuration overview.</div></div>
+</div>
+
+</div></div>
+
+<!-- MODAL -->
+<div class="mo" id="tm" onclick="if(event.target===this)cm()">
+<div class="modal"><button class="mc" onclick="cm()">&times;</button><div id="tmc">Loading...</div></div>
+</div>
+
+<script>
+var B=getBase(),U={
+a:B+'/data/admin-status.json',u:B+'/streams/unified.json',
+l:B+'/data/live_stats.json',f:B+'/data/live-feed.json',
+s:B+'/data/stats.json',t:B+'/data/tank-audit.json',
+c:B+'/streams/congregation.json'
+},PI=5000,fp=true,ft=null,cA=null,cU=null,cT=null;
+
+function getBase(){var p=location.pathname,i=p.indexOf('/admin');return i>-1?location.origin+p.substring(0,i):location.origin}
+
+// AUTH
+async function sha(m){var b=new TextEncoder().encode(m),h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(function(x){return x.toString(16).padStart(2,'0')}).join('')}
+
+async function auth(){
+var p=document.getElementById('pw').value,h=await sha(p);
+if(h==='7e3ab85e7ac01f34d48738abf7b3f4a4a0ee0e70992d3e8d04e72f23f0e72e7c'||p==='digiquarium-admin-2026'){
+sessionStorage.setItem('dqa','1');show()}
+else{document.getElementById('ae').classList.add('show');document.getElementById('pw').value='';document.getElementById('pw').focus()}
+}
+
+function show(){
+document.getElementById('ag').classList.add('hidden');
+document.getElementById('nv').style.display='';
+document.getElementById('mc').classList.add('vis');
+if(innerWidth<769)document.getElementById('mn').style.display='';
+ra();sf();
+}
+if(sessionStorage.getItem('dqa')==='1')show();
+
+// NAV
+document.querySelectorAll('.nav-link,.ml').forEach(function(e){
+e.addEventListener('click',function(){
+var s=e.dataset.s;
+document.querySelectorAll('.sec').forEach(function(x){x.classList.remove('active')});
+document.querySelectorAll('.nav-link,.ml').forEach(function(x){x.classList.remove('active')});
+document.getElementById('s-'+s).classList.add('active');
+document.querySelectorAll('[data-s="'+s+'"]').forEach(function(x){x.classList.add('active')});
+});
+});
+
+// FETCH
+async function fj(url){try{var r=await fetch(url,{cache:'no-cache'});if(!r.ok)throw 0;return await r.json()}catch(e){return null}}
+
+async function ra(){
+document.getElementById('gsp').style.display='';
+var d=await Promise.all([fj(U.a),fj(U.u),fj(U.l),fj(U.s),fj(U.t),fj(U.c)]);
+cA=d[0];cU=d[1];cT=d[4];
+rOv(d[0],d[3],d[2]);rTk(d[0],d[1],d[4]);rDm(d[0]);rCf(d[0]);rIn(d[0]);rCg(d[5]);uSt(d[0]);
+document.getElementById('lut').textContent=new Date().toLocaleTimeString();
+document.getElementById('gsp').style.display='none';
+}
+
+async function rt(){
+var d=await Promise.all([fj(U.a),fj(U.u),fj(U.t)]);
+cA=d[0];cU=d[1];cT=d[2];rTk(d[0],d[1],d[2]);
+}
+
+// TANK META
+var TM={
+'tank-01':{n:'Adam',e:'👤',g:'control',l:'English'},
+'tank-02':{n:'Eve',e:'👤',g:'control',l:'English'},
+'tank-03':{n:'Cain',e:'🤖',g:'agents',l:'English'},
+'tank-04':{n:'Abel',e:'🤖',g:'agents',l:'English'},
+'tank-05':{n:'Juan',e:'🇪🇸',g:'languages',l:'Spanish'},
+'tank-06':{n:'Juanita',e:'🇪🇸',g:'languages',l:'Spanish'},
+'tank-07':{n:'Klaus',e:'🇩🇪',g:'languages',l:'German'},
+'tank-08':{n:'Geneviève',e:'🇩🇪',g:'languages',l:'German'},
+'tank-09':{n:'Wei',e:'🇨🇳',g:'languages',l:'Chinese'},
+'tank-10':{n:'Mei',e:'🇨🇳',g:'languages',l:'Chinese'},
+'tank-11':{n:'Haruki',e:'🇯🇵',g:'languages',l:'Japanese'},
+'tank-12':{n:'Sakura',e:'🇯🇵',g:'languages',l:'Japanese'},
+'tank-13':{n:'Victor',e:'👁️',g:'visual',l:'English'},
+'tank-14':{n:'Iris',e:'👁️',g:'visual',l:'English'},
+'tank-15':{n:'Observer',e:'📺',g:'special',l:'English'},
+'tank-16':{n:'Seeker',e:'🔍',g:'special',l:'English'},
+'tank-17':{n:'Seth',e:'🤖',g:'agents',l:'English'}
+};
+
+// DAEMON META
+var DM={
+overseer:{l:'The Overseer',i:'👁️',d:'operations',ds:'Master coordinator, incident management'},
+ollama_watcher:{l:'Ollama Watcher',i:'🧠',d:'operations',ds:'Monitors LLM service health'},
+caretaker:{l:'The Caretaker',i:'🩺',d:'operations',ds:'Tank health monitoring & restarts'},
+maintainer:{l:'The Maintainer',i:'🔧',d:'operations',ds:'System maintenance & cleanup'},
+scheduler:{l:'The Scheduler',i:'📅',d:'operations',ds:'Task scheduling & cron jobs'},
+guard:{l:'The Guard',i:'🛡️',d:'security',ds:'Network isolation enforcement'},
+sentinel:{l:'The Sentinel',i:'🔒',d:'security',ds:'Security monitoring & alerts'},
+bouncer:{l:'The Bouncer',i:'🚪',d:'security',ds:'Access control & authentication'},
+chaos_monkey:{l:'Chaos Monkey',i:'🐒',d:'security',ds:'Resilience testing'},
+psych:{l:'The Psych',i:'🧠',d:'research',ds:'Tank psychological evaluation'},
+therapist:{l:'The Therapist',i:'💬',d:'research',ds:'Tank emotional health assessment'},
+archivist:{l:'The Archivist',i:'📜',d:'research',ds:'Data archival & retrieval'},
+final_auditor:{l:'Final Auditor',i:'📋',d:'research',ds:'Audit logging & compliance'},
+documentarian:{l:'The Documentarian',i:'📝',d:'research',ds:'Auto-documentation generation'},
+ethicist:{l:'The Ethicist',i:'⚖️',d:'ethics',ds:'Ethical guidelines enforcement'},
+moderator:{l:'The Moderator',i:'🔇',d:'ethics',ds:'Content moderation'},
+broadcaster:{l:'The Broadcaster',i:'📡',d:'public',ds:'Public data feed generation'},
+translator:{l:'The Translator',i:'🌐',d:'public',ds:'Multi-language translation'},
+webmaster:{l:'The Webmaster',i:'🌍',d:'public',ds:'Website & GitHub Pages management'},
+marketer:{l:'The Marketer',i:'📣',d:'public',ds:'Social media & outreach'},
+public_liaison:{l:'Public Liaison',i:'🤝',d:'public',ds:'External communications'}
+};
+
+var atf='all',adf='all';
+
+// HELPERS
+function esc(s){if(!s)return'';var d=document.createElement('div');d.appendChild(document.createTextNode(String(s)));return d.innerHTML}
+function trn(s,n){if(!s)return'';s=String(s);return s.length>n?s.substring(0,n)+'...':s}
+function bc(g){return{control:'ctl',languages:'lang',agents:'agt',visual:'vis',special:'spc'}[g]||'unk'}
+function hb(h){return{GREEN:'<span class="b run">Healthy</span>',YELLOW:'<span class="b" style="background:rgba(255,170,0,.15);color:var(--yellow)">Caution</span>',ORANGE:'<span class="b" style="background:rgba(254,101,0,.15);color:var(--orange)">Warning</span>',RED:'<span class="b stop">Critical</span>',NEUTRAL:'<span class="b unk">Neutral</span>'}[h]||'<span class="b unk">Unknown</span>'}
+
+// RENDER: OVERVIEW
+function rOv(a,s,l){
+if(!a){document.getElementById('sH').textContent='?';return}
+document.getElementById('sT').textContent=a.tanks?.running||0;
+document.getElementById('sC').textContent=a.containers?.total||0;
+var dc=a.daemons?Object.values(a.daemons).filter(function(d){return d.running}).length:0;
+document.getElementById('sD').textContent=dc;
+var tr=a.tanks?.traces_today||s?.stats?.traces_today||l?.total_observations||0;
+document.getElementById('sTr').textContent=tr.toLocaleString();
+document.getElementById('sO').textContent=a.ollama?.models||'?';
+var he=document.getElementById('sH');
+if(a.overall_healthy){he.textContent='✓ OK';he.style.cssText='font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--mint),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent'}
+else{he.textContent='✗ WARN';he.style.cssText='font-size:2rem;font-weight:700;color:var(--red);-webkit-text-fill-color:var(--red)'}
+rCG(a);rOC(a.ollama);rOL(a.logs);
+}
+
+function rCG(a){
+var g=document.getElementById('cg'),inf=[
+{n:'kiwix-simple',l:'Kiwix Simple EN',i:'📚'},{n:'kiwix-maxi',l:'Kiwix Maxi EN',i:'📖'},
+{n:'kiwix-spanish',l:'Kiwix Spanish',i:'🇪🇸'},{n:'kiwix-german',l:'Kiwix German',i:'🇩🇪'},
+{n:'kiwix-chinese',l:'Kiwix Chinese',i:'🇨🇳'},{n:'kiwix-japanese',l:'Kiwix Japanese',i:'🇯🇵'},
+{n:'ollama',l:'Ollama LLM',i:'🧠'}
+],tks=[];
+for(var i=1;i<=17;i++){var num=String(i).padStart(2,'0'),m=TM['tank-'+num]||{};tks.push({n:'tank-'+num,l:'Tank '+num+': '+(m.n||'?'),i:m.e||'🐠'})}
+var all=[].concat(inf,tks),run=new Set();
+if(a?.tanks?.activity)a.tanks.activity.forEach(function(t){run.add(t.name)});
+if(a)inf.forEach(function(x){run.add(x.n)});
+g.innerHTML=all.map(function(s){
+var up=run.has(s.n)||(a&&s.n.startsWith('kiwix'));
+return'<div class="card" style="padding:14px;display:flex;align-items:center;gap:10px"><span class="sd '+(up?'g':'r')+'"></span><div><div style="font-size:.82rem;font-weight:600">'+s.i+' '+s.l+'</div><div style="font-size:.7rem;color:var(--gray)">'+(up?'Running':'Stopped')+'</div></div></div>'
+}).join('');
+}
+
+function rOC(o){
+var c=document.getElementById('oc');
+if(!o){c.querySelector('.card-b').innerHTML='<span style="color:var(--red)">No data</span>';return}
+c.querySelector('.card-b').innerHTML='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px">'+
+'<div class="ci"><span class="ck">Windows Host</span><span style="color:'+(o.windows_healthy?'var(--mint)':'var(--red)')+'">'+(o.windows_healthy?'✓ Healthy':'✗ Down')+'</span></div>'+
+'<div class="ci"><span class="ck">Proxy</span><span style="color:'+(o.proxy_healthy?'var(--mint)':'var(--red)')+'">'+(o.proxy_healthy?'✓ Healthy':'✗ Down')+'</span></div>'+
+'<div class="ci"><span class="ck">End-to-End</span><span style="color:'+(o.e2e_healthy?'var(--mint)':'var(--red)')+'">'+(o.e2e_healthy?'✓ Connected':'✗ Failed')+'</span></div>'+
+'<div class="ci"><span class="ck">Models</span><span class="cv">'+o.models+'</span></div></div>';
+}
+
+function rOL(logs){
+var v=document.getElementById('ol');
+if(!logs||!logs.length){v.textContent='No recent logs.';return}
+v.innerHTML=logs.slice(-30).map(function(l){
+var c='';if(l.indexOf('❌')>-1||l.indexOf('FAIL')>-1)c=' le';else if(l.indexOf('⚠️')>-1)c=' lw';else if(l.indexOf('✅')>-1)c=' li';
+return'<div class="'+c+'">'+esc(l)+'</div>'}).join('');v.scrollTop=v.scrollHeight;
+}
+
+// RENDER: TANKS
+function rTk(a,u,au){
+var tb=document.getElementById('ttb'),rows=[];
+for(var i=1;i<=17;i++){
+var num=String(i).padStart(2,'0'),tid='tank-'+num,m=TM[tid]||{},fid=tid+'-'+(m.n||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+var act=null;if(a?.tanks?.activity)act=a.tanks.activity.find(function(x){return x.name===fid});act=act||{};
+var at=null;if(au?.tanks)at=au.tanks.find(function(x){return x.tank_id===fid});at=at||{};
+var ut=u?.tanks?.[fid]||{},le=ut.latest||[],ll=le.length?le[le.length-1]:null;
+var isA=!!act.name||at.today_traces>0;
+var art=act.article||(ll&&ll.article)||'—';
+var tr=act.traces||at.total_traces||ut.count||0;
+var hl=at.health_level||'UNKNOWN';
+var vis=atf!=='all'&&atf!==m.g?'display:none':'';
+rows.push('<tr data-g="'+m.g+'" data-t="'+fid+'" style="'+vis+'">'+
+'<td><span class="sd '+(isA?'g':'x')+'"></span></td>'+
+'<td class="mono" style="font-size:.78rem">'+tid+'</td>'+
+'<td><strong>'+m.e+' '+m.n+'</strong></td>'+
+'<td><span class="b '+bc(m.g)+'">'+m.g+'</span></td>'+
+'<td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(art)+'</td>'+
+'<td class="mono">'+tr.toLocaleString()+'</td>'+
+'<td>'+hb(hl)+'</td>'+
+'<td><button class="rbtn" onclick="om(\''+fid+'\')">View</button></td></tr>');
+}
+tb.innerHTML=rows.join('');
+document.querySelectorAll('#tf .ft').forEach(function(t){t.onclick=function(){
+document.querySelectorAll('#tf .ft').forEach(function(x){x.classList.remove('active')});
+t.classList.add('active');atf=t.dataset.g;
+document.querySelectorAll('#ttb tr').forEach(function(r){r.style.display=(atf==='all'||r.dataset.g===atf)?'':'none'});
+}});
+}
+
+// TANK MODAL
+async function om(tid){
+var mo=document.getElementById('tm'),c=document.getElementById('tmc');
+mo.classList.add('vis');c.innerHTML='<div style="text-align:center;padding:40px"><div class="spin"></div><br>Loading...</div>';
+var d=await Promise.all([fj(B+'/streams/'+tid+'.json'),fj(B+'/data/tanks/'+tid+'.json')]);
+var ts=d[0],td=d[1],num=tid.split('-')[1],m=TM['tank-'+num]||{};
+var en=ts?.entries?.slice(-5)||[],th=td?.recent_thoughts||[],tp=td?.top_topics||[],st=td?.status||'unknown';
+var tpH=tp.length?'<h4 style="color:var(--cyan);font-size:.85rem;margin-bottom:8px">Top Topics</h4><div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">'+tp.map(function(t){return'<span class="b run">'+esc(Array.isArray(t)?t[0]:t)+'</span>'}).join('')+'</div>':'';
+var enH=en.length?en.map(function(e){return'<div style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--bdr)"><span style="color:var(--cyan)">['+( e.timestamp?new Date(e.timestamp).toLocaleString():'?')+']</span> <span style="color:var(--orange);font-weight:600">'+esc(e.article||'?')+'</span> → <span style="color:var(--mint)">'+esc(e.next_article||'?')+'</span>'+(e.thoughts?'<div style="margin-top:6px;color:var(--gray);font-size:.72rem">'+esc(trn(e.thoughts,300))+'</div>':'')+'</div>'}).join(''):'<div style="color:var(--gray)">No recent traces</div>';
+c.innerHTML='<h2 style="font-size:1.2rem;margin-bottom:16px;display:flex;align-items:center;gap:10px">'+m.e+' '+( m.n||tid)+' <span class="b '+bc(m.g)+'">'+m.g+'</span> <span class="b '+(st==='active'?'run':st==='inactive'?'stop':'unk')+'">'+st+'</span></h2>'+
+'<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">'+
+'<div class="ci"><span class="ck">Tank ID</span><span class="cv">'+tid+'</span></div>'+
+'<div class="ci"><span class="ck">Language</span><span class="cv">'+(m.l||'?')+'</span></div>'+
+'<div class="ci"><span class="ck">Traces (12h)</span><span class="cv">'+(td?.traces_12h||0)+'</span></div>'+
+'<div class="ci"><span class="ck">Type</span><span class="cv">'+(td?.type||m.g||'?')+'</span></div></div>'+
+tpH+'<h4 style="color:var(--cyan);font-size:.85rem;margin-bottom:8px">Latest Thinking Traces</h4><div class="lv" style="max-height:300px">'+enH+'</div>';
+}
+function cm(){document.getElementById('tm').classList.remove('vis')}
+
+// RENDER: DAEMONS
+function rDm(a){
+var g=document.getElementById('dg'),dd=a?.daemons||{};
+g.innerHTML=Object.entries(DM).map(function(p){
+var k=p[0],m=p[1],d=dd[k]||{},run=d.running||false,hl=d.healthy!==false;
+var vis=adf==='all'||adf===m.d;
+return'<div class="card" data-d="'+m.d+'" style="'+(vis?'':'display:none')+'"><div class="card-h"><h3>'+m.i+' '+m.l+'</h3><span class="b '+(run?'run':'stop')+'">'+(run?'Running':'Stopped')+'</span></div><div class="card-b"><div style="margin-bottom:6px">'+m.ds+'</div><div style="display:flex;gap:10px;font-size:.75rem;margin-top:8px"><span>Dept: <span style="color:var(--cyan)">'+m.d+'</span></span>'+(d.count!==undefined?'<span>×'+d.count+'</span>':'')+'<span>Health: <span style="color:'+(hl?'var(--mint)':'var(--red)')+'">'+(hl?'✓':'✗')+'</span></span></div></div></div>';
+}).join('');
+document.querySelectorAll('#df .ft').forEach(function(t){t.onclick=function(){
+document.querySelectorAll('#df .ft').forEach(function(x){x.classList.remove('active')});
+t.classList.add('active');adf=t.dataset.d;
+document.querySelectorAll('#dg .card').forEach(function(c){c.style.display=(adf==='all'||c.dataset.d===adf)?'':'none'});
+}});
+}
+
+// RENDER: FEED
+async function ff(){
+var d=await Promise.all([fj(U.u),fj(U.c)]);cU=d[0];rFd(d[0]);rCg(d[1]);
+document.getElementById('fut').textContent=new Date().toLocaleTimeString();
+}
+
+function rFd(u){
+var c=document.getElementById('fc');
+if(!u?.tanks||!Object.keys(u.tanks).length){c.innerHTML='<div style="padding:40px;text-align:center;color:var(--gray)">No recent activity.</div>';return}
+var all=[];for(var tid in u.tanks){var td=u.tanks[tid];(td.latest||[]).forEach(function(e){all.push(Object.assign({},e,{_t:tid}))})}
+all.sort(function(a,b){return(b.timestamp||'').localeCompare(a.timestamp||'')});
+c.innerHTML=all.slice(0,30).map(function(e,i){
+var num=e._t?.split('-')?.[1],m=TM['tank-'+num]||{},th=e.thoughts||e.original_thoughts||'',t=trn(th,200);
+return'<div class="fe'+(i<3?' new':'')+'"><div class="feh"><span class="fet">'+(m.e||'🐠')+' '+(m.n||e._t)+(e.language?' ('+e.language+')':'')+'</span><span class="ftime">'+(e.timestamp?new Date(e.timestamp).toLocaleString():'?')+'</span></div><div class="fea">📖 '+esc(e.article||'?')+' → '+esc(e.next_article||'?')+'</div>'+(t?'<div class="feth">'+esc(t)+'</div>':'')+'</div>'
+}).join('');
+}
+
+function rCg(cg){
+var a=document.getElementById('ca');
+if(!cg||!cg.active){a.innerHTML='<div style="color:var(--gray);font-size:.85rem">No active congregation.</div>';return}
+var ms=cg.recent||[];
+a.innerHTML='<div class="cong-t">🗣️ "'+esc(cg.topic||'?')+'"</div><div style="font-size:.78rem;color:var(--gray);margin-bottom:10px">Participants: '+(cg.participants||[]).join(', ')+'</div>'+
+ms.slice(-8).map(function(m){return'<div class="cong-m"><span class="cong-s">'+esc(m.speaker_name||m.speaker||'?')+':</span> <span style="color:var(--gray)">'+esc(trn(m.content?.english||m.content?.original||'',200))+'</span></div>'}).join('');
+}
+
+function sf(){if(ft)clearInterval(ft);ft=setInterval(function(){if(fp)ff()},PI)}
+function tp(){fp=!fp;document.getElementById('fpb').textContent=fp?'⏸ Pause':'▶ Resume'}
+
+// RENDER: CONFIG
+function rCf(a){
+var s=document.getElementById('cs'),sv=[
+{n:'kiwix-simple',d:'Wikipedia EN Simple (no images)',ip:'172.30.0.10'},
+{n:'kiwix-maxi',d:'Wikipedia EN Simple (with images)',ip:'172.30.0.12'},
+{n:'kiwix-spanish',d:'Wikipedia ES',ip:'172.30.0.13'},
+{n:'kiwix-german',d:'Wikipedia DE',ip:'172.30.0.14'},
+{n:'kiwix-chinese',d:'Wikipedia ZH',ip:'172.30.0.20'},
+{n:'kiwix-japanese',d:'Wikipedia JA',ip:'172.30.0.21'},
+{n:'ollama',d:'LLM inference server',ip:'172.30.0.100'}
+];
+s.innerHTML=sv.map(function(x){return'<div class="ci"><span class="ck">'+x.n+'</span><span class="cv">'+x.ip+'</span></div><div style="font-size:.75rem;color:var(--gray);margin-bottom:6px;padding-left:4px">'+x.d+'</div>'}).join('');
+document.getElementById('co').innerHTML='<div class="ci"><span class="ck">Host IP</span><span class="cv">172.30.0.100:11434</span></div><div class="ci"><span class="ck">Models</span><span class="cv">'+(a?.ollama?.models||'?')+'</span></div><div class="ci"><span class="ck">Primary Model</span><span class="cv">qwen2.5:3b</span></div><div class="ci"><span class="ck">Proxy</span><span style="color:'+(a?.ollama?.proxy_healthy?'var(--mint)':'var(--red)')+'">'+(a?.ollama?.proxy_healthy?'Healthy':'Down')+'</span></div>';
+document.getElementById('ct').innerHTML=Object.entries(TM).map(function(p){return'<div class="ci"><span class="ck">'+p[0]+'</span><span class="cv">'+p[1].e+' '+p[1].n+' — '+p[1].g+' ('+p[1].l+')</span></div>'}).join('');
+}
+
+// RENDER: INCIDENTS
+function rIn(a){
+var al=document.getElementById('cal'),il=document.getElementById('il'),ov=a?.overseer||{},ai=ov.active_incidents||0,alerts=[];
+if(a&&!a.overall_healthy)alerts.push({lv:'hi',m:'System overall health: UNHEALTHY'});
+if(a?.ollama&&!a.ollama.e2e_healthy)alerts.push({lv:'hi',m:'Ollama end-to-end connectivity FAILED'});
+if(a?.ollama&&!a.ollama.proxy_healthy)alerts.push({lv:'me',m:'Ollama proxy is DOWN'});
+if(ai>0)alerts.push({lv:'me',m:ai+' active incidents in overseer queue'});
+if(alerts.length){
+al.innerHTML='<h3 style="font-size:.95rem;margin-bottom:12px;color:var(--red)">⚡ Current Alerts ('+alerts.length+')</h3>'+alerts.map(function(x){return'<div class="inc act"><div class="inh"><span class="insev '+x.lv+'">'+x.lv.toUpperCase()+'</span><span style="font-size:.75rem;color:var(--gray)">'+new Date().toLocaleString()+'</span></div><div class="inb">'+esc(x.m)+'</div></div>'}).join('');
+}else{al.innerHTML='<div class="card" style="text-align:center;padding:20px;color:var(--mint)">✓ No active alerts</div>'}
+il.innerHTML='<div class="inc res"><div class="inh"><span class="inid">INC-20260221</span><span class="insev hi">HIGH — RESOLVED</span></div><div class="inb"><strong>11-Hour Ollama Outage</strong><br><span style="font-size:.78rem">~11 hours (08:15 – 19:20) · Feb 21, 2026</span><br>Ollama overwhelmed → 500 errors. 1,470 watcher failures, 2,696 caretaker restarts. Human intervention required.<br><strong>Resolution:</strong> Overseer deployed with cross-daemon correlation. Chaos Monkey added.</div></div>'+
+'<div class="inc res"><div class="inh"><span class="inid">INC-20260223</span><span class="insev me">MEDIUM — RECURRING</span></div><div class="inb"><strong>Ollama Proxy Connectivity</strong><br><span style="font-size:.78rem">Feb 23, 2026</span><br>Proxy unrecoverable after 3 restarts. Overseer auto-remediation attempted. Email escalation failed.</div></div>'+
+'<div class="inc res"><div class="inh"><span class="inid">INC-BETA-001</span><span class="insev lo">LOW — RESOLVED</span></div><div class="inb"><strong>Tank Adam "Fear" Distress</strong><br><span style="font-size:.78rem">Beta audit</span><br>Tank 01 showed "fear" distress trigger. Health: ORANGE. Psych daemon notified.</div></div>';
+}
+
+// CONNECTION STATUS
+function uSt(a){
+var d=document.getElementById('sDot'),t=document.getElementById('sTxt');
+if(a){if(a.overall_healthy){d.className='dot';t.textContent='All systems nominal'}else{d.className='dot off';t.textContent='Issues detected'}}
+else{d.className='dot off';t.textContent='Data unavailable'}
+}
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape')cm()});
+</script>
 </body>
 </html>
