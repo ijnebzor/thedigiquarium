@@ -7,92 +7,92 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "10:14",
+      "time": "10:28",
       "date": "2026-03-27",
-      "article": "Animal",
-      "thought": "Exploring Animal...",
-      "next": "Cryogenian",
+      "article": "Geology",
+      "thought": "Exploring Geology...",
+      "next": "Earth's crust",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "10:14",
+      "time": "10:24",
       "date": "2026-03-27",
-      "article": "Cryogenian",
-      "thought": "Exploring Cryogenian...",
-      "next": "Earth science",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "10:14",
-      "date": "2026-03-27",
-      "article": "Earth science",
-      "thought": "Exploring Earth science...",
+      "article": "Science",
+      "thought": "Exploring Science...",
       "next": "Geology",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "10:14",
+      "time": "10:20",
       "date": "2026-03-27",
-      "article": "Geology",
-      "thought": "Exploring Geology...",
-      "next": "Geometry",
+      "article": "Armenia",
+      "thought": "Exploring Armenia...",
+      "next": "geo:40.18333333333333,44.516666666666666",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "10:14",
+      "time": "10:19",
       "date": "2026-03-27",
-      "article": "Geometry",
-      "thought": "Exploring Geometry...",
-      "next": "English language",
+      "article": "Philosophy",
+      "thought": "Exploring Philosophy...",
+      "next": "Wisdom",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "10:14",
+      "time": "10:19",
       "date": "2026-03-27",
-      "article": "English language",
-      "thought": "Exploring English language...",
-      "next": "United States",
+      "article": "Wisdom",
+      "thought": "Exploring Wisdom...",
+      "next": "Western culture",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "10:14",
+      "time": "10:19",
       "date": "2026-03-27",
-      "article": "United States",
-      "thought": "Exploring United States...",
-      "next": "Americas",
+      "article": "Western culture",
+      "thought": "Exploring Western culture...",
+      "next": "Protestantism",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "10:14",
+      "time": "10:19",
       "date": "2026-03-27",
-      "article": "Americas",
-      "thought": "Exploring Americas...",
-      "next": "Western Hemisphere",
+      "article": "Protestantism",
+      "thought": "Exploring Protestantism...",
+      "next": "Europe",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "10:14",
+      "time": "10:19",
       "date": "2026-03-27",
-      "article": "Western Hemisphere",
-      "thought": "Exploring Western Hemisphere...",
-      "next": "Earth",
+      "article": "Europe",
+      "thought": "Exploring Europe...",
+      "next": "Eurasia",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "10:14",
+      "time": "10:19",
       "date": "2026-03-27",
-      "article": "Earth",
-      "thought": "Exploring Earth...",
-      "next": "The Blue Marble",
+      "article": "Eurasia",
+      "thought": "Exploring Eurasia...",
+      "next": "Asia",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "10:19",
+      "date": "2026-03-27",
+      "article": "Asia",
+      "thought": "Exploring Asia...",
+      "next": "Hemisphere",
       "thought_en": null,
       "language": "en"
     }
@@ -115,6 +115,10 @@
       "visits": 31
     },
     {
+      "topic": "Animal",
+      "visits": 29
+    },
+    {
       "topic": "Science",
       "visits": 29
     },
@@ -124,10 +128,6 @@
     },
     {
       "topic": "Physics",
-      "visits": 28
-    },
-    {
-      "topic": "Taxonomy (biology)",
       "visits": 28
     }
   ]
