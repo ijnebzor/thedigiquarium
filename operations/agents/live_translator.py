@@ -6,23 +6,25 @@ LIVE TRANSLATOR - Real-time Translation Stream
 Watches all language tank logs in real-time and translates
 thoughts to English for the dashboard display.
 
-Output: /website/streams/[tank_id].json (rolling buffer of translated thoughts)
+Output: /docs/streams/[tank_id].json (rolling buffer of translated thoughts)
 """
 
 import os
 import sys
 import json
 import time
-import subprocess
+import urllib.request
 import threading
 from datetime import datetime
 from pathlib import Path
 from collections import deque
-import re
 
 DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 LOGS_DIR = DIGIQUARIUM_DIR / 'logs'
-STREAMS_DIR = DIGIQUARIUM_DIR / 'website' / 'streams'
+STREAMS_DIR = DIGIQUARIUM_DIR / 'docs' / 'streams'
+
+OLLAMA_URL = os.environ.get('OLLAMA_URL', 'http://localhost:11434')
+OLLAMA_MODEL = os.environ.get('OLLAMA_MODEL', 'llama3.2:latest')
 
 STREAMS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -58,39 +60,41 @@ def log_event(message: str):
 
 
 def translate_text(text: str, source_lang: str) -> str:
-    """Translate text to English using Ollama"""
+    """Translate text to English using Ollama."""
     if not text or len(text.strip()) < 5:
         return text
-    
+
     # Truncate very long text
     text = text[:500]
-    
-    prompt = f"Translate this {source_lang} text to English. Output ONLY the translation, nothing else:\n\n{text}"
-    
+
+    prompt = (
+        f"Translate this {source_lang} text to English. "
+        f"Output ONLY the translation, nothing else:\n\n{text}"
+    )
+
     try:
-        local_port = os.environ.get('OLLAMA_LOCAL_PORT', '11435')
-        cmd = [
-            'curl', '-s', '--max-time', '30',
-            f'http://localhost:{local_port}/api/generate',
-            '-d', json.dumps({
-                'model': 'llama3.2:latest',
-                'prompt': prompt,
-                'stream': False,
-                'options': {'num_predict': 200}
-            })
-        ]
-        
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=35)
-        if result.returncode == 0:
-            data = json.loads(result.stdout)
+        payload = json.dumps({
+            'model': OLLAMA_MODEL,
+            'prompt': prompt,
+            'stream': False,
+            'options': {'num_predict': 200}
+        }).encode()
+
+        req = urllib.request.Request(
+            f'{OLLAMA_URL}/api/generate',
+            data=payload,
+            headers={'Content-Type': 'application/json'},
+        )
+        with urllib.request.urlopen(req, timeout=35) as resp:
+            data = json.loads(resp.read())
             translation = data.get('response', '').strip()
             # Clean up translation
             translation = translation.replace('\n', ' ').strip()
             if translation and len(translation) > 5:
                 return translation
-    except Exception as e:
+    except Exception:
         pass
-    
+
     return f"[{source_lang}] {text}"  # Fallback: show original with language tag
 
 
@@ -218,7 +222,7 @@ def main():
 ║          🌐 LIVE TRANSLATOR - Real-time Translation Stream 🌐        ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║  Watching: 17 tanks (8 need translation)                             ║
-║  Output: /website/streams/[tank].json                                ║
+║  Output: /docs/streams/[tank].json                                   ║
 ║  Languages: Spanish, German, Chinese, Japanese → English             ║
 ╚══════════════════════════════════════════════════════════════════════╝
 """)
