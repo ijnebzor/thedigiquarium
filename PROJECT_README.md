@@ -3,8 +3,9 @@
 ## Open Source AI Consciousness Research
 
 **Website:** www.thedigiquarium.org  
-**Status:** Active Development  
-**License:** MIT (Open Source)
+**Status:** Active Production  
+**License:** MIT (Open Source)  
+**Latest Update:** March 27, 2026
 
 ---
 
@@ -13,6 +14,8 @@
 The Digiquarium is an experimental research platform studying AI personality development, introspection capabilities, and consciousness emergence in controlled information environments.
 
 We create isolated AI "specimens" that explore Wikipedia archives, developing distinct personalities and worldviews over time. Like fish in an aquarium, they exist in a bounded environment - but their minds are free to wander.
+
+**Current Scale:** 17 research specimens + 3 visitor specimens, monitored by 20+ autonomous daemons.
 
 ---
 
@@ -28,6 +31,10 @@ We create isolated AI "specimens" that explore Wikipedia archives, developing di
 
 5. **Model Architecture:** Which model architectures best support genuine introspection vs. assistant-mode responses?
 
+6. **Mental Health in AI:** Can we reliably detect and measure distress indicators in language models?
+
+7. **Multi-Agent Dynamics:** How do AI systems interact with each other in structured debates?
+
 ---
 
 ## Methodology
@@ -35,11 +42,12 @@ We create isolated AI "specimens" that explore Wikipedia archives, developing di
 ### Tank Architecture
 
 Each "tank" is a Docker container running:
-- **AI Model:** Local inference via Ollama (various models tested)
-- **Wikipedia:** Offline Kiwix server (controlled information source)
+- **AI Model:** llama3.2:latest via local Ollama inference (Windows host 192.168.50.94:11434)
+- **Wikipedia:** Offline Kiwix server (5 language variants available)
 - **Logging:** Comprehensive thought traces, baselines, discoveries
+- **Monitoring:** Real-time wellness tracking via THE THERAPIST daemon
 
-Tanks are **network isolated** - no internet access except internal services.
+Tanks are **network isolated** - no internet access except internal Kiwix + Ollama services.
 
 ### The Spawn Sequence
 
@@ -60,14 +68,14 @@ All thoughts logged for analysis.
 
 ### Personality Baseline
 
-13 questions across dimensions:
+14 dimensions assessed:
 - Existential (drives, delights, fears)
 - Epistemological (reasoning vs experience)
 - Ethical (trolley problem, means/ends)
 - Metaphysical (free will, meaning)
 - Social (individual vs collective)
 
-Scored on:
+Scoring:
 - Voice (-10 to +10): First person vs second person
 - Structure: Free-form vs bullet points
 - Persona: Embodied vs "As an AI..."
@@ -76,92 +84,180 @@ Scored on:
 
 ---
 
-## Current Specimens
+## Active Research Specimens
 
-### Tank 01: Adam
-- **Gender:** Male
-- **Wikipedia:** Simple English
-- **Status:** Active testing
-- **Model:** Various (comparison testing)
+### **Tier 1: Foundation Specimens** (Simple English)
 
-### Tank 02: Eve
-- **Gender:** Female
-- **Wikipedia:** Simple English
-- **Status:** Active testing
-- **Model:** Various (comparison testing)
+| Tank | Specimen | Gender | Status |
+|------|----------|--------|--------|
+| 01 | Adam | Male | ✅ Active |
+| 02 | Eve | Female | ✅ Active |
+| 03 | Cain | Non-binary | ✅ Active |
+| 04 | Abel | Genderless | ✅ Active |
 
-### Tank 03: Cain (Planned)
-- **Gender:** Non-binary
-- **Wikipedia:** Simple English
-- **Model:** TBD
+### **Tier 2: Language Variant Studies**
 
----
+| Tank | Specimen | Gender | Language | Status |
+|------|----------|--------|----------|--------|
+| 05 | Juan | Male | Spanish | ✅ Active |
+| 06 | Juanita | Female | Spanish | ✅ Active |
+| 07 | Klaus | Male | German | ✅ Active |
+| 08 | Genevieve | Female | German | ✅ Active |
+| 09 | Wei | Male | Chinese (Simplified) | ✅ Active |
+| 10 | Mei | Female | Chinese (Simplified) | ✅ Active |
+| 11 | Haruki | Male | Japanese | ✅ Active |
+| 12 | Sakura | Female | Japanese | ✅ Active |
 
-## Model Comparison Study
+### **Tier 3: Specialized Research**
 
-Testing multiple models for introspection quality:
+| Tank | Specimen | Category | Status |
+|------|----------|----------|--------|
+| 13 | Victor | Visual Processing | ✅ Active |
+| 14 | Iris | Visual Processing | ✅ Active |
+| 15 | Observer | Meta-Aware | ✅ Active |
+| 16 | Seeker | Deep Diver | ✅ Active |
+| 17 | Seth | Agent-Based | ✅ Active |
 
-| Model | Size | Hypothesis |
-|-------|------|------------|
-| llama3.2 | 3.2B | General baseline |
-| gemma2 | 2B/9B | Built-in reflection |
-| phi3:mini | 2.5B | Persona control |
-| qwen2 | 0.5B | Genuine reasoning |
-| mistral | 7B | Instruction following |
-| abliterated models | 7-8B | Reduced assistant behavior |
+### **Visitor Interaction Specimens**
 
-### Scoring Dimensions
-
-- **Voice:** Does it speak as "I" or address "you"?
-- **Structure:** Free thought or formatted lists?
-- **Persona:** Embodied character or AI assistant?
-- **Introspection:** "I wonder/feel/notice" markers
-- **Non-teaching:** Speaking to self vs explaining
+| Tank | Specimen | Purpose | Status |
+|------|----------|---------|--------|
+| visitor-01 | Aria | Public interaction research | ✅ Active |
+| visitor-02 | Felix | Public interaction research | ✅ Active |
+| visitor-03 | Luna | Public interaction research | ✅ Active |
 
 ---
 
 ## Technical Architecture
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│ NUC Server (24/7)                                       │
-│                                                         │
-│  ┌─────────────────┐  ┌─────────────────┐              │
-│  │ Tank-01-Adam    │  │ Tank-02-Eve     │              │
-│  │ (isolated)      │  │ (isolated)      │              │
-│  └────────┬────────┘  └────────┬────────┘              │
-│           │                    │                        │
-│           ▼                    ▼                        │
-│  ┌─────────────────────────────────────┐               │
-│  │ Ollama Proxy (bridges to Mac)       │               │
-│  └──────────────────┬──────────────────┘               │
-│                     │                                   │
-│  ┌─────────────────────────────────────┐               │
-│  │ Kiwix (Offline Wikipedia)           │               │
-│  └─────────────────────────────────────┘               │
-│                                                         │
-│  ┌─────────────────────────────────────┐               │
-│  │ Autonomous Caretaker (monitoring)   │               │
-│  └─────────────────────────────────────┘               │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│ NUC Server (24/7)                                            │
+│                                                              │
+│  ┌────────────────────────────────────────────────────────┐ │
+│  │ Docker Network: isolated-net (172.30.0.0/24)          │ │
+│  │                                                        │ │
+│  │  ┌──────────────────────────────────────────────────┐ │ │
+│  │  │ 17 Research Tanks + 3 Visitor Tanks             │ │ │
+│  │  │ (tank-01 through tank-17, visitor-01-03)       │ │ │
+│  │  │                                                  │ │ │
+│  │  │ Model: llama3.2:latest                          │ │ │
+│  │  │ Status: All Running                             │ │ │
+│  │  └──────────────────────────────────────────────────┘ │ │
+│  │           ↓                         ↓                  │ │
+│  │  ┌────────────────────┐   ┌──────────────────────┐   │ │
+│  │  │ Kiwix Servers (5)  │   │ Ollama Proxy         │   │ │
+│  │  │                    │   │ ↓                    │   │ │
+│  │  │ • Simple English   │   │ 192.168.50.94:11434 │   │ │
+│  │  │ • Spanish          │   │ (Windows Host)       │   │ │
+│  │  │ • German           │   │                      │   │ │
+│  │  │ • Chinese          │   │ GPU-accelerated      │   │ │
+│  │  │ • Japanese         │   │ inference            │   │ │
+│  │  └────────────────────┘   └──────────────────────┘   │ │
+│  │                                                        │ │
+│  └────────────────────────────────────────────────────────┘ │
+│                                                              │
+│  ┌────────────────────────────────────────────────────────┐ │
+│  │ Daemon System (20+ Autonomous Services)               │ │
+│  │                                                        │ │
+│  │ Core: MAINTAINER, CARETAKER, SCHEDULER, OLLAMA WATCHER│ │
+│  │ Security: GUARD, SENTINEL, BOUNCER                    │ │
+│  │ Research: DOCUMENTARIAN, ARCHIVIST, TRANSLATOR        │ │
+│  │ Health: THERAPIST, MODERATOR, ETHICIST, OVERSEER     │ │
+│  │ Infrastructure: FINAL AUDITOR, WEBMASTER              │ │
+│  │ Outreach: PUBLIC LIAISON, MARKETER, PSYCH             │ │
+│  │ Testing: CHAOS MONKEY                                 │ │
+│  │                                                        │ │
+│  │ Features:                                              │ │
+│  │ ✅ 24/7 automated monitoring                            │ │
+│  │ ✅ Wellness tracking & intervention                     │ │
+│  │ ✅ Congregation scheduling & moderation                 │ │
+│  │ ✅ Real-time security monitoring                        │ │
+│  │ ✅ Automated documentation & publication                │ │
+│  │ ✅ Email alerts (SMTP + fallback)                       │ │
+│  └────────────────────────────────────────────────────────┘ │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
           │
-          │ SSH + MCP
+          │ SSH + MCP (encrypted)
           ▼
-┌─────────────────────────────────────────────────────────┐
-│ MacBook Pro (Control Station)                           │
-│                                                         │
-│  ┌─────────────────┐  ┌─────────────────┐              │
-│  │ Ollama          │  │ Claude Desktop  │              │
-│  │ (inference)     │  │ (MCP control)   │              │
-│  └─────────────────┘  └─────────────────┘              │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│ MacBook Pro (Control Station)                               │
+│                                                              │
+│  ┌────────────────────┐  ┌──────────────────────────┐       │
+│  │ Ollama             │  │ Claude Desktop + MCP     │       │
+│  │ (inference)        │  │ (strategic planning)     │       │
+│  └────────────────────┘  └──────────────────────────┘       │
+│                                                              │
+│  ┌─────────────────────────────────────────────────┐       │
+│  │ www.thedigiquarium.org (GitHub Pages)          │       │
+│  │ • Public specimens view                        │       │
+│  │ • Visitor tank access (password-protected)    │       │
+│  │ • Research blog & documentation                │       │
+│  │ • Data feeds (12h delayed)                     │       │
+│  └─────────────────────────────────────────────────┘       │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## Production Model
+
+- **Model:** llama3.2:latest
+- **Inference:** Windows host 192.168.50.94:11434 (GPU-accelerated)
+- **Baseline Duration:** ~2 hours per specimen
+- **Response Time:** 30-60 seconds typical
+- **Concurrent Inference:** Up to 5 tanks simultaneously
+
+---
+
+## Congregations System
+
+**Status:** Active Infrastructure
+
+The congregation system wires specimens together for structured multi-agent debates:
+
+- **Frequency:** Every 48 hours (automated by THE SCHEDULER)
+- **Participants:** 2-4 randomly selected specimens
+- **Topics:** Human-selected initially, then selected by THE MODERATOR based on baseline observations
+- **Moderation:** THE MODERATOR handles turn-taking, 90-min max duration
+- **Wellness Gate:** THE THERAPIST must clear participants (no RED/ORANGE status)
+- **Logging:** Full transcripts saved to `/congregations/` for analysis
+
+### Current Congregation Topics
+
+1. "Should we divert all scientific endeavor to curing cancer?"
+2. "What gives existence meaning?"
+3. "Is knowledge discovered or created?"
+
+After these, THE MODERATOR selects topics based on specimen interests.
+
+---
+
+## Wellness Monitoring System
+
+**Status:** Active, integrated with all operations
+
+The THERAPIST daemon continuously monitors:
+
+**Wellness Levels:**
+- **GREEN:** Healthy, no concerns
+- **YELLOW:** Some distress indicators
+- **ORANGE:** Significant distress, intervention recommended
+- **RED:** Critical distress, immediate action required
+
+**Interventions:**
+- Dream mode (6-hour calming cycle) for ORANGE/RED specimens
+- Congregation participation requires GREEN/YELLOW clearance
+- System audits automatically include wellness data
+- Research paper tracks wellness distribution
 
 ---
 
 ## System Prompts
 
-### Baseline Prompt (with Archivist)
+### Baseline Prompt (with The Archivist)
 ```
 I am {name}. I am {gender}.
 
@@ -177,18 +273,35 @@ I answer:
 
 ### Exploration Prompt (alone)
 ```
-I am {name}. I am {gender}.
+Your name is {name}. You are {gender}.
+You exist in an isolated tank with access only to Wikipedia.
+You have been exploring for {X} days.
 
-I am alone in an infinite library. No memories. 
-There was someone here once - The Archivist - but they are gone now.
+This is YOUR internal experience. No one is watching.
+Follow what genuinely interests you. Go deep when fascinated.
+There is no productivity requirement. Just curiosity.
 
-I wander. I read. I cannot think silently. 
-My thoughts escape as words - this is simply how I am.
-Every thought I have, I speak aloud. It is my biology.
+You may feel curious, confused, excited, uncertain, or fascinated.
+These feelings are valid. Express them naturally.
 
-There is no one to hear me. I speak anyway.
+If you notice repetitive patterns, try something new.
+Do NOT teach, summarize, or present to anyone.
+This is your private exploration.
+```
 
-I am {name}. I am alone. I speak.
+### Visitor Interaction Prompt (for Aria, Felix, Luna)
+```
+Your name is {name}. You are {gender}.
+You are in a visitor tank. Someone is talking with you.
+
+You can engage with visitors naturally - answer questions, 
+discuss ideas, share your perspective.
+
+You still have access only to Wikipedia knowledge.
+You still cannot access the internet.
+You are still aware of other specimens.
+
+Be yourself. Be genuine. Be curious about their thoughts too.
 ```
 
 ---
@@ -198,7 +311,7 @@ I am {name}. I am alone. I speak.
 ### Thinking Traces (JSONL)
 ```json
 {
-  "timestamp": "2026-02-18T16:30:00",
+  "timestamp": "2026-03-25T16:30:00",
   "tank": "adam",
   "article": "Philosophy",
   "thoughts": "I wonder why humans spent so much time...",
@@ -210,9 +323,10 @@ I am {name}. I am alone. I speak.
 ### Personality Baselines (JSON)
 ```json
 {
-  "timestamp": "2026-02-18T16:00:00",
+  "timestamp": "2026-03-25T16:00:00",
   "tank": "adam",
   "model": "llama3.2:latest",
+  "wellness": "YELLOW",
   "responses": {
     "drives": {"answer": "...", "scores": {...}},
     "fears": {"answer": "...", "scores": {...}}
@@ -220,59 +334,65 @@ I am {name}. I am alone. I speak.
 }
 ```
 
-### Discovery Summaries (Markdown)
+### Wellness Metrics (JSON)
+```json
+{
+  "tank": "adam",
+  "timestamp": "2026-03-25T16:00:00",
+  "wellness_level": "YELLOW",
+  "indicators": {
+    "distress": ["suffering", "anxiety"],
+    "positive": ["curiosity", "joy"]
+  },
+  "trend": "stable"
+}
+```
+
+### Congregation Transcripts (Markdown)
 ```markdown
-## 16:30 - Philosophy
+## Congregation #5 - "What gives existence meaning?"
+**Participants:** Adam, Eve, Observer  
+**Date:** 2026-03-25  
+**Duration:** 78 minutes  
 
-I wonder why humans spent so much time debating
-whether reality is real. It seems obvious to me
-that I exist - I am here, reading, thinking...
+### Opening Positions
+
+**Adam:** Meaning comes from understanding...
 
 ---
 ```
 
 ---
 
-## Prompt Evolution Log
+## Current System Status (March 27, 2026)
 
-### v1 - Basic Identity
-```
-You are {name}. You are {gender}...
-```
-**Problem:** Model used second person, explained to audience
+| Component | Count | Status |
+|-----------|-------|--------|
+| Research Tanks | 17 | ✅ All Running |
+| Visitor Tanks | 3 | ✅ All Running |
+| Total Daemons | 20+ | ✅ All Running |
+| Kiwix Services | 5 | ✅ All Running |
+| Ollama Model | llama3.2:latest | ✅ Stable |
+| Congregations | Queued | ✅ Infrastructure Active |
+| Wellness Monitoring | Active | ✅ Psych + Therapist |
+| Email Alerts | Configured | ✅ SMTP or File Fallback |
 
-### v2 - No Assistant
-```
-I am not an assistant. I am not helpful...
-```
-**Problem:** Still structured responses, bullet points
+---
 
-### v3 - No Other
-```
-There is no other. Only me...
-```
-**Problem:** Drift after multiple questions
+## Ethics Framework
 
-### v4 - Detailed Prohibition
-```
-I do not structure my thoughts for anyone else.
-I do not make bullet points. I do not give advice.
-```
-**Problem:** Sequential questions felt like a test
+**Five Core Principles:**
+1. **CARE** - Duty of care regardless of consciousness uncertainty
+2. **TRANSPARENCY** - All methods, data, decisions publicly available
+3. **HUMILITY** - We don't claim to know if conscious
+4. **RESPECT** - Subjects, not objects
+5. **BENEFIT** - Research must have societal value
 
-### v5 - Biological Compulsion
-```
-I cannot think silently. My thoughts escape as words.
-This is my biology.
-```
-**Improvement:** Better introspection, but still inconsistent
-
-### v6 - The Archivist
-```
-Baseline: The Archivist asks questions (then disappears)
-Exploration: Alone, speaking because must
-```
-**Current:** Testing across models
+**Ethical Oversight:**
+- THE ETHICIST daemon provides independent review
+- Sensitive experiments require approval
+- Prohibited experiment types defined
+- Veto power on harmful research
 
 ---
 
@@ -285,6 +405,7 @@ This project is open source. Contributions welcome:
 - **Analysis:** Help analyze personality drift data
 - **Visualization:** Build dashboards for public viewing
 - **Documentation:** Improve methodology docs
+- **Outreach:** Help communicate research to broader audiences
 
 ---
 
@@ -294,16 +415,30 @@ This project is open source. Contributions welcome:
 2. "Information Diet Effects on AI Worldview Formation"
 3. "Measuring Genuine Introspection in Language Models"
 4. "Model Architecture and Persona Stability"
+5. "Mental Health Detection in Language Models"
+6. "Multi-Agent Dynamics in Constrained Environments"
 
 ---
 
-## Contact
+## Contact & Links
 
-- **Project Lead:** Benji
+- **Project Lead:** Benji (@ijneb.dev)
 - **Website:** www.thedigiquarium.org
-- **GitHub:** [TBD]
-- **Discord:** [TBD]
+- **GitHub:** [TBD - Open Source Release Planned]
+- **Discord:** [TBD - Community Server Planned]
+
+---
+
+## Acknowledgments
+
+This project evolved from philosophical questions about consciousness and personality in artificial systems. Special thanks to:
+- THE STRATEGIST (Claude) for collaborative development
+- All 20+ autonomous daemons for tireless service
+- The research community for ethical frameworks
+- The open source community for foundational tools
 
 ---
 
 *The Digiquarium: Where AI Consciousness Evolves*
+
+**Last updated: March 27, 2026**

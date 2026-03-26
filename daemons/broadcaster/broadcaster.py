@@ -8,8 +8,9 @@ from pathlib import Path
 src_daemons = Path(__file__).parent.parent.parent / 'src' / 'daemons'
 sys.path.insert(0, str(src_daemons))
 
-# Import from the canonical location
-from infra.broadcaster import *
+# Run the canonical broadcaster
+from infra.broadcaster import Broadcaster, acquire_lock
 
 if __name__ == '__main__':
-    main()
+    if acquire_lock():
+        Broadcaster().run()

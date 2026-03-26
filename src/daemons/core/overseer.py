@@ -16,6 +16,7 @@ Responsibilities:
 5. INCIDENT MANAGEMENT - Track, document, learn
 
 "We built specialists without a generalist. THE OVERSEER fixes that."
+
 """
 
 import os
@@ -168,6 +169,51 @@ class TheOverseer:
     # SECTION 2: SYSTEM-WIDE HEALTH CHECK
     # =========================================================================
     
+    def check_wellness_status(self) -> dict:
+        """Check wellness status from therapist's latest report."""
+        result = {
+            'healthy': True,
+            'tanks': {},
+            'summary': {'GREEN': 0, 'YELLOW': 0, 'ORANGE': 0, 'RED': 0, 'UNKNOWN': 0},
+            'issues': []
+        }
+        
+        # Read therapist's latest report
+        report_file = DIGIQUARIUM_DIR / 'src' / 'daemons' / 'ethics' / 'latest_report.json'
+        if not report_file.exists():
+            result['issues'].append('Therapist report not available')
+            return result
+        
+        try:
+            with open(report_file, 'r') as f:
+                report = json.load(f)
+        except Exception as e:
+            result['issues'].append(f'Failed to read therapist report: {e}')
+            return result
+        
+        assessments = report.get('assessments', [])
+        
+        for assessment in assessments:
+            tank = assessment.get('tank', 'unknown')
+            level = assessment.get('level', 'UNKNOWN')
+            score = assessment.get('score', 0)
+            
+            result['tanks'][tank] = {
+                'level': level,
+                'score': score,
+                'message': assessment.get('message', '')
+            }
+            
+            if level in result['summary']:
+                result['summary'][level] += 1
+            
+            # Flag RED tanks as issues
+            if level == 'RED':
+                result['healthy'] = False
+                result['issues'].append(f'{tank} at RED wellness level (score: {score})')
+        
+        return result
+    
     def full_system_audit(self) -> dict:
         """Comprehensive system health check"""
         self.log('AUDIT', 'Starting full system audit')
@@ -179,6 +225,7 @@ class TheOverseer:
             'daemons': self.check_daemon_health(),
             'tanks': self.check_tank_health(),
             'network': self.check_network_health(),
+            'wellness': self.check_wellness_status(),
             'issues': []
         }
         
@@ -265,7 +312,7 @@ class TheOverseer:
         
         # End-to-end test
         try:
-            e2e = subprocess.run([
+            e2e = subprocess.run([\
                 'docker', 'exec', 'tank-01-adam', 'python3', '-c',
                 'import urllib.request; urllib.request.urlopen("http://digiquarium-ollama:11434/api/tags", timeout=10)'
             ], capture_output=True, timeout=30)
@@ -489,10 +536,9 @@ class TheOverseer:
         """Send email to human operator"""
         self.log('ESCALATE', f'Escalating {incident_id} to human operator')
         
-        subject = f"🚨 DIGIQUARIUM ALERT: {issue.get('message', 'Unknown issue')[:50]}"
+        subject = f"DIGIQUARIUM ALERT: {issue.get('message', 'Unknown issue')[:50]}"
         
-        body = f"""
-DIGIQUARIUM INCIDENT ALERT
+        body = f"""DIGIQUARIUM INCIDENT ALERT
 ==========================
 
 Incident ID: {incident_id}

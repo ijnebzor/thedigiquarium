@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Shared utilities for all daemons"""
-import os, sys, json, time, subprocess
+import os, sys, json, time, subprocess, smtplib
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 DAEMONS_DIR = DIGIQUARIUM_DIR / 'daemons'
@@ -51,10 +53,69 @@ def run_command(cmd, timeout=60):
     except: return -1, '', 'error'
 
 def send_email_alert(subject, body, to=OWNER_EMAIL):
+    """
+    Send email alert via SMTP if configured, otherwise log to file.
+    
+    Args:
+        subject: Email subject line
+        body: Email body text
+        to: Recipient email address (default: benjiz@gmail.com)
+    
+    Returns:
+        True if email was sent successfully, False otherwise
+    """
+    log = DaemonLogger('email_alert')
+    
+    # Get SMTP configuration from environment variables
+    smtp_host = os.environ.get('SMTP_HOST')
+    smtp_user = os.environ.get('SMTP_USER')
+    smtp_password = os.environ.get('SMTP_PASSWORD')
+    smtp_port = int(os.environ.get('SMTP_PORT', '587'))
+    smtp_from = os.environ.get('SMTP_FROM', smtp_user)
+    
+    # Check if SMTP is configured
+    if smtp_host and smtp_user and smtp_password:
+        try:
+            # Send email via SMTP with STARTTLS
+            server = smtplib.SMTP(smtp_host, smtp_port)
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            
+            # Create email message
+            message = MIMEMultipart()
+            message['From'] = smtp_from if smtp_from else smtp_user
+            message['To'] = to
+            message['Subject'] = subject
+            message.attach(MIMEText(body, 'plain'))
+            
+            # Send email
+            server.send_message(message)
+            server.quit()
+            
+            log.success(f"Email sent to {to}: {subject}")
+            
+            # Also log to file as backup record
+            _log_email_to_file(to, subject, body)
+            
+            return True
+            
+        except Exception as e:
+            # SMTP sending failed, log error and fall back to file logging
+            log.error(f"SMTP email send failed: {str(e)}")
+            _log_email_to_file(to, subject, body)
+            return False
+    else:
+        # SMTP not configured, log warning and fall back to file logging
+        warning_msg = f"EMAIL ALERT NOT SENT - SMTP not configured. Set SMTP_HOST, SMTP_USER, SMTP_PASSWORD env vars. Subject: {subject}"
+        log.warn(warning_msg)
+        _log_email_to_file(to, subject, body)
+        return False
+
+def _log_email_to_file(to, subject, body):
+    """Write email alert to file as backup record"""
     log_file = DAEMON_LOGS_DIR / 'email_alerts.log'
     with open(log_file, 'a') as f:
         f.write(f"\n{'='*60}\nTO: {to}\nSUBJECT: {subject}\nTIME: {datetime.now()}\n{body}\n{'='*60}\n")
-    return True
 
 def write_pid_file(name, pid=None):
     if pid is None: pid = os.getpid()

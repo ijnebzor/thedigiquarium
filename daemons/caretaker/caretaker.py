@@ -8,8 +8,13 @@ from pathlib import Path
 src_daemons = Path(__file__).parent.parent.parent / 'src' / 'daemons'
 sys.path.insert(0, str(src_daemons))
 
-# Import from the canonical location
-from core.caretaker import *
+# Run the canonical caretaker
+from core.caretaker import acquire_lock, main, run_maintenance_cycle
 
 if __name__ == '__main__':
-    main()
+    if not acquire_lock():
+        sys.exit(1)
+    if len(sys.argv) > 1 and sys.argv[1] == 'once':
+        run_maintenance_cycle()
+    else:
+        main()

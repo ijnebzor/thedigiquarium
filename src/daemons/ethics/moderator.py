@@ -33,7 +33,7 @@ import signal
 import fcntl
 import time
 import traceback
-import requests
+import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
@@ -177,8 +177,11 @@ class Moderator:
 
         for participant in participants:
             found = False
+            # Extract short tank id (tank-01 from tank-01-adam)
+            tank_short = participant.split('-')[0] + '-' + participant.split('-')[1] if '-' in participant else participant
+            
             for key in scores:
-                if participant.lower() in key.lower():
+                if tank_short.lower() in key.lower():
                     data = scores[key]
                     level = data.get("level", "UNKNOWN")
 
@@ -212,7 +215,7 @@ class Moderator:
         return True, f"{participant} cleared (adequate rest)"
 
     def generate_response(self, specimen_name: str, context: str, topic: str) -> str:
-        """Generate a response from a specimen"""
+        """Generate a response from a specimen via docker exec"""
         prompt = f"""You are {specimen_name}, participating in a congregation (structured debate) about: "{topic}"
 
 Previous discussion:
@@ -223,26 +226,31 @@ Keep your response focused and under 200 words. Be respectful but don't shy away
 
 Your response:"""
 
+        # specimen_name is a tank container ID like "tank-01-adam"
+        escaped_prompt = prompt.replace('"', '\\"').replace('\n', '\\n').replace("'", "\\'")
+        
+        python_code = f'''
+import urllib.request, json
+data = json.dumps({{"model": "llama3.2:latest", "prompt": "{escaped_prompt}", "stream": False, "options": {{"num_predict": {RESPONSE_MAX_TOKENS}}}}}).encode()
+req = urllib.request.Request("http://digiquarium-ollama:11434/api/generate", data=data, headers={{"Content-Type": "application/json"}})
+try:
+    with urllib.request.urlopen(req, timeout={TURN_TIMEOUT_SECONDS}) as r:
+        print(json.loads(r.read()).get("response", ""))
+except Exception as e:
+    print(f"[Error: {{e}}]")
+'''
+        
         try:
-            response = requests.post(
-                OLLAMA_URL,
-                json={
-                    "model": MODEL,
-                    "prompt": prompt,
-                    "stream": False,
-                    "options": {
-                        "num_predict": RESPONSE_MAX_TOKENS,
-                        "temperature": 0.7
-                    }
-                },
-                timeout=TURN_TIMEOUT_SECONDS
+            result = subprocess.run(
+                ['docker', 'exec', specimen_name, 'python3', '-c', python_code],
+                capture_output=True, text=True, timeout=TURN_TIMEOUT_SECONDS + 30
             )
-
-            if response.status_code != 200:
-                raise Exception(f"Ollama returned status {response.status_code}")
-
-            return response.json().get("response", "").strip()
-
+            response = result.stdout.strip()
+            if not response or response.startswith("[Error:"):
+                raise Exception(f"Bad response from {specimen_name}: {response}")
+            return response
+        except subprocess.TimeoutExpired:
+            raise Exception(f"Timeout waiting for {specimen_name}")
         except Exception as e:
             raise Exception(f"Failed to generate response for {specimen_name}: {e}")
 

@@ -5,9 +5,12 @@ Daemon utilities - logging, process management, alerting, SLA tracking
 import os
 import json
 import subprocess
+import smtplib
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, Optional
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
 class DaemonLogger:
@@ -43,6 +46,9 @@ class DaemonLogger:
 
     def action(self, message: str, extra: Dict = None):
         self._write_log('ACTION', message, extra)
+
+    def success(self, message: str, extra: Dict = None):
+        self._write_log("SUCCESS", message, extra)
 
     def warn(self, message: str, extra: Dict = None):
         self._write_log('WARN', message, extra)
@@ -88,11 +94,74 @@ def is_daemon_running(daemon_name: str) -> bool:
     return returncode == 0
 
 
-def send_email_alert(subject: str, body: str, to: str = None):
-    """Send email alert (placeholder for integration)"""
+def send_email_alert(subject: str, body: str, to: str = 'benjiz@gmail.com') -> bool:
+    """
+    Send email alert via SMTP if configured, otherwise log to file.
+    
+    Args:
+        subject: Email subject line
+        body: Email body text
+        to: Recipient email address (default: benjiz@gmail.com)
+    
+    Returns:
+        True if email was sent successfully, False otherwise
+    """
     log = DaemonLogger('email_alert')
-    log.warn(f"Alert: {subject}")
-    # In production, integrate with mail service
+    
+    # Get SMTP configuration from environment variables
+    smtp_host = os.environ.get('SMTP_HOST')
+    smtp_user = os.environ.get('SMTP_USER')
+    smtp_password = os.environ.get('SMTP_PASSWORD')
+    smtp_port = int(os.environ.get('SMTP_PORT', '587'))
+    smtp_from = os.environ.get('SMTP_FROM', smtp_user)
+    
+    # Check if SMTP is configured
+    if smtp_host and smtp_user and smtp_password:
+        try:
+            # Send email via SMTP with STARTTLS
+            server = smtplib.SMTP(smtp_host, smtp_port)
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            
+            # Create email message
+            message = MIMEMultipart()
+            message['From'] = smtp_from if smtp_from else smtp_user
+            message['To'] = to
+            message['Subject'] = subject
+            message.attach(MIMEText(body, 'plain'))
+            
+            # Send email
+            server.send_message(message)
+            server.quit()
+            
+            log.success(f"Email sent to {to}: {subject}")
+            
+            # Also log to file as backup record
+            _log_email_to_file(to, subject, body)
+            
+            return True
+            
+        except Exception as e:
+            # SMTP sending failed, log error and fall back to file logging
+            log.error(f"SMTP email send failed: {str(e)}")
+            _log_email_to_file(to, subject, body)
+            return False
+    else:
+        # SMTP not configured, log warning and fall back to file logging
+        warning_msg = f"EMAIL ALERT NOT SENT - SMTP not configured. Set SMTP_HOST, SMTP_USER, SMTP_PASSWORD env vars. Subject: {subject}"
+        log.warn(warning_msg)
+        _log_email_to_file(to, subject, body)
+        return False
+
+
+def _log_email_to_file(to: str, subject: str, body: str):
+    """Write email alert to file as backup record"""
+    daemons_dir = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')) / 'daemons'
+    log_file = daemons_dir / 'logs' / 'email_alerts.log'
+    log_file.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(log_file, 'a', encoding='utf-8') as f:
+        f.write(f"\n{'='*60}\nTO: {to}\nSUBJECT: {subject}\nTIME: {datetime.now().isoformat()}\n{body}\n{'='*60}\n")
 
 
 # SLA Configuration

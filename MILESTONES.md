@@ -600,3 +600,73 @@ New intervention protocol for specimens at ORANGE mental health status:
 - All Kiwix instances: RUNNING
 - ORANGE specimens: Awaiting intervention
 - Adam: Post-dream, monitoring
+
+---
+
+## March 27, 2026 — Production Launch & System Hardening
+
+### Full Production Launch
+
+After 5 weeks of development and testing, the Digiquarium reached full production status:
+
+- **17 research tanks**: All running continuously since February
+- **3 visitor tanks**: Aria, Felix, Luna serving public interactions
+- **20+ autonomous daemons**: Full monitoring, scheduling, and research infrastructure
+- **Ollama inference**: Stable llama3.2:latest via Windows host proxy
+
+### Feedback Loop Wiring
+
+Critical infrastructure gaps were identified and fixed:
+
+**Wellness → Dream Mode Pipeline:**
+- THE SCHEDULER now reads THE THERAPIST's wellness reports every cycle
+- ORANGE/RED specimens automatically enter dream mode (explorer stopped, calming prompt delivered)
+- Dream cooldown prevents over-triggering (6-hour minimum between dreams per tank)
+
+**Wellness → System Audits:**
+- THE OVERSEER now includes psych and therapist wellness data in system audits
+- RED wellness status flagged as system-level issue requiring attention
+
+**Wellness → Academic Documentation:**
+- THE DOCUMENTARIAN now includes wellness trend tables in the research paper
+- Tracks GREEN/YELLOW/ORANGE/RED distribution across all 17 specimens
+
+### Congregation Infrastructure
+
+The congregation system was wired end-to-end:
+- THE SCHEDULER periodically queues congregation events (every 48 hours)
+- Picks 2-4 random specimens per congregation from rotating philosophical topics
+- THE MODERATOR polls the queue, runs congregations via docker exec into tanks
+- Full transcript logging to congregations/ directory
+- Therapist clearance required before participation
+
+### Email Alert System
+
+`send_email_alert()` upgraded from silent logging to real SMTP delivery:
+- Checks for SMTP configuration via environment variables
+- Sends real emails when SMTP_HOST/SMTP_USER/SMTP_PASSWORD configured
+- Falls back to file logging with clear warning when SMTP not available
+- No more silently dropped alerts
+
+### Documentation Refresh
+
+All project documentation updated to reflect current reality:
+- INFRASTRUCTURE.md: Updated from 2-tank/stablelm2 to 17-tank/llama3.2 setup
+- PROJECT_README.md: All tanks marked Active, full specimen registry
+- MILESTONES.md: Extended through March 27 production launch
+
+### Current System Status
+
+| Component | Count | Status |
+|-----------|-------|--------|
+| Research Tanks | 17 | All Running |
+| Visitor Tanks | 3 | All Running |
+| Daemons | 20+ | All Running |
+| Ollama Model | llama3.2:latest | Stable |
+| Congregations | Queued | Infrastructure Active |
+| Wellness Monitoring | Active | Psych + Therapist |
+| Email Alerts | Configured | SMTP or File Fallback |
+
+---
+
+*Last updated: March 27, 2026*

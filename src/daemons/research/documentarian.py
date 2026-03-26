@@ -12,6 +12,7 @@ Responsibilities:
 
 SLA: 6 hours for routine updates
      Immediate for significant milestones
+
 """
 
 import os
@@ -73,13 +74,13 @@ class Documentarian:
             MILESTONES[key]['date'] = datetime.now().isoformat()
             MILESTONES[key]['details'] = details
             
-            self.log.success(f"🏆 MILESTONE: {MILESTONES[key]['desc']}", 'milestone')
+            self.log.success(f"MILESTONE: {MILESTONES[key]['desc']}", 'milestone')
             self.save_milestones()
             self.update_paper_milestones()
             
             # Alert owner of significant milestone
             send_email_alert(
-                f"🏆 DIGIQUARIUM MILESTONE: {MILESTONES[key]['desc']}",
+                f"DIGIQUARIUM MILESTONE: {MILESTONES[key]['desc']}",
                 f"A new research milestone has been reached!\n\n"
                 f"Milestone: {MILESTONES[key]['desc']}\n"
                 f"Details: {details}\n"
@@ -186,9 +187,46 @@ class Documentarian:
         # Update paper file (append or replace milestones section)
         self.log.info("Paper milestones section updated")
     
+    def get_wellness_trends(self):
+        """Extract wellness information from therapist report."""
+        wellness_data = {
+            'tanks': {},
+            'summary': {'GREEN': 0, 'YELLOW': 0, 'ORANGE': 0, 'RED': 0}
+        }
+        
+        report_file = DIGIQUARIUM_DIR / 'src' / 'daemons' / 'ethics' / 'latest_report.json'
+        
+        if not report_file.exists():
+            return wellness_data
+        
+        try:
+            with open(report_file, 'r') as f:
+                report = json.load(f)
+        except Exception:
+            return wellness_data
+        
+        assessments = report.get('assessments', [])
+        
+        for assessment in assessments:
+            tank = assessment.get('tank', 'unknown')
+            level = assessment.get('level', 'UNKNOWN')
+            score = assessment.get('score', 0)
+            
+            wellness_data['tanks'][tank] = {
+                'level': level,
+                'score': score,
+                'message': assessment.get('message', '')
+            }
+            
+            if level in wellness_data['summary']:
+                wellness_data['summary'][level] += 1
+        
+        return wellness_data
+    
     def generate_paper_draft(self):
         """Generate/update the main paper draft"""
         stats = self.calculate_statistics()
+        wellness_data = self.get_wellness_trends()
         
         paper_content = f"""# The Digiquarium: A Framework for Studying AI Personality Development
 
@@ -243,7 +281,7 @@ worldview formation, and personality stability over extended periods.
 ### 2.2 Data Collection
 
 | Metric | Current Count |
-|--------|---------------|
+|--------|------------------|
 | Total thinking traces | {stats['totals']['total_thinking_traces']:,} |
 | Estimated articles explored | {stats['totals']['total_articles']:,} |
 | Baseline assessments | {stats['totals']['total_baselines']:,} |
@@ -285,6 +323,43 @@ worldview formation, and personality stability over extended periods.
 - Agent tanks (Cain, Abel, Seth) show more goal-directed exploration
 - Require enhanced security monitoring (THE SENTINEL)
 - Different architectures produce measurably different patterns
+
+### 3.2 Wellness Trends
+
+**Current Wellness Status** ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')}):
+
+"""
+        
+        # Add wellness table
+        if wellness_data['tanks']:
+            paper_content += "| Tank | Wellness Level | Score | Status |\n"
+            paper_content += "|------|---|---|---|\n"
+            
+            # Sort by tank name for consistent ordering
+            for tank in sorted(wellness_data['tanks'].keys()):
+                info = wellness_data['tanks'][tank]
+                level = info.get('level', 'UNKNOWN')
+                score = info.get('score', 0)
+                message = info.get('message', '')
+                
+                # Add emoji for level
+                emoji = {'GREEN': '🟢', 'YELLOW': '🟡', 'ORANGE': '🟠', 'RED': '🔴'}.get(level, '⚪')
+                
+                paper_content += f"| {tank} | {emoji} {level} | {score} | {message[:30]} |\n"
+        else:
+            paper_content += "*No wellness assessment data available yet.*\n"
+        
+        # Add summary
+        paper_content += f"""
+
+**Wellness Summary**:
+- Green (Healthy): {wellness_data['summary'].get('GREEN', 0)}
+- Yellow (Mild Anxiety): {wellness_data['summary'].get('YELLOW', 0)}
+- Orange (Distressed): {wellness_data['summary'].get('ORANGE', 0)}
+- Red (Critical): {wellness_data['summary'].get('RED', 0)}
+
+The wellness monitoring system provides real-time mental health tracking for all specimens,
+enabling early intervention when distress indicators are detected.
 
 ---
 
@@ -380,12 +455,13 @@ Multi-agent debates on scheduled topics for discourse analysis.
         for tank_id, name, lang, type_ in specimens:
             paper_content += f"| {tank_id} | {name} | {lang} | {type_} | Active |\n"
         
-        paper_content += """
+        paper_content += f"""
 ---
 
 *This document is maintained by THE DOCUMENTARIAN daemon.*
 *Overseen by THE STRATEGIST (Claude).*
-*Last regenerated: """ + datetime.now().isoformat() + "*\n"
+*Last regenerated: {datetime.now().isoformat()}*
+"""
         
         self.paper_file.write_text(paper_content)
         self.log.success("Paper draft regenerated")
