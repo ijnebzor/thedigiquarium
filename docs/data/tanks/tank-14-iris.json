@@ -3,9 +3,27 @@
   "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
   "status": "active",
-  "traces_12h": 13,
+  "traces_12h": 15,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:43",
+      "date": "2026-03-27",
+      "article": "Biology",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:37",
+      "date": "2026-03-27",
+      "article": "Science",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "22:30",
       "date": "2026-03-27",
@@ -77,27 +95,17 @@
       "next": "",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "21:30",
-      "date": "2026-03-27",
-      "article": "Estonia",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:29",
-      "date": "2026-03-27",
-      "article": "Estonian language",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
+    {
+      "topic": "Science",
+      "visits": 3
+    },
+    {
+      "topic": "Biology",
+      "visits": 3
+    },
     {
       "topic": "Philosophy",
       "visits": 3
@@ -120,14 +128,6 @@
     },
     {
       "topic": "Physiology",
-      "visits": 2
-    },
-    {
-      "topic": "Art",
-      "visits": 2
-    },
-    {
-      "topic": "Science",
       "visits": 2
     }
   ]

@@ -3,9 +3,27 @@
   "emoji": "\ud83d\udc64",
   "type": "Control",
   "status": "active",
-  "traces_12h": 15,
+  "traces_12h": 17,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:42",
+      "date": "2026-03-27",
+      "article": "Art",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:36",
+      "date": "2026-03-27",
+      "article": "Music",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "22:30",
       "date": "2026-03-27",
@@ -77,24 +95,6 @@
       "next": "",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "21:37",
-      "date": "2026-03-27",
-      "article": "Number",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:31",
-      "date": "2026-03-27",
-      "article": "Definition",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
@@ -103,15 +103,15 @@
       "visits": 4
     },
     {
+      "topic": "Music",
+      "visits": 4
+    },
+    {
       "topic": "Antarctica",
       "visits": 3
     },
     {
       "topic": "Australian Antarctic Territory",
-      "visits": 3
-    },
-    {
-      "topic": "Music",
       "visits": 3
     },
     {

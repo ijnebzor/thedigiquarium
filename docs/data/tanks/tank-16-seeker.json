@@ -3,9 +3,27 @@
   "emoji": "\ud83d\udd0d",
   "type": "Special",
   "status": "active",
-  "traces_12h": 13,
+  "traces_12h": 15,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:42",
+      "date": "2026-03-27",
+      "article": "Terrestrial planet",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:36",
+      "date": "2026-03-27",
+      "article": "Planet",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "22:30",
       "date": "2026-03-27",
@@ -73,24 +91,6 @@
       "time": "21:31",
       "date": "2026-03-27",
       "article": "Steel",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:30",
-      "date": "2026-03-27",
-      "article": "Containerization",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:29",
-      "date": "2026-03-27",
-      "article": "Container",
       "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "next": "",
       "thought_en": null,

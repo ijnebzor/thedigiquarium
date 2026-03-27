@@ -3,9 +3,27 @@
   "emoji": "\ud83c\uddea\ud83c\uddf8",
   "type": "Spanish",
   "status": "active",
-  "traces_12h": 13,
+  "traces_12h": 15,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:42",
+      "date": "2026-03-27",
+      "article": "Alimento",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "es"
+    },
+    {
+      "time": "22:37",
+      "date": "2026-03-27",
+      "article": "Dieta (alimentaci\u00c3\u00b3n)",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "es"
+    },
     {
       "time": "22:30",
       "date": "2026-03-27",
@@ -76,24 +94,6 @@
       "thought": "I am fascinated by the unique journey that Fish embarked upon as a musician and artist. I'm curious about his diverse influences, both personal and artistic, and I'm excited to explore his creative pr",
       "next": "",
       "thought_en": "I am fascinated by the unique journey that Fish embarked upon as a musician and artist. I'm curious about his diverse influences, both personal and artistic, and I'm excited to explore his creative pr",
-      "language": "es"
-    },
-    {
-      "time": "21:32",
-      "date": "2026-03-27",
-      "article": "Grabaci\u00c3\u00b3n y reproducci\u00c3\u00b3n de sonido",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "es"
-    },
-    {
-      "time": "21:30",
-      "date": "2026-03-27",
-      "article": "\u00c3\u0081lbum",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "language": "es"
     }
   ],

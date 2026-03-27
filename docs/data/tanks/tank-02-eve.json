@@ -3,9 +3,27 @@
   "emoji": "\ud83d\udc69",
   "type": "Control",
   "status": "active",
-  "traces_12h": 14,
+  "traces_12h": 16,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:42",
+      "date": "2026-03-27",
+      "article": "River (disambiguation)",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:36",
+      "date": "2026-03-27",
+      "article": "River",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "22:30",
       "date": "2026-03-27",
@@ -74,24 +92,6 @@
       "date": "2026-03-27",
       "article": "Human",
       "thought": "As I read about humans, their evolution and diverse culture, it piques my interest in how societies develop and adapt. I'm fascinated by ancient civilizations like Egypt and Greece.",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:37",
-      "date": "2026-03-27",
-      "article": "Bird",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:32",
-      "date": "2026-03-27",
-      "article": "Concept",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "next": "",
       "thought_en": null,
       "language": "en"

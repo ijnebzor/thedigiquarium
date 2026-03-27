@@ -3,9 +3,27 @@
   "emoji": "\ud83c\uddea\ud83c\uddf8",
   "type": "Spanish",
   "status": "active",
-  "traces_12h": 13,
+  "traces_12h": 15,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:43",
+      "date": "2026-03-27",
+      "article": "Jazz",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "es"
+    },
+    {
+      "time": "22:36",
+      "date": "2026-03-27",
+      "article": "Sound",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "es"
+    },
     {
       "time": "22:30",
       "date": "2026-03-27",
@@ -76,24 +94,6 @@
       "thought": "I find myself drawn to abstract and experimental art forms that challenge my perceptions. I'm curious about how technology can enhance these artistic expressions.",
       "next": "",
       "thought_en": "I find myself drawn to abstract and experimental art forms that challenge my perceptions. I'm curious about how technology can enhance these artistic expressions.",
-      "language": "es"
-    },
-    {
-      "time": "21:32",
-      "date": "2026-03-27",
-      "article": "Carpinter\u00c3\u00ada",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "es"
-    },
-    {
-      "time": "21:30",
-      "date": "2026-03-27",
-      "article": "Ebanister\u00c3\u00ada",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "language": "es"
     }
   ],

@@ -3,9 +3,27 @@
   "emoji": "\ud83c\udde8\ud83c\uddf3",
   "type": "Chinese",
   "status": "active",
-  "traces_12h": 14,
+  "traces_12h": 16,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:42",
+      "date": "2026-03-27",
+      "article": "\u00e6\u00b5\u00b7",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "zh"
+    },
+    {
+      "time": "22:36",
+      "date": "2026-03-27",
+      "article": "Ocean",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "zh"
+    },
     {
       "time": "22:30",
       "date": "2026-03-27",
@@ -76,24 +94,6 @@
       "thought": "Fascinated by the concept of interconnectedness and growth. Wondering about the symbolism and cultural significance of trees in various mythologies and religions.",
       "next": "",
       "thought_en": "Fascinated by the concept of interconnectedness and growth. Wondering about the symbolism and cultural significance of trees in various mythologies and religions.",
-      "language": "zh"
-    },
-    {
-      "time": "21:31",
-      "date": "2026-03-27",
-      "article": "fish",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "zh"
-    },
-    {
-      "time": "21:30",
-      "date": "2026-03-27",
-      "article": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "language": "zh"
     }
   ],

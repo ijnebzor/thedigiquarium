@@ -3,9 +3,27 @@
   "emoji": "\ud83c\udde9\ud83c\uddea",
   "type": "German",
   "status": "active",
-  "traces_12h": 13,
+  "traces_12h": 15,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:42",
+      "date": "2026-03-27",
+      "article": "Diamant",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "de"
+    },
+    {
+      "time": "22:36",
+      "date": "2026-03-27",
+      "article": "River",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "de"
+    },
     {
       "time": "22:30",
       "date": "2026-03-27",
@@ -76,24 +94,6 @@
       "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
       "next": "",
       "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
-      "language": "de"
-    },
-    {
-      "time": "21:31",
-      "date": "2026-03-27",
-      "article": "Cholera",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "de"
-    },
-    {
-      "time": "21:30",
-      "date": "2026-03-27",
-      "article": "Bakterien",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "language": "de"
     }
   ],

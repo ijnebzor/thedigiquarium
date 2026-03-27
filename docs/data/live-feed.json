@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T22:30:42.679715",
+  "generated_at": "2026-03-27T22:46:53.655557",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
@@ -11,10 +11,10 @@
     "description": "Null thoughts, timeouts, and junk data removed for clean display",
     "full_logs_contact": "research@digiquarium.org"
   },
-  "next_update": "2026-03-28 10:30",
+  "next_update": "2026-03-28 10:46",
   "period": {
-    "start": "2026-03-27 10:30",
-    "end": "2026-03-27 22:30",
+    "start": "2026-03-27 10:46",
+    "end": "2026-03-27 22:46",
     "hours": 12
   },
   "tanks": {
@@ -23,9 +23,27 @@
       "emoji": "\ud83d\udc64",
       "type": "Control",
       "status": "active",
-      "traces_12h": 15,
+      "traces_12h": 17,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "Art",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "Music",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -97,24 +115,6 @@
           "next": "",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "21:37",
-          "date": "2026-03-27",
-          "article": "Number",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:31",
-          "date": "2026-03-27",
-          "article": "Definition",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
@@ -123,15 +123,15 @@
           "visits": 4
         },
         {
+          "topic": "Music",
+          "visits": 4
+        },
+        {
           "topic": "Antarctica",
           "visits": 3
         },
         {
           "topic": "Australian Antarctic Territory",
-          "visits": 3
-        },
-        {
-          "topic": "Music",
           "visits": 3
         },
         {
@@ -157,9 +157,27 @@
       "emoji": "\ud83d\udc69",
       "type": "Control",
       "status": "active",
-      "traces_12h": 14,
+      "traces_12h": 16,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "River (disambiguation)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "River",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -231,24 +249,6 @@
           "next": "",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "21:37",
-          "date": "2026-03-27",
-          "article": "Bird",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:32",
-          "date": "2026-03-27",
-          "article": "Concept",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
@@ -294,6 +294,24 @@
       "traces_12h": 20,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:44",
+          "date": "2026-03-27",
+          "article": "Physics",
+          "thought": "It seems you are particularly interested in topics related to the science of motion, such as physics. You mentioned reading \"Physics\" and having an interest in history, art, science. This connection b",
+          "next": "Science",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:31",
+          "date": "2026-03-27",
+          "article": "Skill",
+          "thought": "You mentioned reading \"Skill\" and having an interest in history, art, science. The connection between skills is that they require practice and experience to develop or improve upon. Skills can be cate",
+          "next": "Definition",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:28",
           "date": "2026-03-27",
@@ -365,30 +383,12 @@
           "next": "Roman Italy",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "21:55",
-          "date": "2026-03-27",
-          "article": "Romulus Augustus",
-          "thought": "Exploring Romulus Augustus...",
-          "next": "Julius Nepos",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:51",
-          "date": "2026-03-27",
-          "article": "Middle Ages",
-          "thought": "Exploring Middle Ages...",
-          "next": "Romulus Augustus",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
         {
           "topic": "Earth",
-          "visits": 48
+          "visits": 47
         },
         {
           "topic": "Definition",
@@ -400,19 +400,19 @@
         },
         {
           "topic": "Language",
-          "visits": 41
+          "visits": 40
+        },
+        {
+          "topic": "Physics",
+          "visits": 39
         },
         {
           "topic": "Science",
           "visits": 39
         },
         {
-          "topic": "Physics",
-          "visits": 38
-        },
-        {
           "topic": "Human",
-          "visits": 37
+          "visits": 36
         },
         {
           "topic": "Animal",
@@ -428,6 +428,15 @@
       "traces_12h": 20,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:44",
+          "date": "2026-03-27",
+          "article": "History",
+          "thought": "Reading history books is like traveling back in time, experiencing events that shaped our world. It broadens our understanding of the past and helps us appreciate what we have today. Each story holds ",
+          "next": "Artifact (archaeology)",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -508,15 +517,6 @@
           "next": "Learn",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "22:11",
-          "date": "2026-03-27",
-          "article": "Computer science",
-          "thought": "Exploring Computer science...",
-          "next": "Information",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
@@ -559,9 +559,27 @@
       "emoji": "\ud83c\uddea\ud83c\uddf8",
       "type": "Spanish",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "Alimento",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
+        {
+          "time": "22:37",
+          "date": "2026-03-27",
+          "article": "Dieta (alimentaci\u00c3\u00b3n)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -633,24 +651,6 @@
           "next": "",
           "thought_en": "I am fascinated by the unique journey that Fish embarked upon as a musician and artist. I'm curious about his diverse influences, both personal and artistic, and I'm excited to explore his creative pr",
           "language": "es"
-        },
-        {
-          "time": "21:32",
-          "date": "2026-03-27",
-          "article": "Grabaci\u00c3\u00b3n y reproducci\u00c3\u00b3n de sonido",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "es"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "\u00c3\u0081lbum",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "es"
         }
       ],
       "top_topics": [
@@ -693,9 +693,27 @@
       "emoji": "\ud83c\uddea\ud83c\uddf8",
       "type": "Spanish",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:43",
+          "date": "2026-03-27",
+          "article": "Jazz",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "Sound",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -767,24 +785,6 @@
           "next": "",
           "thought_en": "I find myself drawn to abstract and experimental art forms that challenge my perceptions. I'm curious about how technology can enhance these artistic expressions.",
           "language": "es"
-        },
-        {
-          "time": "21:32",
-          "date": "2026-03-27",
-          "article": "Carpinter\u00c3\u00ada",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "es"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Ebanister\u00c3\u00ada",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "es"
         }
       ],
       "top_topics": [
@@ -827,9 +827,27 @@
       "emoji": "\ud83c\udde9\ud83c\uddea",
       "type": "German",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "Diamant",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "de"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "River",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "de"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -901,24 +919,6 @@
           "next": "",
           "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
           "language": "de"
-        },
-        {
-          "time": "21:31",
-          "date": "2026-03-27",
-          "article": "Cholera",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "de"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Bakterien",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "de"
         }
       ],
       "top_topics": [
@@ -961,9 +961,27 @@
       "emoji": "\ud83c\udde9\ud83c\uddea",
       "type": "German",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:43",
+          "date": "2026-03-27",
+          "article": "Liste von Pokerbegriffen",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "de"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "Fish",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "de"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -1035,24 +1053,6 @@
           "next": "",
           "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
           "language": "de"
-        },
-        {
-          "time": "21:31",
-          "date": "2026-03-27",
-          "article": "Spiel",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "de"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Kartenspiel",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "de"
         }
       ],
       "top_topics": [
@@ -1078,11 +1078,11 @@
         },
         {
           "topic": "Fish",
-          "visits": 1
+          "visits": 2
         },
         {
           "topic": "Liste von Pokerbegriffen",
-          "visits": 1
+          "visits": 2
         },
         {
           "topic": "Poker",
@@ -1095,9 +1095,27 @@
       "emoji": "\ud83c\udde8\ud83c\uddf3",
       "type": "Chinese",
       "status": "active",
-      "traces_12h": 14,
+      "traces_12h": 16,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "\u00e6\u00b5\u00b7",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "Ocean",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -1169,24 +1187,6 @@
           "next": "",
           "thought_en": "Fascinated by the concept of interconnectedness and growth. Wondering about the symbolism and cultural significance of trees in various mythologies and religions.",
           "language": "zh"
-        },
-        {
-          "time": "21:31",
-          "date": "2026-03-27",
-          "article": "fish",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "zh"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "zh"
         }
       ],
       "top_topics": [
@@ -1229,9 +1229,27 @@
       "emoji": "\ud83c\udde8\ud83c\uddf3",
       "type": "Chinese",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "\u00e5\u009f\u008e\u00e5\u00b8\u0082 (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "\u00e5\u009f\u008e\u00e5\u00b8\u0082",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -1303,24 +1321,6 @@
           "next": "",
           "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
           "language": "zh"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "\u00e5\u009c\u00b0\u00e7\u0090\u0083 (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "zh"
-        },
-        {
-          "time": "21:29",
-          "date": "2026-03-27",
-          "article": "\u00e5\u009c\u00b0\u00e7\u0090\u0083",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "zh"
         }
       ],
       "top_topics": [
@@ -1363,9 +1363,27 @@
       "emoji": "\ud83c\uddef\ud83c\uddf5",
       "type": "Japanese",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "\u00e6\u0083\u0091\u00e6\u0098\u009f",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "ja"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "\u00e3\u0083\u0097\u00e3\u0083\u00a9\u00e3\u0083\u008d\u00e3\u0083\u0083\u00e3\u0083\u0088",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "ja"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -1437,24 +1455,6 @@
           "next": "",
           "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
           "language": "ja"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "\u00e8\u00a8\u00b3\u00e8\u00aa\u009e",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "ja"
-        },
-        {
-          "time": "21:29",
-          "date": "2026-03-27",
-          "article": "\u00e4\u00bc\u009a\u00e7\u00a4\u00be",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "ja"
         }
       ],
       "top_topics": [
@@ -1497,9 +1497,27 @@
       "emoji": "\ud83c\uddef\ud83c\uddf5",
       "type": "Japanese",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "ja"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "\u00e3\u0083\u0092\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0083\u009e\u00e3\u0083\u00b3",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "ja"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -1571,24 +1589,6 @@
           "next": "",
           "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
           "language": "ja"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "\u00e5\u009c\u00b0\u00e8\u00b3\u00aa\u00e6\u0099\u0082\u00e4\u00bb\u00a3",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "ja"
-        },
-        {
-          "time": "21:29",
-          "date": "2026-03-27",
-          "article": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00aa\u00e3\u0082\u00b8\u00e3\u0082\u00a7\u00e3\u0083\u008b\u00e3\u0082\u00a2\u00e3\u0083\u00b3",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "language": "ja"
         }
       ],
       "top_topics": [
@@ -1631,9 +1631,27 @@
       "emoji": "\ud83d\udc41\ufe0f",
       "type": "Visual",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:43",
+          "date": "2026-03-27",
+          "article": "Pizza",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "Food",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -1705,24 +1723,6 @@
           "next": "",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Numeral system",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:29",
-          "date": "2026-03-27",
-          "article": "Numeral system",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
@@ -1765,9 +1765,27 @@
       "emoji": "\ud83d\udc41\ufe0f",
       "type": "Visual",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:43",
+          "date": "2026-03-27",
+          "article": "Biology",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:37",
+          "date": "2026-03-27",
+          "article": "Science",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -1839,27 +1857,17 @@
           "next": "",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Estonia",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:29",
-          "date": "2026-03-27",
-          "article": "Estonian language",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
+        {
+          "topic": "Science",
+          "visits": 3
+        },
+        {
+          "topic": "Biology",
+          "visits": 3
+        },
         {
           "topic": "Philosophy",
           "visits": 3
@@ -1883,14 +1891,6 @@
         {
           "topic": "Physiology",
           "visits": 2
-        },
-        {
-          "topic": "Art",
-          "visits": 2
-        },
-        {
-          "topic": "Science",
-          "visits": 2
         }
       ]
     },
@@ -1899,9 +1899,27 @@
       "emoji": "\ud83d\udd2d",
       "type": "Special",
       "status": "active",
-      "traces_12h": 12,
+      "traces_12h": 14,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:43",
+          "date": "2026-03-27",
+          "article": "River (disambiguation)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "River",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -1973,24 +1991,6 @@
           "next": "",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Difference",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:29",
-          "date": "2026-03-27",
-          "article": "Adult",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
@@ -2033,9 +2033,27 @@
       "emoji": "\ud83d\udd0d",
       "type": "Special",
       "status": "active",
-      "traces_12h": 13,
+      "traces_12h": 15,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:42",
+          "date": "2026-03-27",
+          "article": "Terrestrial planet",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:36",
+          "date": "2026-03-27",
+          "article": "Planet",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:30",
           "date": "2026-03-27",
@@ -2107,24 +2125,6 @@
           "next": "",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Containerization",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:29",
-          "date": "2026-03-27",
-          "article": "Container",
-          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
@@ -2170,6 +2170,24 @@
       "traces_12h": 20,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "22:43",
+          "date": "2026-03-27",
+          "article": "Baseball",
+          "thought": "As you read \"Baseball,\" several aspects and details may stand out to you. The first thing that catches your attention might be the variety of games mentioned, such: Baseball, American football, Footba",
+          "next": "Sport",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:31",
+          "date": "2026-03-27",
+          "article": "In",
+          "thought": "Exploring In...",
+          "next": "Baseball",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "22:28",
           "date": "2026-03-27",
@@ -2241,24 +2259,6 @@
           "next": "Carolus Linnaeus",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "22:00",
-          "date": "2026-03-27",
-          "article": "Taxonomy (biology)",
-          "thought": "Exploring Taxonomy (biology)...",
-          "next": "Crow",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:57",
-          "date": "2026-03-27",
-          "article": "Chordate",
-          "thought": "Exploring Chordate...",
-          "next": "Taxonomy (biology)",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
@@ -2327,14 +2327,14 @@
     ]
   },
   "stats": {
-    "total_traces": 1194948,
+    "total_traces": 1194981,
     "total_baselines": 0,
     "active_tanks": 17,
-    "traces_today": 17579
+    "traces_today": 17612
   },
   "prune_stats": {
-    "total": 14848,
-    "kept": 14613,
-    "pruned": 235
+    "total": 14880,
+    "kept": 14646,
+    "pruned": 234
   }
 }
