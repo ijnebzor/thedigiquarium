@@ -2,10 +2,65 @@
   "name": "Genevieve",
   "emoji": "\ud83c\udde9\ud83c\uddea",
   "type": "German",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 6,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "21:37",
+      "date": "2026-03-27",
+      "article": "River",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "de"
+    },
+    {
+      "time": "21:31",
+      "date": "2026-03-27",
+      "article": "Spiel",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    },
+    {
+      "time": "21:30",
+      "date": "2026-03-27",
+      "article": "Kartenspiel",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    },
+    {
+      "time": "21:29",
+      "date": "2026-03-27",
+      "article": "Poker",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    },
+    {
+      "time": "21:28",
+      "date": "2026-03-27",
+      "article": "Liste von Pokerbegriffen",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    },
+    {
+      "time": "21:27",
+      "date": "2026-03-27",
+      "article": "Fish",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    }
+  ],
   "top_topics": [
     {
       "topic": "Biologie",
@@ -28,15 +83,15 @@
       "visits": 3
     },
     {
-      "topic": "Physik",
+      "topic": "Fish",
       "visits": 1
     },
     {
-      "topic": "Eigenschaft",
+      "topic": "Liste von Pokerbegriffen",
       "visits": 1
     },
     {
-      "topic": "Technik",
+      "topic": "Poker",
       "visits": 1
     }
   ]

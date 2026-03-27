@@ -3,9 +3,63 @@
   "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
   "status": "active",
-  "traces_12h": 1,
+  "traces_12h": 7,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "21:38",
+      "date": "2026-03-27",
+      "article": "Food",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:32",
+      "date": "2026-03-27",
+      "article": "Estonian language",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:30",
+      "date": "2026-03-27",
+      "article": "Estonia",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:29",
+      "date": "2026-03-27",
+      "article": "Estonian language",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:28",
+      "date": "2026-03-27",
+      "article": "Estonia",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:27",
+      "date": "2026-03-27",
+      "article": "Music",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:25",
       "date": "2026-03-27",
@@ -26,6 +80,14 @@
       "visits": 3
     },
     {
+      "topic": "Estonia",
+      "visits": 2
+    },
+    {
+      "topic": "Estonian language",
+      "visits": 2
+    },
+    {
       "topic": "Psychology",
       "visits": 2
     },
@@ -40,14 +102,6 @@
     {
       "topic": "Science",
       "visits": 2
-    },
-    {
-      "topic": "Kiln",
-      "visits": 2
-    },
-    {
-      "topic": "Light",
-      "visits": 1
     }
   ]
 }

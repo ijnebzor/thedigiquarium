@@ -2,10 +2,65 @@
   "name": "Eve",
   "emoji": "\ud83d\udc69",
   "type": "Control",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 6,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "21:37",
+      "date": "2026-03-27",
+      "article": "Bird",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:32",
+      "date": "2026-03-27",
+      "article": "Concept",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:30",
+      "date": "2026-03-27",
+      "article": "Structure",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:29",
+      "date": "2026-03-27",
+      "article": "Building",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:28",
+      "date": "2026-03-27",
+      "article": "Hotel",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:27",
+      "date": "2026-03-27",
+      "article": "City",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    }
+  ],
   "top_topics": [
     {
       "topic": "Mathematics",
@@ -14,6 +69,10 @@
     {
       "topic": "History",
       "visits": 3
+    },
+    {
+      "topic": "Bird",
+      "visits": 2
     },
     {
       "topic": "Pattern",
@@ -32,11 +91,7 @@
       "visits": 2
     },
     {
-      "topic": "Shape",
-      "visits": 1
-    },
-    {
-      "topic": "Curve",
+      "topic": "City",
       "visits": 1
     }
   ]

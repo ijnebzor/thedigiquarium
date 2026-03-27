@@ -2,10 +2,65 @@
   "name": "Klaus",
   "emoji": "\ud83c\udde9\ud83c\uddea",
   "type": "German",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 6,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "21:37",
+      "date": "2026-03-27",
+      "article": "Tree",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "de"
+    },
+    {
+      "time": "21:31",
+      "date": "2026-03-27",
+      "article": "Cholera",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    },
+    {
+      "time": "21:30",
+      "date": "2026-03-27",
+      "article": "Bakterien",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    },
+    {
+      "time": "21:29",
+      "date": "2026-03-27",
+      "article": "Biologie",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    },
+    {
+      "time": "21:28",
+      "date": "2026-03-27",
+      "article": "Art (Biologie)",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    },
+    {
+      "time": "21:27",
+      "date": "2026-03-27",
+      "article": "Art",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "de"
+    }
+  ],
   "top_topics": [
     {
       "topic": "Psychologie",
@@ -17,7 +72,7 @@
     },
     {
       "topic": "Biologie",
-      "visits": 3
+      "visits": 4
     },
     {
       "topic": "Altgriechische Sprache",

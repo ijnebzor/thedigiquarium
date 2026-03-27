@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-27T21:26:01.418186",
+  "timestamp": "2026-03-27T21:43:01.535289",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": false,
@@ -54,32 +54,32 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 12323,
+    "traces_today": 12352,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "History",
-        "traces": 1
+        "article": "Ocean",
+        "traces": 8
       },
       {
         "name": "tank-02-eve",
-        "article": "--",
-        "traces": 0
+        "article": "Bird",
+        "traces": 6
       },
       {
         "name": "tank-03-cain",
-        "article": "Thought",
-        "traces": 4927
+        "article": "Art",
+        "traces": 4930
       },
       {
         "name": "tank-04-abel",
-        "article": "Critical thinking",
-        "traces": 7395
+        "article": "Art",
+        "traces": 7402
       },
       {
         "name": "tank-05-juan",
-        "article": "--",
-        "traces": 0
+        "article": "Fish",
+        "traces": 6
       }
     ]
   },
@@ -93,26 +93,26 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-27 21:11:49 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-27 21:11:49 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:13:01 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:14:14 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:15:25 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:16:25 \u274c [OVERSEER] Ollama watcher heartbeat stale: 312.504129s old",
-    "2026-03-27 21:16:36 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:17:36 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-27 21:17:48 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-27 21:17:48 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:19:00 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:20:11 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:21:23 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:22:23 \u274c [OVERSEER] Ollama watcher heartbeat stale: 310.62103s old",
-    "2026-03-27 21:22:35 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:23:35 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-27 21:23:48 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-27 21:23:48 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:24:59 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:26:15 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']"
+    "2026-03-27 21:28:26 \u274c [OVERSEER] Ollama watcher heartbeat stale: 313.708562s old",
+    "2026-03-27 21:28:36 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:29:36 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-27 21:29:47 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-03-27 21:29:47 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:30:58 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:32:08 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:33:19 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:34:30 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:35:30 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-27 21:35:41 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-03-27 21:35:41 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:36:52 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:38:02 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:39:13 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:40:23 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:41:23 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-27 21:41:34 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-03-27 21:41:34 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:42:45 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']"
   ],
   "issues": []
 }
