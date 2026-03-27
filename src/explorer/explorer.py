@@ -276,9 +276,16 @@ def get_random_article(base_url: str) -> str:
 # ============================================================================
 
 def think(config: dict, system_prompt: str, article: dict) -> dict:
-    # Stagger Ollama requests to avoid overwhelming the CPU-only server
-    import random as _rnd, time as _time
-    _time.sleep(_rnd.uniform(5, 30))  # Random 5-30s delay to spread load
+    # Stagger Ollama requests based on tank ID for deterministic load spreading
+    # 17 tanks with ~60s cycle means each tank gets a ~3.5s window
+    import time as _time, os as _os, hashlib as _hash
+    tank_id = _os.getenv('TANK_ID', 'tank-01')
+    tank_num = int(tank_id.split('-')[1]) if '-' in tank_id else 1
+    # Each tank waits (tank_num * 10) seconds mod cycle, plus some jitter
+    base_delay = (tank_num * 10) % 170  # Spread across ~3 minute window
+    import random as _rnd
+    jitter = _rnd.uniform(0, 15)
+    _time.sleep(base_delay + jitter)
     """Ask the LLM to think about the article and choose next link."""
     
     user_prompt = f"""You are currently reading: {article['title']}
