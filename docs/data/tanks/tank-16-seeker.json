@@ -3,9 +3,45 @@
   "emoji": "\ud83d\udd0d",
   "type": "Special",
   "status": "active",
-  "traces_12h": 9,
+  "traces_12h": 13,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "Language",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:22",
+      "date": "2026-03-27",
+      "article": "Long Island",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:13",
+      "date": "2026-03-27",
+      "article": "Long Island (disambiguation)",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:04",
+      "date": "2026-03-27",
+      "article": "Long Island",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:55",
       "date": "2026-03-27",
@@ -59,33 +95,6 @@
       "next": "",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "Bowl",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "Art",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:25",
-      "date": "2026-03-27",
-      "article": "History",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
@@ -102,10 +111,6 @@
       "visits": 8
     },
     {
-      "topic": "Economics",
-      "visits": 7
-    },
-    {
       "topic": "Earth",
       "visits": 7
     },
@@ -120,6 +125,10 @@
     {
       "topic": "Definition",
       "visits": 7
+    },
+    {
+      "topic": "Language",
+      "visits": 6
     }
   ]
 }

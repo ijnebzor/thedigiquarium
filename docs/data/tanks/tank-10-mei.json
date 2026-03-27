@@ -3,9 +3,45 @@
   "emoji": "\ud83c\udde8\ud83c\uddf3",
   "type": "Chinese",
   "status": "active",
-  "traces_12h": 9,
+  "traces_12h": 13,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "Tree",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "zh"
+    },
+    {
+      "time": "22:17",
+      "date": "2026-03-27",
+      "article": "\u00e5\u008c\u0097\u00e5\u0086\u00b0\u00e6\u00b4\u008b",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "zh"
+    },
+    {
+      "time": "22:09",
+      "date": "2026-03-27",
+      "article": "\u00e4\u00b8\u0096\u00e7\u0095\u008c\u00e6\u00b4\u008b",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "zh"
+    },
+    {
+      "time": "22:01",
+      "date": "2026-03-27",
+      "article": "\u00e6\u00b5\u00b7\u00e6\u00b4\u008b (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "zh"
+    },
     {
       "time": "21:53",
       "date": "2026-03-27",
@@ -59,40 +95,9 @@
       "next": "",
       "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "language": "zh"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "\u00e5\u009c\u00b0\u00e7\u0090\u0083 (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "zh"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "\u00e5\u009c\u00b0\u00e7\u0090\u0083",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "zh"
-    },
-    {
-      "time": "21:25",
-      "date": "2026-03-27",
-      "article": "History",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "zh"
     }
   ],
   "top_topics": [
-    {
-      "topic": "\u5386\u53f2",
-      "visits": 11
-    },
     {
       "topic": "\u6570\u5b66",
       "visits": 9
@@ -100,6 +105,10 @@
     {
       "topic": "\u827a\u672f",
       "visits": 9
+    },
+    {
+      "topic": "\u5386\u53f2",
+      "visits": 8
     },
     {
       "topic": "\u79d1\u5b66",
@@ -114,12 +123,12 @@
       "visits": 6
     },
     {
-      "topic": "\u97f3\u4e50",
-      "visits": 6
-    },
-    {
       "topic": "\u751f\u7269\u5b66",
       "visits": 5
+    },
+    {
+      "topic": "\u97f3\u4e50",
+      "visits": 4
     }
   ]
 }

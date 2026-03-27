@@ -3,9 +3,45 @@
   "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
   "status": "active",
-  "traces_12h": 9,
+  "traces_12h": 13,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "Book",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:19",
+      "date": "2026-03-27",
+      "article": "Numeral system",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:11",
+      "date": "2026-03-27",
+      "article": "Numeral system",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:02",
+      "date": "2026-03-27",
+      "article": "Numeral system",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:54",
       "date": "2026-03-27",
@@ -59,46 +95,15 @@
       "next": "",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "Numeral system",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "Number",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:25",
-      "date": "2026-03-27",
-      "article": "Mountain",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
     {
       "topic": "Numeral system",
-      "visits": 5
+      "visits": 8
     },
     {
       "topic": "Art",
-      "visits": 3
-    },
-    {
-      "topic": "Mathematics",
       "visits": 3
     },
     {
@@ -119,6 +124,10 @@
     },
     {
       "topic": "Philosophy",
+      "visits": 2
+    },
+    {
+      "topic": "Metaphysics",
       "visits": 2
     }
   ]

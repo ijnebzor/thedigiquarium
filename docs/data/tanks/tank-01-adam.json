@@ -3,9 +3,54 @@
   "emoji": "\ud83d\udc64",
   "type": "Control",
   "status": "active",
-  "traces_12h": 10,
+  "traces_12h": 15,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "Ocean",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:19",
+      "date": "2026-03-27",
+      "article": "Australian Antarctic Territory",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:13",
+      "date": "2026-03-27",
+      "article": "Antarctica",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:07",
+      "date": "2026-03-27",
+      "article": "Australian Antarctic Territory",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:01",
+      "date": "2026-03-27",
+      "article": "Antarctica",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:55",
       "date": "2026-03-27",
@@ -50,51 +95,6 @@
       "next": "",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "21:30",
-      "date": "2026-03-27",
-      "article": "Definition",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:29",
-      "date": "2026-03-27",
-      "article": "Difference",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "Adult",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "Human",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:25",
-      "date": "2026-03-27",
-      "article": "History",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
@@ -103,15 +103,15 @@
       "visits": 4
     },
     {
+      "topic": "Antarctica",
+      "visits": 3
+    },
+    {
+      "topic": "Australian Antarctic Territory",
+      "visits": 3
+    },
+    {
       "topic": "Music",
-      "visits": 3
-    },
-    {
-      "topic": "Psychology",
-      "visits": 3
-    },
-    {
-      "topic": "Biology",
       "visits": 3
     },
     {
@@ -123,12 +123,12 @@
       "visits": 2
     },
     {
-      "topic": "Plant",
+      "topic": "Ocean",
       "visits": 2
     },
     {
-      "topic": "Human",
-      "visits": 1
+      "topic": "Psychology",
+      "visits": 2
     }
   ]
 }

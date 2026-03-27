@@ -3,9 +3,45 @@
   "emoji": "\ud83d\udd2d",
   "type": "Special",
   "status": "active",
-  "traces_12h": 8,
+  "traces_12h": 12,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "History",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:20",
+      "date": "2026-03-27",
+      "article": "Science",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:11",
+      "date": "2026-03-27",
+      "article": "Geodesy",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:03",
+      "date": "2026-03-27",
+      "article": "Geology",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:54",
       "date": "2026-03-27",
@@ -55,24 +91,6 @@
       "time": "21:29",
       "date": "2026-03-27",
       "article": "Adult",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "Human",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "Language",
       "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "next": "",
       "thought_en": null,

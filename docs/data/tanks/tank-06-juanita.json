@@ -3,9 +3,45 @@
   "emoji": "\ud83c\uddea\ud83c\uddf8",
   "type": "Spanish",
   "status": "active",
-  "traces_12h": 9,
+  "traces_12h": 13,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "Earth",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "es"
+    },
+    {
+      "time": "22:19",
+      "date": "2026-03-27",
+      "article": "Historia de la Tierra",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "es"
+    },
+    {
+      "time": "22:12",
+      "date": "2026-03-27",
+      "article": "Escala temporal geol\u00c3\u00b3gica",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "es"
+    },
+    {
+      "time": "22:05",
+      "date": "2026-03-27",
+      "article": "Cytota",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "es"
+    },
     {
       "time": "21:58",
       "date": "2026-03-27",
@@ -59,42 +95,11 @@
       "next": "",
       "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "language": "es"
-    },
-    {
-      "time": "21:29",
-      "date": "2026-03-27",
-      "article": "Artes decorativas",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "es"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "Art d\u00c3\u00a9co",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "es"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "ART",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "es"
     }
   ],
   "top_topics": [
     {
       "topic": "Historia",
-      "visits": 7
-    },
-    {
-      "topic": "Filosof\u00eda",
       "visits": 6
     },
     {
@@ -102,15 +107,11 @@
       "visits": 5
     },
     {
+      "topic": "Filosof\u00eda",
+      "visits": 5
+    },
+    {
       "topic": "M\u00fasica",
-      "visits": 5
-    },
-    {
-      "topic": "Ciencia",
-      "visits": 5
-    },
-    {
-      "topic": "Arte",
       "visits": 4
     },
     {
@@ -118,7 +119,15 @@
       "visits": 4
     },
     {
+      "topic": "Ciencia",
+      "visits": 4
+    },
+    {
       "topic": "Psicolog\u00eda",
+      "visits": 3
+    },
+    {
+      "topic": "Arte",
       "visits": 3
     }
   ]

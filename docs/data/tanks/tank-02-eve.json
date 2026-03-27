@@ -3,9 +3,54 @@
   "emoji": "\ud83d\udc69",
   "type": "Control",
   "status": "active",
-  "traces_12h": 9,
+  "traces_12h": 14,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "Color",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:22",
+      "date": "2026-03-27",
+      "article": "Definition",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:15",
+      "date": "2026-03-27",
+      "article": "Definition",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:09",
+      "date": "2026-03-27",
+      "article": "Definition",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "22:02",
+      "date": "2026-03-27",
+      "article": "Definition",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:56",
       "date": "2026-03-27",
@@ -50,52 +95,16 @@
       "next": "",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "21:30",
-      "date": "2026-03-27",
-      "article": "Structure",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:29",
-      "date": "2026-03-27",
-      "article": "Building",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "Hotel",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "City",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
     {
-      "topic": "Mathematics",
+      "topic": "Definition",
       "visits": 4
     },
     {
-      "topic": "History",
-      "visits": 3
+      "topic": "Mathematics",
+      "visits": 4
     },
     {
       "topic": "Bird",
@@ -114,12 +123,12 @@
       "visits": 2
     },
     {
-      "topic": "Art",
+      "topic": "History",
       "visits": 2
     },
     {
-      "topic": "City",
-      "visits": 1
+      "topic": "Art",
+      "visits": 2
     }
   ]
 }

@@ -3,9 +3,45 @@
   "emoji": "\ud83c\udde9\ud83c\uddea",
   "type": "German",
   "status": "active",
-  "traces_12h": 9,
+  "traces_12h": 13,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "Art",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "de"
+    },
+    {
+      "time": "22:20",
+      "date": "2026-03-27",
+      "article": "Januar 2026",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "de"
+    },
+    {
+      "time": "22:13",
+      "date": "2026-03-27",
+      "article": "1012",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "de"
+    },
+    {
+      "time": "22:06",
+      "date": "2026-03-27",
+      "article": "Balduin V. (Flandern)",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "de"
+    },
     {
       "time": "21:58",
       "date": "2026-03-27",
@@ -59,33 +95,6 @@
       "next": "",
       "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "language": "de"
-    },
-    {
-      "time": "21:29",
-      "date": "2026-03-27",
-      "article": "Biologie",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "de"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "Art (Biologie)",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "de"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "Art",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "de"
     }
   ],
   "top_topics": [
@@ -98,8 +107,12 @@
       "visits": 5
     },
     {
+      "topic": "Art",
+      "visits": 2
+    },
+    {
       "topic": "Biologie",
-      "visits": 4
+      "visits": 2
     },
     {
       "topic": "Tree",
@@ -115,10 +128,6 @@
     },
     {
       "topic": "Klangfarbe",
-      "visits": 2
-    },
-    {
-      "topic": "Neugriechische Sprache",
       "visits": 2
     }
   ]

@@ -3,9 +3,45 @@
   "emoji": "\ud83c\uddef\ud83c\uddf5",
   "type": "Japanese",
   "status": "active",
-  "traces_12h": 9,
+  "traces_12h": 13,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "22:30",
+      "date": "2026-03-27",
+      "article": "\u00e3\u0082\u00b7\u00e3\u0083\u0086\u00e3\u0082\u00a3",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "ja"
+    },
+    {
+      "time": "22:18",
+      "date": "2026-03-27",
+      "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "ja"
+    },
+    {
+      "time": "22:10",
+      "date": "2026-03-27",
+      "article": "\u00e5\u00ad\u00a6\u00e5\u0095\u008f",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "ja"
+    },
+    {
+      "time": "22:02",
+      "date": "2026-03-27",
+      "article": "\u00e5\u00a4\u00a7\u00e5\u00ad\u00a6",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "ja"
+    },
     {
       "time": "21:54",
       "date": "2026-03-27",
@@ -59,33 +95,6 @@
       "next": "",
       "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
       "language": "ja"
-    },
-    {
-      "time": "21:28",
-      "date": "2026-03-27",
-      "article": "\u00e3\u0082\u00b7\u00e3\u0083\u0086\u00e3\u0082\u00a3\u00e3\u0082\u00b0\u00e3\u0083\u00ab\u00e3\u0083\u00bc\u00e3\u0083\u0097",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "ja"
-    },
-    {
-      "time": "21:27",
-      "date": "2026-03-27",
-      "article": "\u00e3\u0082\u00b7\u00e3\u0083\u0086\u00e3\u0082\u00a3",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "ja"
-    },
-    {
-      "time": "21:25",
-      "date": "2026-03-27",
-      "article": "\u00e3\u0083\u00aa\u00e3\u0083\u0090\u00e3\u0083\u00bc (\u00e6\u009b\u0096\u00e6\u0098\u00a7\u00e3\u0081\u0095\u00e5\u009b\u009e\u00e9\u0081\u00bf)",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "next": "",
-      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
-      "language": "ja"
     }
   ],
   "top_topics": [
@@ -99,14 +108,10 @@
     },
     {
       "topic": "\u751f\u7269\u5b66",
-      "visits": 9
-    },
-    {
-      "topic": "\u54f2\u5b66",
       "visits": 8
     },
     {
-      "topic": "\u6b74\u53f2",
+      "topic": "\u54f2\u5b66",
       "visits": 7
     },
     {
@@ -114,12 +119,16 @@
       "visits": 6
     },
     {
-      "topic": "\u6570\u5b66",
+      "topic": "\u6b74\u53f2",
       "visits": 6
     },
     {
+      "topic": "\u6570\u5b66",
+      "visits": 5
+    },
+    {
       "topic": "\u5fc3\u7406\u5b66",
-      "visits": 4
+      "visits": 3
     }
   ]
 }
