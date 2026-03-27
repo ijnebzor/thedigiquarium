@@ -123,6 +123,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-01-adam:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -160,6 +161,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-02-eve:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -198,6 +200,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-03-cain:/logs
     command: ["bash", "/tank/start_agent.sh"]
     depends_on:
@@ -237,6 +240,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-04-abel:/logs
     command: ["bash", "/tank/start_agent.sh"]
     depends_on:
@@ -276,6 +280,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-05-juan:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -315,6 +320,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-06-juanita:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -354,6 +360,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-07-klaus:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -393,6 +400,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-08-genevieve:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -432,6 +440,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-09-wei:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -471,6 +480,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-10-mei:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -510,6 +520,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-11-haruki:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -549,6 +560,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-12-sakura:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -588,6 +600,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-13-victor:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -627,6 +640,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-14-iris:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -666,6 +680,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-15-observer:/logs
       - ./logs:/all_logs:ro
     command: ["bash", "/tank/start.sh"]
@@ -707,6 +722,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-16-seeker:/logs
     command: ["bash", "/tank/start.sh"]
     depends_on:
@@ -748,6 +764,7 @@ services:
     volumes:
       - ./src/explorer:/tank:ro
       - ./config/tanks:/config:ro
+      - ./shared:/shared
       - ./logs/tank-17-seth:/logs
     command: ["bash", "/tank/start_agent.sh"]
     depends_on:

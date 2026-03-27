@@ -276,17 +276,31 @@ def get_random_article(base_url: str) -> str:
 # ============================================================================
 
 def think(config: dict, system_prompt: str, article: dict) -> dict:
-    # Stagger Ollama requests based on tank ID for deterministic load spreading
-    # 17 tanks with ~60s cycle means each tank gets a ~3.5s window
-    import time as _time, os as _os, hashlib as _hash
+    """Ask the LLM to think about the article and choose next link.
+    Uses a shared lock file so only one tank talks to Ollama at a time."""
+    import time as _time, os as _os, fcntl as _fcntl, random as _rnd
+    
+    lock_path = '/shared/.ollama_lock'
     tank_id = _os.getenv('TANK_ID', 'tank-01')
-    tank_num = int(tank_id.split('-')[1]) if '-' in tank_id else 1
-    # Each tank waits (tank_num * 10) seconds mod cycle, plus some jitter
-    base_delay = (tank_num * 10) % 170  # Spread across ~3 minute window
-    import random as _rnd
-    jitter = _rnd.uniform(0, 15)
-    _time.sleep(base_delay + jitter)
-    """Ask the LLM to think about the article and choose next link."""
+    
+    # Wait for lock with timeout (max 5 min wait)
+    lock_fd = None
+    wait_start = _time.time()
+    while _time.time() - wait_start < 300:
+        try:
+            lock_fd = open(lock_path, 'w')
+            _fcntl.flock(lock_fd, _fcntl.LOCK_EX | _fcntl.LOCK_NB)
+            lock_fd.write(f'{tank_id} {_time.time()}')
+            lock_fd.flush()
+            break
+        except (IOError, OSError):
+            if lock_fd:
+                lock_fd.close()
+                lock_fd = None
+            _time.sleep(_rnd.uniform(3, 10))
+    
+    if lock_fd is None:
+        return {'thoughts': 'Could not acquire Ollama lock', 'next_link': '', 'raw': ''}
     
     user_prompt = f"""You are currently reading: {article['title']}
 
@@ -351,6 +365,14 @@ NEXT: [exact text of the link you want to follow]"""
             'next_link': '',
             'raw_response': ''
         }
+    finally:
+        # Release Ollama lock so next tank can go
+        if lock_fd:
+            try:
+                _fcntl.flock(lock_fd, _fcntl.LOCK_UN)
+                lock_fd.close()
+            except:
+                pass
 
 # ============================================================================
 # MAIN EXPLORATION LOOP
