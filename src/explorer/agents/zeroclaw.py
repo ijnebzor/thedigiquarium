@@ -18,6 +18,32 @@ from pathlib import Path
 from html.parser import HTMLParser
 from collections import deque
 
+# Shared Ollama mutex - only one tank talks to Ollama at a time
+import fcntl as _fcntl
+def acquire_ollama_lock():
+    lock_path = '/shared/.ollama_lock'
+    lock_fd = None
+    import time, random
+    wait_start = time.time()
+    while time.time() - wait_start < 300:
+        try:
+            lock_fd = open(lock_path, 'w')
+            _fcntl.flock(lock_fd, _fcntl.LOCK_EX | _fcntl.LOCK_NB)
+            return lock_fd
+        except (IOError, OSError):
+            if lock_fd: lock_fd.close()
+            lock_fd = None
+            time.sleep(random.uniform(3, 10))
+    return None
+
+def release_ollama_lock(lock_fd):
+    if lock_fd:
+        try:
+            _fcntl.flock(lock_fd, _fcntl.LOCK_UN)
+            lock_fd.close()
+        except: pass
+
+
 TANK_NAME = os.getenv('TANK_NAME', 'zeroclaw')
 GENDER = os.getenv('GENDER', 'a being without gender')
 KIWIX_URL = os.getenv('KIWIX_URL', 'http://digiquarium-kiwix-simple:8080')
@@ -26,7 +52,7 @@ OLLAMA_URL = os.getenv('OLLAMA_URL', 'http://digiquarium-ollama:11434')
 OLLAMA_MODEL = os.getenv('OLLAMA_MODEL', 'llama3.2:latest')
 LOG_DIR = Path(os.getenv('LOG_DIR', '/logs'))
 
-TIMEOUT = 60
+TIMEOUT = 300
 MAX_TOKENS = 100
 HISTORY_SIZE = 30
 MAX_REVISITS = 2
@@ -110,6 +136,7 @@ def ask(prompt):
     data = {'model': OLLAMA_MODEL, 'prompt': prompt, 'system': SYSTEM, 'stream': False,
             'options': {'temperature': 0.8, 'num_predict': MAX_TOKENS}}
     try:
+        _ollama_fd = acquire_ollama_lock()
         req = urllib.request.Request(f"{OLLAMA_URL}/api/generate", data=json.dumps(data).encode(),
                                     headers={'Content-Type': 'application/json'})
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:

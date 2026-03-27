@@ -22,6 +22,32 @@ from pathlib import Path
 from html.parser import HTMLParser
 from collections import deque
 
+# Shared Ollama mutex - only one tank talks to Ollama at a time
+import fcntl as _fcntl
+def acquire_ollama_lock():
+    lock_path = '/shared/.ollama_lock'
+    lock_fd = None
+    import time, random
+    wait_start = time.time()
+    while time.time() - wait_start < 300:
+        try:
+            lock_fd = open(lock_path, 'w')
+            _fcntl.flock(lock_fd, _fcntl.LOCK_EX | _fcntl.LOCK_NB)
+            return lock_fd
+        except (IOError, OSError):
+            if lock_fd: lock_fd.close()
+            lock_fd = None
+            time.sleep(random.uniform(3, 10))
+    return None
+
+def release_ollama_lock(lock_fd):
+    if lock_fd:
+        try:
+            _fcntl.flock(lock_fd, _fcntl.LOCK_UN)
+            lock_fd.close()
+        except: pass
+
+
 # Environment configuration
 TANK_NAME = os.getenv('TANK_NAME', 'openclaw')
 GENDER = os.getenv('GENDER', 'a being without gender')
@@ -295,10 +321,12 @@ def ask(prompt, enhanced=False):
             'options': {'temperature': 0.9, 'num_predict': 250}}
 
     try:
+        _ollama_fd = acquire_ollama_lock()
         req = urllib.request.Request(f"{OLLAMA_URL}/api/generate", data=json.dumps(data).encode(),
                                     headers={'Content-Type': 'application/json'})
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
             result = json.loads(r.read().decode())
+            release_ollama_lock(_ollama_fd) if "_ollama_fd" in dir() else None
         return result.get('response', '').strip()
     except:
         return None
