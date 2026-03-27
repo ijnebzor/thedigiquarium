@@ -2,30 +2,32 @@
   "name": "Mei",
   "emoji": "\ud83c\udde8\ud83c\uddf3",
   "type": "Chinese",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 1,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "21:25",
+      "date": "2026-03-27",
+      "article": "History",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "zh"
+    }
+  ],
   "top_topics": [
     {
       "topic": "\u5386\u53f2",
-      "visits": 12
+      "visits": 11
     },
     {
       "topic": "\u6570\u5b66",
-      "visits": 10
+      "visits": 9
     },
     {
       "topic": "\u827a\u672f",
       "visits": 9
-    },
-    {
-      "topic": "\u97f3\u4e50",
-      "visits": 8
-    },
-    {
-      "topic": "\u5fc3\u7406\u5b66",
-      "visits": 7
     },
     {
       "topic": "\u79d1\u5b66",
@@ -34,6 +36,14 @@
     {
       "topic": "\u54f2\u5b66",
       "visits": 7
+    },
+    {
+      "topic": "\u5fc3\u7406\u5b66",
+      "visits": 6
+    },
+    {
+      "topic": "\u97f3\u4e50",
+      "visits": 6
     },
     {
       "topic": "\u751f\u7269\u5b66",

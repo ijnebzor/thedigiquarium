@@ -2,21 +2,27 @@
   "name": "Haruki",
   "emoji": "\ud83c\uddef\ud83c\uddf5",
   "type": "Japanese",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 1,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "21:25",
+      "date": "2026-03-27",
+      "article": "\u00e3\u0083\u00aa\u00e3\u0083\u0090\u00e3\u0083\u00bc (\u00e6\u009b\u0096\u00e6\u0098\u00a7\u00e3\u0081\u0095\u00e5\u009b\u009e\u00e9\u0081\u00bf)",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "ja"
+    }
+  ],
   "top_topics": [
     {
       "topic": "\u97f3\u697d",
-      "visits": 12
-    },
-    {
-      "topic": "\u82b8\u8853",
       "visits": 10
     },
     {
-      "topic": "\u54f2\u5b66",
+      "topic": "\u82b8\u8853",
       "visits": 10
     },
     {
@@ -24,8 +30,12 @@
       "visits": 9
     },
     {
-      "topic": "\u6b74\u53f2",
+      "topic": "\u54f2\u5b66",
       "visits": 8
+    },
+    {
+      "topic": "\u6b74\u53f2",
+      "visits": 7
     },
     {
       "topic": "\u79d1\u5b66",

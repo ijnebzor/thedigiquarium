@@ -7,6 +7,42 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "21:25",
+      "date": "2026-03-27",
+      "article": "Thought",
+      "thought": "Exploring Thought...",
+      "next": "Conscious",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:21",
+      "date": "2026-03-27",
+      "article": "Sentence",
+      "thought": "Exploring Sentence...",
+      "next": "Thought",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:17",
+      "date": "2026-03-27",
+      "article": "Word",
+      "thought": "Exploring Word...",
+      "next": "Sentence",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:13",
+      "date": "2026-03-27",
+      "article": "Literature",
+      "thought": "Exploring Literature...",
+      "next": "Word",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
       "time": "21:04",
       "date": "2026-03-27",
       "article": "Psychology",
@@ -59,42 +95,6 @@
       "next": "Disease",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "20:59",
-      "date": "2026-03-27",
-      "article": "Disease",
-      "thought": "Exploring Disease...",
-      "next": "Syndrome",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "20:59",
-      "date": "2026-03-27",
-      "article": "Syndrome",
-      "thought": "Exploring Syndrome...",
-      "next": "Symptom",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "20:59",
-      "date": "2026-03-27",
-      "article": "Symptom",
-      "thought": "Exploring Symptom...",
-      "next": "Medicine",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "20:59",
-      "date": "2026-03-27",
-      "article": "Medicine",
-      "thought": "Exploring Medicine...",
-      "next": "Injury",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
@@ -128,7 +128,7 @@
     },
     {
       "topic": "Animal",
-      "visits": 36
+      "visits": 35
     }
   ]
 }

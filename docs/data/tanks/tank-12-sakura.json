@@ -2,10 +2,20 @@
   "name": "Sakura",
   "emoji": "\ud83c\uddef\ud83c\uddf5",
   "type": "Japanese",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 1,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "21:25",
+      "date": "2026-03-27",
+      "article": "\u00e3\u0082\u00aa\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a3\u00e3\u0083\u00b3",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "language": "ja"
+    }
+  ],
   "top_topics": [
     {
       "topic": "\u5fc3\u7406\u5b66",
@@ -13,22 +23,22 @@
     },
     {
       "topic": "\u54f2\u5b66",
-      "visits": 11
-    },
-    {
-      "topic": "\u6570\u5b66",
-      "visits": 10
+      "visits": 9
     },
     {
       "topic": "\u97f3\u697d",
       "visits": 9
     },
     {
-      "topic": "\u82b8\u8853",
-      "visits": 7
+      "topic": "\u6570\u5b66",
+      "visits": 9
     },
     {
       "topic": "\u79d1\u5b66",
+      "visits": 6
+    },
+    {
+      "topic": "\u82b8\u8853",
       "visits": 6
     },
     {
@@ -37,7 +47,7 @@
     },
     {
       "topic": "\u751f\u7269\u5b66",
-      "visits": 5
+      "visits": 4
     }
   ]
 }
