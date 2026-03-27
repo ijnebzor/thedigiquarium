@@ -42,10 +42,10 @@ DEFAULT_CONFIG = {
     "log_dir": "/logs",
     "extensions": [],
     "exploration": {
-        "think_time_min": 5,
-        "think_time_max": 15,
+        "think_time_min": 30,
+        "think_time_max": 90,
         "max_retries": 3,
-        "timeout": 60
+        "timeout": 300
     }
 }
 
@@ -276,6 +276,9 @@ def get_random_article(base_url: str) -> str:
 # ============================================================================
 
 def think(config: dict, system_prompt: str, article: dict) -> dict:
+    # Stagger Ollama requests to avoid overwhelming the CPU-only server
+    import random as _rnd, time as _time
+    _time.sleep(_rnd.uniform(5, 30))  # Random 5-30s delay to spread load
     """Ask the LLM to think about the article and choose next link."""
     
     user_prompt = f"""You are currently reading: {article['title']}
