@@ -3,9 +3,27 @@
   "emoji": "\ud83d\udd0d",
   "type": "Special",
   "status": "active",
-  "traces_12h": 7,
+  "traces_12h": 9,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "21:55",
+      "date": "2026-03-27",
+      "article": "Mountain (band)",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:46",
+      "date": "2026-03-27",
+      "article": "Mountain",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:38",
       "date": "2026-03-27",
@@ -73,19 +91,19 @@
   "top_topics": [
     {
       "topic": "Human",
-      "visits": 12
+      "visits": 10
     },
     {
       "topic": "Animal",
       "visits": 9
     },
     {
-      "topic": "Economics",
+      "topic": "England",
       "visits": 8
     },
     {
-      "topic": "England",
-      "visits": 8
+      "topic": "Economics",
+      "visits": 7
     },
     {
       "topic": "Earth",

@@ -3,9 +3,27 @@
   "emoji": "\ud83d\udc64",
   "type": "Control",
   "status": "active",
-  "traces_12h": 8,
+  "traces_12h": 10,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "21:55",
+      "date": "2026-03-27",
+      "article": "Australian Antarctic Territory",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:49",
+      "date": "2026-03-27",
+      "article": "Antarctica",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:42",
       "date": "2026-03-27",

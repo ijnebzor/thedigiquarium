@@ -3,9 +3,27 @@
   "emoji": "\ud83c\udde9\ud83c\uddea",
   "type": "German",
   "status": "active",
-  "traces_12h": 6,
+  "traces_12h": 8,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "21:53",
+      "date": "2026-03-27",
+      "article": "History (Fernsehsender)",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "de"
+    },
+    {
+      "time": "21:45",
+      "date": "2026-03-27",
+      "article": "History",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "language": "de"
+    },
     {
       "time": "21:37",
       "date": "2026-03-27",

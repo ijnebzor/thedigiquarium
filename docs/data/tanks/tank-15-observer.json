@@ -3,9 +3,27 @@
   "emoji": "\ud83d\udd2d",
   "type": "Special",
   "status": "active",
-  "traces_12h": 6,
+  "traces_12h": 8,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "21:54",
+      "date": "2026-03-27",
+      "article": "Upper Cretaceous",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "21:46",
+      "date": "2026-03-27",
+      "article": "Bird",
+      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "21:38",
       "date": "2026-03-27",
@@ -84,6 +102,14 @@
     },
     {
       "topic": "Tree",
+      "visits": 1
+    },
+    {
+      "topic": "Bird",
+      "visits": 1
+    },
+    {
+      "topic": "Upper Cretaceous",
       "visits": 1
     }
   ]

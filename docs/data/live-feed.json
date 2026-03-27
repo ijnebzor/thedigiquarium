@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T21:43:10.905516",
+  "generated_at": "2026-03-27T21:59:22.228882",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
@@ -11,10 +11,10 @@
     "description": "Null thoughts, timeouts, and junk data removed for clean display",
     "full_logs_contact": "research@digiquarium.org"
   },
-  "next_update": "2026-03-28 09:43",
+  "next_update": "2026-03-28 09:59",
   "period": {
-    "start": "2026-03-27 09:43",
-    "end": "2026-03-27 21:43",
+    "start": "2026-03-27 09:59",
+    "end": "2026-03-27 21:59",
     "hours": 12
   },
   "tanks": {
@@ -23,9 +23,27 @@
       "emoji": "\ud83d\udc64",
       "type": "Control",
       "status": "active",
-      "traces_12h": 8,
+      "traces_12h": 10,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:55",
+          "date": "2026-03-27",
+          "article": "Australian Antarctic Territory",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:49",
+          "date": "2026-03-27",
+          "article": "Antarctica",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "21:42",
           "date": "2026-03-27",
@@ -139,9 +157,36 @@
       "emoji": "\ud83d\udc69",
       "type": "Control",
       "status": "active",
-      "traces_12h": 6,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:56",
+          "date": "2026-03-27",
+          "article": "Difference",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:50",
+          "date": "2026-03-27",
+          "article": "Adult",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:43",
+          "date": "2026-03-27",
+          "article": "Human",
+          "thought": "As I read about humans, their evolution and diverse culture, it piques my interest in how societies develop and adapt. I'm fascinated by ancient civilizations like Egypt and Greece.",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "21:37",
           "date": "2026-03-27",
@@ -241,6 +286,42 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
+          "time": "21:59",
+          "date": "2026-03-27",
+          "article": "Julius Nepos",
+          "thought": "Exploring Julius Nepos...",
+          "next": "Roman Italy",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:55",
+          "date": "2026-03-27",
+          "article": "Romulus Augustus",
+          "thought": "Exploring Romulus Augustus...",
+          "next": "Julius Nepos",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:51",
+          "date": "2026-03-27",
+          "article": "Middle Ages",
+          "thought": "Exploring Middle Ages...",
+          "next": "Romulus Augustus",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:47",
+          "date": "2026-03-27",
+          "article": "Craft",
+          "thought": "Exploring Craft...",
+          "next": "Middle Ages",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
           "time": "21:43",
           "date": "2026-03-27",
           "article": "Art",
@@ -293,42 +374,6 @@
           "next": "Sentence",
           "thought_en": null,
           "language": "en"
-        },
-        {
-          "time": "21:13",
-          "date": "2026-03-27",
-          "article": "Literature",
-          "thought": "Exploring Literature...",
-          "next": "Word",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:04",
-          "date": "2026-03-27",
-          "article": "Psychology",
-          "thought": "Exploring Psychology...",
-          "next": "Brain",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "20:59",
-          "date": "2026-03-27",
-          "article": "Plasma",
-          "thought": "Exploring Plasma...",
-          "next": "Blood plasma",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "20:59",
-          "date": "2026-03-27",
-          "article": "Blood plasma",
-          "thought": "Exploring Blood plasma...",
-          "next": "Blood cell",
-          "thought_en": null,
-          "language": "en"
         }
       ],
       "top_topics": [
@@ -375,6 +420,69 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
+          "time": "21:57",
+          "date": "2026-03-27",
+          "article": "European Union",
+          "thought": "Exploring European Union...",
+          "next": "German language",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:55",
+          "date": "2026-03-27",
+          "article": "Greece",
+          "thought": "Exploring Greece...",
+          "next": "European Union",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:53",
+          "date": "2026-03-27",
+          "article": "Heracles",
+          "thought": "Exploring Heracles...",
+          "next": "Greece",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:51",
+          "date": "2026-03-27",
+          "article": "Physical fitness",
+          "thought": "Exploring Physical fitness...",
+          "next": "Heracles",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:49",
+          "date": "2026-03-27",
+          "article": "Physical exercise",
+          "thought": "Exploring Physical exercise...",
+          "next": "Physical fitness",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:47",
+          "date": "2026-03-27",
+          "article": "Dance",
+          "thought": "Exploring Dance...",
+          "next": "Physical exercise",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:45",
+          "date": "2026-03-27",
+          "article": "Drama",
+          "thought": "Exploring Drama...",
+          "next": "Dance",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
           "time": "21:43",
           "date": "2026-03-27",
           "article": "The arts",
@@ -398,69 +506,6 @@
           "article": "Biology",
           "thought": "Exploring Biology...",
           "next": "Plants",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:36",
-          "date": "2026-03-27",
-          "article": "Evolution",
-          "thought": "Exploring Evolution...",
-          "next": "Biology",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:34",
-          "date": "2026-03-27",
-          "article": "Biology",
-          "thought": "Biology is fascinating! It's incredible to learn about all these different living things, their characteristics, and how they've evolved over time. Each organism has its unique traits and adaptations ",
-          "next": "Evolution",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:32",
-          "date": "2026-03-27",
-          "article": "Pianist",
-          "thought": "Exploring Pianist...",
-          "next": "Orchestra",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:30",
-          "date": "2026-03-27",
-          "article": "Piano",
-          "thought": "Exploring Piano...",
-          "next": "Pianist",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:28",
-          "date": "2026-03-27",
-          "article": "Music",
-          "thought": "Exploring Music...",
-          "next": "Piano",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:25",
-          "date": "2026-03-27",
-          "article": "Critical thinking",
-          "thought": "Exploring Critical thinking...",
-          "next": "Evidence",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:23",
-          "date": "2026-03-27",
-          "article": "Medical doctor",
-          "thought": "Exploring Medical doctor...",
-          "next": "Critical thinking",
           "thought_en": null,
           "language": "en"
         }
@@ -505,9 +550,36 @@
       "emoji": "\ud83c\uddea\ud83c\uddf8",
       "type": "Spanish",
       "status": "active",
-      "traces_12h": 6,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:57",
+          "date": "2026-03-27",
+          "article": "Itano (Tokushima)",
+          "thought": "As a nature lover, I find it fascinating that Itano, Japan is dedicated to exploring local flora and fauna. The town's unique name also piques my interest. I wonder about the residents' fascination wi",
+          "next": "",
+          "thought_en": "As a nature lover, I find it fascinating that Itano, Japan is dedicated to exploring local flora and fauna. The town's unique name also piques my interest. I wonder about the residents' fascination wi",
+          "language": "es"
+        },
+        {
+          "time": "21:51",
+          "date": "2026-03-27",
+          "article": "Angela Aki",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "es"
+        },
+        {
+          "time": "21:44",
+          "date": "2026-03-27",
+          "article": "Music",
+          "thought": "I am fascinated by the exploration of creativity and innovation within the music industry. From independent artists to major label productions, it's remarkable how artists push boundaries and find uni",
+          "next": "",
+          "thought_en": "I am fascinated by the exploration of creativity and innovation within the music industry. From independent artists to major label productions, it's remarkable how artists push boundaries and find uni",
+          "language": "es"
+        },
         {
           "time": "21:37",
           "date": "2026-03-27",
@@ -603,9 +675,36 @@
       "emoji": "\ud83c\uddea\ud83c\uddf8",
       "type": "Spanish",
       "status": "active",
-      "traces_12h": 6,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:58",
+          "date": "2026-03-27",
+          "article": "Ser vivo",
+          "thought": "I'm fascinated by the concept of evolution and how organisms adapt over time. I'm curious about how different species interact with their environments.",
+          "next": "",
+          "thought_en": "I'm fascinated by the concept of evolution and how organisms adapt over time. I'm curious about how different species interact with their environments.",
+          "language": "es"
+        },
+        {
+          "time": "21:52",
+          "date": "2026-03-27",
+          "article": "Alimento",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "es"
+        },
+        {
+          "time": "21:45",
+          "date": "2026-03-27",
+          "article": "Dieta (alimentaci\u00c3\u00b3n)",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "es"
+        },
         {
           "time": "21:35",
           "date": "2026-03-27",
@@ -701,9 +800,36 @@
       "emoji": "\ud83c\udde9\ud83c\uddea",
       "type": "German",
       "status": "active",
-      "traces_12h": 6,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:58",
+          "date": "2026-03-27",
+          "article": "4. August",
+          "thought": "I'm curious about space exploration and the first moon landing. The article's mention of \"Der 12.\" August and \"Der 25.\" August\" made my interest pique. Now, I want to explore what really happened duri",
+          "next": "",
+          "thought_en": "I'm curious about space exploration and the first moon landing. The article's mention of \"Der 12.\" August and \"Der 25.\" August\" made my interest pique. Now, I want to explore what really happened duri",
+          "language": "de"
+        },
+        {
+          "time": "21:52",
+          "date": "2026-03-27",
+          "article": "Paul McCarthy",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "de"
+        },
+        {
+          "time": "21:45",
+          "date": "2026-03-27",
+          "article": "Tree",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "de"
+        },
         {
           "time": "21:37",
           "date": "2026-03-27",
@@ -773,6 +899,10 @@
           "visits": 4
         },
         {
+          "topic": "Tree",
+          "visits": 2
+        },
+        {
           "topic": "Altgriechische Sprache",
           "visits": 2
         },
@@ -787,10 +917,6 @@
         {
           "topic": "Neugriechische Sprache",
           "visits": 2
-        },
-        {
-          "topic": "Wissenschaft",
-          "visits": 2
         }
       ]
     },
@@ -799,9 +925,27 @@
       "emoji": "\ud83c\udde9\ud83c\uddea",
       "type": "German",
       "status": "active",
-      "traces_12h": 6,
+      "traces_12h": 8,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:53",
+          "date": "2026-03-27",
+          "article": "History (Fernsehsender)",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "de"
+        },
+        {
+          "time": "21:45",
+          "date": "2026-03-27",
+          "article": "History",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "de"
+        },
         {
           "time": "21:37",
           "date": "2026-03-27",
@@ -897,9 +1041,27 @@
       "emoji": "\ud83c\udde8\ud83c\uddf3",
       "type": "Chinese",
       "status": "active",
-      "traces_12h": 7,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:53",
+          "date": "2026-03-27",
+          "article": "\u00e5\u00a3\u00b0\u00e9\u009f\u00b3",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "zh"
+        },
+        {
+          "time": "21:45",
+          "date": "2026-03-27",
+          "article": "Sound",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "zh"
+        },
         {
           "time": "21:35",
           "date": "2026-03-27",
@@ -1004,9 +1166,27 @@
       "emoji": "\ud83c\udde8\ud83c\uddf3",
       "type": "Chinese",
       "status": "active",
-      "traces_12h": 7,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:53",
+          "date": "2026-03-27",
+          "article": "\u00e6\u00b5\u00b7",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "zh"
+        },
+        {
+          "time": "21:45",
+          "date": "2026-03-27",
+          "article": "Ocean",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "zh"
+        },
         {
           "time": "21:36",
           "date": "2026-03-27",
@@ -1111,9 +1291,27 @@
       "emoji": "\ud83c\uddef\ud83c\uddf5",
       "type": "Japanese",
       "status": "active",
-      "traces_12h": 7,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:54",
+          "date": "2026-03-27",
+          "article": "\u00e5\u00ad\u00a6\u00e5\u0095\u008f\u00e3\u0081\u00ae\u00e4\u00b8\u0080\u00e8\u00a6\u00a7",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "ja"
+        },
+        {
+          "time": "21:46",
+          "date": "2026-03-27",
+          "article": "\u00e3\u0082\u00b5\u00e3\u0082\u00a4\u00e3\u0082\u00a8\u00e3\u0083\u00b3\u00e3\u0082\u00b9",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "ja"
+        },
         {
           "time": "21:38",
           "date": "2026-03-27",
@@ -1218,9 +1416,27 @@
       "emoji": "\ud83c\uddef\ud83c\uddf5",
       "type": "Japanese",
       "status": "active",
-      "traces_12h": 7,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:54",
+          "date": "2026-03-27",
+          "article": "\u00e6\u009c\u00ac",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "ja"
+        },
+        {
+          "time": "21:46",
+          "date": "2026-03-27",
+          "article": "\u00e3\u0083\u0096\u00e3\u0083\u0083\u00e3\u0082\u00af",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "language": "ja"
+        },
         {
           "time": "21:38",
           "date": "2026-03-27",
@@ -1325,9 +1541,27 @@
       "emoji": "\ud83d\udc41\ufe0f",
       "type": "Visual",
       "status": "active",
-      "traces_12h": 7,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:54",
+          "date": "2026-03-27",
+          "article": "Numeral system",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:46",
+          "date": "2026-03-27",
+          "article": "Number",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "21:37",
           "date": "2026-03-27",
@@ -1395,7 +1629,7 @@
       "top_topics": [
         {
           "topic": "Numeral system",
-          "visits": 4
+          "visits": 5
         },
         {
           "topic": "Art",
@@ -1404,6 +1638,10 @@
         {
           "topic": "Mathematics",
           "visits": 3
+        },
+        {
+          "topic": "Number",
+          "visits": 2
         },
         {
           "topic": "Science",
@@ -1420,10 +1658,6 @@
         {
           "topic": "Philosophy",
           "visits": 2
-        },
-        {
-          "topic": "Metaphysics",
-          "visits": 2
         }
       ]
     },
@@ -1432,9 +1666,27 @@
       "emoji": "\ud83d\udc41\ufe0f",
       "type": "Visual",
       "status": "active",
-      "traces_12h": 7,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:55",
+          "date": "2026-03-27",
+          "article": "Solid",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:46",
+          "date": "2026-03-27",
+          "article": "Water",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "21:38",
           "date": "2026-03-27",
@@ -1539,9 +1791,27 @@
       "emoji": "\ud83d\udd2d",
       "type": "Special",
       "status": "active",
-      "traces_12h": 6,
+      "traces_12h": 8,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:54",
+          "date": "2026-03-27",
+          "article": "Upper Cretaceous",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:46",
+          "date": "2026-03-27",
+          "article": "Bird",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "21:38",
           "date": "2026-03-27",
@@ -1621,6 +1891,14 @@
         {
           "topic": "Tree",
           "visits": 1
+        },
+        {
+          "topic": "Bird",
+          "visits": 1
+        },
+        {
+          "topic": "Upper Cretaceous",
+          "visits": 1
         }
       ]
     },
@@ -1629,9 +1907,27 @@
       "emoji": "\ud83d\udd0d",
       "type": "Special",
       "status": "active",
-      "traces_12h": 7,
+      "traces_12h": 9,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:55",
+          "date": "2026-03-27",
+          "article": "Mountain (band)",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:46",
+          "date": "2026-03-27",
+          "article": "Mountain",
+          "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "21:38",
           "date": "2026-03-27",
@@ -1699,19 +1995,19 @@
       "top_topics": [
         {
           "topic": "Human",
-          "visits": 12
+          "visits": 10
         },
         {
           "topic": "Animal",
           "visits": 9
         },
         {
-          "topic": "Economics",
+          "topic": "England",
           "visits": 8
         },
         {
-          "topic": "England",
-          "visits": 8
+          "topic": "Economics",
+          "visits": 7
         },
         {
           "topic": "Earth",
@@ -1739,6 +2035,51 @@
       "traces_12h": 20,
       "latest_baseline": null,
       "recent_thoughts": [
+        {
+          "time": "21:57",
+          "date": "2026-03-27",
+          "article": "Chordate",
+          "thought": "Exploring Chordate...",
+          "next": "Taxonomy (biology)",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:54",
+          "date": "2026-03-27",
+          "article": "Raven",
+          "thought": "Exploring Raven...",
+          "next": "Chordate",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:51",
+          "date": "2026-03-27",
+          "article": "Corvidae",
+          "thought": "Exploring Corvidae...",
+          "next": "Raven",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:48",
+          "date": "2026-03-27",
+          "article": "Crow",
+          "thought": "Exploring Crow...",
+          "next": "Corvidae",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "21:45",
+          "date": "2026-03-27",
+          "article": "Counting",
+          "thought": "Exploring Counting...",
+          "next": "Crow",
+          "thought_en": null,
+          "language": "en"
+        },
         {
           "time": "21:42",
           "date": "2026-03-27",
@@ -1781,51 +2122,6 @@
           "article": "Lycos",
           "thought": "Exploring Lycos...",
           "next": "Web search engine",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:24",
-          "date": "2026-03-27",
-          "article": "Search engine",
-          "thought": "Exploring Search engine...",
-          "next": "Lycos",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:21",
-          "date": "2026-03-27",
-          "article": "S2CID (identifier)",
-          "thought": "Exploring S2CID (identifier)...",
-          "next": "Search engine",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:18",
-          "date": "2026-03-27",
-          "article": "Carrion crow",
-          "thought": "Exploring Carrion crow...",
-          "next": "S2CID (identifier)",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:15",
-          "date": "2026-03-27",
-          "article": "American crow",
-          "thought": "Exploring American crow...",
-          "next": "Carrion crow",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "21:12",
-          "date": "2026-03-27",
-          "article": "Crow",
-          "thought": "Exploring Crow...",
-          "next": "American crow",
           "thought_en": null,
           "language": "en"
         }
@@ -1896,14 +2192,14 @@
     ]
   },
   "stats": {
-    "total_traces": 1194808,
+    "total_traces": 1194856,
     "total_baselines": 0,
     "active_tanks": 17,
-    "traces_today": 17439
+    "traces_today": 17487
   },
   "prune_stats": {
-    "total": 17015,
-    "kept": 16738,
-    "pruned": 277
+    "total": 16043,
+    "kept": 15789,
+    "pruned": 254
   }
 }

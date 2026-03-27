@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-27T21:43:01.535289",
+  "timestamp": "2026-03-27T21:59:01.444633",
   "overall_healthy": true,
   "ollama": {
     "windows_healthy": false,
@@ -54,32 +54,32 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 12352,
+    "traces_today": 12371,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Ocean",
-        "traces": 8
+        "article": "Australian Antarctic Territory",
+        "traces": 10
       },
       {
         "name": "tank-02-eve",
-        "article": "Bird",
-        "traces": 6
+        "article": "Difference",
+        "traces": 9
       },
       {
         "name": "tank-03-cain",
-        "article": "Art",
-        "traces": 4930
+        "article": "Romulus Augustus",
+        "traces": 4933
       },
       {
         "name": "tank-04-abel",
-        "article": "Art",
-        "traces": 7402
+        "article": "European Union",
+        "traces": 7410
       },
       {
         "name": "tank-05-juan",
-        "article": "Fish",
-        "traces": 6
+        "article": "Itano (Tokushima)",
+        "traces": 9
       }
     ]
   },
@@ -93,26 +93,26 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-27 21:28:26 \u274c [OVERSEER] Ollama watcher heartbeat stale: 313.708562s old",
-    "2026-03-27 21:28:36 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:29:36 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-27 21:29:47 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-27 21:29:47 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:30:58 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:32:08 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:33:19 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:34:30 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:35:30 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-27 21:35:41 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-27 21:35:41 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:36:52 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:38:02 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:39:13 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:40:23 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:41:23 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-27 21:41:34 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-27 21:41:34 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-27 21:42:45 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']"
+    "2026-03-27 21:45:06 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:46:06 \u274c [OVERSEER] Ollama watcher heartbeat stale: 354.162813s old",
+    "2026-03-27 21:46:16 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:47:16 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-27 21:47:27 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-03-27 21:47:27 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:48:38 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:49:49 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:50:59 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:51:59 \u274c [OVERSEER] Ollama watcher heartbeat stale: 347.407225s old",
+    "2026-03-27 21:52:10 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:53:10 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-27 21:53:21 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-03-27 21:53:21 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:54:31 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:55:42 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:56:52 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:57:52 \u274c [OVERSEER] Ollama watcher heartbeat stale: 340.566975s old",
+    "2026-03-27 21:58:03 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error timed out>']",
+    "2026-03-27 21:59:03 \ud83d\udd0d [OVERSEER] Starting full system audit"
   ],
   "issues": []
 }
