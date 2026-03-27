@@ -68,7 +68,10 @@ def load_config(config_path: str = None) -> dict:
     # Environment overrides (for Docker)
     config['name'] = os.environ.get('SPECIMEN_NAME', config['name'])
     config['gender'] = os.environ.get('SPECIMEN_GENDER', config['gender'])
-    config['wikipedia_url'] = os.environ.get('WIKIPEDIA_URL', config['wikipedia_url'])
+    # Build wikipedia URL from KIWIX_URL + WIKI_BASE (docker-compose env vars)
+    kiwix_url = os.environ.get('KIWIX_URL', 'http://kiwix:8080')
+    wiki_base = os.environ.get('WIKI_BASE', '')
+    config['wikipedia_url'] = kiwix_url + wiki_base
     config['ollama_url'] = os.environ.get('OLLAMA_URL', config['ollama_url'])
     config['log_dir'] = os.environ.get('LOG_DIR', config['log_dir'])
     
@@ -250,10 +253,19 @@ def get_random_article(base_url: str) -> str:
         links = []
         for a in soup.find_all('a', href=True):
             href = a['href']
-            if wiki_base in href and '/A/' in href:
+            if wiki_base.strip('/') in href and ('/A/' in href or '/content/' in href):
                 links.append(base_url.rsplit('/', 1)[0] + href if href.startswith('/') else href)
         if links:
-            return rnd.choice(links)
+            url = rnd.choice(links)
+            # Convert /content/book/Article to /book/A/Article for fetch_article
+            if '/content/' in url:
+                url = url.replace('/content/', '/')
+                # Add /A/ prefix if not present
+                parts = url.split(wiki_base.strip('/'))
+                if len(parts) > 1:
+                    article_name = parts[1].lstrip('/')
+                    url = base_url + '/A/' + article_name
+            return url
         # Fallback: direct article URL
         return f"{base_url}/A/{seed}"
     except:
