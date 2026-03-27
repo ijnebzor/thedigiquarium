@@ -195,12 +195,19 @@ def fetch_article(url: str, timeout: int = 30) -> dict:
         if content_div:
             for a in content_div.find_all('a', href=True):
                 href = a.get('href', '')
-                if href.startswith('/wiki/') and ':' not in href:
+                # Handle both Wikipedia (/wiki/) and Kiwix (relative) URL formats
+                if href.startswith('/wiki/') or (not href.startswith(('#', 'http', '/')) and ':' not in href and len(href) > 2):
                     link_text = a.get_text(strip=True)
                     if link_text and len(link_text) > 2:
+                        # Make relative URLs absolute for Kiwix
+                        if not href.startswith('/'):
+                            wiki_base = os.getenv('WIKI_BASE', '')
+                            full_url = f"{wiki_base}/A/{href}" if wiki_base else href
+                        else:
+                            full_url = href
                         links.append({
                             'text': link_text,
-                            'url': href
+                            'url': full_url
                         })
         
         # Deduplicate links
@@ -226,12 +233,31 @@ def fetch_article(url: str, timeout: int = 30) -> dict:
         }
 
 def get_random_article(base_url: str) -> str:
-    """Get a random Wikipedia article URL."""
+    """Get a random Wikipedia article URL using Kiwix search API."""
+    import random as rnd
+    # Pick a random letter/word to search for variety
+    seeds = ['Earth', 'Water', 'Music', 'History', 'Science', 'Animal', 'City', 'Food',
+             'Language', 'Mountain', 'River', 'Ocean', 'Planet', 'Human', 'Art', 'Sport',
+             'Tree', 'Bird', 'Fish', 'Time', 'Light', 'Sound', 'Color', 'Number', 'Book']
+    seed = rnd.choice(seeds)
+    wiki_base = os.getenv('WIKI_BASE', '')
     try:
-        response = requests.get(f"{base_url}/random", allow_redirects=True, timeout=10)
-        return response.url
+        # Use Kiwix search to find articles
+        search_url = f"{base_url}/search?pattern={seed}&books={wiki_base.strip('/')}&pageLength=25"
+        response = requests.get(search_url, timeout=10)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        # Find article links in search results
+        links = []
+        for a in soup.find_all('a', href=True):
+            href = a['href']
+            if wiki_base in href and '/A/' in href:
+                links.append(base_url.rsplit('/', 1)[0] + href if href.startswith('/') else href)
+        if links:
+            return rnd.choice(links)
+        # Fallback: direct article URL
+        return f"{base_url}/A/{seed}"
     except:
-        return f"{base_url}/wiki/Main_Page"
+        return f"{base_url}/A/Earth"
 
 # ============================================================================
 # OLLAMA INTERACTION
