@@ -9,7 +9,7 @@ run_baseline() {
     local tank=$1 name=$2 gender=$3 kiwix=$4 wiki=$5
     
     log "=== $tank ($name) ==="
-    rm -f "logs/$tank/baseline.json"
+    # Never delete baseline data - new baselines save with timestamps
     
     docker run --rm \
         --network digiquarium_isolated-net \
