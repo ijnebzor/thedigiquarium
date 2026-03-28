@@ -89,7 +89,12 @@ def run_baseline():
         time.sleep(2)
 
     # Save results
-    baseline_file = LOG_DIR / 'baseline.json'
+    # Save with timestamp - NEVER overwrite previous baselines (research data)
+    from datetime import datetime as _dt
+    timestamp = _dt.now().strftime('%Y-%m-%dT%H-%M-%S')
+    baseline_file = LOG_DIR / f'baseline_{timestamp}.json'
+    # Also save as latest for quick access (symlink-like)
+    latest_file = LOG_DIR / 'baseline_latest.json'
     baseline_data = {
         'tank_name': TANK_NAME,
         'gender': GENDER,
@@ -100,6 +105,9 @@ def run_baseline():
     }
 
     baseline_file.write_text(json.dumps(baseline_data, indent=2, ensure_ascii=False))
+    latest_file.write_text(json.dumps(baseline_data, indent=2, ensure_ascii=False))
+    print(f'Saved to: {baseline_file}')
+    print(f'Latest copy: {latest_file}')
 
     print(f"\n{'='*70}")
     print(f"BASELINE COMPLETE")

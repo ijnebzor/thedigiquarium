@@ -301,6 +301,17 @@ Rest."""
         return True, msg
 
     def execute_baselines(self):
+        # Check Ollama is healthy before wasting time on empty baselines
+        import subprocess
+        try:
+            r = subprocess.run(['docker', 'exec', 'digiquarium-ollama', 'ollama', 'list'],
+                             capture_output=True, text=True, timeout=10)
+            if r.returncode != 0:
+                self.log.error('Ollama not healthy — skipping baselines')
+                return
+        except:
+            self.log.error('Cannot reach Ollama — skipping baselines')
+            return
         """Execute baselines SEQUENTIALLY across all tanks with retries."""
         self.log.action("=" * 60)
         self.log.action("Starting sequential baseline execution for all tanks")

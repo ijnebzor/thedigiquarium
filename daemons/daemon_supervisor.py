@@ -215,8 +215,37 @@ def check_and_restart_containers():
     return restarted
 
 
+def check_ollama():
+    """Ensure Ollama container exists and is healthy. Restart via compose if needed."""
+    try:
+        result = subprocess.run(
+            ['docker', 'inspect', '-f', '{{.State.Running}}', 'digiquarium-ollama'],
+            capture_output=True, text=True, timeout=10
+        )
+        if 'true' not in result.stdout.lower():
+            log('CRITICAL: Ollama is down — restarting via docker compose')
+            subprocess.run(
+                f'cd {DIGIQUARIUM_HOME} && docker compose up -d ollama',
+                shell=True, capture_output=True, timeout=120
+            )
+            log('Ollama restart initiated')
+            return False
+        return True
+    except Exception as e:
+        log(f'CRITICAL: Cannot check Ollama: {e}')
+        # Try to start it anyway
+        subprocess.run(
+            f'cd {DIGIQUARIUM_HOME} && docker compose up -d ollama',
+            shell=True, capture_output=True, timeout=120
+        )
+        return False
+
+
 def main():
     log("=== DAEMON SUPERVISOR v2.0 CHECK ===")
+
+    # Check Ollama first - critical infrastructure
+    check_ollama()
 
     restarted_daemons = 0
     
