@@ -12,6 +12,7 @@ It replaces:
 
 v3.1 Changes:
   - Ollama check now does a REAL inference test, not just container state check
+  - Uses docker exec for API checks (port not exposed to host)
   - Logs to dedicated crash log file for post-mortem analysis
   - Better diagnostics on failure (OOM check, memory state, restart count)
 
@@ -37,8 +38,6 @@ import sys
 import json
 import subprocess
 import time
-import urllib.request
-import urllib.error
 from pathlib import Path
 from datetime import datetime
 
@@ -50,7 +49,6 @@ OLLAMA_FAILURE_TRACKER = Path(DIGIQUARIUM_HOME) / 'shared' / '.ollama_failure_co
 OLLAMA_CRASH_LOG = Path(DIGIQUARIUM_HOME) / 'logs' / 'ollama' / 'ollama_crashes.log'
 
 # All 21 continuous daemons that MUST be running
-# Each uses its wrapper script at daemons/<name>/<name>.py
 CONTINUOUS_DAEMONS = [
     # core
     'overseer',
@@ -108,26 +106,18 @@ def log_crash(msg):
 
 
 def pid_exists(pid):
-    """Check if a PID actually exists by checking /proc/<pid>."""
+    """Check if a PID actually exists."""
     try:
-        # os.kill with signal 0 checks existence without sending a signal
         os.kill(pid, 0)
         return True
     except (ProcessLookupError, PermissionError):
-        # ProcessLookupError = no such process
-        # PermissionError = process exists but we can't signal it (still alive)
         return pid > 0 and os.path.exists(f'/proc/{pid}')
     except (OSError, ValueError):
         return False
 
 
 def is_daemon_running(daemon_name):
-    """Check if daemon is running by reading its PID file and verifying the PID exists.
-    
-    Checks multiple possible PID file locations:
-    1. daemons/<name>/<name>.pid  (standard location)
-    2. daemons/<name>.pid  (some daemons write here)
-    """
+    """Check if daemon is running by reading its PID file and verifying the PID exists."""
     pid_paths = [
         DAEMONS_DIR / daemon_name / f'{daemon_name}.pid',
         DAEMONS_DIR / f'{daemon_name}.pid',
@@ -174,7 +164,6 @@ def start_daemon(name):
             start_new_session=True
         )
 
-        # Write PID file
         pid_path = DAEMONS_DIR / name / f'{name}.pid'
         pid_path.parent.mkdir(parents=True, exist_ok=True)
         pid_path.write_text(str(proc.pid))
@@ -187,14 +176,13 @@ def start_daemon(name):
 
 
 def get_container_full_name(prefix):
-    """Get the full container name matching a prefix (e.g. tank-01 -> tank-01-adam)."""
+    """Get the full container name matching a prefix."""
     try:
         result = subprocess.run(
             ['docker', 'ps', '-a', '--format', '{{.Names}}', '--filter', f'name={prefix}'],
             capture_output=True, text=True, timeout=10
         )
         if result.returncode == 0 and result.stdout.strip():
-            # Return first matching container
             for name in result.stdout.strip().split('\n'):
                 if name.startswith(prefix):
                     return name
@@ -282,12 +270,10 @@ def collect_ollama_diagnostics():
     """Collect detailed diagnostics when Ollama fails."""
     diag = []
     try:
-        # Memory state
         mem = subprocess.run(['free', '-h'], capture_output=True, text=True, timeout=5)
         if mem.returncode == 0:
             diag.append(f"Memory:\n{mem.stdout.strip()}")
         
-        # Container state details
         inspect = subprocess.run(
             ['docker', 'inspect', '-f',
              'Status={{.State.Status}} OOMKilled={{.State.OOMKilled}} ExitCode={{.State.ExitCode}} '
@@ -298,7 +284,6 @@ def collect_ollama_diagnostics():
         if inspect.returncode == 0:
             diag.append(f"Container: {inspect.stdout.strip()}")
         
-        # Last few docker logs
         logs = subprocess.run(
             ['docker', 'logs', '--tail', '10', 'digiquarium-ollama'],
             capture_output=True, text=True, timeout=10
@@ -312,49 +297,46 @@ def collect_ollama_diagnostics():
 
 
 def check_ollama_api():
-    """Check if Ollama API responds to /api/tags."""
+    """Check if Ollama responds via docker exec (port not exposed to host)."""
     try:
-        req = urllib.request.Request('http://localhost:11434/api/tags', method='GET')
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read())
-            return 'models' in data
+        result = subprocess.run(
+            ['docker', 'exec', 'digiquarium-ollama', 'ollama', 'list'],
+            capture_output=True, text=True, timeout=15
+        )
+        return result.returncode == 0 and 'NAME' in result.stdout
     except Exception:
         return False
 
 
 def check_ollama_inference():
-    """Do a real inference test — verify Ollama can actually generate text."""
+    """Do a real inference test via a temporary tank container on the isolated network."""
     try:
-        payload = json.dumps({
-            "model": "llama3.2:latest",
-            "prompt": "Say OK",
-            "stream": False,
-            "options": {"num_predict": 5}
-        }).encode('utf-8')
-        req = urllib.request.Request(
-            'http://localhost:11434/api/generate',
-            data=payload,
-            headers={'Content-Type': 'application/json'},
-            method='POST'
+        result = subprocess.run(
+            ['docker', 'run', '--rm', '--network', 'digiquarium_isolated-net',
+             'digiquarium-tank:latest',
+             'curl', '-sf', '--max-time', '30',
+             'http://digiquarium-ollama:11434/api/generate',
+             '-d', '{"model":"llama3.2:latest","prompt":"Say OK","stream":false,"options":{"num_predict":5}}'],
+            capture_output=True, text=True, timeout=45
         )
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read())
+        if result.returncode == 0 and result.stdout.strip():
+            data = json.loads(result.stdout)
             return 'response' in data and len(data['response'].strip()) > 0
     except Exception:
-        return False
+        pass
+    return False
 
 
 def check_ollama():
-    """Ensure Ollama container exists, API responds, and can serve inference.
+    """Ensure Ollama container exists, responds, and can serve inference.
     
     Three-layer check:
     1. Docker container running?
-    2. API responding to /api/tags?
+    2. Ollama process responding? (via docker exec)
     3. Can it actually generate text? (every 5th check to reduce load)
     
     Tracks consecutive failures. After 5 consecutive failures (5 minutes),
     logs a CRITICAL alert and attempts restart via docker compose.
-    Writes health status to shared/.ollama_health for scheduler.
     """
     consecutive_failures = read_failure_count()
     failure_reason = None
@@ -368,22 +350,21 @@ def check_ollama():
         if 'true' not in result.stdout.lower():
             failure_reason = "Container not running"
         
-        # Layer 2: API responding?
+        # Layer 2: Ollama process responding?
         if failure_reason is None and not check_ollama_api():
-            failure_reason = "API not responding (container running)"
+            failure_reason = "Ollama not responding (container running)"
         
         # Layer 3: Inference test (every 5th minute to reduce load)
         if failure_reason is None:
             minute = datetime.now().minute
             if minute % 5 == 0:
                 if not check_ollama_inference():
-                    failure_reason = "Inference test failed (API responds but can't generate)"
+                    failure_reason = "Inference test failed (ollama responds but can't generate)"
 
         if failure_reason:
             consecutive_failures += 1
             write_failure_count(consecutive_failures)
             
-            # Log diagnostics to crash log
             log_crash(f"FAILURE #{consecutive_failures}: {failure_reason}")
             diagnostics = collect_ollama_diagnostics()
             log_crash(f"Diagnostics:\n{diagnostics}")
@@ -405,7 +386,6 @@ def check_ollama():
                     log_crash(f'RESTART FAILED: {restart_result.stderr[:200]}')
             else:
                 log(f'WARNING: Ollama check failed (failure {consecutive_failures}/5 before CRITICAL): {failure_reason}')
-                # Still try to restart
                 subprocess.run(
                     f'cd {DIGIQUARIUM_HOME} && docker compose up -d ollama',
                     shell=True, capture_output=True, timeout=120
@@ -416,7 +396,6 @@ def check_ollama():
             write_ollama_health(False, f'{failure_reason} ({consecutive_failures} consecutive failures)')
             return False
         else:
-            # All checks passed — reset failure counter
             if consecutive_failures > 0:
                 log(f'Ollama recovered after {consecutive_failures} consecutive failures')
                 log_crash(f'RECOVERED after {consecutive_failures} failures')
@@ -432,7 +411,6 @@ def check_ollama():
         if consecutive_failures >= 5:
             log(f'CRITICAL: Ollama unreachable for {consecutive_failures} consecutive checks — forcing restart')
 
-        # Try to start it anyway
         subprocess.run(
             f'cd {DIGIQUARIUM_HOME} && docker compose up -d ollama',
             shell=True, capture_output=True, timeout=120

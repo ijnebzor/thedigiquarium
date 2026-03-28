@@ -5,7 +5,7 @@
 # Run via cron every minute. This is a SEPARATE safety net from the daemon
 # supervisor. It does THREE things:
 #   1. Checks if the Docker container is running
-#   2. Checks if the Ollama API responds
+#   2. Checks if the Ollama API responds (via docker exec, since port not exposed)
 #   3. Does a REAL inference test to verify the model can actually generate
 #
 # If any check fails, it restarts Ollama and logs everything with timestamps
@@ -20,7 +20,6 @@ DIGIQUARIUM_HOME="/home/ijneb/digiquarium"
 CONTAINER_NAME="digiquarium-ollama"
 CRASH_LOG="$DIGIQUARIUM_HOME/logs/ollama/ollama_crashes.log"
 HEALTH_LOG="$DIGIQUARIUM_HOME/logs/ollama/ollama_health.log"
-OLLAMA_URL="http://localhost:11434"
 MAX_LOG_SIZE=10485760  # 10MB
 
 # Ensure log directory exists
@@ -54,7 +53,7 @@ collect_diagnostics() {
     log_crash "Docker container state: $(docker inspect -f '{{.State.Status}} (OOMKilled={{.State.OOMKilled}}, ExitCode={{.State.ExitCode}}, StartedAt={{.State.StartedAt}}, FinishedAt={{.State.FinishedAt}})' $CONTAINER_NAME 2>&1)"
     log_crash "Docker daemon uptime: $(docker info --format '{{.ServerVersion}}' 2>&1)"
     log_crash "Container restart count: $(docker inspect -f '{{.RestartCount}}' $CONTAINER_NAME 2>&1)"
-    log_crash "Last 5 container logs:"
+    log_crash "Last 5 container logs (stderr):"
     docker logs --tail 5 "$CONTAINER_NAME" 2>&1 | while IFS= read -r line; do
         log_crash "  | $line"
     done
@@ -87,11 +86,11 @@ restart_ollama() {
         waited=$((waited + 5))
     done
     
-    # Wait for API to respond
+    # Wait for API to respond (via docker exec since port not exposed to host)
     waited=0
-    while [ $waited -lt 60 ]; do
-        if curl -sf --max-time 5 "$OLLAMA_URL/api/tags" >/dev/null 2>&1; then
-            log_crash "API responding after restart (waited ${waited}s additional)"
+    while [ $waited -lt 90 ]; do
+        if docker exec "$CONTAINER_NAME" ollama list >/dev/null 2>&1; then
+            log_crash "Ollama responding after restart (waited ${waited}s additional)"
             log_crash "RESTART COMPLETE - Ollama recovered"
             return 0
         fi
@@ -99,7 +98,7 @@ restart_ollama() {
         waited=$((waited + 5))
     done
     
-    log_crash "RESTART FAILED - Ollama API still not responding after 60s"
+    log_crash "RESTART FAILED - Ollama still not responding after 90s"
     return 1
 }
 
@@ -116,10 +115,10 @@ check_container() {
 }
 
 # =============================================================================
-# CHECK 2: Does the Ollama API respond?
+# CHECK 2: Does Ollama respond? (via docker exec since port not exposed)
 # =============================================================================
 check_api() {
-    if ! curl -sf --max-time 10 "$OLLAMA_URL/api/tags" >/dev/null 2>&1; then
+    if ! docker exec "$CONTAINER_NAME" ollama list >/dev/null 2>&1; then
         return 1
     fi
     return 0
@@ -127,12 +126,14 @@ check_api() {
 
 # =============================================================================
 # CHECK 3: Can Ollama actually serve an inference request?
-# This is the critical check — container can be "running" and API can respond
-# to /api/tags but model loading/inference can still be broken.
+# Uses a tank container on the isolated network to test real inference.
 # =============================================================================
 check_inference() {
     local response
-    response=$(curl -sf --max-time 30 "$OLLAMA_URL/api/generate" \
+    # Run a quick inference test via a temporary container on the same network
+    response=$(docker run --rm --network digiquarium_isolated-net \
+        digiquarium-tank:latest \
+        curl -sf --max-time 30 "http://digiquarium-ollama:11434/api/generate" \
         -d '{"model": "llama3.2:latest", "prompt": "Say OK", "stream": false, "options": {"num_predict": 5}}' 2>&1)
     
     if [ $? -ne 0 ]; then
@@ -160,8 +161,8 @@ main() {
     
     # Check 2: API responding?
     if ! check_api; then
-        log_crash "CHECK FAILED: API not responding (container is running)"
-        restart_ollama "API not responding despite container running"
+        log_crash "CHECK FAILED: Ollama not responding (container is running)"
+        restart_ollama "Ollama not responding despite container running"
         return
     fi
     
@@ -170,13 +171,13 @@ main() {
     minute=$(date '+%M')
     if [ $((minute % 5)) -eq 0 ]; then
         if ! check_inference; then
-            log_crash "CHECK FAILED: Inference test failed (API responds but can't generate)"
+            log_crash "CHECK FAILED: Inference test failed (ollama responds but can't generate)"
             restart_ollama "Inference test failed - model may be corrupted or OOM"
             return
         fi
-        log_health "OK: container=up api=up inference=ok mem=$(free -h | grep Mem | awk '{print $3 "/" $2}')"
+        log_health "OK: container=up ollama=up inference=ok mem=$(free -h | grep Mem | awk '{print $3 "/" $2}')"
     else
-        log_health "OK: container=up api=up mem=$(free -h | grep Mem | awk '{print $3 "/" $2}')"
+        log_health "OK: container=up ollama=up mem=$(free -h | grep Mem | awk '{print $3 "/" $2}')"
     fi
 }
 
