@@ -3,21 +3,12 @@
   "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
   "status": "active",
-  "traces_12h": 15,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "22:43",
-      "date": "2026-03-27",
-      "article": "Pizza",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "22:36",
-      "date": "2026-03-27",
+      "time": "11:55",
+      "date": "2026-03-28",
       "article": "Food",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -25,73 +16,82 @@
       "language": "en"
     },
     {
-      "time": "22:30",
-      "date": "2026-03-27",
-      "article": "Book",
+      "time": "11:49",
+      "date": "2026-03-28",
+      "article": "Pasta",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:19",
-      "date": "2026-03-27",
-      "article": "Numeral system",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:43",
+      "date": "2026-03-28",
+      "article": "Italian food",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:11",
-      "date": "2026-03-27",
-      "article": "Numeral system",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:37",
+      "date": "2026-03-28",
+      "article": "Pizza",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:02",
-      "date": "2026-03-27",
-      "article": "Numeral system",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:31",
+      "date": "2026-03-28",
+      "article": "Food",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:54",
-      "date": "2026-03-27",
-      "article": "Numeral system",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:25",
+      "date": "2026-03-28",
+      "article": "Pasta",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:46",
-      "date": "2026-03-27",
-      "article": "Number",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:19",
+      "date": "2026-03-28",
+      "article": "Italian food",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:37",
-      "date": "2026-03-27",
-      "article": "Science",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:13",
+      "date": "2026-03-28",
+      "article": "Pizza",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:31",
-      "date": "2026-03-27",
-      "article": "Numeral system",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "time": "11:07",
+      "date": "2026-03-28",
+      "article": "Food",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "11:02",
+      "date": "2026-03-28",
+      "article": "Pasta",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
@@ -99,36 +99,36 @@
   ],
   "top_topics": [
     {
-      "topic": "Numeral system",
-      "visits": 8
+      "topic": "Food",
+      "visits": 34
     },
     {
-      "topic": "Art",
-      "visits": 3
+      "topic": "Italian food",
+      "visits": 33
+    },
+    {
+      "topic": "Pasta",
+      "visits": 33
+    },
+    {
+      "topic": "Pizza",
+      "visits": 33
+    },
+    {
+      "topic": "Numeral system",
+      "visits": 8
     },
     {
       "topic": "Number",
       "visits": 2
     },
     {
+      "topic": "Mountain",
+      "visits": 1
+    },
+    {
       "topic": "Science",
-      "visits": 2
-    },
-    {
-      "topic": "Psychology",
-      "visits": 2
-    },
-    {
-      "topic": "Stomach",
-      "visits": 2
-    },
-    {
-      "topic": "Philosophy",
-      "visits": 2
-    },
-    {
-      "topic": "Metaphysics",
-      "visits": 2
+      "visits": 1
     }
   ]
 }

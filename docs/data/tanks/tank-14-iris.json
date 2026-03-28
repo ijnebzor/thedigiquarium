@@ -3,95 +3,95 @@
   "emoji": "\ud83d\udc41\ufe0f",
   "type": "Visual",
   "status": "active",
-  "traces_12h": 15,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "22:43",
-      "date": "2026-03-27",
-      "article": "Biology",
+      "time": "11:57",
+      "date": "2026-03-28",
+      "article": "Definition",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:37",
-      "date": "2026-03-27",
-      "article": "Science",
+      "time": "11:50",
+      "date": "2026-03-28",
+      "article": "Definition",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:30",
-      "date": "2026-03-27",
-      "article": "Sport",
+      "time": "11:44",
+      "date": "2026-03-28",
+      "article": "Definition",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:20",
-      "date": "2026-03-27",
-      "article": "Chemical element",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:38",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:12",
-      "date": "2026-03-27",
-      "article": "Chemistry",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:32",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:03",
-      "date": "2026-03-27",
-      "article": "States of matter",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:26",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:55",
-      "date": "2026-03-27",
-      "article": "Solid",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:20",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:46",
-      "date": "2026-03-27",
-      "article": "Water",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:14",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:38",
-      "date": "2026-03-27",
-      "article": "Food",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:08",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:32",
-      "date": "2026-03-27",
-      "article": "Estonian language",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "time": "11:01",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
@@ -99,16 +99,8 @@
   ],
   "top_topics": [
     {
-      "topic": "Science",
-      "visits": 3
-    },
-    {
-      "topic": "Biology",
-      "visits": 3
-    },
-    {
-      "topic": "Philosophy",
-      "visits": 3
+      "topic": "Definition",
+      "visits": 129
     },
     {
       "topic": "Estonia",
@@ -119,16 +111,24 @@
       "visits": 2
     },
     {
-      "topic": "Chemistry",
-      "visits": 2
+      "topic": "Light",
+      "visits": 1
     },
     {
-      "topic": "Psychology",
-      "visits": 2
+      "topic": "Music",
+      "visits": 1
     },
     {
-      "topic": "Physiology",
-      "visits": 2
+      "topic": "Food",
+      "visits": 1
+    },
+    {
+      "topic": "Water",
+      "visits": 1
+    },
+    {
+      "topic": "Solid",
+      "visits": 1
     }
   ]
 }

@@ -3,95 +3,95 @@
   "emoji": "\ud83d\udd0d",
   "type": "Special",
   "status": "active",
-  "traces_12h": 15,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "22:42",
-      "date": "2026-03-27",
-      "article": "Terrestrial planet",
+      "time": "11:52",
+      "date": "2026-03-28",
+      "article": "Definition",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:36",
-      "date": "2026-03-27",
-      "article": "Planet",
+      "time": "11:46",
+      "date": "2026-03-28",
+      "article": "Definition",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:30",
-      "date": "2026-03-27",
-      "article": "Language",
+      "time": "11:40",
+      "date": "2026-03-28",
+      "article": "Definition",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:22",
-      "date": "2026-03-27",
-      "article": "Long Island",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:34",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:13",
-      "date": "2026-03-27",
-      "article": "Long Island (disambiguation)",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:28",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:04",
-      "date": "2026-03-27",
-      "article": "Long Island",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:22",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:55",
-      "date": "2026-03-27",
-      "article": "Mountain (band)",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:15",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:46",
-      "date": "2026-03-27",
-      "article": "Mountain",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:09",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:38",
-      "date": "2026-03-27",
-      "article": "Water",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:03",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:31",
-      "date": "2026-03-27",
-      "article": "Steel",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "time": "10:57",
+      "date": "2026-03-28",
+      "article": "Definition",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
@@ -99,36 +99,36 @@
   ],
   "top_topics": [
     {
-      "topic": "Human",
-      "visits": 10
-    },
-    {
-      "topic": "Animal",
-      "visits": 9
-    },
-    {
-      "topic": "England",
-      "visits": 8
-    },
-    {
-      "topic": "Earth",
-      "visits": 7
-    },
-    {
-      "topic": "Taxonomy (biology)",
-      "visits": 7
-    },
-    {
-      "topic": "Atlantic Ocean",
-      "visits": 7
-    },
-    {
       "topic": "Definition",
-      "visits": 7
+      "visits": 120
     },
     {
-      "topic": "Language",
-      "visits": 6
+      "topic": "Long Island",
+      "visits": 2
+    },
+    {
+      "topic": "History",
+      "visits": 1
+    },
+    {
+      "topic": "Art",
+      "visits": 1
+    },
+    {
+      "topic": "Bowl",
+      "visits": 1
+    },
+    {
+      "topic": "Container",
+      "visits": 1
+    },
+    {
+      "topic": "Containerization",
+      "visits": 1
+    },
+    {
+      "topic": "Steel",
+      "visits": 1
     }
   ]
 }

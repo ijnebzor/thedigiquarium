@@ -3,21 +3,12 @@
   "emoji": "\ud83d\udd2d",
   "type": "Special",
   "status": "active",
-  "traces_12h": 14,
+  "traces_12h": 20,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "22:43",
-      "date": "2026-03-27",
-      "article": "River (disambiguation)",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "22:36",
-      "date": "2026-03-27",
+      "time": "11:54",
+      "date": "2026-03-28",
       "article": "River",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -25,79 +16,96 @@
       "language": "en"
     },
     {
-      "time": "22:30",
-      "date": "2026-03-27",
-      "article": "History",
+      "time": "11:48",
+      "date": "2026-03-28",
+      "article": "River (disambiguation)",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:20",
-      "date": "2026-03-27",
-      "article": "Science",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:42",
+      "date": "2026-03-28",
+      "article": "River",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:11",
-      "date": "2026-03-27",
-      "article": "Geodesy",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:36",
+      "date": "2026-03-28",
+      "article": "River (disambiguation)",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "22:03",
-      "date": "2026-03-27",
-      "article": "Geology",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:30",
+      "date": "2026-03-28",
+      "article": "River",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:54",
-      "date": "2026-03-27",
-      "article": "Upper Cretaceous",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:24",
+      "date": "2026-03-28",
+      "article": "River (disambiguation)",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:46",
-      "date": "2026-03-27",
-      "article": "Bird",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:18",
+      "date": "2026-03-28",
+      "article": "River",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:38",
-      "date": "2026-03-27",
-      "article": "Tree",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=300)",
+      "time": "11:11",
+      "date": "2026-03-28",
+      "article": "River (disambiguation)",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "21:32",
-      "date": "2026-03-27",
-      "article": "Definition",
-      "thought": "Error thinking: HTTPConnectionPool(host='digiquarium-ollama', port=11434): Read timed out. (read timeout=60)",
+      "time": "11:06",
+      "date": "2026-03-28",
+      "article": "River",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "11:00",
+      "date": "2026-03-28",
+      "article": "River (disambiguation)",
+      "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": null,
       "language": "en"
     }
   ],
   "top_topics": [
+    {
+      "topic": "River",
+      "visits": 67
+    },
+    {
+      "topic": "River (disambiguation)",
+      "visits": 66
+    },
     {
       "topic": "Language",
       "visits": 1
@@ -120,14 +128,6 @@
     },
     {
       "topic": "Tree",
-      "visits": 1
-    },
-    {
-      "topic": "Bird",
-      "visits": 1
-    },
-    {
-      "topic": "Upper Cretaceous",
       "visits": 1
     }
   ]
