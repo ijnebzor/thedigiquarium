@@ -3,12 +3,22 @@
 set -e
 cd /home/ijneb/digiquarium
 
+# Source the Ollama preflight check
+source /home/ijneb/digiquarium/scripts/ollama_preflight.sh
+
 log() { echo "[$(date '+%H:%M:%S')] $1"; }
 
 run_baseline() {
     local tank=$1 name=$2 gender=$3 kiwix=$4 wiki=$5
     
     log "=== $tank ($name) ==="
+    
+    # Verify Ollama is still alive before each tank (belt & suspenders)
+    if ! curl -sf --max-time 10 "http://localhost:11434/api/tags" >/dev/null 2>&1; then
+        log "WARNING: Ollama not responding before $tank baseline. Waiting for recovery..."
+        wait_for_ollama "http://localhost:11434"
+    fi
+    
     # Never delete baseline data - new baselines save with timestamps
     
     docker run --rm \
@@ -36,6 +46,10 @@ run_baseline() {
 }
 
 log "=== FINAL BASELINE RUN ==="
+
+# Pre-flight: verify Ollama can actually serve inference BEFORE starting
+OLLAMA_PREFLIGHT_URL="http://localhost:11434"
+wait_for_ollama "http://localhost:11434"
 
 # Adam already done - skip
 # Eve

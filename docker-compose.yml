@@ -84,20 +84,34 @@ services:
 
   # ==========================================================================
   # ==========================================================================
-  # OLLAMA (LOCAL)
+  # OLLAMA (LOCAL) - CRITICAL INFRASTRUCTURE
   # ==========================================================================
   ollama:
     image: ollama/ollama:latest
     container_name: digiquarium-ollama
     volumes:
       - ./ollama-data:/root/.ollama
+      - ./logs/ollama:/var/log/ollama
+    environment:
+      - OLLAMA_DEBUG=INFO
+      - OLLAMA_HOST=0.0.0.0:11434
     healthcheck:
-      test: ["CMD", "ollama", "list"]
+      # Real inference-capable health check: verify the API responds AND a model is loaded
+      test: ["CMD-SHELL", "curl -sf http://localhost:11434/api/tags | grep -q 'models' || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 3
-      start_period: 15s
-    restart: unless-stopped
+      start_period: 30s
+    restart: always
+    mem_limit: 2g
+    memswap_limit: 3g
+    mem_reservation: 512m
+    oom_kill_disable: false
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "5"
     networks:
       isolated-net:
         ipv4_address: 172.30.0.11
@@ -782,4 +796,3 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["agents"]
-
