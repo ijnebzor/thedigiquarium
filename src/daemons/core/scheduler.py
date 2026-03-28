@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-THE SCHEDULER v3.0 - Task Orchestration with Baseline Execution
-================================================================
+THE SCHEDULER v4.0 - Task Orchestration with Baseline Execution & SLA Awareness
+=================================================================================
 Manages baseline schedules, daily summaries, congregation scheduling, task queues.
 v3.0: Actually EXECUTES baselines sequentially instead of writing a queue file.
-      Stops explorer, runs baseline, verifies results, restarts explorer.
-      Spaces baselines across the 12-hour cycle.
+v4.0: System-wide operation lock for Ollama-dependent ops, SLA tracking,
+      Ollama health gating before baselines.
 
 SLA: 30 min detection, 30 min remediation
 """
@@ -31,6 +31,13 @@ from shared.utils import DaemonLogger, run_command, write_pid_file
 
 DIGIQUARIUM_DIR = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium'))
 CHECK_INTERVAL = 1800  # 30 minutes
+
+# System-wide operation lock for Ollama-dependent operations
+OPERATION_LOCK_FILE = DIGIQUARIUM_DIR / 'shared' / '.operation_lock'
+
+# SLA config
+SLA_TARGET_SECONDS = 1800  # 30 minutes
+SLA_STATUS_FILE = DIGIQUARIUM_DIR / 'daemons' / 'scheduler' / 'sla_status.json'
 
 # All 17 tanks
 ALL_TANKS = [f'tank-{i:02d}' for i in range(1, 18)]
@@ -64,6 +71,85 @@ DEFAULT_CONGREGATION_TOPICS = [
 ]
 
 
+class OperationLock:
+    """System-wide operation lock for Ollama-dependent operations.
+
+    Uses a file lock at shared/.operation_lock so that baselines, congregations,
+    and therapy sessions never overlap across any daemon.
+    """
+
+    def __init__(self, operation_name, logger):
+        self.operation_name = operation_name
+        self.log = logger
+        self.lock_path = OPERATION_LOCK_FILE
+        self.lock_path.parent.mkdir(parents=True, exist_ok=True)
+        self._fd = None
+
+    def acquire(self):
+        """Try to acquire the system-wide operation lock (non-blocking).
+        Returns True if acquired, False if another operation holds it.
+        """
+        try:
+            self._fd = open(self.lock_path, 'w')
+            fcntl.flock(self._fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            # Write lock info so other processes can see who holds it
+            lock_info = json.dumps({
+                'operation': self.operation_name,
+                'pid': os.getpid(),
+                'acquired_at': datetime.now().isoformat()
+            })
+            self._fd.write(lock_info)
+            self._fd.flush()
+            self.log.info(f"Acquired operation lock for: {self.operation_name}")
+            return True
+        except IOError:
+            # Lock is held by another operation
+            holder = self._read_lock_holder()
+            self.log.warn(f"Operation lock held by {holder} — cannot start {self.operation_name}")
+            if self._fd:
+                self._fd.close()
+                self._fd = None
+            return False
+        except Exception as e:
+            self.log.error(f"Failed to acquire operation lock: {e}")
+            if self._fd:
+                self._fd.close()
+                self._fd = None
+            return False
+
+    def release(self):
+        """Release the system-wide operation lock."""
+        if self._fd:
+            try:
+                fcntl.flock(self._fd, fcntl.LOCK_UN)
+                self._fd.close()
+                self._fd = None
+                self.log.info(f"Released operation lock for: {self.operation_name}")
+            except Exception as e:
+                self.log.error(f"Failed to release operation lock: {e}")
+
+    def _read_lock_holder(self):
+        """Read who currently holds the lock."""
+        try:
+            if self.lock_path.exists():
+                content = self.lock_path.read_text().strip()
+                if content:
+                    data = json.loads(content)
+                    return f"{data.get('operation', 'unknown')} (pid {data.get('pid', '?')})"
+        except Exception:
+            pass
+        return "unknown"
+
+    def __enter__(self):
+        if not self.acquire():
+            raise RuntimeError(f"Could not acquire operation lock for {self.operation_name}")
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.release()
+        return False
+
+
 class Scheduler:
     def __init__(self):
         self.log = DaemonLogger('scheduler')
@@ -71,6 +157,7 @@ class Scheduler:
         self.baseline_status_file = DIGIQUARIUM_DIR / 'daemons' / 'scheduler' / 'baseline_status.json'
         self.should_exit = False
         self.dream_cooldown = {}  # Track dream timestamps per tank
+        self.sla_violations_count = 0
         self.load_schedule()
 
     def load_schedule(self):
@@ -105,6 +192,56 @@ class Scheduler:
     def save_schedule(self):
         self.schedule_file.parent.mkdir(parents=True, exist_ok=True)
         self.schedule_file.write_text(json.dumps(self.schedule, indent=2))
+
+    # ─── SLA TRACKING ────────────────────────────────────────────
+    def write_sla_status(self, cycle_duration):
+        """Write SLA compliance status to JSON file."""
+        compliant = cycle_duration <= SLA_TARGET_SECONDS
+        if not compliant:
+            self.sla_violations_count += 1
+
+        status = {
+            'daemon': 'scheduler',
+            'last_check_time': datetime.now().isoformat(),
+            'cycle_duration': round(cycle_duration, 2),
+            'sla_target': SLA_TARGET_SECONDS,
+            'compliant': compliant,
+            'violations_count': self.sla_violations_count
+        }
+        SLA_STATUS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        SLA_STATUS_FILE.write_text(json.dumps(status, indent=2))
+
+    # ─── OLLAMA HEALTH CHECK ─────────────────────────────────────
+    def check_ollama_healthy(self):
+        """Check Ollama health before any Ollama-dependent operation.
+        Reads the ollama_watcher status file and also does a direct check.
+        Returns True if Ollama is healthy.
+        """
+        # Check ollama_watcher status file
+        watcher_status = DIGIQUARIUM_DIR / 'daemons' / 'ollama_watcher' / 'status.json'
+        if watcher_status.exists():
+            try:
+                data = json.loads(watcher_status.read_text())
+                if not data.get('overall_healthy', False):
+                    self.log.warn("Ollama unhealthy per ollama_watcher status")
+                    return False
+            except Exception:
+                pass
+
+        # Direct check
+        try:
+            r = subprocess.run(
+                ['docker', 'exec', 'digiquarium-ollama', 'ollama', 'list'],
+                capture_output=True, text=True, timeout=10
+            )
+            if r.returncode != 0:
+                self.log.error('Ollama not healthy (direct check failed)')
+                return False
+        except Exception:
+            self.log.error('Cannot reach Ollama (direct check)')
+            return False
+
+        return True
 
     # ─── DOCKER HELPERS ──────────────────────────────────────────
     def _docker_exec(self, container, cmd, timeout=300):
@@ -301,82 +438,91 @@ Rest."""
         return True, msg
 
     def execute_baselines(self):
-        # Check Ollama is healthy before wasting time on empty baselines
-        import subprocess
-        try:
-            r = subprocess.run(['docker', 'exec', 'digiquarium-ollama', 'ollama', 'list'],
-                             capture_output=True, text=True, timeout=10)
-            if r.returncode != 0:
-                self.log.error('Ollama not healthy — skipping baselines')
-                return
-        except:
-            self.log.error('Cannot reach Ollama — skipping baselines')
+        """Execute baselines SEQUENTIALLY across all tanks with operation lock and Ollama gating."""
+        # Check Ollama health first
+        if not self.check_ollama_healthy():
+            self.log.error('Ollama not healthy — skipping baselines, will retry next cycle')
             return
-        """Execute baselines SEQUENTIALLY across all tanks with retries."""
-        self.log.action("=" * 60)
-        self.log.action("Starting sequential baseline execution for all tanks")
-        start_time = datetime.now()
 
-        results = {}
-        for i, tank_num in enumerate(range(1, 18)):
-            if self.should_exit:
-                self.log.info("Baseline execution interrupted by shutdown signal")
-                break
+        # Acquire system-wide operation lock
+        op_lock = OperationLock('baselines', self.log)
+        if not op_lock.acquire():
+            self.log.warn('Another Ollama-dependent operation in progress — queuing baselines for next cycle')
+            return
 
-            # Get actual container name from docker
-            container = f"tank-{tank_num:02d}"
-            # Find full container name (e.g. tank-01-adam)
-            code, stdout, _ = run_command(f'docker ps --format "{{{{.Names}}}}" | grep "^{container}"')
-            if code != 0 or not stdout.strip():
-                self.log.warn(f"No running container found for {container}")
-                results[container] = {'success': False, 'reason': 'Container not found'}
-                continue
+        try:
+            self.log.action("=" * 60)
+            self.log.action("Starting sequential baseline execution for all tanks")
+            start_time = datetime.now()
 
-            full_name = stdout.strip().split('\n')[0]
-            self.log.info(f"[{i+1}/17] Processing {full_name}")
-
-            # Try baseline with retries
-            success = False
-            for attempt in range(1, BASELINE_MAX_RETRIES + 1):
-                ok, msg = self._run_single_baseline(full_name)
-                if ok:
-                    results[full_name] = {'success': True, 'message': msg, 'attempt': attempt}
-                    success = True
+            results = {}
+            for i, tank_num in enumerate(range(1, 18)):
+                if self.should_exit:
+                    self.log.info("Baseline execution interrupted by shutdown signal")
                     break
-                else:
-                    self.log.warn(f"Baseline attempt {attempt}/{BASELINE_MAX_RETRIES} failed for {full_name}: {msg}")
-                    if attempt < BASELINE_MAX_RETRIES:
-                        self.log.info(f"Waiting 30s before retry...")
-                        time.sleep(30)
 
-            if not success:
-                results[full_name] = {'success': False, 'reason': msg}
+                # Re-check Ollama health between tanks
+                if i > 0 and i % 5 == 0:
+                    if not self.check_ollama_healthy():
+                        self.log.error(f'Ollama became unhealthy after {i} tanks — stopping baselines')
+                        break
 
-            # Space out between tanks to avoid resource contention
-            if i < 16 and not self.should_exit:  # Don't sleep after last tank
-                self.log.info(f"Spacing: waiting {BASELINE_SPACING_SECONDS}s before next tank")
-                time.sleep(BASELINE_SPACING_SECONDS)
+                # Get actual container name from docker
+                container = f"tank-{tank_num:02d}"
+                # Find full container name (e.g. tank-01-adam)
+                code, stdout, _ = run_command(f'docker ps --format "{{{{.Names}}}}" | grep "^{container}"')
+                if code != 0 or not stdout.strip():
+                    self.log.warn(f"No running container found for {container}")
+                    results[container] = {'success': False, 'reason': 'Container not found'}
+                    continue
 
-        # Save status
-        elapsed = (datetime.now() - start_time).total_seconds()
-        succeeded = sum(1 for r in results.values() if r.get('success'))
-        status = {
-            'timestamp': datetime.now().isoformat(),
-            'duration_seconds': round(elapsed, 1),
-            'total_tanks': 17,
-            'succeeded': succeeded,
-            'failed': 17 - succeeded,
-            'results': results,
-        }
-        self.baseline_status_file.parent.mkdir(parents=True, exist_ok=True)
-        self.baseline_status_file.write_text(json.dumps(status, indent=2))
+                full_name = stdout.strip().split('\n')[0]
+                self.log.info(f"[{i+1}/17] Processing {full_name}")
 
-        self.log.action(f"Baseline execution complete: {succeeded}/17 succeeded in {elapsed:.0f}s")
-        self.log.action("=" * 60)
+                # Try baseline with retries
+                success = False
+                for attempt in range(1, BASELINE_MAX_RETRIES + 1):
+                    ok, msg = self._run_single_baseline(full_name)
+                    if ok:
+                        results[full_name] = {'success': True, 'message': msg, 'attempt': attempt}
+                        success = True
+                        break
+                    else:
+                        self.log.warn(f"Baseline attempt {attempt}/{BASELINE_MAX_RETRIES} failed for {full_name}: {msg}")
+                        if attempt < BASELINE_MAX_RETRIES:
+                            self.log.info(f"Waiting 30s before retry...")
+                            time.sleep(30)
 
-        # Update schedule
-        self.schedule['last_baseline_run'] = datetime.now().isoformat()
-        self.save_schedule()
+                if not success:
+                    results[full_name] = {'success': False, 'reason': msg}
+
+                # Space out between tanks to avoid resource contention
+                if i < 16 and not self.should_exit:  # Don't sleep after last tank
+                    self.log.info(f"Spacing: waiting {BASELINE_SPACING_SECONDS}s before next tank")
+                    time.sleep(BASELINE_SPACING_SECONDS)
+
+            # Save status
+            elapsed = (datetime.now() - start_time).total_seconds()
+            succeeded = sum(1 for r in results.values() if r.get('success'))
+            status = {
+                'timestamp': datetime.now().isoformat(),
+                'duration_seconds': round(elapsed, 1),
+                'total_tanks': 17,
+                'succeeded': succeeded,
+                'failed': 17 - succeeded,
+                'results': results,
+            }
+            self.baseline_status_file.parent.mkdir(parents=True, exist_ok=True)
+            self.baseline_status_file.write_text(json.dumps(status, indent=2))
+
+            self.log.action(f"Baseline execution complete: {succeeded}/17 succeeded in {elapsed:.0f}s")
+            self.log.action("=" * 60)
+
+            # Update schedule
+            self.schedule['last_baseline_run'] = datetime.now().isoformat()
+            self.save_schedule()
+        finally:
+            op_lock.release()
 
     # ─── DAILY SUMMARY ───────────────────────────────────────────
     def should_run_daily_summary(self):
@@ -441,39 +587,54 @@ Rest."""
         return hours >= interval
 
     def schedule_congregation(self):
-        self.log.action("Scheduling a congregation")
-        topic_idx = self.schedule.get('congregation_topic_index', 0)
-        topic = DEFAULT_CONGREGATION_TOPICS[topic_idx % len(DEFAULT_CONGREGATION_TOPICS)]
+        """Schedule a congregation with operation lock and Ollama health check."""
+        # Check Ollama health first
+        if not self.check_ollama_healthy():
+            self.log.warn('Ollama not healthy — skipping congregation scheduling')
+            return
 
-        # Pick 2-4 random participants using tank container IDs
-        all_container_ids = list(TANK_CONTAINER_NAMES.values())
-        num_participants = random.randint(2, 4)
-        participants = random.sample(all_container_ids, num_participants)
+        # Acquire operation lock
+        op_lock = OperationLock('congregation', self.log)
+        if not op_lock.acquire():
+            self.log.warn('Operation lock held — queuing congregation for next cycle')
+            return
 
-        queue_file = DIGIQUARIUM_DIR / 'daemons' / 'moderator' / 'congregation_queue.json'
-        queue_file.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            self.log.action("Scheduling a congregation")
+            topic_idx = self.schedule.get('congregation_topic_index', 0)
+            topic = DEFAULT_CONGREGATION_TOPICS[topic_idx % len(DEFAULT_CONGREGATION_TOPICS)]
 
-        queue = []
-        if queue_file.exists():
-            try:
-                queue = json.loads(queue_file.read_text())
-            except Exception:
-                queue = []
+            # Pick 2-4 random participants using tank container IDs
+            all_container_ids = list(TANK_CONTAINER_NAMES.values())
+            num_participants = random.randint(2, 4)
+            participants = random.sample(all_container_ids, num_participants)
 
-        queue.append({
-            "id": f"cong-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
-            "topic": topic,
-            "participants": participants,
-            "scheduled_at": datetime.now().isoformat(),
-            "scheduled_by": "scheduler"
-        })
+            queue_file = DIGIQUARIUM_DIR / 'daemons' / 'moderator' / 'congregation_queue.json'
+            queue_file.parent.mkdir(parents=True, exist_ok=True)
 
-        queue_file.write_text(json.dumps(queue, indent=2))
+            queue = []
+            if queue_file.exists():
+                try:
+                    queue = json.loads(queue_file.read_text())
+                except Exception:
+                    queue = []
 
-        self.schedule['last_congregation_scheduled'] = datetime.now().isoformat()
-        self.schedule['congregation_topic_index'] = topic_idx + 1
-        self.save_schedule()
-        self.log.info(f"Congregation queued: '{topic}' with {participants}")
+            queue.append({
+                "id": f"cong-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
+                "topic": topic,
+                "participants": participants,
+                "scheduled_at": datetime.now().isoformat(),
+                "scheduled_by": "scheduler"
+            })
+
+            queue_file.write_text(json.dumps(queue, indent=2))
+
+            self.schedule['last_congregation_scheduled'] = datetime.now().isoformat()
+            self.schedule['congregation_topic_index'] = topic_idx + 1
+            self.save_schedule()
+            self.log.info(f"Congregation queued: '{topic}' with {participants}")
+        finally:
+            op_lock.release()
 
     # ─── THERAPY SESSIONS ────────────────────────────────────────
     def should_schedule_therapy(self):
@@ -486,28 +647,45 @@ Rest."""
         return hours >= interval
 
     def schedule_therapy(self):
-        self.log.action("Queueing therapy session check")
-        queue_file = DIGIQUARIUM_DIR / 'daemons' / 'therapist' / 'therapy_queue.json'
-        queue_file.parent.mkdir(parents=True, exist_ok=True)
+        """Queue therapy session with operation lock and Ollama health check."""
+        # Check Ollama health first
+        if not self.check_ollama_healthy():
+            self.log.warn('Ollama not healthy — skipping therapy scheduling')
+            return
 
-        queue = {
-            "scheduled_at": datetime.now().isoformat(),
-            "tanks": [f'tank-{i:02d}' for i in range(1, 18)],
-            "type": "wellness_check"
-        }
-        queue_file.write_text(json.dumps(queue, indent=2))
+        # Acquire operation lock
+        op_lock = OperationLock('therapy', self.log)
+        if not op_lock.acquire():
+            self.log.warn('Operation lock held — queuing therapy for next cycle')
+            return
 
-        self.schedule['last_therapy_session'] = datetime.now().isoformat()
-        self.save_schedule()
-        self.log.info("Therapy wellness check queued")
+        try:
+            self.log.action("Queueing therapy session check")
+            queue_file = DIGIQUARIUM_DIR / 'daemons' / 'therapist' / 'therapy_queue.json'
+            queue_file.parent.mkdir(parents=True, exist_ok=True)
+
+            queue = {
+                "scheduled_at": datetime.now().isoformat(),
+                "tanks": [f'tank-{i:02d}' for i in range(1, 18)],
+                "type": "wellness_check"
+            }
+            queue_file.write_text(json.dumps(queue, indent=2))
+
+            self.schedule['last_therapy_session'] = datetime.now().isoformat()
+            self.save_schedule()
+            self.log.info("Therapy wellness check queued")
+        finally:
+            op_lock.release()
 
     # ─── MAIN LOOP ───────────────────────────────────────────────
     def run(self):
         print("╔══════════════════════════════════════════════════════════════════════╗")
-        print("║         THE SCHEDULER v3.0 - Sequential Baseline Execution           ║")
+        print("║     THE SCHEDULER v4.0 - SLA-Aware + Operation Lock + Baselines     ║")
         print("╚══════════════════════════════════════════════════════════════════════╝")
         write_pid_file('scheduler')
-        self.log.info("THE SCHEDULER v3.0 starting")
+        self.log.info("THE SCHEDULER v4.0 starting")
+        self.log.info(f"SLA target: {SLA_TARGET_SECONDS}s ({SLA_TARGET_SECONDS // 60} min)")
+        self.log.info(f"Operation lock: {OPERATION_LOCK_FILE}")
 
         def handle_signal(signum, frame):
             self.should_exit = True
@@ -518,6 +696,8 @@ Rest."""
 
         while not self.should_exit:
             try:
+                cycle_start = time.time()
+
                 # Wellness check and dream mode (every cycle)
                 self.check_wellness_and_trigger_dreams()
 
@@ -537,7 +717,13 @@ Rest."""
                 if self.should_schedule_therapy():
                     self.schedule_therapy()
 
-                self.log.info("Schedule check complete")
+                cycle_end = time.time()
+                cycle_duration = cycle_end - cycle_start
+
+                # Write SLA status
+                self.write_sla_status(cycle_duration)
+
+                self.log.info(f"Schedule check complete (cycle took {cycle_duration:.1f}s)")
                 time.sleep(CHECK_INTERVAL)
             except Exception as e:
                 self.log.error(f"Error: {e}")

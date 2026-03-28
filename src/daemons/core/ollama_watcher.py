@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
 """
-THE OLLAMA WATCHER v4.0 - LLM Infrastructure Monitor with Self-Healing
+THE OLLAMA WATCHER v5.0 - LLM Infrastructure Monitor with Self-Healing
 =======================================================================
 Advanced monitoring with exponential backoff, circuit breakers, heartbeat files,
 watchdog timer, state persistence, rate-limited escalations, and graceful shutdown.
 
-v4.0 Features (2026-03-25):
-- Exponential backoff: 5s base, doubles per failure, 300s max, resets on success
+v5.0 Features (2026-03-28):
+- SLA-aware: Base cycle interval is 300s (5 min) per SLA
+- SLA tracking: Writes sla_status.json each cycle
+- Exponential backoff on failure only (5s base, doubles per failure, 300s max, resets on success)
 - Circuit breaker pattern: 3 independent breakers (Windows, Proxy, E2E)
-  Each tracks: state, failure count, last failure time, 300s cooldown
-- Heartbeat file: Updated every cycle, external monitors check staleness
+- Heartbeat file: Updated every cycle
 - Watchdog timer: Separate thread, force-kill if main loop stuck >5 min
-- State persistence: JSON file with stats, loaded on startup
-- Rate-limited escalations: Only escalate once per 10 failures
-- Signal handling: SIGTERM/SIGINT graceful shutdown, SIGHUP reload config
-- Chunked sleep: 1-second increments, responsive to shutdown flag
+- State persistence: JSON file with stats
 
-"The most reliable monitoring is monitoring that heals itself." - v4.0 Philosophy
+"The most reliable monitoring is monitoring that heals itself." - v5.0 Philosophy
 """
 
 import os
@@ -48,6 +46,11 @@ PROXY_CONTAINER = "digiquarium-ollama"
 HEARTBEAT_FILE = Path('/tmp/ollama_watcher_heartbeat')
 STATE_PERSISTENCE_FILE = DAEMONS_DIR / 'ollama_watcher' / 'state.json'
 WATCHDOG_TIMEOUT = 300  # 5 minutes in seconds
+
+# SLA config: 5 minute cycle
+SLA_TARGET_SECONDS = 300  # 5 minutes
+SLA_STATUS_FILE = DAEMONS_DIR / 'ollama_watcher' / 'sla_status.json'
+BASE_CYCLE_INTERVAL = 300  # 5 minutes — the healthy-state interval per SLA
 
 
 # ============================================================================
@@ -162,8 +165,9 @@ class OllamaWatcher:
         self.total_failures = 0
         self.total_recoveries = 0
         self.last_escalation_failure_count = 0
+        self.sla_violations_count = 0
 
-        # Exponential backoff tracking
+        # Exponential backoff tracking (used only during failures)
         self.current_backoff_seconds = 5
         self.base_backoff = 5
         self.max_backoff = 300
@@ -213,7 +217,7 @@ class OllamaWatcher:
             'DEBUG': '🐛'
         }
         icon = icons.get(level, 'ℹ️')
-        log_entry = f"{timestamp} {icon} [OLLAMA_WATCHER v4.0] {message}"
+        log_entry = f"{timestamp} {icon} [OLLAMA_WATCHER v5.0] {message}"
 
         with open(self.log_file, 'a') as f:
             f.write(log_entry + '\n')
@@ -233,6 +237,23 @@ class OllamaWatcher:
         except Exception as e:
             self.log('ERROR', f'Failed to write heartbeat: {e}')
 
+    def write_sla_status(self, cycle_duration):
+        """Write SLA compliance status to JSON file."""
+        compliant = cycle_duration <= SLA_TARGET_SECONDS
+        if not compliant:
+            self.sla_violations_count += 1
+
+        status = {
+            'daemon': 'ollama_watcher',
+            'last_check_time': datetime.now().isoformat(),
+            'cycle_duration': round(cycle_duration, 2),
+            'sla_target': SLA_TARGET_SECONDS,
+            'compliant': compliant,
+            'violations_count': self.sla_violations_count
+        }
+        SLA_STATUS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        SLA_STATUS_FILE.write_text(json.dumps(status, indent=2))
+
     def save_state(self):
         """Persist state to JSON file."""
         try:
@@ -245,6 +266,7 @@ class OllamaWatcher:
                 'restart_attempts': self.restart_attempts,
                 'last_escalation_failure_count': self.last_escalation_failure_count,
                 'current_backoff_seconds': self.current_backoff_seconds,
+                'sla_violations_count': self.sla_violations_count,
                 'circuit_breakers': {
                     'windows': self.breaker_windows.to_dict(),
                     'proxy': self.breaker_proxy.to_dict(),
@@ -270,6 +292,7 @@ class OllamaWatcher:
             self.total_recoveries = state.get('total_recoveries', 0)
             self.last_escalation_failure_count = state.get('last_escalation_failure_count', 0)
             self.current_backoff_seconds = state.get('current_backoff_seconds', 5)
+            self.sla_violations_count = state.get('sla_violations_count', 0)
 
             # Load circuit breaker states
             if 'circuit_breakers' in state:
@@ -560,29 +583,41 @@ except Exception as e:
         signal.signal(signal.SIGHUP, self.signal_handler)
 
         print("╔══════════════════════════════════════════════════════════════════════╗")
-        print("║   THE OLLAMA WATCHER v4.0 - LLM Infrastructure Monitor              ║")
-        print("║   Features: Exponential backoff, Circuit breakers, Heartbeat,        ║")
-        print("║   Watchdog timer, State persistence, Rate-limited escalations        ║")
+        print("║   THE OLLAMA WATCHER v5.0 - SLA-Aware LLM Infrastructure Monitor    ║")
+        print("║   SLA: 5 min cycle | Backoff on failure | Circuit breakers           ║")
         print("╚══════════════════════════════════════════════════════════════════════╝")
 
-        self.log('INFO', 'THE OLLAMA WATCHER v4.0 initialized')
+        self.log('INFO', 'THE OLLAMA WATCHER v5.0 initialized')
         self.log('INFO', f'Windows host: {WINDOWS_HOST_OLLAMA}')
         self.log('INFO', f'Proxy container: {PROXY_CONTAINER}')
-        self.log('INFO', f'Heartbeat file: {HEARTBEAT_FILE}')
-        self.log('INFO', f'State persistence: {STATE_PERSISTENCE_FILE}')
+        self.log('INFO', f'SLA target: {SLA_TARGET_SECONDS}s ({SLA_TARGET_SECONDS // 60} min)')
+        self.log('INFO', f'Base cycle interval: {BASE_CYCLE_INTERVAL}s')
 
         # Start watchdog thread
         self.start_watchdog_thread()
 
         while self.running:
             try:
+                cycle_start = time.time()
                 self.run_cycle()
+                cycle_end = time.time()
+                cycle_duration = cycle_end - cycle_start
+
+                # Write SLA status
+                self.write_sla_status(cycle_duration)
             except Exception as e:
                 self.log('ERROR', f'Monitoring cycle failed: {e}')
                 self.consecutive_failures += 1
 
-            # Use exponential backoff with chunked sleep
-            self.chunked_sleep(self.current_backoff_seconds)
+            # Determine sleep interval:
+            # - When healthy: use BASE_CYCLE_INTERVAL (300s = 5 min per SLA)
+            # - When failing: use exponential backoff (shorter, for faster recovery detection)
+            if self.consecutive_failures == 0:
+                sleep_interval = BASE_CYCLE_INTERVAL
+            else:
+                sleep_interval = self.current_backoff_seconds
+
+            self.chunked_sleep(sleep_interval)
 
         self.log('INFO', 'Shutting down, saving state')
         self.save_state()

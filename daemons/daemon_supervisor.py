@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAEMON SUPERVISOR v2.0 - The ONE self-healing system
+DAEMON SUPERVISOR v3.0 - The ONE self-healing system
 =====================================================
 Run via cron every minute.
 
@@ -8,13 +8,14 @@ This is the SINGLE self-healing mechanism for the Digiquarium.
 It replaces:
   - The maintainer's daemon-watching (maintainer keeps tank health checks only)
   - The old cron entries for specific services
-  - The previous daemon_supervisor v1
+  - The previous daemon_supervisor v1/v2
 
-Features:
+v3.0 Features:
+  - Tracks consecutive Ollama failures with CRITICAL alert after 5 checks (5 min)
+  - Auto-restarts Ollama via docker compose up -d ollama
+  - Writes Ollama health status to shared/.ollama_health for scheduler to read
   - Checks all 21 continuous daemons via PID file verification
-  - Verifies PIDs actually exist in /proc (not just pgrep substring matching)
   - Monitors all 17 Docker tank containers and restarts exited ones
-  - Logs all actions to supervisor.log
 
 MIGRATION NOTE (Issue #3):
 Uses compatibility wrappers in daemons/ that import from src/daemons/.
@@ -28,6 +29,7 @@ Daemon structure:
 
 import os
 import sys
+import json
 import subprocess
 import time
 from pathlib import Path
@@ -36,6 +38,8 @@ from datetime import datetime
 DIGIQUARIUM_HOME = os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')
 DAEMONS_DIR = Path(os.path.join(DIGIQUARIUM_HOME, 'daemons'))
 LOG_FILE = DAEMONS_DIR / 'supervisor.log'
+OLLAMA_HEALTH_FILE = Path(DIGIQUARIUM_HOME) / 'shared' / '.ollama_health'
+OLLAMA_FAILURE_TRACKER = Path(DIGIQUARIUM_HOME) / 'shared' / '.ollama_failure_count'
 
 # All 21 continuous daemons that MUST be running
 # Each uses its wrapper script at daemons/<name>/<name>.py
@@ -215,34 +219,111 @@ def check_and_restart_containers():
     return restarted
 
 
+def read_failure_count():
+    """Read the consecutive Ollama failure count from tracker file."""
+    try:
+        if OLLAMA_FAILURE_TRACKER.exists():
+            data = json.loads(OLLAMA_FAILURE_TRACKER.read_text())
+            return data.get('consecutive_failures', 0)
+    except Exception:
+        pass
+    return 0
+
+
+def write_failure_count(count):
+    """Write the consecutive Ollama failure count to tracker file."""
+    try:
+        OLLAMA_FAILURE_TRACKER.parent.mkdir(parents=True, exist_ok=True)
+        data = {
+            'consecutive_failures': count,
+            'last_updated': datetime.now().isoformat()
+        }
+        OLLAMA_FAILURE_TRACKER.write_text(json.dumps(data, indent=2))
+    except Exception as e:
+        log(f"Failed to write failure tracker: {e}")
+
+
+def write_ollama_health(healthy, message=""):
+    """Write Ollama health status to shared file for scheduler to read."""
+    try:
+        OLLAMA_HEALTH_FILE.parent.mkdir(parents=True, exist_ok=True)
+        data = {
+            'healthy': healthy,
+            'timestamp': datetime.now().isoformat(),
+            'message': message,
+            'consecutive_failures': read_failure_count()
+        }
+        OLLAMA_HEALTH_FILE.write_text(json.dumps(data, indent=2))
+    except Exception as e:
+        log(f"Failed to write Ollama health file: {e}")
+
+
 def check_ollama():
-    """Ensure Ollama container exists and is healthy. Restart via compose if needed."""
+    """Ensure Ollama container exists and is healthy.
+    
+    Tracks consecutive failures. After 5 consecutive failures (5 minutes),
+    logs a CRITICAL alert and attempts restart via docker compose.
+    Writes health status to shared/.ollama_health for scheduler.
+    """
+    consecutive_failures = read_failure_count()
+
     try:
         result = subprocess.run(
             ['docker', 'inspect', '-f', '{{.State.Running}}', 'digiquarium-ollama'],
             capture_output=True, text=True, timeout=10
         )
         if 'true' not in result.stdout.lower():
-            log('CRITICAL: Ollama is down — restarting via docker compose')
-            subprocess.run(
-                f'cd {DIGIQUARIUM_HOME} && docker compose up -d ollama',
-                shell=True, capture_output=True, timeout=120
-            )
-            log('Ollama restart initiated')
+            consecutive_failures += 1
+            write_failure_count(consecutive_failures)
+
+            if consecutive_failures >= 5:
+                log(f'CRITICAL: Ollama has been down for {consecutive_failures} consecutive checks ({consecutive_failures} minutes)!')
+                log('CRITICAL: Attempting emergency restart via docker compose up -d ollama')
+                restart_result = subprocess.run(
+                    f'cd {DIGIQUARIUM_HOME} && docker compose up -d ollama',
+                    shell=True, capture_output=True, text=True, timeout=120
+                )
+                if restart_result.returncode == 0:
+                    log('Ollama restart initiated after CRITICAL threshold')
+                else:
+                    log(f'CRITICAL: Ollama restart FAILED: {restart_result.stderr[:200]}')
+            else:
+                log(f'WARNING: Ollama is down (failure {consecutive_failures}/5 before CRITICAL)')
+                # Still try to restart
+                subprocess.run(
+                    f'cd {DIGIQUARIUM_HOME} && docker compose up -d ollama',
+                    shell=True, capture_output=True, timeout=120
+                )
+                log('Ollama restart initiated')
+
+            write_ollama_health(False, f'Down for {consecutive_failures} consecutive checks')
             return False
-        return True
+        else:
+            # Ollama is healthy — reset failure counter
+            if consecutive_failures > 0:
+                log(f'Ollama recovered after {consecutive_failures} consecutive failures')
+            write_failure_count(0)
+            write_ollama_health(True, 'Ollama running')
+            return True
     except Exception as e:
-        log(f'CRITICAL: Cannot check Ollama: {e}')
+        consecutive_failures += 1
+        write_failure_count(consecutive_failures)
+        log(f'CRITICAL: Cannot check Ollama: {e} (failure {consecutive_failures})')
+
+        if consecutive_failures >= 5:
+            log(f'CRITICAL: Ollama unreachable for {consecutive_failures} consecutive checks — forcing restart')
+
         # Try to start it anyway
         subprocess.run(
             f'cd {DIGIQUARIUM_HOME} && docker compose up -d ollama',
             shell=True, capture_output=True, timeout=120
         )
+        write_ollama_health(False, f'Check failed: {e}')
         return False
 
 
 def main():
-    log("=== DAEMON SUPERVISOR v2.0 CHECK ===")
+    log("=== DAEMON SUPERVISOR v3.0 CHECK ===")
 
     # Check Ollama first - critical infrastructure
     check_ollama()

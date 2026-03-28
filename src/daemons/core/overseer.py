@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-THE OVERSEER v1.0 - Cross-Functional Operations Coordinator
+THE OVERSEER v2.0 - Cross-Functional Operations Coordinator
 ============================================================
 The daemon that sees EVERYTHING. Correlates across all systems.
 Direct escalation to human operator.
@@ -8,12 +8,16 @@ Direct escalation to human operator.
 Created: 2026-02-22
 Trigger: 11-hour Ollama outage undetected by 11 running daemons
 
+v2.0: SLA-aware cycle timing (30 min), SLA compliance aggregation,
+      reads all daemon sla_status.json files in audit.
+
 Responsibilities:
 1. SYSTEM-WIDE CORRELATION - Sees all daemon logs simultaneously
 2. PATTERN RECOGNITION - "All tanks silent" + "Ollama unhealthy" = root cause
 3. SLA ENFORCEMENT - 30 min detection, 30 min remediation
 4. ESCALATION - Email human after failed auto-remediation
 5. INCIDENT MANAGEMENT - Track, document, learn
+6. SLA AGGREGATION - Read all daemon sla_status.json and report compliance
 
 "We built specialists without a generalist. THE OVERSEER fixes that."
 
@@ -44,6 +48,11 @@ HUMAN_EMAIL = "benjiz@gmail.com"
 # SLA Thresholds
 SLA_DETECTION_MINUTES = 30
 SLA_REMEDIATION_MINUTES = 30
+SLA_TARGET_SECONDS = 1800  # 30 minutes
+SLA_STATUS_FILE = DAEMONS_DIR / 'overseer' / 'sla_status.json'
+
+# Cycle interval: 30 minutes per SLA
+CHECK_INTERVAL = 1800  # 30 minutes
 
 
 class TheOverseer:
@@ -64,6 +73,7 @@ class TheOverseer:
         self.active_incidents = {}
         self.running = True
         self.last_full_audit = None
+        self.sla_violations_count = 0
         self.stats = {
             'cycles': 0,
             'incidents_detected': 0,
@@ -213,6 +223,43 @@ class TheOverseer:
                 result['issues'].append(f'{tank} at RED wellness level (score: {score})')
         
         return result
+
+    def collect_sla_compliance(self) -> dict:
+        """Read all daemon sla_status.json files and aggregate compliance."""
+        sla_report = {
+            'timestamp': datetime.now().isoformat(),
+            'daemons': {},
+            'total_compliant': 0,
+            'total_non_compliant': 0,
+            'total_violations': 0,
+            'issues': []
+        }
+
+        # Scan all daemon directories for sla_status.json
+        for daemon_dir in sorted(DAEMONS_DIR.iterdir()):
+            if not daemon_dir.is_dir():
+                continue
+            sla_file = daemon_dir / 'sla_status.json'
+            if not sla_file.exists():
+                continue
+            try:
+                data = json.loads(sla_file.read_text())
+                daemon_name = data.get('daemon', daemon_dir.name)
+                sla_report['daemons'][daemon_name] = data
+
+                if data.get('compliant', True):
+                    sla_report['total_compliant'] += 1
+                else:
+                    sla_report['total_non_compliant'] += 1
+                    sla_report['issues'].append(
+                        f"{daemon_name}: SLA violation (took {data.get('cycle_duration', '?')}s, target {data.get('sla_target', '?')}s)"
+                    )
+
+                sla_report['total_violations'] += data.get('violations_count', 0)
+            except Exception as e:
+                sla_report['issues'].append(f"Failed to read SLA status for {daemon_dir.name}: {e}")
+
+        return sla_report
     
     def full_system_audit(self) -> dict:
         """Comprehensive system health check"""
@@ -226,6 +273,7 @@ class TheOverseer:
             'tanks': self.check_tank_health(),
             'network': self.check_network_health(),
             'wellness': self.check_wellness_status(),
+            'sla_compliance': self.collect_sla_compliance(),
             'issues': []
         }
         
@@ -236,6 +284,14 @@ class TheOverseer:
                     'component': component,
                     'details': health.get('issues', [])
                 })
+
+        # Also flag SLA violations
+        sla = audit['sla_compliance']
+        if sla.get('total_non_compliant', 0) > 0:
+            audit['issues'].append({
+                'component': 'sla_compliance',
+                'details': sla.get('issues', [])
+            })
         
         audit['overall_healthy'] = len(audit['issues']) == 0
         
@@ -245,6 +301,11 @@ class TheOverseer:
             self.log('WARNING', f"Full system audit found {len(audit['issues'])} issues")
             for issue in audit['issues']:
                 self.log('WARNING', f"  - {issue['component']}: {issue['details']}")
+
+        # Log SLA compliance summary
+        sla_compliant = sla.get('total_compliant', 0)
+        sla_noncompliant = sla.get('total_non_compliant', 0)
+        self.log('AUDIT', f"SLA compliance: {sla_compliant} compliant, {sla_noncompliant} non-compliant, {sla.get('total_violations', 0)} total violations")
         
         self.last_full_audit = audit
         return audit
@@ -312,7 +373,7 @@ class TheOverseer:
         
         # End-to-end test
         try:
-            e2e = subprocess.run([\
+            e2e = subprocess.run([
                 'docker', 'exec', 'tank-01-adam', 'python3', '-c',
                 'import urllib.request; urllib.request.urlopen("http://digiquarium-ollama:11434/api/tags", timeout=10)'
             ], capture_output=True, timeout=30)
@@ -588,7 +649,28 @@ The Digiquarium Autonomous Operations Coordinator
         return False
     
     # =========================================================================
-    # SECTION 5: STATE MANAGEMENT
+    # SECTION 5: SLA TRACKING
+    # =========================================================================
+
+    def write_sla_status(self, cycle_duration):
+        """Write SLA compliance status to JSON file."""
+        compliant = cycle_duration <= SLA_TARGET_SECONDS
+        if not compliant:
+            self.sla_violations_count += 1
+
+        status = {
+            'daemon': 'overseer',
+            'last_check_time': datetime.now().isoformat(),
+            'cycle_duration': round(cycle_duration, 2),
+            'sla_target': SLA_TARGET_SECONDS,
+            'compliant': compliant,
+            'violations_count': self.sla_violations_count
+        }
+        SLA_STATUS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        SLA_STATUS_FILE.write_text(json.dumps(status, indent=2))
+
+    # =========================================================================
+    # SECTION 6: STATE MANAGEMENT
     # =========================================================================
     
     def save_state(self):
@@ -612,7 +694,7 @@ The Digiquarium Autonomous Operations Coordinator
                 pass
     
     # =========================================================================
-    # SECTION 6: MAIN LOOP
+    # SECTION 7: MAIN LOOP
     # =========================================================================
     
     def run_cycle(self):
@@ -622,16 +704,8 @@ The Digiquarium Autonomous Operations Coordinator
         # Process inbox
         self.process_inbox()
         
-        # Full audit every 5 minutes
-        if self.stats['cycles'] % 5 == 1:
-            self.full_system_audit()
-        
-        # Quick health check every cycle
-        else:
-            # Just check critical systems
-            ollama = self.check_ollama_health()
-            if not ollama['healthy']:
-                self.log('WARNING', f"Quick check: Ollama issues detected: {ollama['issues']}")
+        # Full audit every cycle (now that cycle is 30 min)
+        self.full_system_audit()
         
         self.save_state()
     
@@ -644,28 +718,33 @@ The Digiquarium Autonomous Operations Coordinator
         signal.signal(signal.SIGINT, self.shutdown)
         
         print("╔══════════════════════════════════════════════════════════════════════╗")
-        print("║         THE OVERSEER v1.0 - Cross-Functional Coordinator            ║")
-        print("║         'We built specialists without a generalist. I fix that.'    ║")
+        print("║     THE OVERSEER v2.0 - SLA-Aware Cross-Functional Coordinator      ║")
+        print("║     'We built specialists without a generalist. I fix that.'        ║")
         print("╚══════════════════════════════════════════════════════════════════════╝")
         
-        self.log('INFO', 'THE OVERSEER v1.0 initialized')
+        self.log('INFO', 'THE OVERSEER v2.0 initialized')
         self.log('INFO', f'Human escalation: {HUMAN_EMAIL}')
         self.log('INFO', f'SLA: {SLA_DETECTION_MINUTES}min detection, {SLA_REMEDIATION_MINUTES}min remediation')
+        self.log('INFO', f'Cycle interval: {CHECK_INTERVAL}s ({CHECK_INTERVAL // 60} min)')
         
         self.load_state()
         
         # Initial full audit
         self.full_system_audit()
         
-        check_interval = 60  # 1 minute
-        
         while self.running:
             try:
+                cycle_start = time.time()
                 self.run_cycle()
+                cycle_end = time.time()
+                cycle_duration = cycle_end - cycle_start
+
+                # Write SLA status
+                self.write_sla_status(cycle_duration)
             except Exception as e:
                 self.log('ERROR', f'Monitoring cycle failed: {e}')
             
-            time.sleep(check_interval)
+            time.sleep(CHECK_INTERVAL)
         
         self.release_lock()
 
