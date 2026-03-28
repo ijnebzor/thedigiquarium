@@ -13,6 +13,7 @@ It replaces:
 v3.1 Changes:
   - Ollama check now does a REAL inference test, not just container state check
   - Uses docker exec for API checks (port not exposed to host)
+  - Inference test via tank container with python (tanks don't have curl)
   - Logs to dedicated crash log file for post-mortem analysis
   - Better diagnostics on failure (OOM check, memory state, restart count)
 
@@ -80,6 +81,24 @@ CONTINUOUS_DAEMONS = [
 
 # All 17 tank containers
 TANK_CONTAINERS = [f'tank-{i:02d}' for i in range(1, 18)]
+
+# Python one-liner for inference test (runs inside tank container which has python but no curl)
+INFERENCE_TEST_SCRIPT = """
+import urllib.request, json, sys
+try:
+    data = json.dumps({"model":"llama3.2:latest","prompt":"Say OK","stream":False,"options":{"num_predict":3}}).encode()
+    req = urllib.request.Request("http://digiquarium-ollama:11434/api/generate", data=data, headers={"Content-Type":"application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        resp = json.loads(r.read())
+        if "response" in resp and len(resp["response"].strip()) > 0:
+            print("INFERENCE_OK")
+            sys.exit(0)
+    print("INFERENCE_FAIL")
+    sys.exit(1)
+except Exception as e:
+    print(f"INFERENCE_ERROR: {e}")
+    sys.exit(1)
+""".strip()
 
 
 def log(msg):
@@ -309,19 +328,15 @@ def check_ollama_api():
 
 
 def check_ollama_inference():
-    """Do a real inference test via a temporary tank container on the isolated network."""
+    """Do a real inference test via a temporary tank container (has python, no curl)."""
     try:
         result = subprocess.run(
             ['docker', 'run', '--rm', '--network', 'digiquarium_isolated-net',
              'digiquarium-tank:latest',
-             'curl', '-sf', '--max-time', '30',
-             'http://digiquarium-ollama:11434/api/generate',
-             '-d', '{"model":"llama3.2:latest","prompt":"Say OK","stream":false,"options":{"num_predict":5}}'],
-            capture_output=True, text=True, timeout=45
+             'python3', '-c', INFERENCE_TEST_SCRIPT],
+            capture_output=True, text=True, timeout=60
         )
-        if result.returncode == 0 and result.stdout.strip():
-            data = json.loads(result.stdout)
-            return 'response' in data and len(data['response'].strip()) > 0
+        return result.returncode == 0 and 'INFERENCE_OK' in result.stdout
     except Exception:
         pass
     return False
