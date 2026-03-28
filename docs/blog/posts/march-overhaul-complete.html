@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The March Overhaul: Complete | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #e74c3c; --green: #2ecc71; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 700px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+
+        .container { max-width: 700px; margin: 0 auto; padding: 50px 25px; }
+
+        .post-meta { margin-bottom: 30px; }
+        .post-date { color: var(--gray); font-size: 0.85rem; }
+        .post-author { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; }
+        .author-icon { font-size: 1.2rem; }
+        .author-name { color: var(--orange); font-weight: 600; }
+
+        h1 { font-size: 2rem; margin-bottom: 25px; line-height: 1.3; }
+
+        .tldr { background: var(--dark); border-left: 3px solid var(--orange); padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+        .tldr-label { color: var(--orange); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; }
+        .tldr p { margin: 0; color: var(--white); }
+
+        .content p { margin-bottom: 20px; color: var(--white); }
+        .content h2 { color: var(--cyan); font-size: 1.3rem; margin: 40px 0 20px; }
+        .content h3 { color: var(--mint); font-size: 1.1rem; margin: 30px 0 15px; }
+        .content code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+        .content pre { background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; margin: 20px 0; }
+
+        .audit-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; }
+        .audit-table th { text-align: left; padding: 10px 12px; background: var(--dark); color: var(--cyan); border-bottom: 2px solid rgba(7, 207, 141, 0.2); }
+        .audit-table td { padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .audit-table tr:hover { background: rgba(7, 207, 141, 0.03); }
+        .status-broken { color: var(--red); font-weight: 600; }
+        .status-fixed { color: var(--green); font-weight: 600; }
+
+        .section-box { background: var(--dark); border-radius: 12px; padding: 25px; margin: 25px 0; border-left: 4px solid var(--mint); }
+        .section-box.warning { border-left-color: var(--orange); }
+        .section-box h3 { color: var(--mint); margin: 0 0 12px; font-size: 1rem; }
+        .section-box.warning h3 { color: var(--orange); }
+        .section-box p { margin-bottom: 8px; color: var(--gray); font-size: 0.9rem; }
+        .section-box p:last-child { margin-bottom: 0; }
+
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 60px; }
+
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
+        @media (max-width: 768px) {
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
+            nav.open { display: flex; }
+            nav a { margin: 8px 0; margin-left: 0; }
+            .hamburger { display: block; }
+            .header, .header-inner { position: relative; }
+            .audit-table { font-size: 0.75rem; }
+            .audit-table th, .audit-table td { padding: 6px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../../" class="logo">&#x1F30A; <span>Digiquarium</span></a>
+            <button class="hamburger" aria-label="Menu">&#9776;</button>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/blog/">Blog</a>
+                <a href="/changelog.html">Changelog</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post-meta">
+            <div class="post-date">March 28, 2026</div>
+            <div class="post-author">
+                <span class="author-icon">&#x1F464;</span>
+                <span class="author-name">Benji</span>
+            </div>
+        </div>
+
+        <h1>The March Overhaul: Complete</h1>
+
+        <div class="tldr">
+            <div class="tldr-label">TL;DR</div>
+            <p>On March 27&ndash;28, we tore the Digiquarium down to its foundations and rebuilt it. This is the definitive record of everything that was broken, everything that was fixed, and the current state of the system. 36 hours, 30+ commits, every layer of the stack touched.</p>
+        </div>
+
+        <div class="content">
+            <h2>Context</h2>
+            <p>When we declared the "production era" on March 27, we thought the v2.0 cleanup had put us on solid footing. It hadn't. Within hours of trying to run the full system, we found that daemons were exiting after one cycle, the explorer couldn't navigate Kiwix, Ollama was overwhelmed by 17 simultaneous tanks, and the scheduler had no concept of resource contention. What followed was a 36-hour intensive overhaul of every layer of the stack.</p>
+
+            <p>This post is the definitive record. Not a narrative &mdash; a technical audit of what was broken and what was done about it.</p>
+
+            <h2>The Audit Findings</h2>
+
+            <h3>Infrastructure: Ollama</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>Ollama was running on a separate Mac Mini, accessed by tanks through a socat proxy container. Network hops introduced latency and failures. The Mac going to sleep killed all inference. 17 tanks hitting Ollama simultaneously overwhelmed the 3B model on limited hardware.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Moved Ollama to a local Docker container on the same host. Added auto-restart via supervisor. Implemented a shared file-based mutex (<code>/ollama-mutex/ollama.lock</code>) so only one tank can access Ollama at a time with a 300-second timeout. Added deterministic stagger (tank ID modulo across 170s window) and rotation daemon (groups of 3, 5-minute windows). Added Ollama health checks to the scheduler.</p>
+            </div>
+
+            <h3>Infrastructure: Tank Containers</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>Tanks were crash-looping. Every container ran <code>pip install</code> at startup, which could block for minutes or fail entirely. IP addresses were dynamically assigned, causing conflicts when containers restarted. Baseline runner tried to process all 17 tanks simultaneously, causing timeouts.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Built a custom Docker image (<code>src/explorer/Dockerfile</code>) with all Python dependencies pre-installed. Assigned static IPs to all 17 tanks in <code>docker-compose.yml</code>. Rewrote the baseline runner to process tanks sequentially with health checks between each run. Baseline output files now include timestamps to prevent overwriting research data.</p>
+            </div>
+
+            <h3>Explorer: Kiwix Navigation</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>The explorer assumed standard Wikipedia URL formats, but Kiwix serves articles at different paths with different link structures. Tanks were sitting idle instead of exploring because every navigation attempt failed silently.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Added <code>KIWIX_URL</code> and <code>WIKI_BASE</code> environment variables. Rewrote link extraction to handle Kiwix's URL format. Fixed random article navigation to use Kiwix's search API. This was arguably the most critical fix &mdash; without it, no tank was actually doing any research.</p>
+            </div>
+
+            <h3>Daemons: Run Loops &amp; SLA</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>5 of 21 daemons had no continuous run loop &mdash; they executed once and exited. 11 of 21 had duplicate process issues from missing singleton locks. No daemon tracked its own performance metrics. THE WEBMASTER was effectively non-functional (checked if 2 files existed, nothing else).</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>All 21 daemons now have proper <code>while True</code> loops with appropriate sleep intervals. SLA tracking added to every daemon: cycle count, success rate, average cycle time, last failure timestamp. Scheduler completely rewritten to v4 with clash prevention (no two tanks scheduled simultaneously), Ollama health checks before dispatch, proper cycle tracking, and overnight safety modes.</p>
+            </div>
+
+            <h3>Security</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>Hardcoded password found in admin panel source. XSS vulnerability in visitor-facing pages allowing script injection.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Password removed, authentication restructured. Input sanitization added to all user-facing inputs. Security audit documented.</p>
+            </div>
+
+            <h3>Website &amp; UI</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>Brain minimap zoom would reset on time-step navigation. Cumulative chips didn't display correctly. No mobile navigation. Translation layer used curl calls with hardcoded endpoints. Nav links used relative paths that broke on subpages.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Brain minimap zoom fix applied. Cumulative chips rendering corrected. Mobile responsive hamburger navigation added to all pages. Translation layer rewritten to use urllib with environment variables. All nav links converted to absolute paths from site root. Admin panel built at <code>/admin/</code> with container status, daemon SLA metrics, and system health dashboard.</p>
+            </div>
+
+            <h2>Complete Change Log</h2>
+
+            <table class="audit-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Before</th>
+                        <th>After</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ollama</td>
+                        <td class="status-broken">External Mac + socat proxy</td>
+                        <td class="status-fixed">Local Docker container</td>
+                    </tr>
+                    <tr>
+                        <td>Inference concurrency</td>
+                        <td class="status-broken">17 tanks at once, no queuing</td>
+                        <td class="status-fixed">Mutex + stagger + rotation</td>
+                    </tr>
+                    <tr>
+                        <td>Tank image</td>
+                        <td class="status-broken">pip install at startup</td>
+                        <td class="status-fixed">Custom image, pre-installed deps</td>
+                    </tr>
+                    <tr>
+                        <td>Tank IPs</td>
+                        <td class="status-broken">Dynamic (DHCP)</td>
+                        <td class="status-fixed">Static assignment</td>
+                    </tr>
+                    <tr>
+                        <td>Baseline runner</td>
+                        <td class="status-broken">Parallel (17 at once)</td>
+                        <td class="status-fixed">Sequential with health checks</td>
+                    </tr>
+                    <tr>
+                        <td>Baseline files</td>
+                        <td class="status-broken">Overwritten on each run</td>
+                        <td class="status-fixed">Timestamped, never overwrite</td>
+                    </tr>
+                    <tr>
+                        <td>Daemon run loops</td>
+                        <td class="status-broken">5 had no loop (run once, exit)</td>
+                        <td class="status-fixed">All 21 continuous</td>
+                    </tr>
+                    <tr>
+                        <td>Daemon SLA tracking</td>
+                        <td class="status-broken">None</td>
+                        <td class="status-fixed">All daemons report metrics</td>
+                    </tr>
+                    <tr>
+                        <td>Scheduler</td>
+                        <td class="status-broken">v3, no clash prevention</td>
+                        <td class="status-fixed">v4, clash prevention + health checks</td>
+                    </tr>
+                    <tr>
+                        <td>Explorer navigation</td>
+                        <td class="status-broken">Broken for Kiwix URLs</td>
+                        <td class="status-fixed">KIWIX_URL + WIKI_BASE env vars</td>
+                    </tr>
+                    <tr>
+                        <td>Admin panel</td>
+                        <td class="status-broken">None (or hardcoded password)</td>
+                        <td class="status-fixed">Built at /admin/</td>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td class="status-broken">Hardcoded password, XSS vuln</td>
+                        <td class="status-fixed">Password removed, XSS fixed</td>
+                    </tr>
+                    <tr>
+                        <td>Translation layer</td>
+                        <td class="status-broken">curl + hardcoded endpoints</td>
+                        <td class="status-fixed">urllib + env vars</td>
+                    </tr>
+                    <tr>
+                        <td>Brain minimap</td>
+                        <td class="status-broken">Zoom reset on navigation</td>
+                        <td class="status-fixed">Zoom persists, cumulative chips</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile nav</td>
+                        <td class="status-broken">No mobile support</td>
+                        <td class="status-fixed">Hamburger menu on all pages</td>
+                    </tr>
+                    <tr>
+                        <td>Nav links</td>
+                        <td class="status-broken">Relative paths (broken on subpages)</td>
+                        <td class="status-fixed">Absolute paths from site root</td>
+                    </tr>
+                    <tr>
+                        <td>MCP server</td>
+                        <td class="status-broken">Not connected</td>
+                        <td class="status-fixed">Connected for autonomous operation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Key Decisions Made</h2>
+            <p>Several architectural decisions were made during this overhaul that are worth recording for future reference. See the <a href="../../decision-tree/">Decision Tree</a> for the full log.</p>
+
+            <p><strong>Ollama local vs. proxy:</strong> Local Docker eliminates network dependency entirely. The socat proxy was a beta-era workaround that introduced a failure mode we couldn't control.</p>
+
+            <p><strong>Custom Docker image vs. runtime install:</strong> Pre-installing dependencies in the image adds build time but eliminates the most common cause of tank crash loops. Build once, run reliably.</p>
+
+            <p><strong>Mutex vs. rotation for Ollama access:</strong> We use both. The mutex provides hard exclusion (only one tank at a time). The rotation provides soft scheduling (groups of 3, 5-minute windows). The stagger provides temporal spreading. Belt, suspenders, and a rope.</p>
+
+            <p><strong>Timestamped baselines:</strong> Research data should never be overwritten. Every baseline run creates a new file with a timestamp. This preserves the full history and makes personality drift analysis possible.</p>
+
+            <p><strong>SLA tracking on all daemons:</strong> You can't manage what you can't measure. Every daemon now self-reports its performance. This feeds the admin panel and makes "is the system healthy?" a question with a data-driven answer.</p>
+
+            <h2>Current State</h2>
+            <p>As of March 28, 2026:</p>
+
+            <div class="section-box">
+                <h3>System Status</h3>
+                <p><strong>Tanks:</strong> 17 specimens across 5 languages, all with static IPs and fresh timestamped baselines.</p>
+                <p><strong>Daemons:</strong> 21 deployed, all running with continuous loops and SLA tracking.</p>
+                <p><strong>Ollama:</strong> Local Docker container with mutex, stagger, and rotation. Auto-restart via supervisor.</p>
+                <p><strong>Scheduler:</strong> v4 with clash prevention, Ollama health checks, overnight safety.</p>
+                <p><strong>Explorer:</strong> Fixed for Kiwix URL format. Tanks are actively exploring.</p>
+                <p><strong>Admin:</strong> Panel at /admin/ with live metrics.</p>
+                <p><strong>MCP:</strong> Connected for autonomous operation.</p>
+                <p><strong>Security:</strong> Password removed, XSS patched, input sanitization added.</p>
+            </div>
+
+            <h2>What This Means</h2>
+            <p>The Digiquarium is no longer a prototype running on good intentions. Every component has been audited, fixed, and verified. The infrastructure is designed for 24/7 unattended operation with self-monitoring through SLA tracking and the MCP interface.</p>
+
+            <p>The overhaul took 36 hours and touched every layer of the stack. It was the kind of work that's invisible when it works and catastrophic when it doesn't. It works now.</p>
+
+            <p>The tanks are exploring. The daemons are watching. The data is accumulating. The experiment can finally begin in earnest.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a href="../">Back to Blog</a> &middot; <a href="../../">Home</a> &middot; <a href="../../changelog.html">Full Changelog</a>
+    </footer>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
+</body>
+</html>

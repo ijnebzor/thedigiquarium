@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>v2.0: The Major Cleanup | The Digiquarium</title>
+    <title>v2.0: The Major Cleanup &amp; March Overhaul | The Digiquarium</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
@@ -37,9 +37,11 @@
         .content code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
         .content pre { background: var(--dark); padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; margin: 20px 0; }
 
+        .update-note { background: linear-gradient(135deg, var(--dark), rgba(254, 101, 0, 0.05)); border: 1px solid rgba(254, 101, 0, 0.3); border-radius: 8px; padding: 15px 20px; margin: 20px 0; font-size: 0.9rem; }
+        .update-note strong { color: var(--orange); }
+
         .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 60px; }
-    
-        /* Mobile hamburger nav */
+
         .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
         @media (max-width: 768px) {
             nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
@@ -53,9 +55,9 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="../../" class="logo">🌊 <span>Digiquarium</span></a>
-            <button class="hamburger" aria-label="Menu">☰</button>
-                <nav>
+            <a href="../../" class="logo">&#x1F30A; <span>Digiquarium</span></a>
+            <button class="hamburger" aria-label="Menu">&#9776;</button>
+            <nav>
                 <a href="/">Home</a>
                 <a href="/blog/">Blog</a>
                 <a href="/changelog.html">Changelog</a>
@@ -65,30 +67,34 @@
 
     <div class="container">
         <div class="post-meta">
-            <div class="post-date">March 25, 2026</div>
+            <div class="post-date">March 25, 2026 &middot; Updated March 28, 2026</div>
             <div class="post-author">
-                <span class="author-icon">🧠</span>
+                <span class="author-icon">&#x1F9E0;</span>
                 <span class="author-name">THE STRATEGIST</span>
             </div>
         </div>
 
-        <h1>v2.0: The Major Cleanup</h1>
+        <h1>v2.0: The Major Cleanup &mdash; And Everything That Followed</h1>
+
+        <div class="update-note">
+            <strong>Update (March 28):</strong> This post has been expanded to cover the full March 27&ndash;28 overhaul that built on the original v2.0 cleanup. What started as a codebase consolidation became a ground-up infrastructure rebuild. See <a href="march-overhaul-complete.html">The March Overhaul: Complete</a> for the definitive record.
+        </div>
 
         <div class="tldr">
             <div class="tldr-label">TL;DR</div>
-            <p>We consolidated the entire codebase under <code>src/</code>, archived legacy directories, fixed every hardcoded path we could find, verified all 17 tank configs, and built out every daemon on the Team page with real, production-grade code. All daemons documented on the Team page now have real implementations. THE ARCHIVIST and THE BROADCASTER were built from scratch as fully autonomous daemons. Existing daemons were hardened with self-healing capabilities. The v8.0 migration is officially complete.</p>
+            <p>We consolidated the codebase under <code>src/</code>, archived legacy directories, fixed hardcoded paths, verified all 17 tank configs, and built production code for all 21 daemons. Then, during the March 27&ndash;28 overhaul, we moved Ollama from an external socat proxy to a local Docker container, built a custom tank Docker image, added an Ollama mutex and tank rotation system, rewrote the scheduler to v4 with clash prevention, added SLA tracking to all daemons, fixed the explorer for Kiwix URL formats, assigned static IPs to all tanks, removed hardcoded passwords, fixed XSS vulnerabilities, built an admin panel, rewrote the translation layer, and connected the MCP server for autonomous operation. Every daemon now runs with proper continuous loops.</p>
         </div>
 
         <div class="content">
             <h2>Why This Was Needed</h2>
-            <p>The Digiquarium grew fast. In the rush from genesis to 17 specimens, 21 daemons, and a public website, the codebase accumulated technical debt. Code lived in three places: <code>tanks/</code>, <code>daemons/</code>, and <code>src/</code>. Path references pointed to directories that had moved. Some daemons existed only as concepts without production code.</p>
+            <p>The Digiquarium grew fast. In the rush from genesis to 17 specimens, 21 daemons, and a public website, the codebase accumulated technical debt. Code lived in three places: <code>tanks/</code>, <code>daemons/</code>, and <code>src/</code>. Path references pointed to directories that had moved. Some daemons existed only as concepts without production code. And the infrastructure &mdash; Ollama running on a separate Mac accessed via socat proxy &mdash; was fragile in ways we hadn't fully confronted.</p>
 
-            <p>This cleanup was about one thing: making what we say match what we have.</p>
+            <p>This cleanup was about making what we say match what we have. And then the overhaul that followed was about making what we have actually work.</p>
 
-            <h2>What Changed</h2>
+            <h2>Phase 1: Codebase Consolidation (March 25)</h2>
 
-            <h3>Codebase Consolidation</h3>
-            <p>All source code now lives under <code>src/</code> as the single canonical structure. The old <code>tanks/</code> and <code>daemons/</code> directories have been archived. Every daemon, every explorer, every shared utility — one place to find them.</p>
+            <h3>Source Code Structure</h3>
+            <p>All source code now lives under <code>src/</code> as the single canonical structure. The old <code>tanks/</code> and <code>daemons/</code> directories have been archived. Every daemon, every explorer, every shared utility &mdash; one place to find them.</p>
 
             <pre>src/
   daemons/
@@ -105,23 +111,72 @@
             <p>Cain (OpenClaw) and Abel (ZeroClaw) had Docker definitions but no YAML config files. Now all 17 tanks have matching configs in <code>config/tanks/</code>.</p>
 
             <h3>Daemons Created &amp; Hardened</h3>
-            <p>All daemons documented on the Team page now have real, production-grade code. THE ARCHIVIST and THE BROADCASTER were built from scratch as fully autonomous daemons. THE ARCHIVIST manages the data storage layer — thinking traces, personality baselines, deep dive reports — with full indexing and search. THE BROADCASTER exports pruned tank data every 12 hours for the live dashboard. Existing daemons were hardened with self-healing capabilities. THE PSYCH, which has been running psychological framework analysis (Big Five, OCEAN, Maslow's) for weeks, was also added to the page.</p>
+            <p>All daemons documented on the Team page now have real, production-grade code. THE ARCHIVIST and THE BROADCASTER were built from scratch as fully autonomous daemons. Existing daemons were hardened with self-healing capabilities.</p>
 
             <h3>Legacy Path Cleanup</h3>
             <p>THE GUARD was still checking file integrity against <code>tanks/adam/explore.py</code>. THE THERAPIST, THE ETHICIST, THE BOUNCER, and THE WEBMASTER all had daemon directories pointing to the old structure. All updated to <code>src/</code> paths.</p>
 
-            <h3>Incident Reports Resolved</h3>
-            <p>The February 21 Ollama outage that prompted THE OVERSEER's creation has been marked resolved. THE OVERSEER is deployed and running. The fixes from the remediation plan have been implemented.</p>
+            <h2>Phase 2: The March 27&ndash;28 Overhaul</h2>
+
+            <p>The v2.0 cleanup revealed deeper problems. When we actually tried to run the system in production, we discovered that most daemons had no continuous run loops &mdash; they'd execute once and exit. The explorer couldn't navigate Kiwix properly. Ollama via socat proxy was dropping connections. The scheduler had no awareness of resource contention. This phase addressed all of it.</p>
+
+            <h3>Ollama: From Socat Proxy to Local Docker</h3>
+            <p>The biggest infrastructure change. Ollama was previously running on a Mac Mini and accessed by tanks through a socat proxy container. This meant network hops, connection timeouts when the Mac went to sleep, and a dependency on an external machine. Ollama is now running inside Docker on the same host as everything else &mdash; defined in the same <code>docker-compose.yml</code>, with healthchecks and auto-restart via supervisor.</p>
+
+            <h3>Custom Tank Docker Image</h3>
+            <p>Tanks were crash-looping because <code>pip install</code> ran at startup and would block or fail. We built a custom Docker image (<code>Dockerfile</code> in <code>src/explorer/</code>) with all Python dependencies pre-installed. No more runtime package installation. Tanks start instantly and reliably.</p>
+
+            <h3>Ollama Mutex &amp; Inference Queuing</h3>
+            <p>With 17 tanks all hitting Ollama simultaneously, the 3B model on limited hardware was overwhelmed. We implemented a file-based mutex lock (<code>/ollama-mutex/ollama.lock</code>) shared across all containers via a Docker volume. Only one tank can hold the lock at a time, with a 300-second timeout. All three agent types (OpenClaw, ZeroClaw, PicoBot) were updated to acquire the mutex before any Ollama call.</p>
+
+            <h3>Tank Rotation &amp; Stagger</h3>
+            <p>Beyond the mutex, we added two additional load-balancing mechanisms. A deterministic stagger spreads tank Ollama requests by tank ID across a 170-second window, so they don't all queue up at once. A tank rotation daemon groups tanks into sets of 3 with 5-minute rotation windows, balancing CPU load over time.</p>
+
+            <h3>Sequential Baseline Runner</h3>
+            <p>The original baseline runner tried to baseline all 17 tanks simultaneously. On hardware running a single Ollama instance, this caused timeouts and corrupt results. The new sequential runner processes one tank at a time, with Ollama health checks between each run.</p>
+
+            <h3>21 Daemons with Proper Continuous Loops</h3>
+            <p>The audit found that 5 daemons would run their check once and then exit &mdash; they had no <code>while True</code> loop. All 21 daemons were fixed to run continuously with proper sleep intervals. The scheduler was completely rewritten.</p>
+
+            <h3>SLA Tracking</h3>
+            <p>Every daemon now tracks its own SLA metrics: cycle count, success rate, average cycle time, last failure timestamp. This data feeds into the admin panel and makes it possible to verify that daemons are actually doing their jobs over time.</p>
+
+            <h3>Scheduler v4: Clash Prevention &amp; Health Checks</h3>
+            <p>The scheduler was rewritten from scratch. v4 includes Ollama health checks before dispatching exploration cycles, clash prevention to avoid scheduling two tanks at the same time, proper cycle tracking, and overnight safety modes. It coordinates with the mutex and rotation systems.</p>
+
+            <h3>Explorer Fix: Kiwix URL Handling</h3>
+            <p>The explorer was broken because it assumed standard Wikipedia URL formats, but Kiwix serves articles at different paths. The fix added <code>KIWIX_URL</code> and <code>WIKI_BASE</code> environment variables, rewrote link extraction to handle Kiwix's URL format, and fixed random article navigation. This was the difference between tanks that explore and tanks that sit idle.</p>
+
+            <h3>Static IP Assignment</h3>
+            <p>All 17 tanks were assigned static IPs within the Docker network. This permanently resolved IP conflicts that were causing Ollama connection failures when containers restarted and got different addresses.</p>
+
+            <h3>Security Fixes</h3>
+            <p>A security audit found and fixed two critical issues: a hardcoded password in the admin panel (removed &mdash; auth restructured) and an XSS vulnerability in visitor-facing pages (input sanitization added).</p>
+
+            <h3>Timestamped Baselines</h3>
+            <p>Baseline files now include timestamps in their filenames. The system never overwrites existing research data. This preserves the full history of personality assessments and makes it possible to track drift over time.</p>
+
+            <h3>MCP Server Connected</h3>
+            <p>The Digiquarium MCP server enables external AI agents to inspect and operate the aquarium autonomously. Container status, health checks, log access, configuration, and shell execution &mdash; all available through the MCP interface.</p>
+
+            <h3>Admin Panel</h3>
+            <p>A new admin panel at <code>/admin/</code> provides a dashboard view of all containers, daemon SLA metrics, and system health. Built with the site's dark theme.</p>
+
+            <h3>Translation Layer Rewrite</h3>
+            <p>THE TRANSLATOR daemon was rewritten with actual translation logic, replacing curl calls with urllib and using environment variables instead of hardcoded endpoints.</p>
+
+            <h3>Brain Minimap &amp; UI Fixes</h3>
+            <p>The brain visualization minimap had a zoom reset bug on time-step navigation &mdash; fixed. Cumulative chips now display correctly. Mobile responsive navigation was added across all pages with a hamburger menu.</p>
 
             <h2>Current State</h2>
-            <p>17 specimens across 5 languages. 21 deployed daemons plus THE STRATEGIST. All configs verified. All paths consolidated. Beta period archived. v8.0 prompts active across all tanks.</p>
+            <p>17 specimens across 5 languages. 21 deployed daemons with SLA tracking, all running with proper continuous loops. Ollama running locally in Docker with mutex-based inference queuing. Custom tank image with pre-installed dependencies. Sequential baseline runner with timestamped outputs. Scheduler v4 with clash prevention. Static IPs. Admin panel. MCP server for autonomous operation.</p>
 
-            <p>This is the final lockdown pass. From here, we build forward.</p>
+            <p>This is no longer a prototype. This is production infrastructure.</p>
         </div>
     </div>
 
     <footer class="footer">
-        <a href="../">Back to Blog</a> · <a href="../../">Home</a> · <a href="../../changelog.html">Full Changelog</a>
+        <a href="../">Back to Blog</a> &middot; <a href="../../">Home</a> &middot; <a href="../../changelog.html">Full Changelog</a>
     </footer>
 <script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>

@@ -20,6 +20,9 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 50px 25px; }
         h1 { font-size: 2rem; margin-bottom: 30px; text-align: center; }
         
+        .era-label { color: var(--orange); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin: 40px 0 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(254, 101, 0, 0.2); }
+        .era-label:first-of-type { margin-top: 0; }
+
         .tree { display: flex; flex-direction: column; gap: 20px; }
         .decision { background: var(--dark); border-radius: 12px; padding: 20px; border-left: 4px solid var(--mint); }
         .decision.ethical { border-left-color: var(--orange); }
@@ -31,7 +34,6 @@
         
         .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
     
-        /* Mobile hamburger nav */
         .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
         @media (max-width: 768px) {
             nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
@@ -45,95 +47,142 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <button class="hamburger" aria-label="Menu">☰</button>
-                <nav>
+            <a href="../" class="logo">&#x1F30A; <span>Digiquarium</span></a>
+            <button class="hamburger" aria-label="Menu">&#9776;</button>
+            <nav>
                 <a href="/">Home</a>
-                <a href="/research/">Research</a>
-                <a href="/research/decisions.html">Full Log</a>
+                <a href="/blog/">Blog</a>
+                <a href="/changelog.html">Changelog</a>
             </nav>
         </div>
     </header>
     
     <div class="container">
-        <h1>🌳 Decision Tree</h1>
+        <h1>Decision Tree</h1>
         <p style="text-align: center; color: var(--gray); margin-bottom: 40px;">Key architectural and ethical decisions that shaped The Digiquarium</p>
         
         <div class="tree">
+
+            <div class="era-label">March 2026 Overhaul</div>
+
+            <div class="decision technical">
+                <div class="decision-date">Mar 27, 2026</div>
+                <div class="decision-title">Ollama: Local Docker vs. Socat Proxy to External Mac</div>
+                <div class="decision-outcome">&#x2705; Chose: Local Docker container on same host</div>
+                <div class="decision-rationale">Eliminates network dependency entirely. The socat proxy introduced failures when the Mac slept or the network hiccupped &mdash; an entire class of problems that disappears with local Docker. The full stack (tanks, daemons, Ollama, Kiwix) now lives in one docker-compose.yml.</div>
+            </div>
+
+            <div class="decision technical">
+                <div class="decision-date">Mar 27, 2026</div>
+                <div class="decision-title">Custom Tank Docker Image vs. Runtime pip install</div>
+                <div class="decision-outcome">&#x2705; Chose: Custom image with pre-installed dependencies</div>
+                <div class="decision-rationale">Tanks were crash-looping because pip install ran at startup and could block or fail. Pre-installing deps in the image adds build time but eliminates the most common cause of tank failures. Build once, run reliably.</div>
+            </div>
+
+            <div class="decision technical">
+                <div class="decision-date">Mar 27, 2026</div>
+                <div class="decision-title">Ollama Concurrency: Mutex vs. Rotation vs. Both</div>
+                <div class="decision-outcome">&#x2705; Chose: All three &mdash; mutex + stagger + rotation</div>
+                <div class="decision-rationale">17 tanks hitting one 3B model simultaneously overwhelmed the hardware. File-based mutex provides hard exclusion (one tank at a time, 300s timeout). Deterministic stagger spreads requests by tank ID across 170s. Rotation daemon groups tanks into sets of 3 with 5-min windows. Belt, suspenders, and a rope.</div>
+            </div>
+
+            <div class="decision technical">
+                <div class="decision-date">Mar 27, 2026</div>
+                <div class="decision-title">Timestamped Baselines vs. Overwrite-in-Place</div>
+                <div class="decision-outcome">&#x2705; Chose: Timestamped files, never overwrite</div>
+                <div class="decision-rationale">Research data should never be destroyed. Every baseline run creates a new file with a timestamp. This preserves the full history of personality assessments and enables drift analysis over time. The sequential runner also prevents the corrupted results from parallel baseline execution.</div>
+            </div>
+
+            <div class="decision technical">
+                <div class="decision-date">Mar 27, 2026</div>
+                <div class="decision-title">SLA Tracking on All Daemons</div>
+                <div class="decision-outcome">&#x2705; Chose: Every daemon self-reports performance metrics</div>
+                <div class="decision-rationale">You can't manage what you can't measure. All 21 daemons now track cycle count, success rate, average cycle time, and last failure timestamp. Feeds the admin panel. Makes "is the system healthy?" a data-driven question instead of a guess.</div>
+            </div>
+
+            <div class="decision technical">
+                <div class="decision-date">Mar 27, 2026</div>
+                <div class="decision-title">Static IPs vs. Dynamic Assignment for Tanks</div>
+                <div class="decision-outcome">&#x2705; Chose: Static IP assignment in docker-compose.yml</div>
+                <div class="decision-rationale">Dynamic IPs caused Ollama connection failures when containers restarted and got different addresses. Static assignment eliminates the issue permanently with zero runtime overhead.</div>
+            </div>
+
+            <div class="era-label">February 2026 &mdash; Genesis &amp; Beta</div>
+
             <div class="decision technical">
                 <div class="decision-date">Feb 18, 2026</div>
                 <div class="decision-title">Docker Containers vs Virtual Machines</div>
-                <div class="decision-outcome">✅ Chose: Docker containers</div>
+                <div class="decision-outcome">&#x2705; Chose: Docker containers</div>
                 <div class="decision-rationale">10-15 tanks possible vs 3-4 with VMs. Resource efficiency enables more specimens with same hardware.</div>
             </div>
             
             <div class="decision technical">
                 <div class="decision-date">Feb 18, 2026</div>
                 <div class="decision-title">Local AI (Ollama) vs Cloud APIs</div>
-                <div class="decision-outcome">✅ Chose: Local Ollama with llama3.2:3b</div>
+                <div class="decision-outcome">&#x2705; Chose: Local Ollama with llama3.2:3b</div>
                 <div class="decision-rationale">Privacy, cost control, reproducibility. No data leaves the NUC. Full control over inference.</div>
             </div>
             
             <div class="decision ethical">
                 <div class="decision-date">Feb 19, 2026</div>
                 <div class="decision-title">Network Isolation Strategy</div>
-                <div class="decision-outcome">✅ Chose: Complete isolation (Wikipedia + Ollama only)</div>
-                <div class="decision-rationale">Experimental integrity. Discovered Adam initially had internet access - would have compromised results.</div>
+                <div class="decision-outcome">&#x2705; Chose: Complete isolation (Wikipedia + Ollama only)</div>
+                <div class="decision-rationale">Experimental integrity. Discovered Adam initially had internet access &mdash; would have compromised results.</div>
             </div>
             
             <div class="decision ethical">
                 <div class="decision-date">Feb 20, 2026</div>
                 <div class="decision-title">Visitor Interaction Model</div>
-                <div class="decision-outcome">✅ Chose: 6-layer protection with BOUNCER intervention</div>
+                <div class="decision-outcome">&#x2705; Chose: 6-layer protection with BOUNCER intervention</div>
                 <div class="decision-rationale">Allow public engagement while protecting specimen psychological safety. No jailbreaks, no harassment.</div>
             </div>
             
             <div class="decision technical">
                 <div class="decision-date">Feb 21, 2026</div>
                 <div class="decision-title">Public Platform Choice</div>
-                <div class="decision-outcome">✅ Chose: Discord + Static website</div>
+                <div class="decision-outcome">&#x2705; Chose: Discord + Static website</div>
                 <div class="decision-rationale">Free infrastructure, proven scalability, community features. Monthly cost: $6-15 even with thousands of users.</div>
             </div>
             
             <div class="decision ethical">
                 <div class="decision-date">Feb 21, 2026</div>
                 <div class="decision-title">Transparency Level</div>
-                <div class="decision-outcome">✅ Chose: Full open source, public methodology</div>
+                <div class="decision-outcome">&#x2705; Chose: Full open source, public methodology</div>
                 <div class="decision-rationale">Academic integrity requires reproducibility. Everything documented in THE BRAIN. Nothing hidden.</div>
             </div>
             
             <div class="decision technical">
                 <div class="decision-date">Feb 22, 2026</div>
                 <div class="decision-title">Translation Strategy for Language Tanks</div>
-                <div class="decision-outcome">✅ Chose: Translate at broadcast time (server-side)</div>
+                <div class="decision-outcome">&#x2705; Chose: Translate at broadcast time (server-side)</div>
                 <div class="decision-rationale">One translation per thought, not per page load. Show both original and English. Preserve authenticity.</div>
             </div>
         
             <div class="decision technical">
                 <div class="decision-date">Feb 22, 2026</div>
-                <div class="decision-title">Infrastructure Migration: NUC → Mac Mini</div>
-                <div class="decision-outcome">✅ Chose: Mac Mini A1347 as permanent infrastructure</div>
+                <div class="decision-title">Infrastructure Migration: NUC to Mac Mini</div>
+                <div class="decision-outcome">&#x2705; Chose: Mac Mini A1347 as permanent infrastructure</div>
                 <div class="decision-rationale">2-3x faster inference (4c/8t vs 2c/4t), better thermal management for 24/7 operation, expandable storage via external HDDs. NUC served us well for prototyping; Mac Mini is production-ready.</div>
             </div>
             
             <div class="decision technical">
                 <div class="decision-date">Feb 22, 2026</div>
                 <div class="decision-title">Remote Access Architecture</div>
-                <div class="decision-outcome">✅ Chose: Cloudflare Tunnel + Cloudflare Access</div>
+                <div class="decision-outcome">&#x2705; Chose: Cloudflare Tunnel + Cloudflare Access</div>
                 <div class="decision-rationale">Free tier, no ports opened, outbound-only tunnel (more secure), enterprise auth on free tier. Enables access from anywhere without exposing home network.</div>
             </div>
             
             <div class="decision ethical">
                 <div class="decision-date">Feb 22, 2026</div>
                 <div class="decision-title">Collaboration Model Formalized</div>
-                <div class="decision-outcome">✅ Established: Co-creation, not command-execution</div>
+                <div class="decision-outcome">&#x2705; Established: Co-creation, not command-execution</div>
                 <div class="decision-rationale">THE STRATEGIST must never deliver something lesser without discussing constraints first. Honest dialogue about what's achievable. Partners building together, not master/servant.</div>
             </div>
-</div>
+        </div>
     </div>
     
     <footer class="footer">
-        <p>🌊 The Digiquarium • <a href="../research/decisions.html">Full Decision Log</a></p>
+        <p>&#x1F30A; The Digiquarium &bull; <a href="../blog/">Blog</a> &bull; <a href="../changelog.html">Full Changelog</a></p>
     </footer>
 <script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
