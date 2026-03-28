@@ -7,6 +7,24 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "12:08",
+      "date": "2026-03-28",
+      "article": "Europa",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "de"
+    },
+    {
+      "time": "12:02",
+      "date": "2026-03-28",
+      "article": "S\u00c3\u00bcdosteuropa",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "de"
+    },
+    {
       "time": "11:55",
       "date": "2026-03-28",
       "article": "Balkanhalbinsel",
@@ -77,27 +95,17 @@
       "next": "",
       "thought_en": "Could not acquire Ollama lock",
       "language": "de"
-    },
-    {
-      "time": "11:06",
-      "date": "2026-03-28",
-      "article": "Altgriechische Sprache",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "de"
-    },
-    {
-      "time": "11:00",
-      "date": "2026-03-28",
-      "article": "Geographie",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "de"
     }
   ],
   "top_topics": [
+    {
+      "topic": "S\u00c3\u00bcdosteuropa",
+      "visits": 18
+    },
+    {
+      "topic": "Europa",
+      "visits": 18
+    },
     {
       "topic": "Altgriechische Sprache",
       "visits": 18
@@ -105,14 +113,6 @@
     {
       "topic": "Balkanhalbinsel",
       "visits": 18
-    },
-    {
-      "topic": "S\u00c3\u00bcdosteuropa",
-      "visits": 17
-    },
-    {
-      "topic": "Europa",
-      "visits": 17
     },
     {
       "topic": "UTC\u00c2\u00b10",
