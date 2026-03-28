@@ -7,7 +7,25 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "12:04",
+      "time": "00:05",
+      "date": "2026-03-29",
+      "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "ja"
+    },
+    {
+      "time": "00:00",
+      "date": "2026-03-29",
+      "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "ja"
+    },
+    {
+      "time": "23:54",
       "date": "2026-03-28",
       "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
       "thought": "Could not acquire Ollama lock",
@@ -16,7 +34,7 @@
       "language": "ja"
     },
     {
-      "time": "11:58",
+      "time": "23:48",
       "date": "2026-03-28",
       "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
       "thought": "Could not acquire Ollama lock",
@@ -25,7 +43,7 @@
       "language": "ja"
     },
     {
-      "time": "11:52",
+      "time": "23:41",
       "date": "2026-03-28",
       "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
       "thought": "Could not acquire Ollama lock",
@@ -34,7 +52,7 @@
       "language": "ja"
     },
     {
-      "time": "11:46",
+      "time": "23:36",
       "date": "2026-03-28",
       "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
       "thought": "Could not acquire Ollama lock",
@@ -43,7 +61,7 @@
       "language": "ja"
     },
     {
-      "time": "11:40",
+      "time": "23:29",
       "date": "2026-03-28",
       "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
       "thought": "Could not acquire Ollama lock",
@@ -52,7 +70,7 @@
       "language": "ja"
     },
     {
-      "time": "11:34",
+      "time": "23:23",
       "date": "2026-03-28",
       "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
       "thought": "Could not acquire Ollama lock",
@@ -61,7 +79,7 @@
       "language": "ja"
     },
     {
-      "time": "11:28",
+      "time": "23:16",
       "date": "2026-03-28",
       "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
       "thought": "Could not acquire Ollama lock",
@@ -70,25 +88,7 @@
       "language": "ja"
     },
     {
-      "time": "11:21",
-      "date": "2026-03-28",
-      "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "ja"
-    },
-    {
-      "time": "11:15",
-      "date": "2026-03-28",
-      "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "ja"
-    },
-    {
-      "time": "11:09",
+      "time": "23:11",
       "date": "2026-03-28",
       "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
       "thought": "Could not acquire Ollama lock",
@@ -100,15 +100,19 @@
   "top_topics": [
     {
       "topic": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-      "visits": 67
+      "visits": 126
     },
     {
       "topic": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
-      "visits": 66
+      "visits": 124
     },
     {
       "topic": "\u00e3\u0083\u0092\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0083\u009e\u00e3\u0083\u00b3",
       "visits": 2
+    },
+    {
+      "topic": "\u00e3\u0082\u00a6\u00e3\u0082\u00a9\u00e3\u0083\u00bc\u00e3\u0082\u00bf\u00e3\u0083\u00bc",
+      "visits": 1
     },
     {
       "topic": "\u00e3\u0082\u00aa\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a3\u00e3\u0083\u00b3",
@@ -124,10 +128,6 @@
     },
     {
       "topic": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00aa\u00e3\u0082\u00b8\u00e3\u0082\u00a7\u00e3\u0083\u008b\u00e3\u0082\u00a2\u00e3\u0083\u00b3",
-      "visits": 1
-    },
-    {
-      "topic": "\u00e5\u009c\u00b0\u00e8\u00b3\u00aa\u00e6\u0099\u0082\u00e4\u00bb\u00a3",
       "visits": 1
     }
   ]
