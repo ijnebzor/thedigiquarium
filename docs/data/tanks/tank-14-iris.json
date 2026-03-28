@@ -7,6 +7,33 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
+      "time": "00:23",
+      "date": "2026-03-29",
+      "article": "Pizza",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "00:17",
+      "date": "2026-03-29",
+      "article": "Food",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "00:11",
+      "date": "2026-03-29",
+      "article": "Pasta",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
       "time": "00:05",
       "date": "2026-03-29",
       "article": "Italian food",
@@ -68,33 +95,6 @@
       "next": "",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "23:23",
-      "date": "2026-03-28",
-      "article": "Pasta",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "23:17",
-      "date": "2026-03-28",
-      "article": "Italian food",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "23:11",
-      "date": "2026-03-28",
-      "article": "Pizza",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
@@ -104,6 +104,10 @@
     },
     {
       "topic": "Food",
+      "visits": 32
+    },
+    {
+      "topic": "Pizza",
       "visits": 31
     },
     {
@@ -111,12 +115,8 @@
       "visits": 30
     },
     {
-      "topic": "Pizza",
-      "visits": 30
-    },
-    {
       "topic": "Pasta",
-      "visits": 29
+      "visits": 30
     },
     {
       "topic": "Estonia",
