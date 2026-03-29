@@ -150,7 +150,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.1
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -190,7 +191,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.2
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -231,7 +233,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.3
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -273,7 +276,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.4
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -315,7 +319,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.5
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -357,7 +362,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.6
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -399,7 +405,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.7
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -441,7 +448,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.8
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -483,7 +491,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.9
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -525,7 +534,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.10
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -567,7 +577,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.11
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -609,7 +620,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.12
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -651,7 +663,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.13
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -693,7 +706,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.14
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -736,7 +750,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.15
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -779,7 +794,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.16
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:
@@ -823,7 +839,8 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.17
-    dns: []
+      default:
+    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
     security_opt:

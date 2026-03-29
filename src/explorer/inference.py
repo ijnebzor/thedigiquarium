@@ -60,7 +60,8 @@ def _call_groq(system_prompt: str, user_prompt: str, timeout: int) -> str:
         data=data,
         headers={
             'Content-Type': 'application/json',
-            'Authorization': f'Bearer {GROQ_API_KEY}'
+            'Authorization': f'Bearer {GROQ_API_KEY}',
+            'User-Agent': 'Digiquarium/1.0'
         }
     )
     
