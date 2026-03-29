@@ -27,12 +27,23 @@ def generate(system_prompt: str, user_prompt: str, timeout: int = 60) -> str:
     """
     # Try Groq first if API key is available
     if GROQ_API_KEY:
-        try:
-            result = _call_groq(system_prompt, user_prompt, timeout)
-            if result:
-                return result
-        except Exception as e:
-            logger.warning(f"Groq failed: {e}, falling back to Ollama")
+        import random
+        for attempt in range(3):
+            try:
+                # Stagger by tank ID to avoid thundering herd
+                tank_num = int(os.getenv('TANK_ID', 'tank-01').split('-')[1])
+                time.sleep(tank_num * 2 + random.uniform(0, 3))  # 2-37s spread
+                result = _call_groq(system_prompt, user_prompt, timeout)
+                if result:
+                    return result
+            except Exception as e:
+                if '429' in str(e):
+                    wait = (attempt + 1) * 10 + random.uniform(0, 10)
+                    logger.info(f"Groq rate limited, waiting {wait:.0f}s (attempt {attempt+1}/3)")
+                    time.sleep(wait)
+                else:
+                    logger.warning(f"Groq failed: {e}, falling back to Ollama")
+                    break
     
     # Fallback to local Ollama
     try:
