@@ -132,6 +132,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -170,6 +172,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -209,6 +213,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -249,6 +255,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -289,6 +297,8 @@ services:
       - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -329,6 +339,8 @@ services:
       - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -369,6 +381,8 @@ services:
       - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -409,6 +423,8 @@ services:
       - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -449,6 +465,8 @@ services:
       - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -489,6 +507,8 @@ services:
       - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -529,6 +549,8 @@ services:
       - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -569,6 +591,8 @@ services:
       - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -609,6 +633,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -649,6 +675,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -689,6 +717,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -731,6 +761,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -773,6 +805,8 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:

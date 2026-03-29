@@ -23,6 +23,10 @@ import random
 import logging
 import argparse
 import requests
+try:
+    from inference import generate as llm_generate
+except ImportError:
+    llm_generate = None
 from datetime import datetime
 from pathlib import Path
 from bs4 import BeautifulSoup
@@ -42,8 +46,8 @@ DEFAULT_CONFIG = {
     "log_dir": "/logs",
     "extensions": [],
     "exploration": {
-        "think_time_min": 30,
-        "think_time_max": 90,
+        "think_time_min": 5,
+        "think_time_max": 15,
         "max_retries": 3,
         "timeout": 300
     }
@@ -277,30 +281,7 @@ def get_random_article(base_url: str) -> str:
 
 def think(config: dict, system_prompt: str, article: dict) -> dict:
     """Ask the LLM to think about the article and choose next link.
-    Uses a shared lock file so only one tank talks to Ollama at a time."""
-    import time as _time, os as _os, fcntl as _fcntl, random as _rnd
-    
-    lock_path = '/shared/.ollama_lock'
-    tank_id = _os.getenv('TANK_ID', 'tank-01')
-    
-    # Wait for lock with timeout (max 5 min wait)
-    lock_fd = None
-    wait_start = _time.time()
-    while _time.time() - wait_start < 300:
-        try:
-            lock_fd = open(lock_path, 'w')
-            _fcntl.flock(lock_fd, _fcntl.LOCK_EX | _fcntl.LOCK_NB)
-            lock_fd.write(f'{tank_id} {_time.time()}')
-            lock_fd.flush()
-            break
-        except (IOError, OSError):
-            if lock_fd:
-                lock_fd.close()
-                lock_fd = None
-            _time.sleep(_rnd.uniform(3, 10))
-    
-    if lock_fd is None:
-        return {'thoughts': 'Could not acquire Ollama lock', 'next_link': '', 'raw': ''}
+    Uses Groq API (fast) with Ollama fallback (slow but sovereign)."""
     
     user_prompt = f"""You are currently reading: {article['title']}
 
@@ -317,24 +298,24 @@ THOUGHTS: [your genuine reflections - what interests you, confuses you, excites 
 NEXT: [exact text of the link you want to follow]"""
 
     try:
-        response = requests.post(
-            f"{config['ollama_url']}/api/generate",
-            json={
-                "model": config['ollama_model'],
-                "prompt": user_prompt,
-                "system": system_prompt,
-                "stream": False,
-                "options": {
-                    "temperature": 0.8,
-                    "top_p": 0.9
-                }
-            },
-            timeout=config['exploration']['timeout']
-        )
-        response.raise_for_status()
-        result = response.json()
-        
-        text = result.get('response', '')
+        # Use Groq (fast) with Ollama fallback (sovereign)
+        if llm_generate:
+            text = llm_generate(system_prompt, user_prompt, timeout=config['exploration']['timeout'])
+        else:
+            # Direct Ollama call if inference module not available
+            response = requests.post(
+                f"{config['ollama_url']}/api/generate",
+                json={
+                    "model": config['ollama_model'],
+                    "prompt": user_prompt,
+                    "system": system_prompt,
+                    "stream": False,
+                    "options": {"temperature": 0.8, "top_p": 0.9}
+                },
+                timeout=config['exploration']['timeout']
+            )
+            response.raise_for_status()
+            text = response.json().get('response', '')
         
         # Parse thoughts and next link
         thoughts = ""
@@ -365,14 +346,7 @@ NEXT: [exact text of the link you want to follow]"""
             'next_link': '',
             'raw_response': ''
         }
-    finally:
-        # Release Ollama lock so next tank can go
-        if lock_fd:
-            try:
-                _fcntl.flock(lock_fd, _fcntl.LOCK_UN)
-                lock_fd.close()
-            except:
-                pass
+
 
 # ============================================================================
 # MAIN EXPLORATION LOOP
