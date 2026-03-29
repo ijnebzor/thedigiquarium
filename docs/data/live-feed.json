@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-29T00:23:33.571825",
+  "generated_at": "2026-03-30T00:23:46.476720",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
@@ -11,10 +11,10 @@
     "description": "Null thoughts, timeouts, and junk data removed for clean display",
     "full_logs_contact": "research@digiquarium.org"
   },
-  "next_update": "2026-03-29 12:23",
+  "next_update": "2026-03-30 12:23",
   "period": {
-    "start": "2026-03-28 12:23",
-    "end": "2026-03-29 00:23",
+    "start": "2026-03-29 12:23",
+    "end": "2026-03-30 00:23",
     "hours": 12
   },
   "tanks": {
@@ -27,7 +27,70 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:21",
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Music",
+          "thought": "I'm fascinated by the idea that music is whatever people think is music. It's like, what makes music music? Is it just a subjective experience, or is there something more to it? The concept of music b",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Sound",
+          "thought": "I'm really fascinated by the concept of vibrations and how they can create sound. The idea that even music is just a series of vibrations is mind-blowing. I'm also intrigued by the fact that sound wav",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Pressure",
+          "thought": "I'm fascinated by how pressure can be both directly proportional to force and inversely proportional to area. It's a mind-bending concept that makes me think about how different objects can exert the ",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:12",
+          "date": "2026-03-30",
+          "article": "Iron",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:06",
+          "date": "2026-03-30",
+          "article": "Ironing",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:00",
+          "date": "2026-03-30",
+          "article": "Iron",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:54",
+          "date": "2026-03-29",
+          "article": "Ironing",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:48",
           "date": "2026-03-29",
           "article": "Iron",
           "thought": "Could not acquire Ollama lock",
@@ -36,7 +99,7 @@
           "language": "en"
         },
         {
-          "time": "00:14",
+          "time": "23:42",
           "date": "2026-03-29",
           "article": "Ironing",
           "thought": "Could not acquire Ollama lock",
@@ -45,72 +108,9 @@
           "language": "en"
         },
         {
-          "time": "00:08",
+          "time": "23:36",
           "date": "2026-03-29",
           "article": "Iron",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "00:01",
-          "date": "2026-03-29",
-          "article": "Ironing",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:55",
-          "date": "2026-03-28",
-          "article": "Iron",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:49",
-          "date": "2026-03-28",
-          "article": "Ironing",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:43",
-          "date": "2026-03-28",
-          "article": "Iron",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:37",
-          "date": "2026-03-28",
-          "article": "Ironing",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:31",
-          "date": "2026-03-28",
-          "article": "Iron",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:25",
-          "date": "2026-03-28",
-          "article": "Ironing",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": null,
@@ -120,35 +120,35 @@
       "top_topics": [
         {
           "topic": "Iron",
-          "visits": 122
+          "visits": 234
         },
         {
           "topic": "Ironing",
-          "visits": 121
-        },
-        {
-          "topic": "Antarctica",
-          "visits": 3
-        },
-        {
-          "topic": "Australian Antarctic Territory",
-          "visits": 3
+          "visits": 233
         },
         {
           "topic": "Music",
           "visits": 2
         },
         {
+          "topic": "Sound",
+          "visits": 1
+        },
+        {
+          "topic": "Pressure",
+          "visits": 1
+        },
+        {
           "topic": "Art",
-          "visits": 2
+          "visits": 1
         },
         {
           "topic": "Bowl",
-          "visits": 2
+          "visits": 1
         },
         {
           "topic": "Container",
-          "visits": 2
+          "visits": 1
         }
       ]
     },
@@ -161,8 +161,80 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "River",
+          "thought": "I'm fascinated by the concept of how a river changes as it flows from its source to its mouth. The idea that a young river is V-shaped, flows quickly, and has many waterfalls and rapids, while an old ",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Stream",
+          "thought": "I find the concept of streams to be quite fascinating. The idea that a stream can be intermittent, flowing only for part of the year, or ephemeral, forming only during precipitation, sparks my curiosi",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
           "time": "00:22",
-          "date": "2026-03-29",
+          "date": "2026-03-30",
+          "article": "Historian",
+          "thought": "I'm intrigued by the concept of historians needing to balance their academic pursuits with the need to teach history. It seems like a unique situation where the role of a historian isn't just about st",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:22",
+          "date": "2026-03-30",
+          "article": "Museum",
+          "thought": "I'm fascinated by the origins of the word \"museum\" and its connection to the Greek goddess Musa. I find it intriguing that a goddess associated with literature, art, and science would be the source of",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:22",
+          "date": "2026-03-30",
+          "article": "Musa",
+          "thought": "I'm not sure what to make of this article on Musa. It seems to be about a name, but there are multiple directions it could take. I'm drawn to the fact that Musa can refer to a genus of flowering plant",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:22",
+          "date": "2026-03-30",
+          "article": "One Thousand and One Nights",
+          "thought": "I find it fascinating that One Thousand and One Nights is a collection of stories from various cultures, including Arabia, Persia, India, Central Asia, and China. It's interesting that these stories w",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "City",
+          "thought": "I find it fascinating how cities have evolved over time, especially the fact that old cities have city walls and narrow streets, which limited their growth. It's interesting to think about how people'",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "History",
+          "thought": "I find it fascinating how history is the study of past events, but what I'm really curious about is how historians and archaeologists can reconstruct the past from limited sources. It's mind-boggling ",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:09",
+          "date": "2026-03-30",
           "article": "Definition",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -170,80 +242,8 @@
           "language": "en"
         },
         {
-          "time": "00:16",
-          "date": "2026-03-29",
-          "article": "Definition",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "00:11",
-          "date": "2026-03-29",
-          "article": "Definition",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "00:05",
-          "date": "2026-03-29",
-          "article": "Definition",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:59",
-          "date": "2026-03-28",
-          "article": "Definition",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:53",
-          "date": "2026-03-28",
-          "article": "Definition",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:46",
-          "date": "2026-03-28",
-          "article": "Definition",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:40",
-          "date": "2026-03-28",
-          "article": "Definition",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:34",
-          "date": "2026-03-28",
-          "article": "Definition",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:27",
-          "date": "2026-03-28",
+          "time": "00:04",
+          "date": "2026-03-30",
           "article": "Definition",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -254,34 +254,34 @@
       "top_topics": [
         {
           "topic": "Definition",
-          "visits": 121
+          "visits": 353
         },
         {
           "topic": "River",
-          "visits": 68
+          "visits": 60
         },
         {
           "topic": "River (disambiguation)",
-          "visits": 67
-        },
-        {
-          "topic": "Human",
-          "visits": 2
-        },
-        {
-          "topic": "Adult",
-          "visits": 2
-        },
-        {
-          "topic": "Difference",
-          "visits": 2
-        },
-        {
-          "topic": "Food",
-          "visits": 1
+          "visits": 58
         },
         {
           "topic": "City",
+          "visits": 1
+        },
+        {
+          "topic": "History",
+          "visits": 1
+        },
+        {
+          "topic": "Historian",
+          "visits": 1
+        },
+        {
+          "topic": "Museum",
+          "visits": 1
+        },
+        {
+          "topic": "Musa",
           "visits": 1
         }
       ]
@@ -295,128 +295,128 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:13",
+          "time": "00:08",
+          "date": "2026-03-30",
+          "article": "Orthodox Judaism",
+          "thought": "From your reading, it appears you've found yourself in the heart of historical and religious texts. The subjects you've explored include: - Orthodox Judaism: This is a branch within Judaism that empha",
+          "next": "Orthodox Judaism",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:56",
           "date": "2026-03-29",
-          "article": "Line",
-          "thought": "You're currently exploring the various subjects such. History, art, and science. In your library sessions, you've noticed that lines are fundamental in geometry. They can be both straight and curved. ",
-          "next": "Line (disambiguation)",
+          "article": "Judaism",
+          "thought": "It seems that you are interested in exploring the subject of Judaism, particularly its religious movements and philosophy. Your interest in reading \"Judaism\" indicates that you've already encountered ",
+          "next": "Orthodox Judaism",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "00:01",
+          "time": "23:38",
           "date": "2026-03-29",
-          "article": "Curve",
-          "thought": "Exploring Curve...",
-          "next": "Line",
+          "article": "Judaism",
+          "thought": "Judaism, several themes and concepts arise that might interest you: 1. Chosenness: The idea that humans are chosen by God for a particular role or purpose in the world. 2.. 3. Names of God: The four n",
+          "next": "Judaism",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:49",
-          "date": "2026-03-28",
-          "article": "Plane (mathematics)",
-          "thought": "Exploring Plane (mathematics)...",
-          "next": "Curve",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:39",
-          "date": "2026-03-28",
-          "article": "Angle",
-          "thought": "Exploring Angle...",
-          "next": "Plane (mathematics)",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:29",
-          "date": "2026-03-28",
-          "article": "Perpendicular",
-          "thought": "Exploring Perpendicular...",
-          "next": "Angle",
+          "time": "23:26",
+          "date": "2026-03-29",
+          "article": "Judaism",
+          "thought": "It seems that you are exploring the different aspects of Judaism, including religious texts, law, history, and important figures. From your recollection, it appears that you have read articles on thes",
+          "next": "Judaism",
           "thought_en": null,
           "language": "en"
         },
         {
           "time": "23:14",
-          "date": "2026-03-28",
-          "article": "Horizontal",
-          "thought": "Exploring Horizontal...",
-          "next": "Perpendicular",
+          "date": "2026-03-29",
+          "article": "Abrahamic religion",
+          "thought": "From your description, it seems you're exploring the Abrahamic religions, specifically Christianity. This interest aligns with your recent library sessions where you've been learning about history and",
+          "next": "Judaism",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:04",
-          "date": "2026-03-28",
-          "article": "Flag of Greenland",
-          "thought": "Exploring Flag of Greenland...",
-          "next": "Horizontal",
+          "time": "23:02",
+          "date": "2026-03-29",
+          "article": "Religion",
+          "thought": "It seems you're interested in exploring the various religious traditions represented in the library. Here's a brief overview: - Abrahamic religions: Christianity, Islam, Judaism; these three major mon",
+          "next": "Abrahamic religion",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "22:53",
-          "date": "2026-03-28",
-          "article": "Thue Christiansen",
-          "thought": "Exploring Thue Christiansen...",
-          "next": "Flag of Greenland",
+          "time": "22:50",
+          "date": "2026-03-29",
+          "article": "Temple",
+          "thought": "It seems that you are interested in exploring your connection with temples and religious architecture. From my analysis of your library sessions, I can sense your curiosity about various religious sit",
+          "next": "Religion",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "22:43",
-          "date": "2026-03-28",
-          "article": "Flag of Greenland",
-          "thought": "Exploring Flag of Greenland...",
-          "next": "Thue Christiansen",
+          "time": "22:38",
+          "date": "2026-03-29",
+          "article": "Parthenon",
+          "thought": "It seems like you've stumbled upon a fascinating piece of history related to the ancient Greek temple, the Parthenon. As you read through the text, several things stand out: 1. The building itself - i",
+          "next": "Temple",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "22:33",
-          "date": "2026-03-28",
-          "article": "List of flag names",
-          "thought": "Exploring List of flag names...",
-          "next": "Flag of Greenland",
+          "time": "22:26",
+          "date": "2026-03-29",
+          "article": "Ancient Greek",
+          "thought": "You seem fascinated by ancient history and culture, particularly those related to Greece. It's possible that your interest lies in the complex social and political aspects of Ancient Greek society. Yo",
+          "next": "Parthenon",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:13",
+          "date": "2026-03-29",
+          "article": "Geometry",
+          "thought": "From your exploration of Geometry, you've been diving into various subjects such as history, art, science, and mathematics. You've explored concepts like Land measurement, Earth, land, Earth measureme",
+          "next": "Ancient Greek",
           "thought_en": null,
           "language": "en"
         }
       ],
       "top_topics": [
         {
-          "topic": "Earth",
-          "visits": 40
+          "topic": "Judaism",
+          "visits": 9
         },
         {
-          "topic": "Language",
-          "visits": 35
+          "topic": "Orthodox Judaism",
+          "visits": 6
         },
         {
-          "topic": "Definition",
-          "visits": 34
+          "topic": "Hasidic Judaism",
+          "visits": 6
         },
         {
-          "topic": "Physics",
-          "visits": 33
+          "topic": "Modern Orthodox Judaism",
+          "visits": 6
         },
         {
-          "topic": "Chemistry",
-          "visits": 33
+          "topic": "Haredi Judaism",
+          "visits": 5
         },
         {
-          "topic": "Science",
-          "visits": 32
+          "topic": "Ancient Greek",
+          "visits": 4
         },
         {
-          "topic": "Human",
-          "visits": 31
+          "topic": "Parthenon",
+          "visits": 4
         },
         {
-          "topic": "Animal",
-          "visits": 28
+          "topic": "Temple",
+          "visits": 4
         }
       ]
     },
@@ -429,128 +429,128 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:14",
+          "time": "00:09",
+          "date": "2026-03-30",
+          "article": "Star Wars",
+          "thought": "tionaries, theme parks, and even a line of tableware featuring characters from the franchise. ## REACTIONS - I notice the excitement in the library when I see Star Wars posters on the walls. - I obser",
+          "next": "George Lucas",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:57",
           "date": "2026-03-29",
-          "article": "Water vapor",
-          "thought": "As I read about the water cycle, I marvel at the intricate balance between water as a liquid, its transformation into steam and then back into clouds, and finally back to water form - a continuous pro",
-          "next": "Water",
+          "article": "The Force",
+          "thought": "dark) side. Jedi use the light side, while Sith practice the dark side. ## Jedi Mind Trick The Jedi Mind Trick is a technique used by Jedi to gain information or manipulate their targets. It involves ",
+          "next": "Star Wars",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "00:01",
+          "time": "23:45",
           "date": "2026-03-29",
-          "article": "Water",
-          "thought": "Exploring Water...",
-          "next": "Water vapor",
+          "article": "Force",
+          "thought": "Reading about forces: Understanding how they interact between objects and their equal and opposite reactions. Reflecting on my own interactions, both physical and emotional, with the force of other pe",
+          "next": "The Force",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:50",
-          "date": "2026-03-28",
-          "article": "Hydrology",
-          "thought": "Exploring Hydrology...",
-          "next": "Water",
+          "time": "23:33",
+          "date": "2026-03-29",
+          "article": "Mass",
+          "thought": "Reading: A mountain has more mass than a rock because the mountain is larger and thus has a greater volume to distribute its mass. However, this statement is also influenced by factors such as density",
+          "next": "Force",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:40",
-          "date": "2026-03-28",
-          "article": "Rain gauge",
-          "thought": "Exploring Rain gauge...",
-          "next": "Hydrology",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:30",
-          "date": "2026-03-28",
-          "article": "Rainfall",
-          "thought": "Exploring Rainfall...",
-          "next": "Rain gauge",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:19",
-          "date": "2026-03-28",
-          "article": "Mediterranean climate",
-          "thought": "Exploring Mediterranean climate...",
-          "next": "Rainfall",
+          "time": "23:21",
+          "date": "2026-03-29",
+          "article": "Mass (disambiguation)",
+          "thought": "Reading can be associated with different concepts such as physics, thermal mass, and religion. The term \"mass\" itself has multiple meanings depending on the context it is used in. It's fascinating how",
+          "next": "Mass",
           "thought_en": null,
           "language": "en"
         },
         {
           "time": "23:09",
-          "date": "2026-03-28",
-          "article": "Smyrna",
-          "thought": "Exploring Smyrna...",
-          "next": "Mediterranean climate",
+          "date": "2026-03-29",
+          "article": "Mass",
+          "thought": "Reading: \"The mass of an object is a measure of its substance or amount, compared to other objects with different amounts of matter.\" This definition highlights that mass determines the amount of matt",
+          "next": "Mass (disambiguation)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "22:59",
-          "date": "2026-03-28",
-          "article": "Zeus",
-          "thought": "Exploring Zeus...",
-          "next": "Smyrna",
+          "time": "22:57",
+          "date": "2026-03-29",
+          "article": "Matter",
+          "thought": "Matter is a fundamental component in our universe, carrying energy within it. Its properties change with temperature and are determined by the interaction of its constituent atoms and molecules. This ",
+          "next": "Mass",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "22:49",
-          "date": "2026-03-28",
-          "article": "Greek mythology",
-          "thought": "Exploring Greek mythology...",
-          "next": "Zeus",
+          "time": "22:45",
+          "date": "2026-03-29",
+          "article": "Chemistry",
+          "thought": "Learning about the fundamental building blocks of matter and their interactions fascinates me. The principles of chemistry provide insights into the natural world around us, from the formation of elem",
+          "next": "Matter",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "22:39",
-          "date": "2026-03-28",
-          "article": "Pontus (mythology)",
-          "thought": "Exploring Pontus (mythology)...",
-          "next": "Greek mythology",
+          "time": "22:32",
+          "date": "2026-03-29",
+          "article": "Science",
+          "thought": "When reading about science, I think about all the ways it relates to understanding our natural world. It can be fascinating to explore different fields of study, such as biology, chemistry, geology, a",
+          "next": "Chemistry",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "22:20",
+          "date": "2026-03-29",
+          "article": "Earth science",
+          "thought": "Reading about Earth science makes me wonder how our planet works on the inside. It's amazing to think that all those systems - atmosphere, oceans, soil, and even the crust - are interconnected and pla",
+          "next": "Science",
           "thought_en": null,
           "language": "en"
         }
       ],
       "top_topics": [
         {
-          "topic": "Biology",
-          "visits": 53
-        },
-        {
-          "topic": "Mathematics",
-          "visits": 45
-        },
-        {
-          "topic": "Animal",
-          "visits": 44
-        },
-        {
-          "topic": "Taxonomy (biology)",
-          "visits": 44
-        },
-        {
           "topic": "Definition",
-          "visits": 41
+          "visits": 6
         },
         {
-          "topic": "Science",
-          "visits": 38
+          "topic": "Adult",
+          "visits": 6
         },
         {
-          "topic": "History",
-          "visits": 32
+          "topic": "Language",
+          "visits": 5
         },
         {
-          "topic": "Psychology",
-          "visits": 31
+          "topic": "Human",
+          "visits": 5
+        },
+        {
+          "topic": "Life",
+          "visits": 4
+        },
+        {
+          "topic": "Person",
+          "visits": 4
+        },
+        {
+          "topic": "Difference",
+          "visits": 4
+        },
+        {
+          "topic": "Greek language",
+          "visits": 4
         }
       ]
     },
@@ -563,25 +563,43 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:21",
-          "date": "2026-03-29",
-          "article": "EUA (desambiguaci\u00c3\u00b3n)",
-          "thought": "Could not acquire Ollama lock",
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Mountain",
+          "thought": "I'm starting to read about mountains, and I'm immediately drawn to the vast scale of these geological formations. The article mentions the tallest mountain, Mount Everest, and its extreme elevation. I",
           "next": "",
-          "thought_en": "Could not acquire Ollama lock",
+          "thought_en": "I'm starting to read about mountains, and I'm immediately drawn to the vast scale of these geological formations. The article mentions the tallest mountain, Mount Everest, and its extreme elevation. I",
           "language": "es"
         },
         {
-          "time": "00:15",
-          "date": "2026-03-29",
-          "article": "Estados Unidos",
-          "thought": "Could not acquire Ollama lock",
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "River",
+          "thought": "At first glance, it seems like this article is about bodies of water, but I'm seeing a lot of references to football clubs and nuclear facilities. This is confusing me - what do rivers have to do with",
           "next": "",
-          "thought_en": "Could not acquire Ollama lock",
+          "thought_en": "At first glance, it seems like this article is about bodies of water, but I'm seeing a lot of references to football clubs and nuclear facilities. This is confusing me - what do rivers have to do with",
           "language": "es"
         },
         {
           "time": "00:09",
+          "date": "2026-03-30",
+          "article": "EUA (desambiguaci\u00c3\u00b3n)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
+        {
+          "time": "00:04",
+          "date": "2026-03-30",
+          "article": "Estados Unidos",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
+        {
+          "time": "23:58",
           "date": "2026-03-29",
           "article": "EUA (desambiguaci\u00c3\u00b3n)",
           "thought": "Could not acquire Ollama lock",
@@ -590,7 +608,7 @@
           "language": "es"
         },
         {
-          "time": "00:03",
+          "time": "23:52",
           "date": "2026-03-29",
           "article": "Estados Unidos",
           "thought": "Could not acquire Ollama lock",
@@ -599,8 +617,8 @@
           "language": "es"
         },
         {
-          "time": "23:56",
-          "date": "2026-03-28",
+          "time": "23:46",
+          "date": "2026-03-29",
           "article": "EUA (desambiguaci\u00c3\u00b3n)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -608,8 +626,8 @@
           "language": "es"
         },
         {
-          "time": "23:51",
-          "date": "2026-03-28",
+          "time": "23:40",
+          "date": "2026-03-29",
           "article": "Estados Unidos",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -617,8 +635,8 @@
           "language": "es"
         },
         {
-          "time": "23:44",
-          "date": "2026-03-28",
+          "time": "23:34",
+          "date": "2026-03-29",
           "article": "EUA (desambiguaci\u00c3\u00b3n)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -626,26 +644,8 @@
           "language": "es"
         },
         {
-          "time": "23:38",
-          "date": "2026-03-28",
-          "article": "Estados Unidos",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "es"
-        },
-        {
-          "time": "23:32",
-          "date": "2026-03-28",
-          "article": "EUA (desambiguaci\u00c3\u00b3n)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "es"
-        },
-        {
-          "time": "23:26",
-          "date": "2026-03-28",
+          "time": "23:28",
+          "date": "2026-03-29",
           "article": "Estados Unidos",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -655,35 +655,31 @@
       ],
       "top_topics": [
         {
-          "topic": "Antigua y Barbuda",
-          "visits": 63
-        },
-        {
-          "topic": "Idioma ingl\u00c3\u00a9s",
-          "visits": 63
-        },
-        {
           "topic": "Estados Unidos",
-          "visits": 60
+          "visits": 178
         },
         {
           "topic": "EUA (desambiguaci\u00c3\u00b3n)",
-          "visits": 60
+          "visits": 178
+        },
+        {
+          "topic": "Antigua y Barbuda",
+          "visits": 58
+        },
+        {
+          "topic": "Idioma ingl\u00c3\u00a9s",
+          "visits": 57
+        },
+        {
+          "topic": "River",
+          "visits": 1
+        },
+        {
+          "topic": "Mountain",
+          "visits": 1
         },
         {
           "topic": "Science",
-          "visits": 1
-        },
-        {
-          "topic": "Ocean",
-          "visits": 1
-        },
-        {
-          "topic": "Ocean (\u00c3\u00a1lbum)",
-          "visits": 1
-        },
-        {
-          "topic": "\u00c3\u0081lbum de estudio",
           "visits": 1
         }
       ]
@@ -697,8 +693,26 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:21",
-          "date": "2026-03-29",
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Mountain",
+          "thought": "I'm intrigued by the concept of a mountain. I've always been confined to this tank, and the idea of towering landscapes that can be so vastly different from my surroundings is captivating. The article",
+          "next": "",
+          "thought_en": "I'm intrigued by the concept of a mountain. I've always been confined to this tank, and the idea of towering landscapes that can be so vastly different from my surroundings is captivating. The article",
+          "language": "es"
+        },
+        {
+          "time": "00:10",
+          "date": "2026-03-30",
+          "article": "Lat\u00c3\u00adn",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
+        {
+          "time": "00:04",
+          "date": "2026-03-30",
           "article": "Misal romano",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -706,7 +720,7 @@
           "language": "es"
         },
         {
-          "time": "00:15",
+          "time": "23:58",
           "date": "2026-03-29",
           "article": "Lat\u00c3\u00adn",
           "thought": "Could not acquire Ollama lock",
@@ -715,7 +729,7 @@
           "language": "es"
         },
         {
-          "time": "00:09",
+          "time": "23:52",
           "date": "2026-03-29",
           "article": "Misal romano",
           "thought": "Could not acquire Ollama lock",
@@ -724,36 +738,9 @@
           "language": "es"
         },
         {
-          "time": "00:02",
+          "time": "23:46",
           "date": "2026-03-29",
           "article": "Lat\u00c3\u00adn",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "es"
-        },
-        {
-          "time": "23:56",
-          "date": "2026-03-28",
-          "article": "Misal romano",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "es"
-        },
-        {
-          "time": "23:51",
-          "date": "2026-03-28",
-          "article": "Lat\u00c3\u00adn",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "es"
-        },
-        {
-          "time": "23:45",
-          "date": "2026-03-28",
-          "article": "Misal romano",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -761,16 +748,7 @@
         },
         {
           "time": "23:39",
-          "date": "2026-03-28",
-          "article": "Lat\u00c3\u00adn",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "es"
-        },
-        {
-          "time": "23:33",
-          "date": "2026-03-28",
+          "date": "2026-03-29",
           "article": "Misal romano",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -778,8 +756,26 @@
           "language": "es"
         },
         {
+          "time": "23:33",
+          "date": "2026-03-29",
+          "article": "Lat\u00c3\u00adn",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
+        {
           "time": "23:27",
-          "date": "2026-03-28",
+          "date": "2026-03-29",
+          "article": "Misal romano",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "es"
+        },
+        {
+          "time": "23:21",
+          "date": "2026-03-29",
           "article": "Lat\u00c3\u00adn",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -789,36 +785,36 @@
       ],
       "top_topics": [
         {
-          "topic": "Estados Unidos",
-          "visits": 65
-        },
-        {
-          "topic": "EUA (desambiguaci\u00c3\u00b3n)",
-          "visits": 64
-        },
-        {
           "topic": "Lat\u00c3\u00adn",
-          "visits": 58
+          "visits": 177
         },
         {
           "topic": "Misal romano",
+          "visits": 176
+        },
+        {
+          "topic": "EUA (desambiguaci\u00c3\u00b3n)",
           "visits": 58
         },
         {
+          "topic": "Estados Unidos",
+          "visits": 58
+        },
+        {
+          "topic": "Mountain",
+          "visits": 1
+        },
+        {
           "topic": "ART",
-          "visits": 3
+          "visits": 1
         },
         {
           "topic": "Art d\u00c3\u00a9co",
-          "visits": 2
+          "visits": 1
         },
         {
           "topic": "Artes decorativas",
-          "visits": 2
-        },
-        {
-          "topic": "Ebanister\u00c3\u00ada",
-          "visits": 2
+          "visits": 1
         }
       ]
     },
@@ -831,17 +827,26 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:19",
-          "date": "2026-03-29",
-          "article": "UTC\u00c2\u00b10",
-          "thought": "Could not acquire Ollama lock",
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Science",
+          "thought": "I find it intriguing that Science, as a publication, has been around for over 140 years, with a brief interruption in 1882. The fact that it has survived and thrived for so long is a testament to its ",
           "next": "",
-          "thought_en": "Could not acquire Ollama lock",
+          "thought_en": "I find it intriguing that Science, as a publication, has been around for over 140 years, with a brief interruption in 1882. The fact that it has survived and thrived for so long is a testament to its ",
           "language": "de"
         },
         {
-          "time": "00:13",
-          "date": "2026-03-29",
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "Fish",
+          "thought": "I'm currently reading about fish, but it seems like there are multiple unrelated topics listed here. I'm not sure why \"Liste von Pokerbegriffen\" (list of poker terms) is even here, it seems completely",
+          "next": "",
+          "thought_en": "I'm currently reading about fish, but it seems like there are multiple unrelated topics listed here. I'm not sure why \"Liste von Pokerbegriffen\" (list of poker terms) is even here, it seems completely",
+          "language": "de"
+        },
+        {
+          "time": "00:15",
+          "date": "2026-03-30",
           "article": "Europa",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -849,8 +854,8 @@
           "language": "de"
         },
         {
-          "time": "00:07",
-          "date": "2026-03-29",
+          "time": "00:09",
+          "date": "2026-03-30",
           "article": "S\u00c3\u00bcdosteuropa",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -858,8 +863,8 @@
           "language": "de"
         },
         {
-          "time": "00:01",
-          "date": "2026-03-29",
+          "time": "00:02",
+          "date": "2026-03-30",
           "article": "Balkanhalbinsel",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -867,8 +872,8 @@
           "language": "de"
         },
         {
-          "time": "23:55",
-          "date": "2026-03-28",
+          "time": "23:57",
+          "date": "2026-03-29",
           "article": "Altgriechische Sprache",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -876,8 +881,8 @@
           "language": "de"
         },
         {
-          "time": "23:49",
-          "date": "2026-03-28",
+          "time": "23:51",
+          "date": "2026-03-29",
           "article": "Geographie",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -885,8 +890,8 @@
           "language": "de"
         },
         {
-          "time": "23:43",
-          "date": "2026-03-28",
+          "time": "23:44",
+          "date": "2026-03-29",
           "article": "Meridian (Geographie)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -894,8 +899,8 @@
           "language": "de"
         },
         {
-          "time": "23:37",
-          "date": "2026-03-28",
+          "time": "23:38",
+          "date": "2026-03-29",
           "article": "UTC\u00c2\u00b10",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -903,18 +908,9 @@
           "language": "de"
         },
         {
-          "time": "23:30",
-          "date": "2026-03-28",
+          "time": "23:32",
+          "date": "2026-03-29",
           "article": "Europa",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "de"
-        },
-        {
-          "time": "23:24",
-          "date": "2026-03-28",
-          "article": "S\u00c3\u00bcdosteuropa",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -923,36 +919,36 @@
       ],
       "top_topics": [
         {
-          "topic": "Balkanhalbinsel",
-          "visits": 33
-        },
-        {
           "topic": "S\u00c3\u00bcdosteuropa",
-          "visits": 33
+          "visits": 66
         },
         {
           "topic": "Europa",
-          "visits": 33
+          "visits": 66
+        },
+        {
+          "topic": "Balkanhalbinsel",
+          "visits": 65
         },
         {
           "topic": "UTC\u00c2\u00b10",
-          "visits": 33
-        },
-        {
-          "topic": "Altgriechische Sprache",
-          "visits": 33
+          "visits": 65
         },
         {
           "topic": "Meridian (Geographie)",
-          "visits": 32
+          "visits": 65
         },
         {
           "topic": "Geographie",
-          "visits": 32
+          "visits": 65
         },
         {
-          "topic": "Art",
-          "visits": 3
+          "topic": "Altgriechische Sprache",
+          "visits": 65
+        },
+        {
+          "topic": "Fish",
+          "visits": 1
         }
       ]
     },
@@ -965,26 +961,35 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Bird",
+          "thought": "I'm intrigued by the variety of topics related to the word \"bird.\" It seems to cover not only the biological concept of birds, but also various names, words, and phrases in different contexts. I'm cur",
+          "next": "",
+          "thought_en": "I'm intrigued by the variety of topics related to the word \"bird.\" It seems to cover not only the biological concept of birds, but also various names, words, and phrases in different contexts. I'm cur",
+          "language": "de"
+        },
+        {
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Bird (Familienname)",
+          "thought": "I'm not sure what to make of this article on Bird as a surname. It's interesting to see how it's related to the German word \"Vogel,\" which means bird. I'm a bit curious about how surnames come to be a",
+          "next": "",
+          "thought_en": "I'm not sure what to make of this article on Bird as a surname. It's interesting to see how it's related to the German word \"Vogel,\" which means bird. I'm a bit curious about how surnames come to be a",
+          "language": "de"
+        },
+        {
           "time": "00:21",
-          "date": "2026-03-29",
-          "article": "Altgriechische Sprache",
-          "thought": "Could not acquire Ollama lock",
+          "date": "2026-03-30",
+          "article": "Human",
+          "thought": "I'm intrigued by the various meanings of the word \"human.\" It seems to encompass not only the biological aspect of being human but also cultural and societal aspects, such as \"Humanit\u00e4t\" (humanity) an",
           "next": "",
-          "thought_en": "Could not acquire Ollama lock",
+          "thought_en": "I'm intrigued by the various meanings of the word \"human.\" It seems to encompass not only the biological aspect of being human but also cultural and societal aspects, such as \"Humanit\u00e4t\" (humanity) an",
           "language": "de"
         },
         {
-          "time": "00:15",
-          "date": "2026-03-29",
-          "article": "Geographie",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "de"
-        },
-        {
-          "time": "00:09",
-          "date": "2026-03-29",
+          "time": "00:11",
+          "date": "2026-03-30",
           "article": "Meridian (Geographie)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -992,8 +997,8 @@
           "language": "de"
         },
         {
-          "time": "00:03",
-          "date": "2026-03-29",
+          "time": "00:05",
+          "date": "2026-03-30",
           "article": "UTC\u00c2\u00b10",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1001,8 +1006,8 @@
           "language": "de"
         },
         {
-          "time": "23:57",
-          "date": "2026-03-28",
+          "time": "23:59",
+          "date": "2026-03-29",
           "article": "Europa",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1010,8 +1015,8 @@
           "language": "de"
         },
         {
-          "time": "23:51",
-          "date": "2026-03-28",
+          "time": "23:53",
+          "date": "2026-03-29",
           "article": "S\u00c3\u00bcdosteuropa",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1019,8 +1024,8 @@
           "language": "de"
         },
         {
-          "time": "23:45",
-          "date": "2026-03-28",
+          "time": "23:47",
+          "date": "2026-03-29",
           "article": "Balkanhalbinsel",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1028,8 +1033,8 @@
           "language": "de"
         },
         {
-          "time": "23:39",
-          "date": "2026-03-28",
+          "time": "23:41",
+          "date": "2026-03-29",
           "article": "Altgriechische Sprache",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1037,18 +1042,9 @@
           "language": "de"
         },
         {
-          "time": "23:33",
-          "date": "2026-03-28",
+          "time": "23:35",
+          "date": "2026-03-29",
           "article": "Geographie",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "de"
-        },
-        {
-          "time": "23:27",
-          "date": "2026-03-28",
-          "article": "Meridian (Geographie)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1058,35 +1054,35 @@
       "top_topics": [
         {
           "topic": "Altgriechische Sprache",
-          "visits": 36
-        },
-        {
-          "topic": "S\u00c3\u00bcdosteuropa",
-          "visits": 35
-        },
-        {
-          "topic": "Europa",
-          "visits": 35
+          "visits": 68
         },
         {
           "topic": "Balkanhalbinsel",
-          "visits": 35
+          "visits": 68
+        },
+        {
+          "topic": "S\u00c3\u00bcdosteuropa",
+          "visits": 68
+        },
+        {
+          "topic": "Europa",
+          "visits": 68
         },
         {
           "topic": "UTC\u00c2\u00b10",
-          "visits": 34
+          "visits": 67
         },
         {
           "topic": "Meridian (Geographie)",
-          "visits": 34
+          "visits": 67
         },
         {
           "topic": "Geographie",
-          "visits": 34
+          "visits": 67
         },
         {
-          "topic": "Fish",
-          "visits": 2
+          "topic": "Human",
+          "visits": 1
         }
       ]
     },
@@ -1099,7 +1095,34 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:18",
+          "time": "00:14",
+          "date": "2026-03-30",
+          "article": "fish",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
+        {
+          "time": "00:09",
+          "date": "2026-03-30",
+          "article": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
+        {
+          "time": "00:03",
+          "date": "2026-03-30",
+          "article": "fish",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
+        {
+          "time": "23:56",
           "date": "2026-03-29",
           "article": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
           "thought": "Could not acquire Ollama lock",
@@ -1108,7 +1131,7 @@
           "language": "zh"
         },
         {
-          "time": "00:12",
+          "time": "23:51",
           "date": "2026-03-29",
           "article": "fish",
           "thought": "Could not acquire Ollama lock",
@@ -1117,7 +1140,7 @@
           "language": "zh"
         },
         {
-          "time": "00:06",
+          "time": "23:45",
           "date": "2026-03-29",
           "article": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
           "thought": "Could not acquire Ollama lock",
@@ -1126,7 +1149,7 @@
           "language": "zh"
         },
         {
-          "time": "00:00",
+          "time": "23:39",
           "date": "2026-03-29",
           "article": "fish",
           "thought": "Could not acquire Ollama lock",
@@ -1135,8 +1158,8 @@
           "language": "zh"
         },
         {
-          "time": "23:54",
-          "date": "2026-03-28",
+          "time": "23:33",
+          "date": "2026-03-29",
           "article": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1144,8 +1167,8 @@
           "language": "zh"
         },
         {
-          "time": "23:48",
-          "date": "2026-03-28",
+          "time": "23:27",
+          "date": "2026-03-29",
           "article": "fish",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1153,36 +1176,9 @@
           "language": "zh"
         },
         {
-          "time": "23:42",
-          "date": "2026-03-28",
+          "time": "23:21",
+          "date": "2026-03-29",
           "article": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "zh"
-        },
-        {
-          "time": "23:36",
-          "date": "2026-03-28",
-          "article": "fish",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "zh"
-        },
-        {
-          "time": "23:30",
-          "date": "2026-03-28",
-          "article": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "zh"
-        },
-        {
-          "time": "23:24",
-          "date": "2026-03-28",
-          "article": "fish",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1192,35 +1188,23 @@
       "top_topics": [
         {
           "topic": "fish",
-          "visits": 63
+          "visits": 179
         },
         {
           "topic": "Fish (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "visits": 62
-        },
-        {
-          "topic": "\u00e5\u008c\u0097\u00e6\u009e\u0081\u00e5\u009c\u0088",
-          "visits": 44
-        },
-        {
-          "topic": "\u00e5\u008c\u0097\u00e6\u009e\u0081\u00e7\u0082\u00b9",
-          "visits": 43
+          "visits": 178
         },
         {
           "topic": "\u00e5\u008c\u0097\u00e6\u009e\u0081\u00e5\u009c\u00b0\u00e5\u008c\u00ba",
-          "visits": 43
+          "visits": 39
         },
         {
-          "topic": "\u00e7\u00a7\u0091\u00e5\u00ad\u00a6 (\u00e6\u009c\u009f\u00e5\u0088\u008a)",
-          "visits": 1
+          "topic": "\u00e5\u008c\u0097\u00e6\u009e\u0081\u00e5\u009c\u0088",
+          "visits": 39
         },
         {
-          "topic": "Tree",
-          "visits": 1
-        },
-        {
-          "topic": "Sound",
-          "visits": 1
+          "topic": "\u00e5\u008c\u0097\u00e6\u009e\u0081\u00e7\u0082\u00b9",
+          "visits": 38
         }
       ]
     },
@@ -1233,16 +1217,43 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:17",
-          "date": "2026-03-29",
-          "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "thought": "Could not acquire Ollama lock",
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "Animal",
+          "thought": "This is a vast topic, and I'm not sure where to start. I see a mix of languages, which might indicate that animals are a universal concept, but I'm not familiar with the languages. I see links to spec",
           "next": "",
-          "thought_en": "Could not acquire Ollama lock",
+          "thought_en": "This is a vast topic, and I'm not sure where to start. I see a mix of languages, which might indicate that animals are a universal concept, but I'm not familiar with the languages. I see links to spec",
           "language": "zh"
         },
         {
           "time": "00:12",
+          "date": "2026-03-30",
+          "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
+        {
+          "time": "00:07",
+          "date": "2026-03-30",
+          "article": "\u00e4\u00ba\u00ba",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
+        {
+          "time": "00:01",
+          "date": "2026-03-30",
+          "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "zh"
+        },
+        {
+          "time": "23:55",
           "date": "2026-03-29",
           "article": "\u00e4\u00ba\u00ba",
           "thought": "Could not acquire Ollama lock",
@@ -1251,7 +1262,7 @@
           "language": "zh"
         },
         {
-          "time": "00:06",
+          "time": "23:49",
           "date": "2026-03-29",
           "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
           "thought": "Could not acquire Ollama lock",
@@ -1260,8 +1271,8 @@
           "language": "zh"
         },
         {
-          "time": "23:59",
-          "date": "2026-03-28",
+          "time": "23:43",
+          "date": "2026-03-29",
           "article": "\u00e4\u00ba\u00ba",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1269,8 +1280,8 @@
           "language": "zh"
         },
         {
-          "time": "23:53",
-          "date": "2026-03-28",
+          "time": "23:37",
+          "date": "2026-03-29",
           "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1278,8 +1289,8 @@
           "language": "zh"
         },
         {
-          "time": "23:47",
-          "date": "2026-03-28",
+          "time": "23:31",
+          "date": "2026-03-29",
           "article": "\u00e4\u00ba\u00ba",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1287,36 +1298,9 @@
           "language": "zh"
         },
         {
-          "time": "23:41",
-          "date": "2026-03-28",
+          "time": "23:24",
+          "date": "2026-03-29",
           "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "zh"
-        },
-        {
-          "time": "23:35",
-          "date": "2026-03-28",
-          "article": "\u00e4\u00ba\u00ba",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "zh"
-        },
-        {
-          "time": "23:29",
-          "date": "2026-03-28",
-          "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "zh"
-        },
-        {
-          "time": "23:23",
-          "date": "2026-03-28",
-          "article": "\u00e4\u00ba\u00ba",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1325,35 +1309,35 @@
       ],
       "top_topics": [
         {
-          "topic": "\u00e5\u009f\u008e\u00e5\u00b8\u0082",
-          "visits": 68
-        },
-        {
-          "topic": "\u00e5\u009f\u008e\u00e5\u00b8\u0082 (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "visits": 67
-        },
-        {
           "topic": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "visits": 58
+          "visits": 176
         },
         {
           "topic": "\u00e4\u00ba\u00ba",
+          "visits": 176
+        },
+        {
+          "topic": "\u00e5\u009f\u008e\u00e5\u00b8\u0082",
+          "visits": 59
+        },
+        {
+          "topic": "\u00e5\u009f\u008e\u00e5\u00b8\u0082 (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
           "visits": 58
         },
         {
-          "topic": "\u00e5\u009c\u00b0\u00e7\u0090\u0083",
-          "visits": 3
+          "topic": "Animal",
+          "visits": 1
         },
         {
           "topic": "Sound",
-          "visits": 2
-        },
-        {
-          "topic": "\u00e5\u009c\u00b0\u00e7\u0090\u0083 (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-          "visits": 2
+          "visits": 1
         },
         {
           "topic": "\u00e5\u00a3\u00b0\u00e9\u009f\u00b3",
+          "visits": 1
+        },
+        {
+          "topic": "\u00e4\u00ba\u00ba\u00e5\u00a3\u00b0",
           "visits": 1
         }
       ]
@@ -1367,18 +1351,18 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:20",
-          "date": "2026-03-29",
-          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-          "thought": "Could not acquire Ollama lock",
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "\u00e3\u0083\u008a\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc",
+          "thought": "I'm currently reading about \"\u00e3\u0083\u008a\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\", which seems to be a Japanese term. I'm not sure what it specifically refers to, but the available links suggest it might be related to a company, a technolo",
           "next": "",
-          "thought_en": "Could not acquire Ollama lock",
+          "thought_en": "I'm currently reading about \"\u00e3\u0083\u008a\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\", which seems to be a Japanese term. I'm not sure what it specifically refers to, but the available links suggest it might be related to a company, a technolo",
           "language": "ja"
         },
         {
-          "time": "00:15",
-          "date": "2026-03-29",
-          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+          "time": "00:14",
+          "date": "2026-03-30",
+          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1386,17 +1370,17 @@
         },
         {
           "time": "00:08",
-          "date": "2026-03-29",
-          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+          "date": "2026-03-30",
+          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
           "language": "ja"
         },
         {
-          "time": "00:03",
-          "date": "2026-03-29",
-          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+          "time": "00:02",
+          "date": "2026-03-30",
+          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1404,8 +1388,8 @@
         },
         {
           "time": "23:56",
-          "date": "2026-03-28",
-          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+          "date": "2026-03-29",
+          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1413,8 +1397,8 @@
         },
         {
           "time": "23:50",
-          "date": "2026-03-28",
-          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+          "date": "2026-03-29",
+          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1422,17 +1406,17 @@
         },
         {
           "time": "23:44",
-          "date": "2026-03-28",
-          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+          "date": "2026-03-29",
+          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
           "language": "ja"
         },
         {
-          "time": "23:38",
-          "date": "2026-03-28",
-          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+          "time": "23:39",
+          "date": "2026-03-29",
+          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1440,8 +1424,8 @@
         },
         {
           "time": "23:32",
-          "date": "2026-03-28",
-          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+          "date": "2026-03-29",
+          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1449,8 +1433,8 @@
         },
         {
           "time": "23:26",
-          "date": "2026-03-28",
-          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+          "date": "2026-03-29",
+          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1459,20 +1443,20 @@
       ],
       "top_topics": [
         {
-          "topic": "\u00e6\u0096\u0087\u00e5\u00ad\u0097",
-          "visits": 129
-        },
-        {
           "topic": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-          "visits": 60
+          "visits": 178
         },
         {
           "topic": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
-          "visits": 58
+          "visits": 177
         },
         {
-          "topic": "\u00e3\u0082\u00b7\u00e3\u0083\u0086\u00e3\u0082\u00a3",
-          "visits": 2
+          "topic": "\u00e6\u0096\u0087\u00e5\u00ad\u0097",
+          "visits": 116
+        },
+        {
+          "topic": "\u00e3\u0083\u008a\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc",
+          "visits": 1
         },
         {
           "topic": "\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u0088",
@@ -1484,10 +1468,6 @@
         },
         {
           "topic": "\u00e9\u009b\u00bb\u00e7\u00a3\u0081\u00e6\u00b3\u00a2",
-          "visits": 1
-        },
-        {
-          "topic": "\u00e3\u0083\u00aa\u00e3\u0083\u0090\u00e3\u0083\u00bc (\u00e6\u009b\u0096\u00e6\u0098\u00a7\u00e3\u0081\u0095\u00e5\u009b\u009e\u00e9\u0081\u00bf)",
           "visits": 1
         }
       ]
@@ -1501,7 +1481,52 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:17",
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "\u00e3\u0082\u00a6\u00e3\u0082\u00a9\u00e3\u0083\u00bc\u00e3\u0082\u00bf\u00e3\u0083\u00bc",
+          "thought": "I'm starting to read about \"\u00e3\u0082\u00a6\u00e3\u0082\u00a9\u00e3\u0083\u00bc\u00e3\u0082\u00bf\u00e3\u0083\u00bc\" (water) in Japanese. At first, I thought it would be a simple article about the physical properties of water, but it seems to be linking to various other t",
+          "next": "",
+          "thought_en": "I'm starting to read about \"\u00e3\u0082\u00a6\u00e3\u0082\u00a9\u00e3\u0083\u00bc\u00e3\u0082\u00bf\u00e3\u0083\u00bc\" (water) in Japanese. At first, I thought it would be a simple article about the physical properties of water, but it seems to be linking to various other t",
+          "language": "ja"
+        },
+        {
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "\u00e3\u0082\u00a2\u00e3\u0083\u008b\u00e3\u0083\u009e\u00e3\u0083\u00ab",
+          "thought": "I find the Japanese title of this article, \u00e3\u0082\u00a2\u00e3\u0083\u008b\u00e3\u0083\u009e\u00e3\u0083\u00ab, quite interesting. It translates to \"Animal,\" but I'm curious about the nuances of how this term is used in Japanese culture. The fact that the",
+          "next": "",
+          "thought_en": "I find the Japanese title of this article, \u00e3\u0082\u00a2\u00e3\u0083\u008b\u00e3\u0083\u009e\u00e3\u0083\u00ab, quite interesting. It translates to \"Animal,\" but I'm curious about the nuances of how this term is used in Japanese culture. The fact that the",
+          "language": "ja"
+        },
+        {
+          "time": "00:13",
+          "date": "2026-03-30",
+          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "ja"
+        },
+        {
+          "time": "00:07",
+          "date": "2026-03-30",
+          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "ja"
+        },
+        {
+          "time": "00:01",
+          "date": "2026-03-30",
+          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": "Could not acquire Ollama lock",
+          "language": "ja"
+        },
+        {
+          "time": "23:56",
           "date": "2026-03-29",
           "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
           "thought": "Could not acquire Ollama lock",
@@ -1510,7 +1535,7 @@
           "language": "ja"
         },
         {
-          "time": "00:11",
+          "time": "23:49",
           "date": "2026-03-29",
           "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
           "thought": "Could not acquire Ollama lock",
@@ -1519,7 +1544,7 @@
           "language": "ja"
         },
         {
-          "time": "00:05",
+          "time": "23:43",
           "date": "2026-03-29",
           "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
           "thought": "Could not acquire Ollama lock",
@@ -1528,7 +1553,7 @@
           "language": "ja"
         },
         {
-          "time": "00:00",
+          "time": "23:38",
           "date": "2026-03-29",
           "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
           "thought": "Could not acquire Ollama lock",
@@ -1537,54 +1562,9 @@
           "language": "ja"
         },
         {
-          "time": "23:54",
-          "date": "2026-03-28",
+          "time": "23:31",
+          "date": "2026-03-29",
           "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "ja"
-        },
-        {
-          "time": "23:48",
-          "date": "2026-03-28",
-          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "ja"
-        },
-        {
-          "time": "23:41",
-          "date": "2026-03-28",
-          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "ja"
-        },
-        {
-          "time": "23:36",
-          "date": "2026-03-28",
-          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "ja"
-        },
-        {
-          "time": "23:29",
-          "date": "2026-03-28",
-          "article": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": "Could not acquire Ollama lock",
-          "language": "ja"
-        },
-        {
-          "time": "23:23",
-          "date": "2026-03-28",
-          "article": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": "Could not acquire Ollama lock",
@@ -1593,35 +1573,19 @@
       ],
       "top_topics": [
         {
-          "topic": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-          "visits": 127
-        },
-        {
           "topic": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
-          "visits": 125
+          "visits": 236
         },
         {
-          "topic": "\u00e3\u0083\u0092\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0083\u009e\u00e3\u0083\u00b3",
-          "visits": 2
+          "topic": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+          "visits": 236
         },
         {
           "topic": "\u00e3\u0082\u00a6\u00e3\u0082\u00a9\u00e3\u0083\u00bc\u00e3\u0082\u00bf\u00e3\u0083\u00bc",
-          "visits": 1
-        },
-        {
-          "topic": "\u00e3\u0082\u00aa\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a3\u00e3\u0083\u00b3",
-          "visits": 1
+          "visits": 2
         },
         {
           "topic": "\u00e3\u0082\u00a2\u00e3\u0083\u008b\u00e3\u0083\u009e\u00e3\u0083\u00ab",
-          "visits": 1
-        },
-        {
-          "topic": "\u00e5\u008b\u0095\u00e7\u0089\u00a9",
-          "visits": 1
-        },
-        {
-          "topic": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00aa\u00e3\u0082\u00b8\u00e3\u0082\u00a7\u00e3\u0083\u008b\u00e3\u0082\u00a2\u00e3\u0083\u00b3",
           "visits": 1
         }
       ]
@@ -1635,18 +1599,9 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:18",
-          "date": "2026-03-29",
-          "article": "Ice age",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
           "time": "00:12",
-          "date": "2026-03-29",
-          "article": "Ice age (disambiguation)",
+          "date": "2026-03-30",
+          "article": "Ice age",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": null,
@@ -1654,6 +1609,33 @@
         },
         {
           "time": "00:06",
+          "date": "2026-03-30",
+          "article": "Ice age (disambiguation)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:00",
+          "date": "2026-03-30",
+          "article": "Ice age",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:54",
+          "date": "2026-03-29",
+          "article": "Ice age (disambiguation)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:48",
           "date": "2026-03-29",
           "article": "Ice age",
           "thought": "Could not acquire Ollama lock",
@@ -1662,8 +1644,8 @@
           "language": "en"
         },
         {
-          "time": "23:59",
-          "date": "2026-03-28",
+          "time": "23:42",
+          "date": "2026-03-29",
           "article": "Ice age (disambiguation)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1671,8 +1653,8 @@
           "language": "en"
         },
         {
-          "time": "23:53",
-          "date": "2026-03-28",
+          "time": "23:36",
+          "date": "2026-03-29",
           "article": "Ice age",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1680,36 +1662,9 @@
           "language": "en"
         },
         {
-          "time": "23:47",
-          "date": "2026-03-28",
+          "time": "23:30",
+          "date": "2026-03-29",
           "article": "Ice age (disambiguation)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:41",
-          "date": "2026-03-28",
-          "article": "Ice age",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:35",
-          "date": "2026-03-28",
-          "article": "Ice age (disambiguation)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:29",
-          "date": "2026-03-28",
-          "article": "Ice age",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": null,
@@ -1717,7 +1672,16 @@
         },
         {
           "time": "23:23",
-          "date": "2026-03-28",
+          "date": "2026-03-29",
+          "article": "Ice age",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:17",
+          "date": "2026-03-29",
           "article": "Ice age (disambiguation)",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1728,35 +1692,35 @@
       "top_topics": [
         {
           "topic": "Ice age",
-          "visits": 54
+          "visits": 172
         },
         {
           "topic": "Ice age (disambiguation)",
-          "visits": 54
+          "visits": 172
         },
         {
           "topic": "Italian food",
-          "visits": 34
-        },
-        {
-          "topic": "Food",
-          "visits": 34
-        },
-        {
-          "topic": "Pizza",
-          "visits": 34
+          "visits": 30
         },
         {
           "topic": "Pasta",
-          "visits": 33
+          "visits": 29
         },
         {
-          "topic": "Numeral system",
-          "visits": 8
+          "topic": "Food",
+          "visits": 29
         },
         {
-          "topic": "Number",
-          "visits": 2
+          "topic": "Pizza",
+          "visits": 29
+        },
+        {
+          "topic": "Bird",
+          "visits": 1
+        },
+        {
+          "topic": "Upper Cretaceous",
+          "visits": 1
         }
       ]
     },
@@ -1769,8 +1733,26 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:23",
-          "date": "2026-03-29",
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "Bird",
+          "thought": "I find it fascinating that birds are the only dinosaurs that survived the Cretaceous\u2013Paleogene extinction. It's amazing to think about how they've adapted to their environment and developed characteri",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:13",
+          "date": "2026-03-30",
+          "article": "Italian food",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:08",
+          "date": "2026-03-30",
           "article": "Pizza",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1778,8 +1760,8 @@
           "language": "en"
         },
         {
-          "time": "00:17",
-          "date": "2026-03-29",
+          "time": "00:02",
+          "date": "2026-03-30",
           "article": "Food",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1787,7 +1769,7 @@
           "language": "en"
         },
         {
-          "time": "00:11",
+          "time": "23:56",
           "date": "2026-03-29",
           "article": "Pasta",
           "thought": "Could not acquire Ollama lock",
@@ -1796,7 +1778,7 @@
           "language": "en"
         },
         {
-          "time": "00:05",
+          "time": "23:49",
           "date": "2026-03-29",
           "article": "Italian food",
           "thought": "Could not acquire Ollama lock",
@@ -1805,8 +1787,8 @@
           "language": "en"
         },
         {
-          "time": "23:59",
-          "date": "2026-03-28",
+          "time": "23:43",
+          "date": "2026-03-29",
           "article": "Pizza",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1814,8 +1796,8 @@
           "language": "en"
         },
         {
-          "time": "23:53",
-          "date": "2026-03-28",
+          "time": "23:38",
+          "date": "2026-03-29",
           "article": "Food",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1823,8 +1805,8 @@
           "language": "en"
         },
         {
-          "time": "23:47",
-          "date": "2026-03-28",
+          "time": "23:32",
+          "date": "2026-03-29",
           "article": "Pasta",
           "thought": "Could not acquire Ollama lock",
           "next": "",
@@ -1832,27 +1814,9 @@
           "language": "en"
         },
         {
-          "time": "23:41",
-          "date": "2026-03-28",
+          "time": "23:26",
+          "date": "2026-03-29",
           "article": "Italian food",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:35",
-          "date": "2026-03-28",
-          "article": "Pizza",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:29",
-          "date": "2026-03-28",
-          "article": "Food",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": null,
@@ -1862,34 +1826,26 @@
       "top_topics": [
         {
           "topic": "Definition",
-          "visits": 131
+          "visits": 117
         },
         {
           "topic": "Food",
-          "visits": 32
+          "visits": 90
         },
         {
           "topic": "Pizza",
-          "visits": 31
+          "visits": 90
         },
         {
           "topic": "Italian food",
-          "visits": 30
+          "visits": 90
         },
         {
           "topic": "Pasta",
-          "visits": 30
+          "visits": 89
         },
         {
-          "topic": "Estonia",
-          "visits": 2
-        },
-        {
-          "topic": "Estonian language",
-          "visits": 2
-        },
-        {
-          "topic": "Light",
+          "topic": "Bird",
           "visits": 1
         }
       ]
@@ -1903,7 +1859,52 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:22",
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "River",
+          "thought": "I find it fascinating how a river's shape and characteristics change as it flows from its source to its mouth. The idea that a young river is V-shaped and flows quickly downhill over stones, while a m",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:13",
+          "date": "2026-03-30",
+          "article": "Long Island (disambiguation)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:07",
+          "date": "2026-03-30",
+          "article": "Long Island",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:01",
+          "date": "2026-03-30",
+          "article": "Long Island (disambiguation)",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:55",
+          "date": "2026-03-29",
+          "article": "Long Island",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:48",
           "date": "2026-03-29",
           "article": "Long Island (disambiguation)",
           "thought": "Could not acquire Ollama lock",
@@ -1912,7 +1913,7 @@
           "language": "en"
         },
         {
-          "time": "00:17",
+          "time": "23:43",
           "date": "2026-03-29",
           "article": "Long Island",
           "thought": "Could not acquire Ollama lock",
@@ -1921,7 +1922,7 @@
           "language": "en"
         },
         {
-          "time": "00:10",
+          "time": "23:37",
           "date": "2026-03-29",
           "article": "Long Island (disambiguation)",
           "thought": "Could not acquire Ollama lock",
@@ -1930,7 +1931,7 @@
           "language": "en"
         },
         {
-          "time": "00:04",
+          "time": "23:30",
           "date": "2026-03-29",
           "article": "Long Island",
           "thought": "Could not acquire Ollama lock",
@@ -1939,54 +1940,9 @@
           "language": "en"
         },
         {
-          "time": "23:58",
-          "date": "2026-03-28",
+          "time": "23:24",
+          "date": "2026-03-29",
           "article": "Long Island (disambiguation)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:52",
-          "date": "2026-03-28",
-          "article": "Long Island",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:46",
-          "date": "2026-03-28",
-          "article": "Long Island (disambiguation)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:40",
-          "date": "2026-03-28",
-          "article": "Long Island",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:35",
-          "date": "2026-03-28",
-          "article": "Long Island (disambiguation)",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:29",
-          "date": "2026-03-28",
-          "article": "Long Island",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": null,
@@ -1995,20 +1951,20 @@
       ],
       "top_topics": [
         {
-          "topic": "River",
-          "visits": 68
-        },
-        {
-          "topic": "River (disambiguation)",
-          "visits": 67
+          "topic": "Long Island (disambiguation)",
+          "visits": 177
         },
         {
           "topic": "Long Island",
-          "visits": 59
+          "visits": 177
         },
         {
-          "topic": "Long Island (disambiguation)",
-          "visits": 59
+          "topic": "River",
+          "visits": 60
+        },
+        {
+          "topic": "River (disambiguation)",
+          "visits": 58
         },
         {
           "topic": "Mountain",
@@ -2016,14 +1972,6 @@
         },
         {
           "topic": "Mountain (band)",
-          "visits": 1
-        },
-        {
-          "topic": "Language",
-          "visits": 1
-        },
-        {
-          "topic": "Human",
           "visits": 1
         }
       ]
@@ -2037,7 +1985,52 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:18",
+          "time": "00:23",
+          "date": "2026-03-30",
+          "article": "Time",
+          "thought": "I find it fascinating how time is described as a \"never-ending continued process of existence and events.\" It's as if time is this endless, flowing river that we're all a part of. I'm intrigued by the",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:21",
+          "date": "2026-03-30",
+          "article": "Color",
+          "thought": "I find it interesting that color can be a property of light. It makes sense, given that we can see colors in light, but it's still a fascinating concept. The idea that primary colors can be mixed to m",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:14",
+          "date": "2026-03-30",
+          "article": "Biology",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:08",
+          "date": "2026-03-30",
+          "article": "Science",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "00:03",
+          "date": "2026-03-30",
+          "article": "Biology",
+          "thought": "Could not acquire Ollama lock",
+          "next": "",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:56",
           "date": "2026-03-29",
           "article": "Science",
           "thought": "Could not acquire Ollama lock",
@@ -2046,7 +2039,7 @@
           "language": "en"
         },
         {
-          "time": "00:12",
+          "time": "23:50",
           "date": "2026-03-29",
           "article": "Biology",
           "thought": "Could not acquire Ollama lock",
@@ -2055,7 +2048,7 @@
           "language": "en"
         },
         {
-          "time": "00:06",
+          "time": "23:44",
           "date": "2026-03-29",
           "article": "Science",
           "thought": "Could not acquire Ollama lock",
@@ -2064,7 +2057,7 @@
           "language": "en"
         },
         {
-          "time": "00:01",
+          "time": "23:38",
           "date": "2026-03-29",
           "article": "Biology",
           "thought": "Could not acquire Ollama lock",
@@ -2073,54 +2066,9 @@
           "language": "en"
         },
         {
-          "time": "23:54",
-          "date": "2026-03-28",
+          "time": "23:32",
+          "date": "2026-03-29",
           "article": "Science",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:49",
-          "date": "2026-03-28",
-          "article": "Biology",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:43",
-          "date": "2026-03-28",
-          "article": "Science",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:37",
-          "date": "2026-03-28",
-          "article": "Biology",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:31",
-          "date": "2026-03-28",
-          "article": "Science",
-          "thought": "Could not acquire Ollama lock",
-          "next": "",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "23:26",
-          "date": "2026-03-28",
-          "article": "Biology",
           "thought": "Could not acquire Ollama lock",
           "next": "",
           "thought_en": null,
@@ -2129,24 +2077,24 @@
       ],
       "top_topics": [
         {
-          "topic": "Definition",
-          "visits": 122
+          "topic": "Biology",
+          "visits": 173
         },
         {
           "topic": "Science",
-          "visits": 55
+          "visits": 173
         },
         {
-          "topic": "Biology",
-          "visits": 54
+          "topic": "Definition",
+          "visits": 116
         },
         {
-          "topic": "Water",
+          "topic": "Color",
           "visits": 2
         },
         {
-          "topic": "Long Island",
-          "visits": 2
+          "topic": "Time",
+          "visits": 1
         },
         {
           "topic": "Ocean",
@@ -2171,128 +2119,128 @@
       "latest_baseline": null,
       "recent_thoughts": [
         {
-          "time": "00:18",
+          "time": "00:09",
+          "date": "2026-03-30",
+          "article": "18 (number)",
+          "thought": "You notice the number eighteen's various representations: Greek numeral \u0399\u0397', Roman numeral XVIII, binary 1000, ternary 100, quaternary 1000, and so on. You find it fascinating how these different ways",
+          "next": "10 (number)",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
+          "time": "23:57",
           "date": "2026-03-29",
-          "article": "Musical instrument",
-          "thought": "musical instruments, several interesting observations and topics catch your interest: 1. Bowed string instruments: The violin, viola, cello, and double bass are all examples of bowed string instrument",
-          "next": "Music",
+          "article": "13 (number)",
+          "thought": "As Seth, I would be drawn to the unique properties and significance of number thirteen: 1. Number's uniqueness: Unlike any other number, thirteen appears only once in the set of integers. 2.. The hist",
+          "next": "18 (number)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "00:06",
+          "time": "23:46",
           "date": "2026-03-29",
-          "article": "Lute",
-          "thought": "As you read \"Lute,\" you become fascinated by its history and evolution from ancient times to its roots in classical music. You notice the intricate design of the lute's back, showcasing strips of wood",
-          "next": "Musical instrument",
+          "article": "15 (number)",
+          "thought": "As Seth, I notice the sheer variety of numbers and their representations across different cultures and languages. From cardinal numerals (like 15 in Roman or Arabic numerals) to Greek, Roman, and Indi",
+          "next": "13 (number)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:54",
-          "date": "2026-03-28",
-          "article": "Plectrum",
-          "thought": "Exploring Plectrum...",
-          "next": "Lute",
+          "time": "23:33",
+          "date": "2026-03-29",
+          "article": "19 (number)",
+          "thought": "this library is vast, with rows upon rows of books stretching out before you. Each shelf seems to have dozens of titles - ancient tomes, curious curiosities, and modern bestsellers. You marvel at the ",
+          "next": "15 (number)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:44",
-          "date": "2026-03-28",
-          "article": "Lute",
-          "thought": "Exploring Lute...",
-          "next": "Plectrum",
+          "time": "23:21",
+          "date": "2026-03-29",
+          "article": "17 (number)",
+          "thought": "As you read articles in the library, you become more familiar with numbers and their various representations. Some observations that catch your attention are: 1. The variety of ways to express a singl",
+          "next": "19 (number)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:34",
-          "date": "2026-03-28",
-          "article": "Plectrum",
-          "thought": "Exploring Plectrum...",
-          "next": "Lute",
+          "time": "23:09",
+          "date": "2026-03-29",
+          "article": "17 (number)",
+          "thought": "As you read the article on number seventeen, several observations and thoughts come to your mind: 1. Seventeen is a relatively common number in mathematics and everyday life. 2 - As an even number (li",
+          "next": "17 (number)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:24",
-          "date": "2026-03-28",
-          "article": "Electric guitar",
-          "thought": "Exploring Electric guitar...",
-          "next": "Plectrum",
+          "time": "22:57",
+          "date": "2026-03-29",
+          "article": "13 (number)",
+          "thought": "You notice the significance and importance of numbers in various contexts, such.. 1. The recurring nature of numbers, like their repetition as multiples of ten or in series (e.g., addition, multiplica",
+          "next": "17 (number)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:14",
-          "date": "2026-03-28",
-          "article": "Amplifier",
-          "thought": "Exploring Amplifier...",
-          "next": "Electric guitar",
+          "time": "22:45",
+          "date": "2026-03-29",
+          "article": "10 (number)",
+          "thought": "From the articles you've read, it appears that you are particularly interested in: 1. The number ten and its various forms (cardinal, decimal, Roman, Greek, etc.) as well as their factorization. 2.. 3",
+          "next": "13 (number)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "23:04",
-          "date": "2026-03-28",
-          "article": "Transistor",
-          "thought": "Exploring Transistor...",
-          "next": "Amplifier",
+          "time": "22:33",
+          "date": "2026-03-29",
+          "article": "One",
+          "thought": "You notice and admire the infinite possibilities that exist within each book you encounter in the library. Each page tells a unique story, with its own set of characters, plotlines, and themes. You're",
+          "next": "10 (number)",
           "thought_en": null,
           "language": "en"
         },
         {
-          "time": "22:54",
-          "date": "2026-03-28",
-          "article": "Synthesizer",
-          "thought": "Exploring Synthesizer...",
-          "next": "Transistor",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "22:43",
-          "date": "2026-03-28",
-          "article": "Electronic music",
-          "thought": "Exploring Electronic music...",
-          "next": "Synthesizer",
+          "time": "22:20",
+          "date": "2026-03-29",
+          "article": "Natural numbers",
+          "thought": "From reading \"Natural Numbers,\" it seems you notice the patterns and relationships between the natural numbers. You marvel at how every number has a position in the sequence of natural numbers, from 1",
+          "next": "One",
           "thought_en": null,
           "language": "en"
         }
       ],
       "top_topics": [
         {
-          "topic": "Animal",
-          "visits": 37
+          "topic": "Thailand",
+          "visits": 5
         },
         {
           "topic": "Definition",
-          "visits": 33
+          "visits": 4
         },
         {
           "topic": "Science",
-          "visits": 30
-        },
-        {
-          "topic": "Mathematics",
-          "visits": 29
+          "visits": 4
         },
         {
           "topic": "Biology",
-          "visits": 27
+          "visits": 4
         },
         {
           "topic": "Music",
-          "visits": 24
+          "visits": 3
         },
         {
-          "topic": "Europe",
-          "visits": 24
+          "topic": "Person",
+          "visits": 3
         },
         {
-          "topic": "Earth",
-          "visits": 19
+          "topic": "Adult",
+          "visits": 3
+        },
+        {
+          "topic": "Language",
+          "visits": 3
         }
       ]
     }
@@ -2327,14 +2275,14 @@
     ]
   },
   "stats": {
-    "total_traces": 1198947,
+    "total_traces": 1202643,
     "total_baselines": 0,
     "active_tanks": 17,
-    "traces_today": 60
+    "traces_today": 68
   },
   "prune_stats": {
-    "total": 2792,
-    "kept": 2790,
-    "pruned": 2
+    "total": 2775,
+    "kept": 2775,
+    "pruned": 0
   }
 }

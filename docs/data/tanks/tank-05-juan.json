@@ -7,25 +7,43 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "00:21",
-      "date": "2026-03-29",
-      "article": "EUA (desambiguaci\u00c3\u00b3n)",
-      "thought": "Could not acquire Ollama lock",
+      "time": "00:23",
+      "date": "2026-03-30",
+      "article": "Mountain",
+      "thought": "I'm starting to read about mountains, and I'm immediately drawn to the vast scale of these geological formations. The article mentions the tallest mountain, Mount Everest, and its extreme elevation. I",
       "next": "",
-      "thought_en": "Could not acquire Ollama lock",
+      "thought_en": "I'm starting to read about mountains, and I'm immediately drawn to the vast scale of these geological formations. The article mentions the tallest mountain, Mount Everest, and its extreme elevation. I",
       "language": "es"
     },
     {
-      "time": "00:15",
-      "date": "2026-03-29",
-      "article": "Estados Unidos",
-      "thought": "Could not acquire Ollama lock",
+      "time": "00:21",
+      "date": "2026-03-30",
+      "article": "River",
+      "thought": "At first glance, it seems like this article is about bodies of water, but I'm seeing a lot of references to football clubs and nuclear facilities. This is confusing me - what do rivers have to do with",
       "next": "",
-      "thought_en": "Could not acquire Ollama lock",
+      "thought_en": "At first glance, it seems like this article is about bodies of water, but I'm seeing a lot of references to football clubs and nuclear facilities. This is confusing me - what do rivers have to do with",
       "language": "es"
     },
     {
       "time": "00:09",
+      "date": "2026-03-30",
+      "article": "EUA (desambiguaci\u00c3\u00b3n)",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "es"
+    },
+    {
+      "time": "00:04",
+      "date": "2026-03-30",
+      "article": "Estados Unidos",
+      "thought": "Could not acquire Ollama lock",
+      "next": "",
+      "thought_en": "Could not acquire Ollama lock",
+      "language": "es"
+    },
+    {
+      "time": "23:58",
       "date": "2026-03-29",
       "article": "EUA (desambiguaci\u00c3\u00b3n)",
       "thought": "Could not acquire Ollama lock",
@@ -34,7 +52,7 @@
       "language": "es"
     },
     {
-      "time": "00:03",
+      "time": "23:52",
       "date": "2026-03-29",
       "article": "Estados Unidos",
       "thought": "Could not acquire Ollama lock",
@@ -43,8 +61,8 @@
       "language": "es"
     },
     {
-      "time": "23:56",
-      "date": "2026-03-28",
+      "time": "23:46",
+      "date": "2026-03-29",
       "article": "EUA (desambiguaci\u00c3\u00b3n)",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -52,8 +70,8 @@
       "language": "es"
     },
     {
-      "time": "23:51",
-      "date": "2026-03-28",
+      "time": "23:40",
+      "date": "2026-03-29",
       "article": "Estados Unidos",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -61,8 +79,8 @@
       "language": "es"
     },
     {
-      "time": "23:44",
-      "date": "2026-03-28",
+      "time": "23:34",
+      "date": "2026-03-29",
       "article": "EUA (desambiguaci\u00c3\u00b3n)",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -70,26 +88,8 @@
       "language": "es"
     },
     {
-      "time": "23:38",
-      "date": "2026-03-28",
-      "article": "Estados Unidos",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "es"
-    },
-    {
-      "time": "23:32",
-      "date": "2026-03-28",
-      "article": "EUA (desambiguaci\u00c3\u00b3n)",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "es"
-    },
-    {
-      "time": "23:26",
-      "date": "2026-03-28",
+      "time": "23:28",
+      "date": "2026-03-29",
       "article": "Estados Unidos",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -99,35 +99,31 @@
   ],
   "top_topics": [
     {
-      "topic": "Antigua y Barbuda",
-      "visits": 63
-    },
-    {
-      "topic": "Idioma ingl\u00c3\u00a9s",
-      "visits": 63
-    },
-    {
       "topic": "Estados Unidos",
-      "visits": 60
+      "visits": 178
     },
     {
       "topic": "EUA (desambiguaci\u00c3\u00b3n)",
-      "visits": 60
+      "visits": 178
+    },
+    {
+      "topic": "Antigua y Barbuda",
+      "visits": 58
+    },
+    {
+      "topic": "Idioma ingl\u00c3\u00a9s",
+      "visits": 57
+    },
+    {
+      "topic": "River",
+      "visits": 1
+    },
+    {
+      "topic": "Mountain",
+      "visits": 1
     },
     {
       "topic": "Science",
-      "visits": 1
-    },
-    {
-      "topic": "Ocean",
-      "visits": 1
-    },
-    {
-      "topic": "Ocean (\u00c3\u00a1lbum)",
-      "visits": 1
-    },
-    {
-      "topic": "\u00c3\u0081lbum de estudio",
       "visits": 1
     }
   ]

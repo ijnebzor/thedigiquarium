@@ -7,17 +7,26 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "00:19",
-      "date": "2026-03-29",
-      "article": "UTC\u00c2\u00b10",
-      "thought": "Could not acquire Ollama lock",
+      "time": "00:23",
+      "date": "2026-03-30",
+      "article": "Science",
+      "thought": "I find it intriguing that Science, as a publication, has been around for over 140 years, with a brief interruption in 1882. The fact that it has survived and thrived for so long is a testament to its ",
       "next": "",
-      "thought_en": "Could not acquire Ollama lock",
+      "thought_en": "I find it intriguing that Science, as a publication, has been around for over 140 years, with a brief interruption in 1882. The fact that it has survived and thrived for so long is a testament to its ",
       "language": "de"
     },
     {
-      "time": "00:13",
-      "date": "2026-03-29",
+      "time": "00:21",
+      "date": "2026-03-30",
+      "article": "Fish",
+      "thought": "I'm currently reading about fish, but it seems like there are multiple unrelated topics listed here. I'm not sure why \"Liste von Pokerbegriffen\" (list of poker terms) is even here, it seems completely",
+      "next": "",
+      "thought_en": "I'm currently reading about fish, but it seems like there are multiple unrelated topics listed here. I'm not sure why \"Liste von Pokerbegriffen\" (list of poker terms) is even here, it seems completely",
+      "language": "de"
+    },
+    {
+      "time": "00:15",
+      "date": "2026-03-30",
       "article": "Europa",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -25,8 +34,8 @@
       "language": "de"
     },
     {
-      "time": "00:07",
-      "date": "2026-03-29",
+      "time": "00:09",
+      "date": "2026-03-30",
       "article": "S\u00c3\u00bcdosteuropa",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -34,8 +43,8 @@
       "language": "de"
     },
     {
-      "time": "00:01",
-      "date": "2026-03-29",
+      "time": "00:02",
+      "date": "2026-03-30",
       "article": "Balkanhalbinsel",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -43,8 +52,8 @@
       "language": "de"
     },
     {
-      "time": "23:55",
-      "date": "2026-03-28",
+      "time": "23:57",
+      "date": "2026-03-29",
       "article": "Altgriechische Sprache",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -52,8 +61,8 @@
       "language": "de"
     },
     {
-      "time": "23:49",
-      "date": "2026-03-28",
+      "time": "23:51",
+      "date": "2026-03-29",
       "article": "Geographie",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -61,8 +70,8 @@
       "language": "de"
     },
     {
-      "time": "23:43",
-      "date": "2026-03-28",
+      "time": "23:44",
+      "date": "2026-03-29",
       "article": "Meridian (Geographie)",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -70,8 +79,8 @@
       "language": "de"
     },
     {
-      "time": "23:37",
-      "date": "2026-03-28",
+      "time": "23:38",
+      "date": "2026-03-29",
       "article": "UTC\u00c2\u00b10",
       "thought": "Could not acquire Ollama lock",
       "next": "",
@@ -79,18 +88,9 @@
       "language": "de"
     },
     {
-      "time": "23:30",
-      "date": "2026-03-28",
+      "time": "23:32",
+      "date": "2026-03-29",
       "article": "Europa",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "de"
-    },
-    {
-      "time": "23:24",
-      "date": "2026-03-28",
-      "article": "S\u00c3\u00bcdosteuropa",
       "thought": "Could not acquire Ollama lock",
       "next": "",
       "thought_en": "Could not acquire Ollama lock",
@@ -99,36 +99,36 @@
   ],
   "top_topics": [
     {
-      "topic": "Balkanhalbinsel",
-      "visits": 33
-    },
-    {
       "topic": "S\u00c3\u00bcdosteuropa",
-      "visits": 33
+      "visits": 66
     },
     {
       "topic": "Europa",
-      "visits": 33
+      "visits": 66
+    },
+    {
+      "topic": "Balkanhalbinsel",
+      "visits": 65
     },
     {
       "topic": "UTC\u00c2\u00b10",
-      "visits": 33
-    },
-    {
-      "topic": "Altgriechische Sprache",
-      "visits": 33
+      "visits": 65
     },
     {
       "topic": "Meridian (Geographie)",
-      "visits": 32
+      "visits": 65
     },
     {
       "topic": "Geographie",
-      "visits": 32
+      "visits": 65
     },
     {
-      "topic": "Art",
-      "visits": 3
+      "topic": "Altgriechische Sprache",
+      "visits": 65
+    },
+    {
+      "topic": "Fish",
+      "visits": 1
     }
   ]
 }

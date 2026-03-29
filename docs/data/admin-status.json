@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-29T00:23:01.743330",
-  "overall_healthy": true,
+  "timestamp": "2026-03-30T00:23:01.795369",
+  "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
     "proxy_healthy": true,
@@ -54,37 +54,37 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 16,
+    "traces_today": 18,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Iron",
+        "article": "Music",
         "traces": 4
       },
       {
         "name": "tank-02-eve",
-        "article": "Definition",
-        "traces": 4
+        "article": "River",
+        "traces": 9
       },
       {
         "name": "tank-03-cain",
-        "article": "Line",
-        "traces": 2
+        "article": "Orthodox Judaism",
+        "traces": 1
       },
       {
         "name": "tank-04-abel",
-        "article": "Water vapor",
-        "traces": 2
+        "article": "Star Wars",
+        "traces": 1
       },
       {
         "name": "tank-05-juan",
-        "article": "EUA (desambiguaci\u00c3\u00b3n)",
-        "traces": 4
+        "article": "River",
+        "traces": 3
       }
     ]
   },
   "network": {
-    "isolated": true
+    "isolated": false
   },
   "overseer": {
     "running": true,
@@ -93,26 +93,28 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-29 00:06:50 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-29 00:07:01 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-29 00:07:01 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:09:23 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:10:33 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:11:43 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:12:43 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-29 00:12:54 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
-    "2026-03-29 00:12:54 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:12:54 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)']",
-    "2026-03-29 00:14:05 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:15:15 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:16:25 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:17:36 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:18:36 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-29 00:18:37 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-29 00:18:37 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
-    "2026-03-29 00:19:47 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:20:57 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']",
-    "2026-03-29 00:22:08 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error timed out>']"
+    "2026-03-30 00:11:16 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:12:20 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:13:23 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:14:23 \u274c [OVERSEER] Ollama watcher heartbeat stale: 317.744046s old",
+    "2026-03-30 00:14:26 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:15:26 \u274c [OVERSEER] Ollama watcher heartbeat stale: 380.949982s old",
+    "2026-03-30 00:15:30 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:16:30 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-30 00:16:40 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-03-30 00:16:40 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:16:40 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-13-victor is Created', 'tank-12-sakura is Created', 'tank-14-iris is Created', 'tank-16-seeker is Created', 'tank-15-observer is Created', 'tank-17-seth is Created']",
+    "2026-03-30 00:17:43 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:18:46 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']",
+    "2026-03-30 00:19:49 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:20:49 \u274c [OVERSEER] Ollama watcher heartbeat stale: 310.7438s old",
+    "2026-03-30 00:20:52 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:21:52 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-30 00:21:56 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-03-30 00:21:56 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 00:22:59 \u26a0\ufe0f [OVERSEER] Quick check: Ollama issues detected: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']"
   ],
-  "issues": []
+  "issues": [
+    "Network not isolated"
+  ]
 }
