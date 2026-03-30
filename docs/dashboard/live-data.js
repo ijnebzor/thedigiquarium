@@ -1,7 +1,7 @@
 /**
- * LIVE DATA LOADER v2.0
+ * LIVE DATA LOADER v2.1
  * =====================
- * Fetches data from /data/live-feed.json
+ * Fetches data from /data/live-feed.json (ONLY source)
  * 
  * TRANSPARENCY NOTE:
  * This is a 12-hour delayed relay from the tanks, automatically captured
@@ -10,6 +10,9 @@
  * 
  * Data is pruned: null thoughts, timeouts, and junk data removed for clean display.
  * Full and live logs available on request: research@digiquarium.org
+ *
+ * v2.1: Removed stale unified.json stream polling. All data now comes from
+ *       the broadcaster's live-feed.json which has real thinking traces.
  */
 
 let liveFeed = null;
@@ -106,6 +109,12 @@ function updateAllTanks() {
         updateTankPanel(tankId);
         tankStates[tankId] = liveFeed.tanks[tankId].status === 'active';
     });
+    
+    // Update status indicator
+    const dot = document.getElementById('status-dot');
+    const txt = document.getElementById('status-text');
+    if (dot) dot.classList.add('online');
+    if (txt) txt.textContent = 'Live Feed Active';
 }
 
 function updateStats() {
@@ -149,6 +158,7 @@ function openFullscreenWithData(tankId) {
     
     const overlay = document.getElementById('fullscreen');
     overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
     
     document.getElementById('fs-name').innerHTML = getSpecimenSVG(tankId) + ' ' + data.name;
     document.getElementById('fs-status').textContent = data.status === 'active' ? '● Active' : '○ Quiet';
@@ -180,79 +190,10 @@ function openFullscreenWithData(tankId) {
     }
 }
 
-// ============ LIVE STREAM POLLING ============
-// Poll the real-time unified.json written by the live translator every 5s
-
-let liveStreamData = null;
-
-async function loadLiveStream() {
-    try {
-        const response = await fetch('../streams/unified.json?' + Date.now());
-        if (!response.ok) throw new Error('Live stream not found');
-        liveStreamData = await response.json();
-        console.log('[LIVE-STREAM] Unified stream loaded, tanks:', Object.keys(liveStreamData.tanks || {}).length);
-        return true;
-    } catch (error) {
-        console.warn('[LIVE-STREAM] Stream unavailable:', error.message);
-        return false;
-    }
-}
-
-function applyLiveStreamData() {
-    if (!liveStreamData || !liveStreamData.tanks) return;
-
-    Object.entries(liveStreamData.tanks).forEach(([tankId, data]) => {
-        const panel = document.getElementById(tankId);
-        if (!panel) return;
-
-        const latest = Array.isArray(data.latest) && data.latest.length > 0 ? data.latest[0] : null;
-        if (!latest) return;
-
-        // Mark tank as active
-        tankStates[tankId] = true;
-        panel.classList.remove('sleeping');
-
-        const statusEl = panel.querySelector('.tank-status');
-        if (statusEl) {
-            statusEl.className = 'tank-status active';
-            statusEl.textContent = 'Live';
-        }
-
-        const bodyEl = panel.querySelector('.tank-body');
-        if (bodyEl) {
-            const thought = latest.thoughts || latest.original_thoughts || 'Exploring...';
-            const article = latest.article || 'Unknown';
-            const langBadge = latest.language && latest.language !== 'English'
-                ? `<span class="thought-lang-badge">${latest.language}</span>` : '';
-            bodyEl.innerHTML = `
-                <div class="tank-article">Reading: <strong>${article}</strong>${langBadge}</div>
-                <div class="tank-thought">${thought}</div>
-            `;
-        }
-
-        const footer = panel.querySelector('.tank-footer');
-        if (footer && latest.timestamp) {
-            const ts = new Date(latest.timestamp);
-            footer.innerHTML = `<span>Live</span><span>Last: ${ts.toLocaleTimeString()}</span>`;
-        }
-    });
-
-    // Update status dot to show live connection
-    const dot = document.getElementById('status-dot');
-    const txt = document.getElementById('status-text');
-    if (dot) dot.classList.add('online');
-    if (txt) txt.textContent = 'Live Stream Active';
-}
-
-async function pollLiveStream() {
-    const ok = await loadLiveStream();
-    if (ok) applyLiveStreamData();
-}
-
 // ============ INIT ============
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Load static broadcaster feed first (fallback / baseline)
+    // Load broadcaster feed (sole data source)
     const loaded = await loadLiveFeed();
 
     if (loaded) {
@@ -269,7 +210,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (loaded) setTimeout(updateAllTanks, 100);
     }
 
-    // Start live stream polling (overwrites stale broadcaster data with real-time)
-    await pollLiveStream();
-    setInterval(pollLiveStream, 5000);
+    // Re-fetch broadcaster feed every 5 minutes to pick up updates
+    setInterval(async () => {
+        const refreshed = await loadLiveFeed();
+        if (refreshed) {
+            updateAllTanks();
+            updateStats();
+            updateNextRefresh();
+        }
+    }, 300000);
 });

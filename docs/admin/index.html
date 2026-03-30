@@ -337,10 +337,10 @@ body{padding-bottom:70px}
 
 <script>
 var B=getBase(),U={
-a:B+'/data/admin-status.json',u:B+'/streams/unified.json',
+a:B+'/data/admin-status.json',u:B+'/data/live-feed.json',
 l:B+'/data/live_stats.json',f:B+'/data/live-feed.json',
 s:B+'/data/stats.json',t:B+'/data/tank-audit.json',
-c:B+'/streams/congregation.json'
+c:B+'/data/congregation.json'
 },PI=5000,fp=true,ft=null,cA=null,cU=null,cT=null;
 
 function getBase(){var p=location.pathname,i=p.indexOf('/admin');return i>-1?location.origin+p.substring(0,i):location.origin}
@@ -504,10 +504,10 @@ for(var i=1;i<=17;i++){
 var num=String(i).padStart(2,'0'),tid='tank-'+num,m=TM[tid]||{},fid=tid+'-'+(m.n||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 var act=null;if(a?.tanks?.activity)act=a.tanks.activity.find(function(x){return x.name===fid});act=act||{};
 var at=null;if(au?.tanks)at=au.tanks.find(function(x){return x.tank_id===fid});at=at||{};
-var ut=u?.tanks?.[fid]||{},le=ut.latest||[],ll=le.length?le[le.length-1]:null;
+var ut=u?.tanks?.[fid]||{},le=ut.recent_thoughts||ut.latest||[],ll=le.length?le[le.length-1]:null;
 var isA=!!act.name||at.today_traces>0;
 var art=act.article||(ll&&ll.article)||'—';
-var tr=act.traces||at.total_traces||ut.count||0;
+var tr=act.traces||at.total_traces||ut.traces_12h||ut.count||0;
 var hl=at.health_level||'UNKNOWN';
 var vis=atf!=='all'&&atf!==m.g?'display:none':'';
 rows.push('<tr data-g="'+m.g+'" data-t="'+fid+'" style="'+vis+'">'+
@@ -532,11 +532,11 @@ document.querySelectorAll('#ttb tr').forEach(function(r){r.style.display=(atf===
 async function om(tid){
 var mo=document.getElementById('tm'),c=document.getElementById('tmc');
 mo.classList.add('vis');c.innerHTML='<div style="text-align:center;padding:40px"><div class="spin"></div><br>Loading...</div>';
-var d=await Promise.all([fj(B+'/streams/'+tid+'.json'),fj(B+'/data/tanks/'+tid+'.json')]);
+var d=await Promise.all([fj(B+'/data/tanks/'+tid+'.json'),fj(B+'/data/tanks/'+tid+'.json')]);
 var ts=d[0],td=d[1],num=tid.split('-')[1],m=TM['tank-'+num]||{};
 var en=ts?.entries?.slice(-5)||[],th=td?.recent_thoughts||[],tp=td?.top_topics||[],st=td?.status||'unknown';
 var tpH=tp.length?'<h4 style="color:var(--cyan);font-size:.85rem;margin-bottom:8px">Top Topics</h4><div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">'+tp.map(function(t){return'<span class="b run">'+esc(Array.isArray(t)?t[0]:t)+'</span>'}).join('')+'</div>':'';
-var enH=en.length?en.map(function(e){return'<div style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--bdr)"><span style="color:var(--cyan)">['+( e.timestamp?new Date(e.timestamp).toLocaleString():'?')+']</span> <span style="color:var(--orange);font-weight:600">'+esc(e.article||'?')+'</span> → <span style="color:var(--mint)">'+esc(e.next_article||'?')+'</span>'+(e.thoughts?'<div style="margin-top:6px;color:var(--gray);font-size:.72rem">'+esc(trn(e.thoughts,300))+'</div>':'')+'</div>'}).join(''):'<div style="color:var(--gray)">No recent traces</div>';
+var enH=en.length?en.map(function(e){return'<div style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--bdr)"><span style="color:var(--cyan)">['+( e.timestamp?new Date(e.timestamp).toLocaleString():'?')+']</span> <span style="color:var(--orange);font-weight:600">'+esc(e.article||'?')+'</span> → <span style="color:var(--mint)">'+esc(e.next||e.next_article||'?')+'</span>'+(e.thoughts?'<div style="margin-top:6px;color:var(--gray);font-size:.72rem">'+esc(trn(e.thoughts,300))+'</div>':'')+'</div>'}).join(''):'<div style="color:var(--gray)">No recent traces</div>';
 c.innerHTML='<h2 style="font-size:1.2rem;margin-bottom:16px;display:flex;align-items:center;gap:10px">'+m.e+' '+( m.n||tid)+' <span class="b '+bc(m.g)+'">'+m.g+'</span> <span class="b '+(st==='active'?'run':st==='inactive'?'stop':'unk')+'">'+st+'</span></h2>'+
 '<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">'+
 '<div class="ci"><span class="ck">Tank ID</span><span class="cv">'+tid+'</span></div>'+
@@ -571,11 +571,11 @@ document.getElementById('fut').textContent=new Date().toLocaleTimeString();
 function rFd(u){
 var c=document.getElementById('fc');
 if(!u?.tanks||!Object.keys(u.tanks).length){c.innerHTML='<div style="padding:40px;text-align:center;color:var(--gray)">No recent activity.</div>';return}
-var all=[];for(var tid in u.tanks){var td=u.tanks[tid];(td.latest||[]).forEach(function(e){all.push(Object.assign({},e,{_t:tid}))})}
+var all=[];for(var tid in u.tanks){var td=u.tanks[tid];(td.recent_thoughts||td.latest||[]).forEach(function(e){all.push(Object.assign({},e,{_t:tid}))})}
 all.sort(function(a,b){return(b.timestamp||'').localeCompare(a.timestamp||'')});
 c.innerHTML=all.slice(0,30).map(function(e,i){
-var num=e._t?.split('-')?.[1],m=TM['tank-'+num]||{},th=e.thoughts||e.original_thoughts||'',t=trn(th,200);
-return'<div class="fe'+(i<3?' new':'')+'"><div class="feh"><span class="fet">'+(m.e||'🐠')+' '+(m.n||e._t)+(e.language?' ('+e.language+')':'')+'</span><span class="ftime">'+(e.timestamp?new Date(e.timestamp).toLocaleString():'?')+'</span></div><div class="fea">📖 '+esc(e.article||'?')+' → '+esc(e.next_article||'?')+'</div>'+(t?'<div class="feth">'+esc(t)+'</div>':'')+'</div>'
+var num=e._t?.split('-')?.[1],m=TM['tank-'+num]||{},th=e.thought||e.thoughts||e.original_thoughts||'',t=trn(th,200);
+return'<div class="fe'+(i<3?' new':'')+'"><div class="feh"><span class="fet">'+(m.e||'🐠')+' '+(m.n||e._t)+(e.language?' ('+e.language+')':'')+'</span><span class="ftime">'+(e.timestamp?new Date(e.timestamp).toLocaleString():'?')+'</span></div><div class="fea">📖 '+esc(e.article||'?')+' → '+esc(e.next||e.next_article||'?')+'</div>'+(t?'<div class="feth">'+esc(t)+'</div>':'')+'</div>'
 }).join('');
 }
 

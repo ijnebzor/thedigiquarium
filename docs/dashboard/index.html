@@ -44,6 +44,9 @@
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .nav-link { color: var(--cyan); text-decoration: none; font-size: 0.9rem; margin-left: 20px; }
         .nav-link:hover { color: var(--mint); }
+
+        /* Hamburger nav for mobile */
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
         
         .view-toggle {
             display: flex;
@@ -62,6 +65,7 @@
             cursor: pointer;
             font-size: 0.85rem;
             transition: all 0.3s;
+            white-space: nowrap;
         }
         .toggle-btn:hover { border-color: var(--cyan); color: var(--cyan); }
         .toggle-btn.active { background: var(--mint); color: var(--black); border-color: var(--mint); }
@@ -100,6 +104,7 @@
             font-size: 0.7rem;
             padding: 4px 10px;
             border-radius: 12px;
+            flex-shrink: 0;
         }
         .tank-status.active { background: rgba(7, 207, 141, 0.15); color: var(--mint); }
         .tank-status.sleeping { background: rgba(136, 153, 166, 0.15); color: var(--gray); }
@@ -122,8 +127,8 @@
         .tank-panel:hover .expand-btn { opacity: 1; }
         .expand-btn:hover { color: var(--cyan); }
         
-        .tank-body { padding: 20px; min-height: 150px; }
-        .tank-article { font-size: 0.85rem; color: var(--gray); margin-bottom: 15px; }
+        .tank-body { padding: 20px; min-height: 150px; overflow: hidden; }
+        .tank-article { font-size: 0.85rem; color: var(--gray); margin-bottom: 15px; word-wrap: break-word; overflow-wrap: break-word; }
         .tank-article strong { color: var(--cyan); }
         .tank-thought {
             font-family: 'JetBrains Mono', monospace;
@@ -135,6 +140,8 @@
             border-radius: 8px;
             max-height: 120px;
             overflow-y: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         /* Sleeping State */
@@ -172,7 +179,8 @@
             bottom: 0;
             background: var(--black);
             z-index: 1000;
-            padding: 20px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
         .fullscreen-overlay.active { display: flex; flex-direction: column; }
         
@@ -182,6 +190,7 @@
             align-items: center;
             padding: 20px;
             border-bottom: 1px solid rgba(7, 207, 141, 0.2);
+            flex-shrink: 0;
         }
         .fullscreen-title { font-size: 2rem; font-weight: 600; }
         .fullscreen-close {
@@ -196,6 +205,7 @@
             z-index: 10000;
             position: relative;
             transition: all 0.2s;
+            flex-shrink: 0;
         }
         .fullscreen-close:hover {
             background: #ff8533;
@@ -211,11 +221,13 @@
             gap: 30px;
             padding: 30px;
             overflow: hidden;
+            min-height: 0;
         }
         .fullscreen-main {
             flex: 2;
             display: flex;
             flex-direction: column;
+            min-height: 0;
         }
         .fullscreen-sidebar {
             flex: 1;
@@ -233,11 +245,15 @@
             font-size: 1rem;
             line-height: 1.8;
             overflow-y: auto;
+            min-height: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         .fullscreen-stats {
             display: flex;
             gap: 30px;
             margin-top: 20px;
+            flex-shrink: 0;
         }
         .fullscreen-stat { text-align: center; }
         .fullscreen-stat-value { font-size: 2rem; font-weight: 700; color: var(--mint); }
@@ -278,14 +294,132 @@
         .thought-original { font-size: 0.9em; color: var(--gray); font-style: italic; margin-top: 5px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5px; }
         .thought-lang-badge { font-size: 0.7em; background: var(--orange); color: var(--black); padding: 2px 6px; border-radius: 4px; margin-left: 5px; }
 
+        /* Production banner */
+        .prod-banner {
+            background: linear-gradient(135deg, rgba(7, 207, 141, 0.15) 0%, rgba(7, 221, 231, 0.05) 100%);
+            border: 1px solid rgba(7, 207, 141, 0.4);
+            border-radius: 10px;
+            padding: 15px 20px;
+        }
+
+        /* ====== MOBILE RESPONSIVE ====== */
         @media (max-width: 768px) {
-            .grid-view { grid-template-columns: 1fr; }
-            .container { padding: 15px; }
-            .header { flex-wrap: wrap; gap: 10px; padding: 15px; }
-            .header h1 { font-size: 1.2rem; }
-            .view-toggle { flex-wrap: wrap; }
-            .fullscreen-content { flex-direction: column; }
-            .fullscreen-stats { flex-wrap: wrap; gap: 15px; }
+            /* Single column grid */
+            .grid-view {
+                grid-template-columns: 1fr;
+            }
+            .container { padding: 10px; }
+
+            /* Header: stack vertically */
+            .header {
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 12px 15px;
+            }
+            .header h1 { font-size: 1.1rem; flex-shrink: 0; }
+            .prod-banner {
+                order: 3;
+                width: 100%;
+                padding: 10px 12px;
+                font-size: 0.8rem;
+            }
+            .status {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .nav-link {
+                margin-left: 10px;
+                font-size: 0.8rem;
+            }
+
+            /* Hamburger toggle for nav links */
+            .hamburger { display: block; }
+            .header .status .nav-link { display: none; }
+            .header .status.nav-open .nav-link { display: inline; }
+
+            /* Tab buttons: wrap and fill width */
+            .view-toggle {
+                flex-wrap: wrap;
+                gap: 6px;
+                padding: 10px;
+            }
+            .toggle-btn {
+                padding: 6px 14px;
+                font-size: 0.78rem;
+                flex: 1 1 auto;
+                text-align: center;
+                min-width: 0;
+            }
+
+            /* Tank panel mobile tweaks */
+            .tank-panel { border-radius: 8px; }
+            .tank-header { padding: 12px 15px; }
+            .tank-body {
+                padding: 15px;
+                min-height: 120px;
+            }
+            .tank-thought {
+                font-size: 0.75rem;
+                padding: 10px;
+                max-height: 100px;
+            }
+            .tank-footer { padding: 8px 15px; }
+            .expand-btn { opacity: 1; right: 10px; top: 10px; }
+
+            /* Fullscreen: scrollable on mobile */
+            .fullscreen-overlay {
+                padding: 0;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .fullscreen-header {
+                padding: 12px 15px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .fullscreen-title { font-size: 1.2rem; }
+            .fullscreen-close {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+            .fullscreen-content {
+                flex-direction: column;
+                padding: 15px;
+                overflow: visible;
+                min-height: auto;
+            }
+            .fullscreen-main {
+                min-height: auto;
+            }
+            .fullscreen-thought-stream {
+                font-size: 0.8rem;
+                line-height: 1.6;
+                padding: 15px;
+                min-height: 200px;
+                max-height: 50vh;
+                overflow-y: auto;
+            }
+            .fullscreen-stats {
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+            }
+            .fullscreen-stat-value { font-size: 1.5rem; }
+            .fullscreen-stat-label { font-size: 0.75rem; }
+            .fullscreen-sidebar {
+                padding: 15px;
+            }
+
+            /* Footer */
+            .footer { padding: 20px 15px; font-size: 0.78rem; }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 400px) {
+            .header h1 { font-size: 1rem; }
+            .toggle-btn { padding: 5px 10px; font-size: 0.72rem; }
+            .tank-name { font-size: 0.95rem; }
+            .fullscreen-title { font-size: 1rem; }
         }
 
     </style>
@@ -294,10 +428,11 @@
     <header class="header">
         <h1>🌊 Live Tank View</h1>
 
-        <div style="background: linear-gradient(135deg, rgba(7, 207, 141, 0.15) 0%, rgba(7, 221, 231, 0.05) 100%); border: 1px solid rgba(7, 207, 141, 0.4); border-radius: 10px; padding: 15px 20px; margin-bottom: 20px;">
+        <div class="prod-banner">
             <strong style="color: #07CF8D;">✅ Production</strong> <span style="color: #8899a6;">Live feed running v8.0 prompts. <a href="../archive/beta/" style="color: #07CF8D;">View archived Beta data</a></span>
         </div>
 
+        <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.status').classList.toggle('nav-open')">☰</button>
         <div class="status">
             <div class="status-dot" id="status-dot"></div>
             <span id="status-text">Connecting...</span>
@@ -367,7 +502,7 @@
     <footer class="footer">
         <p id="next-update">Data from THE BROADCASTER</p>
         <p id="global-stats" style="margin-top: 8px; color: var(--mint);"></p>
-        <p style="margin-top: 8px;">Live stream polls every 5s • Broadcaster baseline every 12h • <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
+        <p style="margin-top: 8px;">Broadcaster baseline every 12h • <a href="https://github.com/ijnebzor/thedigiquarium">View on GitHub</a></p>
         <p style="margin-top: 10px;">Brought to life with 🧠 and ❤️ by <a href="https://anthropic.com">Claude</a></p>
     </footer>
 
