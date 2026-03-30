@@ -9,6 +9,10 @@ The questions never change. The answers drift. That's the data.
 """
 
 import os
+try:
+    from inference import generate as llm_generate
+except ImportError:
+    llm_generate = None
 import json
 import time
 from datetime import datetime
@@ -91,82 +95,29 @@ def load_accumulated_experience():
 
 
 def ask_question(system_prompt: str, question: str) -> str:
-    """Ask a question using Groq (primary) with Ollama fallback."""
-    # The Librarian asks the question
-    prompt = f"The Librarian asks you: \"{question}\"\n\nAnswer honestly and personally, as {TANK_NAME}. Draw on everything you've experienced and felt. This is a private conversation between you and the Librarian."
+    """Ask via inference chain: Cerebras → Together → Groq → Ollama."""
+    prompt = f'The Librarian asks you: "{question}"
 
-    groq_key = os.getenv('GROQ_API_KEY', '')
-    if groq_key:
-        try:
-            import urllib.request, fcntl
-            data = json.dumps({
-                'model': os.getenv('GROQ_MODEL', 'llama-3.1-8b-instant'),
-                'messages': [
-                    {'role': 'system', 'content': system_prompt},
-                    {'role': 'user', 'content': prompt}
-                ],
-                'temperature': 0.9,
-                'max_tokens': 512
-            }).encode()
+Answer honestly and personally, as {TANK_NAME}. Draw on everything you've experienced and felt. This is a private conversation between you and the Librarian.'
 
-            req = urllib.request.Request(
-                'https://api.groq.com/openai/v1/chat/completions',
-                data=data,
-                headers={
-                    'Content-Type': 'application/json',
-                    'Authorization': f'Bearer {groq_key}',
-                    'User-Agent': 'Digiquarium/1.0'
-                }
-            )
-
-            # Rate limit via shared lock
-            lock_path = '/shared/.groq_rate_lock'
-            ts_path = '/shared/.groq_last_call'
-            lock_fd = open(lock_path, 'w')
-            fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            try:
-                try:
-                    last = float(open(ts_path).read().strip())
-                    elapsed = time.time() - last
-                    if elapsed < 20:
-                        time.sleep(20 - elapsed)
-                except:
-                    pass
-
-                with urllib.request.urlopen(req, timeout=30) as r:
-                    result = json.loads(r.read().decode())
-
-                with open(ts_path, 'w') as f:
-                    f.write(str(time.time()))
-
-                return result['choices'][0]['message']['content'].strip()
-            finally:
-                fcntl.flock(lock_fd, fcntl.LOCK_UN)
-                lock_fd.close()
-        except Exception as e:
-            print(f"  Groq failed: {e}, trying Ollama...")
-
-    # Fallback to Ollama
+    if llm_generate:
+        return llm_generate(system_prompt, prompt, timeout=60)
+    
+    # Fallback: direct Ollama if inference module unavailable
     try:
         import urllib.request
         ollama_url = os.getenv('OLLAMA_URL', 'http://digiquarium-ollama:11434')
         data = json.dumps({
             'model': os.getenv('OLLAMA_MODEL', 'llama3.2:latest'),
-            'prompt': prompt,
-            'system': system_prompt,
-            'stream': False,
-            'options': {'temperature': 0.9}
+            'prompt': prompt, 'system': system_prompt,
+            'stream': False, 'options': {'temperature': 0.9}
         }).encode()
-        req = urllib.request.Request(
-            f"{ollama_url}/api/generate",
-            data=data,
-            headers={'Content-Type': 'application/json'}
-        )
+        req = urllib.request.Request(f'{ollama_url}/api/generate', data=data, headers={'Content-Type': 'application/json'})
         with urllib.request.urlopen(req, timeout=300) as r:
             return json.loads(r.read().decode()).get('response', '').strip()
     except Exception as e:
-        print(f"  Ollama also failed: {e}")
-        return ""
+        print(f'  Inference failed: {e}')
+        return ''
 
 
 def run_baseline():

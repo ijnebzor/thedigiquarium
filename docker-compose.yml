@@ -95,13 +95,6 @@ services:
     environment:
       - OLLAMA_DEBUG=INFO
       - OLLAMA_HOST=0.0.0.0:11434
-    healthcheck:
-      # Real inference-capable health check: verify the API responds AND a model is loaded
-      test: ["CMD-SHELL", "curl -sf http://localhost:11434/api/tags | grep -q 'models' || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-      start_period: 30s
     restart: always
     mem_limit: 2g
     memswap_limit: 3g
@@ -132,6 +125,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -146,7 +143,7 @@ services:
       kiwix-simple:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.1
@@ -173,6 +170,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -187,7 +188,7 @@ services:
       kiwix-simple:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.2
@@ -215,6 +216,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -229,7 +234,7 @@ services:
       kiwix-simple:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.3
@@ -258,6 +263,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -272,7 +281,7 @@ services:
       kiwix-simple:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.4
@@ -301,6 +310,10 @@ services:
       - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -315,7 +328,7 @@ services:
       kiwix-spanish:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.5
@@ -344,6 +357,10 @@ services:
       - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -358,7 +375,7 @@ services:
       kiwix-spanish:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.6
@@ -387,6 +404,10 @@ services:
       - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -401,7 +422,7 @@ services:
       kiwix-german:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.7
@@ -430,6 +451,10 @@ services:
       - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -444,7 +469,7 @@ services:
       kiwix-german:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.8
@@ -473,6 +498,10 @@ services:
       - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -487,7 +516,7 @@ services:
       kiwix-chinese:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.9
@@ -516,6 +545,10 @@ services:
       - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -530,7 +563,7 @@ services:
       kiwix-chinese:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.10
@@ -559,6 +592,10 @@ services:
       - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -573,7 +610,7 @@ services:
       kiwix-japanese:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.11
@@ -602,6 +639,10 @@ services:
       - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -616,7 +657,7 @@ services:
       kiwix-japanese:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.12
@@ -645,6 +686,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -659,7 +704,7 @@ services:
       kiwix-maxi:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.13
@@ -688,6 +733,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -702,7 +751,7 @@ services:
       kiwix-maxi:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.14
@@ -731,6 +780,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -746,7 +799,7 @@ services:
       kiwix-simple:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.15
@@ -776,6 +829,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -790,7 +847,7 @@ services:
       kiwix-simple:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.16
@@ -821,6 +878,10 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - LOG_DIR=/logs
@@ -835,7 +896,7 @@ services:
       kiwix-simple:
         condition: service_started
       ollama:
-        condition: service_healthy
+        condition: service_started
     networks:
       isolated-net:
         ipv4_address: 172.30.1.17
