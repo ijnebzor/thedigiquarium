@@ -123,7 +123,7 @@ def ask_question(system_prompt: str, question: str) -> str:
             lock_path = '/shared/.groq_rate_lock'
             ts_path = '/shared/.groq_last_call'
             lock_fd = open(lock_path, 'w')
-            fcntl.flock(lock_fd, fcntl.LOCK_EX)
+            fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
             try:
                 try:
                     last = float(open(ts_path).read().strip())
