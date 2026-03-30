@@ -126,7 +126,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -171,7 +171,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -217,7 +217,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -264,7 +264,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -311,7 +311,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -358,7 +358,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -405,7 +405,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -452,7 +452,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -499,7 +499,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -546,7 +546,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -593,7 +593,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -640,7 +640,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -687,7 +687,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -734,7 +734,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -781,7 +781,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -830,7 +830,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}
@@ -879,7 +879,7 @@ services:
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
       - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama-3.3-70b}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
       - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEY=${GROQ_API_KEY:-}

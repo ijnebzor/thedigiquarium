@@ -20,7 +20,7 @@ PROVIDERS = [
         'url': 'https://api.cerebras.ai/v1/chat/completions',
         'key_env': 'CEREBRAS_API_KEY',
         'model_env': 'CEREBRAS_MODEL',
-        'default_model': 'llama-3.3-70b',
+        'default_model': 'llama3.1-8b',
         'rate_limit': 2,  # 30 RPM = 2s between calls
     },
     {
