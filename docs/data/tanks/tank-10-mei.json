@@ -3,132 +3,60 @@
   "emoji": "\ud83c\udde8\ud83c\uddf3",
   "type": "Chinese",
   "status": "active",
-  "traces_12h": 20,
+  "traces_12h": 2,
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "00:21",
+      "time": "22:29",
       "date": "2026-03-30",
-      "article": "Animal",
-      "thought": "This is a vast topic, and I'm not sure where to start. I see a mix of languages, which might indicate that animals are a universal concept, but I'm not familiar with the languages. I see links to spec",
+      "article": "\u00e6\u00b1\u0089\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
+      "thought": "I'm currently reading about \u00e6\u00b1\u0089\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089), which seems to be a topic related to Japanese history or culture. The text mentions \u00e6\u00b1\u0089\u00e6\u0097\u008f\u00e4\u00ba\u00ba, but it's not clear what that term refers to. I'm intrigue",
       "next": "",
-      "thought_en": "This is a vast topic, and I'm not sure where to start. I see a mix of languages, which might indicate that animals are a universal concept, but I'm not familiar with the languages. I see links to spec",
+      "thought_en": "I'm currently reading about \u00e6\u00b1\u0089\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089), which seems to be a topic related to Japanese history or culture. The text mentions \u00e6\u00b1\u0089\u00e6\u0097\u008f\u00e4\u00ba\u00ba, but it's not clear what that term refers to. I'm intrigue",
       "language": "zh"
     },
     {
-      "time": "00:12",
+      "time": "21:57",
       "date": "2026-03-30",
-      "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "thought": "Could not acquire Ollama lock",
+      "article": "\u00e8\u00af\u009d",
+      "thought": "This article seems to be about a word or a concept in the Chinese language. I'm not entirely sure what \u00e8\u00af\u009d refers to. The available links seem to be related to different aspects of the Chinese languag",
       "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "zh"
-    },
-    {
-      "time": "00:07",
-      "date": "2026-03-30",
-      "article": "\u00e4\u00ba\u00ba",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "zh"
-    },
-    {
-      "time": "00:01",
-      "date": "2026-03-30",
-      "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "zh"
-    },
-    {
-      "time": "23:55",
-      "date": "2026-03-29",
-      "article": "\u00e4\u00ba\u00ba",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "zh"
-    },
-    {
-      "time": "23:49",
-      "date": "2026-03-29",
-      "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "zh"
-    },
-    {
-      "time": "23:43",
-      "date": "2026-03-29",
-      "article": "\u00e4\u00ba\u00ba",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "zh"
-    },
-    {
-      "time": "23:37",
-      "date": "2026-03-29",
-      "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "zh"
-    },
-    {
-      "time": "23:31",
-      "date": "2026-03-29",
-      "article": "\u00e4\u00ba\u00ba",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
-      "language": "zh"
-    },
-    {
-      "time": "23:24",
-      "date": "2026-03-29",
-      "article": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "thought": "Could not acquire Ollama lock",
-      "next": "",
-      "thought_en": "Could not acquire Ollama lock",
+      "thought_en": "This article seems to be about a word or a concept in the Chinese language. I'm not entirely sure what \u00e8\u00af\u009d refers to. The available links seem to be related to different aspects of the Chinese languag",
       "language": "zh"
     }
   ],
   "top_topics": [
     {
       "topic": "\u00e4\u00ba\u00ba (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "visits": 176
+      "visits": 125
     },
     {
       "topic": "\u00e4\u00ba\u00ba",
-      "visits": 176
+      "visits": 125
     },
     {
-      "topic": "\u00e5\u009f\u008e\u00e5\u00b8\u0082",
-      "visits": 59
+      "topic": "\u00e6\u00b1\u0089\u00e8\u00af\u00ad\u00e5\u009c\u0088",
+      "visits": 79
     },
     {
-      "topic": "\u00e5\u009f\u008e\u00e5\u00b8\u0082 (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
-      "visits": 58
+      "topic": "\u00e6\u00b1\u0089\u00e8\u00af\u00ad\u00e5\u009b\u00bd\u00e5\u00ae\u00b6\u00e5\u0092\u008c\u00e5\u009c\u00b0\u00e5\u008c\u00ba\u00e5\u0088\u0097\u00e8\u00a1\u00a8",
+      "visits": 79
     },
     {
-      "topic": "Animal",
-      "visits": 1
+      "topic": "\u00e5\u00b7\u00b4\u00e9\u00bb\u008e (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
+      "visits": 4
     },
     {
-      "topic": "Sound",
-      "visits": 1
+      "topic": "\u00e6\u00b5\u00b7",
+      "visits": 2
     },
     {
-      "topic": "\u00e5\u00a3\u00b0\u00e9\u009f\u00b3",
-      "visits": 1
+      "topic": "\u00e6\u00b5\u00b7\u00e6\u00b4\u008b (\u00e6\u00b6\u0088\u00e6\u00ad\u00a7\u00e4\u00b9\u0089)",
+      "visits": 2
     },
     {
-      "topic": "\u00e4\u00ba\u00ba\u00e5\u00a3\u00b0",
-      "visits": 1
+      "topic": "\u00e5\u00b7\u00b4\u00e9\u00bb\u008e",
+      "visits": 2
     }
   ]
 }
