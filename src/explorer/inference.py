@@ -27,23 +27,53 @@ def generate(system_prompt: str, user_prompt: str, timeout: int = 60) -> str:
     """
     # Try Groq first if API key is available
     if GROQ_API_KEY:
-        import random
-        for attempt in range(3):
+        import random, fcntl
+        
+        # Shared rate limiter: only one tank calls Groq at a time, with 20s spacing
+        rate_lock_path = '/shared/.groq_rate_lock'
+        rate_ts_path = '/shared/.groq_last_call'
+        
+        try:
+            # Acquire rate lock
+            rate_fd = open(rate_lock_path, 'w')
+            fcntl.flock(rate_fd, fcntl.LOCK_EX)  # Blocking wait — tanks queue up
+            
+            # Check when the last Groq call was made
             try:
-                # Stagger by tank ID to avoid thundering herd
-                tank_num = int(os.getenv('TANK_ID', 'tank-01').split('-')[1])
-                time.sleep(tank_num * 2 + random.uniform(0, 3))  # 2-37s spread
-                result = _call_groq(system_prompt, user_prompt, timeout)
-                if result:
-                    return result
-            except Exception as e:
-                if '429' in str(e):
-                    wait = (attempt + 1) * 10 + random.uniform(0, 10)
-                    logger.info(f"Groq rate limited, waiting {wait:.0f}s (attempt {attempt+1}/3)")
-                    time.sleep(wait)
-                else:
-                    logger.warning(f"Groq failed: {e}, falling back to Ollama")
-                    break
+                last_call = float(open(rate_ts_path).read().strip())
+            except:
+                last_call = 0
+            
+            # Wait until 20s have passed since last call (3 RPM = safe under 6000 TPM)
+            elapsed = time.time() - last_call
+            if elapsed < 20:
+                time.sleep(20 - elapsed)
+            
+            # Make the call
+            result = _call_groq(system_prompt, user_prompt, timeout)
+            
+            # Record timestamp
+            with open(rate_ts_path, 'w') as f:
+                f.write(str(time.time()))
+            
+            # Release lock
+            fcntl.flock(rate_fd, fcntl.LOCK_UN)
+            rate_fd.close()
+            
+            if result:
+                return result
+        except Exception as e:
+            # Release lock on error
+            try:
+                fcntl.flock(rate_fd, fcntl.LOCK_UN)
+                rate_fd.close()
+            except: pass
+            
+            if '429' in str(e):
+                logger.info(f"Groq rate limited, waiting 30s")
+                time.sleep(30)
+            else:
+                logger.warning(f"Groq failed: {e}, falling back to Ollama")
     
     # Fallback to local Ollama
     try:

@@ -25,8 +25,11 @@ import argparse
 import requests
 try:
     from inference import generate as llm_generate
+    from memory import load_context, update_after_thinking
 except ImportError:
     llm_generate = None
+    load_context = None
+    update_after_thinking = None
 from datetime import datetime
 from pathlib import Path
 from bs4 import BeautifulSoup
@@ -372,6 +375,16 @@ def explore(config: dict):
         try:
             # Fetch current article
             article = fetch_article(current_url)
+            
+            # Inject persistent memory into system prompt
+            if load_context:
+                try:
+                    memory_context = load_context()
+                    active_prompt = system_prompt + "\n\n" + memory_context
+                except:
+                    active_prompt = system_prompt
+            else:
+                active_prompt = system_prompt
             logger.info(f"Reading: {article['title']}")
             
             if not article['links']:
@@ -393,6 +406,13 @@ def explore(config: dict):
             }
             log_trace(config, trace)
             logger.info(f"Thoughts: {response['thoughts'][:100]}...")
+            
+            # Update persistent memory (brain.md + soul.md)
+            if update_after_thinking and response.get('thoughts') and len(response['thoughts']) > 20:
+                try:
+                    update_after_thinking(article['title'], response['thoughts'], response.get('next_link', ''))
+                except:
+                    pass
             
             # Find next URL
             next_url = None
