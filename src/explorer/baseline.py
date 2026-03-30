@@ -96,9 +96,8 @@ def load_accumulated_experience():
 
 def ask_question(system_prompt: str, question: str) -> str:
     """Ask via inference chain: Cerebras → Together → Groq → Ollama."""
-    prompt = f'The Librarian asks you: "{question}"
+    prompt = 'The Librarian asks you: ' + question + '. Answer honestly and personally, as ' + TANK_NAME + '. Draw on everything you have experienced and felt.'
 
-Answer honestly and personally, as {TANK_NAME}. Draw on everything you've experienced and felt. This is a private conversation between you and the Librarian.'
 
     if llm_generate:
         return llm_generate(system_prompt, prompt, timeout=60)
