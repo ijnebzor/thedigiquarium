@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T23:58:03.271472",
+  "timestamp": "2026-03-31T10:49:02.045460",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 25
+    "total": 24
   },
   "tanks": {
     "running": 17,
-    "traces_today": 1390,
+    "traces_today": 654,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Glen Ridge, New Jersey",
-        "traces": 471
+        "article": "Light",
+        "traces": 632
       },
       {
         "name": "tank-02-eve",
-        "article": "Biology",
-        "traces": 416
+        "article": "River",
+        "traces": 5
       },
       {
         "name": "tank-03-cain",
-        "article": "Adult",
-        "traces": 124
+        "article": "Music",
+        "traces": 7
       },
       {
         "name": "tank-04-abel",
-        "article": "Lithium",
-        "traces": 135
+        "article": "History",
+        "traces": 2
       },
       {
         "name": "tank-05-juan",
-        "article": "Individuo",
-        "traces": 244
+        "article": "Language",
+        "traces": 8
       }
     ]
   },
@@ -93,26 +93,26 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-30 21:35:11 \u26a0\ufe0f [OVERSEER]   - containers: [\"Cannot check containers: [Errno 2] No such file or directory: 'docker'\"]",
-    "2026-03-30 21:35:11 \ud83d\udd0d [OVERSEER] SLA compliance: 2 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-30 22:05:53 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-30 22:05:58 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-30 22:05:58 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-30 22:05:58 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-30 22:36:49 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-30 22:36:53 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-30 22:36:53 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-30 22:36:53 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-30 23:07:48 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-30 23:07:48 \u274c [OVERSEER] Ollama watcher heartbeat stale: 341.625288s old",
-    "2026-03-30 23:07:52 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
-    "2026-03-30 23:07:52 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-30 23:07:52 \u26a0\ufe0f [OVERSEER]   - daemons: ['ollama_watcher not running']",
-    "2026-03-30 23:07:52 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-30 23:38:49 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-30 23:38:53 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-30 23:38:53 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']",
-    "2026-03-30 23:38:53 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
+    "2026-03-31 09:26:19 \u274c [OVERSEER] Ollama watcher heartbeat stale: 30733.165729s old",
+    "2026-03-31 09:26:22 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
+    "2026-03-31 09:26:22 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-31 09:26:22 \u26a0\ufe0f [OVERSEER]   - containers: ['digiquarium-kiwix-german is Exited (143) 9 hours ago', 'digiquarium-kiwix-chinese is Exited (143) 9 hours ago', 'digiquarium-kiwix-spanish is Exited (143) 9 hours ago', 'digiquarium-kiwix-japanese is Exited (143) 9 hours ago', 'digiquarium-kiwix-maxi is Exited (143) 9 hours ago']",
+    "2026-03-31 09:26:22 \u26a0\ufe0f [OVERSEER]   - daemons: ['scheduler not running', 'ollama_watcher not running', 'psych not running']",
+    "2026-03-31 09:26:22 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
+    "2026-03-31 09:56:25 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-31 09:56:25 \u274c [OVERSEER] Ollama watcher heartbeat stale: 32539.170384s old",
+    "2026-03-31 09:56:28 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
+    "2026-03-31 09:56:28 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-31 09:56:28 \u26a0\ufe0f [OVERSEER]   - containers: ['digiquarium-kiwix-german is Exited (143) 9 hours ago', 'digiquarium-kiwix-chinese is Exited (143) 9 hours ago', 'digiquarium-kiwix-spanish is Exited (143) 9 hours ago', 'digiquarium-kiwix-japanese is Exited (143) 9 hours ago', 'digiquarium-kiwix-maxi is Exited (143) 9 hours ago']",
+    "2026-03-31 09:56:28 \u26a0\ufe0f [OVERSEER]   - daemons: ['scheduler not running', 'ollama_watcher not running', 'psych not running']",
+    "2026-03-31 09:56:28 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
+    "2026-03-31 10:26:31 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-31 10:26:31 \u274c [OVERSEER] Ollama watcher heartbeat stale: 34345.173867s old",
+    "2026-03-31 10:26:34 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
+    "2026-03-31 10:26:34 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-31 10:26:34 \u26a0\ufe0f [OVERSEER]   - containers: ['digiquarium-kiwix-german is Exited (143) 10 hours ago', 'digiquarium-kiwix-chinese is Exited (143) 10 hours ago', 'digiquarium-kiwix-spanish is Exited (143) 10 hours ago', 'digiquarium-kiwix-japanese is Exited (143) 10 hours ago', 'digiquarium-kiwix-maxi is Exited (143) 10 hours ago']",
+    "2026-03-31 10:26:34 \u26a0\ufe0f [OVERSEER]   - daemons: ['scheduler not running', 'ollama_watcher not running', 'psych not running']",
+    "2026-03-31 10:26:34 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
   ],
   "issues": [
     "Network not isolated"

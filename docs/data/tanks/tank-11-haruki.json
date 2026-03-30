@@ -2,19 +2,21 @@
   "name": "Haruki",
   "emoji": "\ud83c\uddef\ud83c\uddf5",
   "type": "Japanese",
-  "status": "quiet",
-  "traces_12h": 0,
+  "status": "active",
+  "traces_12h": 1,
   "latest_baseline": null,
-  "recent_thoughts": [],
+  "recent_thoughts": [
+    {
+      "time": "00:34",
+      "date": "2026-03-31",
+      "article": "\u00e3\u0083\u0084\u00e3\u0083\u00aa\u00e3\u0083\u00bc",
+      "thought": "I'm not entirely sure what this article is about, but the title \"\u00e3\u0083\u0084\u00e3\u0083\u00aa\u00e3\u0083\u00bc\" seems to be a Japanese word for \"tree.\" I'm seeing a list of links that seem to be related to trees, music, or possibly both",
+      "next": "",
+      "thought_en": "I'm not entirely sure what this article is about, but the title \"\u00e3\u0083\u0084\u00e3\u0083\u00aa\u00e3\u0083\u00bc\" seems to be a Japanese word for \"tree.\" I'm seeing a list of links that seem to be related to trees, music, or possibly both",
+      "language": "ja"
+    }
+  ],
   "top_topics": [
-    {
-      "topic": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
-      "visits": 127
-    },
-    {
-      "topic": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
-      "visits": 127
-    },
     {
       "topic": "\u00e7\u00a7\u0091\u00e5\u00ad\u00a6\u00e5\u008f\u00b2",
       "visits": 80
@@ -24,19 +26,27 @@
       "visits": 79
     },
     {
+      "topic": "\u00e8\u008b\u00b1\u00e8\u00aa\u009e",
+      "visits": 75
+    },
+    {
+      "topic": "\u00e5\u009b\u00bd\u00e9\u009a\u009b\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e8\u00a8\u0098\u00e5\u008f\u00b7",
+      "visits": 72
+    },
+    {
+      "topic": "\u00e6\u0096\u0087\u00e6\u00b3\u0095\u00e7\u00af\u0084\u00e7\u0096\u0087",
+      "visits": 3
+    },
+    {
       "topic": "\u00e3\u0083\u008a\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc",
-      "visits": 1
+      "visits": 2
     },
     {
-      "topic": "\u00e3\u0082\u00b5\u00e3\u0082\u00a4\u00e3\u0082\u00a8\u00e3\u0083\u00b3\u00e3\u0082\u00b9",
-      "visits": 1
+      "topic": "\u00e6\u0080\u00a7 (\u00e6\u0096\u0087\u00e6\u00b3\u0095)",
+      "visits": 2
     },
     {
-      "topic": "\u00e5\u00ad\u00a6\u00e5\u0095\u008f\u00e3\u0081\u00ae\u00e4\u00b8\u0080\u00e8\u00a6\u00a7",
-      "visits": 1
-    },
-    {
-      "topic": "\u00e5\u00a4\u00a7\u00e5\u00ad\u00a6",
+      "topic": "\u00e3\u0083\u0084\u00e3\u0083\u00aa\u00e3\u0083\u00bc",
       "visits": 1
     }
   ]
