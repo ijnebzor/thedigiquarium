@@ -350,7 +350,7 @@ async function sha(m){var b=new TextEncoder().encode(m),h=await crypto.subtle.di
 
 async function auth(){
 var p=document.getElementById('pw').value,h=await sha(p);
-if(h==='7e3ab85e7ac01f34d48738abf7b3f4a4a0ee0e70992d3e8d04e72f23f0e72e7c'||p==='digiquarium-admin-2026'){
+if(h==='7e3ab85e7ac01f34d48738abf7b3f4a4a0ee0e70992d3e8d04e72f23f0e72e7c'){
 sessionStorage.setItem('dqa','1');show()}
 else{document.getElementById('ae').classList.add('show');document.getElementById('pw').value='';document.getElementById('pw').focus()}
 }
