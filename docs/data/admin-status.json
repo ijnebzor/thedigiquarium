@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T22:52:03.266086",
+  "timestamp": "2026-03-30T23:09:03.781382",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,32 +54,32 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 1318,
+    "traces_today": 1330,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Animal",
-        "traces": 460
+        "article": "Geology",
+        "traces": 463
       },
       {
         "name": "tank-02-eve",
-        "article": "Future",
-        "traces": 405
+        "article": "List of U.S. state capitals",
+        "traces": 408
       },
       {
         "name": "tank-03-cain",
-        "article": "Medicine",
-        "traces": 107
+        "article": "Drug",
+        "traces": 109
       },
       {
         "name": "tank-04-abel",
-        "article": "Wisdom",
-        "traces": 111
+        "article": "Art",
+        "traces": 113
       },
       {
         "name": "tank-05-juan",
-        "article": "Distrito financiero",
-        "traces": 235
+        "article": "Pretoria",
+        "traces": 237
       }
     ]
   },
@@ -93,12 +93,6 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-30 21:35:03 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-30 21:35:03 \u26a0\ufe0f [OVERSEER] Ollama watcher heartbeat file missing",
-    "2026-03-30 21:35:06 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
-    "2026-03-30 21:35:06 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', \"Cannot check proxy container: [Errno 2] No such file or directory: 'docker'\", \"E2E test error: [Errno 2] No such file or directory: 'docker'\"]",
-    "2026-03-30 21:35:06 \u26a0\ufe0f [OVERSEER]   - containers: [\"Cannot check containers: [Errno 2] No such file or directory: 'docker'\"]",
-    "2026-03-30 21:35:06 \ud83d\udd0d [OVERSEER] SLA compliance: 2 compliant, 0 non-compliant, 0 total violations",
     "2026-03-30 21:35:06 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-03-30 21:35:06 \u26a0\ufe0f [OVERSEER] Ollama watcher heartbeat file missing",
     "2026-03-30 21:35:11 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
@@ -112,7 +106,13 @@
     "2026-03-30 22:36:49 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-03-30 22:36:53 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
     "2026-03-30 22:36:53 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-30 22:36:53 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
+    "2026-03-30 22:36:53 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
+    "2026-03-30 23:07:48 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-30 23:07:48 \u274c [OVERSEER] Ollama watcher heartbeat stale: 341.625288s old",
+    "2026-03-30 23:07:52 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-03-30 23:07:52 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-30 23:07:52 \u26a0\ufe0f [OVERSEER]   - daemons: ['ollama_watcher not running']",
+    "2026-03-30 23:07:52 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
   ],
   "issues": [
     "Network not isolated"
