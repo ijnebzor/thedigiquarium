@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-03-30T23:41:02.846259",
+  "timestamp": "2026-03-30T23:58:03.271472",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
     "proxy_healthy": true,
-    "e2e_healthy": false,
+    "e2e_healthy": true,
     "models": 0
   },
   "daemons": {
@@ -54,17 +54,17 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 1386,
+    "traces_today": 1390,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Buzz Aldrin",
-        "traces": 470
+        "article": "Glen Ridge, New Jersey",
+        "traces": 471
       },
       {
         "name": "tank-02-eve",
-        "article": "Animal",
-        "traces": 414
+        "article": "Biology",
+        "traces": 416
       },
       {
         "name": "tank-03-cain",
@@ -78,13 +78,13 @@
       },
       {
         "name": "tank-05-juan",
-        "article": "Paradoja de Arrow",
-        "traces": 243
+        "article": "Individuo",
+        "traces": 244
       }
     ]
   },
   "network": {
-    "isolated": true
+    "isolated": false
   },
   "overseer": {
     "running": true,
@@ -115,6 +115,6 @@
     "2026-03-30 23:38:53 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
   ],
   "issues": [
-    "Ollama E2E failed"
+    "Network not isolated"
   ]
 }
