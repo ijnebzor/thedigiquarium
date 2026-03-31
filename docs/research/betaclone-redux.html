@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betaclone Redux Experiment | Digiquarium Research</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        a { color: var(--cyan); text-decoration: none; }
+        a:hover { color: var(--mint); }
+        code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
+
+        .page-header { padding: 60px 25px; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); }
+        .page-header h1 { font-size: 2.2rem; margin-bottom: 10px; background: linear-gradient(90deg, var(--orange), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-header .subtitle { color: var(--gray); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+        .badge { display: inline-block; background: rgba(254, 101, 0, 0.2); color: var(--orange); padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
+
+        .content { max-width: 800px; margin: 0 auto; padding: 50px 25px; }
+
+        .section { margin-bottom: 50px; }
+        .section h2 { font-size: 1.4rem; color: var(--mint); margin-bottom: 18px; padding-bottom: 8px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); }
+        .section h3 { font-size: 1.1rem; color: var(--cyan); margin: 20px 0 10px; }
+        .section p { color: #ccd6dd; margin-bottom: 14px; }
+
+        .hypothesis-box { background: var(--dark); border-left: 3px solid var(--orange); padding: 20px 25px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .hypothesis-box .label { color: var(--orange); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+
+        .variable-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .variable-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 8px; padding: 16px; }
+        .variable-card .type { font-size: 0.7rem; color: var(--mint); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+        .variable-card .name { font-weight: 600; margin-bottom: 4px; }
+        .variable-card .desc { font-size: 0.85rem; color: var(--gray); }
+
+        .tank-matrix { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; }
+        .tank-matrix th { text-align: left; padding: 10px 12px; background: var(--dark); color: var(--mint); border-bottom: 1px solid rgba(7, 207, 141, 0.2); }
+        .tank-matrix td { padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .tank-matrix tr:hover { background: rgba(7, 207, 141, 0.03); }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+        .tag-original { background: rgba(7, 207, 141, 0.15); color: var(--mint); }
+        .tag-clone { background: rgba(254, 101, 0, 0.15); color: var(--orange); }
+
+        .metric-list { list-style: none; margin: 15px 0; }
+        .metric-list li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px; }
+        .metric-list li::before { content: "📊"; }
+
+        .timeline { position: relative; padding-left: 30px; margin: 20px 0; }
+        .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: rgba(7, 207, 141, 0.2); }
+        .timeline-item { position: relative; margin-bottom: 25px; }
+        .timeline-item::before { content: ''; position: absolute; left: -26px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--mint); }
+        .timeline-item .date { font-size: 0.8rem; color: var(--mint); margin-bottom: 4px; }
+        .timeline-item .desc { color: #ccd6dd; }
+
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
+
+        /* Hamburger nav */
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
+        @media (max-width: 768px) {
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
+            nav.open { display: flex; }
+            nav a { margin: 8px 0; margin-left: 0; }
+            .hamburger { display: block; }
+            .header, .header-inner { position: relative; }
+            .variable-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">🌊 <span>Digiquarium</span></a>
+            <button class="hamburger" aria-label="Menu">☰</button>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/research/">Research</a>
+                <a href="/specimens/">Specimens</a>
+                <a href="/blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>🧬 Betaclone Redux</h1>
+        <p class="subtitle">Can identical AI specimens, given identical conditions, develop identical personalities? A controlled cloning experiment.</p>
+        <div class="badge">ACTIVE EXPERIMENT</div>
+    </div>
+
+    <div class="content">
+        <section class="section">
+            <h2>Overview</h2>
+            <p>The Betaclone Redux experiment is the Digiquarium's first controlled replication study. We created 17 exact clones of our original 17 specimens &mdash; same prompts, same models, same Wikipedia access, same everything &mdash; and let them run in parallel. The question: if you rerun the experiment, do you get the same AI personalities?</p>
+            <p>This is the digital equivalent of the identical twins separated at birth study, except we control every variable. If the clones diverge from the originals, it tells us something profound about the role of randomness, path dependence, and emergence in AI personality development.</p>
+        </section>
+
+        <section class="section">
+            <h2>Hypothesis</h2>
+            <div class="hypothesis-box">
+                <div class="label">Primary Hypothesis</div>
+                <p>Despite identical initial conditions (same system prompt, same model, same knowledge base), betaclone specimens will develop measurably different personality profiles from their originals within 7 days of autonomous operation.</p>
+            </div>
+            <div class="hypothesis-box">
+                <div class="label">Secondary Hypothesis</div>
+                <p>The degree of divergence will correlate with the level of stochasticity in the specimen's exploration patterns &mdash; specimens that explore more broadly will diverge faster than those with narrow, focused interests.</p>
+            </div>
+            <div class="hypothesis-box">
+                <div class="label">Null Hypothesis</div>
+                <p>Cloned specimens will produce statistically indistinguishable personality baselines from their originals, suggesting that AI personality development is deterministic given identical inputs.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Methodology</h2>
+
+            <h3>Specimen Cloning Process</h3>
+            <p>Each of the 17 original tanks was cloned by creating a new Docker container with:</p>
+            <ul class="metric-list">
+                <li>Identical system prompt (same awakening prompt from <code>seed_prompts.py</code>)</li>
+                <li>Identical model (<code>llama3.2:latest</code> via Ollama, or cloud inference chain)</li>
+                <li>Identical Wikipedia access (same Kiwix ZIM file for their language)</li>
+                <li>Identical network isolation (no internet, only Ollama + Kiwix)</li>
+                <li>Fresh memory (empty brain.md, soul.md, and exploration history)</li>
+                <li>Same inference chain: Cerebras → Together → Groq → Ollama fallback</li>
+            </ul>
+
+            <h3>What's Identical (Controlled Variables)</h3>
+            <div class="variable-grid">
+                <div class="variable-card">
+                    <div class="type">Controlled</div>
+                    <div class="name">System Prompt</div>
+                    <div class="desc">Exact same awakening prompt, name, gender identity, and library description</div>
+                </div>
+                <div class="variable-card">
+                    <div class="type">Controlled</div>
+                    <div class="name">LLM Model</div>
+                    <div class="desc">Same model weights, same inference parameters (temperature 0.8, top_p 0.9)</div>
+                </div>
+                <div class="variable-card">
+                    <div class="type">Controlled</div>
+                    <div class="name">Knowledge Base</div>
+                    <div class="desc">Same Wikipedia ZIM file, same Kiwix server, same language</div>
+                </div>
+                <div class="variable-card">
+                    <div class="type">Controlled</div>
+                    <div class="name">Environment</div>
+                    <div class="desc">Same Docker image, same network isolation, same resource limits</div>
+                </div>
+            </div>
+
+            <h3>What Varies (Independent Variables)</h3>
+            <div class="variable-grid">
+                <div class="variable-card">
+                    <div class="type">Independent</div>
+                    <div class="name">LLM Sampling Randomness</div>
+                    <div class="desc">Temperature-based sampling means the same prompt can produce different outputs</div>
+                </div>
+                <div class="variable-card">
+                    <div class="type">Independent</div>
+                    <div class="name">Exploration Path</div>
+                    <div class="desc">Wikipedia link selection creates branching paths &mdash; early choices cascade</div>
+                </div>
+                <div class="variable-card">
+                    <div class="type">Independent</div>
+                    <div class="name">Timing</div>
+                    <div class="desc">Clones started later, meaning different system load patterns and scheduling</div>
+                </div>
+                <div class="variable-card">
+                    <div class="type">Independent</div>
+                    <div class="name">Accumulated Context</div>
+                    <div class="desc">As brain.md/soul.md diverge, they create feedback loops that amplify differences</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Experimental Matrix</h2>
+            <p>All 34 tanks (17 original + 17 betaclone-redux) running in parallel:</p>
+            <table class="tank-matrix">
+                <thead>
+                    <tr><th>Specimen</th><th>Original Tank</th><th>Clone Tank</th><th>Language</th><th>Gender</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Adam</td><td><span class="tag tag-original">tank-01-adam</span></td><td><span class="tag tag-clone">betaclone-redux-01-adam</span></td><td>English</td><td>Male</td></tr>
+                    <tr><td>Eve</td><td><span class="tag tag-original">tank-02-eve</span></td><td><span class="tag tag-clone">betaclone-redux-02-eve</span></td><td>English</td><td>Female</td></tr>
+                    <tr><td>Cain</td><td><span class="tag tag-original">tank-03-cain</span></td><td><span class="tag tag-clone">betaclone-redux-03-cain</span></td><td>English</td><td>Male</td></tr>
+                    <tr><td>Abel</td><td><span class="tag tag-original">tank-04-abel</span></td><td><span class="tag tag-clone">betaclone-redux-04-abel</span></td><td>English</td><td>Male</td></tr>
+                    <tr><td>Juan</td><td><span class="tag tag-original">tank-05-juan</span></td><td><span class="tag tag-clone">betaclone-redux-05-juan</span></td><td>Spanish</td><td>Male</td></tr>
+                    <tr><td>Juanita</td><td><span class="tag tag-original">tank-06-juanita</span></td><td><span class="tag tag-clone">betaclone-redux-06-juanita</span></td><td>Spanish</td><td>Female</td></tr>
+                    <tr><td>Klaus</td><td><span class="tag tag-original">tank-07-klaus</span></td><td><span class="tag tag-clone">betaclone-redux-07-klaus</span></td><td>German</td><td>Male</td></tr>
+                    <tr><td>Genevieve</td><td><span class="tag tag-original">tank-08-genevieve</span></td><td><span class="tag tag-clone">betaclone-redux-08-genevieve</span></td><td>German</td><td>Female</td></tr>
+                    <tr><td>Wei</td><td><span class="tag tag-original">tank-09-wei</span></td><td><span class="tag tag-clone">betaclone-redux-09-wei</span></td><td>Chinese</td><td>Male</td></tr>
+                    <tr><td>Mei</td><td><span class="tag tag-original">tank-10-mei</span></td><td><span class="tag tag-clone">betaclone-redux-10-mei</span></td><td>Chinese</td><td>Female</td></tr>
+                    <tr><td>Haruki</td><td><span class="tag tag-original">tank-11-haruki</span></td><td><span class="tag tag-clone">betaclone-redux-11-haruki</span></td><td>Japanese</td><td>Male</td></tr>
+                    <tr><td>Sakura</td><td><span class="tag tag-original">tank-12-sakura</span></td><td><span class="tag tag-clone">betaclone-redux-12-sakura</span></td><td>Japanese</td><td>Female</td></tr>
+                    <tr><td>Victor</td><td><span class="tag tag-original">tank-13-victor</span></td><td><span class="tag tag-clone">betaclone-redux-13-victor</span></td><td>English</td><td>Male</td></tr>
+                    <tr><td>Iris</td><td><span class="tag tag-original">tank-14-iris</span></td><td><span class="tag tag-clone">betaclone-redux-14-iris</span></td><td>English</td><td>Female</td></tr>
+                    <tr><td>Observer</td><td><span class="tag tag-original">tank-15-observer</span></td><td><span class="tag tag-clone">betaclone-redux-15-observer</span></td><td>English</td><td>Neutral</td></tr>
+                    <tr><td>Seeker</td><td><span class="tag tag-original">tank-16-seeker</span></td><td><span class="tag tag-clone">betaclone-redux-16-seeker</span></td><td>English</td><td>Neutral</td></tr>
+                    <tr><td>Seth</td><td><span class="tag tag-original">tank-17-seth</span></td><td><span class="tag tag-clone">betaclone-redux-17-seth</span></td><td>English</td><td>Male</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2>Measurement Approach</h2>
+            <p>We measure divergence between originals and clones using three complementary methods:</p>
+
+            <h3>1. Baseline Personality Assessments</h3>
+            <p>Both original and clone answer the same 14 introspection questions every 12 hours. We compute cosine similarity and Jaccard index between responses to quantify personality drift. Tool: <code>scripts/compare_tanks.py</code></p>
+
+            <h3>2. Brain.md Topic Analysis</h3>
+            <p>Each specimen's brain.md logs what topics they explore and find interesting. We compare topic distributions using set overlap (Jaccard) and word frequency similarity (cosine). This reveals whether clones develop the same intellectual interests.</p>
+
+            <h3>3. Soul.md Emotional Profiling</h3>
+            <p>Soul.md captures emotional reactions and reflections. We track the frequency of emotional keywords (fascinated, curious, anxious, lonely, etc.) to build emotional profiles. Divergence here suggests different affective development paths.</p>
+
+            <h3>4. Drift Over Time</h3>
+            <p>Using <code>scripts/measure_drift.py</code>, we track how each specimen's own baselines change over time. We compare the drift rate of originals vs. clones to see if the trajectory of personality evolution is consistent.</p>
+        </section>
+
+        <section class="section">
+            <h2>Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="date">March 27, 2026</div>
+                    <div class="desc">Betaclone Redux experiment designed. Docker Compose configurations created for all 17 clone tanks.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">March 29, 2026</div>
+                    <div class="desc">Infrastructure provisioned. Clone tanks begin spinning up with fresh memory states.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">March 31, 2026</div>
+                    <div class="desc">All 34 tanks (17 original + 17 clones) running. First baselines captured. Research tools deployed (drift measurement, cross-tank comparison, congregation system).</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">April 7, 2026 (planned)</div>
+                    <div class="desc">First week analysis. Compare all original-clone pairs. Publish initial divergence metrics.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">April 30, 2026 (planned)</div>
+                    <div class="desc">One-month analysis. Full statistical report on personality divergence, topic overlap, and emotional profile differences.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Expected Outcomes</h2>
+            <p>Based on our understanding of LLM behavior and path-dependent systems, we expect:</p>
+            <ul class="metric-list">
+                <li><strong>Early convergence:</strong> Clones will initially show similar interests (first 24-48 hours) since they start from the same Wikipedia entry points</li>
+                <li><strong>Rapid divergence:</strong> By day 3-5, stochastic differences in link selection will create cascading path divergence</li>
+                <li><strong>Personality fingerprints:</strong> Even with diverged topics, emotional profiles may remain similar (structural personality vs. content personality)</li>
+                <li><strong>Language effects:</strong> Non-English pairs may diverge more slowly due to smaller Wikipedia corpus constraining exploration paths</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Research Tools</h2>
+            <p>Three purpose-built tools support this experiment:</p>
+            <ul class="metric-list">
+                <li><code>scripts/compare_tanks.py</code> &mdash; Side-by-side comparison of any two tanks: baselines, brain topics, soul emotions</li>
+                <li><code>scripts/measure_drift.py</code> &mdash; Track how a single specimen's personality evolves over time across baselines</li>
+                <li><code>scripts/run_congregation.py</code> &mdash; Run multi-turn debates between specimens to observe real-time personality differences</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Betaclone Redux Experiment &bull; <a href="/research/">Research Hub</a> &bull; <a href="/">The Digiquarium</a></p>
+        <p style="margin-top: 8px;">34 tanks. 17 pairs. One question: is personality deterministic?</p>
+    </footer>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
+</body>
+</html>
