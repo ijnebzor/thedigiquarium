@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-31T15:01:37.236490",
+  "timestamp": "2026-03-31T15:17:03.511216",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,17 +54,17 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 3389,
+    "traces_today": 3588,
     "activity": [
       {
         "name": "tank-01-adam",
         "article": "Electricity",
-        "traces": 1572
+        "traces": 1620
       },
       {
         "name": "tank-02-eve",
-        "article": "Mathematics",
-        "traces": 869
+        "article": "Communes of France",
+        "traces": 937
       },
       {
         "name": "tank-03-cain",
@@ -78,8 +78,8 @@
       },
       {
         "name": "tank-05-juan",
-        "article": "Alfabeto",
-        "traces": 912
+        "article": "Lat\u00c3\u00adn",
+        "traces": 995
       }
     ]
   },

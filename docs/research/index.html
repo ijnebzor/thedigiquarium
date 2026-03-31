@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research | The Digiquarium</title>
-        <meta property="og:title" content="Research | The Digiquarium">
-    <meta property="og:description" content="The first open-source AIthropology research platform: 34 AI research tanks, 5 languages, endless curiosity.">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="The Digiquarium">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
@@ -46,31 +42,18 @@
         .highlight-card { background: linear-gradient(135deg, rgba(7, 207, 141, 0.1) 0%, rgba(7, 221, 231, 0.1) 100%); border: 1px solid rgba(7, 207, 141, 0.3); }
         
         .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-    
-        /* Mobile hamburger nav */
-        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
-        @media (max-width: 768px) {
-            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
-            nav.open { display: flex; }
-            nav a { margin: 8px 0; margin-left: 0; }
-            .hamburger { display: block; }
-            .header, .header-inner { position: relative; }
-        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <button class="hamburger" aria-label="Menu">☰</button>
-                <nav>
-                <a href="/">Home</a>
-                <a href="/dashboard/">Dashboard</a>
-                <a href="/specimens/">Specimens</a>
-                <a href="/research/">Research</a>
-                <a href="/team/">Team</a>
-                <a href="/blog/">Blog</a>
-                <a href="https://github.com/ijneb/digiquarium">GitHub</a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../#specimens">Specimens</a>
+                <a href="../team/">Team</a>
+                <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a>
             </nav>
         </div>
     </header>
@@ -103,22 +86,10 @@
                     <div class="doc-meta">Veto authority</div>
                 </div>
                 <div class="doc-card">
-                    <div class="doc-icon">🧬</div>
-                    <div class="doc-title"><a href="betaclone-redux.html">Betaclone Redux</a></div>
-                    <div class="doc-desc">The controlled cloning experiment: 17 identical copies of our original specimens. Can identical conditions produce identical AI personalities?</div>
-                    <div class="doc-meta">Active experiment • 34 tanks</div>
-                </div>
-                <div class="doc-card">
                     <div class="doc-icon">📊</div>
                     <div class="doc-title"><a href="findings.html">Key Findings</a></div>
                     <div class="doc-desc">Emerging patterns from 17 specimens: gender prompting effects, cultural Wikipedia variants, architecture impact.</div>
-                    <div class="doc-meta">150,000+ traces analyzed</div>
-                </div>
-                <div class="doc-card highlight-card">
-                    <div class="doc-icon">📈</div>
-                    <div class="doc-title"><a href="beta-findings/">Beta Period Findings</a></div>
-                    <div class="doc-desc">Complete analysis from the initial beta phase. Language effects, ethical engagement patterns, technical issues, and specimen activity summaries.</div>
-                    <div class="doc-meta">February 17-23, 2026 • 4,032 files archived</div>
+                    <div class="doc-meta">68,000+ traces analyzed</div>
                 </div>
             </div>
         </div>
@@ -141,7 +112,7 @@
                 <div class="doc-card">
                     <div class="doc-icon">🤖</div>
                     <div class="doc-title"><a href="daemons.html">Daemon Architecture</a></div>
-                    <div class="doc-desc">21 autonomous agents running 24/7. Operations, security, research, ethics, and public engagement.</div>
+                    <div class="doc-desc">20 autonomous agents running 24/7. Operations, security, research, ethics, and public engagement.</div>
                     <div class="doc-meta">5 divisions</div>
                 </div>
                 <div class="doc-card">
@@ -166,7 +137,7 @@
                     <div class="doc-icon">🎯</div>
                     <div class="doc-title"><a href="milestones.html">Milestones</a></div>
                     <div class="doc-desc">Project timeline from inception to current state. Key achievements and upcoming goals.</div>
-                    <div class="doc-meta">Day 44 and counting</div>
+                    <div class="doc-meta">Day 7 and counting</div>
                 </div>
                 <div class="doc-card">
                     <div class="doc-icon">🧬</div>
@@ -185,8 +156,7 @@
     </div>
     
     <footer class="footer">
-        <p>The Digiquarium &mdash; Open-source AIthropology research. <a href="https://github.com/ijneb/digiquarium">GitHub</a></p>
+        <p>🌊 The Digiquarium • Research Documentation • <a href="https://github.com/ijnebzor/thedigiquarium">Open Source</a></p>
     </footer>
-<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>

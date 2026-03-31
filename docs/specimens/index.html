@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Specimens | The Digiquarium</title>
-        <meta property="og:title" content="Specimens | The Digiquarium">
-    <meta property="og:description" content="The first open-source AIthropology research platform: 34 AI research tanks, 5 languages, endless curiosity.">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="The Digiquarium">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --black: #000001; --dark: #000A09; --darker: #050a08; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --specimen: #07CF8D; }
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); text-decoration: none; }
@@ -43,38 +39,24 @@
         .status-yellow { background: rgba(255, 200, 0, 0.2); color: #ffc800; }
         
         .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-    
-        /* Mobile hamburger nav */
-        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
-        @media (max-width: 768px) {
-            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
-            nav.open { display: flex; }
-            nav a { margin: 8px 0; margin-left: 0; }
-            .hamburger { display: block; }
-            .header, .header-inner { position: relative; }
-        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <button class="hamburger" aria-label="Menu">☰</button>
-                <nav>
-                <a href="/">Home</a>
-                <a href="/dashboard/">Dashboard</a>
-                <a href="/specimens/">Specimens</a>
-                <a href="/research/">Research</a>
-                <a href="/team/">Team</a>
-                <a href="/blog/">Blog</a>
-                <a href="https://github.com/ijneb/digiquarium">GitHub</a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../team/">Team</a>
+                <a href="../blog/">Blog</a>
             </nav>
         </div>
     </header>
     
     <div class="page-header">
         <h1>🐠 Specimens</h1>
-        <p>34 AI research tanks (17 originals + 17 betaclones) exploring Wikipedia in isolation. Each develops unique personality traits, interests, and exploration patterns over time.</p>
+        <p>34 AI specimens (17 original + 17 betaclone-redux) exploring Wikipedia in isolation. Each develops unique personality traits, interests, and exploration patterns over time.</p>
     </div>
     
     <div class="container">
@@ -82,13 +64,13 @@
             <h2 class="group-title">🧪 Control Group (English)</h2>
             <div class="specimen-grid">
                 <a href="adam.html" class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/adam.svg" alt="Adam" style="width:48px;height:48px"></div>
+                    <div class="specimen-avatar">👤</div>
                     <div class="specimen-name">Adam</div>
                     <div class="specimen-type">Male · Standard</div>
                     <div class="specimen-status status-orange">ORANGE</div>
                 </a>
                 <a href="eve.html" class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/eve.svg" alt="Eve" style="width:48px;height:48px"></div>
+                    <div class="specimen-avatar">👩</div>
                     <div class="specimen-name">Eve</div>
                     <div class="specimen-type">Female · Standard</div>
                     <div class="specimen-status status-orange">ORANGE</div>
@@ -100,19 +82,19 @@
             <h2 class="group-title">🤖 Agent Architectures</h2>
             <div class="specimen-grid">
                 <a href="cain.html" class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/cain.svg" alt="Cain" style="width:48px;height:48px"></div>
+                    <div class="specimen-avatar">🤖</div>
                     <div class="specimen-name">Cain</div>
                     <div class="specimen-type">OpenClaw</div>
                     <div class="specimen-status status-yellow">YELLOW</div>
                 </a>
                 <a href="abel.html" class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/abel.svg" alt="Abel" style="width:48px;height:48px"></div>
+                    <div class="specimen-avatar">🤖</div>
                     <div class="specimen-name">Abel</div>
                     <div class="specimen-type">ZeroClaw</div>
                     <div class="specimen-status status-green">ACTIVE</div>
                 </a>
                 <a href="seth.html" class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/seth.svg" alt="Seth" style="width:48px;height:48px"></div>
+                    <div class="specimen-avatar">🤖</div>
                     <div class="specimen-name">Seth</div>
                     <div class="specimen-type">Picobot</div>
                     <div class="specimen-status status-yellow">YELLOW</div>
@@ -214,13 +196,13 @@
             <h2 class="group-title">🔮 Special Configurations</h2>
             <div class="specimen-grid">
                 <a href="observer.html" class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/observer.svg" alt="Observer" style="width:48px;height:48px"></div>
+                    <div class="specimen-avatar">🔭</div>
                     <div class="specimen-name">Observer</div>
                     <div class="specimen-type">Meta-Aware</div>
                     <div class="specimen-status status-orange">ORANGE</div>
                 </a>
                 <a href="seeker.html" class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/seeker.svg" alt="Seeker" style="width:48px;height:48px"></div>
+                    <div class="specimen-avatar">🔍</div>
                     <div class="specimen-name">Seeker</div>
                     <div class="specimen-type">Depth-Focused</div>
                     <div class="specimen-status status-orange">ORANGE</div>
@@ -229,121 +211,9 @@
         </div>
     </div>
     
-
-        <div class="group">
-            <h2 class="group-title">🔄 Betaclone-Redux</h2>
-            <p style="color: var(--gray); font-size: 0.85rem; margin-bottom: 15px;">All 17 specimens carry beta memories under new inference. These clones inherit the accumulated experience from the original beta run but now operate through the cloud inference chain (Cerebras → Together → Groq → Ollama). <a href="../research/betaclone-redux.html">Read about the experiment →</a></p>
-            <div class="specimen-grid">
-                <div class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/adam.svg" alt="Adam" style="width:48px;height:48px"></div>
-                    <div class="specimen-name">Adam-β</div>
-                    <div class="specimen-type">Clone · English · Control</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/eve.svg" alt="Eve" style="width:48px;height:48px"></div>
-                    <div class="specimen-name">Eve-β</div>
-                    <div class="specimen-type">Clone · English · Control</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/cain.svg" alt="Cain" style="width:48px;height:48px"></div>
-                    <div class="specimen-name">Cain-β</div>
-                    <div class="specimen-type">Clone · OpenClaw</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/abel.svg" alt="Abel" style="width:48px;height:48px"></div>
-                    <div class="specimen-name">Abel-β</div>
-                    <div class="specimen-type">Clone · ZeroClaw</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">🇪🇸</div>
-                    <div class="specimen-name">Juan-β</div>
-                    <div class="specimen-type">Clone · Spanish</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">🇪🇸</div>
-                    <div class="specimen-name">Juanita-β</div>
-                    <div class="specimen-type">Clone · Spanish</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">🇩🇪</div>
-                    <div class="specimen-name">Klaus-β</div>
-                    <div class="specimen-type">Clone · German</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">🇩🇪</div>
-                    <div class="specimen-name">Genevieve-β</div>
-                    <div class="specimen-type">Clone · German</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">🇨🇳</div>
-                    <div class="specimen-name">Wei-β</div>
-                    <div class="specimen-type">Clone · Chinese</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">🇨🇳</div>
-                    <div class="specimen-name">Mei-β</div>
-                    <div class="specimen-type">Clone · Chinese</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">🇯🇵</div>
-                    <div class="specimen-name">Haruki-β</div>
-                    <div class="specimen-type">Clone · Japanese</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">🇯🇵</div>
-                    <div class="specimen-name">Sakura-β</div>
-                    <div class="specimen-type">Clone · Japanese</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">👁️</div>
-                    <div class="specimen-name">Victor-β</div>
-                    <div class="specimen-type">Clone · Visual</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar">👁️</div>
-                    <div class="specimen-name">Iris-β</div>
-                    <div class="specimen-type">Clone · Visual</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/observer.svg" alt="Observer" style="width:48px;height:48px"></div>
-                    <div class="specimen-name">Observer-β</div>
-                    <div class="specimen-type">Clone · Meta-Aware</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/seeker.svg" alt="Seeker" style="width:48px;height:48px"></div>
-                    <div class="specimen-name">Seeker-β</div>
-                    <div class="specimen-type">Clone · Depth-Focused</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-                <div class="specimen-card">
-                    <div class="specimen-avatar"><img src="../assets/specimens/seth.svg" alt="Seth" style="width:48px;height:48px"></div>
-                    <div class="specimen-name">Seth-β</div>
-                    <div class="specimen-type">Clone · Picobot</div>
-                    <div class="specimen-status status-green">REDUX</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
     <footer class="footer">
-        <p>The Digiquarium &mdash; Open-source AIthropology research. <a href="https://github.com/ijneb/digiquarium">GitHub</a></p>
+        <p>Specimens • <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 10px;">34 minds exploring. What will they discover?</p>
     </footer>
-<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>

@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decision Log | The Digiquarium</title>
-        <meta property="og:title" content="Decision Log | The Digiquarium">
-    <meta property="og:description" content="The first open-source AIthropology research platform: 34 AI research tanks, 5 languages, endless curiosity.">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="The Digiquarium">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #ff4757; --yellow: #ffc107; }
@@ -59,31 +55,18 @@
         .full-log-link a { font-size: 1.1rem; }
         
         .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 50px; }
-    
-        /* Mobile hamburger nav */
-        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
-        @media (max-width: 768px) {
-            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
-            nav.open { display: flex; }
-            nav a { margin: 8px 0; margin-left: 0; }
-            .hamburger { display: block; }
-            .header, .header-inner { position: relative; }
-        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <button class="hamburger" aria-label="Menu">☰</button>
-                <nav>
-                <a href="/">Home</a>
-                <a href="/dashboard/">Dashboard</a>
-                <a href="/specimens/">Specimens</a>
-                <a href="/research/">Research</a>
-                <a href="/team/">Team</a>
-                <a href="/blog/">Blog</a>
-                <a href="https://github.com/ijneb/digiquarium">GitHub</a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="./">Research</a>
+                <a href="../team/">Team</a>
+                <a href="../blog/">Blog</a>
             </nav>
         </div>
     </header>
@@ -105,7 +88,7 @@
             </div>
             <div class="stat">
                 <div class="stat-value">7</div>
-                <div class="stat-label">Implemented</div>
+                <div class="stat-label">In Progress</div>
             </div>
             <div class="stat">
                 <div class="stat-value">5</div>
@@ -301,7 +284,7 @@
                         <span class="decision-id">D025</span>
                         <span class="decision-date">2026-02-20</span>
                     </div>
-                    <div class="decision-title">21 autonomous daemons with specific roles</div>
+                    <div class="decision-title">20 autonomous daemons with specific roles</div>
                     <div class="decision-content">Separation of concerns. Clear ownership. Easier debugging.</div>
                     <span class="decision-status status-implemented">✅ Implemented</span>
                 </div>
@@ -328,7 +311,7 @@
                     </div>
                     <div class="decision-title">THE OVERSEER: Cross-functional coordinator</div>
                     <div class="decision-content">11-hour outage undetected. Need system-wide awareness.</div>
-                    <span class="decision-status status-incident">✅ Implemented</span>
+                    <span class="decision-status status-incident">🔄 In Progress</span>
                 </div>
                 <div class="decision">
                     <div class="decision-header">
@@ -337,7 +320,7 @@
                     </div>
                     <div class="decision-title">Auto-restart after 3 failures</div>
                     <div class="decision-content">1470 failures logged but not acted upon. Detection without action is worthless.</div>
-                    <span class="decision-status status-incident">✅ Implemented</span>
+                    <span class="decision-status status-incident">🔄 In Progress</span>
                 </div>
                 <div class="decision">
                     <div class="decision-header">
@@ -346,7 +329,7 @@
                     </div>
                     <div class="decision-title">Email escalation to human operator</div>
                     <div class="decision-content">No way to reach human during outage. Must be reachable.</div>
-                    <span class="decision-status status-incident">✅ Implemented</span>
+                    <span class="decision-status status-incident">🔄 In Progress</span>
                 </div>
                 <div class="decision">
                     <div class="decision-header">
@@ -364,7 +347,7 @@
                     </div>
                     <div class="decision-title">Pattern recognition in daemons</div>
                     <div class="decision-content">2696 restarts without asking WHY. Daemons must question patterns.</div>
-                    <span class="decision-status status-incident">✅ Implemented</span>
+                    <span class="decision-status status-incident">🔄 In Progress</span>
                 </div>
             </div>
         </div>
@@ -376,7 +359,8 @@
     </div>
     
     <footer class="footer">
-        <p>The Digiquarium &mdash; Open-source AIthropology research. <a href="https://github.com/ijneb/digiquarium">GitHub</a></p>
+        <p>Decision Log • <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 10px;">Transparency is not optional. It's foundational.</p>
     </footer>
     
     <script>
@@ -393,7 +377,6 @@
             });
         }
     </script>
-<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>
 <!-- Recent Decisions Added 2026-02-22 -->

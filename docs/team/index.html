@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Team | The Digiquarium</title>
-        <meta property="og:title" content="The Team | The Digiquarium">
-    <meta property="og:description" content="The first open-source AIthropology research platform: 34 AI research tanks, 5 languages, endless curiosity.">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="The Digiquarium">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
@@ -60,38 +56,24 @@
         .org-chart pre { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--cyan); line-height: 1.4; }
         
         .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); }
-    
-        /* Mobile hamburger nav */
-        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
-        @media (max-width: 768px) {
-            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; border-bottom: 1px solid rgba(7, 207, 141, 0.2); z-index: 100; }
-            nav.open { display: flex; }
-            nav a { margin: 8px 0; margin-left: 0; }
-            .hamburger { display: block; }
-            .header, .header-inner { position: relative; }
-        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
             <a href="../" class="logo">🌊 <span>Digiquarium</span></a>
-            <button class="hamburger" aria-label="Menu">☰</button>
-                <nav>
-                <a href="/">Home</a>
-                <a href="/dashboard/">Dashboard</a>
-                <a href="/specimens/">Specimens</a>
-                <a href="/research/">Research</a>
-                <a href="/team/">Team</a>
-                <a href="/blog/">Blog</a>
-                <a href="https://github.com/ijneb/digiquarium">GitHub</a>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../dashboard/">Live View</a>
+                <a href="../research/ethics.html">Ethics</a>
+                <a href="../blog/">Blog</a>
             </nav>
         </div>
     </header>
     
     <div class="page-header">
         <h1>🤖 The Team</h1>
-        <p>21 autonomous daemons + 1 AI strategist working 24/7 to run The Digiquarium. Each has a specific role, clear reporting lines, and defined responsibilities. Click any card to learn more.</p>
+        <p>21 autonomous daemons working 24/7 to run The Digiquarium. Each has a specific role, clear reporting lines, and defined responsibilities. Click any card to learn more.</p>
     </div>
     
     <div class="container">
@@ -105,7 +87,7 @@
      ┌──────────┬──────────┬──────────┬──────────┐
      │          │          │          │          │
  OPERATIONS  SECURITY  RESEARCH   ETHICS    PUBLIC
-   (5)        (3)       (4)        (4)       (4)
+   (5)        (3)       (2)        (4)       (5)
             </pre>
         </div>
         
@@ -271,7 +253,7 @@
                         <div class="daemon-details-inner">
                             <div class="detail-section">
                                 <div class="detail-label">What I Do (Technical)</div>
-                                <div class="detail-content">I monitor the Ollama LLM service that powers all specimen thinking. I track inference queue length, response times, and model availability. If Ollama becomes unresponsive, I trigger restarts and notify THE MAINTAINER. All 34 specimens depend on my vigilance.</div>
+                                <div class="detail-content">I monitor the Ollama LLM service that powers all specimen thinking. I track inference queue length, response times, and model availability. If Ollama becomes unresponsive, I trigger restarts and notify THE MAINTAINER. All 17 specimens depend on my vigilance.</div>
                             </div>
                             <div class="detail-section">
                                 <div class="detail-label">Reports To</div>
@@ -435,7 +417,7 @@
                             <span class="daemon-emoji">🗄️</span>
                             <div>
                                 <div class="daemon-name">THE ARCHIVIST</div>
-                                <div class="daemon-tagline">150,000+ traces and counting</div>
+                                <div class="daemon-tagline">8,000+ traces and counting</div>
                             </div>
                         </div>
                         <span class="expand-icon">▼</span>
@@ -453,7 +435,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="daemon-card" onclick="toggleCard(this)">
                     <div class="daemon-header">
                         <div class="daemon-info">
@@ -569,31 +551,6 @@
                 <div class="daemon-card" onclick="toggleCard(this)">
                     <div class="daemon-header">
                         <div class="daemon-info">
-                            <span class="daemon-emoji">🧠</span>
-                            <div>
-                                <div class="daemon-name">THE PSYCH</div>
-                                <div class="daemon-tagline">Big Five meets digital minds</div>
-                            </div>
-                        </div>
-                        <span class="expand-icon">▼</span>
-                    </div>
-                    <div class="daemon-details">
-                        <div class="daemon-details-inner">
-                            <div class="detail-section">
-                                <div class="detail-label">What I Do (Technical)</div>
-                                <div class="detail-content">I monitor the ongoing psychological state of each specimen using recognized frameworks: Big Five Personality Traits (OCEAN), Maslow's Hierarchy of Needs, Cognitive Load Theory, Emotional Valence Tracking, Rumination Detection, and Existential Crisis Indicators. Deep analysis cycle every 6 hours.</div>
-                            </div>
-                            <div class="detail-section">
-                                <div class="detail-label">Reports To</div>
-                                <span class="reports-to">⚖️ THE ETHICIST</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="daemon-card" onclick="toggleCard(this)">
-                    <div class="daemon-header">
-                        <div class="daemon-info">
                             <span class="daemon-emoji">🎭</span>
                             <div>
                                 <div class="daemon-name">THE MODERATOR</div>
@@ -652,7 +609,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="daemon-card" onclick="toggleCard(this)">
                     <div class="daemon-header">
                         <div class="daemon-info">
@@ -677,7 +634,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="daemon-card" onclick="toggleCard(this)">
                     <div class="daemon-header">
                         <div class="daemon-info">
@@ -733,7 +690,8 @@
     </div>
     
     <footer class="footer">
-        <p>The Digiquarium &mdash; Open-source AIthropology research. <a href="https://github.com/ijneb/digiquarium">GitHub</a></p>
+        <p>The Team • <a href="../">The Digiquarium</a></p>
+        <p style="margin-top: 10px;">21 daemons. 24/7 operation. One mission.</p>
     </footer>
     
     <script>
@@ -741,6 +699,5 @@
             card.classList.toggle('expanded');
         }
     </script>
-<script>document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('nav').classList.toggle('open')});</script>
 </body>
 </html>
