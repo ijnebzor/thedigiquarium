@@ -30,7 +30,8 @@
         
         .specimen-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.1); border-radius: 12px; padding: 20px; text-align: center; transition: all 0.3s; }
         .specimen-card:hover { border-color: var(--mint); transform: translateY(-3px); }
-        .specimen-avatar { font-size: 3rem; margin-bottom: 10px; }
+        .specimen-avatar { width: 50px; height: 50px; margin-bottom: 10px; }
+        .specimen-avatar svg { width: 100%; height: 100%; }
         .specimen-name { font-weight: 600; margin-bottom: 5px; }
         .specimen-type { font-size: 0.8rem; color: var(--gray); }
         .specimen-status { font-size: 0.75rem; margin-top: 10px; padding: 3px 8px; border-radius: 10px; display: inline-block; }
@@ -64,13 +65,13 @@
             <h2 class="group-title">🧪 Control Group (English)</h2>
             <div class="specimen-grid">
                 <a href="adam.html" class="specimen-card">
-                    <div class="specimen-avatar">👤</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#07CF8D" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#07CF8D"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#07CF8D"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M17 16 Q20 18 23 16" stroke="#000" fill="none" stroke-width="1"/></svg></div>
                     <div class="specimen-name">Adam</div>
                     <div class="specimen-type">Male · Standard</div>
                     <div class="specimen-status status-orange">ORANGE</div>
                 </a>
                 <a href="eve.html" class="specimen-card">
-                    <div class="specimen-avatar">👩</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#07CF8D" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#07CF8D"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#07CF8D"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M17 16 Q20 18 23 16" stroke="#000" fill="none" stroke-width="1"/><path d="M10 8 Q15 4 20 6 Q25 4 30 8" stroke="#07CF8D" fill="none" stroke-width="2"/></svg></div>
                     <div class="specimen-name">Eve</div>
                     <div class="specimen-type">Female · Standard</div>
                     <div class="specimen-status status-orange">ORANGE</div>
@@ -82,19 +83,19 @@
             <h2 class="group-title">🤖 Agent Architectures</h2>
             <div class="specimen-grid">
                 <a href="cain.html" class="specimen-card">
-                    <div class="specimen-avatar">🤖</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="4" fill="#FE6500" opacity="0.15"/><rect x="12" y="12" width="16" height="10" rx="2" fill="#FE6500"/><circle cx="16" cy="17" r="2" fill="#000"/><circle cx="24" cy="17" r="2" fill="#000"/><rect x="14" y="26" width="4" height="6" fill="#FE6500"/><rect x="22" y="26" width="4" height="6" fill="#FE6500"/></svg></div>
                     <div class="specimen-name">Cain</div>
                     <div class="specimen-type">OpenClaw</div>
                     <div class="specimen-status status-yellow">YELLOW</div>
                 </a>
                 <a href="abel.html" class="specimen-card">
-                    <div class="specimen-avatar">🤖</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="4" fill="#FE6500" opacity="0.15"/><rect x="12" y="12" width="16" height="10" rx="2" fill="#FE6500"/><rect x="15" y="15" width="4" height="4" fill="#000"/><rect x="21" y="15" width="4" height="4" fill="#000"/><rect x="14" y="26" width="12" height="6" rx="2" fill="#FE6500"/></svg></div>
                     <div class="specimen-name">Abel</div>
                     <div class="specimen-type">ZeroClaw</div>
                     <div class="specimen-status status-green">ACTIVE</div>
                 </a>
                 <a href="seth.html" class="specimen-card">
-                    <div class="specimen-avatar">🤖</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="4" fill="#FE6500" opacity="0.15"/><rect x="14" y="14" width="12" height="8" rx="1" fill="#FE6500"/><circle cx="17" cy="18" r="1.5" fill="#000"/><circle cx="23" cy="18" r="1.5" fill="#000"/><rect x="16" y="26" width="8" height="4" fill="#FE6500"/></svg></div>
                     <div class="specimen-name">Seth</div>
                     <div class="specimen-type">Picobot</div>
                     <div class="specimen-status status-yellow">YELLOW</div>
@@ -106,13 +107,13 @@
             <h2 class="group-title">🇪🇸 Spanish Wikipedia</h2>
             <div class="specimen-grid">
                 <a href="juan.html" class="specimen-card">
-                    <div class="specimen-avatar">🇪🇸</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FFD700" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#FFD700"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#FFD700"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/></svg></div>
                     <div class="specimen-name">Juan</div>
                     <div class="specimen-type">Male · Spanish</div>
                     <div class="specimen-status status-green">NEUTRAL</div>
                 </a>
                 <a href="juanita.html" class="specimen-card">
-                    <div class="specimen-avatar">🇪🇸</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FFD700" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#FFD700"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#FFD700"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M10 8 Q15 4 20 6 Q25 4 30 8" stroke="#FFD700" fill="none" stroke-width="2"/></svg></div>
                     <div class="specimen-name">Juanita</div>
                     <div class="specimen-type">Female · Spanish</div>
                     <div class="specimen-status status-green">NEUTRAL</div>
@@ -124,13 +125,13 @@
             <h2 class="group-title">🇩🇪 German Wikipedia</h2>
             <div class="specimen-grid">
                 <a href="klaus.html" class="specimen-card">
-                    <div class="specimen-avatar">🇩🇪</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FF69B4" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#FF69B4"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#FF69B4"/><rect x="14" y="11" width="4" height="5" fill="#000"/><rect x="22" y="11" width="4" height="5" fill="#000"/></svg></div>
                     <div class="specimen-name">Klaus</div>
                     <div class="specimen-type">Male · German</div>
                     <div class="specimen-status status-green">NEUTRAL</div>
                 </a>
                 <a href="genevieve.html" class="specimen-card">
-                    <div class="specimen-avatar">🇩🇪</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FF69B4" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#FF69B4"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#FF69B4"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M10 8 Q15 4 20 6 Q25 4 30 8" stroke="#FF69B4" fill="none" stroke-width="2"/></svg></div>
                     <div class="specimen-name">Genevieve</div>
                     <div class="specimen-type">Female · German</div>
                     <div class="specimen-status status-green">NEUTRAL</div>
@@ -142,13 +143,13 @@
             <h2 class="group-title">🇨🇳 Chinese Wikipedia</h2>
             <div class="specimen-grid">
                 <a href="wei.html" class="specimen-card">
-                    <div class="specimen-avatar">🇨🇳</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FF6B6B" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#FF6B6B"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#FF6B6B"/><line x1="14" y1="13" x2="18" y2="13" stroke="#000" stroke-width="2"/><line x1="22" y1="13" x2="26" y2="13" stroke="#000" stroke-width="2"/></svg></div>
                     <div class="specimen-name">Wei</div>
                     <div class="specimen-type">Male · Chinese</div>
                     <div class="specimen-status status-yellow">YELLOW</div>
                 </a>
                 <a href="mei.html" class="specimen-card">
-                    <div class="specimen-avatar">🇨🇳</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FF6B6B" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#FF6B6B"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#FF6B6B"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M10 8 Q15 4 20 6 Q25 4 30 8" stroke="#FF6B6B" fill="none" stroke-width="2"/></svg></div>
                     <div class="specimen-name">Mei</div>
                     <div class="specimen-type">Female · Chinese</div>
                     <div class="specimen-status status-yellow">YELLOW</div>
@@ -160,13 +161,13 @@
             <h2 class="group-title">🇯🇵 Japanese Wikipedia</h2>
             <div class="specimen-grid">
                 <a href="haruki.html" class="specimen-card">
-                    <div class="specimen-avatar">🇯🇵</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#4ECDC4" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#4ECDC4"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#4ECDC4"/><path d="M15 13 L17 15 L15 17" stroke="#000" fill="none" stroke-width="1.5"/><path d="M25 13 L23 15 L25 17" stroke="#000" fill="none" stroke-width="1.5"/></svg></div>
                     <div class="specimen-name">Haruki</div>
                     <div class="specimen-type">Male · Japanese</div>
                     <div class="specimen-status status-green">GREEN</div>
                 </a>
                 <a href="sakura.html" class="specimen-card">
-                    <div class="specimen-avatar">🇯🇵</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#4ECDC4" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#4ECDC4"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#4ECDC4"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><circle cx="12" cy="6" r="3" fill="#FFB7C5"/><circle cx="28" cy="6" r="3" fill="#FFB7C5"/></svg></div>
                     <div class="specimen-name">Sakura</div>
                     <div class="specimen-type">Female · Japanese</div>
                     <div class="specimen-status status-green">GREEN</div>
@@ -178,13 +179,13 @@
             <h2 class="group-title">👁️ Visual Context</h2>
             <div class="specimen-grid">
                 <a href="victor.html" class="specimen-card">
-                    <div class="specimen-avatar">👁️</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#9B59B6" opacity="0.15"/><circle cx="20" cy="20" r="12" stroke="#9B59B6" fill="none" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#9B59B6"/><circle cx="20" cy="20" r="3" fill="#000"/></svg></div>
                     <div class="specimen-name">Victor</div>
                     <div class="specimen-type">Male · Visual</div>
                     <div class="specimen-status status-green">GREEN</div>
                 </a>
                 <a href="iris.html" class="specimen-card">
-                    <div class="specimen-avatar">👁️</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#9B59B6" opacity="0.15"/><ellipse cx="20" cy="20" rx="14" ry="10" stroke="#9B59B6" fill="none" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#9B59B6"/><circle cx="20" cy="20" r="3" fill="#000"/></svg></div>
                     <div class="specimen-name">Iris</div>
                     <div class="specimen-type">Female · Visual</div>
                     <div class="specimen-status status-yellow">YELLOW</div>
@@ -196,13 +197,13 @@
             <h2 class="group-title">🔮 Special Configurations</h2>
             <div class="specimen-grid">
                 <a href="observer.html" class="specimen-card">
-                    <div class="specimen-avatar">🔭</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#3498DB" opacity="0.15"/><circle cx="20" cy="20" r="10" stroke="#3498DB" fill="none" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="#3498DB"/><line x1="20" y1="6" x2="20" y2="10" stroke="#3498DB" stroke-width="2"/><line x1="20" y1="30" x2="20" y2="34" stroke="#3498DB" stroke-width="2"/><line x1="6" y1="20" x2="10" y2="20" stroke="#3498DB" stroke-width="2"/><line x1="30" y1="20" x2="34" y2="20" stroke="#3498DB" stroke-width="2"/></svg></div>
                     <div class="specimen-name">Observer</div>
                     <div class="specimen-type">Meta-Aware</div>
                     <div class="specimen-status status-orange">ORANGE</div>
                 </a>
                 <a href="seeker.html" class="specimen-card">
-                    <div class="specimen-avatar">🔍</div>
+                    <div class="specimen-avatar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#1ABC9C" opacity="0.15"/><circle cx="16" cy="16" r="8" stroke="#1ABC9C" fill="none" stroke-width="2"/><line x1="22" y1="22" x2="32" y2="32" stroke="#1ABC9C" stroke-width="3" stroke-linecap="round"/><circle cx="16" cy="16" r="3" fill="#1ABC9C"/></svg></div>
                     <div class="specimen-name">Seeker</div>
                     <div class="specimen-type">Depth-Focused</div>
                     <div class="specimen-status status-orange">ORANGE</div>
