@@ -270,9 +270,9 @@ class Broadcaster:
                 'time': entry_time.strftime('%H:%M'),
                 'date': entry_time.strftime('%Y-%m-%d'),
                 'article': trace['article'],
-                'thought': trace['thought'][:200] if trace['thought'] else f"Exploring {trace['article']}...",
+                'thought': trace['thought'] if trace['thought'] else f"Exploring {trace['article']}...",
                 'next': trace['next'],
-                'thought_en': thought_en[:200] if thought_en else None,
+                'thought_en': thought_en if thought_en else None,
                 'language': lang,
             })
         

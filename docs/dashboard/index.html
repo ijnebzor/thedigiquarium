@@ -174,7 +174,7 @@
             z-index: 1000;
             padding: 20px;
         }
-        .fullscreen-overlay.active { display: flex; flex-direction: column; }
+        .fullscreen-overlay.active { display: flex; flex-direction: column; overflow-y: auto; -webkit-overflow-scrolling: touch; }
         
         .fullscreen-header {
             display: flex;
@@ -184,7 +184,7 @@
             border-bottom: 1px solid rgba(7, 207, 141, 0.2);
         }
         .fullscreen-title { font-size: 2rem; font-weight: 600; }
-        .fullscreen-close {
+        .fullscreen-close { position: fixed; top: 15px; right: 15px; z-index: 10001;
             background: var(--orange);
             border: none;
             color: var(--white);
@@ -316,7 +316,7 @@
     </div>
     
     <!-- Fullscreen Overlay -->
-    <div class="fullscreen-overlay" id="fullscreen">
+    <div class="fullscreen-overlay" id="fullscreen" onclick="if(event.target===this)closeFullscreen()">
         <div class="fullscreen-header">
             <div>
                 <span class="fullscreen-title" id="fs-name">Adam</span>
