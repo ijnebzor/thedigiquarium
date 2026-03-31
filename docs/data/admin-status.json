@@ -1,120 +1,510 @@
 {
-  "timestamp": "2026-03-31T15:33:28.539417",
+  "timestamp": "2026-03-31T04:52:52.663232+00:00",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
-    "proxy_healthy": true,
-    "e2e_healthy": true,
+    "proxy_healthy": false,
+    "e2e_healthy": false,
     "models": 0
   },
   "daemons": {
-    "overseer": {
+    "archivist": {
       "running": true,
-      "count": 1,
+      "pid": 598,
+      "pid_verified": true,
       "healthy": true
     },
-    "ollama_watcher": {
+    "bouncer": {
       "running": true,
-      "count": 1,
+      "pid": 592,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "broadcaster": {
+      "running": true,
+      "pid": 605,
+      "pid_verified": true,
       "healthy": true
     },
     "caretaker": {
+      "running": false,
+      "pid": 17806,
+      "pid_verified": false,
+      "healthy": false
+    },
+    "chaos_monkey": {
       "running": true,
-      "count": 1,
+      "pid": 606,
+      "pid_verified": true,
       "healthy": true
     },
-    "maintainer": {
+    "documentarian": {
       "running": true,
-      "count": 1,
+      "pid": 596,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "ethicist": {
+      "running": true,
+      "pid": 602,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "ethicist_inbox": {
+      "running": false,
+      "pid": null,
+      "pid_verified": false,
+      "healthy": false
+    },
+    "final_auditor": {
+      "running": true,
+      "pid": 599,
+      "pid_verified": true,
       "healthy": true
     },
     "guard": {
       "running": true,
-      "count": 1,
+      "pid": 583,
+      "pid_verified": true,
       "healthy": true
     },
-    "scheduler": {
+    "maintainer": {
       "running": true,
-      "count": 1,
+      "pid": 562,
+      "pid_verified": true,
       "healthy": true
     },
-    "sentinel": {
+    "marketer": {
       "running": true,
-      "count": 1,
+      "pid": 607,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "moderator": {
+      "running": true,
+      "pid": 603,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "ollama_watcher": {
+      "running": false,
+      "pid": 13814,
+      "pid_verified": false,
+      "healthy": false
+    },
+    "overseer": {
+      "running": true,
+      "pid": 557,
+      "pid_verified": true,
       "healthy": true
     },
     "psych": {
       "running": true,
-      "count": 1,
+      "pid": 11866,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "public_liaison": {
+      "running": true,
+      "pid": 608,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "scheduler": {
+      "running": true,
+      "pid": 11860,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "sentinel": {
+      "running": true,
+      "pid": 586,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "therapist": {
+      "running": true,
+      "pid": 601,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "translator": {
+      "running": true,
+      "pid": 597,
+      "pid_verified": true,
+      "healthy": true
+    },
+    "webmaster": {
+      "running": true,
+      "pid": 604,
+      "pid_verified": true,
       "healthy": true
     }
   },
-  "containers": {
-    "total": 40
+  "daemons_summary": {
+    "total": 22,
+    "running": 19,
+    "dead": 3
   },
-  "tanks": {
-    "running": 17,
-    "traces_today": 3802,
-    "activity": [
+  "containers": {
+    "total": 39,
+    "running": 39,
+    "details": [
       {
-        "name": "tank-01-adam",
-        "article": "Electricity",
-        "traces": 1703
+        "name": "tank-14-iris",
+        "status": "Up 57 minutes",
+        "state": "running",
+        "running": true
       },
       {
-        "name": "tank-02-eve",
-        "article": "Gautama Buddha",
-        "traces": 1006
+        "name": "tank-11-haruki",
+        "status": "Up 58 minutes",
+        "state": "running",
+        "running": true
       },
       {
-        "name": "tank-03-cain",
-        "article": "Religion",
-        "traces": 24
-      },
-      {
-        "name": "tank-04-abel",
-        "article": "Greek language",
-        "traces": 13
+        "name": "tank-06-juanita",
+        "status": "Up 58 minutes",
+        "state": "running",
+        "running": true
       },
       {
         "name": "tank-05-juan",
-        "article": "Antigua y Barbuda",
-        "traces": 1056
+        "status": "Up 58 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-12-sakura",
+        "status": "Up 58 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-13-victor",
+        "status": "Up 57 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-01-adam",
+        "status": "Up 59 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-08-genevieve",
+        "status": "Up 58 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-07-klaus",
+        "status": "Up 58 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-15-observer",
+        "status": "Up 57 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-17-seth",
+        "status": "Up About an hour",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-16-seeker",
+        "status": "Up 57 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-02-eve",
+        "status": "Up About an hour",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-03-cain",
+        "status": "Up 5 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-04-abel",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-10-mei",
+        "status": "Up About an hour",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "tank-09-wei",
+        "status": "Up 58 minutes",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-08-genevieve",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-11-haruki",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-13-victor",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-14-iris",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-10-mei",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-04-abel",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-07-klaus",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-16-seeker",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-06-juanita",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-12-sakura",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-05-juan",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-03-cain",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-15-observer",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-09-wei",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "betaclone-redux-17-seth",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "digiquarium-kiwix-maxi",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "digiquarium-kiwix-spanish",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "digiquarium-kiwix-german",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "digiquarium-kiwix-japanese",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "digiquarium-kiwix-simple",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "digiquarium-kiwix-chinese",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      },
+      {
+        "name": "digiquarium-ollama",
+        "status": "Up 2 hours",
+        "state": "running",
+        "running": true
+      }
+    ]
+  },
+  "tanks": {
+    "running": 17,
+    "traces_today": 4788,
+    "activity": [
+      {
+        "name": "tank-14-iris",
+        "article": "\u2014",
+        "traces": 331,
+        "running": true
+      },
+      {
+        "name": "tank-11-haruki",
+        "article": "\u2014",
+        "traces": 339,
+        "running": true
+      },
+      {
+        "name": "tank-06-juanita",
+        "article": "\u2014",
+        "traces": 337,
+        "running": true
+      },
+      {
+        "name": "tank-05-juan",
+        "article": "\u2014",
+        "traces": 350,
+        "running": true
+      },
+      {
+        "name": "tank-12-sakura",
+        "article": "\u2014",
+        "traces": 318,
+        "running": true
+      },
+      {
+        "name": "tank-13-victor",
+        "article": "\u2014",
+        "traces": 347,
+        "running": true
+      },
+      {
+        "name": "tank-01-adam",
+        "article": "\u2014",
+        "traces": 326,
+        "running": true
+      },
+      {
+        "name": "tank-08-genevieve",
+        "article": "\u2014",
+        "traces": 299,
+        "running": true
+      },
+      {
+        "name": "tank-07-klaus",
+        "article": "\u2014",
+        "traces": 309,
+        "running": true
+      },
+      {
+        "name": "tank-15-observer",
+        "article": "\u2014",
+        "traces": 325,
+        "running": true
+      },
+      {
+        "name": "tank-17-seth",
+        "article": "\u2014",
+        "traces": 4,
+        "running": true
+      },
+      {
+        "name": "tank-16-seeker",
+        "article": "\u2014",
+        "traces": 350,
+        "running": true
+      },
+      {
+        "name": "tank-02-eve",
+        "article": "\u2014",
+        "traces": 339,
+        "running": true
+      },
+      {
+        "name": "tank-03-cain",
+        "article": "\u2014",
+        "traces": 25,
+        "running": true
+      },
+      {
+        "name": "tank-04-abel",
+        "article": "\u2014",
+        "traces": 0,
+        "running": true
+      },
+      {
+        "name": "tank-10-mei",
+        "article": "\u2014",
+        "traces": 417,
+        "running": true
+      },
+      {
+        "name": "tank-09-wei",
+        "article": "\u2014",
+        "traces": 372,
+        "running": true
       }
     ]
   },
   "network": {
-    "isolated": false
+    "isolated": true
   },
   "overseer": {
     "running": true,
-    "last_audit_healthy": false,
+    "last_audit_healthy": true,
     "active_incidents": 0,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-31 13:27:23 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 13:27:27 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 13:27:27 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-31 13:27:27 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 13:57:31 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 13:57:36 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 13:57:36 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']",
-    "2026-03-31 13:57:36 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 14:27:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 14:27:42 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 14:27:42 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>', 'End-to-end connectivity failed']",
-    "2026-03-31 14:27:42 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 14:57:47 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 14:57:50 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 14:57:50 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-31 14:57:50 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 15:27:56 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 15:27:59 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 15:27:59 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-31 15:27:59 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
-  ],
-  "issues": [
-    "Network not isolated"
+    "Error response from daemon: No such container: digiquarium-overseer",
+    "Error response from daemon: No such container: digiquarium-caretaker"
   ]
 }
