@@ -184,26 +184,31 @@ class OllamaWatcher:
         self.watchdog_thread = None
 
     def acquire_lock(self) -> bool:
-        """Ensure only one instance runs."""
-        self.lock_file.parent.mkdir(parents=True, exist_ok=True)
-        self.lock_fd = open(self.lock_file, 'w')
-        try:
-            fcntl.flock(self.lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            self.pid_file.write_text(str(os.getpid()))
-            return True
+        """Check if another instance is running via PID file."""
+        pid_file = DAEMONS_DIR / 'ollama_watcher' / 'ollama_watcher.pid'
+        pid_file.parent.mkdir(parents=True, exist_ok=True)
+        if pid_file.exists():
+            try:
+                old_pid = int(pid_file.read_text().strip())
+                os.kill(old_pid, 0)
+                self.log.error('Another ollama_watcher is already running')
+                return False
+            except (ProcessLookupError, ValueError, PermissionError):
+                pass
+        pid_file.write_text(str(os.getpid()))
+        return True
         except IOError:
             self.log('ERROR', 'Another instance is already running')
             return False
 
     def release_lock(self):
-        """Release lock on shutdown."""
+        """Clean up PID file."""
+        pid_file = DAEMONS_DIR / 'ollama_watcher' / 'ollama_watcher.pid'
         try:
-            fcntl.flock(self.lock_fd, fcntl.LOCK_UN)
-            self.lock_fd.close()
-            self.pid_file.unlink(missing_ok=True)
-            self.lock_file.unlink(missing_ok=True)
+            pid_file.unlink(missing_ok=True)
         except:
             pass
+
 
     def log(self, level: str, message: str):
         """Log a message with timestamp and level."""

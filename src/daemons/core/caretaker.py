@@ -420,25 +420,30 @@ LOCK_FILE = DIGIQUARIUM_DIR / 'caretaker' / 'caretaker.lock'
 PID_FILE = DIGIQUARIUM_DIR / 'caretaker' / 'caretaker.pid'
 
 def acquire_lock():
-    """Ensure only one caretaker runs"""
-    LOCK_FILE.parent.mkdir(parents=True, exist_ok=True)
-    global lock_fd
-    lock_fd = open(LOCK_FILE, 'w')
-    try:
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        PID_FILE.write_text(str(os.getpid()))
-        return True
-    except IOError:
-        print("ERROR: Another caretaker instance is already running")
-        return False
+    """Check if another instance is running via PID file (no file locks)."""
+    pid_file = DIGIQUARIUM_DIR / 'daemons' / 'caretaker' / 'caretaker.pid'
+    pid_file.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Check if existing PID is alive
+    if pid_file.exists():
+        try:
+            old_pid = int(pid_file.read_text().strip())
+            os.kill(old_pid, 0)  # Check if alive
+            print('ERROR: Another caretaker instance is already running')
+            return False
+        except (ProcessLookupError, ValueError, PermissionError):
+            pass  # Old process is dead, we can take over
+    
+    # Write our PID
+    pid_file.write_text(str(os.getpid()))
+    return True
+
 
 def release_lock():
-    """Release lock on shutdown"""
+    """Clean up PID file on shutdown."""
+    pid_file = DIGIQUARIUM_DIR / 'daemons' / 'caretaker' / 'caretaker.pid'
     try:
-        fcntl.flock(lock_fd, fcntl.LOCK_UN)
-        lock_fd.close()
-        PID_FILE.unlink(missing_ok=True)
-        LOCK_FILE.unlink(missing_ok=True)
+        pid_file.unlink(missing_ok=True)
     except:
         pass
 
