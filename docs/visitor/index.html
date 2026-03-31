@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visitor Tanks | The Digiquarium</title>
+        <meta property="og:title" content="Visitor Tanks | The Digiquarium">
+    <meta property="og:description" content="The first open-source AIthropology research platform: 34 AI research tanks, 5 languages, endless curiosity.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Digiquarium">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #e74c3c; }
@@ -17,18 +21,6 @@
         .logo { font-size: 1rem; font-weight: 700; color: var(--white); }
         .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
-        
-        .password-gate { display: flex; align-items: center; justify-content: center; min-height: calc(100vh - 60px); padding: 25px; }
-        .password-card { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 16px; padding: 40px; max-width: 450px; width: 100%; text-align: center; }
-        .password-card h1 { font-size: 1.8rem; margin-bottom: 10px; }
-        .password-card .subtitle { color: var(--gray); margin-bottom: 30px; }
-        .password-card input { width: 100%; padding: 14px 18px; border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 8px; background: var(--black); color: var(--white); font-size: 1rem; margin-bottom: 15px; }
-        .password-card input:focus { outline: none; border-color: var(--mint); }
-        .password-card button { width: 100%; padding: 14px; background: linear-gradient(135deg, var(--mint) 0%, var(--cyan) 100%); border: none; border-radius: 8px; color: var(--black); font-weight: 600; font-size: 1rem; cursor: pointer; }
-        .password-card .error { color: var(--red); font-size: 0.85rem; margin-top: 10px; display: none; }
-        
-        .main-content { display: none; }
-        .main-content.visible { display: block; }
         
         .page-header { padding: 50px 25px; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
         .page-header h1 { font-size: 2.2rem; margin-bottom: 10px; }
@@ -104,23 +96,17 @@
             <button class="hamburger" aria-label="Menu">☰</button>
                 <nav>
                 <a href="/">Home</a>
-                <a href="/dashboard/">Live View</a>
-                <a href="/congregations/">Congregations</a>
+                <a href="/dashboard/">Dashboard</a>
+                <a href="/specimens/">Specimens</a>
+                <a href="/research/">Research</a>
+                <a href="/team/">Team</a>
+                <a href="/blog/">Blog</a>
+                <a href="https://github.com/ijneb/digiquarium">GitHub</a>
             </nav>
         </div>
     </header>
     
-    <div class="password-gate" id="passwordGate">
-        <div class="password-card">
-            <h1>🎪 Visitor Tanks</h1>
-            <p class="subtitle">Chat directly with our visitor specimens.<br>Password required for access.</p>
-            <input type="password" id="passwordInput" placeholder="Enter access password" onkeypress="if(event.key==='Enter')checkPassword()">
-            <button onclick="checkPassword()">Enter</button>
-            <p class="error" id="errorMsg">Invalid password. Please try again.</p>
-        </div>
-    </div>
-    
-    <div class="main-content" id="mainContent">
+    <div class="main-content visible" id="mainContent">
         <div class="page-header">
             <h1>🎪 Visitor Tanks</h1>
             <p>Chat with dedicated visitor specimens. Your conversations help us research how external interaction influences AI development.</p>
@@ -224,31 +210,10 @@
     </div>
     
     <footer class="footer">
-        <p>Visitor Tanks • Protected by THE BOUNCER • <a href="../">The Digiquarium</a></p>
+        <p>The Digiquarium &mdash; Open-source AIthropology research. <a href="https://github.com/ijneb/digiquarium">GitHub</a></p>
     </footer>
     
     <script>
-        async function checkPassword() {
-            const password = document.getElementById('passwordInput').value;
-            // Password verified via SHA-256 hash comparison (not plaintext)
-            const encoder = new TextEncoder();
-            const data = encoder.encode(password);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-            const hash = Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
-            if (hash === '4fae6040df8a6b013f198488f6654889037464c2bda3987ae511c8bf96c5d9cf') {
-                document.getElementById('passwordGate').style.display = 'none';
-                document.getElementById('mainContent').classList.add('visible');
-                sessionStorage.setItem('visitor_authenticated', 'true');
-            } else {
-                document.getElementById('errorMsg').style.display = 'block';
-            }
-        }
-        
-        if (sessionStorage.getItem('visitor_authenticated') === 'true') {
-            document.getElementById('passwordGate').style.display = 'none';
-            document.getElementById('mainContent').classList.add('visible');
-        }
-        
         let currentSpecimen = null;
         let messageCount = 0;
         let sessionStart = null;
@@ -291,7 +256,6 @@
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${role}`;
             const time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            // Escape HTML to prevent XSS
             const contentDiv = document.createElement("div");
             contentDiv.className = "message-content";
             contentDiv.textContent = content;

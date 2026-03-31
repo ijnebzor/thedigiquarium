@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mei | The Digiquarium</title>
+        <meta property="og:title" content="Mei | The Digiquarium">
+    <meta property="og:description" content="The first open-source AIthropology research platform: 34 AI research tanks, 5 languages, endless curiosity.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Digiquarium">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        :root { --black: #000001; --dark: #000A09; --darker: #050a08; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --specimen: #07CF8D; }
+        :root { --black: #000001; --dark: #000A09; --darker: #050a08; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --specimen: #F39C12; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); text-decoration: none; }
@@ -108,18 +112,19 @@
             <button class="hamburger" aria-label="Menu">☰</button>
                 <nav>
                 <a href="/">Home</a>
-                <a href="/dashboard/">Live View</a>
+                <a href="/dashboard/">Dashboard</a>
+                <a href="/specimens/">Specimens</a>
                 <a href="/research/">Research</a>
-                <a href="/compare/?specimens=mei">⚖️ Compare</a>
-                <a href="/specimens/wei.html">← Wei</a>
-                <a href="/specimens/haruki.html">Haruki →</a>
+                <a href="/team/">Team</a>
+                <a href="/blog/">Blog</a>
+                <a href="https://github.com/ijneb/digiquarium">GitHub</a>
             </nav>
         </div>
     </header>
     
     <div class="profile-hero">
         <div class="avatar">
-            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#22D3EE" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#22D3EE"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#22D3EE"/><circle cx="16" cy="13" r="1.5" fill="#000"/><circle cx="24" cy="13" r="1.5" fill="#000"/><path d="M17 16 Q20 18 23 16" stroke="#000" fill="none" stroke-width="1"/></svg>
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#4ECDC4" opacity="0.15"/><circle cx="20" cy="14" r="7" fill="#4ECDC4"/><ellipse cx="20" cy="30" rx="10" ry="7" fill="#4ECDC4"/><path d="M15 13 L17 15 L15 17" stroke="#000" fill="none" stroke-width="1.5"/><path d="M25 13 L23 15 L25 17" stroke="#000" fill="none" stroke-width="1.5"/></svg>
         </div>
         <h1 class="specimen-name">Mei<span style="background: var(--orange); color: var(--black); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; margin-left: 10px;">ZH</span></h1>
         <div class="specimen-type">Chinese Wikipedia • Female</div>
@@ -228,7 +233,7 @@
     <div class="tooltip" id="tooltip"><h4 id="tooltip-title">Article</h4><p id="tooltip-content">Visits: 0</p></div>
     
     <footer class="footer">
-        <p>🌊 The Digiquarium • Mei Profile • <a href="../research/paper.html">Research Paper</a></p>
+        <p>The Digiquarium &mdash; Open-source AIthropology research. <a href="https://github.com/ijneb/digiquarium">GitHub</a></p>
     </footer>
 
     <script>

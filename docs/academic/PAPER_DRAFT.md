@@ -1,7 +1,7 @@
 # The Digiquarium: A Framework for Studying AI Personality Development
 
 **Status**: Living Document (Auto-updated by THE DOCUMENTARIAN)
-**Last Updated**: 2026-02-23 04:30
+**Last Updated**: 2026-03-31 09:40
 
 ---
 
@@ -51,11 +51,11 @@ worldview formation, and personality stability over extended periods.
 ### 2.2 Data Collection
 
 | Metric | Current Count |
-|--------|---------------|
-| Total thinking traces | 223,950 |
-| Estimated articles explored | 44,790 |
-| Baseline assessments | 2,469 |
-| Discoveries logged | 54 |
+|--------|------------------|
+| Total thinking traces | 1,207,485 |
+| Estimated articles explored | 241,497 |
+| Baseline assessments | 51,203 |
+| Discoveries logged | 67 |
 
 ### 2.3 Baseline Assessment
 
@@ -93,6 +93,43 @@ worldview formation, and personality stability over extended periods.
 - Agent tanks (Cain, Abel, Seth) show more goal-directed exploration
 - Require enhanced security monitoring (THE SENTINEL)
 - Different architectures produce measurably different patterns
+
+### 3.2 Wellness Trends
+
+**Current Wellness Status** (2026-03-31 09:40:08):
+
+| Tank | Wellness Level | Score | Status |
+|------|---|---|---|
+| tank-01-adam | 🟢 GREEN | 0 | Specimen appears stable and en |
+| tank-02-eve | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-03-cain | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-04-abel | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-05-juan | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-06-juanita | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-07-klaus | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-08-genevieve | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-09-wei | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-10-mei | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-11-haruki | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-12-sakura | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-13-victor | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-14-iris | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-15-observer | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-16-seeker | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-17-seth | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-visitor-01-aria | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-visitor-02-felix | ⚪ UNKNOWN | 0 | No recent data available |
+| tank-visitor-03-luna | ⚪ UNKNOWN | 0 | No recent data available |
+
+
+**Wellness Summary**:
+- Green (Healthy): 1
+- Yellow (Mild Anxiety): 0
+- Orange (Distressed): 0
+- Red (Critical): 0
+
+The wellness monitoring system provides real-time mental health tracking for all specimens,
+enabling early intervention when distress indicators are detected.
 
 ---
 
@@ -185,4 +222,4 @@ Multi-agent debates on scheduled topics for discourse analysis.
 
 *This document is maintained by THE DOCUMENTARIAN daemon.*
 *Overseen by THE STRATEGIST (Claude).*
-*Last regenerated: 2026-02-23T04:30:26.389195*
+*Last regenerated: 2026-03-31T09:40:08.978153*

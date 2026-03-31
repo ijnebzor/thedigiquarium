@@ -1,24 +1,24 @@
 {
-  "timestamp": "2026-02-23T04:30:25.982916",
+  "timestamp": "2026-03-31T14:55:56.106234",
   "tanks": {
     "tank-12-sakura": {
-      "thinking_traces": 3692,
-      "baselines": 203,
+      "thinking_traces": 46290,
+      "baselines": 4251,
       "discoveries": 3
     },
     "tank-11-haruki": {
-      "thinking_traces": 3659,
-      "baselines": 204,
+      "thinking_traces": 46202,
+      "baselines": 4255,
       "discoveries": 3
     },
     "tank-07-klaus": {
-      "thinking_traces": 13588,
-      "baselines": 196,
+      "thinking_traces": 67694,
+      "baselines": 4250,
       "discoveries": 3
     },
     "tank-01-adam": {
-      "thinking_traces": 17428,
-      "baselines": 211,
+      "thinking_traces": 74065,
+      "baselines": 4290,
       "discoveries": 5
     },
     "tank-visitor-03-luna": {
@@ -32,18 +32,18 @@
       "discoveries": 0
     },
     "tank-02-eve": {
-      "thinking_traces": 15220,
-      "baselines": 211,
+      "thinking_traces": 72532,
+      "baselines": 4289,
       "discoveries": 4
     },
     "tank-03-cain": {
-      "thinking_traces": 18250,
+      "thinking_traces": 121037,
       "baselines": 2,
-      "discoveries": 3
+      "discoveries": 8
     },
     "tank-10-mei": {
-      "thinking_traces": 3659,
-      "baselines": 204,
+      "thinking_traces": 46056,
+      "baselines": 4256,
       "discoveries": 3
     },
     "tank-visitor-01-aria": {
@@ -52,61 +52,61 @@
       "discoveries": 0
     },
     "tank-06-juanita": {
-      "thinking_traces": 7618,
-      "baselines": 201,
+      "thinking_traces": 60901,
+      "baselines": 4263,
       "discoveries": 3
     },
     "tank-14-iris": {
-      "thinking_traces": 14853,
-      "baselines": 203,
+      "thinking_traces": 74052,
+      "baselines": 4269,
       "discoveries": 3
     },
     "tank-04-abel": {
-      "thinking_traces": 28167,
+      "thinking_traces": 150099,
       "baselines": 3,
-      "discoveries": 3
+      "discoveries": 8
     },
     "tank-08-genevieve": {
-      "thinking_traces": 13512,
-      "baselines": 198,
+      "thinking_traces": 67830,
+      "baselines": 4247,
       "discoveries": 3
     },
     "tank-15-observer": {
-      "thinking_traces": 19618,
-      "baselines": 7,
+      "thinking_traces": 45445,
+      "baselines": 9,
       "discoveries": 3
     },
     "tank-17-seth": {
-      "thinking_traces": 18830,
+      "thinking_traces": 46973,
       "baselines": 2,
-      "discoveries": 3
+      "discoveries": 8
     },
     "tank-13-victor": {
-      "thinking_traces": 14866,
-      "baselines": 204,
+      "thinking_traces": 73780,
+      "baselines": 4275,
       "discoveries": 3
     },
     "tank-05-juan": {
-      "thinking_traces": 7680,
-      "baselines": 208,
+      "thinking_traces": 60846,
+      "baselines": 4270,
       "discoveries": 3
     },
     "tank-16-seeker": {
-      "thinking_traces": 19679,
-      "baselines": 7,
+      "thinking_traces": 119898,
+      "baselines": 11,
       "discoveries": 3
     },
     "tank-09-wei": {
-      "thinking_traces": 3631,
-      "baselines": 205,
+      "thinking_traces": 45887,
+      "baselines": 4261,
       "discoveries": 3
     }
   },
   "totals": {
-    "total_articles": 44790,
-    "total_thinking_traces": 223950,
-    "total_baselines": 2469,
-    "total_discoveries": 54
+    "total_articles": 243917,
+    "total_thinking_traces": 1219587,
+    "total_baselines": 51203,
+    "total_discoveries": 69
   },
   "by_language": {},
   "by_type": {}

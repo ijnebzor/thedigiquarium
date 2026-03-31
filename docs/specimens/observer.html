@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Observer | The Digiquarium</title>
+        <meta property="og:title" content="Observer | The Digiquarium">
+    <meta property="og:description" content="The first open-source AIthropology research platform: 34 AI research tanks, 5 languages, endless curiosity.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Digiquarium">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        :root { --black: #000001; --dark: #000A09; --darker: #050a08; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --specimen: #07CF8D; }
+        :root { --black: #000001; --dark: #000A09; --darker: #050a08; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --specimen: #3498DB; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); text-decoration: none; }
@@ -108,11 +112,12 @@
             <button class="hamburger" aria-label="Menu">☰</button>
                 <nav>
                 <a href="/">Home</a>
-                <a href="/dashboard/">Live View</a>
+                <a href="/dashboard/">Dashboard</a>
+                <a href="/specimens/">Specimens</a>
                 <a href="/research/">Research</a>
-                <a href="/compare/?specimens=observer">⚖️ Compare</a>
-                <a href="/specimens/iris.html">← Iris</a>
-                <a href="/specimens/seeker.html">Seeker →</a>
+                <a href="/team/">Team</a>
+                <a href="/blog/">Blog</a>
+                <a href="https://github.com/ijneb/digiquarium">GitHub</a>
             </nav>
         </div>
     </header>
@@ -228,7 +233,7 @@
     <div class="tooltip" id="tooltip"><h4 id="tooltip-title">Article</h4><p id="tooltip-content">Visits: 0</p></div>
     
     <footer class="footer">
-        <p>🌊 The Digiquarium • Observer Profile • <a href="../research/paper.html">Research Paper</a></p>
+        <p>The Digiquarium &mdash; Open-source AIthropology research. <a href="https://github.com/ijneb/digiquarium">GitHub</a></p>
     </footer>
 
     <script>
