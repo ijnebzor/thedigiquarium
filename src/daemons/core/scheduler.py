@@ -383,7 +383,7 @@ Rest."""
 
     def _verify_baseline(self, container):
         """Verify baseline JSON has 12+ substantial responses (>10 chars each)."""
-        ok, stdout, _ = self._docker_exec(container, "cat /logs/baseline.json", timeout=30)
+        ok, stdout, _ = self._docker_exec(container, "cat /logs/baseline_latest.json", timeout=30)
         if not ok or not stdout.strip():
             return False, "Could not read baseline.json"
 

@@ -233,7 +233,7 @@ class Broadcaster:
                 'delay_hours': 12,
                 'entry_count': len(tank_clean),
                 'pruned_count': tank_pruned,
-                'entries': tank_clean[-50:],  # Last 50 entries per tank
+                'entries': tank_clean,  # Full entries per tank (no truncation)
             }
             feed_file.write_text(json.dumps(feed_data, indent=2, default=str, ensure_ascii=False), encoding='utf-8')
 
@@ -243,7 +243,7 @@ class Broadcaster:
             feed_stats['feeds_written'].append(feed_file.name)
 
             # Add to combined feed (latest 5 per tank)
-            all_recent.extend(tank_clean[-5:])
+            all_recent.extend(tank_clean)
 
         # Write combined "latest" feed
         all_recent.sort(key=lambda x: x.get('timestamp', x.get('time', '')), reverse=True)
@@ -252,7 +252,7 @@ class Broadcaster:
             'generated_at': datetime.now().isoformat(),
             'delay_hours': 12,
             'tanks_included': feed_stats['tanks_processed'],
-            'entries': all_recent[:100],  # Top 100 most recent across all tanks
+            'entries': all_recent,  # All recent entries across all tanks (no truncation)
         }
         latest_feed.write_text(json.dumps(latest_data, indent=2, default=str, ensure_ascii=False), encoding='utf-8')
 
