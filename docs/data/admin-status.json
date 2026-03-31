@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-31T15:17:03.511216",
+  "timestamp": "2026-03-31T15:33:28.539417",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,17 +54,17 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 3588,
+    "traces_today": 3802,
     "activity": [
       {
         "name": "tank-01-adam",
         "article": "Electricity",
-        "traces": 1620
+        "traces": 1703
       },
       {
         "name": "tank-02-eve",
-        "article": "Communes of France",
-        "traces": 937
+        "article": "Gautama Buddha",
+        "traces": 1006
       },
       {
         "name": "tank-03-cain",
@@ -73,13 +73,13 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Mathematics",
-        "traces": 12
+        "article": "Greek language",
+        "traces": 13
       },
       {
         "name": "tank-05-juan",
-        "article": "Lat\u00c3\u00adn",
-        "traces": 995
+        "article": "Antigua y Barbuda",
+        "traces": 1056
       }
     ]
   },
@@ -93,10 +93,6 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-31 12:27:12 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 12:57:15 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 12:57:19 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 12:57:19 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
     "2026-03-31 13:27:23 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-03-31 13:27:27 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
     "2026-03-31 13:27:27 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
@@ -112,7 +108,11 @@
     "2026-03-31 14:57:47 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-03-31 14:57:50 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
     "2026-03-31 14:57:50 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-03-31 14:57:50 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
+    "2026-03-31 14:57:50 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
+    "2026-03-31 15:27:56 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-03-31 15:27:59 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
+    "2026-03-31 15:27:59 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-03-31 15:27:59 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
   ],
   "issues": [
     "Network not isolated"
