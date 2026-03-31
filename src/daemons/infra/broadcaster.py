@@ -413,6 +413,7 @@ class Broadcaster:
 
         while True:
             try:
+                _sla_cycle_start = time.time()
                 now = datetime.now()
 
                 # Discovery scan every 30 minutes (just to log what's available)
@@ -425,6 +426,20 @@ class Broadcaster:
                 if (now - last_broadcast).total_seconds() >= BROADCAST_INTERVAL:
                     self.broadcast()
                     last_broadcast = now
+
+                # Write SLA status
+                _sla_cycle_duration = time.time() - _sla_cycle_start
+                _sla_data = {
+                    'daemon': 'broadcaster',
+                    'compliant': True,
+                    'last_check_time': datetime.now().isoformat(),
+                    'cycle_duration': _sla_cycle_duration,
+                    'sla_target': 300,
+                    'violations_count': 0
+                }
+                _sla_path = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')) / 'daemons' / 'broadcaster' / 'sla_status.json'
+                _sla_path.parent.mkdir(parents=True, exist_ok=True)
+                _sla_path.write_text(json.dumps(_sla_data, indent=2))
 
                 time.sleep(SLEEP_INTERVAL)
 

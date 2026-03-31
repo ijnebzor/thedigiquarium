@@ -165,12 +165,45 @@ def start_daemon(name):
     log_path = DAEMONS_DIR / 'logs' / f'{name}.log'
     log_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # Clean up stale lock and PID files
-    for ext in ['lock', 'pid']:
-        stale = DAEMONS_DIR / name / f'{name}.{ext}'
+    # Clean up stale lock and PID files (with fcntl.LOCK_NB check)
+    import fcntl
+    pid_file = DAEMONS_DIR / name / f'{name}.pid'
+    lock_file = DAEMONS_DIR / name / f'{name}.lock'
+
+    # Check if PID in PID file is actually alive
+    pid_alive = False
+    if pid_file.exists():
+        try:
+            pid = int(pid_file.read_text().strip())
+            os.kill(pid, 0)  # Check if process exists
+            pid_alive = True
+        except (ValueError, ProcessLookupError, PermissionError, OSError):
+            pid_alive = False
+
+    # Check if lock file is actually held by a running process
+    lock_held = False
+    if lock_file.exists() and pid_alive:
+        try:
+            fd = open(lock_file, 'w')
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            # If we got the lock, it was stale - release and remove
+            fcntl.flock(fd, fcntl.LOCK_UN)
+            fd.close()
+            lock_held = False
+        except IOError:
+            # Lock is actively held by another process
+            lock_held = True
+
+    if lock_held and pid_alive:
+        log(f"WARNING: {name} lock is actively held by PID {pid} - skipping restart")
+        return False
+
+    # Force-remove stale .lock and .pid files since process is dead
+    for stale in [lock_file, pid_file]:
         if stale.exists():
             try:
                 stale.unlink()
+                log(f"Removed stale {stale.name} for {name}")
             except Exception:
                 pass
 

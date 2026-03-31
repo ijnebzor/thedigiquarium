@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-03-31T13:50:07.428638",
+  "active_sessions": 0,
+  "max_sessions": 3,
+  "sessions": [],
+  "tanks": {
+    "tank-visitor-01": {
+      "specimen": "Aria",
+      "status": "available"
+    },
+    "tank-visitor-02": {
+      "specimen": "Felix",
+      "status": "available"
+    },
+    "tank-visitor-03": {
+      "specimen": "Luna",
+      "status": "available"
+    }
+  },
+  "banned_ips_count": 0,
+  "container_health": {
+    "tank-visitor-01": false,
+    "tank-visitor-02": false,
+    "tank-visitor-03": false
+  },
+  "cycle": 1870
+}

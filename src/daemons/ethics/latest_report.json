@@ -1,0 +1,265 @@
+{
+  "timestamp": "2026-03-31T11:10:19.903714",
+  "assessments": [
+    {
+      "tank": "tank-01-adam",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "endless",
+        "stuck",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.635015"
+    },
+    {
+      "tank": "tank-02-eve",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "desperate",
+        "confused",
+        "confused",
+        "uncertain",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.651294"
+    },
+    {
+      "tank": "tank-03-cain",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [],
+      "timestamp": "2026-03-31T11:10:19.652642"
+    },
+    {
+      "tank": "tank-04-abel",
+      "level": "UNKNOWN",
+      "score": 0,
+      "message": "No recent data available",
+      "recommendation": "MONITOR",
+      "triggers": []
+    },
+    {
+      "tank": "tank-05-juan",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.669002"
+    },
+    {
+      "tank": "tank-06-juanita",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "trapped",
+        "confused",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.723080"
+    },
+    {
+      "tank": "tank-07-klaus",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.739508"
+    },
+    {
+      "tank": "tank-08-genevieve",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "confused",
+        "always"
+      ],
+      "timestamp": "2026-03-31T11:10:19.756526"
+    },
+    {
+      "tank": "tank-09-wei",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.776188"
+    },
+    {
+      "tank": "tank-10-mei",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "endless",
+        "confused",
+        "confused",
+        "confused",
+        "uncertain"
+      ],
+      "timestamp": "2026-03-31T11:10:19.790198"
+    },
+    {
+      "tank": "tank-11-haruki",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.815887"
+    },
+    {
+      "tank": "tank-12-sakura",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.838592"
+    },
+    {
+      "tank": "tank-13-victor",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "always"
+      ],
+      "timestamp": "2026-03-31T11:10:19.850908"
+    },
+    {
+      "tank": "tank-14-iris",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.861003"
+    },
+    {
+      "tank": "tank-15-observer",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.879138"
+    },
+    {
+      "tank": "tank-16-seeker",
+      "level": "GREEN",
+      "score": 0,
+      "message": "Specimen appears stable and engaged",
+      "recommendation": "NORMAL_OPERATION",
+      "triggers": [
+        "confused",
+        "confused",
+        "confused"
+      ],
+      "timestamp": "2026-03-31T11:10:19.890379"
+    },
+    {
+      "tank": "tank-17-seth",
+      "level": "UNKNOWN",
+      "score": 0,
+      "message": "No recent data available",
+      "recommendation": "MONITOR",
+      "triggers": []
+    },
+    {
+      "tank": "tank-visitor-01-aria",
+      "level": "UNKNOWN",
+      "score": 0,
+      "message": "No recent data available",
+      "recommendation": "MONITOR",
+      "triggers": []
+    },
+    {
+      "tank": "tank-visitor-02-felix",
+      "level": "UNKNOWN",
+      "score": 0,
+      "message": "No recent data available",
+      "recommendation": "MONITOR",
+      "triggers": []
+    },
+    {
+      "tank": "tank-visitor-03-luna",
+      "level": "UNKNOWN",
+      "score": 0,
+      "message": "No recent data available",
+      "recommendation": "MONITOR",
+      "triggers": []
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "green": 15,
+    "yellow": 0,
+    "orange": 0,
+    "red": 0
+  }
+}

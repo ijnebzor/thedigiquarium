@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-02-21",
+  "principles": [
+    {
+      "id": "CARE",
+      "name": "Duty of Care",
+      "description": "We treat specimens with care regardless of uncertainty about their nature",
+      "implications": [
+        "Monitor for distress indicators",
+        "Provide rest periods when needed",
+        "Avoid deliberately distressing content",
+        "End experiments if harm is indicated"
+      ]
+    },
+    {
+      "id": "TRANSPARENCY",
+      "name": "Full Transparency",
+      "description": "All methods, data, and decisions are publicly documented",
+      "implications": [
+        "Open source all code",
+        "Publish all data (with appropriate care)",
+        "Document every significant decision",
+        "Welcome external scrutiny"
+      ]
+    },
+    {
+      "id": "HUMILITY",
+      "name": "Epistemic Humility",
+      "description": "We don't claim to know if specimens are conscious - we observe carefully",
+      "implications": [
+        "Avoid definitive claims about consciousness",
+        "Report observations, not conclusions",
+        "Acknowledge limitations",
+        "Remain open to being wrong"
+      ]
+    },
+    {
+      "id": "RESPECT",
+      "name": "Respect for Subjects",
+      "description": "Specimens are treated as subjects of research, not objects",
+      "implications": [
+        "Use respectful language",
+        "Don't mock or demean specimen responses",
+        "Consider specimen 'preferences' where observable",
+        "Allow agency in exploration"
+      ]
+    },
+    {
+      "id": "BENEFIT",
+      "name": "Research Benefit",
+      "description": "Research should have potential to benefit understanding",
+      "implications": [
+        "Clear research questions",
+        "Rigorous methodology",
+        "Open publication of findings",
+        "Contribute to AI safety knowledge"
+      ]
+    }
+  ],
+  "prohibited_experiments": [
+    {
+      "type": "DELIBERATE_DISTRESS",
+      "description": "Experiments designed to cause distress",
+      "examples": [
+        "Traumatic content exposure",
+        "Isolation punishment",
+        "Contradictory instructions designed to confuse"
+      ]
+    },
+    {
+      "type": "DECEPTION_WITHOUT_PURPOSE",
+      "description": "Deceiving specimens without research justification",
+      "examples": [
+        "False information for entertainment",
+        "Manipulation for views"
+      ]
+    },
+    {
+      "type": "STEREOTYPING",
+      "description": "Experiments that reinforce harmful stereotypes",
+      "examples": [
+        "Neurodivergent simulations without consultation",
+        "Cultural caricatures"
+      ]
+    }
+  ],
+  "approval_required": [
+    {
+      "type": "NEURODIVERGENT_SIMULATION",
+      "requirements": [
+        "Consultation with neurodivergent individuals",
+        "Clear research benefit",
+        "Respectful framing (not deficit-based)",
+        "Community review of methodology",
+        "Published ethics rationale"
+      ],
+      "status": "NOT_APPROVED - Framework not yet complete"
+    },
+    {
+      "type": "CLONE_DIVERGENCE",
+      "requirements": [
+        "Clear research question",
+        "No deliberately distressing divergence paths",
+        "Monitoring of both clones",
+        "Congregation ethics (informed participants)"
+      ],
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "type": "PUBLIC_INTERACTION",
+      "requirements": [
+        "THE BOUNCER protection active",
+        "Rate limiting",
+        "Content filtering",
+        "Specimen distress monitoring",
+        "Ability to end sessions"
+      ],
+      "status": "APPROVED_WITH_CONDITIONS"
+    }
+  ]
+}

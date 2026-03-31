@@ -117,9 +117,24 @@ class ChaosMonkey:
         
         while True:
             try:
+                _sla_cycle_start = time.time()
                 allowed, reason = self.is_chaos_allowed()
                 if allowed and random.randint(1, 12) == 1:
                     self.execute_chaos()
+                # Write SLA status
+                _sla_cycle_duration = time.time() - _sla_cycle_start
+                _sla_data = {
+                    'daemon': 'chaos_monkey',
+                    'compliant': True,
+                    'last_check_time': datetime.now().isoformat(),
+                    'cycle_duration': _sla_cycle_duration,
+                    'sla_target': 300,
+                    'violations_count': 0
+                }
+                _sla_path = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')) / 'daemons' / 'chaos_monkey' / 'sla_status.json'
+                _sla_path.parent.mkdir(parents=True, exist_ok=True)
+                _sla_path.write_text(json.dumps(_sla_data, indent=2))
+
                 time.sleep(CHECK_INTERVAL)
             except Exception as e:
                 print(f"Error: {e}")

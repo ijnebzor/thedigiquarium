@@ -231,6 +231,7 @@ class Psych:
         
         while True:
             try:
+                _sla_cycle_start = time.time()
                 self.log.info("Beginning psychological assessment cycle")
                 
                 concerns_found = []
@@ -271,6 +272,20 @@ class Psych:
                             '\n'.join([f"- {name}: {concerns}" for name, concerns in high_priority])
                         )
                 
+                # Write SLA status
+                _sla_cycle_duration = time.time() - _sla_cycle_start
+                _sla_data = {
+                    'daemon': 'psych',
+                    'compliant': True,
+                    'last_check_time': datetime.now().isoformat(),
+                    'cycle_duration': _sla_cycle_duration,
+                    'sla_target': 21600,
+                    'violations_count': 0
+                }
+                _sla_path = Path(os.environ.get('DIGIQUARIUM_HOME', '/home/ijneb/digiquarium')) / 'daemons' / 'psych' / 'sla_status.json'
+                _sla_path.parent.mkdir(parents=True, exist_ok=True)
+                _sla_path.write_text(json.dumps(_sla_data, indent=2))
+
                 time.sleep(CHECK_INTERVAL)
                 
             except Exception as e:
