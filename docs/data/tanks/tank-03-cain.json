@@ -3,9 +3,27 @@
   "emoji": "\ud83e\udd16",
   "type": "Agent",
   "status": "active",
-  "traces_12h": 20,
+  "traces_12h": 10,
   "latest_baseline": null,
   "recent_thoughts": [
+    {
+      "time": "11:13",
+      "date": "2026-03-31",
+      "article": "Science",
+      "thought": "Exploring Science...",
+      "next": "Biology",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "11:10",
+      "date": "2026-03-31",
+      "article": "Chemistry",
+      "thought": "You seem interested in understanding the fundamental processes and properties of matter. You mentioned that you are reading \"Chemistry\" from various perspectives, such.. - Understanding how atoms and ",
+      "next": "Science",
+      "thought_en": null,
+      "language": "en"
+    },
     {
       "time": "10:46",
       "date": "2026-03-31",
@@ -77,24 +95,6 @@
       "next": "Difference",
       "thought_en": null,
       "language": "en"
-    },
-    {
-      "time": "23:18",
-      "date": "2026-03-30",
-      "article": "Human",
-      "thought": "Exploring Human...",
-      "next": "Adult",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "23:17",
-      "date": "2026-03-30",
-      "article": "Technology",
-      "thought": "You seem interested in the concept of technology and its role in achieving goals, such as scientific investigation or sending a spaceship to the moon. You mentioned reading \"Technology\" articles and f",
-      "next": "Method",
-      "thought_en": null,
-      "language": "en"
     }
   ],
   "top_topics": [
@@ -108,7 +108,7 @@
     },
     {
       "topic": "Science",
-      "visits": 4
+      "visits": 5
     },
     {
       "topic": "Biology",

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-31T11:05:01.963287",
+  "timestamp": "2026-03-31T11:21:02.773031",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 25
+    "total": 41
   },
   "tanks": {
     "running": 17,
-    "traces_today": 866,
+    "traces_today": 1105,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Community (ecology)",
-        "traces": 704
+        "article": "Existence",
+        "traces": 788
       },
       {
         "name": "tank-02-eve",
-        "article": "Definition",
-        "traces": 75
+        "article": "Ancient history",
+        "traces": 148
       },
       {
         "name": "tank-03-cain",
-        "article": "Music",
-        "traces": 7
+        "article": "Science",
+        "traces": 9
       },
       {
         "name": "tank-04-abel",
         "article": "History",
-        "traces": 3
+        "traces": 4
       },
       {
         "name": "tank-05-juan",
-        "article": "Alfabeto",
-        "traces": 77
+        "article": "Provincia de Buenos Aires",
+        "traces": 156
       }
     ]
   },
