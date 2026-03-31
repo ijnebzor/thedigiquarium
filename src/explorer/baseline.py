@@ -83,7 +83,7 @@ def load_accumulated_experience():
                         e = json.loads(line.strip())
                         t = str(e.get('thoughts', '') or '')
                         if t and 'Error' not in t and 'lock' not in t.lower() and len(t) > 30:
-                            recent.append(f"Reading {e.get('article', '?')}: {t[:200]}")
+                            recent.append(f"Reading {e.get('article', '?')}: {t}")
                     except:
                         pass
             if len(recent) >= 15:
@@ -166,7 +166,7 @@ def run_baseline():
         })
 
         if response:
-            print(f"{response[:200]}...\n")
+            print(f"{response}...\n")
         time.sleep(2)
 
     # Save — NEVER overwrite previous baselines

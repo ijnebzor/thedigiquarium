@@ -70,7 +70,7 @@ def _extract_insight(thoughts: str) -> str:
     
     # If no clean sentence, take first 150 chars if the whole thing is clean
     if _is_clean(clean):
-        return clean[:150]
+        return clean
     
     return ''
 
@@ -116,9 +116,9 @@ def load_context() -> str:
     
     # Truncate if too long
     if len(brain) > 2000:
-        brain = brain[:200] + "\n...\n" + brain[-1800:]
+        brain = brain[:500] + "\n...\n" + brain[-3000:]
     if len(soul) > 2000:
-        soul = soul[:200] + "\n...\n" + soul[-1800:]
+        soul = soul[:500] + "\n...\n" + soul[-3000:]
     
     context = ""
     if len(brain) > 50:

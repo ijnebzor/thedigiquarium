@@ -405,7 +405,7 @@ def explore(config: dict):
                 'next_link': response['next_link']
             }
             log_trace(config, trace)
-            logger.info(f"Thoughts: {response['thoughts'][:100]}...")
+            logger.info(f"Thoughts: {response['thoughts']}...")
             
             # Update persistent memory (brain.md + soul.md)
             if update_after_thinking and response.get('thoughts') and len(response['thoughts']) > 20:
