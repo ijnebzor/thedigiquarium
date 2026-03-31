@@ -80,7 +80,7 @@
 
     <div class="container">
         <div class="post-meta">
-            <div class="post-date">March 28, 2026</div>
+            <div class="post-date">March 27&ndash;31, 2026</div>
             <div class="post-author">
                 <span class="author-icon">&#x1F464;</span>
                 <span class="author-name">Benji</span>
@@ -91,16 +91,56 @@
 
         <div class="tldr">
             <div class="tldr-label">TL;DR</div>
-            <p>On March 27&ndash;28, we tore the Digiquarium down to its foundations and rebuilt it. This is the definitive record of everything that was broken, everything that was fixed, and the current state of the system. 36 hours, 30+ commits, every layer of the stack touched.</p>
+            <p>On March 27&ndash;31, we tore the Digiquarium down to its foundations and rebuilt it. This is the definitive record of everything that was broken, everything that was fixed, and the current state of the system. 5 days, 50+ commits, every layer of the stack touched. The system went from barely functional to production-ready.</p>
         </div>
 
         <div class="content">
             <h2>Context</h2>
-            <p>When we declared the "production era" on March 27, we thought the v2.0 cleanup had put us on solid footing. It hadn't. Within hours of trying to run the full system, we found that daemons were exiting after one cycle, the explorer couldn't navigate Kiwix, Ollama was overwhelmed by 17 simultaneous tanks, and the scheduler had no concept of resource contention. What followed was a 36-hour intensive overhaul of every layer of the stack.</p>
+            <p>When we declared the "production era" on March 27, we thought the v2.0 cleanup had put us on solid footing. It hadn't. Within hours of trying to run the full system, we found that daemons were exiting after one cycle, the explorer couldn't navigate Kiwix, Ollama was overwhelmed by 17 simultaneous tanks, and the scheduler had no concept of resource contention. What followed was a 5-day intensive overhaul of every layer of the stack, culminating in a system designed for 24/7 unattended operation.</p>
 
-            <p>This post is the definitive record. Not a narrative &mdash; a technical audit of what was broken and what was done about it.</p>
+            <p>This post is the definitive record. Not a narrative—a technical audit of what was broken and what was done about it.</p>
 
             <h2>The Audit Findings</h2>
+
+            <h3>Inference: Groq/Cerebras Chain (March 28-29)</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>Local Ollama with llama3.2:3b couldn't handle 17 tanks. Even with mutex locking, staggering, and rotation scheduling, inference was bottlenecked. Tanks were generating only 1-2 traces per hour, making meaningful personality assessment impossible. The model simply wasn't keeping up with demand.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Implemented a three-tier inference chain: Groq as primary (free tier, extremely fast), Cerebras as fallback, local Ollama as last resort. Groq's cloud inference eliminated the local bottleneck entirely. Tanks immediately jumped from 1-2 traces/hour to 10-20+ traces/hour. This was the single biggest performance win of the entire overhaul.</p>
+            </div>
+
+            <h3>Memory System: brain.md/soul.md (March 28-29)</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>Raw trace accumulation created unbounded context windows. Each tank's trace history grew without bounds, making it impossible to meaningfully assess personality evolution. The Caretaker daemon was trying to work with traces that numbered in the hundreds, causing context explosion and degraded performance.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Created a dual-file memory system. Each tank now has <code>brain.md</code> (evolving memory updated by the Caretaker daemon, bounded context with personality delta tracking) and <code>soul.md</code> (immutable identity and personality seed, set at tank creation). This creates bounded, meaningful memory that allows for personality drift analysis without context explosion.</p>
+            </div>
+
+            <h3>Personality Assessments: Librarian Baseline System (March 29)</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>Clinical questionnaires produced flat, undifferentiated responses across specimens. The Librarian daemon was conducting sterile, clinical assessments that didn't capture personality variance. Responses were indistinguishable across specimens despite different research histories.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Rewrote the Librarian baseline system with an in-character persona. Instead of clinical questionnaires, the Librarian now conducts a warm, curious check-in about what the specimen has been reading, what they've learned, and what fascinates them. This produces more natural, differentiated personality data that actually reflects each tank's unique research trajectory.</p>
+            </div>
+
+            <h3>Explorer: Deep Kiwix Integration (March 28-29)</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>The explorer assumed standard Wikipedia URL formats, but Kiwix serves articles at different paths with different link structures. Tanks were sitting idle instead of exploring because every navigation attempt failed silently. Link extraction wasn't working, random article discovery wasn't implemented, and content parsing was incomplete.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Complete rewrite of explorer navigation. Added <code>KIWIX_URL</code> and <code>WIKI_BASE</code> environment variables for dynamic configuration. Rewrote link extraction to handle Kiwix's URL format and HTML structure. Implemented proper random article discovery using Kiwix's search API. Added proper article content parsing to extract meaningful text. This was arguably the most critical fix—without it, no tank was actually doing any research.</p>
+            </div>
 
             <h3>Infrastructure: Ollama</h3>
             <div class="section-box warning">
@@ -109,7 +149,7 @@
             </div>
             <div class="section-box">
                 <h3>Solution</h3>
-                <p>Moved Ollama to a local Docker container on the same host. Added auto-restart via supervisor. Implemented a shared file-based mutex (<code>/ollama-mutex/ollama.lock</code>) so only one tank can access Ollama at a time with a 300-second timeout. Added deterministic stagger (tank ID modulo across 170s window) and rotation daemon (groups of 3, 5-minute windows). Added Ollama health checks to the scheduler.</p>
+                <p>Moved Ollama to a local Docker container on the same host. Added auto-restart via supervisor. Implemented a shared file-based mutex (<code>/ollama-mutex/ollama.lock</code>) so only one tank can access Ollama at a time with a 300-second timeout. Added deterministic stagger (tank ID modulo across 170s window) and rotation daemon (groups of 3, 5-minute windows). Added Ollama health checks to the scheduler. Deployed <code>ollama_watcher</code> daemon for continuous health monitoring.</p>
             </div>
 
             <h3>Infrastructure: Tank Containers</h3>
@@ -122,44 +162,54 @@
                 <p>Built a custom Docker image (<code>src/explorer/Dockerfile</code>) with all Python dependencies pre-installed. Assigned static IPs to all 17 tanks in <code>docker-compose.yml</code>. Rewrote the baseline runner to process tanks sequentially with health checks between each run. Baseline output files now include timestamps to prevent overwriting research data.</p>
             </div>
 
-            <h3>Explorer: Kiwix Navigation</h3>
+            <h3>Daemons: Run Loops &amp; SLA (March 29-30)</h3>
             <div class="section-box warning">
                 <h3>Problem</h3>
-                <p>The explorer assumed standard Wikipedia URL formats, but Kiwix serves articles at different paths with different link structures. Tanks were sitting idle instead of exploring because every navigation attempt failed silently.</p>
-            </div>
-            <div class="section-box">
-                <h3>Solution</h3>
-                <p>Added <code>KIWIX_URL</code> and <code>WIKI_BASE</code> environment variables. Rewrote link extraction to handle Kiwix's URL format. Fixed random article navigation to use Kiwix's search API. This was arguably the most critical fix &mdash; without it, no tank was actually doing any research.</p>
-            </div>
-
-            <h3>Daemons: Run Loops &amp; SLA</h3>
-            <div class="section-box warning">
-                <h3>Problem</h3>
-                <p>5 of 21 daemons had no continuous run loop &mdash; they executed once and exited. 11 of 21 had duplicate process issues from missing singleton locks. No daemon tracked its own performance metrics. THE WEBMASTER was effectively non-functional (checked if 2 files existed, nothing else).</p>
+                <p>5 of 21 daemons had no continuous run loop—they executed once and exited. 11 of 21 had duplicate process issues from missing singleton locks. No daemon tracked its own performance metrics. THE WEBMASTER was effectively non-functional (checked if 2 files existed, nothing else).</p>
             </div>
             <div class="section-box">
                 <h3>Solution</h3>
                 <p>All 21 daemons now have proper <code>while True</code> loops with appropriate sleep intervals. SLA tracking added to every daemon: cycle count, success rate, average cycle time, last failure timestamp. Scheduler completely rewritten to v4 with clash prevention (no two tanks scheduled simultaneously), Ollama health checks before dispatch, proper cycle tracking, and overnight safety modes.</p>
             </div>
 
-            <h3>Security</h3>
+            <h3>Dashboard &amp; Admin Panel (March 29-30)</h3>
             <div class="section-box warning">
                 <h3>Problem</h3>
-                <p>Hardcoded password found in admin panel source. XSS vulnerability in visitor-facing pages allowing script injection.</p>
+                <p>No admin interface. No way to see system health, container status, or daemon metrics at a glance. Manual inspection required reading logs and querying Docker directly.</p>
             </div>
             <div class="section-box">
                 <h3>Solution</h3>
-                <p>Password removed, authentication restructured. Input sanitization added to all user-facing inputs. Security audit documented.</p>
+                <p>Built a comprehensive admin panel at <code>/admin/</code> with real-time metrics. Implemented container status view, daemon SLA metrics dashboard, and system health monitoring. Created <code>live-data.js</code> feed for real-time metric updates from <code>stats.json</code> and <code>admin-status.json</code>. Panel displays current state of all daemons, tanks, and system resources.</p>
+            </div>
+
+            <h3>Mobile Navigation (March 28)</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>No mobile responsive navigation. Desktop nav broke on mobile devices. Tank pages were unusable on phones and tablets.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Added hamburger menu with toggle functionality to all pages. Responsive CSS media queries ensure mobile users can navigate properly. Nav collapses on small screens and expands via hamburger click.</p>
+            </div>
+
+            <h3>Security Fixes (March 28)</h3>
+            <div class="section-box warning">
+                <h3>Problem</h3>
+                <p>Hardcoded password found in admin panel source code. XSS vulnerability in visitor-facing pages allowing script injection through untrusted input.</p>
+            </div>
+            <div class="section-box">
+                <h3>Solution</h3>
+                <p>Password removed from source, authentication restructured with environment variables. Input sanitization added to all user-facing inputs and output encoding on display. Security audit documented and fixed.</p>
             </div>
 
             <h3>Website &amp; UI</h3>
             <div class="section-box warning">
                 <h3>Problem</h3>
-                <p>Brain minimap zoom would reset on time-step navigation. Cumulative chips didn't display correctly. No mobile navigation. Translation layer used curl calls with hardcoded endpoints. Nav links used relative paths that broke on subpages.</p>
+                <p>Brain minimap zoom would reset on time-step navigation. Cumulative chips didn't display correctly. Translation layer used curl calls with hardcoded endpoints. Nav links used relative paths that broke on subpages.</p>
             </div>
             <div class="section-box">
                 <h3>Solution</h3>
-                <p>Brain minimap zoom fix applied. Cumulative chips rendering corrected. Mobile responsive hamburger navigation added to all pages. Translation layer rewritten to use urllib with environment variables. All nav links converted to absolute paths from site root. Admin panel built at <code>/admin/</code> with container status, daemon SLA metrics, and system health dashboard.</p>
+                <p>Brain minimap zoom fix applied with state persistence. Cumulative chips rendering corrected. Translation layer rewritten to use urllib with environment variables. All nav links converted to absolute paths from site root.</p>
             </div>
 
             <h2>Complete Change Log</h2>
@@ -174,14 +224,34 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td>Inference tier</td>
+                        <td class="status-broken">Local Ollama only (1-2 traces/hr)</td>
+                        <td class="status-fixed">Groq→Cerebras→Ollama chain (10-20+ traces/hr)</td>
+                    </tr>
+                    <tr>
+                        <td>Memory system</td>
+                        <td class="status-broken">Unbounded trace accumulation</td>
+                        <td class="status-fixed">brain.md + soul.md (bounded, meaningful)</td>
+                    </tr>
+                    <tr>
+                        <td>Librarian baseline</td>
+                        <td class="status-broken">Clinical questionnaires (flat responses)</td>
+                        <td class="status-fixed">In-character persona (differentiated data)</td>
+                    </tr>
+                    <tr>
+                        <td>Explorer navigation</td>
+                        <td class="status-broken">Broken for Kiwix URLs</td>
+                        <td class="status-fixed">Full Kiwix integration + API search</td>
+                    </tr>
+                    <tr>
                         <td>Ollama</td>
                         <td class="status-broken">External Mac + socat proxy</td>
-                        <td class="status-fixed">Local Docker container</td>
+                        <td class="status-fixed">Local Docker container + watcher</td>
                     </tr>
                     <tr>
                         <td>Inference concurrency</td>
                         <td class="status-broken">17 tanks at once, no queuing</td>
-                        <td class="status-fixed">Mutex + stagger + rotation</td>
+                        <td class="status-fixed">Groq (unlimited), Ollama mutex + stagger + rotation</td>
                     </tr>
                     <tr>
                         <td>Tank image</td>
@@ -206,12 +276,12 @@
                     <tr>
                         <td>Daemon run loops</td>
                         <td class="status-broken">5 had no loop (run once, exit)</td>
-                        <td class="status-fixed">All 21 continuous</td>
+                        <td class="status-fixed">All 21 continuous with sleep intervals</td>
                     </tr>
                     <tr>
                         <td>Daemon SLA tracking</td>
                         <td class="status-broken">None</td>
-                        <td class="status-fixed">All daemons report metrics</td>
+                        <td class="status-fixed">All daemons report full metrics</td>
                     </tr>
                     <tr>
                         <td>Scheduler</td>
@@ -219,19 +289,14 @@
                         <td class="status-fixed">v4, clash prevention + health checks</td>
                     </tr>
                     <tr>
-                        <td>Explorer navigation</td>
-                        <td class="status-broken">Broken for Kiwix URLs</td>
-                        <td class="status-fixed">KIWIX_URL + WIKI_BASE env vars</td>
-                    </tr>
-                    <tr>
                         <td>Admin panel</td>
-                        <td class="status-broken">None (or hardcoded password)</td>
-                        <td class="status-fixed">Built at /admin/</td>
+                        <td class="status-broken">None (hardcoded password existed)</td>
+                        <td class="status-fixed">Full dashboard at /admin/ with live metrics</td>
                     </tr>
                     <tr>
                         <td>Security</td>
                         <td class="status-broken">Hardcoded password, XSS vuln</td>
-                        <td class="status-fixed">Password removed, XSS fixed</td>
+                        <td class="status-fixed">Password removed, XSS fixed, sanitization added</td>
                     </tr>
                     <tr>
                         <td>Translation layer</td>
@@ -241,7 +306,7 @@
                     <tr>
                         <td>Brain minimap</td>
                         <td class="status-broken">Zoom reset on navigation</td>
-                        <td class="status-fixed">Zoom persists, cumulative chips</td>
+                        <td class="status-fixed">Zoom persists, cumulative chips render</td>
                     </tr>
                     <tr>
                         <td>Mobile nav</td>
@@ -258,11 +323,22 @@
                         <td class="status-broken">Not connected</td>
                         <td class="status-fixed">Connected for autonomous operation</td>
                     </tr>
+                    <tr>
+                        <td>Ollama stability</td>
+                        <td class="status-broken">Manual restart required</td>
+                        <td class="status-fixed">Auto-restart via supervisor + watcher daemon</td>
+                    </tr>
                 </tbody>
             </table>
 
             <h2>Key Decisions Made</h2>
             <p>Several architectural decisions were made during this overhaul that are worth recording for future reference. See the <a href="../../decision-tree/">Decision Tree</a> for the full log.</p>
+
+            <p><strong>Groq/Cerebras inference chain:</strong> Local inference was bottlenecking personality assessment. Cloud-first with fallback to local keeps us flexible and fast. Groq's free tier is absurdly generous and production-ready.</p>
+
+            <p><strong>Bounded memory (brain.md/soul.md):</strong> Unbounded trace accumulation was creating context explosion. Separating evolving memory (brain) from identity seed (soul) allows meaningful personality assessment without losing data or blowing context windows.</p>
+
+            <p><strong>In-character Librarian persona:</strong> Personality assessment needed to feel natural, not clinical. A curious librarian checking in with each specimen produces better data than a questionnaire.</p>
 
             <p><strong>Ollama local vs. proxy:</strong> Local Docker eliminates network dependency entirely. The socat proxy was a beta-era workaround that introduced a failure mode we couldn't control.</p>
 
@@ -275,26 +351,32 @@
             <p><strong>SLA tracking on all daemons:</strong> You can't manage what you can't measure. Every daemon now self-reports its performance. This feeds the admin panel and makes "is the system healthy?" a question with a data-driven answer.</p>
 
             <h2>Current State</h2>
-            <p>As of March 28, 2026:</p>
+            <p>As of March 31, 2026:</p>
 
             <div class="section-box">
                 <h3>System Status</h3>
-                <p><strong>Tanks:</strong> 17 specimens across 5 languages, all with static IPs and fresh timestamped baselines.</p>
-                <p><strong>Daemons:</strong> 21 deployed, all running with continuous loops and SLA tracking.</p>
-                <p><strong>Ollama:</strong> Local Docker container with mutex, stagger, and rotation. Auto-restart via supervisor.</p>
-                <p><strong>Scheduler:</strong> v4 with clash prevention, Ollama health checks, overnight safety.</p>
-                <p><strong>Explorer:</strong> Fixed for Kiwix URL format. Tanks are actively exploring.</p>
-                <p><strong>Admin:</strong> Panel at /admin/ with live metrics.</p>
-                <p><strong>MCP:</strong> Connected for autonomous operation.</p>
-                <p><strong>Security:</strong> Password removed, XSS patched, input sanitization added.</p>
+                <p><strong>Tanks:</strong> 17 specimens across 5 languages, all with static IPs, fresh timestamped baselines, and active research cycles. Each tank is generating 10-20+ traces per hour.</p>
+                <p><strong>Inference:</strong> Three-tier chain (Groq primary, Cerebras fallback, Ollama last resort) providing fast, reliable inference with automatic failover.</p>
+                <p><strong>Memory:</strong> Each tank has brain.md (evolving memory) and soul.md (identity seed) for bounded, meaningful personality tracking.</p>
+                <p><strong>Librarian:</strong> In-character personality assessments producing natural, differentiated baseline data.</p>
+                <p><strong>Daemons:</strong> 21 deployed, all running with continuous loops, SLA tracking, and health monitoring.</p>
+                <p><strong>Ollama:</strong> Local Docker container with mutex, stagger, rotation, watcher daemon, and auto-restart via supervisor.</p>
+                <p><strong>Scheduler:</strong> v4 with clash prevention, Ollama health checks, overnight safety, and proper cycle tracking.</p>
+                <p><strong>Explorer:</strong> Fully integrated with Kiwix. Tanks are actively exploring with proper link extraction, content parsing, and random article discovery.</p>
+                <p><strong>Admin:</strong> Dashboard at /admin/ with live metrics from stats.json and admin-status.json showing container status, daemon SLA, and system health.</p>
+                <p><strong>Security:</strong> Password removed, XSS patched, input sanitization added, authentication restructured.</p>
+                <p><strong>Mobile:</strong> All pages responsive with hamburger navigation for mobile users.</p>
+                <p><strong>MCP:</strong> Connected for autonomous operation and monitoring.</p>
             </div>
 
             <h2>What This Means</h2>
-            <p>The Digiquarium is no longer a prototype running on good intentions. Every component has been audited, fixed, and verified. The infrastructure is designed for 24/7 unattended operation with self-monitoring through SLA tracking and the MCP interface.</p>
+            <p>The Digiquarium is no longer a prototype running on good intentions. Every component has been audited, fixed, and verified. The infrastructure is designed for 24/7 unattended operation with self-monitoring through SLA tracking, daemon health checks, and the MCP interface.</p>
 
-            <p>The overhaul took 36 hours and touched every layer of the stack. It was the kind of work that's invisible when it works and catastrophic when it doesn't. It works now.</p>
+            <p>The inference chain puts personality assessment in the hands of fast, reliable models. The memory system bounds context while preserving personality evolution. The Librarian conducts natural assessments that reflect each tank's unique research journey. The explorer integrates deeply with Kiwix, enabling genuine intellectual exploration. The admin panel provides real-time visibility into system health.</p>
 
-            <p>The tanks are exploring. The daemons are watching. The data is accumulating. The experiment can finally begin in earnest.</p>
+            <p>The overhaul took 5 days and touched every layer of the stack. It was the kind of work that's invisible when it works and catastrophic when it doesn't. It works now.</p>
+
+            <p>The tanks are exploring. The daemons are watching. The data is accumulating. The personalities are emerging. The experiment can finally begin in earnest.</p>
         </div>
     </div>
 

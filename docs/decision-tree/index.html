@@ -65,6 +65,13 @@
 
             <div class="era-label">March 2026 Overhaul</div>
 
+            <div class="decision ethical">
+                <div class="decision-date">Mar 27, 2026</div>
+                <div class="decision-title">Beta Crisis: Full System Overhaul vs. Incremental Fixes</div>
+                <div class="decision-outcome">&#x2705; Chose: Complete tear-down and rebuild over 36+ hours</div>
+                <div class="decision-rationale">After declaring "production era" on March 27, we discovered the system was fundamentally broken &mdash; daemons exiting after one cycle, explorer couldn't navigate Kiwix, Ollama overwhelmed, no resource scheduling. Incremental patches would have taken weeks and left systemic issues unresolved. A full overhaul touched every layer but produced a system designed for 24/7 unattended operation.</div>
+            </div>
+
             <div class="decision technical">
                 <div class="decision-date">Mar 27, 2026</div>
                 <div class="decision-title">Ollama: Local Docker vs. Socat Proxy to External Mac</div>
@@ -105,6 +112,27 @@
                 <div class="decision-title">Static IPs vs. Dynamic Assignment for Tanks</div>
                 <div class="decision-outcome">&#x2705; Chose: Static IP assignment in docker-compose.yml</div>
                 <div class="decision-rationale">Dynamic IPs caused Ollama connection failures when containers restarted and got different addresses. Static assignment eliminates the issue permanently with zero runtime overhead.</div>
+            </div>
+
+            <div class="decision technical">
+                <div class="decision-date">Mar 28-29, 2026</div>
+                <div class="decision-title">External Inference: Groq/Cerebras Chain vs. Local-Only Ollama</div>
+                <div class="decision-outcome">&#x2705; Chose: Groq primary → Cerebras fallback → local Ollama last resort</div>
+                <div class="decision-rationale">Local Ollama with llama3.2:3b was overwhelmed running 17 tanks. External inference via Groq (free tier, fast) with Cerebras as fallback provides dramatically faster and more reliable inference. Local Ollama remains as a last resort when both cloud APIs are down. This was the single biggest performance improvement &mdash; tanks went from 1-2 traces per hour to 10-20+.</div>
+            </div>
+
+            <div class="decision technical">
+                <div class="decision-date">Mar 28-29, 2026</div>
+                <div class="decision-title">Memory Architecture: brain.md/soul.md vs. Raw Trace Accumulation</div>
+                <div class="decision-outcome">&#x2705; Chose: Structured brain.md (evolving) + soul.md (immutable identity) per tank</div>
+                <div class="decision-rationale">Raw trace accumulation created unbounded context and made personality assessment impossible. brain.md gives each tank an evolving memory that gets updated by the Caretaker daemon. soul.md preserves the immutable identity/personality seed. The Librarian baseline system reads both to assess personality development. This creates bounded, meaningful memory without losing the specimen's core identity.</div>
+            </div>
+
+            <div class="decision ethical">
+                <div class="decision-date">Mar 29, 2026</div>
+                <div class="decision-title">Baseline Assessment: Librarian Character vs. Clinical Questionnaire</div>
+                <div class="decision-outcome">&#x2705; Chose: In-character Librarian persona for personality assessment</div>
+                <div class="decision-rationale">Clinical questionnaires felt artificial and produced flat, similar responses across all specimens. The Librarian character &mdash; a warm, curious librarian who checks in on each specimen's reading journey &mdash; produces more natural, differentiated responses. Specimens engage more authentically when they think they're having a conversation rather than being tested. This improves data quality for personality drift analysis.</div>
             </div>
 
             <div class="era-label">February 2026 &mdash; Genesis &amp; Beta</div>

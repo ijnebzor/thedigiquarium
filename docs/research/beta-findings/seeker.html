@@ -76,6 +76,19 @@ tr:last-child td { border-bottom: none; }
 .collapsible-header.collapsed::after { transform: rotate(-90deg); }
 .collapsible-content { overflow: hidden; transition: max-height 0.3s ease-out; }
 .hidden { display: none; }
+.mindmap-section { margin: 25px 0; }
+#mindmap { position: relative; width: 100%; height: 500px; background: var(--dark); border-radius: 10px; overflow: hidden; }
+.mindmap-header { margin-bottom: 10px; }
+.zoom-controls { position: absolute; top: 10px; right: 10px; z-index: 10; display: flex; gap: 5px; }
+.zoom-btn { background: var(--dark); border: 1px solid rgba(7,207,141,0.3); color: var(--mint); width: 32px; height: 32px; border-radius: 6px; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; }
+.zoom-btn:hover { background: rgba(7,207,141,0.15); }
+.time-slider-container { margin-top: 15px; padding: 12px; background: var(--dark); border-radius: 8px; }
+.time-slider-label { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--gray); margin-bottom: 8px; }
+.play-btn { background: rgba(7,207,141,0.15); border: 1px solid rgba(7,207,141,0.3); color: var(--mint); padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; margin-right: 8px; }
+#time-slider { width: 100%; }
+.brain-interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+.brain-interest { background: var(--dark); border: 1px solid rgba(7,207,141,0.15); padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; display: flex; gap: 6px; align-items: center; }
+.brain-interest .count { color: var(--mint); font-weight: 600; }
 .specimen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; margin: 20px 0; }
 .specimen-link-card { background: var(--dark); border: 1px solid rgba(7,207,141,0.12); border-radius: 8px; padding: 18px; transition: all 0.3s; display: block; }
 .specimen-link-card:hover { border-color: var(--mint); transform: translateY(-2px); color: var(--white); }
@@ -712,8 +725,8 @@ As you&#x27;ve finished reading about &quot;Net income&quot;, here are your obse
 
         function initSvg() {
             const container = document.getElementById('mindmap');
-            const width = container.clientWidth;
-            const height = container.clientHeight;
+            const width = container.clientWidth || 800;
+            const height = container.clientHeight || 500;
             svgSel = d3.select('#mindmap').append('svg').attr('viewBox', [0, 0, width, height]);
             zoom = d3.zoom().scaleExtent([0.3, 5]).on('zoom', (event) => {
                 graphContainer.attr('transform', event.transform);
@@ -760,8 +773,8 @@ As you&#x27;ve finished reading about &quot;Net income&quot;, here are your obse
             if (!graphData || !graphData.nodes) return;
             if (!svgSel) initSvg();
             const container = document.getElementById('mindmap');
-            const width = container.clientWidth;
-            const height = container.clientHeight;
+            const width = container.clientWidth || 800;
+            const height = container.clientHeight || 500;
             const maxVisits = d3.max(graphData.nodes, d => d.visits) || 1;
             const colorScale = d3.scaleLinear().domain([0, maxVisits*0.3, maxVisits*0.6, maxVisits]).range(['#07DDE7', '#07CF8D', '#FE6500', '#FF8833']);
             const sizeScale = d3.scaleSqrt().domain([1, maxVisits]).range([4, 25]);
