@@ -197,9 +197,6 @@ class OllamaWatcher:
                 pass
         pid_file.write_text(str(os.getpid()))
         return True
-        except IOError:
-            self.log('ERROR', 'Another instance is already running')
-            return False
 
     def release_lock(self):
         """Clean up PID file."""
