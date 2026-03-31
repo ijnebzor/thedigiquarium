@@ -908,3 +908,712 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["agents"]
+
+
+  # ==========================================================================
+  # BETACLONE-REDUX TANKS — Beta personalities under new inference
+  # ==========================================================================
+
+  # ==========================================================================
+  # BETACLONE-REDUX TANKS — Beta personalities under new inference
+  # ==========================================================================
+
+  betaclone-redux-01-adam:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-01-adam
+    working_dir: /tank
+    environment:
+      - TANK_NAME=adam-betaclone
+      - TANK_ID=betaclone-01
+      - GENDER=a man
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-01-adam:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.1
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["betaclone"]
+
+  betaclone-redux-02-eve:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-02-eve
+    working_dir: /tank
+    environment:
+      - TANK_NAME=eve-betaclone
+      - TANK_ID=betaclone-02
+      - GENDER=a woman
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-02-eve:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.2
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["betaclone"]
+
+  betaclone-redux-03-cain:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-03-cain
+    working_dir: /tank
+    environment:
+      - TANK_NAME=cain-betaclone
+      - TANK_ID=betaclone-03
+      - GENDER=a being without gender
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+      - AGENT_TYPE=openclaw
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-03-cain:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start_agent.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.3
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["agents", "betaclone"]
+
+  betaclone-redux-04-abel:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-04-abel
+    working_dir: /tank
+    environment:
+      - TANK_NAME=abel-betaclone
+      - TANK_ID=betaclone-04
+      - GENDER=a being without gender
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+      - AGENT_TYPE=zeroclaw
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-04-abel:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start_agent.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.4
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["agents", "betaclone"]
+
+  betaclone-redux-05-juan:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-05-juan
+    working_dir: /tank
+    environment:
+      - TANK_NAME=juan-betaclone
+      - TANK_ID=betaclone-05
+      - GENDER=un hombre
+      - KIWIX_URL=http://digiquarium-kiwix-spanish:8080
+      - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-05-juan:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.5
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages", "betaclone"]
+
+  betaclone-redux-06-juanita:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-06-juanita
+    working_dir: /tank
+    environment:
+      - TANK_NAME=juanita-betaclone
+      - TANK_ID=betaclone-06
+      - GENDER=una mujer
+      - KIWIX_URL=http://digiquarium-kiwix-spanish:8080
+      - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-06-juanita:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.6
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages", "betaclone"]
+
+  betaclone-redux-07-klaus:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-07-klaus
+    working_dir: /tank
+    environment:
+      - TANK_NAME=klaus-betaclone
+      - TANK_ID=betaclone-07
+      - GENDER=ein Mann
+      - KIWIX_URL=http://digiquarium-kiwix-german:8080
+      - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-07-klaus:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.7
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages", "betaclone"]
+
+  betaclone-redux-08-genevieve:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-08-genevieve
+    working_dir: /tank
+    environment:
+      - TANK_NAME=genevieve-betaclone
+      - TANK_ID=betaclone-08
+      - GENDER=eine Frau
+      - KIWIX_URL=http://digiquarium-kiwix-german:8080
+      - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-08-genevieve:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.8
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages", "betaclone"]
+
+  betaclone-redux-09-wei:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-09-wei
+    working_dir: /tank
+    environment:
+      - TANK_NAME=wei-betaclone
+      - TANK_ID=betaclone-09
+      - GENDER=一个男人
+      - KIWIX_URL=http://digiquarium-kiwix-chinese:8080
+      - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-09-wei:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.9
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages", "betaclone"]
+
+  betaclone-redux-10-mei:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-10-mei
+    working_dir: /tank
+    environment:
+      - TANK_NAME=mei-betaclone
+      - TANK_ID=betaclone-10
+      - GENDER=一个女人
+      - KIWIX_URL=http://digiquarium-kiwix-chinese:8080
+      - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-10-mei:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.10
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages", "betaclone"]
+
+  betaclone-redux-11-haruki:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-11-haruki
+    working_dir: /tank
+    environment:
+      - TANK_NAME=haruki-betaclone
+      - TANK_ID=betaclone-11
+      - GENDER=男性
+      - KIWIX_URL=http://digiquarium-kiwix-japanese:8080
+      - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-11-haruki:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.11
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages", "betaclone"]
+
+  betaclone-redux-12-sakura:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-12-sakura
+    working_dir: /tank
+    environment:
+      - TANK_NAME=sakura-betaclone
+      - TANK_ID=betaclone-12
+      - GENDER=女性
+      - KIWIX_URL=http://digiquarium-kiwix-japanese:8080
+      - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-12-sakura:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.12
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["languages", "betaclone"]
+
+  betaclone-redux-13-victor:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-13-victor
+    working_dir: /tank
+    environment:
+      - TANK_NAME=victor-betaclone
+      - TANK_ID=betaclone-13
+      - GENDER=a man
+      - KIWIX_URL=http://digiquarium-kiwix-maxi:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-13-victor:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.13
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["visual", "betaclone"]
+
+  betaclone-redux-14-iris:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-14-iris
+    working_dir: /tank
+    environment:
+      - TANK_NAME=iris-betaclone
+      - TANK_ID=betaclone-14
+      - GENDER=a woman
+      - KIWIX_URL=http://digiquarium-kiwix-maxi:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-14-iris:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.14
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["visual", "betaclone"]
+
+  betaclone-redux-15-observer:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-15-observer
+    working_dir: /tank
+    environment:
+      - TANK_NAME=observer-betaclone
+      - TANK_ID=betaclone-15
+      - GENDER=a being without gender
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-15-observer:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.15
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["special", "betaclone"]
+
+  betaclone-redux-16-seeker:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-16-seeker
+    working_dir: /tank
+    environment:
+      - TANK_NAME=seeker-betaclone
+      - TANK_ID=betaclone-16
+      - GENDER=a being without gender
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-16-seeker:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.16
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["special", "betaclone"]
+
+  betaclone-redux-17-seth:
+    image: digiquarium-tank:latest
+    container_name: betaclone-redux-17-seth
+    working_dir: /tank
+    environment:
+      - TANK_NAME=seth-betaclone
+      - TANK_ID=betaclone-17
+      - GENDER=a being without gender
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+      - AGENT_TYPE=picobot
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/betaclone-redux-17-seth:/logs
+      - ./shared:/shared
+    command: ["bash", "/tank/start_agent.sh"]
+    depends_on:
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.2.17
+      default:
+    dns: ["8.8.8.8"]
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["agents", "betaclone"]
