@@ -56,5 +56,8 @@ heartbeat_*
 *.bin
 
 # Public logs are allowed (pruned clean data)
-!docs/data/logs-public/
 .anthropic_key
+docs/data/live-feed/
+docs/data/admin-status.json
+docs/data/logs-public/
+docs/data/live-feed.json
