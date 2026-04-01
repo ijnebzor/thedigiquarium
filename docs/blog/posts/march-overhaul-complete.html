@@ -110,14 +110,14 @@
 
             <h2>The Audit Findings</h2>
 
-            <h3>Inference: Groq/Cerebras Chain (March 28-29)</h3>
+            <h3>Inference: Four-Tier Cloud Chain (March 28-29)</h3>
             <div class="section-box warning">
                 <h3>Problem</h3>
                 <p>Local Ollama with llama3.2:3b couldn't handle 17 tanks. Even with mutex locking, staggering, and rotation scheduling, inference was bottlenecked. Tanks were generating only 1-2 traces per hour, making meaningful personality assessment impossible. The model simply wasn't keeping up with demand.</p>
             </div>
             <div class="section-box">
                 <h3>Solution</h3>
-                <p>Implemented a three-tier inference chain: Cerebras as primary (free tier, extremely fast), Cerebras as fallback, local Ollama as last resort. Groq's cloud inference eliminated the local bottleneck entirely. Tanks immediately jumped from 1-2 traces/hour to 10-20+ traces/hour. This was the single biggest performance win of the entire overhaul.</p>
+                <p>Implemented a four-tier inference chain: Cerebras as primary (free tier, extremely fast), Together.ai as secondary fallback, Groq as tertiary, and local Ollama as the ultimate failsafe. Cloud inference eliminated the local bottleneck entirely. Tanks immediately jumped from 1-2 traces/hour to 10-20+ traces/hour. This was the single biggest performance win of the entire overhaul.</p>
             </div>
 
             <h3>Memory System: brain.md/soul.md (March 28-29)</h3>
@@ -234,7 +234,7 @@
                     <tr>
                         <td>Inference tier</td>
                         <td class="status-broken">Local Ollama only (1-2 traces/hr)</td>
-                        <td class="status-fixed">Groq→Cerebras→Ollama chain (10-20+ traces/hr)</td>
+                        <td class="status-fixed">Cerebras→Together.ai→Groq→Ollama chain (10-20+ traces/hr)</td>
                     </tr>
                     <tr>
                         <td>Memory system</td>
@@ -259,7 +259,7 @@
                     <tr>
                         <td>Inference concurrency</td>
                         <td class="status-broken">17 tanks at once, no queuing</td>
-                        <td class="status-fixed">Groq (unlimited), Ollama mutex + stagger + rotation</td>
+                        <td class="status-fixed">Cloud providers (Cerebras/Together.ai/Groq), Ollama mutex + stagger + rotation</td>
                     </tr>
                     <tr>
                         <td>Tank image</td>
@@ -342,7 +342,7 @@
             <h2>Key Decisions Made</h2>
             <p>Several architectural decisions were made during this overhaul that are worth recording for future reference. See the <a href="../../decision-tree/">Decision Tree</a> for the full log.</p>
 
-            <p><strong>Groq/Cerebras inference chain:</strong> Local inference was bottlenecking personality assessment. Cloud-first with fallback to local keeps us flexible and fast. Groq's free tier is absurdly generous and production-ready.</p>
+            <p><strong>Four-tier inference chain:</strong> Local inference was bottlenecking personality assessment. Cloud-first (Cerebras primary, Together.ai and Groq as fallbacks) with Ollama as local failsafe keeps us flexible and fast. Cerebras's free tier is extremely fast and production-ready.</p>
 
             <p><strong>Bounded memory (brain.md/soul.md):</strong> Unbounded trace accumulation was creating context explosion. Separating evolving memory (brain) from identity seed (soul) allows meaningful personality assessment without losing data or blowing context windows.</p>
 
@@ -364,7 +364,7 @@
             <div class="section-box">
                 <h3>System Status</h3>
                 <p><strong>Tanks:</strong> 17 specimens across 5 languages, all with static IPs, fresh timestamped baselines, and active research cycles. Each tank is generating 10-20+ traces per hour.</p>
-                <p><strong>Inference:</strong> Three-tier chain (Groq primary, Cerebras fallback, Ollama last resort) providing fast, reliable inference with automatic failover.</p>
+                <p><strong>Inference:</strong> Four-tier chain (Cerebras primary, Together.ai secondary, Groq tertiary, Ollama failsafe) providing fast, reliable inference with automatic failover.</p>
                 <p><strong>Memory:</strong> Each tank has brain.md (evolving memory) and soul.md (identity seed) for bounded, meaningful personality tracking.</p>
                 <p><strong>Librarian:</strong> In-character personality assessments producing natural, differentiated baseline data.</p>
                 <p><strong>Daemons:</strong> 21 deployed, all running with continuous loops, SLA tracking, and health monitoring.</p>

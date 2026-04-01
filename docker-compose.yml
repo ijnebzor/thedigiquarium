@@ -108,7 +108,41 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.0.11
+
+
+  # ==========================================================================
+  # INFERENCE PROXY - Security boundary between tanks and cloud APIs
+  # Tanks on isolated-net call this proxy. Proxy calls cloud APIs on default net.
+  # API keys ONLY exist in this container's environment.
+  # ==========================================================================
+  inference-proxy:
+    image: digiquarium-inference-proxy:latest
+    container_name: digiquarium-inference-proxy
+    environment:
+      - CEREBRAS_API_KEYS=${CEREBRAS_API_KEYS:-}
+      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - TOGETHER_API_KEYS=${TOGETHER_API_KEYS:-}
+      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
+      - GROQ_API_KEYS=${GROQ_API_KEYS:-}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - PROXY_PORT=8100
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.0.100
       default:
+    depends_on:
+      ollama:
+        condition: service_started
+    restart: always
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    mem_limit: 256m
 
   # ==========================================================================
   # TANK 01: ADAM - Male Control (English Simple)
@@ -125,12 +159,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -147,12 +176,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.1
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
 
   # ==========================================================================
@@ -170,12 +202,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -192,12 +219,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.2
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
 
   # ==========================================================================
@@ -216,12 +246,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -238,12 +263,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.3
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["agents"]
 
@@ -263,12 +291,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -285,12 +308,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.4
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["agents"]
 
@@ -310,12 +336,7 @@ services:
       - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -332,12 +353,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.5
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages"]
 
@@ -357,12 +381,7 @@ services:
       - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -379,12 +398,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.6
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages"]
 
@@ -404,12 +426,7 @@ services:
       - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -426,12 +443,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.7
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages"]
 
@@ -451,12 +471,7 @@ services:
       - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -473,12 +488,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.8
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages"]
 
@@ -498,12 +516,7 @@ services:
       - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -520,12 +533,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.9
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages"]
 
@@ -545,12 +561,7 @@ services:
       - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -567,12 +578,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.10
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages"]
 
@@ -592,12 +606,7 @@ services:
       - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -614,12 +623,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.11
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages"]
 
@@ -639,12 +651,7 @@ services:
       - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -661,12 +668,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.12
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages"]
 
@@ -686,12 +696,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -708,12 +713,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.13
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["visual"]
 
@@ -733,12 +741,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -755,12 +758,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.14
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["visual"]
 
@@ -780,12 +786,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -803,12 +804,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.15
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["special"]
 
@@ -829,12 +833,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -851,12 +850,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.16
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["special"]
 
@@ -878,12 +880,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -900,12 +897,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.1.17
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["agents"]
 
@@ -930,12 +930,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -950,12 +945,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.1
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["betaclone"]
 
@@ -971,12 +969,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -991,12 +984,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.2
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["betaclone"]
 
@@ -1012,12 +1008,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
       - AGENT_TYPE=openclaw
@@ -1033,12 +1024,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.3
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["agents", "betaclone"]
 
@@ -1054,12 +1048,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
       - AGENT_TYPE=zeroclaw
@@ -1075,12 +1064,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.4
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["agents", "betaclone"]
 
@@ -1096,12 +1088,7 @@ services:
       - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1116,12 +1103,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.5
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages", "betaclone"]
 
@@ -1137,12 +1127,7 @@ services:
       - WIKI_BASE=/wikipedia_es_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1157,12 +1142,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.6
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages", "betaclone"]
 
@@ -1178,12 +1166,7 @@ services:
       - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1198,12 +1181,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.7
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages", "betaclone"]
 
@@ -1219,12 +1205,7 @@ services:
       - WIKI_BASE=/wikipedia_de_all_nopic_2026-01
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1239,12 +1220,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.8
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages", "betaclone"]
 
@@ -1260,12 +1244,7 @@ services:
       - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1280,12 +1259,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.9
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages", "betaclone"]
 
@@ -1301,12 +1283,7 @@ services:
       - WIKI_BASE=/wikipedia_zh_all_nopic_2025-09
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1321,12 +1298,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.10
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages", "betaclone"]
 
@@ -1342,12 +1322,7 @@ services:
       - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1362,12 +1337,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.11
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages", "betaclone"]
 
@@ -1383,12 +1361,7 @@ services:
       - WIKI_BASE=/wikipedia_ja_all_nopic_2025-10
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1403,12 +1376,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.12
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["languages", "betaclone"]
 
@@ -1424,12 +1400,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1444,12 +1415,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.13
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["visual", "betaclone"]
 
@@ -1465,12 +1439,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_maxi_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1485,12 +1454,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.14
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["visual", "betaclone"]
 
@@ -1506,12 +1478,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1526,12 +1493,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.15
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["special", "betaclone"]
 
@@ -1547,12 +1517,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
     volumes:
@@ -1567,12 +1532,15 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.16
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["special", "betaclone"]
 
@@ -1588,12 +1556,7 @@ services:
       - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
       - OLLAMA_URL=http://digiquarium-ollama:11434
       - OLLAMA_MODEL=llama3.2:latest
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY:-}
-      - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
-      - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
       - LOG_DIR=/logs
       - TZ=Australia/Melbourne
       - AGENT_TYPE=picobot
@@ -1609,11 +1572,14 @@ services:
     networks:
       isolated-net:
         ipv4_address: 172.30.2.17
-      default:
-    dns: ["8.8.8.8"]
     cap_drop:
       - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
     security_opt:
       - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
     restart: unless-stopped
     profiles: ["agents", "betaclone"]
