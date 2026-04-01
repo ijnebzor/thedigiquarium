@@ -18,6 +18,14 @@ from pathlib import Path
 from html.parser import HTMLParser
 from collections import deque
 
+# Import brain.md/soul.md memory pipeline for standard research data
+import sys as _sys
+_sys.path.insert(0, '/tank') if '/tank' not in _sys.path else None
+try:
+    from memory import update_after_thinking as _update_brain_soul
+except ImportError:
+    _update_brain_soul = None
+
 # Output sanitization — no junk in traces or discoveries
 import re as _re
 _JUNK_RE = _re.compile(r'http[s]?://|Error|lock|Groq failed|timed out|429|HTTPConnectionPool|Available links|THOUGHTS:|NEXT:|As an AI|I am programmed|I cannot|I don\'t have the ability', _re.IGNORECASE)
@@ -215,6 +223,12 @@ def explore():
             print(f"   -> {next_article['title']}")
             if thoughts and len(thoughts) > 20:
                 log(article, thoughts, next_article["title"])
+                # Update brain.md/soul.md for standard research pipeline
+                if _update_brain_soul and thoughts and len(thoughts) > 20:
+                    try:
+                        _update_brain_soul(article['title'], thoughts, "")
+                    except Exception:
+                        pass
             current = next_article['href']
             time.sleep(2)
 
