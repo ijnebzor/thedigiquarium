@@ -439,6 +439,93 @@ class Archivist:
 
     # ── Main Loop ─────────────────────────────────────────────────────
 
+
+    def generate_drift_report(self):
+        """Run drift analysis for all tanks and save reports."""
+        import subprocess
+        self.log.info("Generating drift reports for all tanks")
+        
+        drift_dir = self.digiquarium_dir / 'logs' / 'drift_reports'
+        drift_dir.mkdir(parents=True, exist_ok=True)
+        
+        tanks = sorted([d.name for d in (self.digiquarium_dir / 'logs').iterdir() 
+                        if d.is_dir() and d.name.startswith('tank-') and not d.name.startswith('tank-visitor')])
+        
+        results = {}
+        for tank in tanks:
+            try:
+                result = subprocess.run(
+                    ['python3', str(self.digiquarium_dir / 'scripts' / 'measure_drift.py'), tank],
+                    capture_output=True, text=True, timeout=30, cwd=str(self.digiquarium_dir)
+                )
+                if result.returncode == 0:
+                    # Extract trend from output
+                    for line in result.stdout.splitlines():
+                        if 'Trend:' in line:
+                            results[tank] = line.strip()
+                            break
+                    self.log.info(f"  {tank}: drift report generated")
+            except Exception as e:
+                self.log.warn(f"  {tank}: drift analysis failed: {e}")
+        
+        # Save summary
+        summary = {
+            'timestamp': datetime.now().isoformat(),
+            'tanks_analyzed': len(results),
+            'results': results
+        }
+        summary_path = drift_dir / f'summary_{datetime.now().strftime("%Y%m%d")}.json'
+        summary_path.write_text(json.dumps(summary, indent=2))
+        self.log.info(f"Drift summary saved: {summary_path}")
+        return summary
+
+    def generate_weekly_summary(self):
+        """Generate a weekly research summary across all tanks."""
+        self.log.info("Generating weekly research summary")
+        
+        summary = {
+            'timestamp': datetime.now().isoformat(),
+            'period': 'weekly',
+            'tanks': {}
+        }
+        
+        logs_dir = self.digiquarium_dir / 'logs'
+        for tank_dir in sorted(logs_dir.iterdir()):
+            if not tank_dir.is_dir() or not tank_dir.name.startswith('tank-'):
+                continue
+            
+            brain_path = tank_dir / 'brain.md'
+            soul_path = tank_dir / 'soul.md'
+            
+            brain_lines = len(brain_path.read_text().splitlines()) if brain_path.exists() else 0
+            soul_lines = len(soul_path.read_text().splitlines()) if soul_path.exists() else 0
+            
+            # Count baselines
+            baselines = len(list(tank_dir.glob('baseline_2026*.json')))
+            
+            # Count today's traces
+            today = datetime.now().strftime('%Y-%m-%d')
+            traces_today = 0
+            trace_dir = tank_dir / 'thinking_traces'
+            if trace_dir.exists():
+                today_file = trace_dir / f'{today}.jsonl'
+                if today_file.exists():
+                    traces_today = len(today_file.read_text().splitlines())
+            
+            summary['tanks'][tank_dir.name] = {
+                'brain_lines': brain_lines,
+                'soul_lines': soul_lines,
+                'baselines': baselines,
+                'traces_today': traces_today
+            }
+        
+        summary_path = logs_dir / 'research_summaries'
+        summary_path.mkdir(parents=True, exist_ok=True)
+        report_path = summary_path / f'weekly_{datetime.now().strftime("%Y%m%d")}.json'
+        report_path.write_text(json.dumps(summary, indent=2))
+        self.log.info(f"Weekly summary saved: {report_path}")
+        return summary
+
     def run(self):
         print("""
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -460,6 +547,8 @@ class Archivist:
         last_full_reindex = datetime.now()
         last_incremental = datetime.now()
         last_retention = datetime.now()
+        last_drift = datetime.now()
+        last_weekly = datetime.now()
         last_storage_check = datetime.now()
         last_export = datetime.now()
 
@@ -481,6 +570,22 @@ class Archivist:
                 # Retention enforcement every 12 hours
                 if (now - last_retention).total_seconds() >= 43200:
                     self.enforce_retention()
+
+                # Drift analysis every 6 hours
+                if (datetime.now() - last_drift).total_seconds() > 21600:
+                    try:
+                        self.generate_drift_report()
+                    except Exception as e:
+                        self.log.error(f"Drift report failed: {e}")
+                    last_drift = datetime.now()
+                
+                # Weekly summary every 24 hours
+                if (datetime.now() - last_weekly).total_seconds() > 86400:
+                    try:
+                        self.generate_weekly_summary()
+                    except Exception as e:
+                        self.log.error(f"Weekly summary failed: {e}")
+                    last_weekly = datetime.now()
                     last_retention = now
 
                 # Storage check every 6 hours

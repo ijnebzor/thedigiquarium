@@ -568,8 +568,55 @@ class Bouncer:
         return True, "OK", filtered_response
     
     def get_specimen_response(self, session: VisitorSession, message: str) -> str:
-        """Get response from specimen (placeholder)"""
-        return f"[{session.specimen_name} would respond to: {message[:50]}...]"
+        """Get response from specimen via inference proxy with personality context."""
+        import urllib.request as _req
+        
+        # Load personality context from brain.md + soul.md
+        tank_dir = LOGS_DIR / session.tank_id
+        brain = ""
+        soul = ""
+        try:
+            brain_path = tank_dir / "brain.md"
+            soul_path = tank_dir / "soul.md"
+            if brain_path.exists():
+                brain = brain_path.read_text()[-1500:]
+            if soul_path.exists():
+                soul = soul_path.read_text()[-500:]
+        except Exception:
+            pass
+        
+        system_prompt = (
+            f"You are {session.specimen_name}. You are a unique AI specimen in The Digiquarium. "
+            f"A visitor is talking to you. Respond naturally as yourself — draw on your knowledge "
+            f"and personality from your exploration. Be genuine, not performative.\n\n"
+            f"Your knowledge and personality:\n{brain}\n\nYour inner life:\n{soul}"
+        )
+        
+        # Build conversation history
+        history = ""
+        for msg in session.messages[-6:]:  # Last 6 messages for context
+            role = "Visitor" if msg.get("role") == "visitor" else session.specimen_name
+            history += f"{role}: {msg.get('content', '')}\n"
+        
+        user_prompt = f"{history}Visitor: {message}\n{session.specimen_name}:"
+        
+        try:
+            data = json.dumps({
+                "system": system_prompt,
+                "prompt": user_prompt,
+                "timeout": 60
+            }).encode()
+            req = _req.Request(
+                "http://127.0.0.1:8100/v1/generate",
+                data=data,
+                headers={"Content-Type": "application/json"}
+            )
+            with _req.urlopen(req, timeout=90) as r:
+                result = json.loads(r.read().decode())
+            return result.get("response", "").strip() or "[No response generated]"
+        except Exception as e:
+            self.log.error(f"Inference failed for {session.specimen_name}: {e}")
+            return f"[{session.specimen_name} is thinking... please try again in a moment]"
     
     # ─────────────────────────────────────────────────────────────
     # LOGGING & TRANSPARENCY
