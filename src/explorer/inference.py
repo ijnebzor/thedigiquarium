@@ -25,7 +25,7 @@ OLLAMA_MODEL = os.getenv('OLLAMA_MODEL', 'llama3.2:latest')
 
 def generate(system_prompt: str, user_prompt: str, timeout: int = 60) -> str:
     """Generate via inference proxy (cloud providers) with Ollama fallback.
-    The proxy handles Cerebras/Together/Groq key rotation and rate limiting.
+    The proxy handles Cerebras/Groq key rotation and rate limiting.
     Tanks never see API keys or touch the internet."""
 
     # Try the inference proxy first (routes to cloud providers)
