@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T19:32:45.610971",
+  "timestamp": "2026-04-02T20:36:04.947384",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 25
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 1874,
+    "running": 17,
+    "traces_today": 2589,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Lipid bilayer",
-        "traces": 323
+        "article": "Elementary particle",
+        "traces": 394
       },
       {
         "name": "tank-02-eve",
-        "article": "Cryptography",
-        "traces": 246
+        "article": "Decimal",
+        "traces": 300
       },
       {
         "name": "tank-03-cain",
-        "article": "Queer",
-        "traces": 247
+        "article": "Neogene",
+        "traces": 359
       },
       {
         "name": "tank-04-abel",
         "article": "Allotropy",
-        "traces": 784
+        "traces": 1186
       },
       {
         "name": "tank-05-juan",
-        "article": "Argumento ad verecundiam",
-        "traces": 274
+        "article": "Campo electromagn\u00c3\u00a9tico",
+        "traces": 350
       }
     ]
   },
@@ -93,26 +93,26 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-04-02 18:19:11 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
-    "2026-04-02 18:19:37 \ud83d\udce7 [OVERSEER] Escalating INC-20260402181911 to human operator",
-    "2026-04-02 18:19:37 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
-    "2026-04-02 18:19:37 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-02 18:19:40 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
-    "2026-04-02 18:19:40 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-04-02 18:19:40 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Restarting (1) 6 seconds ago']",
-    "2026-04-02 18:19:40 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)']",
-    "2026-04-02 18:19:40 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations",
-    "2026-04-02 18:49:40 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-02 18:49:43 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
-    "2026-04-02 18:49:43 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-04-02 18:49:43 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Restarting (1) 2 seconds ago']",
     "2026-04-02 18:49:43 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 2 instances (zombie leak)']",
     "2026-04-02 18:49:43 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations",
     "2026-04-02 19:19:43 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-04-02 19:19:45 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
     "2026-04-02 19:19:45 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
     "2026-04-02 19:19:45 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 3 instances (zombie leak)']",
-    "2026-04-02 19:19:45 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations"
+    "2026-04-02 19:19:45 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations",
+    "2026-04-02 19:49:46 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER] Full system audit found 4 issues",
+    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-visitor-01-aria is Exited (137) 8 minutes ago', 'tank-visitor-03-luna is Exited (137) 8 minutes ago', 'tank-visitor-02-felix is Exited (137) 8 minutes ago']",
+    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 3 instances (zombie leak)']",
+    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER]   - sla_compliance: ['scheduler: SLA violation (took 5479.14s, target 1800s)']",
+    "2026-04-02 19:49:51 \ud83d\udd0d [OVERSEER] SLA compliance: 18 compliant, 1 non-compliant, 1 total violations",
+    "2026-04-02 20:19:52 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-02 20:19:55 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
+    "2026-04-02 20:19:55 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-04-02 20:19:55 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-visitor-01-aria is Exited (137) 38 minutes ago', 'tank-visitor-03-luna is Exited (137) 38 minutes ago', 'tank-visitor-02-felix is Exited (137) 38 minutes ago']",
+    "2026-04-02 20:19:55 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 3 instances (zombie leak)']",
+    "2026-04-02 20:19:55 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations"
   ],
   "issues": [
     "caretaker unhealthy",
