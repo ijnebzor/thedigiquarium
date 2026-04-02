@@ -126,7 +126,7 @@ try:
 except Exception as e:
     # Fallback: direct Ollama
     import urllib.request, json
-    data = json.dumps({{"model": os.getenv("OLLAMA_MODEL", "llama3.2:latest"), "prompt": '{escaped_user}', "system": '{escaped_system}', "stream": False, "options": {{"temperature": 0.8, "num_predict": 256}}}}).encode()
+    data = json.dumps({{"model": os.getenv("OLLAMA_MODEL", "llama3.2:latest"), "prompt": '{escaped_user}', "system": '{escaped_system}', "stream": False, "options": {{"temperature": 0.8, "num_predict": 1024}}}}).encode()
     req = urllib.request.Request(os.getenv("OLLAMA_URL", "http://digiquarium-ollama:11434") + "/api/generate", data=data, headers={{"Content-Type": "application/json"}})
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
@@ -207,9 +207,6 @@ def run_congregation(topic, participants, turns=TURNS_PER_SPECIMEN):
             log(f"     💬 {name} thinking...")
             response = ask_specimen(tank_id, system_prompt, user_prompt)
 
-            # Trim response to reasonable length
-            if len(response) > 500:
-                response = response[:497] + "..."
 
             transcript.append({
                 'time': datetime.now().isoformat(),
