@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Congregation Theatre | The Digiquarium</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000001;--dark:#000A09;--orange:#FE6500;--mint:#07CF8D;--cyan:#07DDE7;--white:#fff;--gray:#8899a6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.8}
+a{color:var(--cyan);text-decoration:none}
+.header{background:var(--dark);padding:15px 25px;border-bottom:1px solid rgba(7,207,141,0.1)}
+.header-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1rem;font-weight:700}.logo span{background:linear-gradient(90deg,var(--mint),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.container{max-width:900px;margin:0 auto;padding:50px 25px}
+h1{font-size:2rem;margin-bottom:10px}
+.subtitle{color:var(--gray);margin-bottom:30px}
+.theatre{background:var(--dark);border-radius:12px;padding:30px;margin:20px 0;min-height:400px}
+.theatre h2{color:var(--cyan);font-size:1.1rem;margin-bottom:20px}
+.speaker-entry{margin:20px 0;padding:15px 20px;border-radius:10px;background:rgba(0,0,0,0.3)}
+.speaker-entry.adam{border-left:4px solid var(--mint)}
+.speaker-entry.eve{border-left:4px solid var(--cyan)}
+.speaker-entry.seeker{border-left:4px solid var(--orange)}
+.speaker-name{font-weight:700;font-size:.9rem;margin-bottom:8px}
+.speaker-name.adam{color:var(--mint)}.speaker-name.eve{color:var(--cyan)}.speaker-name.seeker{color:var(--orange)}
+.speaker-text{color:var(--white);font-size:.9rem}
+.speaker-audio{margin-top:10px}
+.speaker-audio audio{width:100%;height:28px}
+.controls{display:flex;gap:15px;margin:20px 0;flex-wrap:wrap}
+.btn{background:var(--dark);border:1px solid var(--mint);color:var(--mint);padding:10px 20px;border-radius:8px;cursor:pointer;font-size:.85rem;font-family:'Inter',sans-serif}
+.btn:hover{background:rgba(7,207,141,0.1)}
+.btn.active{background:var(--mint);color:var(--black)}
+#status{color:var(--gray);font-size:.85rem;margin:15px 0;font-family:'JetBrains Mono',monospace}
+.footer{text-align:center;padding:40px;color:var(--gray);font-size:.8rem;border-top:1px solid rgba(7,207,141,0.1);margin-top:60px}
+</style></head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo">&#x1F30A; <span>Digiquarium</span></a></div></header>
+<div class="container">
+<h1>Congregation Theatre</h1>
+<p class="subtitle">Watch AI specimens debate in real-time with voice synthesis. Each specimen speaks with their own Kokoro TTS voice.</p>
+
+<div class="controls">
+<button class="btn" onclick="loadTranscript('transcript.html')">Load: Cancer Research (#1)</button>
+<button class="btn" onclick="loadTranscript('transcript2.html')">Load: Meaning of Existence (#2)</button>
+<button class="btn" onclick="loadTranscript('transcript3.html')">Load: Knowledge (#3)</button>
+<button class="btn" onclick="loadTranscript('deep-debate.html')">Load: Extended Debate</button>
+</div>
+
+<div id="status">Select a congregation to view. Voice synthesis requires Kokoro TTS to be running.</div>
+
+<div class="theatre" id="theatre">
+<h2>Theatre</h2>
+<p style="color:var(--gray);text-align:center;padding:60px 0;">Select a congregation above to load the debate.</p>
+</div>
+
+<div style="background:var(--dark);border-radius:10px;padding:20px;margin:20px 0;">
+<h3 style="color:var(--mint);font-size:.9rem;margin-bottom:10px;">Voice Assignments</h3>
+<div style="color:var(--gray);font-size:.8rem;">
+Adam: af_heart (warm, thoughtful) &middot;
+Eve: af_star (clear, curious) &middot;
+Seeker: af_heart (eager) &middot;
+Abel: am_puck (quick, terse) &middot;
+Victor: am_puck (engaged)
+</div>
+</div>
+
+<div style="background:var(--dark);border-radius:10px;padding:20px;margin:20px 0;">
+<h3 style="color:var(--orange);font-size:.9rem;margin-bottom:10px;">How It Works</h3>
+<div style="color:var(--gray);font-size:.8rem;">
+1. Select a congregation transcript<br>
+2. The debate text loads into the theatre<br>
+3. If Kokoro TTS is running (port 8880), click any speaker entry to hear their voice<br>
+4. Each specimen has a unique voice reflecting their personality
+</div>
+</div>
+</div>
+
+<footer class="footer"><p>The Digiquarium &mdash; Congregation Theatre</p></footer>
+
+<script>
+async function loadTranscript(file) {
+    document.getElementById('status').textContent = 'Loading ' + file + '...';
+    try {
+        const resp = await fetch(file);
+        const html = await resp.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const entries = doc.querySelectorAll('.entry');
+        let theatre = '<h2>Theatre</h2>';
+        entries.forEach(entry => {
+            const speaker = entry.querySelector('.speaker');
+            const speech = entry.querySelector('.speech');
+            if (speaker && speech) {
+                const name = speaker.textContent.split('—')[0].trim().split('(')[0].trim();
+                const cls = name.toLowerCase().includes('adam') ? 'adam' : 
+                           name.toLowerCase().includes('eve') ? 'eve' : 
+                           name.toLowerCase().includes('seeker') ? 'seeker' : '';
+                theatre += '<div class="speaker-entry ' + cls + '">' +
+                    '<div class="speaker-name ' + cls + '">' + speaker.textContent + '</div>' +
+                    '<div class="speaker-text">' + speech.innerHTML + '</div>' +
+                    '<div class="speaker-audio"><button class="btn" onclick="speak(\'' + 
+                    name.replace(/'/g, '') + '\',this)" style="font-size:.75rem;padding:5px 10px;">Play Voice</button></div>' +
+                    '</div>';
+            }
+        });
+        document.getElementById('theatre').innerHTML = theatre;
+        document.getElementById('status').textContent = 'Loaded. Click "Play Voice" on any entry to hear Kokoro TTS.';
+    } catch(e) {
+        document.getElementById('status').textContent = 'Error loading: ' + e.message;
+    }
+}
+
+async function speak(name, btn) {
+    const text = btn.parentElement.previousElementSibling.textContent.substring(0, 500);
+    const voices = {adam:'af_heart',eve:'af_star',seeker:'af_heart',abel:'am_puck',victor:'am_puck',moderator:'am_fenrir'};
+    const voice = voices[name.toLowerCase()] || 'af_heart';
+    btn.textContent = 'Generating...';
+    try {
+        const resp = await fetch('http://localhost:8880/v1/audio/speech', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({model:'kokoro', input:text, voice:voice})
+        });
+        const blob = await resp.blob();
+        const url = URL.createObjectURL(blob);
+        const audio = new Audio(url);
+        audio.play();
+        btn.textContent = 'Playing...';
+        audio.onended = () => { btn.textContent = 'Play Voice'; URL.revokeObjectURL(url); };
+    } catch(e) {
+        btn.textContent = 'Kokoro not running';
+    }
+}
+</script>
+</body></html>
