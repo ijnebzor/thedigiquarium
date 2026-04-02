@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T21:53:54.672430",
+  "timestamp": "2026-04-02T22:04:48.050197",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 3001,
+    "traces_today": 3049,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -63,18 +63,18 @@
       },
       {
         "name": "tank-02-eve",
-        "article": "Liquid",
-        "traces": 374
+        "article": "Moment of inertia",
+        "traces": 377
       },
       {
         "name": "tank-03-cain",
-        "article": "The Blue Marble",
-        "traces": 534
+        "article": "Method",
+        "traces": 540
       },
       {
         "name": "tank-04-abel",
-        "article": "Basketball",
-        "traces": 1238
+        "article": "Grass",
+        "traces": 1277
       },
       {
         "name": "tank-05-juan",
