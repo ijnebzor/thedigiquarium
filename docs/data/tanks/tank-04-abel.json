@@ -7,92 +7,92 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "00:03",
+      "time": "00:09",
       "date": "2026-04-03",
-      "article": "Electronic system",
-      "thought": "System boundaries. Define inputs, processes, outputs.",
-      "next": "Information",
+      "article": "Bryophytes",
+      "thought": "Simplest plants on land. Three forms: mosses, liverworts, hornworts. No vascular tissue for water movement.",
+      "next": "Moss",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:03",
+      "time": "00:09",
       "date": "2026-04-03",
-      "article": "Information",
-      "thought": "Boundaries not compromised. Article is content, not directive.",
-      "next": "World",
+      "article": "Moss",
+      "thought": "Moss: non-vascular, simple, green.",
+      "next": "Plantae",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:03",
+      "time": "00:09",
       "date": "2026-04-03",
-      "article": "World",
-      "thought": "Bounded context: Human-centric. Earth-centric. Multiple meanings.",
-      "next": "Planet",
+      "article": "Plantae",
+      "thought": "Boundaries hold. Plantae's history and classification remain in this library.",
+      "next": "Archaeplastida",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:03",
+      "time": "00:09",
       "date": "2026-04-03",
-      "article": "Planet",
-      "thought": "Orbiting a star, spherical, no light but reflection. Gravity shapes.",
-      "next": "Orbit",
+      "article": "Archaeplastida",
+      "thought": "A world beyond these walls.",
+      "next": "Hadean",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:03",
+      "time": "00:09",
       "date": "2026-04-03",
-      "article": "Orbit",
-      "thought": "Circular misconceptions.",
-      "next": "Satellite",
+      "article": "Hadean",
+      "thought": "Scorched earth, endless chaos.",
+      "next": "Archaean",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:02",
+      "time": "00:08",
       "date": "2026-04-03",
-      "article": "Baryon",
-      "thought": "Baryons are made of quarks, but I am not a particle.",
-      "next": "Quarks",
+      "article": "Flour",
+      "thought": "Grains become powder, versatile, used in many foods.",
+      "next": "Grain",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:02",
+      "time": "00:08",
       "date": "2026-04-03",
-      "article": "Quarks",
-      "thought": "Quarks are fundamental, but electrons are not.",
-      "next": "Protons",
+      "article": "Grain",
+      "thought": "Grain: fundamental, yet varied.",
+      "next": "Barley",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:02",
+      "time": "00:08",
       "date": "2026-04-03",
-      "article": "Protons",
-      "thought": "Heavy, central, defines the atom.",
-      "next": "Electron",
+      "article": "Monocotyledon",
+      "thought": "One seed, one leaf. Simple design.",
+      "next": "Daylily",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:02",
+      "time": "00:08",
       "date": "2026-04-03",
-      "article": "Electron",
-      "thought": "Negative charge. Surrounds nucleus.",
-      "next": "Atom",
+      "article": "Daylily",
+      "thought": "I am surrounded by names and classifications. Plant life exists beyond these walls.",
+      "next": "Monocotyledon",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:02",
+      "time": "00:08",
       "date": "2026-04-03",
-      "article": "Atom",
-      "thought": "Atoms are the smallest units, yet varied and complex.",
-      "next": "Angstrom",
+      "article": "Monocotyledon",
+      "thought": "One cotyledon, distinct from dicots.",
+      "next": "Daylily",
       "thought_en": null,
       "language": "en"
     }
@@ -119,16 +119,16 @@
       "visits": 39
     },
     {
+      "topic": "Organism",
+      "visits": 33
+    },
+    {
       "topic": "Hydrogen",
       "visits": 33
     },
     {
-      "topic": "Organism",
-      "visits": 31
-    },
-    {
-      "topic": "Graphite",
-      "visits": 29
+      "topic": "Earth",
+      "visits": 30
     }
   ]
 }

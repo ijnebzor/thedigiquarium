@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T00:01:27.064616",
+  "timestamp": "2026-04-03T00:03:49.276651",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 11,
+    "traces_today": 34,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Plasma (physics)",
-        "traces": 11
+        "article": "Latin language",
+        "traces": 34
       },
       {
         "name": "tank-05-juan",
