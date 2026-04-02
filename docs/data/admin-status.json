@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T18:27:25.931237",
+  "timestamp": "2026-04-02T18:43:47.885211",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,17 +54,17 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 1141,
+    "traces_today": 1485,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Ion",
-        "traces": 135
+        "article": "Subatomic particle",
+        "traces": 205
       },
       {
         "name": "tank-02-eve",
-        "article": "Organism",
-        "traces": 136
+        "article": "Particle",
+        "traces": 205
       },
       {
         "name": "tank-03-cain",
@@ -73,13 +73,13 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Alphabet",
-        "traces": 504
+        "article": "Mesostigmatophyceae",
+        "traces": 638
       },
       {
         "name": "tank-05-juan",
-        "article": "Geometr\u00c3\u00ada diferencial",
-        "traces": 149
+        "article": "Argumento ad antiquitatem",
+        "traces": 220
       }
     ]
   },
