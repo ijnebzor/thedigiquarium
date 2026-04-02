@@ -59,7 +59,7 @@ def _word_set(text: str) -> set:
     return set(re.findall(r'\w+', text.lower()))
 
 
-def _is_similar(new_text: str, existing_text: str, threshold: float = 0.7) -> bool:
+def _is_similar(new_text: str, existing_text: str, threshold: float = 0.6) -> bool:
     """Check if two texts are too similar (>threshold word overlap)."""
     new_words = _word_set(new_text)
     existing_words = _word_set(existing_text)
