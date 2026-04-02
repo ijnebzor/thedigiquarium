@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T18:11:13.587062",
+  "timestamp": "2026-04-02T18:27:25.931237",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -45,8 +45,8 @@
     },
     "psych": {
       "running": true,
-      "count": 1,
-      "healthy": true
+      "count": 2,
+      "healthy": false
     }
   },
   "containers": {
@@ -54,17 +54,17 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 740,
+    "traces_today": 1141,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Vase",
-        "traces": 54
+        "article": "Ion",
+        "traces": 135
       },
       {
         "name": "tank-02-eve",
-        "article": "Civilization",
-        "traces": 50
+        "article": "Organism",
+        "traces": 136
       },
       {
         "name": "tank-03-cain",
@@ -73,13 +73,13 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Lystrosaurus",
-        "traces": 351
+        "article": "Alphabet",
+        "traces": 504
       },
       {
         "name": "tank-05-juan",
-        "article": "Guerra civil espa\u00c3\u00b1ola",
-        "traces": 68
+        "article": "Geometr\u00c3\u00ada diferencial",
+        "traces": 149
       }
     ]
   },
@@ -89,22 +89,10 @@
   "overseer": {
     "running": true,
     "last_audit_healthy": false,
-    "active_incidents": 0,
+    "active_incidents": 2,
     "auto_remediations": 0
   },
   "logs": [
-    "NameError: name 'main' is not defined. Did you mean: 'min'?",
-    "Traceback (most recent call last):",
-    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
-    "main()",
-    "^^^^",
-    "NameError: name 'main' is not defined. Did you mean: 'min'?",
-    "2026-04-02 17:49:05 \u2139\ufe0f [OVERSEER] THE OVERSEER v2.0 initialized",
-    "2026-04-02 17:49:05 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
-    "2026-04-02 17:49:05 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
-    "2026-04-02 17:49:05 \u2139\ufe0f [OVERSEER] Cycle interval: 1800s (30 min)",
-    "2026-04-02 17:49:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-02 17:49:08 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
     "2026-04-02 17:49:08 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
     "2026-04-02 17:49:08 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'sentinel not running', 'scheduler not running', 'psych not running']",
     "2026-04-02 17:49:08 \ud83d\udd0d [OVERSEER] SLA compliance: 12 compliant, 0 non-compliant, 1 total violations",
@@ -112,9 +100,22 @@
     "2026-04-02 17:49:11 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
     "2026-04-02 17:49:11 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
     "2026-04-02 17:49:11 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'sentinel not running', 'scheduler not running', 'psych not running']",
-    "2026-04-02 17:49:11 \ud83d\udd0d [OVERSEER] SLA compliance: 12 compliant, 0 non-compliant, 1 total violations"
+    "2026-04-02 17:49:11 \ud83d\udd0d [OVERSEER] SLA compliance: 12 compliant, 0 non-compliant, 1 total violations",
+    "2026-04-02 18:19:11 \u26a0\ufe0f [OVERSEER] Escalation from ollama_watcher: Proxy container unrecoverable after 3 restart attempts",
+    "2026-04-02 18:19:11 \ud83d\udea8 [OVERSEER] Incident created: INC-20260402181911",
+    "2026-04-02 18:19:11 \ud83d\udd27 [OVERSEER] Attempting auto-remediation for: Proxy container unrecoverable after 3 restart attempts",
+    "2026-04-02 18:19:11 \ud83d\udd27 [OVERSEER] Remediating Ollama proxy",
+    "2026-04-02 18:19:37 \ud83d\udce7 [OVERSEER] Escalating INC-20260402181911 to human operator",
+    "2026-04-02 18:19:37 \u274c [OVERSEER] Failed to send email - writing to alerts directory instead",
+    "2026-04-02 18:19:37 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-02 18:19:40 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
+    "2026-04-02 18:19:40 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-04-02 18:19:40 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-03-cain is Restarting (1) 6 seconds ago']",
+    "2026-04-02 18:19:40 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)']",
+    "2026-04-02 18:19:40 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations"
   ],
   "issues": [
-    "caretaker unhealthy"
+    "caretaker unhealthy",
+    "psych unhealthy"
   ]
 }
