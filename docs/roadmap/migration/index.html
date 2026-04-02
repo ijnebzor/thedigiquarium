@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration Plan | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .container { max-width: 800px; margin: 0 auto; padding: 50px 25px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        h2 { color: var(--cyan); font-size: 1.2rem; margin: 40px 0 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7,207,141,0.1); }
+        h3 { color: var(--mint); font-size: 1rem; margin: 25px 0 10px; }
+        .subtitle { color: var(--gray); font-size: 0.95rem; margin-bottom: 30px; }
+        .step { background: var(--dark); border-radius: 10px; padding: 20px 25px; margin: 15px 0; border-left: 4px solid var(--mint); }
+        .step.important { border-left-color: var(--orange); }
+        .step h3 { margin: 0 0 8px; color: var(--mint); }
+        .step.important h3 { color: var(--orange); }
+        .step p { color: var(--gray); font-size: 0.9rem; margin-bottom: 8px; }
+        code { font-family: 'JetBrains Mono', monospace; background: rgba(7,207,141,0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+        pre { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 0.8rem; line-height: 1.6; margin: 10px 0; color: var(--mint); }
+        .hw { background: var(--dark); border-radius: 10px; padding: 20px; margin: 15px 0; }
+        .hw-name { font-weight: 600; color: var(--white); }
+        .hw-spec { color: var(--gray); font-size: 0.85rem; }
+        .hw-role { color: var(--orange); font-size: 0.85rem; margin-top: 5px; }
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7,207,141,0.1); margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">&#x1F30A; <span>Digiquarium</span></a>
+            <a href="/roadmap/" style="color:var(--gray);font-size:0.85rem;">&larr; Roadmap</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Fleet Migration Plan</h1>
+        <p class="subtitle">Everything needed to set up the multi-device Digiquarium fleet.</p>
+
+        <h2>Hardware Fleet</h2>
+        <div class="hw">
+            <div class="hw-name">Mac Mini Late 2014 (A1347)</div>
+            <div class="hw-spec">Intel i7 Dual-Core 3.0GHz &middot; 16GB RAM &middot; 128GB SSD &middot; macOS Monterey 12.7.6</div>
+            <div class="hw-role">Secondary Research Host (always-on, headless)</div>
+        </div>
+        <div class="hw">
+            <div class="hw-name">MacBook Pro 2018</div>
+            <div class="hw-spec">Intel i5 Quad-Core 2.3GHz &middot; 8GB RAM &middot; 657GB SSD &middot; macOS Sequoia</div>
+            <div class="hw-role">Monitoring &amp; Orchestration</div>
+        </div>
+        <div class="hw">
+            <div class="hw-name">Intel NUC (current host)</div>
+            <div class="hw-spec">i7-7500U &middot; 16GB RAM &middot; 1TB SSD &middot; WSL2 Ubuntu 24.04</div>
+            <div class="hw-role">Primary Research Host (20 tanks currently)</div>
+        </div>
+
+        <h2>Mac Mini Setup</h2>
+        <p style="color:var(--gray);font-size:0.9rem;">Run these commands in Terminal on the Mac Mini. Each step should complete before moving to the next.</p>
+
+        <div class="step">
+            <h3>Step 1: Install Homebrew</h3>
+            <pre>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</pre>
+            <p>Follow the prompts. After install, run the commands it tells you to add Homebrew to your PATH.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: Install Docker Desktop</h3>
+            <pre>brew install --cask docker</pre>
+            <p>Open Docker Desktop from Applications after install. It needs to run once to complete setup.</p>
+            <p>Go to Settings &rarr; Resources &rarr; set Memory to at least 8GB (of 16GB available).</p>
+        </div>
+
+        <div class="step important">
+            <h3>Step 3: Install Tailscale</h3>
+            <pre>brew install --cask tailscale</pre>
+            <p>Open Tailscale from the menu bar and sign in. This creates the encrypted mesh network.</p>
+            <pre>tailscale up</pre>
+            <p>Note the Tailscale IP address it assigns (e.g., 100.x.x.x). Share this with me.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 4: Install Rust (for OpenFang + Rustunnel)</h3>
+            <pre>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</pre>
+            <p>Choose "1) Proceed with standard installation" when prompted. Then:</p>
+            <pre>source "$HOME/.cargo/env"
+rustc --version</pre>
+        </div>
+
+        <div class="step">
+            <h3>Step 5: Install Node.js 22 (for GuardianAgent)</h3>
+            <pre>brew install node@22</pre>
+        </div>
+
+        <div class="step">
+            <h3>Step 6: Clone the Digiquarium repo</h3>
+            <pre>cd ~
+git clone https://github.com/ijnebzor/thedigiquarium.git digiquarium
+cd digiquarium</pre>
+        </div>
+
+        <div class="step">
+            <h3>Step 7: Copy the .env file</h3>
+            <p>The .env file contains API keys and isn't in git. Copy it from the NUC via Tailscale:</p>
+            <pre># On the Mac Mini (after both devices are on Tailscale):
+scp ijneb@[NUC_TAILSCALE_IP]:/home/ijneb/digiquarium/.env ~/digiquarium/.env</pre>
+            <p>Or create it manually with the same API keys.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 8: Verify Docker works</h3>
+            <pre>docker run hello-world</pre>
+            <p>If this prints "Hello from Docker!" you're ready.</p>
+        </div>
+
+        <h2>MacBook Pro 2018 Setup</h2>
+        <p style="color:var(--gray);font-size:0.9rem;">The MacBook Pro is the monitoring station. Lighter setup.</p>
+
+        <div class="step">
+            <h3>Step 1: Install Tailscale</h3>
+            <pre>brew install --cask tailscale
+tailscale up</pre>
+            <p>This connects the MacBook to the same mesh network as the Mac Mini and NUC.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: Install Claude Desktop</h3>
+            <p>Download from <a href="https://claude.ai/download">claude.ai/download</a>. This will be the management interface for the entire fleet via MCP.</p>
+        </div>
+
+        <h2>NUC Setup (Tailscale)</h2>
+        <p style="color:var(--gray);font-size:0.9rem;">The NUC needs Tailscale to join the mesh. I'll handle this remotely once you confirm the Mac Mini is on Tailscale.</p>
+
+        <div class="step">
+            <h3>Install Tailscale on WSL2</h3>
+            <pre>curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up</pre>
+            <p>Note: <code>sudo</code> is slow on this WSL2 instance. May need to be run from the Windows host instead.</p>
+        </div>
+
+        <h2>After All Devices Are Connected</h2>
+
+        <div class="step important">
+            <h3>What happens next (I handle this remotely)</h3>
+            <p>Once all three devices are on Tailscale, I will:</p>
+            <p>1. Deploy the Digiquarium MCP server on the Mac Mini</p>
+            <p>2. Build OpenFang (Rust compile, ~15 min on Mac Mini)</p>
+            <p>3. Build Rustunnel (Rust compile)</p>
+            <p>4. Transfer tank data (brain.md, soul.md, baselines) from NUC &rarr; Mac Mini</p>
+            <p>5. Start tanks on Mac Mini, verify they resume correctly</p>
+            <p>6. Configure cross-device MCP management</p>
+            <p>7. Run security audit on the expanded fleet</p>
+        </div>
+
+        <h2>Verification Checklist</h2>
+        <div class="step">
+            <h3>Before migration, confirm:</h3>
+            <p>&#9744; Mac Mini: Homebrew installed</p>
+            <p>&#9744; Mac Mini: Docker Desktop running</p>
+            <p>&#9744; Mac Mini: Tailscale connected (note IP)</p>
+            <p>&#9744; Mac Mini: Rust installed (<code>rustc --version</code> works)</p>
+            <p>&#9744; Mac Mini: Node 22 installed (<code>node --version</code> shows v22.x)</p>
+            <p>&#9744; Mac Mini: Repo cloned</p>
+            <p>&#9744; Mac Mini: .env file in place</p>
+            <p>&#9744; Mac Mini: <code>docker run hello-world</code> works</p>
+            <p>&#9744; MacBook Pro: Tailscale connected</p>
+            <p>&#9744; NUC: Tailscale connected</p>
+            <p>&#9744; All three devices can ping each other via Tailscale IPs</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>The Digiquarium &mdash; Fleet Migration Plan</p>
+    </footer>
+</body>
+</html>
