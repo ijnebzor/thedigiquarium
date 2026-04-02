@@ -38,12 +38,7 @@ PROVIDERS = {
         'model': os.getenv('CEREBRAS_MODEL', 'llama3.1-8b'),
         'rate_limit': 2,
     },
-    'together': {
-        'url': 'https://api.together.xyz/v1/chat/completions',
-        'keys': load_keys('TOGETHER_API_KEYS') or load_keys('TOGETHER_API_KEY'),
-        'model': os.getenv('TOGETHER_MODEL', 'meta-llama/Llama-3.3-70B-Instruct-Turbo'),
-        'rate_limit': 2,
-    },
+    # Together.ai removed — requires payment to activate (402)
     'groq': {
         'url': 'https://api.groq.com/openai/v1/chat/completions',
         'keys': load_keys('GROQ_API_KEYS'),
@@ -164,7 +159,7 @@ class ProxyHandler(BaseHTTPRequestHandler):
 
         # Try cloud providers in order
         result = None
-        for name in ['cerebras', 'together', 'groq']:
+        for name in ['cerebras', 'groq']:
             config = PROVIDERS[name]
             if not config['keys']:
                 continue
@@ -189,7 +184,6 @@ class ProxyHandler(BaseHTTPRequestHandler):
 if __name__ == '__main__':
     logger.info(f"Inference Proxy starting on port {LISTEN_PORT}")
     logger.info(f"Cerebras keys: {len(PROVIDERS['cerebras']['keys'])}")
-    logger.info(f"Together keys: {len(PROVIDERS['together']['keys'])}")
     logger.info(f"Groq keys: {len(PROVIDERS['groq']['keys'])}")
     logger.info(f"Ollama: {OLLAMA_URL}")
 

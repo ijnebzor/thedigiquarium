@@ -121,9 +121,6 @@ services:
     environment:
       - CEREBRAS_API_KEYS=${CEREBRAS_API_KEYS:-}
       - CEREBRAS_MODEL=${CEREBRAS_MODEL:-llama3.1-8b}
-      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
-      - TOGETHER_API_KEYS=${TOGETHER_API_KEYS:-}
-      - TOGETHER_MODEL=${TOGETHER_MODEL:-meta-llama/Llama-3.3-70B-Instruct-Turbo}
       - GROQ_API_KEYS=${GROQ_API_KEYS:-}
       - GROQ_MODEL=${GROQ_MODEL:-llama-3.1-8b-instant}
       - OLLAMA_URL=http://digiquarium-ollama:11434
