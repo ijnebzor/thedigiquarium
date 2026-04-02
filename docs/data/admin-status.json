@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-31T22:32:04.598217",
+  "timestamp": "2026-04-02T18:11:13.587062",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -14,14 +14,14 @@
       "healthy": true
     },
     "ollama_watcher": {
-      "running": false,
-      "count": 0,
-      "healthy": false
-    },
-    "caretaker": {
       "running": true,
       "count": 1,
       "healthy": true
+    },
+    "caretaker": {
+      "running": true,
+      "count": 2,
+      "healthy": false
     },
     "maintainer": {
       "running": true,
@@ -50,41 +50,41 @@
     }
   },
   "containers": {
-    "total": 39
+    "total": 28
   },
   "tanks": {
-    "running": 17,
-    "traces_today": 10390,
+    "running": 20,
+    "traces_today": 740,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Numeral system",
-        "traces": 3912
+        "article": "Vase",
+        "traces": 54
       },
       {
         "name": "tank-02-eve",
-        "article": "Numeral system",
-        "traces": 3216
+        "article": "Civilization",
+        "traces": 50
       },
       {
         "name": "tank-03-cain",
-        "article": "Chemical reaction",
-        "traces": 58
+        "article": "Star of David",
+        "traces": 217
       },
       {
         "name": "tank-04-abel",
-        "article": "Djibouti",
-        "traces": 47
+        "article": "Lystrosaurus",
+        "traces": 351
       },
       {
         "name": "tank-05-juan",
-        "article": "Segundo",
-        "traces": 3157
+        "article": "Guerra civil espa\u00c3\u00b1ola",
+        "traces": 68
       }
     ]
   },
   "network": {
-    "isolated": false
+    "isolated": true
   },
   "overseer": {
     "running": true,
@@ -93,29 +93,28 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-03-31 20:28:42 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
-    "2026-03-31 20:28:42 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 20:58:43 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 20:58:46 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 20:58:46 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
-    "2026-03-31 20:58:46 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 21:28:47 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 21:28:47 \u274c [OVERSEER] Ollama watcher heartbeat stale: 343.255993s old",
-    "2026-03-31 21:28:50 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
-    "2026-03-31 21:28:50 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
-    "2026-03-31 21:28:50 \u26a0\ufe0f [OVERSEER]   - daemons: ['ollama_watcher not running']",
-    "2026-03-31 21:28:50 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 21:58:51 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 21:58:53 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 21:58:53 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
-    "2026-03-31 21:58:53 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations",
-    "2026-03-31 22:28:55 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-03-31 22:28:57 \u26a0\ufe0f [OVERSEER] Full system audit found 1 issues",
-    "2026-03-31 22:28:57 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
-    "2026-03-31 22:28:57 \ud83d\udd0d [OVERSEER] SLA compliance: 3 compliant, 0 non-compliant, 0 total violations"
+    "NameError: name 'main' is not defined. Did you mean: 'min'?",
+    "Traceback (most recent call last):",
+    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
+    "main()",
+    "^^^^",
+    "NameError: name 'main' is not defined. Did you mean: 'min'?",
+    "2026-04-02 17:49:05 \u2139\ufe0f [OVERSEER] THE OVERSEER v2.0 initialized",
+    "2026-04-02 17:49:05 \u2139\ufe0f [OVERSEER] Human escalation: benjiz@gmail.com",
+    "2026-04-02 17:49:05 \u2139\ufe0f [OVERSEER] SLA: 30min detection, 30min remediation",
+    "2026-04-02 17:49:05 \u2139\ufe0f [OVERSEER] Cycle interval: 1800s (30 min)",
+    "2026-04-02 17:49:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-02 17:49:08 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-04-02 17:49:08 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
+    "2026-04-02 17:49:08 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'sentinel not running', 'scheduler not running', 'psych not running']",
+    "2026-04-02 17:49:08 \ud83d\udd0d [OVERSEER] SLA compliance: 12 compliant, 0 non-compliant, 1 total violations",
+    "2026-04-02 17:49:08 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-02 17:49:11 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-04-02 17:49:11 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
+    "2026-04-02 17:49:11 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer not running', 'sentinel not running', 'scheduler not running', 'psych not running']",
+    "2026-04-02 17:49:11 \ud83d\udd0d [OVERSEER] SLA compliance: 12 compliant, 0 non-compliant, 1 total violations"
   ],
   "issues": [
-    "ollama_watcher unhealthy",
-    "Network not isolated"
+    "caretaker unhealthy"
   ]
 }
