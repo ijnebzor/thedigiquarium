@@ -347,13 +347,7 @@ def ask(prompt, enhanced=False):
         print(f"   Inference chain failed: {e}")
         return None
 
-def log_trace(article, thoughts, decision)
-                # Update brain.md/soul.md for standard research pipeline
-                if _update_brain_soul and thoughts and len(thoughts) > 20:
-                    try:
-                        _update_brain_soul(article['title'], thoughts, "")
-                    except Exception:
-                        pass:
+def log_trace(article, thoughts, decision):
     trace = {
         'timestamp': datetime.now().isoformat(),
         'tank': TANK_NAME,
