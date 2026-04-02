@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T10:15:58.867418",
+  "timestamp": "2026-04-03T10:22:01.056982",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,11 +50,11 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 31
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 2782,
+    "running": 23,
+    "traces_today": 2844,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "RFID",
-        "traces": 2190
+        "article": "Trunk (botany)",
+        "traces": 2252
       },
       {
         "name": "tank-05-juan",
