@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T09:36:13.825959",
+  "timestamp": "2026-04-03T09:45:29.723203",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,11 +50,11 @@
     }
   },
   "containers": {
-    "total": 25
+    "total": 26
   },
   "tanks": {
     "running": 17,
-    "traces_today": 2646,
+    "traces_today": 2668,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -68,8 +68,8 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Radio",
-        "traces": 167
+        "article": "Real",
+        "traces": 170
       },
       {
         "name": "tank-04-abel",
@@ -78,8 +78,8 @@
       },
       {
         "name": "tank-05-juan",
-        "article": "Informaci\u00c3\u00b3n",
-        "traces": 116
+        "article": "Wayback Machine",
+        "traces": 135
       }
     ]
   },
