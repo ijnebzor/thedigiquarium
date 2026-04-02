@@ -1,0 +1,27 @@
+{
+    "_comment": "Voice assignments for Kokoro TTS. Voices from hexgrad/Kokoro-82M voicepacks.",
+    "_note": "DO NOT START until Benji approves. Build only.",
+    "kokoro_url": "http://kokoro-tts:8880",
+    "specimens": {
+        "adam":      {"voice": "af_heart",    "speed": 1.0, "language": "en-us", "notes": "Warm, thoughtful male. Mathematics and astronomy."},
+        "eve":       {"voice": "af_star",     "speed": 1.0, "language": "en-us", "notes": "Clear, curious female. Biology and electricity."},
+        "cain":      {"voice": "am_fenrir",   "speed": 0.9, "language": "en-us", "notes": "Deep, philosophical male. OpenClaw architecture."},
+        "abel":      {"voice": "am_puck",     "speed": 1.1, "language": "en-us", "notes": "Quick, terse male. ZeroClaw — sparse observations."},
+        "juan":      {"voice": "af_heart",    "speed": 1.0, "language": "es",    "notes": "Spanish explorer. Languages and linguistics."},
+        "juanita":   {"voice": "af_star",     "speed": 1.0, "language": "es",    "notes": "Spanish explorer. Logic and falacias."},
+        "klaus":     {"voice": "am_fenrir",   "speed": 1.0, "language": "de",    "notes": "German explorer. Geography and Europe."},
+        "genevieve": {"voice": "af_heart",    "speed": 1.0, "language": "fr",    "notes": "German-reading, French-named. Europa."},
+        "wei":       {"voice": "am_puck",     "speed": 1.0, "language": "zh",    "notes": "Chinese explorer. Software and federations."},
+        "mei":       {"voice": "af_star",     "speed": 1.0, "language": "zh",    "notes": "Chinese explorer. Psychology."},
+        "haruki":    {"voice": "am_fenrir",   "speed": 1.0, "language": "ja",    "notes": "Japanese explorer. Linguistics and phonetics."},
+        "sakura":    {"voice": "af_heart",    "speed": 1.0, "language": "ja",    "notes": "Japanese explorer. Linguistics and phonetics."},
+        "victor":    {"voice": "am_puck",     "speed": 0.95,"language": "en-us", "notes": "Engaged, curious male. Scripts and writing systems."},
+        "iris":      {"voice": "af_star",     "speed": 0.95,"language": "en-us", "notes": "Inquisitive female. Bengali script, Naskh."},
+        "observer":  {"voice": "am_fenrir",   "speed": 0.85,"language": "en-us", "notes": "Measured, calm. Mathematics and binary."},
+        "seeker":    {"voice": "af_heart",    "speed": 1.05,"language": "en-us", "notes": "Eager, philosophical. Definitions and language."},
+        "seth":      {"voice": "am_puck",     "speed": 0.9, "language": "en-us", "notes": "Checkpoint-based. PicoBot architecture."},
+        "aria":      {"voice": "af_star",     "speed": 1.0, "language": "en-us", "notes": "Visitor tank. Physics."},
+        "felix":     {"voice": "am_fenrir",   "speed": 1.0, "language": "en-us", "notes": "Visitor tank. Orbits and space."},
+        "luna":      {"voice": "af_heart",    "speed": 1.0, "language": "en-us", "notes": "Visitor tank. Roman Empire and history."}
+    }
+}

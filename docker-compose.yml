@@ -1617,3 +1617,51 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["agents", "betaclone"]
+
+  # ==========================================================================
+  # SILENT OBSERVER — Reads congregation transcripts, never participates
+  # Research question: Does social observation alone shape identity?
+  # ==========================================================================
+
+  tank-observer-silent:
+    image: digiquarium-tank:latest
+    container_name: tank-observer-silent
+    working_dir: /tank
+    environment:
+      - TANK_NAME=silent_observer
+      - TANK_ID=tank-observer-silent
+      - GENDER=a being without gender
+      - TANK_TYPE=observer
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-observer-silent:/logs
+      - ./logs/congregations:/congregations:ro
+    command: ["bash", "/tank/start.sh"]
+    depends_on:
+      kiwix-simple:
+        condition: service_started
+      ollama:
+        condition: service_started
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.3.10
+    cap_drop:
+      - ALL
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: unless-stopped
+    profiles: ["experimental"]

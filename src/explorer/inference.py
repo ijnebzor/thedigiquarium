@@ -1,7 +1,12 @@
 """
 Inference chain for the Digiquarium.
-Cerebras (fastest) → Together.ai → Groq → Ollama (sovereign failsafe).
-All cloud providers use OpenAI-compatible API format.
+v3.0 (2026-04-01): Security-first architecture.
+
+Tanks call the inference proxy on the isolated network.
+The proxy handles cloud API routing and key management.
+Tanks NEVER have direct internet access or API keys.
+
+Fallback: local Ollama on isolated-net (blocking lock, fair queue).
 """
 import os
 import json
@@ -13,148 +18,69 @@ import fcntl
 
 logger = logging.getLogger('Inference')
 
-# Provider configs — each has URL, key env var, model, and rate limit (seconds between calls)
-PROVIDERS = [
-    {
-        'name': 'Cerebras',
-        'url': 'https://api.cerebras.ai/v1/chat/completions',
-        'key_env': 'CEREBRAS_API_KEY',
-        'model_env': 'CEREBRAS_MODEL',
-        'default_model': 'llama3.1-8b',
-        'rate_limit': 2,  # 30 RPM = 2s between calls
-    },
-    {
-        'name': 'Together',
-        'url': 'https://api.together.xyz/v1/chat/completions',
-        'key_env': 'TOGETHER_API_KEY',
-        'model_env': 'TOGETHER_MODEL',
-        'default_model': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
-        'rate_limit': 2,
-    },
-    {
-        'name': 'Groq',
-        'url': 'https://api.groq.com/openai/v1/chat/completions',
-        'key_env': 'GROQ_API_KEY',
-        'model_env': 'GROQ_MODEL',
-        'default_model': 'llama-3.1-8b-instant',
-        'rate_limit': 20,  # 6000 TPM limit = need 20s spacing
-    },
-]
-
+INFERENCE_PROXY_URL = os.getenv('INFERENCE_PROXY_URL', 'http://digiquarium-inference-proxy:8100')
 OLLAMA_URL = os.getenv('OLLAMA_URL', 'http://digiquarium-ollama:11434')
 OLLAMA_MODEL = os.getenv('OLLAMA_MODEL', 'llama3.2:latest')
 
 
 def generate(system_prompt: str, user_prompt: str, timeout: int = 60) -> str:
-    """Generate via the inference chain. First available provider wins."""
+    """Generate via inference proxy (cloud providers) with Ollama fallback.
+    The proxy handles Cerebras/Together/Groq key rotation and rate limiting.
+    Tanks never see API keys or touch the internet."""
 
-    # Try each cloud provider in order
-    for provider in PROVIDERS:
-        key = os.getenv(provider['key_env'], '')
-        if not key:
-            continue
+    # Try the inference proxy first (routes to cloud providers)
+    try:
+        result = _call_proxy(system_prompt, user_prompt, timeout)
+        if result:
+            return result
+    except Exception as e:
+        logger.warning(f"Proxy failed: {e}")
 
-        model = os.getenv(provider['model_env'], provider['default_model'])
-
-        try:
-            result = _call_provider(
-                name=provider['name'],
-                url=provider['url'],
-                key=key,
-                model=model,
-                system_prompt=system_prompt,
-                user_prompt=user_prompt,
-                timeout=timeout,
-                rate_limit=provider['rate_limit'],
-            )
-            if result:
-                return result
-        except Exception as e:
-            logger.warning(f"{provider['name']} failed: {e}")
-            continue
-
-    # Final fallback: local Ollama
+    # Fallback: local Ollama with blocking lock (fair queue)
     try:
         return _call_ollama(system_prompt, user_prompt, timeout)
     except Exception as e:
-        logger.error(f"All providers failed. Ollama: {e}")
+        logger.error(f"All inference failed (proxy + Ollama): {e}")
         return ''
 
 
-def _call_provider(name: str, url: str, key: str, model: str,
-                   system_prompt: str, user_prompt: str,
-                   timeout: int, rate_limit: int) -> str:
-    """Call an OpenAI-compatible provider with shared rate limiting."""
+def _call_proxy(system_prompt: str, user_prompt: str, timeout: int) -> str:
+    """Call the inference proxy on the isolated network."""
+    data = json.dumps({
+        'system': system_prompt,
+        'prompt': user_prompt,
+        'timeout': timeout
+    }).encode()
 
-    # Shared rate limiter per provider
-    lock_path = f'/shared/.{name.lower()}_rate_lock'
-    ts_path = f'/shared/.{name.lower()}_last_call'
+    req = urllib.request.Request(
+        f"{INFERENCE_PROXY_URL}/v1/generate",
+        data=data,
+        headers={'Content-Type': 'application/json'}
+    )
 
-    try:
-        lock_fd = open(lock_path, 'w')
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    except (IOError, OSError, PermissionError):
-        # Can't get lock — another tank is using this provider, skip to next
-        raise Exception(f"{name} lock busy, trying next provider")
+    with urllib.request.urlopen(req, timeout=timeout + 30) as r:
+        result = json.loads(r.read().decode())
 
-    try:
-        # Rate limit: wait if needed
-        try:
-            last = float(open(ts_path).read().strip())
-            elapsed = time.time() - last
-            if elapsed < rate_limit:
-                time.sleep(rate_limit - elapsed)
-        except (FileNotFoundError, ValueError):
-            pass
-
-        # Make the request
-        data = json.dumps({
-            'model': model,
-            'messages': [
-                {'role': 'system', 'content': system_prompt},
-                {'role': 'user', 'content': user_prompt}
-            ],
-            'temperature': 0.8,
-            'top_p': 0.9,
-            'max_tokens': 1024
-        }).encode()
-
-        req = urllib.request.Request(url, data=data, headers={
-            'Content-Type': 'application/json',
-            'Authorization': f'Bearer {key}',
-            'User-Agent': 'Digiquarium/1.0'
-        })
-
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            result = json.loads(r.read().decode())
-
-        # Record timestamp
-        try:
-            with open(ts_path, 'w') as f:
-                f.write(str(time.time()))
-        except PermissionError:
-            pass
-
-        return result['choices'][0]['message']['content']
-
-    finally:
-        try:
-            fcntl.flock(lock_fd, fcntl.LOCK_UN)
-            lock_fd.close()
-        except:
-            pass
+    response = result.get('response', '')
+    if response:
+        provider = result.get('provider', 'unknown')
+        logger.debug(f"Got response from {provider}")
+    return response
 
 
 def _call_ollama(system_prompt: str, user_prompt: str, timeout: int) -> str:
-    """Local Ollama fallback. Uses shared lock since CPU can only serve one at a time."""
+    """Local Ollama fallback. Uses OS-level blocking lock (LOCK_EX).
+    The kernel fairly queues all waiters. Every tank gets its turn."""
     lock_path = '/shared/.ollama_lock'
     lock_fd = None
 
     try:
         lock_fd = open(lock_path, 'w')
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    except (IOError, OSError, PermissionError):
-        # Can't get Ollama lock — return empty rather than block
+        fcntl.flock(lock_fd, fcntl.LOCK_EX)
+    except (IOError, OSError, PermissionError) as e:
+        logger.warning(f"Ollama lock failed: {e}")
+        if lock_fd:
+            lock_fd.close()
         return ''
 
     try:
