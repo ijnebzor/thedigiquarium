@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-02T23:23:39.265105",
+  "timestamp": "2026-04-02T23:32:57.661383",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
     "proxy_healthy": true,
-    "e2e_healthy": false,
+    "e2e_healthy": true,
     "models": 0
   },
   "daemons": {
@@ -50,16 +50,16 @@
     }
   },
   "containers": {
-    "total": 8
+    "total": 25
   },
   "tanks": {
-    "running": 0,
-    "traces_today": 3518,
+    "running": 17,
+    "traces_today": 3557,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Chemical formula",
-        "traces": 514
+        "article": "River",
+        "traces": 516
       },
       {
         "name": "tank-02-eve",
@@ -68,18 +68,18 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Philosophy",
-        "traces": 574
+        "article": "Human",
+        "traces": 588
       },
       {
         "name": "tank-04-abel",
-        "article": "Thought",
-        "traces": 1680
+        "article": "Battle",
+        "traces": 1701
       },
       {
         "name": "tank-05-juan",
-        "article": "Tipos de figuras jur\u00c3\u00addicas asociativas",
-        "traces": 363
+        "article": "Sport",
+        "traces": 365
       }
     ]
   },
@@ -115,7 +115,6 @@
     "2026-04-02 23:20:22 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations"
   ],
   "issues": [
-    "Ollama E2E failed",
     "caretaker unhealthy",
     "maintainer unhealthy",
     "scheduler unhealthy",
