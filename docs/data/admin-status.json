@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T23:38:12.294430",
+  "timestamp": "2026-04-02T23:40:00.564932",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 3590,
+    "traces_today": 3604,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -63,13 +63,13 @@
       },
       {
         "name": "tank-02-eve",
-        "article": "Evolution",
-        "traces": 394
+        "article": "DNA",
+        "traces": 400
       },
       {
         "name": "tank-03-cain",
-        "article": "Pleistocene",
-        "traces": 614
+        "article": "Empire State Building",
+        "traces": 622
       },
       {
         "name": "tank-04-abel",
