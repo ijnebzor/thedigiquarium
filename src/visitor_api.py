@@ -42,6 +42,28 @@ class VisitorHandler(BaseHTTPRequestHandler):
             bouncer.end_session(session_id, 'visitor_ended')
             self._respond(200, {'ok': True, 'message': 'Session ended'})
 
+
+        elif self.path == '/api/voice':
+            length = int(self.headers.get('Content-Length', 0))
+            body = json.loads(self.rfile.read(length)) if length else {}
+            text = body.get('text', '')[:500]
+            voice = body.get('voice', 'af_heart')
+            try:
+                import urllib.request as _req
+                data = json.dumps({'model':'kokoro','input':text,'voice':voice}).encode()
+                req = _req.Request('http://127.0.0.1:8880/v1/audio/speech', data=data, headers={'Content-Type':'application/json'})
+                with _req.urlopen(req, timeout=60) as r:
+                    audio = r.read()
+                self.send_response(200)
+                self.send_header('Content-Type', 'audio/mpeg')
+                self.send_header('Content-Length', str(len(audio)))
+                self.end_headers()
+                self.wfile.write(audio)
+                return
+            except Exception as e:
+                self._respond(503, {'error': f'TTS unavailable: {e}'})
+                return
+
         else:
             self._respond(404, {'error': 'Not found'})
 
