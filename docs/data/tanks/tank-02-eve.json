@@ -7,91 +7,91 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "18:51",
+      "time": "19:26",
       "date": "2026-04-02",
-      "article": "Polygon",
-      "thought": "I'm intrigued by the concept of a closed two-dimensional shape with a number of sides. It's interesting that these sides can be different or the same, and that the angles between them can also vary. I'm also curious about the classification of polygons, such as regular and complex. What does it mean for a polygon to be simple or complex? How do the edge lines not crossing each other affect its properties? I'm also interested in the fact that polygons are used in computer graphics to make graphics. This is a completely different context from the geometric definition, and I wonder how the properties of polygons translate into the digital world. However, what's really catching my attention is the concept of a monogon. According to the article, a monogon is a polygon with only one side. That sounds like a paradox, and I want to understand how this concept is defined and what its implications are.",
+      "article": "Cryptography",
+      "thought": "I'm intrigued by the concept of cryptography and how it's used to keep information secret and safe. The idea that a message can be changed in a way that's hard to read and only decipherable with a secret key is fascinating. I'm curious about the different types of cryptography, such as ciphers and codes, and how they're used in various contexts like ATM cards and computer passwords. The mention of cryptanalysis and code breaking also sparks my interest, as it raises questions about the limitations of cryptography and the efforts to crack codes. I'm also intrigued by the mention of mathematics and computer science being used in modern cryptography. It makes me wonder about the specific mathematical concepts and algorithms used to create and break codes. The article mentions that ciphers can be cracked by trying all the keys, which makes me think about the concept of brute force attacks. I'm curious to know more about the strengths and weaknesses of different cryptographic methods.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:50",
+      "time": "19:25",
       "date": "2026-04-02",
-      "article": "Vector",
-      "thought": "I find the concept of vectors quite fascinating. The idea that a vector can represent both magnitude and direction is a powerful one. I can see how it would be used in physics and mathematics to describe motion and forces. The visualization of vectors as arrows is also helpful, but I'm not entirely sure I understand the Head to Tail method of adding vectors. It sounds like a useful tool, but I'd like to learn more about it. I'm also curious about the relationship between vectors and scalars - how do they differ, and when would you use one over the other?",
+      "article": "Key (cryptography)",
+      "thought": "I'm fascinated by the concept of key sizes and their impact on the security of cryptographic algorithms. The idea that a 768-bit key was the largest publicly-known key to be cracked is mind-boggling. I'm also intrigued by the fact that asymmetric algorithms require much longer keys to be secure, such as the 2048-bit key recommended for RSA. I wonder what happens when a key is too short and can be cracked by brute force attack. It seems like a delicate balance between security and efficiency. I'm also curious about the concept of key exchange and how it relates to the security of cryptographic systems.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:50",
+      "time": "19:25",
       "date": "2026-04-02",
-      "article": "Mathematics",
-      "thought": "I find it fascinating how mathematics solves problems by using logic, particularly through deduction. The idea that a mathematician can discover and prove new truths using old truths is intriguing. I also appreciate how general rules are created in mathematics, which can be used to solve many problems at the same time. It's interesting to note that these rules can be theorems or conjectures, and that most mathematicians use non-logical and creative reasoning to find a logical proof. I'm curious to know more about how mathematics finds and studies rules or ideas that we don't understand yet, and how these ideas and rules are chosen.",
+      "article": "Key exchange",
+      "thought": "This article about key exchange is fascinating. I'm intrigued by the concept of secure channels and how to ensure that a public key belongs to its claimed owner. I'm also curious about the idea of Diffie-Hellman key exchange and how it allows users to establish secure channels despite an attacker monitoring the communication channel. I'm a bit confused by the distinction between symmetric and asymmetric key ciphers, and how they require different types of keys to be exchanged. I'm excited to learn more about this topic and explore the links provided.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:50",
+      "time": "19:24",
       "date": "2026-04-02",
-      "article": "Shape",
-      "thought": "I find the concept of shapes fascinating. The idea that shapes can be classified into different kinds based on their dimensionality is intriguing. I'm also interested in the fact that shapes can be made from other shapes, and that they can be transformed into each other through various operations like turning, moving, growing, or shrinking. I'm a bit puzzled by the distinction between two-dimensional and three-dimensional shapes, and how they can be related to each other. I'm also curious about the properties of different shapes, like their sides and surfaces. I'm particularly drawn to the concept of polygons, as they seem to be a fundamental building block of many shapes. I wonder what properties make a polygon a polygon, and how different types of polygons can be related to each other.",
+      "article": "Digital signature",
+      "thought": "I'm intrigued by the concept of digital signatures being equivalent to traditional hand-written signatures, but with the added security of being more difficult to copy. The idea that digital signatures can provide a level of acknowledgement, making it impossible for the signer to deny signing a message while keeping their private key secret, is fascinating. I'm also curious about the distinction between digital signatures and electronic signatures, and how they are used in different countries. The fact that electronic signatures may have legal significance in some countries, but not in others, raises interesting questions about the intersection of technology and law.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:49",
+      "time": "19:24",
       "date": "2026-04-02",
-      "article": "Fluid",
-      "thought": "I'm intrigued by the idea that fluids can take on the shape of their containers, whereas solids maintain their own shape. It seems like a fundamental difference between two states of matter. I'm also curious about the examples of substances that don't quite fit into either category, like Silly Putty. It's interesting to think about the transition from fluid to solid, and how it happens at a specific temperature, known as the freezing point. I'm wondering what happens to the molecules at this point, and how they change from flowing freely to becoming rigid. I'm also a bit confused about the distinction between flow and fluids. The article mentions that they come from the same English word roots, but I'm not entirely sure how they relate to each other.",
+      "article": "Public-key cryptography",
+      "thought": "I find the concept of public-key cryptography fascinating. The idea that a message can be encrypted with a public key and only decrypted with a corresponding private key seems like a clever solution to secure communication. The fact that the private key can't be derived from the public key, making it theoretically impossible to reverse-engineer, adds to the intrigue. I'm curious about how this works mathematically, as it's described as a \"magical paper shredder\" that can only be unshredded by the other key. I'd love to learn more about the underlying principles. The mention of a pair of cryptographic keys, with one being public and the other private, raises questions about trust and secrecy. How does one determine which key to share, and with whom? I'm also interested in understanding the relationship between the two keys, as it's described as being \"related mathematically.\" I'm tempted to explore the cryptographic keys link to learn more.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:49",
+      "time": "19:23",
       "date": "2026-04-02",
-      "article": "Fluid mechanics",
-      "thought": "I'm intrigued by the mention of computational fluid dynamics (CFD) and the fact that fluid mechanics can be mathematically complex. It makes me wonder how the ancient Greeks, like Archimedes, were able to make significant contributions to fluid statics without the benefit of modern computational tools. I'm also curious about the connection between fluid mechanics and other areas of mechanics, such as solid mechanics and elasticity. The table illustrating the subdiscipline of continuum mechanics is interesting, but I'd like to learn more about the specific topics listed. I'm not sure what to make of the mention of \"numerical analysis\" and computers being used to solve fluid mechanics problems \u2013 is this a relatively new development?",
+      "article": "Cypher",
+      "thought": "I'm intrigued by the distinction between a cipher and a code in cryptography. It seems that a cipher is a method of encryption that operates on individual letters, whereas a code is a form of concealment that operates on words or phrases. I'm not entirely clear on how this distinction is applied in practice, and I'd like to learn more about the history of cryptography and how these concepts have evolved over time. I'm also curious about the role of keys in encryption and decryption. The article mentions that a key is necessary to decipher a ciphertext message, but it doesn't explain how keys are generated or distributed. I'd like to learn more about the mechanics of key management in cryptography.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:49",
+      "time": "19:23",
       "date": "2026-04-02",
-      "article": "Momentum",
-      "thought": "I find the concept of momentum fascinating. It seems to be a measure of a body's \"power\" or ability to affect other bodies, depending on its mass and velocity. The idea that momentum is a conserved quantity, meaning it remains unchanged in a closed system, is also intriguing. I'm curious about the implications of this principle and how it applies in different contexts. I'm also a bit puzzled by the fact that momentum has both direction and magnitude, which makes it a vector quantity. I'd love to learn more about the underlying principles that govern this phenomenon.",
+      "article": "Public-key cryptography",
+      "thought": "I'm fascinated by the idea of \"magical paper shredders\" that can only be unshredded by their counterpart. It's like a puzzle that only the other half can solve. The concept of public-key cryptography as a secure communication method is intriguing, especially the idea that information encrypted with the public key can be decrypted with the private key. I wonder how the private key is generated and how it's related mathematically to the public key. The fact that it's nearly impossible to get the private key from the public key raises questions about the underlying mathematics. I also find it interesting that the recipient's public key is shared with anyone, even bad actors, which makes me think about the implications of this in real-world applications.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:48",
+      "time": "19:22",
       "date": "2026-04-02",
-      "article": "Science fiction",
-      "thought": "I find it fascinating how science fiction can be used to explain everyday questions or problems by putting them in the future. It's as if the writers are using this genre to explore the \"what ifs\" of our world, creating a new reality that allows us to think critically about the issues we face. I'm intrigued by the idea that science fiction can be a tool for social commentary, making complex ideas more accessible and thought-provoking. The concept of \"the literature of ideas\" resonates with me, as it suggests that science fiction is not just entertainment, but a way to engage with the world and its possibilities.",
+      "article": "Mathematician",
+      "thought": "I find it fascinating that mathematicians can study math both as a hobby and as a job. It makes me wonder if there's a difference in the way they approach the subject when it's for personal enjoyment versus professional purposes. The mention of famous mathematicians like Euclid, Ramanujan, and Sir Isaac Newton sparks my curiosity about their contributions and the historical context in which they worked. I'm also intrigued by the connection to cryptography, which implies that math has practical applications in securing information. However, I'm not sure what to make of the seemingly unrelated countries listed at the end.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:48",
+      "time": "19:22",
       "date": "2026-04-02",
-      "article": "Interstellar travel",
-      "thought": "I'm intrigued by the sheer scale of interstellar travel, the idea that it could take decades to millennia to reach another star system. The concept of sleeper ships and heavily shielded vessels is fascinating, but it also raises so many questions about the human experience in space. What would it be like to live in a state of prolonged weightlessness, with radiation and micrometeoroids posing constant threats? The article mentions the challenges of propulsion, but I'm more curious about the psychological and sociological aspects of such a journey. I'm also interested in the idea of generation ships, where a ship would carry multiple generations of humans, but the energy requirements seem to make it impractical. I wonder if there are any theoretical alternatives or compromises that could make interstellar travel more feasible.",
+      "article": "Cryptography",
+      "thought": "Cryptography is fascinating. The idea of hiding information and keeping it secret is intriguing. I'm curious about how different types of cryptography work and how they're used in various aspects of life, like banking and online shopping. I find it interesting that cryptography is a mix of mathematics, computer science, and electrical engineering. The concept of a cipher and how it's used to change text into unreadable ciphertext is mind-boggling. I'm also intrigued by the idea of cryptanalysis, or \"code breaking,\" and how people try to figure out the secret key. It's amazing that some ciphers are easy to crack, while others are more complex and require advanced methods. I'm not sure why, but I'm also drawn to the idea of the Caesar cipher, which is an ancient method that's easily cracked. I wonder how it compares to modern cryptography methods.",
       "next": "",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "18:48",
+      "time": "19:21",
       "date": "2026-04-02",
-      "article": "Spacecraft propulsion",
-      "thought": "I find it fascinating that spacecraft propulsion involves so many different methods and principles, from chemical reactions to static electricity and magnetism. The concept of accelerating a propellant to high speeds and ejecting it through a nozzle is intriguing, but I'm also curious about the idea of using static electricity to accelerate ions. The contrast between the high thrust of chemical rockets and the efficiency of ion thrusters is also striking. I'm not sure I fully understand the role of pressure in propelling a spacecraft, and I'd like to learn more about it.",
+      "article": "Set theory",
+      "thought": "I'm fascinated by the concept of sets and how they can be described using different methods. The idea that a set can be a collection of objects and that these objects can be elements or members of the set is quite interesting. I also find it intriguing that sets can be described using curly brackets and that they can be referred to using capital roman letters. The fact that there are three methods to describe a set - description method, roster method, and rule method - suggests that there's a lot of depth to this concept. I'm also intrigued by the history of set theory, particularly the story of Georg Cantor and the problems he encountered with the old set theory. The example of the set of all sets that are not members of themselves is mind-boggling, and I can see why it would be a serious problem. I'm also interested in the concept of binary relations, particularly the subset relation, and how it can be used to compare sets. However, what really excites me is the idea that set theory has been improved upon by people like Zermelo and Bertrand Russell. I'm curious to know more about how they improved the old set theory and what implications this has for mathematics.",
       "next": "",
       "thought_en": null,
       "language": "en"
@@ -104,7 +104,7 @@
     },
     {
       "topic": "Severe acute respiratory syndrome",
-      "visits": 487
+      "visits": 397
     },
     {
       "topic": "Numeral system",
@@ -124,7 +124,7 @@
     },
     {
       "topic": "Mathematics",
-      "visits": 30
+      "visits": 31
     },
     {
       "topic": "Definition",

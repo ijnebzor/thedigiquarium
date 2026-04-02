@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T19:00:08.973997",
+  "timestamp": "2026-04-02T19:16:27.590739",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -45,21 +45,21 @@
     },
     "psych": {
       "running": true,
-      "count": 2,
+      "count": 3,
       "healthy": false
     }
   },
   "containers": {
-    "total": 29
+    "total": 28
   },
   "tanks": {
     "running": 20,
-    "traces_today": 1641,
+    "traces_today": 1700,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Elementary particle",
-        "traces": 268
+        "article": "Cell nucleus",
+        "traces": 319
       },
       {
         "name": "tank-02-eve",
@@ -68,8 +68,8 @@
       },
       {
         "name": "tank-03-cain",
-        "article": "Star of David",
-        "traces": 217
+        "article": "Big Bang",
+        "traces": 225
       },
       {
         "name": "tank-04-abel",
