@@ -48,7 +48,7 @@
         <h2>Hardware Fleet</h2>
         <div class="hw">
             <div class="hw-name">Mac Mini Late 2014 (A1347)</div>
-            <div class="hw-spec">Intel i7 Dual-Core 3.0GHz &middot; 16GB RAM &middot; 128GB SSD &middot; macOS Monterey 12.7.6</div>
+            <div class="hw-spec">Intel i7 Dual-Core 3.0GHz &middot; 16GB RAM &middot; 128GB SSD &middot; macOS Monterey 12.7.6 (Colima for Docker)</div>
             <div class="hw-role">Secondary Research Host (always-on, headless)</div>
         </div>
         <div class="hw">
@@ -72,10 +72,16 @@
         </div>
 
         <div class="step">
-            <h3>Step 2: Install Docker Desktop</h3>
-            <pre>brew install --cask docker</pre>
-            <p>Open Docker Desktop from Applications after install. It needs to run once to complete setup.</p>
-            <p>Go to Settings &rarr; Resources &rarr; set Memory to at least 8GB (of 16GB available).</p>
+            <h3>Step 2: Install Docker (via Colima)</h3>
+            <p>Docker Desktop requires macOS Ventura 13.3+. Since the Mac Mini runs Monterey 12.7.6, we use <strong>Colima</strong> — a lightweight open-source Docker runtime that outperforms Docker Desktop.</p>
+            <pre>brew install docker docker-compose colima</pre>
+            <p>Start Colima with 8GB RAM and 4 CPUs allocated:</p>
+            <pre>colima start --cpu 2 --memory 8 --disk 60</pre>
+            <p>Verify Docker works:</p>
+            <pre>docker run hello-world</pre>
+            <p>To start Colima automatically on boot:</p>
+            <pre>brew services start colima</pre>
+            <p><em>Note: Colima uses the same <code>docker</code> and <code>docker compose</code> commands as Docker Desktop. All Digiquarium scripts work unchanged.</em></p>
         </div>
 
         <div class="step important">
@@ -115,9 +121,13 @@ scp ijneb@[NUC_TAILSCALE_IP]:/home/ijneb/digiquarium/.env ~/digiquarium/.env</pr
         </div>
 
         <div class="step">
-            <h3>Step 8: Verify Docker works</h3>
-            <pre>docker run hello-world</pre>
-            <p>If this prints "Hello from Docker!" you're ready.</p>
+            <h3>Step 8: Verify everything</h3>
+            <pre>docker run hello-world    # Should print "Hello from Docker!"
+colima status             # Should show "Running"
+rustc --version           # Should show 1.94+
+node --version            # Should show v22.x
+tailscale status          # Should show connected
+ls ~/digiquarium/.env     # Should exist</pre>
         </div>
 
         <h2>MacBook Pro 2018 Setup</h2>
