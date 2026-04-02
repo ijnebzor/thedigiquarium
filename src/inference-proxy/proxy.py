@@ -81,7 +81,7 @@ def try_provider(name, config, system_prompt, user_prompt, timeout):
                 ],
                 'temperature': 0.8,
                 'top_p': 0.9,
-                'max_tokens': 1024
+                'max_tokens': 2048
             }).encode()
 
             req = urllib.request.Request(config['url'], data=data, headers={
@@ -112,7 +112,7 @@ def try_ollama(system_prompt, user_prompt, timeout):
     """Ollama fallback with blocking lock."""
     lock_path = LOCK_DIR / '.ollama_lock'
     lock_fd = open(lock_path, 'w')
-    fcntl.flock(lock_fd, fcntl.LOCK_EX)  # True blocking wait
+    fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)  # Non-blocking — skip if busy
 
     try:
         data = json.dumps({
