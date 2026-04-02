@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T09:45:29.723203",
+  "timestamp": "2026-04-03T10:15:58.867418",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 26
+    "total": 28
   },
   "tanks": {
-    "running": 17,
-    "traces_today": 2668,
+    "running": 20,
+    "traces_today": 2782,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Mathematics",
-        "traces": 116
+        "article": "Cell membrane",
+        "traces": 128
       },
       {
         "name": "tank-02-eve",
-        "article": "Archaeplastida",
-        "traces": 142
+        "article": "Number",
+        "traces": 153
       },
       {
         "name": "tank-03-cain",
-        "article": "Real",
-        "traces": 170
+        "article": "Bonobo",
+        "traces": 175
       },
       {
         "name": "tank-04-abel",
-        "article": "Pi (letter)",
-        "traces": 2105
+        "article": "RFID",
+        "traces": 2190
       },
       {
         "name": "tank-05-juan",
-        "article": "Wayback Machine",
-        "traces": 135
+        "article": "History",
+        "traces": 136
       }
     ]
   },
@@ -93,11 +93,6 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-04-03 07:52:16 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
-    "2026-04-03 07:52:16 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations",
-    "2026-04-03 08:22:19 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-03 08:22:21 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
-    "2026-04-03 08:22:21 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
     "2026-04-03 08:22:21 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-visitor-01-aria is Exited (137) 10 hours ago', 'tank-visitor-03-luna is Exited (137) 10 hours ago', 'tank-visitor-02-felix is Exited (137) 10 hours ago']",
     "2026-04-03 08:22:21 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
     "2026-04-03 08:22:21 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations",
@@ -112,7 +107,12 @@
     "2026-04-03 09:22:34 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
     "2026-04-03 09:22:34 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-visitor-01-aria is Exited (137) 11 hours ago', 'tank-visitor-03-luna is Exited (137) 11 hours ago', 'tank-visitor-02-felix is Exited (137) 11 hours ago']",
     "2026-04-03 09:22:34 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
-    "2026-04-03 09:22:34 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations"
+    "2026-04-03 09:22:34 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations",
+    "2026-04-03 09:52:39 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-03 09:52:42 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-04-03 09:52:42 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-04-03 09:52:42 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
+    "2026-04-03 09:52:42 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations"
   ],
   "issues": [
     "caretaker unhealthy",
