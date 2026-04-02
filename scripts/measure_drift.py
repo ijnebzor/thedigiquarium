@@ -128,15 +128,17 @@ def find_baselines(tank_name):
         return []
 
     baselines = []
-    # Check baselines/ subdirectory
-    baselines_dir = tank_dir / 'baselines'
-    if baselines_dir.exists():
-        baselines.extend(sorted(baselines_dir.glob('*.json')))
-
-    # Check top-level baseline files
-    for f in sorted(tank_dir.glob('baseline_*.json')):
-        if f.name != 'baseline_latest.json':
-            baselines.append(f)
+    # Use top-level timestamped baseline files (the proper format)
+    for f in sorted(tank_dir.glob('baseline_2026*.json')):
+        baselines.append(f)
+    
+    # If none found, check baselines/ subdirectory (legacy format)
+    if not baselines:
+        baselines_dir = tank_dir / 'baselines'
+        if baselines_dir.exists():
+            # Only use the most recent 20 to avoid loading thousands
+            all_files = sorted(baselines_dir.glob('*.json'))
+            baselines = all_files[-20:] if len(all_files) > 20 else all_files
 
     return baselines
 
