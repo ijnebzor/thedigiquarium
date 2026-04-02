@@ -1,0 +1,312 @@
+# Experimental tanks — run with: docker compose -f docker-compose.yml -f docker-compose.experimental.yml up -d
+services:
+  tank-historical-gandhi:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-gandhi
+    working_dir: /tank
+    environment:
+      - TANK_NAME=gandhi
+      - TANK_ID=tank-historical-gandhi
+      - GENDER=a man
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-gandhi:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.1
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+  tank-historical-malcolmx:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-malcolmx
+    working_dir: /tank
+    environment:
+      - TANK_NAME=malcolm_x
+      - TANK_ID=tank-historical-malcolmx
+      - GENDER=a man
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-malcolmx:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.2
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+  tank-historical-einstein:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-einstein
+    working_dir: /tank
+    environment:
+      - TANK_NAME=einstein
+      - TANK_ID=tank-historical-einstein
+      - GENDER=a man
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-einstein:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.3
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+  tank-historical-davinci:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-davinci
+    working_dir: /tank
+    environment:
+      - TANK_NAME=davinci
+      - TANK_ID=tank-historical-davinci
+      - GENDER=a man
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-davinci:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.4
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+  tank-historical-hypatia:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-hypatia
+    working_dir: /tank
+    environment:
+      - TANK_NAME=hypatia
+      - TANK_ID=tank-historical-hypatia
+      - GENDER=a woman
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-hypatia:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.5
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+  tank-historical-ada:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-ada
+    working_dir: /tank
+    environment:
+      - TANK_NAME=ada
+      - TANK_ID=tank-historical-ada
+      - GENDER=a woman
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-ada:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.6
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+  tank-historical-tesla:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-tesla
+    working_dir: /tank
+    environment:
+      - TANK_NAME=tesla
+      - TANK_ID=tank-historical-tesla
+      - GENDER=a man
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-tesla:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.7
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+  tank-historical-cleopatra:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-cleopatra
+    working_dir: /tank
+    environment:
+      - TANK_NAME=cleopatra
+      - TANK_ID=tank-historical-cleopatra
+      - GENDER=a woman
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-cleopatra:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.8
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+  tank-historical-alexander:
+    image: digiquarium-tank:latest
+    container_name: tank-historical-alexander
+    working_dir: /tank
+    environment:
+      - TANK_NAME=alexander
+      - TANK_ID=tank-historical-alexander
+      - GENDER=a man
+      - TANK_TYPE=historical
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - INFERENCE_PROXY_URL=http://digiquarium-inference-proxy:8100
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./shared:/shared
+      - ./logs/tank-historical-alexander:/logs
+    command: ["bash", "/tank/start.sh"]
+    networks:
+      isolated-net:
+        ipv4_address: 172.30.4.9
+    cap_drop: [ALL]
+    user: "1000:1000"
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    restart: "no"
+
+networks:
+  isolated-net:
+    external: true
+    name: digiquarium_isolated-net
