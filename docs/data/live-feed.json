@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T10:21:49.644736",
+  "generated_at": "2026-04-03T10:21:54.362190",
   "generated_by": "THE BROADCASTER",
   "coordinated_with": [
     "THE SCHEDULER",
@@ -492,6 +492,15 @@
           "language": "en"
         },
         {
+          "time": "10:21",
+          "date": "2026-04-03",
+          "article": "Mass",
+          "thought": "Mass is a measure of object's inherent amount, distinct from weight which is its gravitational pull.",
+          "next": "Measure",
+          "thought_en": null,
+          "language": "en"
+        },
+        {
           "time": "10:20",
           "date": "2026-04-03",
           "article": "Mathematics",
@@ -506,15 +515,6 @@
           "article": "Knowledge",
           "thought": "Knowledge is explicit and implicit.",
           "next": "Discovery",
-          "thought_en": null,
-          "language": "en"
-        },
-        {
-          "time": "10:20",
-          "date": "2026-04-03",
-          "article": "Discovery",
-          "thought": "Knowledge accumulation, new concepts forming. Discovery's multiple meanings. Boundaries intact.",
-          "next": "Discovery Channel",
           "thought_en": null,
           "language": "en"
         }
@@ -1070,7 +1070,7 @@
         },
         {
           "topic": "S\u00c3\u00bcdosteuropa",
-          "visits": 37
+          "visits": 36
         },
         {
           "topic": "Europa",
@@ -1192,7 +1192,7 @@
       "top_topics": [
         {
           "topic": "\u00e8\u00bd\u00af\u00e4\u00bb\u00b6\u00e5\u00bc\u0080\u00e5\u008f\u0091",
-          "visits": 112
+          "visits": 111
         },
         {
           "topic": "\u00e8\u00bd\u00af\u00e4\u00bb\u00b6\u00e5\u00bc\u0080\u00e5\u008f\u0091\u00e8\u00bf\u0087\u00e7\u00a8\u008b",
@@ -1330,7 +1330,7 @@
         },
         {
           "topic": "\u00e6\u0096\u0087\u00e5\u00ad\u0097\u00e5\u008f\u00b2",
-          "visits": 115
+          "visits": 114
         },
         {
           "topic": "\u00e8\u00af\u00ad\u00e8\u00a8\u0080\u00e7\u00b1\u00bb\u00e5\u009e\u008b\u00e5\u00ad\u00a6",
@@ -1460,7 +1460,7 @@
       "top_topics": [
         {
           "topic": "\u00e8\u00a8\u0080\u00e8\u00aa\u009e\u00e5\u00ad\u00a6",
-          "visits": 109
+          "visits": 108
         },
         {
           "topic": "\u00e9\u009f\u00b3\u00e5\u00a3\u00b0\u00e5\u00ad\u00a6",
@@ -1727,12 +1727,12 @@
       ],
       "top_topics": [
         {
-          "topic": "Brahmi script",
+          "topic": "Abugida",
           "visits": 114
         },
         {
-          "topic": "Abugida",
-          "visits": 114
+          "topic": "Brahmi script",
+          "visits": 113
         },
         {
           "topic": "Mathematics",
@@ -1996,7 +1996,7 @@
       "top_topics": [
         {
           "topic": "Numeral system",
-          "visits": 232
+          "visits": 231
         },
         {
           "topic": "Mathematics",
@@ -2327,10 +2327,10 @@
     ]
   },
   "stats": {
-    "total_traces": 1337919,
+    "total_traces": 1337920,
     "total_baselines": 0,
     "active_tanks": 17,
-    "traces_today": 4989
+    "traces_today": 4990
   },
   "prune_stats": {
     "total": 8952,
