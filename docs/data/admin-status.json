@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T22:25:47.162887",
+  "timestamp": "2026-04-02T22:35:40.069855",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,32 +54,32 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 3061,
+    "traces_today": 3109,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Performing arts",
-        "traces": 502
+        "article": "Rhythm",
+        "traces": 504
       },
       {
         "name": "tank-02-eve",
-        "article": "Science",
-        "traces": 379
+        "article": "Biology",
+        "traces": 380
       },
       {
         "name": "tank-03-cain",
-        "article": "Philosophy",
-        "traces": 542
+        "article": "Twelve Olympians",
+        "traces": 543
       },
       {
         "name": "tank-04-abel",
-        "article": "Scroll",
-        "traces": 1280
+        "article": "Geometry",
+        "traces": 1323
       },
       {
         "name": "tank-05-juan",
-        "article": "Language",
-        "traces": 358
+        "article": "Anexo:Capitales en los Estados Unidos",
+        "traces": 359
       }
     ]
   },
