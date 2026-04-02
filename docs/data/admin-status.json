@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T22:04:48.050197",
+  "timestamp": "2026-04-02T22:09:25.637665",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 25
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 3049,
+    "running": 17,
+    "traces_today": 3060,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Cardiac muscle",
-        "traces": 499
+        "article": "Art",
+        "traces": 501
       },
       {
         "name": "tank-02-eve",
-        "article": "Moment of inertia",
-        "traces": 377
+        "article": "Science",
+        "traces": 379
       },
       {
         "name": "tank-03-cain",
-        "article": "Method",
-        "traces": 540
+        "article": "Philosophy",
+        "traces": 542
       },
       {
         "name": "tank-04-abel",
-        "article": "Grass",
-        "traces": 1277
+        "article": "Scroll",
+        "traces": 1280
       },
       {
         "name": "tank-05-juan",
-        "article": "Magnitud f\u00c3\u00adsica",
-        "traces": 356
+        "article": "Language",
+        "traces": 358
       }
     ]
   },
