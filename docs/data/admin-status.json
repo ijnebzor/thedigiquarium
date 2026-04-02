@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T20:36:04.947384",
+  "timestamp": "2026-04-02T21:53:54.672430",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -25,8 +25,8 @@
     },
     "maintainer": {
       "running": true,
-      "count": 1,
-      "healthy": true
+      "count": 2,
+      "healthy": false
     },
     "guard": {
       "running": true,
@@ -35,51 +35,51 @@
     },
     "scheduler": {
       "running": true,
-      "count": 1,
-      "healthy": true
+      "count": 2,
+      "healthy": false
     },
     "sentinel": {
       "running": true,
-      "count": 1,
-      "healthy": true
+      "count": 2,
+      "healthy": false
     },
     "psych": {
       "running": true,
-      "count": 3,
+      "count": 6,
       "healthy": false
     }
   },
   "containers": {
-    "total": 25
+    "total": 28
   },
   "tanks": {
-    "running": 17,
-    "traces_today": 2589,
+    "running": 20,
+    "traces_today": 3001,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Elementary particle",
-        "traces": 394
+        "article": "Cardiac muscle",
+        "traces": 499
       },
       {
         "name": "tank-02-eve",
-        "article": "Decimal",
-        "traces": 300
+        "article": "Liquid",
+        "traces": 374
       },
       {
         "name": "tank-03-cain",
-        "article": "Neogene",
-        "traces": 359
+        "article": "The Blue Marble",
+        "traces": 534
       },
       {
         "name": "tank-04-abel",
-        "article": "Allotropy",
-        "traces": 1186
+        "article": "Basketball",
+        "traces": 1238
       },
       {
         "name": "tank-05-juan",
-        "article": "Campo electromagn\u00c3\u00a9tico",
-        "traces": 350
+        "article": "Magnitud f\u00c3\u00adsica",
+        "traces": 356
       }
     ]
   },
@@ -93,29 +93,32 @@
     "auto_remediations": 0
   },
   "logs": [
-    "2026-04-02 18:49:43 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 2 instances (zombie leak)']",
-    "2026-04-02 18:49:43 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations",
-    "2026-04-02 19:19:43 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-02 19:19:45 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
-    "2026-04-02 19:19:45 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-04-02 19:19:45 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 3 instances (zombie leak)']",
-    "2026-04-02 19:19:45 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations",
-    "2026-04-02 19:49:46 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER] Full system audit found 4 issues",
-    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-visitor-01-aria is Exited (137) 8 minutes ago', 'tank-visitor-03-luna is Exited (137) 8 minutes ago', 'tank-visitor-02-felix is Exited (137) 8 minutes ago']",
-    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 3 instances (zombie leak)']",
-    "2026-04-02 19:49:51 \u26a0\ufe0f [OVERSEER]   - sla_compliance: ['scheduler: SLA violation (took 5479.14s, target 1800s)']",
-    "2026-04-02 19:49:51 \ud83d\udd0d [OVERSEER] SLA compliance: 18 compliant, 1 non-compliant, 1 total violations",
-    "2026-04-02 20:19:52 \ud83d\udd0d [OVERSEER] Starting full system audit",
     "2026-04-02 20:19:55 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
     "2026-04-02 20:19:55 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
     "2026-04-02 20:19:55 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-visitor-01-aria is Exited (137) 38 minutes ago', 'tank-visitor-03-luna is Exited (137) 38 minutes ago', 'tank-visitor-02-felix is Exited (137) 38 minutes ago']",
     "2026-04-02 20:19:55 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 3 instances (zombie leak)']",
-    "2026-04-02 20:19:55 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations"
+    "2026-04-02 20:19:55 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations",
+    "2026-04-02 20:49:56 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-02 20:49:58 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-04-02 20:49:58 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-04-02 20:49:58 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 3 instances (zombie leak)']",
+    "2026-04-02 20:49:58 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations",
+    "2026-04-02 21:20:00 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-02 21:20:03 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-04-02 21:20:03 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
+    "2026-04-02 21:20:03 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'psych has 4 instances (zombie leak)']",
+    "2026-04-02 21:20:03 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 1 total violations",
+    "2026-04-02 21:50:05 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-02 21:50:08 \u26a0\ufe0f [OVERSEER] Full system audit found 2 issues",
+    "2026-04-02 21:50:08 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
+    "2026-04-02 21:50:08 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
+    "2026-04-02 21:50:08 \ud83d\udd0d [OVERSEER] SLA compliance: 19 compliant, 0 non-compliant, 0 total violations"
   ],
   "issues": [
     "caretaker unhealthy",
+    "maintainer unhealthy",
+    "scheduler unhealthy",
+    "sentinel unhealthy",
     "psych unhealthy"
   ]
 }
