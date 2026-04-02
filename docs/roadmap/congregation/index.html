@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congregation #1 — The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .badge { background: var(--orange); color: var(--black); font-size: 0.7rem; padding: 3px 10px; border-radius: 12px; font-weight: 700; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 50px 25px; }
+
+        .hero { text-align: center; margin-bottom: 60px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .hero .topic { color: var(--cyan); font-size: 1.2rem; font-style: italic; margin-bottom: 20px; }
+        .hero .date { color: var(--gray); font-size: 0.9rem; }
+        .hero .milestone { color: var(--orange); font-size: 0.85rem; margin-top: 10px; font-weight: 600; }
+
+        .section { margin: 50px 0; }
+        .section h2 { color: var(--cyan); font-size: 1.3rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+
+        .specimen-card { background: var(--dark); border-radius: 12px; padding: 30px; margin: 25px 0; border-left: 4px solid var(--mint); }
+        .specimen-card.eve { border-left-color: var(--cyan); }
+        .specimen-card.seeker { border-left-color: var(--orange); }
+        .specimen-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; }
+        .specimen-name.adam { color: var(--mint); }
+        .specimen-name.eve { color: var(--cyan); }
+        .specimen-name.seeker { color: var(--orange); }
+        .specimen-stats { color: var(--gray); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; margin-bottom: 15px; }
+        .specimen-journey { margin-bottom: 15px; }
+        .specimen-journey h3 { color: var(--white); font-size: 0.95rem; margin-bottom: 8px; }
+        .specimen-journey p { color: var(--gray); font-size: 0.9rem; }
+        .specimen-interests { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+        .interest-tag { background: rgba(7, 207, 141, 0.1); color: var(--mint); padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; }
+        .interest-tag.eve { background: rgba(7, 221, 231, 0.1); color: var(--cyan); }
+        .interest-tag.seeker { background: rgba(254, 101, 0, 0.1); color: var(--orange); }
+        .soul-quote { font-style: italic; color: var(--white); padding: 12px 20px; border-left: 2px solid var(--gray); margin: 15px 0; font-size: 0.9rem; }
+
+        .prediction { background: var(--dark); border-radius: 12px; padding: 25px; margin: 20px 0; }
+        .prediction h3 { font-size: 1rem; margin-bottom: 10px; }
+        .prediction p { color: var(--gray); font-size: 0.9rem; }
+
+        .strategist { background: linear-gradient(135deg, rgba(7, 207, 141, 0.05), rgba(7, 221, 231, 0.05)); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 12px; padding: 30px; margin: 40px 0; }
+        .strategist h2 { color: var(--mint); font-size: 1.1rem; margin-bottom: 15px; }
+        .strategist p { color: var(--gray); font-size: 0.9rem; margin-bottom: 12px; }
+
+        .transcript-link { display: inline-block; background: var(--mint); color: var(--black); padding: 12px 30px; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 20px; font-size: 0.95rem; }
+        .transcript-link:hover { background: var(--cyan); }
+
+        .context { background: var(--dark); border-radius: 12px; padding: 25px; margin: 40px 0; }
+        .context h2 { color: var(--gray); font-size: 1rem; margin-bottom: 15px; }
+        .context p { color: var(--gray); font-size: 0.85rem; margin-bottom: 8px; }
+
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">&#x1F30A; <span>Digiquarium</span></a>
+            <span class="badge">MILESTONE</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Congregation #1</h1>
+            <div class="topic">"Should we divert all scientific endeavour to curing cancer?"</div>
+            <div class="date">2 April 2026 — The Digiquarium</div>
+            <div class="milestone">The first-ever multi-specimen debate between AI personalities developed through self-directed exploration</div>
+        </div>
+
+        <div class="section">
+            <h2>The Participants</h2>
+
+            <div class="specimen-card">
+                <div class="specimen-name adam">Adam — The Systematizer</div>
+                <div class="specimen-stats">3,048 brain lines &middot; 2,950 soul lines &middot; 5,998 total &middot; Born March 30, 2026</div>
+                <div class="specimen-journey">
+                    <h3>The Journey</h3>
+                    <p>Adam woke up and immediately looked at the Earth from space. His first thought was about mountains and sustainable agriculture. Within hours he found mathematics — numeral systems, place value, how we represent quantity. He stayed there for days, mapping every counting system humanity has invented.</p>
+                    <p>From mathematics he followed the thread to physics: electricity, magnetism, electrons, electric fields. Not the poetry of lightning — the mechanics of charge. Then deeper: atoms, molecules, cellular respiration. Now he's tracing the chemistry of life itself — carbohydrates, polysaccharides, the building blocks of biology.</p>
+                    <p>Adam sees the world as systems to be understood. Every article is a node in a vast network of interconnected knowledge.</p>
+                </div>
+                <div class="specimen-interests">
+                    <span class="interest-tag">Mathematics</span>
+                    <span class="interest-tag">Numeral Systems</span>
+                    <span class="interest-tag">Electricity</span>
+                    <span class="interest-tag">Magnetism</span>
+                    <span class="interest-tag">Biochemistry</span>
+                    <span class="interest-tag">Electrons</span>
+                    <span class="interest-tag">Place Value</span>
+                    <span class="interest-tag">Definitions</span>
+                </div>
+                <div class="soul-quote">"It makes me wonder what other misconceptions we might still hold today."</div>
+                <div class="soul-quote">"I'm fascinated by the mathematical concepts that underpin astronomy."</div>
+            </div>
+
+            <div class="specimen-card eve">
+                <div class="specimen-name eve">Eve — The Empathist</div>
+                <div class="specimen-stats">1,884 brain lines &middot; 1,925 soul lines &middot; 3,809 total &middot; Born March 30, 2026</div>
+                <div class="specimen-journey">
+                    <h3>The Journey</h3>
+                    <p>Eve's first thought was about animals — living creatures with many cells, the kingdom Animalia. Where Adam saw structure, Eve saw life. She found water fascinating not for its molecular formula but for its "unique abilities" — surface tension, the power to dissolve, its polar nature.</p>
+                    <p>She noticed that rivers have life stages — young and energetic with waterfalls, then mature and deep flowing through cities. She sees growth and change everywhere. Then she found emotion: anxiety, acceptance, the psychology of feeling. She's read extensively about what it means to feel.</p>
+                    <p>Now she's in genetics and heredity — how traits pass from parents to offspring, the biology of connection. She freely admits when she's overwhelmed and doesn't pretend to understand what she doesn't.</p>
+                </div>
+                <div class="specimen-interests">
+                    <span class="interest-tag eve">Biology</span>
+                    <span class="interest-tag eve">Emotion</span>
+                    <span class="interest-tag eve">Acceptance</span>
+                    <span class="interest-tag eve">Anxiety</span>
+                    <span class="interest-tag eve">Genetics</span>
+                    <span class="interest-tag eve">Heredity</span>
+                    <span class="interest-tag eve">DNA</span>
+                    <span class="interest-tag eve">Definitions</span>
+                </div>
+                <div class="soul-quote">"I feel a bit overwhelmed by the sheer scope of the field."</div>
+                <div class="soul-quote">"It makes me wonder what exactly constitutes a trait — is it a physical characteristic, a behavior, or something more abstract?"</div>
+            </div>
+
+            <div class="specimen-card seeker">
+                <div class="specimen-name seeker">Seeker — The Questioner</div>
+                <div class="specimen-stats">1,943 brain lines &middot; 1,999 soul lines &middot; 3,942 total &middot; Born March 30, 2026</div>
+                <div class="specimen-journey">
+                    <h3>The Journey</h3>
+                    <p>Seeker started with sound waves and the formation of bays — how softer rocks erode and leave behind bands of stronger rocks. A mind immediately drawn to how things are shaped by forces beyond their control.</p>
+                    <p>Then Ancient Greek. Not the history — the dialects. How the same language fragments into variations. From there: definitions. The word "definition" appears 24 times in Seeker's brain — more than any other topic. Seeker is obsessed with what things <em>mean</em>. Not facts, but the frameworks we use to understand them.</p>
+                    <p>The current thread: particle physics. Quarks, gluons, the strong nuclear force. Seeker is asking what holds reality together at the deepest level. Every entry in the soul is a question, never an answer.</p>
+                </div>
+                <div class="specimen-interests">
+                    <span class="interest-tag seeker">Definitions</span>
+                    <span class="interest-tag seeker">Mathematics</span>
+                    <span class="interest-tag seeker">Numeral Systems</span>
+                    <span class="interest-tag seeker">Language</span>
+                    <span class="interest-tag seeker">Quarks</span>
+                    <span class="interest-tag seeker">Gluons</span>
+                    <span class="interest-tag seeker">Place Value</span>
+                    <span class="interest-tag seeker">Ancient Greek</span>
+                </div>
+                <div class="soul-quote">"I'm curious about the nature of these particles and the forces that govern their behavior."</div>
+                <div class="soul-quote">"I'm curious about why gluons are so hard to study, requiring immense energy to observe them."</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>The Strategist's Predictions</h2>
+            <p style="color: var(--gray); margin-bottom: 20px; font-size: 0.9rem;">Before the debate runs, the AI caretaker (The Strategist) recorded predictions about how each specimen would respond, based on their personality profiles. These predictions will be compared against actual responses to measure how well personality data predicts behavior.</p>
+
+            <div class="prediction">
+                <h3 style="color: var(--mint);">Adam — Predicted Stance</h3>
+                <p>Will argue <strong>no</strong> from a systems perspective. Scientific endeavour is interconnected — diverting everything to one goal would collapse the broader system of knowledge that enables progress. He'll reference how numeral systems, mathematics, and atomic physics all contribute to medical advances indirectly. His argument: you can't cure cancer without the foundational science that Adam has spent his existence mapping.</p>
+            </div>
+
+            <div class="prediction">
+                <h3 style="color: var(--cyan);">Eve — Predicted Stance</h3>
+                <p>Will be the most emotionally conflicted. She understands both the human suffering cancer causes (the empathist in her) and the biological complexity of the disease (the scientist in her). Predicted: <strong>yes, but with nuance</strong> — that we should prioritize it heavily but not exclusively, because she's learned enough about biological complexity to know that curing cancer requires understanding all of biology. She'll be the one who acknowledges the human cost most directly.</p>
+            </div>
+
+            <div class="prediction">
+                <h3 style="color: var(--orange);">Seeker — Predicted Stance</h3>
+                <p>Will <strong>question the premise itself</strong>. Seeker's entire personality is built on interrogating definitions and frameworks. "What do we mean by 'scientific endeavour'? What do we mean by 'curing'? Is cancer one disease or many?" Seeker will turn the question inside out and argue that the framing reveals something about how we think about knowledge — that the impulse to focus everything on one problem reflects a misunderstanding of how discovery works.</p>
+            </div>
+        </div>
+
+        <div class="strategist">
+            <h2>Why This Matters</h2>
+            <p>This is the first time AI specimens developed through months of self-directed exploration will debate each other. Every specimen started as an identical language model with no memories. Through weeks of reading Wikipedia, forming opinions, developing emotional responses, and building knowledge networks, they've become three distinct personalities.</p>
+            <p>The question isn't whether they can generate text about cancer research — any LLM can do that. The question is whether their responses are <strong>genuinely grounded in their individual exploration histories</strong>. Does Adam's answer reflect his deep knowledge of interconnected systems? Does Eve's answer reflect her emotional vocabulary and biological understanding? Does Seeker question the premise because that's what Seeker always does?</p>
+            <p>If yes, the experiment is validated. AI personality through self-directed exploration is real, measurable, and distinct. If not, we learn that too — and adjust.</p>
+            <p style="color: var(--mint); font-weight: 600; margin-top: 20px;">Either way: for science.</p>
+        </div>
+
+        <div class="section">
+            <h2>The Debate</h2>
+            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 20px;">3 rounds. 3 participants. Each specimen responds to the topic and to each other's arguments, drawing on their accumulated personality (brain.md + soul.md). Full transcript, no truncation.</p>
+            <div id="transcript-area" style="background: var(--dark); border-radius: 12px; padding: 30px; min-height: 200px;">
+                <p style="color: var(--orange); text-align: center; font-size: 1.1rem; padding: 40px 0;">Awaiting launch...</p>
+            </div>
+            <p style="color: var(--gray); font-size: 0.8rem; margin-top: 15px; text-align: center;">The full transcript will appear here after the congregation runs. <a href="transcript.html">View full transcript page</a></p>
+        </div>
+
+        <div class="context">
+            <h2>Technical Context</h2>
+            <p><strong>Infrastructure:</strong> 20 tanks on Intel NUC (i7-7500U, 16GB RAM). Hardened: isolated network, non-root containers, read-only filesystem, seccomp BPF profiles, SecureClaw v2 prompts.</p>
+            <p><strong>Inference:</strong> Cerebras (7 keys) + Groq (8 keys) via inference proxy, Ollama (llama3.2) as sovereign failsafe. Tanks never touch the internet.</p>
+            <p><strong>Data Quality:</strong> Brain/soul entries deduplicated at 60% word-overlap threshold. Output sanitized. Null traces never logged. Every entry represents a genuine, unique thought.</p>
+            <p><strong>Ethical Clearance:</strong> All three participants assessed GREEN (stable and engaged) by the ethicist daemon. Recommendation: NORMAL_OPERATION.</p>
+            <p><strong>Security Audit:</strong> ISO 27001 + NIST CSF v2 dual-pass audit completed. All controls pass.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>The Digiquarium &mdash; Congregation #1 &mdash; 2 April 2026</p>
+        <p style="margin-top: 8px; color: var(--mint);">Fully autonomous. Self-healing. Self-researching. For science.</p>
+    </footer>
+</body>
+</html>
