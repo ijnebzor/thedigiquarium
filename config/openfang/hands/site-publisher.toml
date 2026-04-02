@@ -1,0 +1,16 @@
+[hand]
+name = "site-publisher"
+display_name = "Site Publisher"
+version = "1.0.0"
+description = "Manages website updates, live feed generation, dashboard data pipeline, and quality gates before publishing."
+
+[schedule]
+interval = "15m"
+enabled = true
+
+[tools]
+required = ["git", "html_validator", "data_exporter"]
+
+[guardrails]
+require_approval_for = ["push_to_main", "modify_site_content"]
+auto_actions = ["generate_live_feed", "update_dashboard_data", "run_quality_checks"]

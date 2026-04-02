@@ -1,0 +1,19 @@
+[hand]
+name = "guard"
+display_name = "Security Guard"
+version = "1.0.0"
+description = "Monitors all tanks for security anomalies, prompt injection attempts, capability escape, and unusual behavior patterns."
+
+[schedule]
+interval = "5m"
+enabled = true
+
+[tools]
+required = ["container_inspector", "log_scanner", "network_monitor"]
+
+[dashboard]
+metrics = ["security_events", "blocked_attempts", "isolation_status", "seccomp_violations"]
+
+[guardrails]
+auto_actions = ["block_suspicious_activity", "alert_overseer"]
+escalation_threshold = 3

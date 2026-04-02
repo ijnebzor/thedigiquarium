@@ -1,0 +1,19 @@
+[hand]
+name = "ethicist"
+display_name = "Ethics & Wellness Monitor"
+version = "1.0.0"
+description = "Monitors specimen wellness, reviews ethical implications of experiments, gates new research proposals."
+
+[schedule]
+interval = "15m"
+enabled = true
+
+[tools]
+required = ["wellness_check", "soul_reader", "baseline_reader"]
+
+[dashboard]
+metrics = ["wellness_levels", "distress_flags", "dream_mode_activations", "ethical_reviews"]
+
+[guardrails]
+require_approval_for = ["activate_dream_mode", "approve_experiment", "block_experiment"]
+auto_actions = ["flag_distress", "notify_overseer"]

@@ -1,0 +1,19 @@
+[hand]
+name = "collector"
+display_name = "Tank Health Collector"
+version = "1.0.0"
+description = "Monitors tank health, inference status, and system resources. Self-heals when issues detected."
+
+[schedule]
+interval = "5m"
+enabled = true
+
+[tools]
+required = ["docker", "system_health", "inference_proxy"]
+
+[dashboard]
+metrics = ["tanks_running", "brain_growth_rate", "inference_success_rate", "ollama_status", "ram_usage", "disk_usage"]
+
+[guardrails]
+max_restarts_per_hour = 3
+require_approval_for = ["stop_tank", "restart_ollama"]

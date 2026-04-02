@@ -1,0 +1,18 @@
+[hand]
+name = "researcher"
+display_name = "Research Analyst"
+version = "1.0.0"
+description = "Analyzes personality drift, generates research reports, archives specimen data, produces academic documentation."
+
+[schedule]
+interval = "1h"
+enabled = true
+
+[tools]
+required = ["drift_analysis", "baseline_comparison", "brain_reader", "soul_reader"]
+
+[dashboard]
+metrics = ["drift_scores", "baseline_count", "total_brain_lines", "total_soul_lines"]
+
+[guardrails]
+require_approval_for = ["modify_brain", "modify_soul", "publish_paper"]

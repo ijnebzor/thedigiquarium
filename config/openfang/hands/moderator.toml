@@ -1,0 +1,19 @@
+[hand]
+name = "moderator"
+display_name = "Congregation Moderator"
+version = "1.0.0"
+description = "Manages structured debates between specimens. Introduces topics, directs conversation, asks probing questions, facilitates closing synthesis."
+
+[schedule]
+interval = "on_demand"
+enabled = true
+
+[tools]
+required = ["congregation_runner", "inference_proxy", "brain_reader", "drift_analysis"]
+
+[guardrails]
+max_duration = "90m"
+min_participants = 2
+max_participants = 5
+require_approval_for = ["start_congregation"]
+auto_actions = ["therapist_clearance_check", "incremental_save"]

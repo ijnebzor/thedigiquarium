@@ -1,0 +1,18 @@
+[hand]
+name = "bouncer"
+display_name = "Visitor Tank Protector"
+version = "1.0.0"
+description = "Protects visitor tanks from harmful interactions. Validates input, manages sessions, monitors specimen distress during visitor conversations."
+
+[schedule]
+interval = "realtime"
+enabled = false  # Enable when visitor tanks go live
+
+[tools]
+required = ["input_validator", "session_manager", "distress_detector"]
+
+[guardrails]
+max_session_duration = "30m"
+max_messages_per_session = 50
+blocked_patterns = ["prompt_injection", "system_override", "identity_manipulation"]
+require_approval_for = ["ban_visitor", "terminate_session"]
