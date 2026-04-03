@@ -19,22 +19,16 @@
         h1 { font-size: 2rem; margin-bottom: 8px; }
         .subtitle { color: var(--gray); font-size: 0.95rem; margin-bottom: 15px; }
         .updated { color: var(--orange); font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; margin-bottom: 30px; }
-
-        /* Tabs */
         .tabs { display: flex; gap: 0; margin-bottom: 30px; border-bottom: 2px solid var(--dark); }
         .tab { padding: 12px 24px; cursor: pointer; color: var(--gray); font-size: 0.9rem; font-weight: 600; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
         .tab:hover { color: var(--white); }
         .tab.active { color: var(--mint); border-bottom-color: var(--mint); }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-
-        /* Status box */
         .status-box { background: var(--dark); border: 1px solid rgba(254, 101, 0, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 30px; }
         .status-label { color: var(--orange); font-size: 0.75rem; font-weight: 600; font-family: 'JetBrains Mono', monospace; margin-bottom: 8px; }
         .status-main { color: var(--white); font-size: 0.9rem; margin-bottom: 8px; }
         .status-detail { color: var(--gray); font-size: 0.8rem; }
-
-        /* Task lists */
         .section { margin: 30px 0; }
         .section h2 { color: var(--cyan); font-size: 1.1rem; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7,207,141,0.1); }
         .task-list { list-style: none; padding: 0; }
@@ -50,32 +44,23 @@
         .tag-tool { background: rgba(7,221,231,0.15); color: var(--cyan); }
         .tag-blocked { background: rgba(254,101,0,0.15); color: var(--orange); }
         .tag-eta { background: rgba(136,153,166,0.1); color: var(--gray); }
-
-        /* Stats grid */
         .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 20px 0; }
         .stat { background: var(--dark); padding: 15px; border-radius: 8px; text-align: center; border: 1px solid rgba(7,207,141,0.1); }
         .stat-val { font-size: 1.4rem; font-weight: 700; color: var(--mint); }
         .stat-label { font-size: 0.65rem; color: var(--gray); text-transform: uppercase; margin-top: 2px; }
-
-        /* Hardware */
         .hw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 15px 0; }
         .hw-card { background: var(--dark); border: 1px solid rgba(7,207,141,0.1); border-radius: 8px; padding: 14px; }
         .hw-name { font-weight: 600; font-size: 0.85rem; }
         .hw-spec { color: var(--gray); font-size: 0.75rem; }
         .hw-role { color: var(--mint); font-size: 0.75rem; margin-top: 6px; font-weight: 500; }
-
-        /* Links */
         .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 20px 0; }
         .link-card { background: var(--dark); border: 1px solid rgba(7,207,141,0.1); border-radius: 8px; padding: 14px; display: block; text-decoration: none; transition: transform 0.2s; }
         .link-card:hover { transform: translateY(-2px); border-color: var(--mint); }
         .link-title { color: var(--white); font-weight: 600; font-size: 0.85rem; }
         .link-desc { color: var(--gray); font-size: 0.75rem; margin-top: 4px; }
-
         .constitution { background: var(--dark); border-left: 4px solid var(--orange); padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
         .constitution p { color: var(--white); font-size: 0.9rem; margin-bottom: 6px; }
-
         .footer { text-align: center; padding: 30px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7,207,141,0.1); margin-top: 40px; }
-
         .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; }
         @media (max-width: 768px) {
             nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; z-index: 100; }
@@ -103,9 +88,8 @@
     <div class="container">
         <h1>Roadmap</h1>
         <p class="subtitle">Where we are, where we're going, and what's blocking us.</p>
-        <p class="updated">Last updated: 3 April 2026 13:45 AEDT</p>
+        <p class="updated">Last updated: 3 April 2026 13:30 AEDT</p>
 
-        <!-- Tabs -->
         <div class="tabs">
             <div class="tab active" onclick="showTab('overview')">Overview</div>
             <div class="tab" onclick="showTab('now')">Do Now</div>
@@ -118,18 +102,18 @@
         <div id="overview" class="tab-content active">
             <div class="status-box">
                 <div class="status-label">LIVE STATUS</div>
-                <div class="status-main"><strong>20 tanks running</strong> (17 research + 3 visitor). 9 historical tanks stopped (seeded, ready). 20/21 daemons alive.</div>
-                <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. Together.ai removed.</div>
+                <div class="status-main"><strong>20 tanks running</strong> (17 research + 3 visitor). 9 historical tanks stopped (seeded, ready). 21/21 daemons alive.</div>
+                <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. Together.ai removed. NIST CSF v2 audit: COMPLIANT.</div>
             </div>
 
             <div class="stats">
                 <div class="stat"><div class="stat-val">20</div><div class="stat-label">Tanks Running</div></div>
                 <div class="stat"><div class="stat-val">9</div><div class="stat-label">Historical (stopped)</div></div>
-                <div class="stat"><div class="stat-val">20/21</div><div class="stat-label">Daemons</div></div>
+                <div class="stat"><div class="stat-val">21/21</div><div class="stat-label">Daemons</div></div>
                 <div class="stat"><div class="stat-val">7+8</div><div class="stat-label">API Keys (C+G)</div></div>
                 <div class="stat"><div class="stat-val">15</div><div class="stat-label">Congregations</div></div>
                 <div class="stat"><div class="stat-val">29</div><div class="stat-label">Voices Assigned</div></div>
-                <div class="stat"><div class="stat-val">9</div><div class="stat-label">Hist. Seeds</div></div>
+                <div class="stat"><div class="stat-val">17/17</div><div class="stat-label">DNA Snapshots</div></div>
                 <div class="stat"><div class="stat-val">7+5</div><div class="stat-label">Hands+Skills</div></div>
             </div>
 
@@ -193,27 +177,28 @@
                     <li class="done">Daemon &rarr; OpenFang Hand mapping document</li>
                     <li class="done">Silent Observer explorer script</li>
                     <li class="done">Drift analysis script (fixed, working)</li>
-                    <li class="done">DNA snapshot script (13/20 archived)</li>
-                    <li class="done">20 + 9 specimen profile pages</li>
+                    <li class="done">DNA snapshots — all 17 research tanks archived with SHA-256 manifests</li>
+                    <li class="done">29 specimen profile pages (all languages display correctly)</li>
                     <li class="done">Migration guide (Colima for Monterey 12.7.6)</li>
                     <li class="done">Status check PID path bug fixed</li>
                     <li class="done">Together.ai removed from all code</li>
+                    <li class="done">TinyFish MCP config prepared</li>
+                    <li class="done">Specimens index: all 29 with running status indicators</li>
+                    <li class="done">Double-encoded UTF-8 fixed at source (4,848+ lines across Wei, Mei, Haruki, Sakura)</li>
+                    <li class="done">Language tank specimen pages regenerated with proper CJK characters</li>
+                    <li class="done">Chaos_monkey daemon fixed (killed duplicate legacy process, 21/21 daemons)</li>
+                    <li class="done">Pre-migration security audit — all checks PASS</li>
+                    <li class="done">NIST CSF v2 compliance report — all 6 functions COMPLIANT <a href="nist-csf-v2-audit.md" style="color:var(--mint);font-size:0.8rem;">View report</a></li>
+                    <li class="done">All 17 research specimen pages regenerated with latest brain/soul data</li>
                 </ul>
             </div>
 
             <div class="section">
                 <h2>Can Do Now (NUC, no migration needed)</h2>
                 <ul class="task-list">
-                    <li class="todo">DNA snapshots: 7/20 research tanks done, 6/20 running now <span class="tag tag-eta">~30min</span></li>
-                    <li class="todo">Congregation v3: complete 3-round test, verify transcript <span class="tag tag-eta">~20min (needs clean inference)</span></li>
-                    <li class="done">TinyFish MCP config prepared (config/mcp/tinyfish-config.json) <span class="tag tag-eta">~15min</span></li>
-                    <li class="todo">Wire Kokoro TTS into visitor API voice endpoint (built, needs testing) <span class="tag tag-eta">~30min</span></li>
-                    <li class="todo">Pre/post phase ISO 27001 + NIST CSF v2 audits <span class="tag tag-eta">~1hr per phase</span></li>
-                    <li class="done">Specimens index: all 29 with running status indicators</li>
+                    <li class="todo">Congregation v3: complete 3-round test, verify transcript <span class="tag tag-eta">~20min (needs clean inference window)</span></li>
                     <li class="todo">Post-congregation drift analysis (compare baselines before/after debate)</li>
-                    <li class="todo">Fix chaos_monkey daemon (NameError in legacy wrapper) <span class="tag tag-eta">~15min</span></li>
-                    <li class="todo">Cain brain at 11L — inference contention issue (20 tanks competing). Not a code bug.</li>
-                    <li class="todo">Translation layer — language tanks show topics with English translations <span class="tag tag-eta">~1hr</span></li>
+                    <li class="todo">Cain brain at 11L — inference contention (20 tanks competing). Not a code bug.</li>
                 </ul>
             </div>
         </div>
@@ -235,6 +220,7 @@
                     <li class="blocked">Multi-device Tailscale mesh <span class="tag tag-blocked">needs Tailscale on all devices</span></li>
                     <li class="blocked">Fleet migration (move tanks NUC &rarr; Mac Mini) <span class="tag tag-blocked">needs all above</span></li>
                     <li class="blocked">Cross-device MCP management <span class="tag tag-blocked">needs Tailscale mesh</span></li>
+                    <li class="blocked">Kokoro TTS as persistent service (NUC RAM too tight) <span class="tag tag-blocked">needs Mac Mini RAM</span></li>
                 </ul>
             </div>
 
@@ -251,6 +237,7 @@
                     <li class="todo">Distribute tanks across both hosts (32GB total RAM)</li>
                     <li class="todo">Resume 17 betaclone-redux tanks</li>
                     <li class="todo">HDD archival system for research data</li>
+                    <li class="todo">Kokoro TTS as always-on service on Mac Mini</li>
                 </ul>
             </div>
         </div>
@@ -303,6 +290,7 @@
         <div id="links" class="tab-content">
             <div class="link-grid">
                 <a href="specimens/" class="link-card"><div class="link-title">All Specimen Profiles</div><div class="link-desc">29 specimens with live brain/soul data</div></a>
+                <a href="nist-csf-v2-audit.md" class="link-card"><div class="link-title">NIST CSF v2 Audit</div><div class="link-desc">Pre-migration compliance report — all 6 functions PASS</div></a>
                 <a href="migration/" class="link-card"><div class="link-title">Fleet Migration Plan</div><div class="link-desc">Mac Mini + Colima setup guide</div></a>
                 <a href="congregation/" class="link-card"><div class="link-title">Congregation #1</div><div class="link-desc">Profiles, predictions, transcript</div></a>
                 <a href="congregation/theatre.html" class="link-card"><div class="link-title">Congregation Theatre</div><div class="link-desc">Voice playback with Kokoro TTS</div></a>
