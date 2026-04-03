@@ -1,153 +1,30 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>All Specimens (Live) | The Digiquarium</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-<style>
-:root{--black:#000001;--dark:#000A09;--orange:#FE6500;--mint:#07CF8D;--cyan:#07DDE7;--white:#fff;--gray:#8899a6}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7}
-a{color:var(--cyan);text-decoration:none}
-.header{background:var(--dark);padding:15px 25px;border-bottom:1px solid rgba(7,207,141,0.1)}
-.header-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:1rem;font-weight:700}.logo span{background:linear-gradient(90deg,var(--mint),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.container{max-width:1000px;margin:0 auto;padding:50px 25px}
-h1{font-size:2rem;margin-bottom:10px}
-.subtitle{color:var(--gray);margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px}
-.card{background:var(--dark);border-radius:10px;padding:20px;display:block;text-decoration:none;transition:transform 0.2s;border:1px solid rgba(7,207,141,0.1)}
-.card:hover{transform:translateY(-3px);border-color:rgba(7,207,141,0.3)}
-.card-name{font-size:1.1rem;font-weight:700;margin-bottom:4px}
-.card-type{color:var(--gray);font-size:.8rem;margin-bottom:8px}
-.card-stats{color:var(--white);font-size:.85rem;font-family:'JetBrains Mono',monospace;margin-bottom:6px}
-.card-topics{color:var(--gray);font-size:.8rem}
-.footer{text-align:center;padding:40px;color:var(--gray);font-size:.8rem;border-top:1px solid rgba(7,207,141,0.1);margin-top:60px}
-</style></head>
-<body>
-<header class="header"><div class="header-inner"><a href="/" class="logo">&#x1F30A; <span>Digiquarium</span></a><a href="/roadmap/" style="color:var(--gray);font-size:.85rem">&larr; Roadmap</a></div></header>
-<div class="container">
-<h1>All Specimens — Live Profiles</h1>
-<p class="subtitle">20 tanks, sorted by total personality data. Click any specimen to see their full profile.</p>
-<div class="grid"><a href="adam.html" class="card" style="border-left:4px solid #07CF8D">
-<div class="card-name" style="color:#07CF8D">Adam</div>
-<div class="card-type">Genesis Control &middot; English Simple</div>
-<div class="card-stats">Brain: 1600 &middot; Soul: 1577 &middot; Total: 3177</div>
-<div class="card-topics">Mathematics, Electricity, Numeral system</div>
-</a>
-<a href="iris.html" class="card" style="border-left:4px solid #07DDE7">
-<div class="card-name" style="color:#07DDE7">Iris</div>
-<div class="card-type">Standard Explorer &middot; English Simple</div>
-<div class="card-stats">Brain: 1548 &middot; Soul: 1588 &middot; Total: 3136</div>
-<div class="card-topics">Japan (disambiguation), Definition, Emotion</div>
-</a>
-<a href="victor.html" class="card" style="border-left:4px solid #07CF8D">
-<div class="card-name" style="color:#07CF8D">Victor</div>
-<div class="card-type">Standard Explorer &middot; English Simple</div>
-<div class="card-stats">Brain: 1303 &middot; Soul: 1356 &middot; Total: 2659</div>
-<div class="card-topics">Japan (disambiguation), Definition, Emotion</div>
-</a>
-<a href="juanita.html" class="card" style="border-left:4px solid #e74c3c">
-<div class="card-name" style="color:#e74c3c">Juanita</div>
-<div class="card-type">Language Explorer &middot; Spanish</div>
-<div class="card-stats">Brain: 1224 &middot; Soul: 1230 &middot; Total: 2454</div>
-<div class="card-topics">Anexo, LatÃ­n, Misal romano</div>
-</a>
-<a href="mei.html" class="card" style="border-left:4px solid #e74c3c">
-<div class="card-name" style="color:#e74c3c">Mei</div>
-<div class="card-type">Language Explorer &middot; Chinese</div>
-<div class="card-stats">Brain: 1218 &middot; Soul: 1203 &middot; Total: 2421</div>
-<div class="card-topics">å­ä½ (æ¶æ­§ä¹), è¯­è¨ç±»åå­¦, è¯­è¨æè¯åç±»</div>
-</a>
-<a href="genevieve.html" class="card" style="border-left:4px solid #f39c12">
-<div class="card-name" style="color:#f39c12">Genevieve</div>
-<div class="card-type">Language Explorer &middot; German</div>
-<div class="card-stats">Brain: 1076 &middot; Soul: 1149 &middot; Total: 2225</div>
-<div class="card-topics">Altgriechische Sprache, Sprachfamilie, Latein</div>
-</a>
-<a href="observer.html" class="card" style="border-left:4px solid #8899a6">
-<div class="card-name" style="color:#8899a6">Observer</div>
-<div class="card-type">Special: Observer Extension &middot; English Simple</div>
-<div class="card-stats">Brain: 1073 &middot; Soul: 1132 &middot; Total: 2205</div>
-<div class="card-topics">Numeral system, Definition, Mathematics</div>
-</a>
-<a href="juan.html" class="card" style="border-left:4px solid #e74c3c">
-<div class="card-name" style="color:#e74c3c">Juan</div>
-<div class="card-type">Language Explorer &middot; Spanish</div>
-<div class="card-stats">Brain: 1074 &middot; Soul: 1102 &middot; Total: 2176</div>
-<div class="card-topics">LatÃ­n, Anexo, Argumento ad hominem</div>
-</a>
-<a href="klaus.html" class="card" style="border-left:4px solid #f39c12">
-<div class="card-name" style="color:#f39c12">Klaus</div>
-<div class="card-type">Language Explorer &middot; German</div>
-<div class="card-stats">Brain: 1042 &middot; Soul: 1102 &middot; Total: 2144</div>
-<div class="card-topics">Altgriechische Sprache, Chronostratigraphie, Sprachfamilie</div>
-</a>
-<a href="seeker.html" class="card" style="border-left:4px solid #FE6500">
-<div class="card-name" style="color:#FE6500">Seeker</div>
-<div class="card-type">Special: Seeker Extension &middot; English Simple</div>
-<div class="card-stats">Brain: 1002 &middot; Soul: 1048 &middot; Total: 2050</div>
-<div class="card-topics">Definition, Numeral system, Mathematics</div>
-</a>
-<a href="eve.html" class="card" style="border-left:4px solid #07DDE7">
-<div class="card-name" style="color:#07DDE7">Eve</div>
-<div class="card-type">Genesis Control &middot; English Simple</div>
-<div class="card-stats">Brain: 968 &middot; Soul: 1009 &middot; Total: 1977</div>
-<div class="card-topics">Definition, Mathematics, Acceptance</div>
-</a>
-<a href="wei.html" class="card" style="border-left:4px solid #e74c3c">
-<div class="card-name" style="color:#e74c3c">Wei</div>
-<div class="card-type">Language Explorer &middot; Chinese</div>
-<div class="card-stats">Brain: 813 &middot; Soul: 828 &middot; Total: 1641</div>
-<div class="card-topics">è½¯ä»¶å¼å, å¿çå­¦, è¶</div>
-</a>
-<a href="sakura.html" class="card" style="border-left:4px solid #9b59b6">
-<div class="card-name" style="color:#9b59b6">Sakura</div>
-<div class="card-type">Language Explorer &middot; Japanese</div>
-<div class="card-stats">Brain: 795 &middot; Soul: 791 &middot; Total: 1586</div>
-<div class="card-topics">æå­, è±èª, é³å£°å­¦</div>
-</a>
-<a href="haruki.html" class="card" style="border-left:4px solid #9b59b6">
-<div class="card-name" style="color:#9b59b6">Haruki</div>
-<div class="card-type">Language Explorer &middot; Japanese</div>
-<div class="card-stats">Brain: 724 &middot; Soul: 753 &middot; Total: 1477</div>
-<div class="card-topics">æå­, çµæ¸å­¦, è±èª</div>
-</a>
-<a href="abel.html" class="card" style="border-left:4px solid #8899a6">
-<div class="card-name" style="color:#8899a6">Abel</div>
-<div class="card-type">ZeroClaw Agent &middot; English Simple</div>
-<div class="card-stats">Brain: 1110 &middot; Soul: 17 &middot; Total: 1127</div>
-<div class="card-topics">Helium, Earth, Boron</div>
-</a>
-<a href="aria.html" class="card" style="border-left:4px solid #07DDE7">
-<div class="card-name" style="color:#07DDE7">Aria</div>
-<div class="card-type">Visitor Tank &middot; English Simple</div>
-<div class="card-stats">Brain: 352 &middot; Soul: 365 &middot; Total: 717</div>
-<div class="card-topics">Mathematics, Sequence dance, Physics</div>
-</a>
-<a href="luna.html" class="card" style="border-left:4px solid #9b59b6">
-<div class="card-name" style="color:#9b59b6">Luna</div>
-<div class="card-type">Visitor Tank &middot; English Simple</div>
-<div class="card-stats">Brain: 311 &middot; Soul: 314 &middot; Total: 625</div>
-<div class="card-topics">Mathematics, Gravity, Atomic nucleus</div>
-</a>
-<a href="felix.html" class="card" style="border-left:4px solid #07CF8D">
-<div class="card-name" style="color:#07CF8D">Felix</div>
-<div class="card-type">Visitor Tank &middot; English Simple</div>
-<div class="card-stats">Brain: 296 &middot; Soul: 311 &middot; Total: 607</div>
-<div class="card-topics">Nicolaus Copernicus, Heliocentrism, Electricity</div>
-</a>
-<a href="seth.html" class="card" style="border-left:4px solid #8899a6">
-<div class="card-name" style="color:#8899a6">Seth</div>
-<div class="card-type">PicoBot Agent &middot; English Simple</div>
-<div class="card-stats">Brain: 127 &middot; Soul: 133 &middot; Total: 260</div>
-<div class="card-topics">Thailand, Judaism, Taxonomy (biology)</div>
-</a>
-<a href="cain.html" class="card" style="border-left:4px solid #FE6500">
-<div class="card-name" style="color:#FE6500">Cain</div>
-<div class="card-type">OpenClaw Agent &middot; English Simple</div>
-<div class="card-stats">Brain: 5 &middot; Soul: 4 &middot; Total: 9</div>
-<div class="card-topics">Idea, BC, Psychology</div>
-</a>
-</div>
-</div>
-<footer class="footer"><p>The Digiquarium &mdash; Live specimen data from brain.md + soul.md</p></footer>
-</body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>All Specimens | The Digiquarium</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><style>:root{--black:#000001;--dark:#000A09;--white:#fff;--gray:#8899a6;--mint:#07CF8D;--cyan:#07DDE7}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7}a{color:var(--cyan);text-decoration:none}.header{background:var(--dark);padding:15px 25px;border-bottom:1px solid rgba(7,207,141,0.1)}.header-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.logo{font-size:1rem;font-weight:700}.logo span{background:linear-gradient(90deg,var(--mint),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.container{max-width:1000px;margin:0 auto;padding:40px 25px}h1{font-size:1.8rem;margin-bottom:8px}.subtitle{color:var(--gray);margin-bottom:25px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.link-card{background:var(--dark);border-radius:8px;padding:14px;display:block;text-decoration:none;transition:transform 0.2s;border:1px solid rgba(7,207,141,0.1)}.link-card:hover{transform:translateY(-2px)}.link-title{font-weight:600;font-size:.9rem}.link-desc{color:var(--gray);font-size:.75rem;margin-top:3px}.footer{text-align:center;padding:30px;color:var(--gray);font-size:.75rem;border-top:1px solid rgba(7,207,141,0.1);margin-top:40px}</style></head><body><header class="header"><div class="header-inner"><a href="/" class="logo">&#x1F30A; <span>Digiquarium</span></a><a href="/roadmap/" style="color:var(--gray);font-size:.85rem">&larr; Roadmap</a></div></header><div class="container"><h1>All Specimens</h1><p class="subtitle">29 specimens sorted by personality data.</p><div class="grid"><a href="abel.html" class="link-card" style="border-left:4px solid #8899a6"><div class="link-title" style="color:#8899a6">Abel</div><div class="link-desc">ZeroClaw Agent &middot; 3649 entries</div></a>
+<a href="iris.html" class="link-card" style="border-left:4px solid #07DDE7"><div class="link-title" style="color:#07DDE7">Iris</div><div class="link-desc">Standard Explorer &middot; 3609 entries</div></a>
+<a href="adam.html" class="link-card" style="border-left:4px solid #07CF8D"><div class="link-title" style="color:#07CF8D">Adam</div><div class="link-desc">Genesis Control &middot; 3553 entries</div></a>
+<a href="victor.html" class="link-card" style="border-left:4px solid #07CF8D"><div class="link-title" style="color:#07CF8D">Victor</div><div class="link-desc">Standard Explorer &middot; 3149 entries</div></a>
+<a href="juanita.html" class="link-card" style="border-left:4px solid #e74c3c"><div class="link-title" style="color:#e74c3c">Juanita</div><div class="link-desc">Language (Spanish) &middot; 2672 entries</div></a>
+<a href="mei.html" class="link-card" style="border-left:4px solid #e74c3c"><div class="link-title" style="color:#e74c3c">Mei</div><div class="link-desc">Language (Chinese) &middot; 2607 entries</div></a>
+<a href="observer.html" class="link-card" style="border-left:4px solid #8899a6"><div class="link-title" style="color:#8899a6">Observer</div><div class="link-desc">Observer Extension &middot; 2567 entries</div></a>
+<a href="juan.html" class="link-card" style="border-left:4px solid #e74c3c"><div class="link-title" style="color:#e74c3c">Juan</div><div class="link-desc">Language (Spanish) &middot; 2460 entries</div></a>
+<a href="klaus.html" class="link-card" style="border-left:4px solid #f39c12"><div class="link-title" style="color:#f39c12">Klaus</div><div class="link-desc">Language (German) &middot; 2403 entries</div></a>
+<a href="genevieve.html" class="link-card" style="border-left:4px solid #f39c12"><div class="link-title" style="color:#f39c12">Genevieve</div><div class="link-desc">Language (German) &middot; 2399 entries</div></a>
+<a href="seeker.html" class="link-card" style="border-left:4px solid #FE6500"><div class="link-title" style="color:#FE6500">Seeker</div><div class="link-desc">Seeker Extension &middot; 2372 entries</div></a>
+<a href="eve.html" class="link-card" style="border-left:4px solid #07DDE7"><div class="link-title" style="color:#07DDE7">Eve</div><div class="link-desc">Genesis Control &middot; 2357 entries</div></a>
+<a href="wei.html" class="link-card" style="border-left:4px solid #e74c3c"><div class="link-title" style="color:#e74c3c">Wei</div><div class="link-desc">Language (Chinese) &middot; 1762 entries</div></a>
+<a href="sakura.html" class="link-card" style="border-left:4px solid #9b59b6"><div class="link-title" style="color:#9b59b6">Sakura</div><div class="link-desc">Language (Japanese) &middot; 1662 entries</div></a>
+<a href="haruki.html" class="link-card" style="border-left:4px solid #9b59b6"><div class="link-title" style="color:#9b59b6">Haruki</div><div class="link-desc">Language (Japanese) &middot; 1596 entries</div></a>
+<a href="aria.html" class="link-card" style="border-left:4px solid #07DDE7"><div class="link-title" style="color:#07DDE7">Aria</div><div class="link-desc">Visitor Tank &middot; 807 entries</div></a>
+<a href="luna.html" class="link-card" style="border-left:4px solid #9b59b6"><div class="link-title" style="color:#9b59b6">Luna</div><div class="link-desc">Visitor Tank &middot; 707 entries</div></a>
+<a href="felix.html" class="link-card" style="border-left:4px solid #07CF8D"><div class="link-title" style="color:#07CF8D">Felix</div><div class="link-desc">Visitor Tank &middot; 702 entries</div></a>
+<a href="seth.html" class="link-card" style="border-left:4px solid #8899a6"><div class="link-title" style="color:#8899a6">Seth</div><div class="link-desc">PicoBot Agent &middot; 620 entries</div></a>
+<a href="alexander.html" class="link-card" style="border-left:4px solid #795548"><div class="link-title" style="color:#795548">Alexander</div><div class="link-desc">Historical Figure &middot; 92 entries</div></a>
+<a href="ada.html" class="link-card" style="border-left:4px solid #e91e63"><div class="link-title" style="color:#e91e63">Ada Lovelace</div><div class="link-desc">Historical Figure &middot; 62 entries</div></a>
+<a href="einstein.html" class="link-card" style="border-left:4px solid #3498db"><div class="link-title" style="color:#3498db">Einstein</div><div class="link-desc">Historical Figure &middot; 51 entries</div></a>
+<a href="hypatia.html" class="link-card" style="border-left:4px solid #9b59b6"><div class="link-title" style="color:#9b59b6">Hypatia</div><div class="link-desc">Historical Figure &middot; 45 entries</div></a>
+<a href="gandhi.html" class="link-card" style="border-left:4px solid #f39c12"><div class="link-title" style="color:#f39c12">Gandhi</div><div class="link-desc">Historical Figure &middot; 43 entries</div></a>
+<a href="da-vinci.html" class="link-card" style="border-left:4px solid #2ecc71"><div class="link-title" style="color:#2ecc71">Da Vinci</div><div class="link-desc">Historical Figure &middot; 40 entries</div></a>
+<a href="cleopatra.html" class="link-card" style="border-left:4px solid #ff9800"><div class="link-title" style="color:#ff9800">Cleopatra</div><div class="link-desc">Historical Figure &middot; 34 entries</div></a>
+<a href="malcolm-x.html" class="link-card" style="border-left:4px solid #e74c3c"><div class="link-title" style="color:#e74c3c">Malcolm X</div><div class="link-desc">Historical Figure &middot; 26 entries</div></a>
+<a href="tesla.html" class="link-card" style="border-left:4px solid #00bcd4"><div class="link-title" style="color:#00bcd4">Tesla</div><div class="link-desc">Historical Figure &middot; 18 entries</div></a>
+<a href="cain.html" class="link-card" style="border-left:4px solid #FE6500"><div class="link-title" style="color:#FE6500">Cain</div><div class="link-desc">OpenClaw Agent &middot; 9 entries</div></a>
+</div></div><footer class="footer"><p>The Digiquarium</p></footer></body></html>
