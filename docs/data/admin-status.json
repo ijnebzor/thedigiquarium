@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T12:55:23.842790",
+  "timestamp": "2026-04-03T13:03:00.479715",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,11 +50,11 @@
     }
   },
   "containers": {
-    "total": 29
+    "total": 28
   },
   "tanks": {
     "running": 20,
-    "traces_today": 3223,
+    "traces_today": 3227,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -69,7 +69,7 @@
       {
         "name": "tank-03-cain",
         "article": "Number",
-        "traces": 208
+        "traces": 212
       },
       {
         "name": "tank-04-abel",
