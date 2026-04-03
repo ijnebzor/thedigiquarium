@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T12:40:05.640994",
+  "timestamp": "2026-04-03T12:48:03.652103",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -50,11 +50,11 @@
     }
   },
   "containers": {
-    "total": 29
+    "total": 28
   },
   "tanks": {
     "running": 20,
-    "traces_today": 3111,
+    "traces_today": 3169,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -63,8 +63,8 @@
       },
       {
         "name": "tank-02-eve",
-        "article": "IUCN Red List",
-        "traces": 204
+        "article": "Element",
+        "traces": 216
       },
       {
         "name": "tank-03-cain",
@@ -73,8 +73,8 @@
       },
       {
         "name": "tank-04-abel",
-        "article": "Ediacaran",
-        "traces": 2329
+        "article": "Color",
+        "traces": 2375
       },
       {
         "name": "tank-05-juan",
