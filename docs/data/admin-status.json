@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T16:14:41.815492",
+  "timestamp": "2026-04-03T16:46:07.690996",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -9,9 +9,9 @@
   },
   "daemons": {
     "overseer": {
-      "running": true,
-      "count": 1,
-      "healthy": true
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "ollama_watcher": {
       "running": true,
@@ -20,12 +20,12 @@
     },
     "caretaker": {
       "running": true,
-      "count": 2,
-      "healthy": false
+      "count": 1,
+      "healthy": true
     },
     "maintainer": {
-      "running": true,
-      "count": 2,
+      "running": false,
+      "count": 0,
       "healthy": false
     },
     "guard": {
@@ -39,8 +39,8 @@
       "healthy": false
     },
     "sentinel": {
-      "running": true,
-      "count": 2,
+      "running": false,
+      "count": 0,
       "healthy": false
     },
     "psych": {
@@ -50,36 +50,36 @@
     }
   },
   "containers": {
-    "total": 28
+    "total": 26
   },
   "tanks": {
-    "running": 20,
-    "traces_today": 3800,
+    "running": 17,
+    "traces_today": 3929,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Momentum",
-        "traces": 309
+        "article": "Semitic languages",
+        "traces": 316
       },
       {
         "name": "tank-02-eve",
-        "article": "Base pair",
-        "traces": 344
+        "article": "International Olympic Committee",
+        "traces": 359
       },
       {
         "name": "tank-03-cain",
-        "article": "Study (field)",
-        "traces": 273
+        "article": "Direction",
+        "traces": 277
       },
       {
         "name": "tank-04-abel",
-        "article": "Knowledge",
-        "traces": 2700
+        "article": "Organism",
+        "traces": 2799
       },
       {
         "name": "tank-05-juan",
-        "article": "Idioma espa\u00c3\u00b1ol",
-        "traces": 174
+        "article": "Time",
+        "traces": 178
       }
     ]
   },
@@ -87,35 +87,35 @@
     "isolated": true
   },
   "overseer": {
-    "running": true,
+    "running": false,
     "last_audit_healthy": false,
     "active_incidents": 2,
     "auto_remediations": 0
   },
   "logs": [
-    "2026-04-03 14:23:47 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
-    "2026-04-03 14:23:47 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 2 total violations",
-    "2026-04-03 14:53:49 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-03 14:53:51 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
-    "2026-04-03 14:53:51 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-04-03 14:53:51 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-historical-alexander is Exited (137) 3 hours ago', 'tank-historical-cleopatra is Exited (137) 3 hours ago', 'tank-historical-malcolmx is Exited (137) 3 hours ago', 'tank-historical-davinci is Exited (137) 3 hours ago', 'tank-historical-hypatia is Exited (137) 3 hours ago', 'tank-historical-tesla is Exited (137) 3 hours ago', 'tank-historical-gandhi is Exited (137) 3 hours ago', 'tank-historical-ada is Exited (137) 3 hours ago', 'tank-historical-einstein is Exited (137) 3 hours ago']",
-    "2026-04-03 14:53:51 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
-    "2026-04-03 14:53:51 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 2 total violations",
-    "2026-04-03 15:23:52 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-03 15:23:55 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
-    "2026-04-03 15:23:55 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-04-03 15:23:55 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-historical-alexander is Exited (137) 4 hours ago', 'tank-historical-cleopatra is Exited (137) 4 hours ago', 'tank-historical-malcolmx is Exited (137) 4 hours ago', 'tank-historical-davinci is Exited (137) 4 hours ago', 'tank-historical-hypatia is Exited (137) 4 hours ago', 'tank-historical-tesla is Exited (137) 4 hours ago', 'tank-historical-gandhi is Exited (137) 4 hours ago', 'tank-historical-ada is Exited (137) 4 hours ago', 'tank-historical-einstein is Exited (137) 4 hours ago']",
-    "2026-04-03 15:23:55 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
-    "2026-04-03 15:23:55 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 2 total violations",
-    "2026-04-03 15:53:55 \ud83d\udd0d [OVERSEER] Starting full system audit",
-    "2026-04-03 15:53:58 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
-    "2026-04-03 15:53:58 \u26a0\ufe0f [OVERSEER]   - ollama: ['Windows Ollama unreachable: <urlopen error [Errno 113] No route to host>']",
-    "2026-04-03 15:53:58 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-historical-alexander is Exited (137) 4 hours ago', 'tank-historical-cleopatra is Exited (137) 4 hours ago', 'tank-historical-malcolmx is Exited (137) 4 hours ago', 'tank-historical-davinci is Exited (137) 4 hours ago', 'tank-historical-hypatia is Exited (137) 4 hours ago', 'tank-historical-tesla is Exited (137) 4 hours ago', 'tank-historical-gandhi is Exited (137) 4 hours ago', 'tank-historical-ada is Exited (137) 4 hours ago', 'tank-historical-einstein is Exited (137) 4 hours ago']",
-    "2026-04-03 15:53:58 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'maintainer has 2 instances (zombie leak)', 'sentinel has 2 instances (zombie leak)', 'scheduler has 2 instances (zombie leak)', 'psych has 6 instances (zombie leak)']",
-    "2026-04-03 15:53:58 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 2 total violations"
+    "Traceback (most recent call last):",
+    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
+    "main()",
+    "^^^^",
+    "NameError: name 'main' is not defined. Did you mean: 'min'?",
+    "Traceback (most recent call last):",
+    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
+    "main()",
+    "^^^^",
+    "NameError: name 'main' is not defined. Did you mean: 'min'?",
+    "Traceback (most recent call last):",
+    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
+    "main()",
+    "^^^^",
+    "NameError: name 'main' is not defined. Did you mean: 'min'?",
+    "Traceback (most recent call last):",
+    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
+    "main()",
+    "^^^^",
+    "NameError: name 'main' is not defined. Did you mean: 'min'?"
   ],
   "issues": [
-    "caretaker unhealthy",
+    "overseer unhealthy",
     "maintainer unhealthy",
     "scheduler unhealthy",
     "sentinel unhealthy",
