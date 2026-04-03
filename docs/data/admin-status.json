@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T13:03:29.797696",
+  "timestamp": "2026-04-03T13:19:44.267606",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,22 +54,22 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 3230,
+    "traces_today": 3268,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Nerve impulse",
-        "traces": 228
+        "article": "Biological classification",
+        "traces": 246
       },
       {
         "name": "tank-02-eve",
-        "article": "Element",
-        "traces": 216
+        "article": "Deductive reasoning",
+        "traces": 227
       },
       {
         "name": "tank-03-cain",
-        "article": "Ordinal number",
-        "traces": 215
+        "article": "Set",
+        "traces": 217
       },
       {
         "name": "tank-04-abel",
@@ -78,8 +78,8 @@
       },
       {
         "name": "tank-05-juan",
-        "article": "Biolog\u00c3\u00ada",
-        "traces": 148
+        "article": "\u00c3\u0081frica Occidental",
+        "traces": 155
       }
     ]
   },
