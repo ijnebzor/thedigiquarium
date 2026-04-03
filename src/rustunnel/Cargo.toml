@@ -1,0 +1,10 @@
+[package]
+name = "rustunnel"
+version = "0.1.0"
+edition = "2021"
+description = "Rustunnel — Secure reverse proxy for Digiquarium visitor tanks"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = "0.4"
