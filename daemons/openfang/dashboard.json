@@ -1,0 +1,209 @@
+{
+  "version": "0.1.0",
+  "started": "2026-04-03T04:32:54.983760660+00:00",
+  "uptime_seconds": 90,
+  "hands": [
+    {
+      "name": "site-publisher",
+      "label": "Site Publisher",
+      "enabled": true,
+      "last_run": "15:32:54",
+      "last_result": "ok",
+      "run_count": 1,
+      "error_count": 0,
+      "metrics": {
+        "status": "ok"
+      }
+    },
+    {
+      "name": "bouncer",
+      "label": "Visitor Tank Protector",
+      "enabled": false,
+      "last_run": null,
+      "last_result": null,
+      "run_count": 0,
+      "error_count": 0,
+      "metrics": {}
+    },
+    {
+      "name": "researcher",
+      "label": "Research Analyst",
+      "enabled": true,
+      "last_run": "15:32:54",
+      "last_result": "ok",
+      "run_count": 1,
+      "error_count": 0,
+      "metrics": {
+        "growth": {
+          "tank-01-adam": {
+            "b": 4100,
+            "s": 4062
+          },
+          "tank-02-eve": {
+            "b": 2820,
+            "s": 2889
+          },
+          "tank-03-cain": {
+            "b": 11,
+            "s": 9
+          },
+          "tank-04-abel": {
+            "b": 7544,
+            "s": 111
+          },
+          "tank-05-juan": {
+            "b": 2696,
+            "s": 2673
+          },
+          "tank-06-juanita": {
+            "b": 2944,
+            "s": 2917
+          },
+          "tank-07-klaus": {
+            "b": 2629,
+            "s": 2713
+          },
+          "tank-08-genevieve": {
+            "b": 2649,
+            "s": 2724
+          },
+          "tank-09-wei": {
+            "b": 2074,
+            "s": 2056
+          },
+          "tank-10-mei": {
+            "b": 2935,
+            "s": 2753
+          },
+          "tank-11-haruki": {
+            "b": 1903,
+            "s": 1953
+          },
+          "tank-12-sakura": {
+            "b": 1999,
+            "s": 1990
+          },
+          "tank-13-victor": {
+            "b": 3543,
+            "s": 3593
+          },
+          "tank-14-iris": {
+            "b": 3826,
+            "s": 3916
+          },
+          "tank-15-observer": {
+            "b": 2898,
+            "s": 3024
+          },
+          "tank-16-seeker": {
+            "b": 2789,
+            "s": 2879
+          },
+          "tank-17-seth": {
+            "b": 656,
+            "s": 645
+          },
+          "tank-historical-ada": {
+            "b": 73,
+            "s": 53
+          },
+          "tank-historical-alexander": {
+            "b": 105,
+            "s": 81
+          },
+          "tank-historical-cleopatra": {
+            "b": 47,
+            "s": 23
+          },
+          "tank-historical-davinci": {
+            "b": 53,
+            "s": 29
+          },
+          "tank-historical-einstein": {
+            "b": 65,
+            "s": 39
+          },
+          "tank-historical-gandhi": {
+            "b": 69,
+            "s": 19
+          },
+          "tank-historical-hypatia": {
+            "b": 55,
+            "s": 37
+          },
+          "tank-historical-malcolmx": {
+            "b": 51,
+            "s": 3
+          },
+          "tank-historical-tesla": {
+            "b": 31,
+            "s": 7
+          },
+          "tank-visitor-01-aria": {
+            "b": 913,
+            "s": 929
+          },
+          "tank-visitor-02-felix": {
+            "b": 783,
+            "s": 817
+          },
+          "tank-visitor-03-luna": {
+            "b": 809,
+            "s": 831
+          }
+        }
+      }
+    },
+    {
+      "name": "guard",
+      "label": "Security Guard",
+      "enabled": true,
+      "last_run": "15:32:54",
+      "last_result": "ok",
+      "run_count": 1,
+      "error_count": 0,
+      "metrics": {
+        "isolation": "pass",
+        "research_tanks": 17
+      }
+    },
+    {
+      "name": "collector",
+      "label": "Tank Health Collector",
+      "enabled": true,
+      "last_run": "15:32:54",
+      "last_result": "ok",
+      "run_count": 1,
+      "error_count": 0,
+      "metrics": {
+        "tanks_running": 20,
+        "ram_mb": "4951/7885",
+        "ollama": "running"
+      }
+    },
+    {
+      "name": "moderator",
+      "label": "Congregation Moderator",
+      "enabled": true,
+      "last_run": "15:32:54",
+      "last_result": "ok",
+      "run_count": 1,
+      "error_count": 0,
+      "metrics": {
+        "congregations": 15
+      }
+    },
+    {
+      "name": "ethicist",
+      "label": "Ethics & Wellness Monitor",
+      "enabled": true,
+      "last_run": "15:32:54",
+      "last_result": "ok",
+      "run_count": 1,
+      "error_count": 0,
+      "metrics": {
+        "status": "ok"
+      }
+    }
+  ]
+}
