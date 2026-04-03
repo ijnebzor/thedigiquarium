@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T16:07:18.947258",
+  "timestamp": "2026-04-03T16:14:41.815492",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -54,7 +54,7 @@
   },
   "tanks": {
     "running": 20,
-    "traces_today": 3725,
+    "traces_today": 3800,
     "activity": [
       {
         "name": "tank-01-adam",
@@ -63,18 +63,18 @@
       },
       {
         "name": "tank-02-eve",
-        "article": "Adenine",
-        "traces": 342
+        "article": "Base pair",
+        "traces": 344
       },
       {
         "name": "tank-03-cain",
-        "article": "Class",
-        "traces": 271
+        "article": "Study (field)",
+        "traces": 273
       },
       {
         "name": "tank-04-abel",
-        "article": "Papyrus",
-        "traces": 2629
+        "article": "Knowledge",
+        "traces": 2700
       },
       {
         "name": "tank-05-juan",
