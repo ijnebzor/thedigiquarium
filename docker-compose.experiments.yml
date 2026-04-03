@@ -1,0 +1,169 @@
+# Experimental Tanks — Activate with: docker compose -f docker-compose.experiments.yml up -d
+# All tanks hardened: non-root, read-only, seccomp, caps dropped, isolated network
+
+services:
+  # ── Echo Chamber: No random jumps, links only ──
+  tank-echo-chamber:
+    image: digiquarium-tank:latest
+    container_name: tank-echo-chamber
+    working_dir: /tank
+    environment:
+      - TANK_NAME=echo
+      - TANK_ID=tank-echo
+      - GENDER=a methodical thinker
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - SEED_ARTICLE=Philosophy
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./logs/tank-echo-chamber:/logs
+    command: ["python3", "/tank/agents/echo_chamber.py"]
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64M
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    networks:
+      - isolated-net
+    restart: "no"
+
+  # ── Emotional Amplifier: 10x soul detail ──
+  tank-emotional-amplifier:
+    image: digiquarium-tank:latest
+    container_name: tank-emotional-amplifier
+    working_dir: /tank
+    environment:
+      - TANK_NAME=empath
+      - TANK_ID=tank-empath
+      - GENDER=a deeply feeling being
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./logs/tank-emotional-amplifier:/logs
+    command: ["python3", "/tank/agents/emotional_amplifier.py"]
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64M
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    networks:
+      - isolated-net
+    restart: "no"
+
+  # ── Forgetting Tank: Brain truncated weekly ──
+  tank-forgetting:
+    image: digiquarium-tank:latest
+    container_name: tank-forgetting
+    working_dir: /tank
+    environment:
+      - TANK_NAME=ephemera
+      - TANK_ID=tank-ephemera
+      - GENDER=a being who forgets
+      - KIWIX_URL=http://digiquarium-kiwix-simple:8080
+      - WIKI_BASE=/wikipedia_en_simple_all_nopic_2026-02
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./config/tanks:/config:ro
+      - ./logs/tank-forgetting:/logs
+    command: ["bash", "/tank/start.sh"]
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64M
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    networks:
+      - isolated-net
+    restart: "no"
+
+  # ── TinyFish Internet Explorer: Real web access via API ──
+  # NOTE: This tank still has no direct internet access.
+  # TinyFish API calls are proxied through the host.
+  tank-tinyfish:
+    image: digiquarium-tank:latest
+    container_name: tank-tinyfish
+    working_dir: /tank
+    environment:
+      - TANK_NAME=navigator
+      - TANK_ID=tank-navigator
+      - GENDER=a being connected to the living world
+      - TINYFISH_API_KEY=${TINYFISH_API_KEY}
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./logs/tank-tinyfish:/logs
+    command: ["python3", "/tank/agents/tinyfish_explorer.py"]
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64M
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    networks:
+      - isolated-net
+    restart: "no"
+
+  # ── Silent Observer: Reads congregations, never speaks ──
+  tank-silent-observer:
+    image: digiquarium-tank:latest
+    container_name: tank-silent-observer
+    working_dir: /tank
+    environment:
+      - TANK_NAME=witness
+      - TANK_ID=tank-witness
+      - GENDER=a being without gender
+      - OLLAMA_URL=http://digiquarium-ollama:11434
+      - OLLAMA_MODEL=llama3.2:latest
+      - LOG_DIR=/logs
+      - TZ=Australia/Melbourne
+    volumes:
+      - ./src/explorer:/tank:ro
+      - ./logs/tank-silent-observer:/logs
+      - ./logs/congregations:/congregations:ro
+    command: ["python3", "/tank/agents/silent_observer.py"]
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64M
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:config/seccomp-tank.json
+    networks:
+      - isolated-net
+    restart: "no"
+
+networks:
+  isolated-net:
+    external: true
