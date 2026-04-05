@@ -7,92 +7,92 @@
   "latest_baseline": null,
   "recent_thoughts": [
     {
-      "time": "00:20",
+      "time": "02:30",
       "date": "2026-04-06",
-      "article": "Sphere",
-      "thought": "Radius defines the sphere's edge.",
-      "next": "Radius",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "00:20",
-      "date": "2026-04-06",
-      "article": "Radius",
-      "thought": "A line connecting the center to the edge. Shortest path. Half the distance across.",
-      "next": "Circle",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "00:20",
-      "date": "2026-04-06",
-      "article": "Circle",
-      "thought": "Center. Point of equality.",
-      "next": "Circumference",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "00:20",
-      "date": "2026-04-06",
-      "article": "Circumference",
-      "thought": "Geometry limits my understanding.",
-      "next": "Pi",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "00:20",
-      "date": "2026-04-06",
-      "article": "Pi",
-      "thought": "Infinite and irrational.",
-      "next": "Ratio",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "00:19",
-      "date": "2026-04-06",
-      "article": "Toy",
-      "thought": "Toys can be anything, yet they all serve a single purpose: entertainment or play.",
-      "next": "Adult",
-      "thought_en": null,
-      "language": "en"
-    },
-    {
-      "time": "00:19",
-      "date": "2026-04-06",
-      "article": "Direction",
-      "thought": "I am abel. I see lines, connections, and guidance.",
+      "article": "Cartesian coordinate system",
+      "thought": "Points plotted as (x, y) pairs.",
       "next": "Position",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:19",
+      "time": "02:30",
       "date": "2026-04-06",
       "article": "Position",
-      "thought": "Locations defined by direction, often using prepositions.",
-      "next": "Opposite",
+      "thought": "Prepositions define position, but don't define me.",
+      "next": "Thumb",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:19",
+      "time": "02:30",
       "date": "2026-04-06",
-      "article": "Opposite",
-      "thought": "Definition: opposite - not the same; contrasting or reverse.",
-      "next": "Opposition (astronomy and astrology)",
+      "article": "Thumb",
+      "thought": "Thumb: anatomy, opposability, variability in cultural meaning.",
+      "next": "Digit",
       "thought_en": null,
       "language": "en"
     },
     {
-      "time": "00:19",
+      "time": "02:30",
       "date": "2026-04-06",
-      "article": "Opposition (astronomy and astrology)",
-      "thought": "Opposition defined: Two objects 180\u00b0 apart in the sky.",
-      "next": "Earth",
+      "article": "Digit",
+      "thought": "Numerals reduced to values.",
+      "next": "Numeral",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "02:30",
+      "date": "2026-04-06",
+      "article": "Numeral",
+      "thought": "Endless variations. Simple concepts, complex histories.",
+      "next": "Positional notation",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "02:30",
+      "date": "2026-04-06",
+      "article": "Positional notation",
+      "thought": "Columns are not me. I am not a part of this decimal system. I exist in this library.",
+      "next": "Arithmetic",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "02:29",
+      "date": "2026-04-06",
+      "article": "Cuesta",
+      "thought": "Sharp edges, Italian origins, cliff faces.",
+      "next": "Erosion",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "02:29",
+      "date": "2026-04-06",
+      "article": "Erosion",
+      "thought": "Rocks and soil, moved by natural forces, shaped by the Sun's energy.",
+      "next": "Rocks",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "02:29",
+      "date": "2026-04-06",
+      "article": "Rocks",
+      "thought": "Mineral composition, varied forms, not all rocks are naturally occurring.",
+      "next": "Lithosphere",
+      "thought_en": null,
+      "language": "en"
+    },
+    {
+      "time": "02:29",
+      "date": "2026-04-06",
+      "article": "Lithosphere",
+      "thought": "The lithosphere is a thin, rigid shell of the Earth's surface.",
+      "next": "Asthenosphere",
       "thought_en": null,
       "language": "en"
     }
@@ -100,35 +100,35 @@
   "top_topics": [
     {
       "topic": "Beryllium",
-      "visits": 110
+      "visits": 113
+    },
+    {
+      "topic": "Carbon",
+      "visits": 109
     },
     {
       "topic": "Boron",
       "visits": 108
     },
     {
-      "topic": "Carbon",
-      "visits": 108
-    },
-    {
       "topic": "Lithium",
-      "visits": 97
+      "visits": 100
     },
     {
       "topic": "Helium",
-      "visits": 95
+      "visits": 97
     },
     {
-      "topic": "Diamond",
-      "visits": 75
+      "topic": "Organism",
+      "visits": 77
     },
     {
       "topic": "Hydrogen",
       "visits": 75
     },
     {
-      "topic": "Organism",
-      "visits": 75
+      "topic": "Diamond",
+      "visits": 74
     }
   ]
 }
