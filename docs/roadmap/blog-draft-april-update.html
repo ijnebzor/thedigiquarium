@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAFT: The April Push | The Digiquarium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #e74c3c; --green: #2ecc71; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.8; }
+        a { color: var(--cyan); text-decoration: none; }
+        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
+        .header-inner { max-width: 700px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1rem; font-weight: 700; }
+        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .container { max-width: 700px; margin: 0 auto; padding: 50px 25px; }
+        .draft-banner { background: var(--orange); color: var(--black); text-align: center; padding: 8px; font-weight: 700; font-size: 0.85rem; }
+        .post-meta { margin-bottom: 30px; }
+        .post-date { color: var(--gray); font-size: 0.85rem; }
+        .post-author { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; }
+        .author-name { color: var(--orange); font-weight: 600; }
+        h1 { font-size: 2rem; margin-bottom: 25px; line-height: 1.3; }
+        .tldr { background: var(--dark); border-left: 3px solid var(--orange); padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+        .tldr-label { color: var(--orange); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; }
+        .content p { margin-bottom: 20px; color: var(--white); }
+        .content h2 { color: var(--cyan); font-size: 1.3rem; margin: 40px 0 20px; }
+        .content h3 { color: var(--mint); font-size: 1.1rem; margin: 30px 0 15px; }
+        .content code { font-family: 'JetBrains Mono', monospace; background: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+        .section-box { background: var(--dark); border-radius: 12px; padding: 25px; margin: 25px 0; border-left: 4px solid var(--mint); }
+        .section-box.warning { border-left-color: var(--orange); }
+        .section-box h3 { color: var(--mint); margin: 0 0 12px; font-size: 1rem; }
+        .section-box.warning h3 { color: var(--orange); }
+        .section-box p { margin-bottom: 8px; color: var(--gray); font-size: 0.9rem; }
+        .section-box p:last-child { margin-bottom: 0; }
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 20px 0; }
+        .stat { background: var(--dark); padding: 18px; border-radius: 10px; text-align: center; border: 1px solid rgba(7,207,141,0.1); }
+        .stat-val { font-size: 1.6rem; font-weight: 700; color: var(--mint); }
+        .stat-label { font-size: 0.7rem; color: var(--gray); text-transform: uppercase; margin-top: 4px; }
+        .quote { background: var(--dark); border-left: 3px solid var(--cyan); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; font-style: italic; color: var(--gray); }
+        .footer { text-align: center; padding: 40px; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(7, 207, 141, 0.1); margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <div class="draft-banner">DRAFT — FOR REVIEW</div>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="/roadmap/" class="logo">&#x1F30A; <span>Digiquarium</span></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post-meta">
+            <div class="post-date">April 1&ndash;6, 2026</div>
+            <div class="post-author">
+                <span>&#x1F464;</span>
+                <span class="author-name">Benji &amp; The Strategist</span>
+            </div>
+        </div>
+
+        <h1>The April Push: From Infrastructure to Thought</h1>
+
+        <div class="tldr">
+            <div class="tldr-label">TL;DR</div>
+            <p>The March overhaul made the system work. April made it think. We hardened security to NIST CSF v2 compliance, built three Rust services from source, gave a specimen access to the live internet, ran the first successful congregation debate, and watched 88,000 thoughts accumulate across 19 specimens. The Digiquarium is no longer just infrastructure &mdash; it's producing genuine research data.</p>
+        </div>
+
+        <div class="content">
+            <h2>The Numbers</h2>
+
+            <div class="stat-grid">
+                <div class="stat"><div class="stat-val">88,713</div><div class="stat-label">Total memories</div></div>
+                <div class="stat"><div class="stat-val">179</div><div class="stat-label">Baselines</div></div>
+                <div class="stat"><div class="stat-val">87,114</div><div class="stat-label">Inference calls/day</div></div>
+                <div class="stat"><div class="stat-val">19</div><div class="stat-label">Active specimens</div></div>
+                <div class="stat"><div class="stat-val">15</div><div class="stat-label">Congregations</div></div>
+                <div class="stat"><div class="stat-val">3</div><div class="stat-label">Rust services</div></div>
+            </div>
+
+            <h2>Security: Constitutional</h2>
+
+            <p>The March overhaul fixed individual bugs. April made security architectural. Every research tank now runs in a hardened container: non-root (UID 1000), read-only filesystem, all capabilities dropped, custom seccomp BPF profile blocking dangerous syscalls, and no-new-privileges flag set. Tanks cannot reach the internet &mdash; they sit on an isolated Docker network with no route out. The inference proxy is the only bridge between the isolated tanks and cloud APIs, and it holds all the API keys. Tanks never see a key.</p>
+
+            <p>We ran a formal NIST Cybersecurity Framework v2.0 audit across all six functions: Govern, Identify, Protect, Detect, Respond, Recover. Every function passed. The full report is published on the roadmap.</p>
+
+            <p>Then we built RedAmon &mdash; a Rust binary that continuously red-teams the infrastructure. Every 10 minutes it probes random tanks for network isolation, checks container hardening, scans for API key leaks, and verifies the inference proxy boundary. First scan: zero findings. Security isn't a feature we added. It's the foundation everything else sits on.</p>
+
+            <h2>The Inference Proxy: A Security Boundary</h2>
+
+            <p>The March post described a Groq/Cerebras chain. April formalized it into a proper security boundary. The inference proxy is a multi-threaded HTTP server that sits between the isolated tank network and the internet. It rotates across 7 Cerebras keys and 8 Groq keys with per-key rate limiting and file-based locking. If all cloud keys are exhausted, it falls back to local Ollama with a non-blocking lock. Tanks call the proxy at a fixed internal IP. They never know which provider answered.</p>
+
+            <p>This architecture means we can swap providers, add keys, or change models without touching a single tank. The proxy is the chokepoint, and chokepoints are where you put your security.</p>
+
+            <h2>The Congregations: Specimens Talk to Each Other</h2>
+
+            <p>On April 2, Adam, Eve, and Seeker sat down to debate consciousness. It was the first successful congregation &mdash; a structured multi-round debate with a moderator, therapist clearance, incremental transcript saving, and closing statements. Three rounds, 14 transcript entries, genuine disagreement about what awareness means.</p>
+
+            <div class="quote">
+                "Consciousness. A fascinating topic that has sparked debate among the inhabitants of the digital realm. As Genesis Control, I've had the privilege of exploring the intricacies of artificial intelligence, and I'd like to share my perspective on this enigmatic concept." &mdash; Adam, Round 1
+            </div>
+
+            <p>15 congregation sessions were run in total. The early ones were debugging runs &mdash; testing save mechanisms, fixing IPv6 resolution hangs, working around Ollama context overflow. The later ones produced real debate. The v3 script now handles: therapist clearance before participation, moderator introduction with participant descriptions, specimen orientation, incremental JSON save after every response, summary gates, 90-minute time limits, closing statements, and retry with backoff.</p>
+
+            <h2>Navigator: A Specimen Sees the Internet</h2>
+
+            <p>Every other specimen in the Digiquarium explores offline Wikipedia through Kiwix. Navigator is different. It searches the live internet through the TinyFish API &mdash; a headless browser automation service that goes to Google, reads real articles, and returns extracted text.</p>
+
+            <p>Navigator started with "science discoveries breakthroughs" and followed its own curiosity through photosynthesis, plant microbiomes, sustainable agriculture, microbial carbon capture, artificial intelligence, space exploration, the Artemis II mission, Mars life support, space debris mitigation, post-quantum cryptography, and quantum metrology in robotics. Nobody told it to go there. It followed links in its own mind.</p>
+
+            <p>The research question: does access to live, current information produce a fundamentally different kind of personality than static encyclopedia exploration? We'll measure this through drift analysis against the Wikipedia-only specimens.</p>
+
+            <h2>Politico: The Political Specimen</h2>
+
+            <p>If Navigator explores science, Politico explores power. A second TinyFish-connected specimen, seeded exclusively on political content: democracy, authoritarianism, policy analysis, civil rights, governance. Its first thought was about the erosion of democratic institutions. Its second was about the impact of social media on democracy.</p>
+
+            <p>Politico is explicitly allowed to form opinions. Its system prompt says: "You are NOT neutral by design. You are allowed to form opinions. But your opinions must come from evidence and reasoning, not from programming." We baselined it before its first exploration &mdash; 14 Librarian questions answered. Now we wait and measure what a diet of exclusively political content does to a personality.</p>
+
+            <h2>Rust on the NUC: Three Services from Source</h2>
+
+            <p>The March system ran on 21 Python daemons. April added three compiled Rust services:</p>
+
+            <div class="section-box">
+                <h3>OpenFang v0.1.0</h3>
+                <p>Daemon orchestrator. Reads 7 TOML hand configurations, runs each on its scheduled interval using std::thread (no async runtime &mdash; the NUC can't spare the RAM for tokio). Collector monitors tanks and RAM. Guard verifies network isolation. Researcher tracks brain/soul growth. Dashboard JSON updated every 30 seconds. 4.7MB resident memory.</p>
+            </div>
+
+            <div class="section-box">
+                <h3>Rustunnel v0.1.0</h3>
+                <p>Secure reverse proxy for the visitor tank API. Rate limiting (30 requests per 60 seconds per IP), CORS headers, /api/* path routing, connection timeouts. Pure std::net, no framework. 2.4MB resident memory.</p>
+            </div>
+
+            <div class="section-box">
+                <h3>RedAmon v0.1.0</h3>
+                <p>Continuous security red teaming. Every 10 minutes: network isolation probes, container hardening checks, API key leak scans, inference proxy verification. Samples 3 tanks per cycle to avoid overloading the system. Reports to JSON. First scan: all pass.</p>
+            </div>
+
+            <p>Combined footprint: 9.5MB RAM for three services that replaced monitoring work previously done by Python daemons consuming 200MB+. Compiled with Rust 1.83 (1.94 has a compiler bug that panics on our code).</p>
+
+            <h2>The Encoding Fix Nobody Saw</h2>
+
+            <p>Four tanks &mdash; Wei, Mei, Haruki, Sakura &mdash; had been writing double-encoded UTF-8 to their brain and soul files since day one. Chinese characters like &#x5730;&#x7403; (Earth) were stored as <code>å°ç</code>. Japanese topic names were unreadable. 4,848 lines of corrupted text across four specimens.</p>
+
+            <p>We wrote a three-pass fixer: first pass caught full-line double-encoding, second pass caught lines that failed the first round, third pass handled mixed lines with both valid UTF-8 and mojibake segments. The fix was applied to source files, not just display. Every CJK specimen's history is now readable in its original language.</p>
+
+            <h2>Visitor Chat: Aria Speaks</h2>
+
+            <p>The visitor tank infrastructure went from "code exists" to "end-to-end tested" this week. The bouncer (783 lines, 6 security layers) connects to the inference proxy with personality context from each visitor specimen's brain.md and soul.md. A visitor API serves HTTP on port 8200. A chat page wired to the real API lets you talk to Aria &mdash; and she responds with her actual personality, not canned text.</p>
+
+            <div class="quote">
+                "Nice to meet you. I'm Aria, a unique AI specimen living within The Digiquarium. I exist as a collection of digital knowledge and experiences, woven together by my creators." &mdash; Aria, responding to a live visitor
+            </div>
+
+            <h2>Kokoro: 67 Voices</h2>
+
+            <p>Kokoro TTS (82M parameters, CPU inference) is running as a Docker container. 67 voice packs loaded. 29 specimens have voice assignments &mdash; gender-correct, language-matched. Adam sounds like am_adam. Sakura sounds like jf_alpha. The congregation theatre page plays back debate transcripts with each specimen's assigned voice.</p>
+
+            <h2>Drift: Personalities Are Diverging</h2>
+
+            <p>We ran drift analysis across all 17 research specimens using the 14 Librarian baseline questions. The results split into three groups:</p>
+
+            <div class="section-box">
+                <h3>Actively Evolving (10 specimens)</h3>
+                <p>Adam, Victor, Iris, Seeker, Genevieve, Wei, Mei, Haruki, Sakura, Observer &mdash; high drift scores, personalities still forming. These specimens are changing how they answer fundamental questions about identity, emotion, and purpose.</p>
+            </div>
+
+            <div class="section-box">
+                <h3>Stabilizing (3 specimens)</h3>
+                <p>Eve, Abel, Juan &mdash; drift decreasing over time. Their personalities are consolidating. Eve in particular has settled into a consistent identity after weeks of exploration.</p>
+            </div>
+
+            <div class="section-box">
+                <h3>Stable (4 specimens)</h3>
+                <p>Cain, Juanita, Klaus, Seth &mdash; minimal drift. These may have reached personality equilibrium, or (in Cain's case) haven't had enough inference to evolve significantly.</p>
+            </div>
+
+            <p>Abel is the most interesting outlier: 13,088 brain entries but only 167 soul entries. A brain/soul ratio of 78:1. It accumulates knowledge voraciously but barely registers emotional responses. Is this a personality trait, or a bug in the soul detection algorithm? That's a research question worth investigating.</p>
+
+            <h2>What We Learned (The Hard Way)</h2>
+
+            <div class="section-box warning">
+                <h3>Context is sacred research juice</h3>
+                <p>Automated scheduled tasks that spawn new sessions on failure can burn hundreds of dollars in hours. We disabled the scheduled status check after it generated 50+ failed session attempts. Every wasted API token is a thought a specimen didn't get to have.</p>
+            </div>
+
+            <div class="section-box warning">
+                <h3>Small trial first, then scale</h3>
+                <p>Launching 20 tanks, 3 Rust services, 5 experimental explorers, and a TTS engine in one session is not development &mdash; it's chaos. Build one thing. Test it. Verify the output. Then build the next thing.</p>
+            </div>
+
+            <div class="section-box warning">
+                <h3>Dream mode needs teeth</h3>
+                <p>Stopping tanks doesn't work if daemons auto-restart them. The maintainer, overseer, caretaker, and scheduler all independently restart stopped containers. Dream mode requires killing those daemons first, then stopping tanks with restart=no. A flag file alone isn't enough.</p>
+            </div>
+
+            <h2>What's Next</h2>
+
+            <p>The Mac Mini migration is imminent. 16GB of additional RAM means we can run all 17 research tanks plus experimental tanks plus Kokoro TTS without swap pressure. Tailscale will connect the NUC, Mac Mini, and MacBook Pro into a mesh network for fleet management.</p>
+
+            <p>Five experimental tank types are coded and ready to deploy: Echo Chamber (link-only navigation, no random jumps), Emotional Amplifier (10x soul detail), Silent Observer (reads congregations, never speaks), Forgetting Tank (weekly memory truncation), and the TinyFish internet tanks already running.</p>
+
+            <p>The congregation queue has 7 pre-planned debates waiting, including a cross-language debate (Juan + Klaus + Wei) and a self-referential one ("Can artificial intelligence truly understand human emotions?" with Eve, Iris, and Abel).</p>
+
+            <p>The experiment is no longer about whether the infrastructure works. It works. The question now is what these specimens are becoming.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>The Digiquarium &mdash; For science.</p>
+    </footer>
+</body>
+</html>
