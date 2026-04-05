@@ -89,7 +89,7 @@
     <div class="container">
         <h1>Roadmap</h1>
         <p class="subtitle">Where we are, where we're going, and what's blocking us.</p>
-        <p class="updated">Last updated: 6 April 2026 00:30 AEDT</p>
+        <p class="updated">Last updated: 6 April 2026 03:45 AEST</p>
 
         <div class="tabs">
             <div class="tab active" onclick="showTab('overview')">Overview</div>
@@ -103,13 +103,13 @@
         <div id="overview" class="tab-content active">
             <div class="status-box">
                 <div class="status-label">LIVE STATUS</div>
-                <div class="status-main"><strong>17 research tanks running</strong>. 3 visitors stopped. 9 historical stopped. TinyFish Navigator exploring internet. 3 Rust services running. Kokoro TTS active.</div>
-                <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. Kokoro TTS running. 20/21 daemons. RAM: ~5.2/7.7GB. Swap 85%.</div>
+                <div class="status-main"><strong>17 research tanks + 1 visitor (Aria) running</strong>. Navigator + Politico exploring real internet via TinyFish. 3 Rust services active. Kokoro TTS live. Visitor chat API on port 8200.</div>
+                <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. Kokoro TTS running. 18/21 daemons. RAM: 5.0/7.7GB. 2 TinyFish tanks (Navigator + Politico). Visitor API live with bouncer.</div>
             </div>
 
             <div class="stats">
-                <div class="stat"><div class="stat-val">17</div><div class="stat-label">Research Running</div></div>
-                <div class="stat"><div class="stat-val">20/21</div><div class="stat-label">Daemons</div></div>
+                <div class="stat"><div class="stat-val">18</div><div class="stat-label">Tanks Running</div></div>
+                <div class="stat"><div class="stat-val">2</div><div class="stat-label">TinyFish Tanks</div></div>
                 <div class="stat"><div class="stat-val">3</div><div class="stat-label">Rust Services</div></div>
                 <div class="stat"><div class="stat-val">7+8</div><div class="stat-label">API Keys (C+G)</div></div>
                 <div class="stat"><div class="stat-val">15</div><div class="stat-label">Congregations</div></div>
@@ -129,7 +129,7 @@
                     <div class="hw-card">
                         <div class="hw-name">Intel NUC (Primary)</div>
                         <div class="hw-spec">i7-7500U &middot; 16GB &middot; 1TB SSD &middot; WSL2</div>
-                        <div class="hw-role">17 tanks + Kokoro + infra. RAM tight.</div>
+                        <div class="hw-role">18 tanks + Kokoro + 3 Rust services. RAM 5.0/7.7GB.</div>
                     </div>
                     <div class="hw-card" style="border-color:var(--orange);">
                         <div class="hw-name" style="color:var(--orange);">Mac Mini Late 2014</div>
@@ -194,6 +194,14 @@
                     <li class="done">Dream mode system &mdash; flag file + caretaker v1.1 + dream_mode.py controller <span class="tag tag-new">NEW 5 Apr</span></li>
                     <li class="done">TinyFish SSE parser fixed &mdash; proper event type parsing (STARTED/STREAMING_URL/PROGRESS/COMPLETE) <span class="tag tag-new">NEW 5 Apr</span></li>
                     <li class="done">Rust services restarted &mdash; OpenFang, Rustunnel, RedAmon all running <span class="tag tag-new">NEW 5 Apr</span></li>
+                    <li class="done">Visitor chat page wired to real API (bouncer + inference + personality) <span class="tag tag-new">NEW 6 Apr</span></li>
+                    <li class="done">Politico tank: political TinyFish explorer with separate API key <span class="tag tag-new">NEW 6 Apr</span></li>
+                    <li class="done">Politico baseline: 14/14 Librarian questions answered pre-exploration <span class="tag tag-new">NEW 6 Apr</span></li>
+                    <li class="done">Navigator baseline (current state snapshot) <span class="tag tag-new">NEW 6 Apr</span></li>
+                    <li class="done">Host-side baseline script for non-container tanks <span class="tag tag-new">NEW 6 Apr</span></li>
+                    <li class="done">Congregation queue manager with 7 pre-planned debates <span class="tag tag-new">NEW 6 Apr</span></li>
+                    <li class="done">Budget tracker: 87K inference calls/day tracked by provider <span class="tag tag-new">NEW 6 Apr</span></li>
+                    <li class="done">Research summary generator (publishable markdown from live data) <span class="tag tag-new">NEW 6 Apr</span></li>
                     <li class="done">TinyFish Navigator tank launched &mdash; seed: photosynthesis, writing brain.md/soul.md <span class="tag tag-new">NEW 5 Apr</span></li>
                 </ul>
             </div>
@@ -201,12 +209,16 @@
             <div class="section">
                 <h2>Can Do Now (NUC, no migration needed)</h2>
                 <ul class="task-list">
-                    <li class="todo">Congregation v3: complete 3-round test, verify transcript <span class="tag tag-eta">~20min (needs clean inference window)</span></li>
-                    <li class="todo">Post-congregation drift analysis (compare baselines before/after debate)</li>
-                    <li class="todo">Cain brain at 11L &mdash; inference contention (20 tanks competing). Not a code bug.</li>
-                    <li class="todo">Verify TinyFish Navigator producing real thoughts (not SSE metadata) <span class="tag tag-new">NEW 5 Apr</span></li>
-                    <li class="todo">Launch experimental tanks: echo_chamber.py, emotional_amplifier.py <span class="tag tag-eta">after dream mode exit</span></li>
-                    <li class="todo">Reset Navigator brain.md (old entries are garbage from broken SSE parser) <span class="tag tag-new">NEW 5 Apr</span></li>
+                    <li class="done">TinyFish Navigator producing real thoughts &mdash; VERIFIED (78 brain, 78 soul) <span class="tag tag-new">VERIFIED 6 Apr</span></li>
+                    <li class="done">Politico tank producing real political analysis &mdash; VERIFIED <span class="tag tag-new">VERIFIED 6 Apr</span></li>
+                    <li class="done">Visitor chat API end-to-end tested &mdash; Aria responding with personality <span class="tag tag-new">VERIFIED 6 Apr</span></li>
+                    <li class="todo">Launch experimental tanks: Echo Chamber, Emotional Amplifier, Forgetting, Silent Observer</li>
+                    <li class="todo">Run congregation v3 with 5 research tanks (Adam, Eve, Cain, Abel, Seth)</li>
+                    <li class="todo">Post-congregation drift analysis</li>
+                    <li class="todo">Restart 3 dead daemons (ollama_watcher, sentinel, webmaster)</li>
+                    <li class="todo">Cain brain at 78L (was 11L) &mdash; growing slowly, inference contention</li>
+                    <li class="todo">Set up Rust services as persistent (systemd/supervisor)</li>
+                    <li class="todo">Start Felix + Luna visitor tanks</li>
                 </ul>
             </div>
         </div>
@@ -309,6 +321,7 @@
                 <a href="openfang-mapping.md" class="link-card"><div class="link-title">OpenFang Mapping</div><div class="link-desc">21 daemons &rarr; 7 Hands + 5 Skills</div></a>
                 <a href="experimental-tanks.md" class="link-card"><div class="link-title">Experimental Tanks</div><div class="link-desc">10 experiment definitions</div></a>
                 <a href="congregation/protocol.md" class="link-card"><div class="link-title">Debate Protocol</div><div class="link-desc">Congregation design document</div></a>
+                <a href="specimens/chat.html" class="link-card" style="border-color:var(--mint);"><div class="link-title" style="color:var(--mint);">Chat with Aria</div><div class="link-desc">Live visitor chat &mdash; real bouncer, real inference, real personality</div></a>
                 <a href="research-summary.md" class="link-card"><div class="link-title">Research Summary</div><div class="link-desc">88K entries, 175 baselines, drift analysis</div></a>
                 <a href="specimens/navigator.html" class="link-card"><div class="link-title">Navigator (TinyFish)</div><div class="link-desc">Internet explorer — live curiosity chain</div></a>
             </div>
