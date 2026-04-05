@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T16:46:07.690996",
+  "timestamp": "2026-04-06T00:13:43.012015",
   "overall_healthy": false,
   "ollama": {
     "windows_healthy": false,
@@ -9,24 +9,24 @@
   },
   "daemons": {
     "overseer": {
-      "running": false,
-      "count": 0,
-      "healthy": false
-    },
-    "ollama_watcher": {
       "running": true,
       "count": 1,
       "healthy": true
+    },
+    "ollama_watcher": {
+      "running": false,
+      "count": 0,
+      "healthy": false
     },
     "caretaker": {
       "running": true,
-      "count": 1,
-      "healthy": true
+      "count": 2,
+      "healthy": false
     },
     "maintainer": {
-      "running": false,
-      "count": 0,
-      "healthy": false
+      "running": true,
+      "count": 1,
+      "healthy": true
     },
     "guard": {
       "running": true,
@@ -35,8 +35,8 @@
     },
     "scheduler": {
       "running": true,
-      "count": 2,
-      "healthy": false
+      "count": 1,
+      "healthy": true
     },
     "sentinel": {
       "running": false,
@@ -45,8 +45,8 @@
     },
     "psych": {
       "running": true,
-      "count": 6,
-      "healthy": false
+      "count": 1,
+      "healthy": true
     }
   },
   "containers": {
@@ -54,32 +54,32 @@
   },
   "tanks": {
     "running": 17,
-    "traces_today": 3929,
+    "traces_today": 40,
     "activity": [
       {
         "name": "tank-01-adam",
-        "article": "Semitic languages",
-        "traces": 316
+        "article": "Paul Dirac",
+        "traces": 3
       },
       {
         "name": "tank-02-eve",
-        "article": "International Olympic Committee",
-        "traces": 359
+        "article": "Thales",
+        "traces": 13
       },
       {
         "name": "tank-03-cain",
-        "article": "Direction",
-        "traces": 277
+        "article": "2nd millennium",
+        "traces": 7
       },
       {
         "name": "tank-04-abel",
-        "article": "Organism",
-        "traces": 2799
+        "article": "Beryllium",
+        "traces": 13
       },
       {
         "name": "tank-05-juan",
-        "article": "Time",
-        "traces": 178
+        "article": "Mountain",
+        "traces": 4
       }
     ]
   },
@@ -87,38 +87,36 @@
     "isolated": true
   },
   "overseer": {
-    "running": false,
+    "running": true,
     "last_audit_healthy": false,
     "active_incidents": 2,
     "auto_remediations": 0
   },
   "logs": [
-    "Traceback (most recent call last):",
-    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
-    "main()",
-    "^^^^",
-    "NameError: name 'main' is not defined. Did you mean: 'min'?",
-    "Traceback (most recent call last):",
-    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
-    "main()",
-    "^^^^",
-    "NameError: name 'main' is not defined. Did you mean: 'min'?",
-    "Traceback (most recent call last):",
-    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
-    "main()",
-    "^^^^",
-    "NameError: name 'main' is not defined. Did you mean: 'min'?",
-    "Traceback (most recent call last):",
-    "File \"/home/ijneb/digiquarium/daemons/overseer/overseer.py\", line 15, in <module>",
-    "main()",
-    "^^^^",
-    "NameError: name 'main' is not defined. Did you mean: 'min'?"
+    "2026-04-05 23:11:24 \u274c [OVERSEER] Ollama watcher heartbeat stale: 1806.204159s old",
+    "2026-04-05 23:11:26 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
+    "2026-04-05 23:11:26 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
+    "2026-04-05 23:11:26 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-historical-alexander is Exited (137) 2 days ago', 'tank-historical-cleopatra is Exited (137) 2 days ago', 'tank-historical-malcolmx is Exited (137) 2 days ago', 'tank-historical-davinci is Exited (137) 2 days ago', 'tank-historical-hypatia is Exited (137) 2 days ago', 'tank-historical-tesla is Exited (137) 2 days ago', 'tank-historical-gandhi is Exited (137) 2 days ago', 'tank-historical-ada is Exited (137) 2 days ago', 'tank-historical-einstein is Exited (137) 2 days ago', 'tank-visitor-01-aria is Exited (137) 2 days ago', 'tank-visitor-03-luna is Exited (137) 2 days ago', 'tank-visitor-02-felix is Exited (137) 2 days ago']",
+    "2026-04-05 23:11:26 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'sentinel not running', 'ollama_watcher not running']",
+    "2026-04-05 23:11:26 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations",
+    "2026-04-05 23:41:26 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-05 23:41:26 \u274c [OVERSEER] Ollama watcher heartbeat stale: 3607.801216s old",
+    "2026-04-05 23:41:27 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
+    "2026-04-05 23:41:27 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
+    "2026-04-05 23:41:27 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-historical-alexander is Exited (137) 2 days ago', 'tank-historical-cleopatra is Exited (137) 2 days ago', 'tank-historical-malcolmx is Exited (137) 2 days ago', 'tank-historical-davinci is Exited (137) 2 days ago', 'tank-historical-hypatia is Exited (137) 2 days ago', 'tank-historical-tesla is Exited (137) 2 days ago', 'tank-historical-gandhi is Exited (137) 2 days ago', 'tank-historical-ada is Exited (137) 2 days ago', 'tank-historical-einstein is Exited (137) 2 days ago', 'tank-visitor-01-aria is Exited (137) 2 days ago', 'tank-visitor-03-luna is Exited (137) 2 days ago', 'tank-visitor-02-felix is Exited (137) 2 days ago']",
+    "2026-04-05 23:41:27 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'sentinel not running', 'ollama_watcher not running']",
+    "2026-04-05 23:41:27 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations",
+    "2026-04-06 00:11:27 \ud83d\udd0d [OVERSEER] Starting full system audit",
+    "2026-04-06 00:11:27 \u274c [OVERSEER] Ollama watcher heartbeat stale: 5409.048419s old",
+    "2026-04-06 00:11:28 \u26a0\ufe0f [OVERSEER] Full system audit found 3 issues",
+    "2026-04-06 00:11:28 \u26a0\ufe0f [OVERSEER]   - ollama: ['Ollama watcher heartbeat stale or missing', 'Windows Ollama unreachable: <urlopen error [Errno 111] Connection refused>']",
+    "2026-04-06 00:11:28 \u26a0\ufe0f [OVERSEER]   - containers: ['tank-historical-alexander is Exited (137) 2 days ago', 'tank-historical-cleopatra is Exited (137) 2 days ago', 'tank-historical-malcolmx is Exited (137) 2 days ago', 'tank-historical-davinci is Exited (137) 2 days ago', 'tank-historical-hypatia is Exited (137) 2 days ago', 'tank-historical-tesla is Exited (137) 2 days ago', 'tank-historical-gandhi is Exited (137) 2 days ago', 'tank-historical-ada is Exited (137) 2 days ago', 'tank-historical-einstein is Exited (137) 2 days ago', 'tank-visitor-01-aria is Exited (137) 2 days ago', 'tank-visitor-03-luna is Exited (137) 2 days ago', 'tank-visitor-02-felix is Exited (137) 2 days ago']",
+    "2026-04-06 00:11:28 \u26a0\ufe0f [OVERSEER]   - daemons: ['caretaker has 2 instances (zombie leak)', 'sentinel not running', 'ollama_watcher not running']",
+    "2026-04-06 00:11:28 \ud83d\udd0d [OVERSEER] SLA compliance: 20 compliant, 0 non-compliant, 0 total violations"
   ],
   "issues": [
-    "overseer unhealthy",
-    "maintainer unhealthy",
-    "scheduler unhealthy",
-    "sentinel unhealthy",
-    "psych unhealthy"
+    "ollama_watcher unhealthy",
+    "caretaker unhealthy",
+    "sentinel unhealthy"
   ]
 }
