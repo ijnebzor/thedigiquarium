@@ -114,7 +114,7 @@ async function speak(name, btn) {
     const voice = voices[name.toLowerCase()] || 'af_heart';
     btn.textContent = 'Generating...';
     try {
-        const resp = await fetch('http://localhost:8880/v1/audio/speech', {
+        const resp = await fetch('http://192.168.50.48:8880/v1/audio/speech', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({model:'kokoro', input:text, voice:voice})
