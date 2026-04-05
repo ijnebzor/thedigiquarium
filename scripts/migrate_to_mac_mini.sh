@@ -1,168 +1,76 @@
 #!/bin/bash
-# =============================================================================
-# DIGIQUARIUM MAC MINI MIGRATION SCRIPT
-# Run this on the Mac Mini to set up the new home for the Digiquarium
-# =============================================================================
+# Migration script: NUC → Mac Mini via Tailscale or direct SSH
+# Run from NUC. Requires: Mac Mini reachable, rsync, ssh key auth
+#
+# Usage: 
+#   bash scripts/migrate_to_mac_mini.sh <mac-mini-ip-or-hostname>
+#
+# Prereqs on Mac Mini (run manually first):
+#   1. brew install colima docker docker-compose
+#   2. colima start --cpu 4 --memory 8
+#   3. curl -fsSL https://tailscale.com/install.sh | sh
+#   4. curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+#   5. mkdir -p ~/digiquarium
 
-set -e
+set -euo pipefail
 
-echo "=============================================="
-echo "🌊 DIGIQUARIUM - MAC MINI SETUP"
-echo "=============================================="
+MAC_MINI="${1:?Usage: $0 <mac-mini-ip>}"
+REMOTE_DIR="~/digiquarium"
+DIGIQUARIUM_HOME="${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}"
+
+echo "=== DIGIQUARIUM MIGRATION: NUC → Mac Mini ($MAC_MINI) ==="
+echo "Source: $DIGIQUARIUM_HOME"
+echo "Target: $MAC_MINI:$REMOTE_DIR"
 echo ""
 
-# Configuration
-NUC_IP="192.168.50.48"
-NUC_USER="benji"
-INSTALL_DIR="$HOME/digiquarium"
+# Step 1: Test connectivity
+echo "[1/7] Testing SSH connectivity..."
+ssh -o ConnectTimeout=5 "$MAC_MINI" "echo 'SSH OK'" || { echo "FAIL: Cannot reach $MAC_MINI via SSH"; exit 1; }
 
-echo "This script will:"
-echo "  1. Install Docker Desktop (if needed)"
-echo "  2. Install Ollama"
-echo "  3. Create digiquarium directory structure"
-echo "  4. Transfer all data from NUC ($NUC_IP)"
-echo "  5. Configure and start tanks"
-echo ""
-read -p "Press Enter to continue..."
+# Step 2: Sync codebase (exclude heavy dirs)
+echo "[2/7] Syncing codebase..."
+rsync -avz --progress \
+    --exclude '.git' \
+    --exclude 'target/' \
+    --exclude 'node_modules/' \
+    --exclude 'snapshots/' \
+    --exclude '__pycache__/' \
+    --exclude '*.pyc' \
+    "$DIGIQUARIUM_HOME/" "$MAC_MINI:$REMOTE_DIR/"
 
-# =============================================================================
-# STEP 1: Check/Install Dependencies
-# =============================================================================
+# Step 3: Sync research data (brain/soul/baselines)
+echo "[3/7] Syncing research data (logs/)..."
+rsync -avz --progress \
+    "$DIGIQUARIUM_HOME/logs/" "$MAC_MINI:$REMOTE_DIR/logs/"
 
-echo ""
-echo "=== STEP 1: Checking dependencies ==="
+# Step 4: Sync snapshots
+echo "[4/7] Syncing DNA snapshots..."
+rsync -avz --progress \
+    "$DIGIQUARIUM_HOME/snapshots/" "$MAC_MINI:$REMOTE_DIR/snapshots/"
 
-# Check for Homebrew
-if ! command -v brew &> /dev/null; then
-    echo "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+# Step 5: Sync config (including .env)
+echo "[5/7] Syncing config..."
+rsync -avz --progress \
+    "$DIGIQUARIUM_HOME/.env" "$MAC_MINI:$REMOTE_DIR/.env"
+rsync -avz --progress \
+    "$DIGIQUARIUM_HOME/config/" "$MAC_MINI:$REMOTE_DIR/config/"
 
-# Check for Docker
-if ! command -v docker &> /dev/null; then
-    echo "⚠️  Docker not found. Please install Docker Desktop manually:"
-    echo "   https://www.docker.com/products/docker-desktop/"
-    echo ""
-    read -p "Press Enter after installing Docker Desktop..."
-fi
+# Step 6: Build Docker images on Mac Mini
+echo "[6/7] Building Docker images on Mac Mini..."
+ssh "$MAC_MINI" "cd $REMOTE_DIR && docker build -t digiquarium-tank:latest -f Dockerfile.tank ." || echo "WARN: Tank image build failed — check Dockerfile exists"
+ssh "$MAC_MINI" "cd $REMOTE_DIR/src/inference-proxy && docker build -t digiquarium-inference-proxy:latest ." || echo "WARN: Proxy image build failed"
 
-# Check Docker is running
-if ! docker info &> /dev/null; then
-    echo "⚠️  Docker is not running. Please start Docker Desktop."
-    read -p "Press Enter after Docker is running..."
-fi
-
-# Install Ollama
-if ! command -v ollama &> /dev/null; then
-    echo "Installing Ollama..."
-    brew install ollama
-fi
-
-echo "✅ Dependencies ready"
-
-# =============================================================================
-# STEP 2: Create Directory Structure
-# =============================================================================
+# Step 7: Verify
+echo "[7/7] Verification..."
+ssh "$MAC_MINI" "ls -la $REMOTE_DIR/logs/ | head -5"
+ssh "$MAC_MINI" "ls -la $REMOTE_DIR/.env"
+ssh "$MAC_MINI" "docker images | head -5"
 
 echo ""
-echo "=== STEP 2: Creating directory structure ==="
-
-mkdir -p "$INSTALL_DIR"/{kiwix-data,ollama-data,logs,tanks,mcp-server,scripts,docs}
-mkdir -p "$INSTALL_DIR"/logs/{tank-01-adam,tank-02-eve,tank-03-cain,tank-04-abel,tank-05-juan,tank-06-juanita,tank-07-klaus,tank-08-genevieve,tank-09-wei,tank-10-mei,tank-11-haruki,tank-12-sakura,tank-13-victor,tank-14-iris,tank-15-observer,tank-16-seeker,tank-17-seth}
-
-echo "✅ Directories created at $INSTALL_DIR"
-
-# =============================================================================
-# STEP 3: Transfer Data from NUC
-# =============================================================================
-
-echo ""
-echo "=== STEP 3: Transferring data from NUC ==="
-
-# Test SSH connection
-echo "Testing SSH connection to NUC..."
-if ! ssh -o ConnectTimeout=5 "$NUC_USER@$NUC_IP" "echo 'SSH OK'" &> /dev/null; then
-    echo "⚠️  Cannot connect to NUC. Please ensure:"
-    echo "   1. NUC is powered on"
-    echo "   2. SSH key is set up: ssh-copy-id $NUC_USER@$NUC_IP"
-    echo ""
-    read -p "Press Enter after fixing SSH access..."
-fi
-
-echo "Transferring Wikipedia ZIM files (this may take a while)..."
-rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/kiwix-data/*.zim" "$INSTALL_DIR/kiwix-data/"
-
-echo "Transferring tank logs and baselines..."
-rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/logs/" "$INSTALL_DIR/logs/"
-
-echo "Transferring tank code..."
-rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/tanks/" "$INSTALL_DIR/tanks/"
-
-echo "Transferring docker-compose and configs..."
-rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/docker-compose.yml" "$INSTALL_DIR/"
-rsync -avz --progress "$NUC_USER@$NUC_IP:${DIGIQUARIUM_HOME:-/home/ijneb/digiquarium}/docs/" "$INSTALL_DIR/docs/"
-
-echo "✅ Data transfer complete"
-
-# =============================================================================
-# STEP 4: Pull Ollama Model
-# =============================================================================
-
-echo ""
-echo "=== STEP 4: Setting up Ollama ==="
-
-# Start Ollama service
-ollama serve &> /dev/null &
-sleep 3
-
-# Pull the model
-echo "Pulling llama3.2:latest model..."
-ollama pull llama3.2:latest
-
-echo "✅ Ollama ready"
-
-# =============================================================================
-# STEP 5: Update docker-compose for Mac
-# =============================================================================
-
-echo ""
-echo "=== STEP 5: Configuring for Mac Mini ==="
-
-cd "$INSTALL_DIR"
-
-# Update Ollama URL to localhost (Mac runs Ollama natively)
-sed -i.bak 's/192.168.50.94/host.docker.internal/g' docker-compose.yml
-rm docker-compose.yml.bak
-
-echo "✅ Configuration updated"
-
-# =============================================================================
-# STEP 6: Start Tanks
-# =============================================================================
-
-echo ""
-echo "=== STEP 6: Starting Digiquarium ==="
-
-docker compose up -d kiwix-simple kiwix-maxi
-sleep 5
-
-docker compose up -d tank-01-adam tank-02-eve
-docker compose --profile visual up -d
-docker compose --profile special up -d
-docker compose --profile languages up -d
-
-echo ""
-echo "=============================================="
-echo "✅ DIGIQUARIUM MIGRATION COMPLETE!"
-echo "=============================================="
-echo ""
-echo "Running tanks:"
-docker ps --format "table {{.Names}}\t{{.Status}}"
-echo ""
-echo "Next steps:"
-echo "  1. Monitor tanks: docker compose logs -f"
-echo "  2. Check a tank: docker logs tank-01-adam"
-echo "  3. Stop all: docker compose down"
-echo ""
-echo "Data location: $INSTALL_DIR"
-echo "Logs: $INSTALL_DIR/logs/"
+echo "=== MIGRATION COMPLETE ==="
+echo "Next steps on Mac Mini:"
+echo "  1. cd $REMOTE_DIR"
+echo "  2. docker compose up -d  (start infra + tanks)"
+echo "  3. bash scripts/start_rust_services.sh  (after compiling Rust)"
+echo "  4. source ~/.cargo/env && cd src/openfang && cargo build"
+echo "  5. Verify: docker ps | grep tank"
