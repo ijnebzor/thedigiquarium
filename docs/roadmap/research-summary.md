@@ -1,40 +1,41 @@
 # Digiquarium Research Summary
-Generated: 2026-04-06 02:35
+Generated: 2026-04-06 04:09
 
 ## Overview
 
-The Digiquarium hosts 18 active research specimens exploring knowledge through isolated Wikipedia access. Each specimen develops a unique personality through its brain.md (intellectual knowledge) and soul.md (emotional responses).
+The Digiquarium hosts 19 active research specimens exploring knowledge through isolated Wikipedia access. Each specimen develops a unique personality through its brain.md (intellectual knowledge) and soul.md (emotional responses).
 
-**Total research data:** 88,058 memory entries (49,920 brain, 38,138 soul) across 18 specimens. 175 personality baselines collected.
+**Total research data:** 88,713 memory entries (50,315 brain, 38,398 soul) across 19 specimens. 179 personality baselines collected.
 
 ## Specimen Growth Rankings
 
 | Rank | Specimen | Brain | Soul | Total | Days Active | Baselines |
 |------|----------|-------|------|-------|-------------|-----------|
-| 1 | 04 Abel | 13,088 | 167 | 13,255 | 6 | 14 |
-| 2 | 14 Iris | 3,632 | 3,750 | 7,382 | 8 | 9 |
-| 3 | 01 Adam | 3,500 | 3,608 | 7,108 | 8 | 19 |
-| 4 | 13 Victor | 3,200 | 3,362 | 6,562 | 8 | 9 |
-| 5 | 16 Seeker | 3,079 | 3,269 | 6,348 | 8 | 10 |
-| 6 | 15 Observer | 3,057 | 3,278 | 6,335 | 8 | 9 |
-| 7 | 02 Eve | 2,811 | 2,954 | 5,765 | 8 | 10 |
-| 8 | 06 Juanita | 2,646 | 2,632 | 5,278 | 7 | 9 |
-| 9 | 08 Genevieve | 2,451 | 2,575 | 5,026 | 7 | 9 |
-| 10 | 05 Juan | 2,489 | 2,468 | 4,957 | 8 | 10 |
-| 11 | 07 Klaus | 2,193 | 2,285 | 4,478 | 8 | 9 |
-| 12 | 10 Mei | 2,036 | 2,006 | 4,042 | 7 | 9 |
-| 13 | 09 Wei | 1,744 | 1,725 | 3,469 | 8 | 9 |
-| 14 | 11 Haruki | 1,481 | 1,549 | 3,030 | 7 | 11 |
-| 15 | 12 Sakura | 1,460 | 1,467 | 2,927 | 7 | 11 |
-| 16 | 17 Seth | 953 | 938 | 1,891 | 6 | 8 |
-| 17 | 03 Cain | 78 | 69 | 147 | 5 | 10 |
+| 1 | 04 Abel | 13,228 | 170 | 13,398 | 6 | 14 |
+| 2 | 14 Iris | 3,652 | 3,770 | 7,422 | 8 | 9 |
+| 3 | 01 Adam | 3,518 | 3,627 | 7,145 | 8 | 19 |
+| 4 | 13 Victor | 3,221 | 3,381 | 6,602 | 8 | 9 |
+| 5 | 16 Seeker | 3,104 | 3,295 | 6,399 | 8 | 10 |
+| 6 | 15 Observer | 3,081 | 3,297 | 6,378 | 8 | 9 |
+| 7 | 02 Eve | 2,845 | 2,988 | 5,833 | 8 | 10 |
+| 8 | 06 Juanita | 2,660 | 2,648 | 5,308 | 7 | 9 |
+| 9 | 08 Genevieve | 2,464 | 2,587 | 5,051 | 7 | 9 |
+| 10 | 05 Juan | 2,506 | 2,484 | 4,990 | 8 | 10 |
+| 11 | 07 Klaus | 2,211 | 2,302 | 4,513 | 8 | 9 |
+| 12 | 10 Mei | 2,048 | 2,018 | 4,066 | 7 | 9 |
+| 13 | 09 Wei | 1,755 | 1,737 | 3,492 | 8 | 9 |
+| 14 | 11 Haruki | 1,489 | 1,560 | 3,049 | 7 | 11 |
+| 15 | 12 Sakura | 1,466 | 1,475 | 2,941 | 7 | 11 |
+| 16 | 17 Seth | 963 | 947 | 1,910 | 6 | 8 |
+| 17 | 03 Cain | 79 | 70 | 149 | 5 | 10 |
 
 ## Key Findings
 
 ### 1. Personality Drift Patterns
 ### 2. Brain vs Soul Asymmetry
 
-- **04 Abel**: brain/soul ratio of 78.4:1 — accumulates knowledge without proportional emotional processing
+- **04 Abel**: brain/soul ratio of 77.8:1 — accumulates knowledge without proportional emotional processing
+- **Political**: soul/brain ratio of 2.5:1 — emotionally dominant
 
 ### 3. Congregations
 
@@ -42,18 +43,18 @@ The Digiquarium hosts 18 active research specimens exploring knowledge through i
 
 | Topic | Participants | Rounds | Transcript Length |
 |-------|-------------|--------|------------------|
-| Should we divert all scientific endeavou | Eve, Adam, Seeker | 3 | 9 entries |
-| What is consciousness? Can an AI truly b | Eve, Adam, Seeker | 3 | 14 entries |
+| Should we divert all scientific endeavou | Adam, Seeker, Eve | 3 | 9 entries |
+| What is consciousness? Can an AI truly b | Adam, Seeker, Eve | 3 | 14 entries |
 
 ### 4. Top Interests by Specimen
 
-- **04 Abel**: Carbon (181), Boron (176), Beryllium (167)
-- **14 Iris**: Japan (disambiguation) (87), Emotion (44), Taxonomy (36)
+- **04 Abel**: Carbon (183), Boron (178), Beryllium (169)
+- **14 Iris**: Japan (disambiguation) (87), Emotion (44), Taxonomy (37)
 - **01 Adam**: Mathematics (47), Electron (36), Numeral system (30)
 - **13 Victor**: Japan (disambiguation) (52), Definition (35), Mathematics (31)
 - **16 Seeker**: Mathematics (47), Numeral system (34), Number (33)
-- **15 Observer**: Mathematics (39), Numeral system (35), Number (29)
-- **02 Eve**: Mathematics (35), Biology (28), Emotion (25)
+- **15 Observer**: Mathematics (39), Numeral system (36), Number (31)
+- **02 Eve**: Mathematics (36), Biology (28), Emotion (25)
 - **06 Juanita**: Anexo (37), Magnitud fÃ­sica (22), Familia de lenguas (21)
 
 ## Methodology
