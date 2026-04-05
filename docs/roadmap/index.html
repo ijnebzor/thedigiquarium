@@ -44,6 +44,7 @@
         .tag-tool { background: rgba(7,221,231,0.15); color: var(--cyan); }
         .tag-blocked { background: rgba(254,101,0,0.15); color: var(--orange); }
         .tag-eta { background: rgba(136,153,166,0.1); color: var(--gray); }
+        .tag-new { background: rgba(7,207,141,0.15); color: var(--mint); }
         .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 20px 0; }
         .stat { background: var(--dark); padding: 15px; border-radius: 8px; text-align: center; border: 1px solid rgba(7,207,141,0.1); }
         .stat-val { font-size: 1.4rem; font-weight: 700; color: var(--mint); }
@@ -88,7 +89,7 @@
     <div class="container">
         <h1>Roadmap</h1>
         <p class="subtitle">Where we are, where we're going, and what's blocking us.</p>
-        <p class="updated">Last updated: 3 April 2026 16:40 AEDT</p>
+        <p class="updated">Last updated: 6 April 2026 00:30 AEDT</p>
 
         <div class="tabs">
             <div class="tab active" onclick="showTab('overview')">Overview</div>
@@ -102,14 +103,14 @@
         <div id="overview" class="tab-content active">
             <div class="status-box">
                 <div class="status-label">LIVE STATUS</div>
-                <div class="status-main"><strong>20 tanks running</strong> (17 research + 3 visitor). 9 historical tanks stopped (seeded, ready). 21/21 daemons alive.</div>
-                <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. Together.ai removed. NIST CSF v2 audit: COMPLIANT.</div>
+                <div class="status-main"><strong>17 research tanks running</strong>. 3 visitors stopped. 9 historical stopped. TinyFish Navigator exploring internet. 3 Rust services running. Kokoro TTS active.</div>
+                <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. Kokoro TTS running. 20/21 daemons. RAM: ~5.2/7.7GB. Swap 85%.</div>
             </div>
 
             <div class="stats">
-                <div class="stat"><div class="stat-val">20</div><div class="stat-label">Tanks Running</div></div>
-                <div class="stat"><div class="stat-val">9</div><div class="stat-label">Historical (stopped)</div></div>
-                <div class="stat"><div class="stat-val">21/21</div><div class="stat-label">Daemons</div></div>
+                <div class="stat"><div class="stat-val">17</div><div class="stat-label">Research Running</div></div>
+                <div class="stat"><div class="stat-val">20/21</div><div class="stat-label">Daemons</div></div>
+                <div class="stat"><div class="stat-val">3</div><div class="stat-label">Rust Services</div></div>
                 <div class="stat"><div class="stat-val">7+8</div><div class="stat-label">API Keys (C+G)</div></div>
                 <div class="stat"><div class="stat-val">15</div><div class="stat-label">Congregations</div></div>
                 <div class="stat"><div class="stat-val">29</div><div class="stat-label">Voices Assigned</div></div>
@@ -128,7 +129,7 @@
                     <div class="hw-card">
                         <div class="hw-name">Intel NUC (Primary)</div>
                         <div class="hw-spec">i7-7500U &middot; 16GB &middot; 1TB SSD &middot; WSL2</div>
-                        <div class="hw-role">20 tanks + infra. Running.</div>
+                        <div class="hw-role">17 tanks + Kokoro + infra. RAM tight.</div>
                     </div>
                     <div class="hw-card" style="border-color:var(--orange);">
                         <div class="hw-name" style="color:var(--orange);">Mac Mini Late 2014</div>
@@ -154,8 +155,8 @@
             <div class="section">
                 <h2>Completed (NUC)</h2>
                 <ul class="task-list">
-                    <li class="done">Security hardening — isolated network, non-root, read-only, seccomp, SecureClaw v2</li>
-                    <li class="done">Inference proxy — tanks never touch internet, API keys only in proxy</li>
+                    <li class="done">Security hardening &mdash; isolated network, non-root, read-only, seccomp, SecureClaw v2</li>
+                    <li class="done">Inference proxy &mdash; tanks never touch internet, API keys only in proxy</li>
                     <li class="done">Memory dedup (60%) + null trace guard + output sanitization</li>
                     <li class="done">Ollama watcher v5.2 with blocking lock</li>
                     <li class="done">8-key Cerebras + 8-key Groq rotation</li>
@@ -177,7 +178,7 @@
                     <li class="done">Daemon &rarr; OpenFang Hand mapping document</li>
                     <li class="done">Silent Observer explorer script</li>
                     <li class="done">Drift analysis script (fixed, working)</li>
-                    <li class="done">DNA snapshots — all 17 research tanks archived with SHA-256 manifests</li>
+                    <li class="done">DNA snapshots &mdash; all 17 research tanks archived with SHA-256 manifests</li>
                     <li class="done">29 specimen profile pages (all languages display correctly)</li>
                     <li class="done">Migration guide (Colima for Monterey 12.7.6)</li>
                     <li class="done">Status check PID path bug fixed</li>
@@ -187,9 +188,13 @@
                     <li class="done">Double-encoded UTF-8 fixed at source (4,848+ lines across Wei, Mei, Haruki, Sakura)</li>
                     <li class="done">Language tank specimen pages regenerated with proper CJK characters</li>
                     <li class="done">Chaos_monkey daemon fixed (killed duplicate legacy process, 21/21 daemons)</li>
-                    <li class="done">Pre-migration security audit — all checks PASS</li>
-                    <li class="done">NIST CSF v2 compliance report — all 6 functions COMPLIANT <a href="nist-csf-v2-audit.md" style="color:var(--mint);font-size:0.8rem;">View report</a></li>
+                    <li class="done">Pre-migration security audit &mdash; all checks PASS</li>
+                    <li class="done">NIST CSF v2 compliance report &mdash; all 6 functions COMPLIANT <a href="nist-csf-v2-audit.md" style="color:var(--mint);font-size:0.8rem;">View report</a></li>
                     <li class="done">All 17 research specimen pages regenerated with latest brain/soul data</li>
+                    <li class="done">Dream mode system &mdash; flag file + caretaker v1.1 + dream_mode.py controller <span class="tag tag-new">NEW 5 Apr</span></li>
+                    <li class="done">TinyFish SSE parser fixed &mdash; proper event type parsing (STARTED/STREAMING_URL/PROGRESS/COMPLETE) <span class="tag tag-new">NEW 5 Apr</span></li>
+                    <li class="done">Rust services restarted &mdash; OpenFang, Rustunnel, RedAmon all running <span class="tag tag-new">NEW 5 Apr</span></li>
+                    <li class="done">TinyFish Navigator tank launched &mdash; seed: photosynthesis, writing brain.md/soul.md <span class="tag tag-new">NEW 5 Apr</span></li>
                 </ul>
             </div>
 
@@ -198,7 +203,10 @@
                 <ul class="task-list">
                     <li class="todo">Congregation v3: complete 3-round test, verify transcript <span class="tag tag-eta">~20min (needs clean inference window)</span></li>
                     <li class="todo">Post-congregation drift analysis (compare baselines before/after debate)</li>
-                    <li class="todo">Cain brain at 11L — inference contention (20 tanks competing). Not a code bug.</li>
+                    <li class="todo">Cain brain at 11L &mdash; inference contention (20 tanks competing). Not a code bug.</li>
+                    <li class="todo">Verify TinyFish Navigator producing real thoughts (not SSE metadata) <span class="tag tag-new">NEW 5 Apr</span></li>
+                    <li class="todo">Launch experimental tanks: echo_chamber.py, emotional_amplifier.py <span class="tag tag-eta">after dream mode exit</span></li>
+                    <li class="todo">Reset Navigator brain.md (old entries are garbage from broken SSE parser) <span class="tag tag-new">NEW 5 Apr</span></li>
                 </ul>
             </div>
         </div>
@@ -216,7 +224,7 @@
                 <ul class="task-list">
                     <li class="done">OpenFang v0.1.0 compiled and running on NUC (Rust 1.83, std::thread, 4.7MB RAM)</li>
                     <li class="done">Rustunnel v0.1.0 compiled and running on NUC (rate limiting, CORS, 2.4MB RAM)</li>
-                    <li class="done">RedAmon v0.1.0 compiled and running — continuous red teaming, first scan ALL PASS</li>
+                    <li class="done">RedAmon v0.1.0 compiled and running &mdash; continuous red teaming, first scan ALL PASS</li>
                     <li class="blocked">Multi-device Tailscale mesh <span class="tag tag-blocked">needs Tailscale on all devices</span></li>
                     <li class="blocked">Fleet migration (move tanks NUC &rarr; Mac Mini) <span class="tag tag-blocked">needs all above</span></li>
                     <li class="blocked">Cross-device MCP management <span class="tag tag-blocked">needs Tailscale mesh</span></li>
@@ -262,14 +270,14 @@
                 <ul class="task-list">
                     <li class="done">9 historical figure tanks (seeded, compose ready, 3 tested)</li>
                     <li class="done">Silent Observer script written</li>
-                    <li class="done">Silent Observer tank — script + compose ready</li>
+                    <li class="done">Silent Observer tank &mdash; script + compose ready</li>
                     <li class="todo">Multi-specimen tanks (two personalities sharing one tank)</li>
                     <li class="todo">Bilingual tank (English + Japanese Wikipedia)</li>
-                    <li class="done">Echo Chamber tank — explorer + compose built</li>
-                    <li class="done">Forgetting Tank — truncation script + compose built</li>
-                    <li class="done">Emotional Amplifier tank — explorer + compose built</li>
+                    <li class="done">Echo Chamber tank &mdash; explorer + compose built</li>
+                    <li class="done">Forgetting Tank &mdash; truncation script + compose built</li>
+                    <li class="done">Emotional Amplifier tank &mdash; explorer + compose built</li>
                     <li class="todo">Neurodivergent cognitive style tanks (ethicist-gated, RFC published)</li>
-                    <li class="done">TinyFish Internet tank — explorer + compose built (API key ready)</li>
+                    <li class="done">TinyFish Internet tank &mdash; explorer built, SSE parser fixed, launched <span class="tag tag-new">FIXED 5 Apr</span></li>
                     <li class="todo">Multi-model congregations (Llama vs Mistral vs Qwen)</li>
                 </ul>
             </div>
@@ -290,13 +298,13 @@
         <div id="links" class="tab-content">
             <div class="link-grid">
                 <a href="specimens/" class="link-card"><div class="link-title">All Specimen Profiles</div><div class="link-desc">29 specimens with live brain/soul data</div></a>
-                <a href="nist-csf-v2-audit.md" class="link-card"><div class="link-title">NIST CSF v2 Audit</div><div class="link-desc">Pre-migration compliance report — all 6 functions PASS</div></a>
+                <a href="nist-csf-v2-audit.md" class="link-card"><div class="link-title">NIST CSF v2 Audit</div><div class="link-desc">Pre-migration compliance report &mdash; all 6 functions PASS</div></a>
                 <a href="migration/" class="link-card"><div class="link-title">Fleet Migration Plan</div><div class="link-desc">Mac Mini + Colima setup guide</div></a>
                 <a href="congregation/" class="link-card"><div class="link-title">Congregation #1</div><div class="link-desc">Profiles, predictions, transcript</div></a>
                 <a href="congregation/theatre.html" class="link-card"><div class="link-title">Congregation Theatre</div><div class="link-desc">Voice playback with Kokoro TTS</div></a>
-                <a href="congregation/transcript.html" class="link-card"><div class="link-title">Transcript #1</div><div class="link-desc">Cancer research — Adam+Eve+Seeker</div></a>
-                <a href="congregation/transcript2.html" class="link-card"><div class="link-title">Transcript #2</div><div class="link-desc">Meaning of existence — Adam+Eve+Abel</div></a>
-                <a href="congregation/transcript3.html" class="link-card"><div class="link-title">Transcript #3</div><div class="link-desc">Knowledge — Adam+Eve+Victor</div></a>
+                <a href="congregation/transcript.html" class="link-card"><div class="link-title">Transcript #1</div><div class="link-desc">Cancer research &mdash; Adam+Eve+Seeker</div></a>
+                <a href="congregation/transcript2.html" class="link-card"><div class="link-title">Transcript #2</div><div class="link-desc">Meaning of existence &mdash; Adam+Eve+Abel</div></a>
+                <a href="congregation/transcript3.html" class="link-card"><div class="link-title">Transcript #3</div><div class="link-desc">Knowledge &mdash; Adam+Eve+Victor</div></a>
                 <a href="congregation/deep-debate.html" class="link-card"><div class="link-title">Extended Debate</div><div class="link-desc">8 responses, 20k chars</div></a>
                 <a href="openfang-mapping.md" class="link-card"><div class="link-title">OpenFang Mapping</div><div class="link-desc">21 daemons &rarr; 7 Hands + 5 Skills</div></a>
                 <a href="experimental-tanks.md" class="link-card"><div class="link-title">Experimental Tanks</div><div class="link-desc">10 experiment definitions</div></a>
