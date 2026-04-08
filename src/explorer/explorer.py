@@ -364,13 +364,41 @@ NEXT: [exact text of the link you want to follow]"""
 # MAIN EXPLORATION LOOP
 # ============================================================================
 
+def calculate_days_active(config: dict) -> int:
+    """Calculate days active from earliest log file date.
+
+    Looks in log_dir for files matching YYYY-MM-DD.log and returns the number
+    of days between the earliest file and today (minimum 1).
+    """
+    try:
+        log_dir = Path(config['log_dir'])
+        if not log_dir.exists():
+            return 1
+        date_pattern = re.compile(r'^(\d{4}-\d{2}-\d{2})\.log$')
+        dates = []
+        for entry in log_dir.iterdir():
+            m = date_pattern.match(entry.name)
+            if m:
+                try:
+                    dates.append(datetime.strptime(m.group(1), '%Y-%m-%d').date())
+                except ValueError:
+                    continue
+        if not dates:
+            return 1
+        earliest = min(dates)
+        delta = (datetime.now().date() - earliest).days + 1
+        return max(1, delta)
+    except Exception:
+        return 1
+
+
 def explore(config: dict):
     """Main exploration loop."""
     logger = setup_logging(config)
     logger.info(f"Starting exploration for {config['name']}")
     
-    # Calculate days active (from first log file or config)
-    days_active = 1  # TODO: Calculate from log history
+    # Calculate days active from log history (earliest YYYY-MM-DD.log file)
+    days_active = calculate_days_active(config)
     
     # Build prompt
     system_prompt = build_prompt(config, days_active)
