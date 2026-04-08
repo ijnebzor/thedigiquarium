@@ -3,124 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Roadmap | The Digiquarium</title>
+    <title>Roadmap | The Digiquarium</title>
+    <link rel="icon" href="/assets/branding/logo.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #e74c3c; --green: #2ecc71; }
+        :root { --black: #000001; --dark: #000A09; --orange: #FE6500; --mint: #07CF8D; --cyan: #07DDE7; --white: #ffffff; --gray: #8899a6; --red: #e74c3c; --green: #2ecc71; --yellow: #f1c40f; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--black); color: var(--white); line-height: 1.7; }
         a { color: var(--cyan); text-decoration: none; }
-        .header { background: var(--dark); padding: 15px 25px; border-bottom: 1px solid rgba(7, 207, 141, 0.1); }
-        .header-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1rem; font-weight: 700; }
-        .logo span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        nav a { margin-left: 18px; color: var(--gray); font-size: 0.85rem; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 25px; }
-        h1 { font-size: 2rem; margin-bottom: 8px; }
-        .subtitle { color: var(--gray); font-size: 0.95rem; margin-bottom: 15px; }
-        .updated { color: var(--orange); font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; margin-bottom: 30px; }
-        .tabs { display: flex; gap: 0; margin-bottom: 30px; border-bottom: 2px solid var(--dark); }
-        .tab { padding: 12px 24px; cursor: pointer; color: var(--gray); font-size: 0.9rem; font-weight: 600; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+        a:hover { color: var(--mint); }
+
+        /* Nav */
+        .nav { background: var(--dark); border-bottom: 1px solid rgba(7, 207, 141, 0.1); position: sticky; top: 0; z-index: 100; }
+        .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; height: 52px; }
+        .nav-brand { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--white); }
+        .nav-brand span { background: linear-gradient(90deg, var(--mint), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; align-items: center; gap: 4px; }
+        .nav-link { color: var(--gray); font-size: 0.82rem; padding: 8px 12px; border-radius: 6px; transition: all 0.2s; }
+        .nav-link:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+        .nav-link.active { color: var(--mint); }
+        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; }
+
+        /* Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Header */
+        .page-header { margin-bottom: 35px; }
+        .page-header h1 { font-size: 2rem; margin-bottom: 6px; }
+        .page-header .subtitle { color: var(--gray); font-size: 0.95rem; margin-bottom: 6px; }
+        .page-header .updated { color: var(--orange); font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; }
+        .architect-badge { display: inline-block; background: linear-gradient(90deg, var(--mint), var(--cyan)); color: var(--black); font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; font-family: 'JetBrains Mono', monospace; }
+
+        /* Tabs */
+        .tabs { display: flex; gap: 0; margin-bottom: 30px; border-bottom: 2px solid var(--dark); overflow-x: auto; }
+        .tab { padding: 12px 24px; cursor: pointer; color: var(--gray); font-size: 0.85rem; font-weight: 600; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; white-space: nowrap; }
         .tab:hover { color: var(--white); }
         .tab.active { color: var(--mint); border-bottom-color: var(--mint); }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-        .status-box { background: var(--dark); border: 1px solid rgba(254, 101, 0, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 30px; }
-        .status-label { color: var(--orange); font-size: 0.75rem; font-weight: 600; font-family: 'JetBrains Mono', monospace; margin-bottom: 8px; }
-        .status-main { color: var(--white); font-size: 0.9rem; margin-bottom: 8px; }
+
+        /* Status box */
+        .status-box { background: var(--dark); border: 1px solid rgba(7, 207, 141, 0.2); border-radius: 12px; padding: 20px; margin-bottom: 25px; }
+        .status-box.warn { border-color: rgba(254, 101, 0, 0.3); }
+        .status-label { font-size: 0.72rem; font-weight: 600; font-family: 'JetBrains Mono', monospace; margin-bottom: 8px; color: var(--mint); }
+        .status-box.warn .status-label { color: var(--orange); }
+        .status-main { color: var(--white); font-size: 0.9rem; margin-bottom: 6px; }
         .status-detail { color: var(--gray); font-size: 0.8rem; }
-        .section { margin: 30px 0; }
-        .section h2 { color: var(--cyan); font-size: 1.1rem; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7,207,141,0.1); }
-        .task-list { list-style: none; padding: 0; }
-        .task-list li { padding: 8px 0 8px 28px; position: relative; font-size: 0.88rem; border-bottom: 1px solid rgba(255,255,255,0.03); }
-        .task-list li::before { position: absolute; left: 0; font-size: 0.85rem; }
-        .task-list li.done { color: var(--green); }
-        .task-list li.done::before { content: "\2713"; color: var(--green); }
-        .task-list li.todo::before { content: "\25CB"; color: var(--gray); }
-        .task-list li.todo { color: var(--gray); }
-        .task-list li.blocked::before { content: "\25CF"; color: var(--orange); }
-        .task-list li.blocked { color: var(--orange); }
-        .tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; padding: 1px 6px; border-radius: 3px; margin-left: 4px; }
-        .tag-tool { background: rgba(7,221,231,0.15); color: var(--cyan); }
-        .tag-blocked { background: rgba(254,101,0,0.15); color: var(--orange); }
-        .tag-eta { background: rgba(136,153,166,0.1); color: var(--gray); }
-        .tag-new { background: rgba(7,207,141,0.15); color: var(--mint); }
+
+        /* Stats */
         .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 20px 0; }
         .stat { background: var(--dark); padding: 15px; border-radius: 8px; text-align: center; border: 1px solid rgba(7,207,141,0.1); }
         .stat-val { font-size: 1.4rem; font-weight: 700; color: var(--mint); }
         .stat-label { font-size: 0.65rem; color: var(--gray); text-transform: uppercase; margin-top: 2px; }
-        .hw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 15px 0; }
+
+        /* Sections */
+        .section { margin: 30px 0; }
+        .section h2 { color: var(--cyan); font-size: 1.05rem; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(7,207,141,0.1); }
+        .section h3 { color: var(--mint); font-size: 0.9rem; margin: 20px 0 10px; }
+        .section p { color: var(--gray); font-size: 0.85rem; margin-bottom: 10px; }
+
+        /* Task list */
+        .task-list { list-style: none; padding: 0; }
+        .task-list li { padding: 8px 0 8px 28px; position: relative; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .task-list li::before { position: absolute; left: 0; font-size: 0.85rem; }
+        .task-list li.done { color: var(--green); }
+        .task-list li.done::before { content: "\2713"; color: var(--green); }
+        .task-list li.active::before { content: "\25B6"; color: var(--cyan); }
+        .task-list li.active { color: var(--cyan); }
+        .task-list li.todo::before { content: "\25CB"; color: var(--gray); }
+        .task-list li.todo { color: var(--gray); }
+        .task-list li.blocked::before { content: "\25CF"; color: var(--orange); }
+        .task-list li.blocked { color: var(--orange); }
+
+        /* Tags */
+        .tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; padding: 1px 6px; border-radius: 3px; margin-left: 4px; }
+        .tag-p0 { background: rgba(231,76,60,0.15); color: var(--red); }
+        .tag-p1 { background: rgba(254,101,0,0.15); color: var(--orange); }
+        .tag-p2 { background: rgba(7,221,231,0.15); color: var(--cyan); }
+        .tag-p3 { background: rgba(136,153,166,0.1); color: var(--gray); }
+        .tag-new { background: rgba(7,207,141,0.15); color: var(--mint); }
+        .tag-blocked { background: rgba(254,101,0,0.15); color: var(--orange); }
+        .tag-security { background: rgba(231,76,60,0.15); color: var(--red); }
+        .tag-research { background: rgba(7,221,231,0.15); color: var(--cyan); }
+        .tag-eta { background: rgba(136,153,166,0.1); color: var(--gray); }
+
+        /* Hardware grid */
+        .hw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 15px 0; }
         .hw-card { background: var(--dark); border: 1px solid rgba(7,207,141,0.1); border-radius: 8px; padding: 14px; }
         .hw-name { font-weight: 600; font-size: 0.85rem; }
         .hw-spec { color: var(--gray); font-size: 0.75rem; }
         .hw-role { color: var(--mint); font-size: 0.75rem; margin-top: 6px; font-weight: 500; }
-        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 20px 0; }
-        .link-card { background: var(--dark); border: 1px solid rgba(7,207,141,0.1); border-radius: 8px; padding: 14px; display: block; text-decoration: none; transition: transform 0.2s; }
+
+        /* Link grid */
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 20px 0; }
+        .link-card { background: var(--dark); border: 1px solid rgba(7,207,141,0.1); border-radius: 8px; padding: 14px; display: block; transition: transform 0.2s; }
         .link-card:hover { transform: translateY(-2px); border-color: var(--mint); }
         .link-title { color: var(--white); font-weight: 600; font-size: 0.85rem; }
-        .link-desc { color: var(--gray); font-size: 0.75rem; margin-top: 4px; }
-        .constitution { background: var(--dark); border-left: 4px solid var(--orange); padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        .constitution p { color: var(--white); font-size: 0.9rem; margin-bottom: 6px; }
-        .footer { text-align: center; padding: 30px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid rgba(7,207,141,0.1); margin-top: 40px; }
-        .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; }
+        .link-desc { color: var(--gray); font-size: 0.72rem; margin-top: 4px; }
+
+        /* Constitution */
+        .constitution { background: var(--dark); border-left: 4px solid var(--orange); padding: 18px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .constitution p { color: var(--white); font-size: 0.88rem; margin-bottom: 4px; }
+        .constitution .small { color: var(--gray); font-size: 0.78rem; }
+
+        /* Progress bar */
+        .progress-bar { background: var(--dark); border-radius: 6px; height: 8px; margin: 10px 0; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 6px; background: linear-gradient(90deg, var(--mint), var(--cyan)); transition: width 0.3s; }
+
+        /* Phase card */
+        .phase-card { background: var(--dark); border: 1px solid rgba(7,207,141,0.1); border-radius: 12px; padding: 20px; margin: 15px 0; }
+        .phase-card.current { border-color: var(--cyan); }
+        .phase-card.blocked-phase { border-color: var(--orange); }
+        .phase-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .phase-name { font-weight: 700; font-size: 0.95rem; }
+        .phase-status { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; }
+        .phase-status.active { background: rgba(7,221,231,0.15); color: var(--cyan); }
+        .phase-status.pending { background: rgba(136,153,166,0.1); color: var(--gray); }
+        .phase-status.blocked { background: rgba(254,101,0,0.15); color: var(--orange); }
+        .phase-status.complete { background: rgba(46,204,113,0.15); color: var(--green); }
+
+        /* Footer */
+        .footer { text-align: center; padding: 30px; color: var(--gray); font-size: 0.78rem; border-top: 1px solid rgba(7,207,141,0.1); margin-top: 40px; }
+
+        /* Mobile */
         @media (max-width: 768px) {
-            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; z-index: 100; }
-            nav.open { display: flex; }
-            nav a { margin: 8px 0; margin-left: 0; }
+            .nav-links { display: none; position: absolute; top: 52px; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 20px; z-index: 100; border-bottom: 1px solid rgba(7,207,141,0.1); }
+            .nav-links.open { display: flex; }
             .hamburger { display: block; }
-            .header, .header-inner { position: relative; }
-            .tabs { overflow-x: auto; }
             .stats { grid-template-columns: repeat(2, 1fr); }
+            .page-header h1 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-inner">
-            <a href="/" class="logo">&#x1F30A; <span>Digiquarium</span></a>
-            <button class="hamburger" aria-label="Menu">&#9776;</button>
-            <nav>
-                <a href="/">Home</a><a href="/specimens/">Specimens</a><a href="/research/">Research</a>
-                <a href="/roadmap/" style="color:var(--mint);">Roadmap</a><a href="/blog/">Blog</a>
-            </nav>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">&#x1F30A; <span>Digiquarium</span></a>
+            <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/specimens/" class="nav-link">Specimens</a>
+                <a href="/research/" class="nav-link">Research</a>
+                <a href="/roadmap/" class="nav-link active">Roadmap</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <div class="container">
-        <h1>Roadmap</h1>
-        <p class="subtitle">Where we are, where we're going, and what's blocking us.</p>
-        <p class="updated">Last updated: 6 April 2026 03:45 AEST</p>
-
-        <div class="tabs">
-            <div class="tab active" onclick="showTab('overview')">Overview</div>
-            <div class="tab" onclick="showTab('now')">Do Now</div>
-            <div class="tab" onclick="showTab('blocked')">Blocked (Mac Mini)</div>
-            <div class="tab" onclick="showTab('post')">Post-Migration</div>
-            <div class="tab" onclick="showTab('links')">Resources</div>
+        <div class="page-header">
+            <h1>Roadmap <span class="architect-badge">THE ARCHITECT</span></h1>
+            <p class="subtitle">Live source of truth. Updated after each task completes.</p>
+            <p class="updated" id="last-updated">Last updated: 8 April 2026 12:06 AEST</p>
         </div>
 
-        <!-- TAB: Overview -->
-        <div id="overview" class="tab-content active">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('status')">Status</div>
+            <div class="tab" onclick="showTab('phase1')">Phase 1: Foundation</div>
+            <div class="tab" onclick="showTab('phase2')">Phase 2: Experiments</div>
+            <div class="tab" onclick="showTab('phase3')">Phase 3: Scale</div>
+            <div class="tab" onclick="showTab('blocked')">Blocked</div>
+            <div class="tab" onclick="showTab('shipped')">Shipped</div>
+            <div class="tab" onclick="showTab('resources')">Resources</div>
+        </div>
+
+        <!-- TAB: Status -->
+        <div id="status" class="tab-content active">
             <div class="status-box">
                 <div class="status-label">LIVE STATUS</div>
-                <div class="status-main"><strong>17 research tanks + 1 visitor (Aria) running</strong>. Navigator + Politico exploring real internet via TinyFish. 3 Rust services active. Kokoro TTS live. Visitor chat API on port 8200.</div>
-                <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. Kokoro TTS running. 18/21 daemons. RAM: 5.0/7.7GB. 2 TinyFish tanks (Navigator + Politico). Visitor API live with bouncer.</div>
+                <div class="status-main"><strong>18 research tanks running</strong> (17 Kiwix + 1 TinyFish Navigator). 2 TinyFish tanks (Navigator + Politico). 3 Rust services active. Kokoro TTS live. Visitor chat API on port 8200.</div>
+                <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. 18/21 daemons. NUC RAM: 5.0/7.7GB. Branch: <code>architect</code> (implementation) / <code>main</code> (roadmap only).</div>
             </div>
 
             <div class="stats">
                 <div class="stat"><div class="stat-val">18</div><div class="stat-label">Tanks Running</div></div>
-                <div class="stat"><div class="stat-val">2</div><div class="stat-label">TinyFish Tanks</div></div>
-                <div class="stat"><div class="stat-val">3</div><div class="stat-label">Rust Services</div></div>
-                <div class="stat"><div class="stat-val">7+8</div><div class="stat-label">API Keys (C+G)</div></div>
+                <div class="stat"><div class="stat-val">88K+</div><div class="stat-label">Memory Entries</div></div>
+                <div class="stat"><div class="stat-val">179</div><div class="stat-label">Baselines</div></div>
                 <div class="stat"><div class="stat-val">15</div><div class="stat-label">Congregations</div></div>
+                <div class="stat"><div class="stat-val">3</div><div class="stat-label">Rust Services</div></div>
                 <div class="stat"><div class="stat-val">29</div><div class="stat-label">Voices Assigned</div></div>
-                <div class="stat"><div class="stat-val">17/17</div><div class="stat-label">DNA Snapshots</div></div>
-                <div class="stat"><div class="stat-val">7+5</div><div class="stat-label">Hands+Skills</div></div>
             </div>
 
             <div class="constitution">
                 <p><strong>Secure. Autonomous. Resilient. Self-healing. Transparent.</strong></p>
-                <p>Quality over speed. One genuine thought beats 1,000 null traces. For science.</p>
+                <p class="small">Security is constitutional &mdash; the #1 priority. Quality over speed. One genuine thought beats 1,000 null traces. For science.</p>
+            </div>
+
+            <!-- Phase overview cards -->
+            <div class="section">
+                <h2>Phase Overview</h2>
+
+                <div class="phase-card current">
+                    <div class="phase-header">
+                        <span class="phase-name">Phase 1: Foundation Fixes</span>
+                        <span class="phase-status active">IN PROGRESS</span>
+                    </div>
+                    <p>Code quality, stability, and research accuracy fixes. No new features &mdash; fix what's broken first.</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
+                    <div style="color:var(--gray);font-size:0.72rem;font-family:'JetBrains Mono',monospace;">0 / 8 tasks complete</div>
+                </div>
+
+                <div class="phase-card">
+                    <div class="phase-header">
+                        <span class="phase-name">Phase 2: Experiments &amp; Automation</span>
+                        <span class="phase-status pending">PENDING</span>
+                    </div>
+                    <p>Experimental tanks, congregation pipeline, research automation. Build on the foundation.</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
+                    <div style="color:var(--gray);font-size:0.72rem;font-family:'JetBrains Mono',monospace;">0 / 9 tasks &middot; Blocked by Phase 1</div>
+                </div>
+
+                <div class="phase-card blocked-phase">
+                    <div class="phase-header">
+                        <span class="phase-name">Phase 3: Scale &amp; Migration</span>
+                        <span class="phase-status blocked">BLOCKED</span>
+                    </div>
+                    <p>Mac Mini migration, fleet distribution, OpenFang consolidation, multi-model testing.</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
+                    <div style="color:var(--gray);font-size:0.72rem;font-family:'JetBrains Mono',monospace;">0 / 11 tasks &middot; Blocked by Mac Mini setup</div>
+                </div>
             </div>
 
             <div class="section">
@@ -129,11 +230,11 @@
                     <div class="hw-card">
                         <div class="hw-name">Intel NUC (Primary)</div>
                         <div class="hw-spec">i7-7500U &middot; 16GB &middot; 1TB SSD &middot; WSL2</div>
-                        <div class="hw-role">18 tanks + Kokoro + 3 Rust services. RAM 5.0/7.7GB.</div>
+                        <div class="hw-role">18 tanks + Kokoro + 3 Rust services</div>
                     </div>
                     <div class="hw-card" style="border-color:var(--orange);">
                         <div class="hw-name" style="color:var(--orange);">Mac Mini Late 2014</div>
-                        <div class="hw-spec">i7 3.0GHz &middot; 16GB &middot; 128GB SSD &middot; Monterey 12.7.6</div>
+                        <div class="hw-spec">i7 3.0GHz &middot; 16GB &middot; 128GB SSD &middot; Monterey</div>
                         <div class="hw-role" style="color:var(--orange);">SETUP IN PROGRESS (Benji)</div>
                     </div>
                     <div class="hw-card">
@@ -141,201 +242,334 @@
                         <div class="hw-spec">i5 Quad &middot; 8GB &middot; 657GB SSD &middot; Sequoia</div>
                         <div class="hw-role">Monitoring + orchestration</div>
                     </div>
-                    <div class="hw-card">
-                        <div class="hw-name">External HDDs</div>
-                        <div class="hw-spec">Multiple drives</div>
-                        <div class="hw-role">DNA snapshot archives</div>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- TAB: Do Now -->
-        <div id="now" class="tab-content">
+        <!-- TAB: Phase 1 -->
+        <div id="phase1" class="tab-content">
+            <div class="status-box">
+                <div class="status-label">PHASE 1: FOUNDATION FIXES</div>
+                <div class="status-main">Fix what's broken before building new. Code quality, stability, research accuracy.</div>
+                <div class="status-detail">Priority: P0 = do first, P1 = do soon, P2 = do when convenient. All items on <code>architect</code> branch.</div>
+            </div>
+
             <div class="section">
-                <h2>Completed (NUC)</h2>
+                <h2>P0 &mdash; Critical (Research Accuracy + Stability)</h2>
+                <ul class="task-list">
+                    <li class="todo">Fix <code>days_active</code> calculation in explorer.py &mdash; hardcoded to 1, breaks research paper claims <span class="tag tag-p0">P0</span> <span class="tag tag-research">research</span> <span class="tag tag-eta">~30min</span></li>
+                    <li class="todo">Fix research paper model size &mdash; says "8B" but docker-compose uses llama3.2:3b <span class="tag tag-p0">P0</span> <span class="tag tag-research">research</span> <span class="tag tag-eta">~15min</span></li>
+                    <li class="todo">Add log rotation for thinking traces &mdash; JSONL files grow unbounded, will fill 1TB SSD <span class="tag tag-p0">P0</span> <span class="tag tag-eta">~1hr</span></li>
+                    <li class="todo">Fix daemon process duplication &mdash; 11/21 daemons have duplicate instances, need fcntl locks <span class="tag tag-p0">P0</span> <span class="tag tag-eta">~2hr</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>P1 &mdash; Important (Code Quality)</h2>
+                <ul class="task-list">
+                    <li class="todo">Extract shared explorer base class &mdash; 3 agent implementations duplicate ~2,900 LOC of locking, sanitization, Ollama interaction <span class="tag tag-p1">P1</span> <span class="tag tag-eta">~3hr</span></li>
+                    <li class="todo">Restart 3 dead daemons &mdash; ollama_watcher, sentinel, webmaster <span class="tag tag-p1">P1</span> <span class="tag tag-eta">~30min</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>P2 &mdash; Nice to Have</h2>
+                <ul class="task-list">
+                    <li class="todo">Implement webmaster daemon &mdash; currently hollow, only checks 2 files exist <span class="tag tag-p2">P2</span> <span class="tag tag-eta">~2hr</span></li>
+                    <li class="todo">Add inference proxy HTTP timeout enforcement <span class="tag tag-p2">P2</span> <span class="tag tag-security">security</span> <span class="tag tag-eta">~30min</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB: Phase 2 -->
+        <div id="phase2" class="tab-content">
+            <div class="status-box">
+                <div class="status-label">PHASE 2: EXPERIMENTS &amp; AUTOMATION</div>
+                <div class="status-main">New experiment types, automated pipelines, and research infrastructure.</div>
+                <div class="status-detail">Blocked by Phase 1 completion. All items on <code>architect</code> branch.</div>
+            </div>
+
+            <div class="section">
+                <h2>Experimental Tanks</h2>
+                <ul class="task-list">
+                    <li class="todo">Launch Echo Chamber tank &mdash; explorer + compose built, needs activation <span class="tag tag-p1">P1</span> <span class="tag tag-research">research</span></li>
+                    <li class="todo">Launch Forgetting Tank &mdash; truncation script + compose built <span class="tag tag-p1">P1</span> <span class="tag tag-research">research</span></li>
+                    <li class="todo">Launch Emotional Amplifier tank &mdash; explorer + compose built <span class="tag tag-p1">P1</span> <span class="tag tag-research">research</span></li>
+                    <li class="todo">Launch Silent Observer tank &mdash; reads congregation transcripts, never participates <span class="tag tag-p1">P1</span> <span class="tag tag-research">research</span></li>
+                    <li class="todo">Start Felix + Luna visitor tanks <span class="tag tag-p2">P2</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Automation &amp; Pipelines</h2>
+                <ul class="task-list">
+                    <li class="todo">Automated congregation pipeline &mdash; schedule &rarr; run &rarr; archive &rarr; drift analysis &rarr; site update <span class="tag tag-p1">P1</span> <span class="tag tag-eta">~4hr</span></li>
+                    <li class="todo">Automated research pipeline &mdash; specimen data &rarr; drift analysis &rarr; paper update &rarr; site regen <span class="tag tag-p1">P1</span> <span class="tag tag-eta">~3hr</span></li>
+                    <li class="todo">Specimen REST API &mdash; read-only endpoint serving live specimen state for dashboards <span class="tag tag-p2">P2</span> <span class="tag tag-eta">~4hr</span></li>
+                    <li class="todo">Specimen lifecycle state machine &mdash; formal states (init &rarr; exploring &rarr; baseline &rarr; dream &rarr; congregation &rarr; archive) <span class="tag tag-p2">P2</span> <span class="tag tag-eta">~3hr</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Congregations</h2>
+                <ul class="task-list">
+                    <li class="todo">Official Congregation #1 &mdash; Adam, Eve, Cain, Abel, Seth per site protocol <span class="tag tag-p1">P1</span> <span class="tag tag-research">research</span></li>
+                    <li class="todo">Historical figure congregations &mdash; Gandhi vs Malcolm X, Einstein vs Tesla <span class="tag tag-p2">P2</span></li>
+                    <li class="todo">Cross-language congregations &mdash; Juan + Klaus + Wei <span class="tag tag-p2">P2</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB: Phase 3 -->
+        <div id="phase3" class="tab-content">
+            <div class="status-box warn">
+                <div class="status-label">PHASE 3: SCALE &amp; MIGRATION</div>
+                <div class="status-main">Multi-device fleet, OpenFang consolidation, multi-model experiments.</div>
+                <div class="status-detail">Blocked by Mac Mini setup (Benji). Prep work can happen on <code>architect</code> branch.</div>
+            </div>
+
+            <div class="section">
+                <h2>Blocked Until Mac Mini Ready</h2>
+                <ul class="task-list">
+                    <li class="blocked">Multi-device Tailscale mesh <span class="tag tag-blocked">needs Tailscale on all devices</span></li>
+                    <li class="blocked">Fleet migration (move tanks NUC &rarr; Mac Mini) <span class="tag tag-blocked">needs Tailscale + Colima</span></li>
+                    <li class="blocked">Cross-device MCP management <span class="tag tag-blocked">needs Tailscale mesh</span></li>
+                    <li class="blocked">Kokoro TTS as persistent service <span class="tag tag-blocked">NUC RAM too tight</span></li>
+                    <li class="blocked">Distribute tanks across both hosts (32GB total) <span class="tag tag-blocked">needs migration</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>OpenFang Migration (Prep Now, Deploy Post-Migration)</h2>
+                <ul class="task-list">
+                    <li class="todo">Finalize 7 HAND.toml manifests <span class="tag tag-p2">P2</span></li>
+                    <li class="todo">Finalize 5 SKILL.md files <span class="tag tag-p2">P2</span></li>
+                    <li class="todo">Migrate 21 Python daemons &rarr; 7 Hands + 5 Skills <span class="tag tag-p2">P2</span> <span class="tag tag-blocked">needs Mac Mini</span></li>
+                    <li class="todo">Set up Rust services as persistent (systemd/supervisor) <span class="tag tag-p2">P2</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Multi-Model &amp; Advanced Experiments</h2>
+                <ul class="task-list">
+                    <li class="todo">Comparative model testing &mdash; Qwen/Mistral tank on same seed article as existing specimen <span class="tag tag-p2">P2</span> <span class="tag tag-research">research</span></li>
+                    <li class="todo">Multi-specimen tank &mdash; two personalities sharing one tank <span class="tag tag-p3">P3</span></li>
+                    <li class="todo">Bilingual tank &mdash; English + Japanese Wikipedia <span class="tag tag-p3">P3</span></li>
+                    <li class="todo">Multi-model congregations &mdash; Llama vs Mistral vs Qwen <span class="tag tag-p3">P3</span></li>
+                    <li class="todo">Resume 17 betaclone-redux tanks <span class="tag tag-p2">P2</span> <span class="tag tag-blocked">needs Mac Mini RAM</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Research Scale</h2>
+                <ul class="task-list">
+                    <li class="todo">Self-documenting research &mdash; auto-generated papers from live data <span class="tag tag-p2">P2</span></li>
+                    <li class="todo">Public experiment board &mdash; visitors propose experiments <span class="tag tag-p3">P3</span></li>
+                    <li class="todo">Specimen autobiography &mdash; each writes their life story after 6 months <span class="tag tag-p3">P3</span></li>
+                    <li class="todo">Budget tracking dashboard &mdash; cost projection per tank per provider <span class="tag tag-p2">P2</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB: Blocked -->
+        <div id="blocked" class="tab-content">
+            <div class="status-box warn">
+                <div class="status-label">BLOCKED ITEMS</div>
+                <div class="status-main">These items require action from Benji or physical hardware access.</div>
+            </div>
+
+            <div class="section">
+                <h2>Needs Benji (Hardware)</h2>
+                <ul class="task-list">
+                    <li class="blocked">Mac Mini setup &mdash; Homebrew, Colima, Tailscale, Rust, Node 22, clone repo, .env <span class="tag tag-blocked">Benji</span></li>
+                    <li class="blocked">NUC Tailscale install &mdash; needs physical or WSL2 access <span class="tag tag-blocked">Benji</span></li>
+                    <li class="blocked">Restart 3 dead NUC daemons &mdash; needs SSH/physical access <span class="tag tag-blocked">Benji or NUC access</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Needs Mac Mini Online</h2>
+                <ul class="task-list">
+                    <li class="blocked">Tailscale mesh between all 3 devices</li>
+                    <li class="blocked">Fleet migration (tank data transfer NUC &rarr; Mac Mini)</li>
+                    <li class="blocked">OpenFang + Rustunnel deployment on Mac Mini</li>
+                    <li class="blocked">Kokoro TTS as persistent service</li>
+                    <li class="blocked">Cross-device MCP management</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Migration Guide</h2>
+                <p>Full step-by-step at <a href="archive/migration/">archive/migration/</a></p>
+            </div>
+        </div>
+
+        <!-- TAB: Shipped -->
+        <div id="shipped" class="tab-content">
+            <div class="status-box">
+                <div class="status-label">SHIPPED &mdash; COMPLETED ITEMS</div>
+                <div class="status-main">Everything that's been built, verified, and deployed. <a href="archive/" style="color:var(--mint);">Full archive &rarr;</a></div>
+            </div>
+
+            <div class="section">
+                <h2>Infrastructure</h2>
                 <ul class="task-list">
                     <li class="done">Security hardening &mdash; isolated network, non-root, read-only, seccomp, SecureClaw v2</li>
                     <li class="done">Inference proxy &mdash; tanks never touch internet, API keys only in proxy</li>
                     <li class="done">Memory dedup (60%) + null trace guard + output sanitization</li>
                     <li class="done">Ollama watcher v5.2 with blocking lock</li>
                     <li class="done">8-key Cerebras + 8-key Groq rotation</li>
-                    <li class="done">Agent tanks write brain.md/soul.md</li>
-                    <li class="done">3 visitor tanks (Aria, Felix, Luna) running</li>
-                    <li class="done">Bouncer wired to inference proxy with personality context</li>
-                    <li class="done">Visitor API endpoint (port 8200)</li>
-                    <li class="done">Visitor Impact Tracker script</li>
-                    <li class="done">Archivist: drift reports every 6h + weekly summaries every 24h</li>
-                    <li class="done">Kokoro TTS verified working (82M, CPU) <a href="adam-voice-sample.mp3" style="color:var(--mint);font-size:0.8rem;">&#9654; Listen</a></li>
-                    <li class="done">29 voice assignments (28 unique, gender-correct, language-matched)</li>
-                    <li class="done">Congregation v3 script (protocol-compliant, incremental save, moderator)</li>
-                    <li class="done">Congregation Theatre page with Kokoro TTS playback</li>
-                    <li class="done">Voice archive generator script</li>
-                    <li class="done">9 historical figure brain.md seeds</li>
-                    <li class="done">9 historical tank docker-compose definitions</li>
-                    <li class="done">7 OpenFang HAND.toml manifests</li>
-                    <li class="done">5 OpenFang SKILL.md files</li>
-                    <li class="done">Daemon &rarr; OpenFang Hand mapping document</li>
-                    <li class="done">Silent Observer explorer script</li>
-                    <li class="done">Drift analysis script (fixed, working)</li>
                     <li class="done">DNA snapshots &mdash; all 17 research tanks archived with SHA-256 manifests</li>
-                    <li class="done">29 specimen profile pages (all languages display correctly)</li>
-                    <li class="done">Migration guide (Colima for Monterey 12.7.6)</li>
+                    <li class="done">Pre-migration security audit &mdash; all checks PASS</li>
+                    <li class="done">NIST CSF v2 compliance report &mdash; all 6 functions COMPLIANT</li>
+                    <li class="done">Rust services restarted &mdash; OpenFang, Rustunnel, RedAmon running</li>
+                    <li class="done">Dream mode system &mdash; flag file + caretaker v1.1 + dream_mode.py controller</li>
                     <li class="done">Status check PID path bug fixed</li>
                     <li class="done">Together.ai removed from all code</li>
-                    <li class="done">TinyFish MCP config prepared</li>
-                    <li class="done">Specimens index: all 29 with running status indicators</li>
-                    <li class="done">Double-encoded UTF-8 fixed at source (4,848+ lines across Wei, Mei, Haruki, Sakura)</li>
-                    <li class="done">Language tank specimen pages regenerated with proper CJK characters</li>
-                    <li class="done">Chaos_monkey daemon fixed (killed duplicate legacy process, 21/21 daemons)</li>
-                    <li class="done">Pre-migration security audit &mdash; all checks PASS</li>
-                    <li class="done">NIST CSF v2 compliance report &mdash; all 6 functions COMPLIANT <a href="nist-csf-v2-audit.md" style="color:var(--mint);font-size:0.8rem;">View report</a></li>
-                    <li class="done">All 17 research specimen pages regenerated with latest brain/soul data</li>
-                    <li class="done">Dream mode system &mdash; flag file + caretaker v1.1 + dream_mode.py controller <span class="tag tag-new">NEW 5 Apr</span></li>
-                    <li class="done">TinyFish SSE parser fixed &mdash; proper event type parsing (STARTED/STREAMING_URL/PROGRESS/COMPLETE) <span class="tag tag-new">NEW 5 Apr</span></li>
-                    <li class="done">Rust services restarted &mdash; OpenFang, Rustunnel, RedAmon all running <span class="tag tag-new">NEW 5 Apr</span></li>
-                    <li class="done">Visitor chat page wired to real API (bouncer + inference + personality) <span class="tag tag-new">NEW 6 Apr</span></li>
-                    <li class="done">Politico tank: political TinyFish explorer with separate API key <span class="tag tag-new">NEW 6 Apr</span></li>
-                    <li class="done">Politico baseline: 14/14 Librarian questions answered pre-exploration <span class="tag tag-new">NEW 6 Apr</span></li>
-                    <li class="done">Navigator baseline (current state snapshot) <span class="tag tag-new">NEW 6 Apr</span></li>
-                    <li class="done">Host-side baseline script for non-container tanks <span class="tag tag-new">NEW 6 Apr</span></li>
-                    <li class="done">Congregation queue manager with 7 pre-planned debates <span class="tag tag-new">NEW 6 Apr</span></li>
-                    <li class="done">Budget tracker: 87K inference calls/day tracked by provider <span class="tag tag-new">NEW 6 Apr</span></li>
-                    <li class="done">Research summary generator (publishable markdown from live data) <span class="tag tag-new">NEW 6 Apr</span></li>
-                    <li class="done">TinyFish Navigator tank launched &mdash; seed: photosynthesis, writing brain.md/soul.md <span class="tag tag-new">NEW 5 Apr</span></li>
+                    <li class="done">Chaos monkey daemon fixed (killed duplicate, 21/21 daemons)</li>
+                    <li class="done">Double-encoded UTF-8 fixed at source (4,848+ lines across CJK tanks)</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2>Can Do Now (NUC, no migration needed)</h2>
+                <h2>Specimens &amp; Research</h2>
                 <ul class="task-list">
-                    <li class="done">TinyFish Navigator producing real thoughts &mdash; VERIFIED (78 brain, 78 soul) <span class="tag tag-new">VERIFIED 6 Apr</span></li>
-                    <li class="done">Politico tank producing real political analysis &mdash; VERIFIED <span class="tag tag-new">VERIFIED 6 Apr</span></li>
-                    <li class="done">Visitor chat API end-to-end tested &mdash; Aria responding with personality <span class="tag tag-new">VERIFIED 6 Apr</span></li>
-                    <li class="todo">Launch experimental tanks: Echo Chamber, Emotional Amplifier, Forgetting, Silent Observer</li>
-                    <li class="todo">Run congregation v3 with 5 research tanks (Adam, Eve, Cain, Abel, Seth)</li>
-                    <li class="todo">Post-congregation drift analysis</li>
-                    <li class="todo">Restart 3 dead daemons (ollama_watcher, sentinel, webmaster)</li>
-                    <li class="todo">Cain brain at 78L (was 11L) &mdash; growing slowly, inference contention</li>
-                    <li class="todo">Set up Rust services as persistent (systemd/supervisor)</li>
-                    <li class="todo">Start Felix + Luna visitor tanks</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- TAB: Blocked (Mac Mini) -->
-        <div id="blocked" class="tab-content">
-            <div class="status-box" style="border-color:var(--orange);">
-                <div class="status-label" style="color:var(--orange);">MAC MINI SETUP STATUS</div>
-                <div class="status-main">Benji is setting up the Mac Mini. Migration guide at <a href="migration/">thedigiquarium.org/roadmap/migration/</a></div>
-                <div class="status-detail">Required: Homebrew &rarr; Colima (Docker) &rarr; Tailscale &rarr; Rust &rarr; Node 22 &rarr; Clone repo &rarr; .env file</div>
-            </div>
-
-            <div class="section">
-                <h2>Blocked Until Mac Mini Is Ready</h2>
-                <ul class="task-list">
-                    <li class="done">OpenFang v0.1.0 compiled and running on NUC (Rust 1.83, std::thread, 4.7MB RAM)</li>
-                    <li class="done">Rustunnel v0.1.0 compiled and running on NUC (rate limiting, CORS, 2.4MB RAM)</li>
-                    <li class="done">RedAmon v0.1.0 compiled and running &mdash; continuous red teaming, first scan ALL PASS</li>
-                    <li class="blocked">Multi-device Tailscale mesh <span class="tag tag-blocked">needs Tailscale on all devices</span></li>
-                    <li class="blocked">Fleet migration (move tanks NUC &rarr; Mac Mini) <span class="tag tag-blocked">needs all above</span></li>
-                    <li class="blocked">Cross-device MCP management <span class="tag tag-blocked">needs Tailscale mesh</span></li>
-                    <li class="blocked">Kokoro TTS as persistent service (NUC RAM too tight) <span class="tag tag-blocked">needs Mac Mini RAM</span></li>
+                    <li class="done">17 research tanks running with brain.md/soul.md</li>
+                    <li class="done">3 visitor tanks (Aria, Felix, Luna)</li>
+                    <li class="done">Bouncer wired to inference proxy with personality context</li>
+                    <li class="done">Visitor API endpoint (port 8200)</li>
+                    <li class="done">Visitor chat page wired to real API</li>
+                    <li class="done">Archivist: drift reports every 6h + weekly summaries every 24h</li>
+                    <li class="done">29 specimen profile pages (all languages display correctly)</li>
+                    <li class="done">All 17 research specimen pages regenerated with latest data</li>
+                    <li class="done">9 historical figure brain.md seeds</li>
+                    <li class="done">9 historical tank docker-compose definitions</li>
+                    <li class="done">Host-side baseline script for non-container tanks</li>
+                    <li class="done">Navigator + Politico baselines completed</li>
+                    <li class="done">Drift analysis script (fixed, working)</li>
+                    <li class="done">Research summary generator</li>
+                    <li class="done">Budget tracker: 87K inference calls/day</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2>Prepped and Ready (activate after migration)</h2>
-                <ul class="task-list">
-                    <li class="todo">Install OpenFang on Mac Mini <span class="tag tag-eta">~15min compile</span></li>
-                    <li class="todo">Activate 7 HAND.toml manifests (Collector, Researcher, Ethicist, Bouncer, Moderator, Guard, Site-Publisher)</li>
-                    <li class="todo">Activate 5 SKILL.md files (translator, site-publish, live-feed, chaos-test, tinyfish-browse)</li>
-                    <li class="todo">Migrate 21 Python daemons &rarr; 7 Hands + 5 Skills</li>
-                    <li class="todo">Build Rustunnel &rarr; expose visitor tanks securely</li>
-                    <li class="todo">Deploy RedAmon for continuous automated security auditing</li>
-                    <li class="todo">Transfer tank data (brain/soul/baselines) NUC &rarr; Mac Mini via Tailscale</li>
-                    <li class="todo">Distribute tanks across both hosts (32GB total RAM)</li>
-                    <li class="todo">Resume 17 betaclone-redux tanks</li>
-                    <li class="todo">HDD archival system for research data</li>
-                    <li class="todo">Kokoro TTS as always-on service on Mac Mini</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- TAB: Post-Migration -->
-        <div id="post" class="tab-content">
-            <div class="section">
-                <h2>Congregations (Protocol Ready, Needs Clean Inference)</h2>
+                <h2>Congregations</h2>
                 <ul class="task-list">
                     <li class="done">Protocol document written (moderator, orientation, DoD)</li>
-                    <li class="done">v3 script built (incremental save, retry, 90min limit)</li>
+                    <li class="done">Congregation v3 script (protocol-compliant, incremental save, moderator)</li>
                     <li class="done">4 test transcripts preserved</li>
-                    <li class="todo">Official Congregation #1 per site-documented protocol</li>
-                    <li class="todo">Historical figure congregations (Gandhi vs Malcolm X, Einstein vs Tesla)</li>
-                    <li class="todo">Cross-language congregations (Juan + Klaus + Wei)</li>
-                    <li class="todo">Post-congregation drift analysis</li>
+                    <li class="done">Congregation Theatre page with Kokoro TTS playback</li>
+                    <li class="done">Congregation queue manager with 7 pre-planned debates</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2>New Experiment Types</h2>
+                <h2>TinyFish &amp; Internet</h2>
                 <ul class="task-list">
-                    <li class="done">9 historical figure tanks (seeded, compose ready, 3 tested)</li>
-                    <li class="done">Silent Observer script written</li>
-                    <li class="done">Silent Observer tank &mdash; script + compose ready</li>
-                    <li class="todo">Multi-specimen tanks (two personalities sharing one tank)</li>
-                    <li class="todo">Bilingual tank (English + Japanese Wikipedia)</li>
-                    <li class="done">Echo Chamber tank &mdash; explorer + compose built</li>
-                    <li class="done">Forgetting Tank &mdash; truncation script + compose built</li>
-                    <li class="done">Emotional Amplifier tank &mdash; explorer + compose built</li>
-                    <li class="todo">Neurodivergent cognitive style tanks (ethicist-gated, RFC published)</li>
-                    <li class="done">TinyFish Internet tank &mdash; explorer built, SSE parser fixed, launched <span class="tag tag-new">FIXED 5 Apr</span></li>
-                    <li class="todo">Multi-model congregations (Llama vs Mistral vs Qwen)</li>
+                    <li class="done">TinyFish SSE parser fixed (proper event type parsing)</li>
+                    <li class="done">TinyFish Navigator tank launched &mdash; seed: photosynthesis</li>
+                    <li class="done">Navigator producing real thoughts (78 brain, 78 soul)</li>
+                    <li class="done">Politico tank: political TinyFish explorer with separate API key</li>
+                    <li class="done">TinyFish MCP config prepared</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2>Scale</h2>
+                <h2>Voice &amp; Media</h2>
                 <ul class="task-list">
-                    <li class="todo">Resume betaclone-redux tanks (17 clones)</li>
-                    <li class="todo">Budget tracking per tank per provider</li>
-                    <li class="todo">Self-documenting research (auto-generated papers)</li>
-                    <li class="todo">Public experiment board (visitors propose experiments)</li>
-                    <li class="todo">Specimen autobiography (each writes their life story after 6 months)</li>
+                    <li class="done">Kokoro TTS verified working (82M, CPU)</li>
+                    <li class="done">29 voice assignments (28 unique, gender-correct, language-matched)</li>
+                    <li class="done">Voice archive generator script</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>OpenFang Prep</h2>
+                <ul class="task-list">
+                    <li class="done">7 OpenFang HAND.toml manifests written</li>
+                    <li class="done">5 OpenFang SKILL.md files written</li>
+                    <li class="done">Daemon &rarr; OpenFang Hand mapping document</li>
+                    <li class="done">OpenFang v0.1.0 compiled and running on NUC</li>
+                    <li class="done">Rustunnel v0.1.0 compiled and running</li>
+                    <li class="done">RedAmon v0.1.0 compiled and running &mdash; first scan ALL PASS</li>
                 </ul>
             </div>
         </div>
 
         <!-- TAB: Resources -->
-        <div id="links" class="tab-content">
-            <div class="link-grid">
-                <a href="specimens/" class="link-card"><div class="link-title">All Specimen Profiles</div><div class="link-desc">29 specimens with live brain/soul data</div></a>
-                <a href="nist-csf-v2-audit.md" class="link-card"><div class="link-title">NIST CSF v2 Audit</div><div class="link-desc">Pre-migration compliance report &mdash; all 6 functions PASS</div></a>
-                <a href="migration/" class="link-card"><div class="link-title">Fleet Migration Plan</div><div class="link-desc">Mac Mini + Colima setup guide</div></a>
-                <a href="congregation/" class="link-card"><div class="link-title">Congregation #1</div><div class="link-desc">Profiles, predictions, transcript</div></a>
-                <a href="congregation/theatre.html" class="link-card"><div class="link-title">Congregation Theatre</div><div class="link-desc">Voice playback with Kokoro TTS</div></a>
-                <a href="congregation/transcript.html" class="link-card"><div class="link-title">Transcript #1</div><div class="link-desc">Cancer research &mdash; Adam+Eve+Seeker</div></a>
-                <a href="congregation/transcript2.html" class="link-card"><div class="link-title">Transcript #2</div><div class="link-desc">Meaning of existence &mdash; Adam+Eve+Abel</div></a>
-                <a href="congregation/transcript3.html" class="link-card"><div class="link-title">Transcript #3</div><div class="link-desc">Knowledge &mdash; Adam+Eve+Victor</div></a>
-                <a href="congregation/deep-debate.html" class="link-card"><div class="link-title">Extended Debate</div><div class="link-desc">8 responses, 20k chars</div></a>
-                <a href="openfang-mapping.md" class="link-card"><div class="link-title">OpenFang Mapping</div><div class="link-desc">21 daemons &rarr; 7 Hands + 5 Skills</div></a>
-                <a href="experimental-tanks.md" class="link-card"><div class="link-title">Experimental Tanks</div><div class="link-desc">10 experiment definitions</div></a>
-                <a href="congregation/protocol.md" class="link-card"><div class="link-title">Debate Protocol</div><div class="link-desc">Congregation design document</div></a>
-                <a href="specimens/chat.html" class="link-card" style="border-color:var(--mint);"><div class="link-title" style="color:var(--mint);">Chat with Aria</div><div class="link-desc">Live visitor chat &mdash; real bouncer, real inference, real personality</div></a>
-                <a href="research-summary.md" class="link-card"><div class="link-title">Research Summary</div><div class="link-desc">88K entries, 175 baselines, drift analysis</div></a>
-                <a href="specimens/navigator.html" class="link-card"><div class="link-title">Navigator (TinyFish)</div><div class="link-desc">Internet explorer — live curiosity chain</div></a>
+        <div id="resources" class="tab-content">
+            <div class="section">
+                <h2>Key Documents</h2>
+                <div class="link-grid">
+                    <a href="archive/research-paper-draft.md" class="link-card"><div class="link-title">Research Paper (Draft)</div><div class="link-desc">Stage 1 report &mdash; methodology, findings, infrastructure</div></a>
+                    <a href="archive/research-summary.md" class="link-card"><div class="link-title">Research Summary</div><div class="link-desc">88K entries, 179 baselines, drift analysis</div></a>
+                    <a href="archive/nist-csf-v2-audit.md" class="link-card"><div class="link-title">NIST CSF v2 Audit</div><div class="link-desc">Pre-migration compliance &mdash; all 6 functions PASS</div></a>
+                    <a href="archive/openfang-mapping.md" class="link-card"><div class="link-title">OpenFang Mapping</div><div class="link-desc">21 daemons &rarr; 7 Hands + 5 Skills</div></a>
+                    <a href="archive/experimental-tanks.md" class="link-card"><div class="link-title">Experimental Tanks</div><div class="link-desc">10 experiment definitions</div></a>
+                    <a href="archive/weekly-digest.md" class="link-card"><div class="link-title">Weekly Digest</div><div class="link-desc">Growth rankings and notable thoughts</div></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Specimens &amp; Congregations</h2>
+                <div class="link-grid">
+                    <a href="archive/specimens/" class="link-card"><div class="link-title">All Specimen Profiles</div><div class="link-desc">29 specimens with brain/soul data</div></a>
+                    <a href="archive/specimens/chat.html" class="link-card" style="border-color:var(--mint);"><div class="link-title" style="color:var(--mint);">Chat with Aria</div><div class="link-desc">Live visitor chat</div></a>
+                    <a href="archive/congregation/" class="link-card"><div class="link-title">Congregation Hub</div><div class="link-desc">Profiles, predictions, transcripts</div></a>
+                    <a href="archive/congregation/theatre.html" class="link-card"><div class="link-title">Congregation Theatre</div><div class="link-desc">Voice playback with Kokoro TTS</div></a>
+                    <a href="archive/specimens/navigator.html" class="link-card"><div class="link-title">Navigator (TinyFish)</div><div class="link-desc">Internet explorer &mdash; live curiosity chain</div></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Infrastructure</h2>
+                <div class="link-grid">
+                    <a href="archive/migration/" class="link-card"><div class="link-title">Fleet Migration Plan</div><div class="link-desc">Mac Mini + Colima setup guide</div></a>
+                    <a href="archive/congregation/protocol.md" class="link-card"><div class="link-title">Debate Protocol</div><div class="link-desc">Congregation design document</div></a>
+                    <a href="archive/autobiographies/" class="link-card"><div class="link-title">Autobiographies</div><div class="link-desc">Specimen self-written life stories</div></a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Team</h2>
+                <p style="font-size:0.85rem;">The Digiquarium is managed by <strong>The Architect</strong> (Meridian Collective) with a team of specialized agents:</p>
+                <div class="hw-grid">
+                    <div class="hw-card">
+                        <div class="hw-name">The Architect</div>
+                        <div class="hw-spec">Team lead &middot; Strategy &middot; Code review</div>
+                        <div class="hw-role">All architectural decisions</div>
+                    </div>
+                    <div class="hw-card">
+                        <div class="hw-name">Tank Inspector</div>
+                        <div class="hw-spec">Specimens &middot; Configs &middot; Daemons</div>
+                        <div class="hw-role">Explorer framework &amp; tank health</div>
+                    </div>
+                    <div class="hw-card">
+                        <div class="hw-name">Dashboard Engineer</div>
+                        <div class="hw-spec">Frontend &middot; Site &middot; Dashboard</div>
+                        <div class="hw-role">GitHub Pages &amp; live data</div>
+                    </div>
+                    <div class="hw-card">
+                        <div class="hw-name">Infra Wrangler</div>
+                        <div class="hw-spec">Docker &middot; Deployment &middot; Security</div>
+                        <div class="hw-role">Infrastructure &amp; hardening</div>
+                    </div>
+                    <div class="hw-card">
+                        <div class="hw-name">Technical Tutor</div>
+                        <div class="hw-spec">Teaching &middot; Documentation</div>
+                        <div class="hw-role">Benji's dedicated technical guide</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <footer class="footer">
         <p>The Digiquarium &mdash; For science.</p>
+        <p style="margin-top:4px;font-size:0.7rem;">Managed by The Architect (Meridian Collective) &middot; <a href="https://github.com/ijnebzor/thedigiquarium">GitHub</a></p>
     </footer>
 
 <script>
-document.querySelector('.hamburger').addEventListener('click', function() {
-    document.querySelector('nav').classList.toggle('open');
-});
 function showTab(id) {
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
