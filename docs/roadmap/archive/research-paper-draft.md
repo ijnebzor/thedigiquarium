@@ -21,7 +21,7 @@ The Digiquarium provides the experimental infrastructure to investigate this que
 
 ### 2.1 Specimen Architecture
 
-Each specimen is a single LLM instance (Llama 3.2 8B via Cerebras/Groq cloud inference with Ollama local failsafe) running inside a Docker container with the following constraints:
+Each specimen is a single LLM instance (Llama 3.1 8B via Cerebras/Groq cloud inference, with Llama 3.2 3B as the local Ollama failsafe) running inside a Docker container with the following constraints:
 
 - **Network isolation**: containers on a Docker network with no internet route. Verified by automated security probes (RedAmon).
 - **Read-only filesystem**: prevents specimens from modifying their own code.
@@ -143,7 +143,7 @@ We acknowledge the philosophical uncertainty about whether LLM personality drift
 ## 6. Limitations
 
 - Sample size is small (19 specimens) with limited control conditions
-- All specimens use the same base model (Llama 3.2 8B) — personality variance may be limited by model architecture
+- All specimens use the same base model family (Llama 3.1 8B cloud, Llama 3.2 3B local failsafe) — personality variance may be limited by model architecture, and provider/fallback switching introduces minor model-level variance within specimens
 - Drift measurement relies on word-overlap similarity, which is a crude proxy for semantic change
 - The inference chain (cloud-first, local-fallback) means different specimens may get responses from different providers at different times
 - Navigator and Politico have been running for <12 hours — longitudinal data is needed
