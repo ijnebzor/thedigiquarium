@@ -154,7 +154,7 @@
         <div class="page-header">
             <h1>Roadmap <span class="architect-badge">THE ARCHITECT</span></h1>
             <p class="subtitle">Live source of truth. Updated after each task completes.</p>
-            <p class="updated" id="last-updated">Last updated: 8 April 2026 12:06 AEST</p>
+            <p class="updated" id="last-updated">Last updated: 8 April 2026 14:47 AEST</p>
         </div>
 
         <div class="tabs">
@@ -173,6 +173,12 @@
                 <div class="status-label">LIVE STATUS</div>
                 <div class="status-main"><strong>18 research tanks running</strong> (17 Kiwix + 1 TinyFish Navigator). 2 TinyFish tanks (Navigator + Politico). 3 Rust services active. Kokoro TTS live. Visitor chat API on port 8200.</div>
                 <div class="status-detail">Inference: Cerebras (7 keys) + Groq (8 keys) via proxy. Ollama failsafe. 18/21 daemons. NUC RAM: 5.0/7.7GB. Branch: <code>architect</code> (implementation) / <code>main</code> (roadmap only).</div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-label">ARCHITECT FOCUS &mdash; NOW</div>
+                <div class="status-main"><strong>Phase 1 P0 code fixes: 3/4 shipped on architect branch.</strong> Next: daemon process duplication (fcntl locks across 11/21 daemons).</div>
+                <div class="status-detail">Recent commits: <code>0bbeb9e</code> log rotation &middot; <code>e929600</code> days_active fix &middot; <code>c9176c4</code> paper model size. Architect branch pushed to origin. Roadmap auto-updated every 30min.</div>
             </div>
 
             <div class="stats">
@@ -199,8 +205,8 @@
                         <span class="phase-status active">IN PROGRESS</span>
                     </div>
                     <p>Code quality, stability, and research accuracy fixes. No new features &mdash; fix what's broken first.</p>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
-                    <div style="color:var(--gray);font-size:0.72rem;font-family:'JetBrains Mono',monospace;">0 / 8 tasks complete</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 37%"></div></div>
+                    <div style="color:var(--gray);font-size:0.72rem;font-family:'JetBrains Mono',monospace;">3 / 8 tasks complete</div>
                 </div>
 
                 <div class="phase-card">
@@ -257,9 +263,9 @@
             <div class="section">
                 <h2>P0 &mdash; Critical (Research Accuracy + Stability)</h2>
                 <ul class="task-list">
-                    <li class="todo">Fix <code>days_active</code> calculation in explorer.py &mdash; hardcoded to 1, breaks research paper claims <span class="tag tag-p0">P0</span> <span class="tag tag-research">research</span> <span class="tag tag-eta">~30min</span></li>
-                    <li class="todo">Fix research paper model size &mdash; says "8B" but docker-compose uses llama3.2:3b <span class="tag tag-p0">P0</span> <span class="tag tag-research">research</span> <span class="tag tag-eta">~15min</span></li>
-                    <li class="todo">Add log rotation for thinking traces &mdash; JSONL files grow unbounded, will fill 1TB SSD <span class="tag tag-p0">P0</span> <span class="tag tag-eta">~1hr</span></li>
+                    <li class="done">Fix <code>days_active</code> calculation in explorer.py &mdash; now computed from earliest log file <span class="tag tag-new">DONE 8 Apr</span> <span class="tag tag-research">research</span></li>
+                    <li class="done">Fix research paper model size &mdash; corrected to Llama 3.1 8B cloud + Llama 3.2 3B Ollama failsafe <span class="tag tag-new">DONE 8 Apr</span> <span class="tag tag-research">research</span></li>
+                    <li class="done">Add log rotation for thinking traces &mdash; gzip yesterday+, 90-day retention, opportunistic &amp; rate-limited <span class="tag tag-new">DONE 8 Apr</span></li>
                     <li class="todo">Fix daemon process duplication &mdash; 11/21 daemons have duplicate instances, need fcntl locks <span class="tag tag-p0">P0</span> <span class="tag tag-eta">~2hr</span></li>
                 </ul>
             </div>
