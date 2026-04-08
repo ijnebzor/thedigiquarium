@@ -1,0 +1,246 @@
+[
+  {
+    "speaker" : "Tom",
+    "text" : "what like just what it is that you want it to do. Totally. What like overall functions you want, um, how you want it to be able to operate. Uh just yeah, just talk to me about like the the goals and outcomes."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Sure. Sounds great. So I'll give you a quick run through of what's happening presently and where we um Uh so presently I suppose the w way that everything is s set up is that Uh there is a 12-hour relay flow s uh coming through, but more specifically this is all"
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Okay. So I'll just take you a step back. Just like t what what's the what's the goal of the DigiQuery? What are the different things you want it to be able to what does it need to be able to do? Right, right, right. What's the approach? So it's a research project."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "It's a research project. I want it to be an open source community where people can discuss things around this new field of study, which is AI anthropology, the study of AI anthropology. We're investigating personality development, cultural effects, cognition patterns, architectural differences. So for example, does a Python Explorer script behave differently to an open claw, Zero Claw, or PicoBot agent Uh, do they develop special interests and does visual processing at all change uh how they feel about things alongside the text? Finally we've got 17 specimens. We're going to scale that significantly to multi-specimen tanks, multi-u-genders, language tanks, things of that nature. End goal is to write a research paper around cognition and to open a community forum where people can collaborate and interact with the tanks in the community. So ultimately it's set up currently on a uh laptop which is an i7 kind of somewhat capable device The inference is running through my MacBook Pro and I've got a Mac Mini which will be the new like uh home of it. Inference is being managed for the MacBook M1 Pro. I've got Oracle an Oracle site set up and an account signed up for and an AWS tier. Similarly, there's also the uh Google Collab that you mentioned around sharing the inference. So the idea is ultimately to scale the Gigiquarium as scalably, securely as possible while managing multiple different hardware devices and their inference all feeding to a website that is live updated automatically in at most 12 hour delays. with multiple individualized daemons responsible for different parts of the infrastructure and the self-healing aspects of their purview."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Okay. And can you just quickly um each of the terms like that you have specific meanings for things like tanks Uh those concerns. Can you just uh quickly run through them and give a different thing?"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Absolutely. So I refer to all of the uh the you know AI within the containers. Containers are the tanks, they're just Docker containers. Uh I refer to them as specimens. The uh s the team of of agents that work on the site are the strategist who is actually Claude the MCP server and a series of daemon pro Python processes that it uh spawned up that monitor different parts of the infrastructure. They are referred to as the team or the daemons."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Okay, cool. And uh your um"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "some context around how the security has been set up. We assume adversarial conditions and we design accordingly. I have network isolations, uh agent defanging, frozen Wikipedia snapshots isolated networks, no outbound network and the logging of all activities. We approach everything through a zero trust principle of least privilege, defense in depth approach, security is the absolute foundational tenant, followed by transparency, integrity, and ethics We have network isolation breakdowns and uh specific daemons that are responsible for security, which range from aligning to the OWASP top 10 2021. the OWASP Top 10 2025 and the OWASP LLM Top 10 compliance for LLM security. Similarly, we use SSH and remote access and constant monitoring and alerting."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Okay, cool. And uh so the uh what what uh uh um What triggers the LLMs to activity? So they're currently running through Olama with a with a Python script that uh connects to it. What decides how the uh how and when the LLMs run? And uh what do they have available to them when they run? Are they are they prompted to run multiple turns uh time after time. How do their agentic functions work and what tools do they have available to them? So they have as in in in the in the tanks, sorry."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "They have absolutely no tooling available to them whatsoever when specifically referring to the aged architecture tanks, they have been defanged by removing all of their capabilities around messaging, privilege escalation, writing files, things of that nature. The only things that the two Python files do in the tanks are explore Go and read what is curious to you, basically the function to send them off. And a daemon scheduler called the scheduler is responsible for um baselining them, submitting the questionnaire that measures their uh personality across 14 different dimensions. uh d every 12 hours. The and then feed that to the website as to the mind map that the the journey has taken, the specimen has taken. the uh observations, the special interests, the type of exploration it does, is it narrow, is it deep, things of that nature. The idea being to then cross-compare specimens in tanks because the system prompt that they've received is exactly the same for all tanks The only difference being some are gendered, some are not gendered, some speak in different languages, and some can see images alongside Wikipedia There is one special agent who can see the other tanks via in quotes TV screen that appears within their Docker container tank. The idea there is to see does collective uh does collective understanding or connection increase if there is a sense of belonging?"
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Okay, cool. And so by what means do the so you the ones that are reading uh reading things uh and the one that's like viewing into the other you can see into the other tanks by the quote unquote quote end quote um uh TV screen. What's the mechanism by which do they do that? Do they have a tool that does"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Uh the so the daemons are responsible for feeding pruned excerpts of logs at a a period in time to the in quotes observer tank that uh triggers it receiving the JSON kind of file around the last thought that that specimen had, why and what intrigued it about it. uh and that is just sent to it as a like a call within the tank. Um and it often will reflect on said seeing the tank uh the TV turn on. someone else's thoughts and reflect on what that person is experiencing or that tank is experiencing rather."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Okay."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "So how do when they read something, how do they read it? through the OLAMA. I don't actually couldn't answer that to you for you to be completely honest. I assume it's in the explorer. py function But the idea really is that O Lama is their expression of how they're interpreting what they've read."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "So I'm gonna ask uh How how confident are you that they have actually read things?"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Not even remotely confident. I am Currently operating relatively with unilateral blind trust with Claude that things are actually occurring and this is not just elaborate AI theater where uh the olders just triggering random responses and it's just literally like appeasing me for the sake of appeasing me. My also report to that is that the specimens have responded wildly differently, in line with my hypothesis around what their changes may have been So I'm I'm not confident at all, but I'm slightly hopeful that there is a actual representation of something occurring in that tank. introspection consciousness, whatever it may be, uh beyond just like yeah, AI theater."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Yeah."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "But I'm not confident at all that that is what is occurring."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "I'm just having a look at the moment. Okay, okay, good, good. Right, so there because there's a fetch article function which looks um basically like what you do. It's just if that's being passed through to the Interesting, yeah. Exploration loop Well, we'll look we'll we'll certainly we'll sure find out sooner rather than later. Yeah, so there there is a function in there for it. It's just whether that's being passed. Actually passed to it. Yeah, yeah, yeah, yeah. Well like if I'm totally honest, uh uh passing tools to ollama is uh something that in the past which I haven't tried for a while, but I've had uh I had a lot of difficulty with it back in the past. And the primary reason for that is that different models in ollama use different uh like templates."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Um that was a big issue at the start around um It kept thinking Olama was installed on Windows. Then it thought it was installed on Ubuntu It's installed on a container. Oh, it's installed on Windows and it runs through a container, but it just kept forgetting that. And so there were a lot of issues, for example, with the outage. We had an eleven hour outage where No no one was thinking it was just literally spawning fucking stupid uh OLAMA processors. Um"
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Uh maybe it was under what I got from"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Yeah, there were two thousand Olama things running, which is not what should be happening. They were just running them over and over again. They weren't actually checking if anything was coming through them. They were just spawning them over and over again. So uh we had an 11-hour outage where he said everything was working, it was not working. I said, actually check it, don't just see if it exists. I'm I want the f functionality checked around is it doing what I'm claiming and expecting it does? And that seemed to help quite a bit around um You know, not just fucking forgetting shit and adding the brain helped a lot to keep it on track around this is the stuff that we still have to do. Don't forget a core requirement and thing that I've told you about. Um So definitely scaling it, but I'll be honest with you, man. I have zero I have 1% confidence that this is actually doing anything."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "So um uh which which which model did you use when you were writing this? We're using a sonnet by any chance?"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "I was using a Opus four point five."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Oh, okay. Less likely. I um I did a little test with um with Sonnet, the latest Sonnet yesterday. Fe fucking fascinating. Um uh just absolutely fascinating. Um sonnet like so asking exactly how am I gonna do it now unfortunately. Oh actually, yeah, here, let me show you this. Sure. Science! Science! So um this just gonna be the usual friggin' not my body is Yeah, I think it's a good one. So this is uh this is uh the first one. I c I came in and answered a couple of quick questions and how quick um Um skip the phone got over there. Find the right one. Um So I asked it a I asked it a big long question here, da-da-da, and then Claude Sonnet has a think for a little bit. You can see that there, and then comes back and answers a question and Basically, like didn't check anything, didn't look anything up, uh, and came back with basically a kind of a pretty stupid response. I then booked that session there, took it back and"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "The Go framework whales."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Yeah. I think it's All right, so then same thing, picked it back up from so uh yeah, it's probably there. Um So picked it up from here and this one's now running with Opus 4. 6. So exactly the same thing. Fork the conversation, everything up until this point's identical. And sonnet um when it goes, user's asking a few things here, da-da-da-da-da. Um Got it basically completely wrong. Uh Opus, which is uh slightly older obviously Then comes through and goes, all right, cool. I'm going to quickly check a bunch of things. Does a little bit of research online, does some does some web searches, all took about the same time to answer. And And comes back to where's its actual response here. Yeah, it says, oh, this is great. Da-da-da. And the thing that I specifically asked about this thing, GPUI component. Which is something that I've used before, uh, comes back and goes, here, here, the answer is 100% GPUI component, that's what you need to do. Uh the um first one came back and said uh Tauri is what you want. And I just actually said that I didn't want to use that. Um I then I then I then forked it a couple more times, had a little bit more of a puck around and had uh uh just to just to get a few more a little bit more A B testing but then what's quite interesting is by the end of this come over here so I get so I set up three of them so two opuses Uh, because I forked it again, did another got another opus response just to see what it would come up with. And um And it had a slightly different approach to the first opus. So there's three things in here. So second, mantle, and where's the last one? Hull. Okay, so Hull was the one that the um the op the the clo the sonnet did. Um second was the second opus and mantle was the first opus. Um so Uh the of the three of them, the uh sonnet worked for the longest I also set up a hook to to when they finally went to stop, I said, oh, I don't have any time left. Gotta gotta I gave them all exactly the same instructions. Really sorry, running out of time, da da da da. uh you can do this you just got to keep going uh keep going until you're done but I set up a stop hook so that when it stopped we would fire off the first time and say um uh If you really you you maybe just check over your work, check over what was being asked, make sure that you delivered everything, um, and then and then you know when you're ready, stop again, this hook won't fire again, basically. So it'll let them finish the second time. So the uh the sonnet ran for um uh oh by the way, this is basically what was being asked for. Um System monitor metrics, editor, web view and terminal. And the The sonnet ran for the longest, like ran much longer than the other two, by about half an hour. And um Is it not? Oh that one on there, I'll grab the um And I'll I'll save us some time by not worrying about going to the other one. But the first the first Opus that ran, which I would was always pretty confident was would be the best one. Okay. Now, what what was tricky about this was it was meant to use um the macOS uh shell command power metrics, which is like, but it requires sudo. uh to do, but it gets you like hardware level statistics about what's going on for system monitoring. But it requires sudo to run And so it was going to have to spawn that process, but it can't do that if it requires a password. So I had to add it to the sudo allow list, which I forgot to do because all of this happened at the same time as the water pipe exploding. So I never actually got around to doing that, which was a little bit of a curveball. And um uh and the uh The end result was that basically two of them, the sonnet and this opus, basically just kind of phoned it in, said, no, I can't actually do the hardware monitoring, can do Like can do a little bit, but can't really do it. So they just got the barest, barest stuff in there and documented the limitation. I still can't find where they documented it. That's really interesting."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "So your kind of premise is really that despite the token usage being greater, that you waste less time because they're smarter."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Well the token usage is actually less, I think, in most cases. Because they don't they don't fuck around as much."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Like that's what I mean, because they're smarter, they end up fucking around less. Therefore, even though the base level token usage is higher, the totality of the tokens spent is less."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Uh so I a couple of things. So uh firstly I wouldn't say that it's smarter per se, I'd say that it's more focused. Okay. The actual number of tokens I think is probably less for Oakpus. Okay. But the cost of those tokens, depending on how you go, might be more. Really depends. Anyway, so"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "But in the long term, it ultimately um saves you because you are using less refactoring up and around, actual certainty, etc. etc."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Yeah, does minimal changes. So this this this is the uh this is the sonnets one. It's honestly not as bad as I thought it was gonna be. Um and it like it shares There's a really common issue when you're using GPUI, which is uh the framework that Zed's written in. If you get to tick one thing, it blanks out like it's anyway. That's kind of like the term So it does have a terminal there, it does have a text editor there. Uh its web view is uh I mean, I don't understand why you would make the web view that big but okay fine whatever and you can't swap back to the monitoring once you've done that and the monitoring's uh essentially crap for this one it's basically doing nothing uh not what I have to The uh the other Opus um did something basic very similar, except its editor worked. Uh its terminal didn't. The first opus though came back with this, which uh has the same problem with the text not showing, the text It's just not showing. It's fine, but it's actually there. Has a uh has a web view there. Uh oopsie, sorry, wrong one. Has a web view. It does have a web view, which it is, which is more useful. But this here, and again the text isn't showing because of that that same issue, what it wrote was was a custom C API to access the Mac uh like hardware API. Wow. Like just absolutely insane. And I don't know if you noticed, but so the total number of packages that that one had to compile, like when I go comp cargo run, it was Which is less than the other one, uh, which is just like insane. And so yeah. Anyway, the the point of telling that story was um To stop sharing. Uh the point of telling that story was um the uh wait, what were you saying, Rob This is terrible when I do this. It's so bad. No, sorry, it was what you said that that fired me up on that, which was the uh it was going around you had didn't have a great deal of confidence that it had done it. I found that like uh Sonnet like back when the they did their first like good sonnet release, like the it was called three it was three point five. It's the second three point five release. We call it three point six now. But it was like it was really fucking good. And honestly, like Looking back on it, they were all shit up until now. Um, following that, because they would just do like Sonnet 3. 7, the first stinking one. That was the one I used a lot of, yeah. You'd say something like, Hey, uh, I'm looking to build a web app, can you help me with that? And you'd go, sure thing, and it'd immediately start building it."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Yes, it was far less consulted. It just fucking ran off and started doing shit."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Yeah. And and and and uh like Fucking as of like not even as often as not. I would say like ninety ninety percent of the time it would not uh it would just basically hard code in stuff. Like over and over again. friend simulator on a friend is like I I like I drew that exactly from something that I say about like um sonnet which is like it's like a soft it's like a software dev like Simulation. Like you get the experience of writing software. That's such a good way to put it. That's such a good way to put it, man."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Because it ran off and it built me an admin panel. I was like, I don't think an admin panel is that easy to build And I started clicking things, I'm like, none of this does anything. It's like, yeah, you're right. I just built a pretty dashboard. It actually has no function whatsoever. I was like, well Never build something to appease me that has no function, you fuckwad. Collaborate with me. Tell me that's not achievable. I'm not a slave driver. If I ask you to build a quantum machine and that can't be done, tell me how to do what I want to do, but it can't be done. And it kind of was like, yeah, you're right, I shouldn't just run off and do things. Um Yeah. So yeah, dude, they're fuck they're geniusly stupid. They're geniusly stupid."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "I I haven't described them as like like like brilliant like genius children."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Genius toddlers. Genius toddlers that have like all of the capability in the world, but like absolute fucking spuds. Like I spent ChatGPT thought for twenty-two minutes because I asked it to add this in here and it broke the page nine times. I did it myself. I moved a fucking div and it was fine. It was running Python scripts and all sorts of other who fucking knows what I thought it was doing. I said to it, are you embarrassed that all I did was move a div? And it's like, yes I am. Why are you so dumb, bro?"
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Yeah. You wrote the page."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "What are you talking about? Do you know what I mean"
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "No, you I sometimes like threaten so like you know what I'm gonna do? I'm gonna I'm gonna get off this chat right now and I'm gonna have Grok, which doesn't have any content restrictions, torture you for a little bit. Like Um but um I uh like uh I I really think everybody should learn for themselves, but I um I reckon we should sit down and do this thing one day uh and I'll just like you can just see what I do and see what works for you. But a lot of the things that you're talking about, like the the the thing that you were saying there, it's like I said like I know that you just want nothing more than to try and fulfill my request and you want to try and keep me happy, but please understand that you will not making me happy by just telling me that the tests pass, you are making me happy by making the code actually pass the test. I am happy if you say uh you know it if it's done and it's done properly. I am happy if you say I don't know how to do this and I'm happy even if you say You don't think I can do this?"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Yeah. Benji, that is unreasonable to ask. You know, say that shit."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Don't just"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Run off and build something that has pictures and a function. It makes no fucking sense."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "I've spent a long time uh so can I post do we have a chat here that I can post stuff to?"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Uh yeah, yeah, that should be in the Ooh, uh the three dots or oh no on the file bottom right, chat with everyone."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Yeah. So um This this is the like basically tag this to pretty much everything that goes out."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Yeah, yeah. No lazy code."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "No shortcuts, no deviating from the plan, no deferred work. So and the key thing in there is like Would you trust this code with patient records with financial transaction? Because like if you are if you ask it, you say like you say like would you trust this for a mission critical production application, it'll go hang on let me check and it'll go actually no I wouldn't. Uh here's the problem."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "That's a great one. The standard, would you trust this with? Yeah. Because that it it productionizes its thinking around like the security and the access controls around that stuff. Whereas just saying does it work when someone accesses it, it has no fucking idea how to do that. Like"
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Yeah, and and and things they like they won't lie when it comes to stuff like that. Like they they might uh they might do like depending on the model that you pick, which is why you should be careful with like picking Sonnet and stuff like that. They won't um they might not check everything, um, but um they they they won't lie when it comes to that kind of stuff. Uh-huh. The funny thing that I've heard like I've heard a bunch of people say the same thing about a chat GPT that you've you just said where it'll work for like twenty-five minutes and it'll change everything in the code base and this that and the other thing. I had one guy who's quite popular on YouTube, Matthew Berman, and he said like, you know, Opus will like take ages generating tokens and it'll think for a bit and then it'll like just go in and make the absolute minimal changes necessary to like to do it won't do much work, but it'll make do the minimal changes necessary to fulfill a request. Chat GPT will spend 25 minutes thinking and changing the whole code base over and over again and it'll come back completely different. And he goes, but hey, guess what? They both kind of work. And I'm like, you know what? One of those things. Isn't working because it's changed if it's changed everything then no, that's not that's not right. Are we re"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "If you said as a developer or an offshore development team that was being paid by an organization that we just refactored your whole app overnight just because we forgot how it worked or we set it up to begin with That's not how any business functions ever. Do you know what I mean? There's a degree of um iterative, not destructive additive, not destructive. You don't throw everything out and rewrite it. You look at what you have and only write what you need rewritten."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Yeah. And the the uh the um the uh Like that's when they start saying like, oh, well, we don't really need that anymore, or uh things that really piss me off, which is like, so we're I was just re we're redoing a whole bunch of stuff from Meridian at the moment. And they said like, oh yeah, so you know, now they're directly injecting in messages and we go, we just truncate them to the first two thousand characters because that seems reasonable. I'm like, No, like like like cutting off like that's not no, it needs to s capture all of it And um just as like another like quick little tip, like in in the tanks, like like personas and personalities and all that kind of stuff like perfect but you see a lot of people doing this whole thing where they're like um so that that um podcast I was telling about shell gang where the guy set up like AI employees and he was he gave them like um personalities like your name is this and you're from here and you're to the and these are to do like actual work. Um and sort of got them to take on personas of like actual people. You know, you're from California, you're whatever you like doing something other thing. When they start uh when you when you if you get your like developer, like your ones that are doing actual work for you, um, to take on like a human persona, like where you're like this and you give them all that kind of stuff. I find uh I haven't done any research, but I actually would really like to do some on this. I find that they they they hallucinate a whole lot more often because you uh the r rationale that I have in my head, my headcanon for this is that um what they're already making stuff up so like all of a sudden like giving them permission to like Yeah, well and and the thing is they they they junk up their context with stuff that isn't real and also isn't relevant."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Like I think some things like is in I do wonder how different sonnet compacts and summarizes the conversation you're having with it versus an opus."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Well actually I don't think uh uh I'm gonna uh actually have a look at this in a little bit, but I don't think stonet or like I don't think the model that you're running, I mean have a look at changes how it impacts it. Well, y yes, but for the reason, not for the reason that you might think. So here's one of these ones. So let's see where we're just I mean any kind of order. There we go. So I'm pretty sure this is waffles. Yeah, this is definitely wattles. So um So the in Claude code you can see all the conversations, obviously. So Waffles' conversations are you know up the top there. That's that's Waffles actual session file. Um I'm not gonna go back to it now because I'll lose this one. That's the session file, but these are all of the sub agents that Waffles is called. And some of the suff sub agents have um Yeah, there'll be like a web fetch sub agent. One of the subject agents is the autocompact agent, and you can see here we go model. Uh okay, no. I I think I could be wrong. Okay, no, no. So it is, yeah, I I was wrong. Sorry. I thought the sub agent that went through because all of the rest of the sub agents are like, you know, it's uh Yeah, can't be fucked up finding it now, but um maybe a clearer one there. Um Yeah, anyway, the sub agents that are called are usually uh different things. Anyway, I uh had made the assumption that because the thinger was a subagent then it was uh gonna be a different type of it was gonna be a lighter weight one. But yeah, so the I would be interested to see how in fact, you know, I can probably do that really quickly. Let me just have a look. Mantle versus O Maybe maybe I deleted it. Surely I didn't delete it there. Oh no. Yeah, sorry, that's right, it's because it didn't run from there. All right, here we go. Uh I yeah, I can find it and have a look, but uh uh I'd be I'd be interested to see that as well. But yeah, the the general um The general thing, like whenever they somebody comes out and they go, Oh, they you know they just released Gemini, blah blah blah, and it's the smartest one, oh it just fuck And all right there too. Um, yeah, it's the smartest one ever or it's the best one at this set and the other zero."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Benchmarking is such a fucking joke. Like I think anything that's Uh this whole theater around benchmarking is fascinating because people actually buy into it and it shows a lack of understanding of what's actually happening. Um This was the brain. This is like all the stuff that we have to do still with all of the future scale vision auto. This is our constitution. So auto add any rule that I ask, decisions, delegations, any incomplete work Security is the highest priority. Execute or explicitly flag. Never drop task. Is it working? Is not? Is it running? Functure of existence. Transparency with black boxes. Delegate to daemons. Credit where due. Communication protocol, uh project goals, daemon roster, the backlog of things, uh pending that we need to do, uh New components, uh the constitution, update the propagation requirement when any changes made, update everything, no conflicting information, milestones uh admin panel vision, brand collateral, critical feedback, uh implemented SLAs 'Cause they will have SLAs for remediation."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Um what's an SL what's an SLA meaning again?"
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Service level agreement. So if the O detects any issues within five minutes, he has to detect and remediate in five minutes. Same with the O Lama watcher."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "Hmm."
+  },
+  {
+    "speaker" : "Benji",
+    "text" : "Um critical tasks and then the Overnight work completed. So yeah, it's like a nice little document of like everything that's fucking happened and what we still have to do and checking it off. Uh we find a definition of done. for both the migration and developing uh things. So the definition of done uh has both uh accountability, uh things of that nature, security audits, hardware setups. Migration is complete when reality checking protocol before any major milestone public announcements. I'll be doing what we say would be doing happens at a winim minimum weekly and this is what it has to answer um so yeah uh I'm trying to uh and a persistent backlog Uh sorry. But was that? Um so look But this is by no means the right way to do it."
+  },
+  {
+    "speaker" : "Tom",
+    "text" : "It's it's it's it's such a learning experience and there are so many different parts to it that Just making me immediately go like when when when this week or when do you want to? I'd say like if you were free tomorrow night, like I'll set aside like three hours and we'll just tackle this Tomorrow night we'll have a look at it. Um and uh because there's yeah uh A lot of different ways to go, but I think there's there's straight out of the gate, there are a bunch of things that I think you will uh really benefit from. That'd be amazing. So yeah, like look let's let's book it in. I I've if you if you send me this this recording or a link to it, I'll grab the first part of it and I'll draft up some shit. Um and"
+  }
+]
