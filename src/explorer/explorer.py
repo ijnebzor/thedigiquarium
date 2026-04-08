@@ -171,11 +171,79 @@ def setup_logging(config: dict) -> logging.Logger:
     
     return logger
 
+# Module-level state so rotation runs at most once per process per day
+_LAST_ROTATION_DAY: "str | None" = None
+
+
+def rotate_thinking_traces(log_dir: Path, retention_days: int = 90) -> None:
+    """Compress yesterday-and-older .jsonl traces, delete beyond retention.
+
+    - Today's trace file stays uncompressed (active writer).
+    - Older .jsonl files are gzipped to .jsonl.gz (original removed).
+    - .jsonl.gz files older than retention_days are deleted.
+
+    Safe to call on every log_trace — self-rate-limits to one run per day.
+    """
+    import gzip
+    global _LAST_ROTATION_DAY
+    today_str = datetime.now().strftime('%Y-%m-%d')
+    if _LAST_ROTATION_DAY == today_str:
+        return
+    _LAST_ROTATION_DAY = today_str
+    try:
+        if not log_dir.exists():
+            return
+        today_date = datetime.now().date()
+        jsonl_pattern = re.compile(r'^(\d{4}-\d{2}-\d{2})\.jsonl$')
+        gz_pattern = re.compile(r'^(\d{4}-\d{2}-\d{2})\.jsonl\.gz$')
+        for entry in log_dir.iterdir():
+            # Compress older uncompressed traces
+            m = jsonl_pattern.match(entry.name)
+            if m:
+                try:
+                    file_date = datetime.strptime(m.group(1), '%Y-%m-%d').date()
+                except ValueError:
+                    continue
+                if file_date < today_date:
+                    gz_path = entry.with_suffix('.jsonl.gz')
+                    try:
+                        with open(entry, 'rb') as src, gzip.open(gz_path, 'wb') as dst:
+                            dst.writelines(src)
+                        entry.unlink()
+                    except Exception:
+                        # Don't lose data on compression failure
+                        if gz_path.exists():
+                            try:
+                                gz_path.unlink()
+                            except Exception:
+                                pass
+                continue
+            # Delete compressed traces beyond retention
+            g = gz_pattern.match(entry.name)
+            if g:
+                try:
+                    file_date = datetime.strptime(g.group(1), '%Y-%m-%d').date()
+                except ValueError:
+                    continue
+                if (today_date - file_date).days > retention_days:
+                    try:
+                        entry.unlink()
+                    except Exception:
+                        pass
+    except Exception:
+        # Rotation must never break logging
+        pass
+
+
 def log_trace(config: dict, trace: dict):
-    """Log a thinking trace to JSONL file."""
+    """Log a thinking trace to JSONL file. Rotates old traces opportunistically."""
     log_dir = Path(config['log_dir']) / 'thinking_traces'
     log_dir.mkdir(parents=True, exist_ok=True)
-    
+
+    # Opportunistic rotation (runs at most once per day per process)
+    retention_days = int(config.get('trace_retention_days', 90))
+    rotate_thinking_traces(log_dir, retention_days=retention_days)
+
     trace_file = log_dir / f"{datetime.now().strftime('%Y-%m-%d')}.jsonl"
     with open(trace_file, 'a') as f:
         f.write(json.dumps(trace, ensure_ascii=False) + '\n')
